@@ -2,11 +2,7 @@ let respecConfig = {
   useLogo: true,
   useLabel: true,
   // title is verplicht! Neem hier de titel van het document op ----------------------
-<<<<<<< HEAD
   title: "[Georefereren GeoBIM]",
-=======
-  title: "[TODO: Neem titel op in config.js]",
->>>>>>> 96264f1e2143cd0d39b9feae352f11c000a5d978
   //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
   specStatus: "wv",                   // Werkversie
   //specStatus: "cv",               // Consultatieversie
@@ -31,12 +27,7 @@ let respecConfig = {
   //licence: "cc0",                 // Public Domain Dedication
   licence: "cc-by",                 // Attribution, met bronvermelding
   //-- TODO shortName is verplicht! (komt in de URL: kies logische afkorting)--------------
-<<<<<<< HEAD
   shortName: "NL-GeoBIM-GeoRef",
-=======
-  shortName: "NL-ReSpec-GN-template",
->>>>>>> 96264f1e2143cd0d39b9feae352f11c000a5d978
-  
   //edDraftURI = De URI van de draft version. Deze wordt automatisch afgeleid van de github URI; maar kan hier overschreven worden. 
 	//edDraftURI: ["https://geonovum.github.io", "/", "shortName"],
 
@@ -54,11 +45,8 @@ let respecConfig = {
   editors:
     [
       {
-<<<<<<< HEAD
         name: "Rolf Jonker",
-=======
-        name: "voornaam achternaam",
->>>>>>> 96264f1e2143cd0d39b9feae352f11c000a5d978
+
         company: "Geonovum",
         companyURL: "https://www.geonovum.nl",
       }
@@ -68,7 +56,6 @@ let respecConfig = {
   authors:
     [
       {
-<<<<<<< HEAD
         name: "Paul Strokap",
         company: "VORM",
         companyURL: "https://vorm.nl/",
@@ -77,11 +64,6 @@ let respecConfig = {
         name: "Hans Lammerts",
         company: "VORM",
         companyURL: "https://www.lammerts-engineering.nl/",
-=======
-        name: "voornaam achternaam",
-        company: "Geonovum",
-        companyURL: "https://www.geonovum.nl",
->>>>>>> 96264f1e2143cd0d39b9feae352f11c000a5d978
       }
     ],
   // TODO: Vul de github URL in.
