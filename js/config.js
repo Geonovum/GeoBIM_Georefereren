@@ -61,7 +61,7 @@ let respecConfig = {
       },
       {
         name: "Hans Lammerts",
-        company: "VORM",
+        company: "Lammerts Engineering",
         companyURL: "https://www.lammerts-engineering.nl/",
       }
     ],
