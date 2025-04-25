@@ -15,6 +15,40 @@ Referentie uit locale lijst [[SemVer]]. Lijst staat in `organisation-config.js`.
 
 We gebruiken een <a>definitie</a> om een woord te omschrijven.
 
+
+## Software
+
+# Software
+
+## Revit
+--- 
+
+## ArchiCAD
+--- 
+
+## VectorWorks
+--- 
+
+## BricsCAD
+--- 
+
+## Sketchup
+--- 
+
+## Bonsai (BlenderBIM)
+--- 
+
+## Illustrator
+--- 
+
+# Tooling
+--- 
+
+## Ifc2Gref
+--- 
+
+
+
 ## Optioneel
 
 De onderstaande secties (_Conformiteit_ e.d.) zijn optioneel, zie `index.html`:
