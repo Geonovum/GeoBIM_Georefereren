@@ -76,4 +76,21 @@ let respecConfig = {
           uri: "template.pdf",
       },
   ],
+  localBiblio: {
+        "Stoter2020": {
+            href: "https://3d.bk.tudelft.nl/ken/files/20_geoinfo.pdf",
+            title: "Gebruik van BIM in Geo in de praktijk: voorbij de hype",
+            authors: ["Jantien Stoter, Francesca Noarda, Teng Wu, Ken Arroyo Ohori, Thomas Krijnen"],
+            date: "2020"
+        },
+        "Mallela2024": {
+            href: "https://www.buildingsmart.org/wp-content/uploads/2024/05/bSI-OGC-BIM-GIS-Strategic-Roadmap_Industry_Insight_bSI_v2.pdf",
+            title: "Enabling information continuity across BIM-GIS domains:A bSI and OGC strategic roadmap",
+            authors: ["Jagannath Mallela, Abhishek Bhargav"],
+            date: "2024"
+      }
+    },
+    
+
+    
 };

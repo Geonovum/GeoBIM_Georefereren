@@ -58,14 +58,3 @@ Hoekverdraaiing en negatieve waardes voor hoeken
 ## Definities
 <dfn>Definitie</dfn>: Een definitie is een beschrijving van een woord. Een ander woord voor _definitie_ is betekenis of beschrijving.
 
-## Afbeeldingen
-
-Afbeeldingen krijgen een nummer en vermelding in de figurenlijst [[[#tof]]].
-
-![Tekstueel alternatief voor toegankelijkheid](media/Bomos_levenscyclus.svg "Onderschrift")
-
-## Referenties
-
-Referentie uit locale lijst [[SemVer]]. Lijst staat in `organisation-config.js`. Alleen referenties die in de tekst voorkomen worden getoond.
-
-We gebruiken een <a>definitie</a> om een woord te omschrijven.

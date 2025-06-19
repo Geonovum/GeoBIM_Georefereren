@@ -9,19 +9,9 @@ Wanneer nog geen geo-locatie is vastgelegd kan de bim modelleur gebruik maken va
 ![IfcMapConversion attributen en waarden](media/IfcMapconversion_attributen.png "IfcMapConversion attributen en waarde")
 
 
-## Optioneel
+## Referenties
 
-De onderstaande secties (_Conformiteit_ e.d.) zijn optioneel, zie `index.html`:
+Referentie uit locale lijst [[SemVer]]. Lijst staat in `organisation-config.js`. Alleen referenties die in de tekst voorkomen worden getoond.
 
-```
-<body>
-  <section id="abstract" data-include-format="markdown" data-include="abstract.md"></section>
-  <section id="sotd"></section><!-- Wordt automatisch gevuld -->
-  <section data-include-format="markdown" class="informative" data-include="ch01.md"></section>
-  <section data-include-format="markdown" data-include="ch02.md"></section>
-  <!-- Hieronder optionele secties. Worden automatisch gevuld -->
-  <section id='conformance'></section>
-  <section id='tof'></section>
-  <section id="index"></section>
-</body>
-```
+We gebruiken een <a>definitie</a> om een woord te omschrijven.
+
