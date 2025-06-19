@@ -106,6 +106,7 @@ let respecConfig = {
           uri: "template.pdf",
       },
   ],
+
   // Lokale lijst voor bibliografie
   // - Kijk eerst naar de beschikbare www.specref.org .
   // - Kijk daarna in de organisatieconfig.
@@ -123,5 +124,5 @@ let respecConfig = {
             authors: ["Jagannath Mallela, Abhishek Bhargav"],
             date: "2024"
       }
-    },   
+    }   
 };
