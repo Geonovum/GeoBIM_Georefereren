@@ -2,7 +2,7 @@ let respecConfig = {
   useLogo: true,
   useLabel: true,
   // title is verplicht! Neem hier de titel van het document op ----------------------
-  title: "[Georefereren GeoBIM]",
+  title: "Georefereren GeoBIM",
   //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
   specStatus: "wv",                   // Werkversie
   //specStatus: "cv",               // Consultatieversie
@@ -13,8 +13,8 @@ let respecConfig = {
   //specType: "NO",                 // Norm
   //specType: "ST",                 // Standaard
   //specType: "IM",                 // Informatie Model
-  //specType: "PR",                 // Praktijkrichtlijn
-  specType: "HR",                     // HandReiking
+  specType: "PR",                 // Praktijkrichtlijn
+  //specType: "HR",                     // HandReiking
   //specType: "WA",                 // Werkafspraak
   //specType: "BD",                 // Beheer Documentatie
   //specType: "AL",                 // Algemeen document
@@ -63,6 +63,36 @@ let respecConfig = {
         name: "Hans Lammerts",
         company: "Lammerts Engineering",
         companyURL: "https://www.lammerts-engineering.nl/",
+      },
+      {
+        name: "Daan van der Heide",
+        company: "Rijkswaterstaat",
+        companyURL: "https://www.rijkswaterstaat.nl/",
+      },
+      {
+        name: "Daisy Sparla",
+        company: "Rijkswaterstaat",
+        companyURL: "https://www.rijkswaterstaat.nl/",
+      },
+      {
+        name: "Joost Geveart",
+        company: "Bedrock",
+        companyURL: "https://bedrock.engineer/",
+      },
+      {
+        name: "Loek Wensveen",
+        company: "Mobilis",
+        companyURL: "https://www.mobilis.nl/",
+      },
+      {
+        name: "Lennard Huisman",
+        company: "Kadaster",
+        companyURL: "https://www.kadaster.nl/",
+      },
+            {
+        name: "Cathelijne Kleijwegt",
+        company: "Esri",
+        companyURL: "https://www.esri.nl/nl-nl/home",
       }
     ],
   // TODO: Vul de github URL in.
@@ -76,6 +106,10 @@ let respecConfig = {
           uri: "template.pdf",
       },
   ],
+  // Lokale lijst voor bibliografie
+  // - Kijk eerst naar de beschikbare www.specref.org .
+  // - Kijk daarna in de organisatieconfig.
+  // - Voeg dan pas hieronder toe.
   localBiblio: {
         "Stoter2020": {
             href: "https://3d.bk.tudelft.nl/ken/files/20_geoinfo.pdf",
@@ -89,8 +123,5 @@ let respecConfig = {
             authors: ["Jagannath Mallela, Abhishek Bhargav"],
             date: "2024"
       }
-    },
-    
-
-    
+    },   
 };
