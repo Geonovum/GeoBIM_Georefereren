@@ -1,7 +1,8 @@
 # Introductie
+De integratie van Geo met BIM maakt het mogelijk om de interactie tussen bouwwerk en omgeving te modelleren en inzichtelijk te maken in diverse ontwikkelstadia en kan zo het ontwerp-, beheer-, ontwerp- en besluitvormingsproces versnellen. [[Mallela2024]]
 
-Bijvoorbeeld een introductie is niet normatief.
+De behoefte aan data delen tussen de Geo- en BIM-wereld lijkt vanzelfsprekend, omdat beide werelden op het niveau van een bouwwerk dezelfde objecten lijken te definiëren. Maar voor zinvolle integratie is het goed om te beseffen dat beide werelden een andere modelleer-benadering hebben en daarom ook verschillen kennen die overbrugd moeten worden. 
 
-<p class="note" title="index">
-Dit hoofdstuk is toegevoegd met `class="informative"` in `config.js`.
-</p>
+Een fundamenteel verschil is het gebruik van een lokaal coördinatenstelsel in BIM versus het gebruik van een geografisch coördinatenstelsel in Geo. Dit kan worden opgelost door BIM-modellen te georefereren, maar dat is in de praktijk nog niet triviaal. Je gaat immers van een cartesisch, orthogonaal coördinatenstelsel waarbij de afstand tussen twee coördinaatlijnen constant is over naar coördinaten die de vorming van de aarde representeren. Vooral voor bouwwerken en infrastructuur die een groot gebied omvatten kan dit een ongewenste vertekening geven. Momenteel is dit technisch op te lossen, maar het vraagt in de praktijk veel uitzoekwerk en is bovendien niet als standaard workflow beschikbaar binnen de mainstream software omgevingen. De uitdaging hier is het ontwikkelen van breed gedragen, gestandaardiseerde oplossingen met duidelijke handreikingen zodat deze oplossingen ook beschikbaar komen voor klein-tot-middelgrote projecten waar niet altijd de benodigde expertise beschikbaar is. [[Stoter2020]]
+
+Deze praktijkrichtlijn is bedoeld voor GEO- en BIM-modelleurs van infra en utuliteitsbouw. De richtlijn voorziet in werkwijze en oplossingen die nodig zijn om Geo en BIM te georefereren. Het biedt een Informatie Levering Handleiding gebaseerd op open standaard uitwisseling. 
