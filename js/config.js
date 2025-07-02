@@ -123,5 +123,5 @@ let respecConfig = {
             authors: ["Jagannath Mallela, Abhishek Bhargav"],
             date: "2024"
       }
-    },   
+    }   
 };

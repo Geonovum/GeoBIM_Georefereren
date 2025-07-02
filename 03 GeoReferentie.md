@@ -13,3 +13,7 @@ bron: https://www.geobimexperts.nl/kennis/blog/ifc-tud
 # IFC
 
 # CityGML 
+
+# DXF
+
+# Geopackage
