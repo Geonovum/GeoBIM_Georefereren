@@ -1,29 +1,16 @@
 <!DOCTYPE html><html lang="nl"><head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
-<meta name="generator" content="ReSpec 34.1.4">
-<style>
-.issue-label{text-transform:initial}
-.warning>p:first-child{margin-top:0}
-.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
-span.warning{padding:.1em .5em .15em}
-.issue.closed span.issue-number{text-decoration:line-through}
-.issue.closed span.issue-number::after{content:" (Closed)";font-size:smaller}
-.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}
-.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
-li.task-list-item{list-style:none}
-input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
-.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
-</style>
+<meta name="generator" content="ReSpec 35.3.0">
 <style>
 dfn{cursor:pointer}
-.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;background:var(--indextable-hover-bg,#fff);color:#000;color:var(--text,#000);box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);box-shadow:0 1em 3em -.4em var(--tocsidebar-shadow,rgba(0,0,0,.3)),0 0 1px 1px var(--tocsidebar-shadow,rgba(0,0,0,.05));border-radius:2px}
 .dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
-.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
-.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;border-bottom-color:var(--indextable-hover-bg,#fff);top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1;border-bottom-color:var(--indextable-hover-bg,#a2a9b1)}
 .dfn-panel *{margin:0}
-.dfn-panel b{display:block;color:#000;margin-top:.25em}
-.dfn-panel ul a[href]{color:#333}
+.dfn-panel b{display:block;color:#000;color:var(--text,#000);margin-top:.25em}
+.dfn-panel ul a[href]{color:#333;color:var(--text,#333)}
 .dfn-panel>div{display:flex}
 .dfn-panel a.self-link{font-weight:700;margin-right:auto}
 .dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
@@ -43,9 +30,9 @@ dfn{cursor:pointer}
   
   
 <script>document.title = respecConfig.title</script>
-<title>[TODO: Neem titel op in config.js]</title>
+<title>Georefereren GeoBIM</title>
   
-<title>TODO: Vul hier de titel in</title>
+<title>Georefereren GeoBIM</title>
   
 <link rel="shortcut icon" type="image/x-icon" href="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.ico">
   
@@ -61,8 +48,6 @@ div.imageinfo img {max-width: none;}
 25%{transform:scale(1.25,1.25);opacity:.75}
 100%{transform:scale(1,1)}
 }
-:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
-dfn{font-weight:700}
 a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
 a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
 a.bibref{text-decoration:none}
@@ -73,23 +58,11 @@ a.bibref{text-decoration:none}
 .respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
 }
 #references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
-cite .bibref{font-style:normal}
+cite .bibref{font-style:italic}
 a[href].orcid{padding-left:4px;padding-right:4px}
 a[href].orcid>svg{margin-bottom:-2px}
-.toc a,.tof a{text-decoration:none}
-a .figno,a .secno{color:#000}
 ol.tof,ul.tof{list-style:none outside none}
 .caption{margin-top:.5em;font-style:italic}
-table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
-.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
-.simple th a{color:#fff;padding:3px 5px;text-align:left}
-.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
-.simple td{padding:3px 10px;border-top:1px solid #ddd}
-.simple tr:nth-child(even){background:#f0f6ff}
-.section dd>p:first-child{margin-top:0}
-.section dd>p:last-child{margin-bottom:0}
-.section dd{margin-bottom:1em}
-.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
 #issue-summary>ul{column-count:2}
 #issue-summary li{list-style:none;display:inline-block}
 details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
@@ -113,8 +86,9 @@ dd{margin-left:0}
 }
 </style>
 <style id="respec-nlgov">
-img.license{float:left;padding-right:5px}
+img.license{float:left;padding-right:5px;background:0 0}
 </style>
+<meta name="color-scheme" content="light">
 <style>
 ul.index{columns:30ch;column-gap:1.5em}
 ul.index li{list-style:inherit}
@@ -125,21 +99,6 @@ ul.index code{color:inherit}
 @media print{
 #index-defined-here .print-only{display:initial}
 }
-</style>
-<meta name="description" content="TODO: vul in abstract.md een abstract in.">
-<style>
-.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}
-.hljs-comment,.hljs-quote{color:#717277;font-style:italic}
-.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}
-.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;font-weight:700}
-.hljs-literal{color:#0b76c5}
-.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c}
-.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01}
-.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}
-.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3}
-.hljs-emphasis{font-style:italic}
-.hljs-strong{font-weight:700}
-.hljs-link{text-decoration:underline}
 </style>
 <style>
 
@@ -166,6 +125,7 @@ ul.index code{color:inherit}
 </style>
 <script id="initialUserConfig" type="application/json">{
   "nl_organisationName": "Geonovum",
+  "nl_organisationStylesURL": "https://tools.geostandaarden.nl/respec/style/",
   "nl_organisationPublishURL": "https://docs.geostandaarden.nl/",
   "logos": [
     {
@@ -256,7 +216,7 @@ ul.index code{color:inherit}
       "sotd": "Status van dit document",
       "def": "Dit is de definitieve versie van dit document. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.",
       "wv": "Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.",
-      "cv": "Dit is een consultatieversie. Commentaar over dit document kan gestuurd worden naar ",
+      "cv": "Dit is een consultatieversie.",
       "vv": "Dit is de definitieve conceptversie van dit document. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.",
       "basis": "Dit is een document zonder officiële status.",
       "ld": "Dit is een levend document dat regelmatig gewijzigd wordt."
@@ -265,7 +225,7 @@ ul.index code{color:inherit}
       "sotd": "Status of this document",
       "def": "This is the definitive version of this document. Edits resulting from consultations have been applied.",
       "wv": "This is a working draft that can be changed, removed or replaced by other documents at any time. It is not a stable document.",
-      "cv": "This is a stable draft, published for public comment. Comments regarding this document may be sent to ",
+      "cv": "This is a stable draft, published for public comment.",
       "vv": "This is the final draft of this document. Edits resulting from consultations have been applied.",
       "basis": "This document has no official standing.",
       "ld": "This is a living document, which is updated regularly."
@@ -300,37 +260,99 @@ ul.index code{color:inherit}
     }
   },
   "localBiblio": {
-    "SemVer": {
-      "href": "https://semver.org",
-      "title": "Semantic Versioning 2.0.0",
+    "Stoter2020": {
+      "href": "https://3d.bk.tudelft.nl/ken/files/20_geoinfo.pdf",
+      "title": "Gebruik van BIM in Geo in de praktijk: voorbij de hype",
       "authors": [
-        "T. Preston-Werner"
+        "Jantien Stoter, Francesca Noarda, Teng Wu, Ken Arroyo Ohori, Thomas Krijnen"
       ],
-      "date": "June 2013",
-      "id": "semver"
+      "date": "2020",
+      "id": "stoter2020"
+    },
+    "Mallela2024": {
+      "href": "https://www.buildingsmart.org/wp-content/uploads/2024/05/bSI-OGC-BIM-GIS-Strategic-Roadmap_Industry_Insight_bSI_v2.pdf",
+      "title": "Enabling information continuity across BIM-GIS domains:A bSI and OGC strategic roadmap",
+      "authors": [
+        "Jagannath Mallela, Abhishek Bhargav"
+      ],
+      "date": "2024",
+      "id": "mallela2024"
+    },
+    "Christian2019": {
+      "href": "https://jgcc.geoprevi.ro/docs/2019/10/jgcc_2019_no10_3.pdf",
+      "title": "Level of Georeferencing (LoGeoRef) using IFC for BIM",
+      "authors": [
+        "Christian Clemens, Görne Hendrik"
+      ],
+      "date": "2019",
+      "id": "christian2019"
+    },
+    "Hakim2024": {
+      "href": "https://isprs-archives.copernicus.org/articles/XLVIII-4-W11-2024/41/2024/isprs-archives-XLVIII-4-W11-2024-41-2024.pdf",
+      "title": "Enhancing Georeferencing of IFC Models through Surveyed Points Integration",
+      "authors": [
+        "Amir Hakim, Ken Arroyo Ohori, Jasper van der Vaart, Siham El Yamani, Jantien Stoter"
+      ],
+      "date": "2024",
+      "id": "hakim2024"
     }
   },
-  "title": "[TODO: Neem titel op in config.js]",
+  "title": "Georefereren GeoBIM",
   "specStatus": "wv",
-  "specType": "HR",
+  "specType": "PR",
   "pubDomain": "TODO",
   "licence": "cc-by",
-  "shortName": "NL-ReSpec-GN-template",
+  "shortName": "NL-GeoBIM-GeoRef",
   "editors": [
     {
-      "name": "voornaam achternaam",
+      "name": "Rolf Jonker",
       "company": "Geonovum",
       "companyURL": "https://www.geonovum.nl"
     }
   ],
   "authors": [
     {
-      "name": "voornaam achternaam",
-      "company": "Geonovum",
-      "companyURL": "https://www.geonovum.nl"
+      "name": "Paul Strokap",
+      "company": "VORM",
+      "companyURL": "https://vorm.nl/"
+    },
+    {
+      "name": "Hans Lammerts",
+      "company": "Lammerts Engineering",
+      "companyURL": "https://www.lammerts-engineering.nl/"
+    },
+    {
+      "name": "Daan van der Heide",
+      "company": "Rijkswaterstaat",
+      "companyURL": "https://www.rijkswaterstaat.nl/"
+    },
+    {
+      "name": "Daisy Sparla",
+      "company": "Rijkswaterstaat",
+      "companyURL": "https://www.rijkswaterstaat.nl/"
+    },
+    {
+      "name": "Joost Geveart",
+      "company": "Bedrock",
+      "companyURL": "https://bedrock.engineer/"
+    },
+    {
+      "name": "Loek Wensveen",
+      "company": "Mobilis",
+      "companyURL": "https://www.mobilis.nl/"
+    },
+    {
+      "name": "Lennard Huisman",
+      "company": "Kadaster",
+      "companyURL": "https://www.kadaster.nl/"
+    },
+    {
+      "name": "Cathelijne Kleijwegt",
+      "company": "Esri",
+      "companyURL": "https://www.esri.nl/nl-nl/home"
     }
   ],
-  "github": "https://github.com/Geonovum/NL-ReSpec-GN-template",
+  "github": "https://github.com/Geonovum/temp_geobim",
   "alternateFormats": [
     {
       "label": "pdf",
@@ -338,21 +360,21 @@ ul.index code{color:inherit}
     }
   ]
 }</script>
-<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base.css"></head>
+<link rel="stylesheet" href="https://tools.geostandaarden.nl/respec/style/base.css"></head>
 
 <body class="h-entry toc-inline"><div class="head">
     <a class="logo" href="https://www.geonovum.nl/geo-standaarden"><img alt="Geonovum" height="67" id="Geonovum" src="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg" width="132">
-  </a> <h1 id="title" class="title">[TODO: Neem titel op in config.js]</h1>
+  </a> <h1 id="title" class="title">Georefereren GeoBIM</h1>
     
     <h2>
-      Geonovum Handreiking<br>
+      Geonovum Praktijkrichtlijn<br>
       Werkversie
-      <time class="dt-published" datetime="2024-04-26">26 april 2024</time>
+      <time class="dt-published" datetime="2025-08-08">08 augustus 2025</time>
     </h2>
     <dl>
       
       
-      <dt>Laatste werkversie:</dt><dd><a href="https://geonovum.github.io/NL-ReSpec-GN-template/">https://geonovum.github.io/NL-ReSpec-GN-template/</a></dd>
+      <dt>Laatste werkversie:</dt><dd><a href="https://geonovum.github.io/temp_geobim/">https://geonovum.github.io/temp_geobim/</a></dd>
       
       
       
@@ -360,20 +382,34 @@ ul.index code{color:inherit}
       
       <dt>Redacteur:</dt>
       <dd class="editor p-author h-card vcard">
-    <span class="p-name fn">voornaam achternaam</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
+    <span class="p-name fn">Rolf Jonker</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
   </dd>
       
-      <dt>Auteur:</dt><dd class="editor p-author h-card vcard">
-    <span class="p-name fn">voornaam achternaam</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
+      <dt>Auteurs:</dt><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Paul Strokap</span> (<a class="p-org org h-org" href="https://vorm.nl/">VORM</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Hans Lammerts</span> (<a class="p-org org h-org" href="https://www.lammerts-engineering.nl/">Lammerts Engineering</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Daan van der Heide</span> (<a class="p-org org h-org" href="https://www.rijkswaterstaat.nl/">Rijkswaterstaat</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Daisy Sparla</span> (<a class="p-org org h-org" href="https://www.rijkswaterstaat.nl/">Rijkswaterstaat</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Joost Geveart</span> (<a class="p-org org h-org" href="https://bedrock.engineer/">Bedrock</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Loek Wensveen</span> (<a class="p-org org h-org" href="https://www.mobilis.nl/">Mobilis</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Lennard Huisman</span> (<a class="p-org org h-org" href="https://www.kadaster.nl/">Kadaster</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Cathelijne Kleijwegt</span> (<a class="p-org org h-org" href="https://www.esri.nl/nl-nl/home">Esri</a>)
   </dd>
       <dt>Doe mee:</dt><dd>
-    <a href="https://github.com/Geonovum/NL-ReSpec-GN-template/">GitHub Geonovum/NL-ReSpec-GN-template</a>
+    <a href="https://github.com/Geonovum/temp_geobim/">GitHub Geonovum/temp_geobim</a>
   </dd><dd>
-    <a href="https://github.com/Geonovum/NL-ReSpec-GN-template/issues/">Dien een melding in</a>
+    <a href="https://github.com/Geonovum/temp_geobim/issues/">Dien een melding in</a>
   </dd><dd>
-    <a href="https://github.com/Geonovum/NL-ReSpec-GN-template/commits/">Revisiehistorie</a>
+    <a href="https://github.com/Geonovum/temp_geobim/commits/">Revisiehistorie</a>
   </dd><dd>
-    <a href="https://github.com/Geonovum/NL-ReSpec-GN-template/pulls/">Pull requests</a>
+    <a href="https://github.com/Geonovum/temp_geobim/pulls/">Pull requests</a>
   </dd>
     </dl>
     
@@ -383,69 +419,216 @@ ul.index code{color:inherit}
           <a rel="alternate" href="template.pdf">pdf</a>
         </p>
     <p class="copyright">
-          Dit document valt onder de volgende licentie: 
-          <a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode" class="subfoot"><img class="license" src="https://tools.geostandaarden.nl/respec/style/logos/cc-by.svg" alt="Logo Creative Commons Attribution 4.0 International Public License"><br> Creative Commons Attribution 4.0 International Public License</a>
-        </p>
+            Dit document valt onder de volgende licentie: 
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode" class="subfoot"><img class="license" src="https://tools.geostandaarden.nl/respec/style/logos/cc-by.svg" alt="Logo Creative Commons Attribution 4.0 International Public License"><br> Creative Commons Attribution 4.0 International Public License</a>
+          </p>
     <hr title="Separator for header">
   </div>
-  <section id="abstract" class="introductory"><h2>Samenvatting</h2><p>TODO: vul in abstract.md een abstract in.</p>
-</section>
-  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#niet-normatieve-deel"><bdi class="secno">1. </bdi>Niet-normatieve deel</a></li><li class="tocline"><a class="tocxref" href="#meer-inhoud"><bdi class="secno">2. </bdi>Meer inhoud</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#definities"><bdi class="secno">2.1 </bdi>Definities</a></li><li class="tocline"><a class="tocxref" href="#afbeeldingen"><bdi class="secno">2.2 </bdi>Afbeeldingen</a></li><li class="tocline"><a class="tocxref" href="#referenties"><bdi class="secno">2.3 </bdi>Referenties</a></li><li class="tocline"><a class="tocxref" href="#optioneel"><bdi class="secno">2.4 </bdi>Optioneel</a></li></ol></li><li class="tocline"><a class="tocxref" href="#mermaid-diagram"><bdi class="secno">3. </bdi>Mermaid diagram</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">4. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">5. </bdi>Lijst met figuren</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normatieve-referenties"><bdi class="secno">B.1 </bdi>Normatieve referenties</a></li></ol></li></ol></nav>
+  <section id="abstract" class="introductory"><h2>Samenvatting</h2><h1>Samenvatting</h1>
+</section> 
+  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#introductie"><bdi class="secno">1. </bdi>Introductie</a></li><li class="tocline"><a class="tocxref" href="#toepassingsgebied"><bdi class="secno">2. </bdi>Toepassingsgebied</a></li><li class="tocline"><a class="tocxref" href="#coordinaattransformatie-datumtransformatie-en-coordinaatconversie"><bdi class="secno">3. </bdi>Coördinaattransformatie, datumtransformatie en coördinaatconversie</a></li><li class="tocline"><a class="tocxref" href="#methodes-van-georeferentie"><bdi class="secno">4. </bdi>Methodes van Georeferentie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#x1d-2d-en-3d-geo-en-bim-modellen"><bdi class="secno">4.1 </bdi>1D 2D en 3D Geo en BIM modellen</a></li><li class="tocline"><a class="tocxref" href="#georeferentie-in-uitwisseling"><bdi class="secno">4.2 </bdi>Georeferentie in uitwisseling</a></li><li class="tocline"><a class="tocxref" href="#ifc"><bdi class="secno">4.3 </bdi>IFC</a></li><li class="tocline"><a class="tocxref" href="#citygml"><bdi class="secno">4.4 </bdi>CityGML</a></li><li class="tocline"><a class="tocxref" href="#dxf"><bdi class="secno">4.5 </bdi>DXF</a></li><li class="tocline"><a class="tocxref" href="#geopackage"><bdi class="secno">4.6 </bdi>Geopackage</a></li></ol></li><li class="tocline"><a class="tocxref" href="#handleiding-software"><bdi class="secno">5. </bdi>Handleiding Software</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#software"><bdi class="secno">5.1 </bdi>Software</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#revit"><bdi class="secno">5.1.1 </bdi>Revit</a></li><li class="tocline"><a class="tocxref" href="#archicad"><bdi class="secno">5.1.2 </bdi>ArchiCAD</a></li><li class="tocline"><a class="tocxref" href="#vectorworks"><bdi class="secno">5.1.3 </bdi>VectorWorks</a></li><li class="tocline"><a class="tocxref" href="#bricscad"><bdi class="secno">5.1.4 </bdi>BricsCAD</a></li><li class="tocline"><a class="tocxref" href="#sketchup"><bdi class="secno">5.1.5 </bdi>Sketchup</a></li><li class="tocline"><a class="tocxref" href="#bonsai-blenderbim"><bdi class="secno">5.1.6 </bdi>Bonsai (BlenderBIM)</a></li><li class="tocline"><a class="tocxref" href="#illustrator"><bdi class="secno">5.1.7 </bdi>Illustrator</a></li><li class="tocline"><a class="tocxref" href="#definities"><bdi class="secno">5.1.8 </bdi>Definities</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#tooling"><bdi class="secno">6. </bdi>Tooling</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ifc2gref"><bdi class="secno">6.1 </bdi>Ifc2Gref</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">7. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">8. </bdi>Lijst met figuren</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normatieve-referenties"><bdi class="secno">B.1 </bdi>Normatieve referenties</a></li><li class="tocline"><a class="tocxref" href="#informatieve-referenties"><bdi class="secno">B.2 </bdi>Informatieve referenties</a></li></ol></li></ol></nav>
 
   
-  <section class="informative" id="niet-normatieve-deel"><div class="header-wrapper"><h2 id="x1-niet-normatieve-deel"><bdi class="secno">1. </bdi>Niet-normatieve deel</h2><a class="self-link" href="#niet-normatieve-deel" aria-label="Permalink for Section 1."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
-<p>Bijvoorbeeld een introductie is niet normatief.</p>
-<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="3"><span>Noot</span><span class="issue-label">: index</span></div><p class="">
-Dit hoofdstuk is toegevoegd met <code>class="informative"</code> in <code>config.js</code>.
-</p></div></section>
-  <section id="meer-inhoud"><div class="header-wrapper"><h2 id="x2-meer-inhoud"><bdi class="secno">2. </bdi>Meer inhoud</h2><a class="self-link" href="#meer-inhoud" aria-label="Permalink for Section 2."></a></div>
-<section id="definities"><div class="header-wrapper"><h3 id="x2-1-definities"><bdi class="secno">2.1 </bdi>Definities</h3><a class="self-link" href="#definities" aria-label="Permalink for Section 2.1"></a></div>
-<p><dfn id="dfn-definitie" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Definitie</dfn>: Een definitie is een beschrijving van een woord. Een ander woord voor <em>definitie</em> is betekenis of beschrijving.</p>
-</section><section id="afbeeldingen"><div class="header-wrapper"><h3 id="x2-2-afbeeldingen"><bdi class="secno">2.2 </bdi>Afbeeldingen</h3><a class="self-link" href="#afbeeldingen" aria-label="Permalink for Section 2.2"></a></div>
-<p>Afbeeldingen krijgen een nummer en vermelding in de figurenlijst <a href="#tof" data-matched-text="[[[#tof]]]" class="sec-ref"><bdi class="secno">5. </bdi>Lijst met figuren</a>.</p>
+  <section class="informative" id="introductie"><div class="header-wrapper"><h2 id="x1-introductie"><bdi class="secno">1. </bdi>Introductie</h2><a class="self-link" href="#introductie" aria-label="Permalink for Section 1."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
+<p>De integratie van Geo met BIM maakt het mogelijk om de interactie tussen bouwwerk en omgeving te modelleren en inzichtelijk te maken in diverse ontwikkelstadia en kan zo het ontwerp-, beheer-, ontwerp- en besluitvormingsproces versnellen. [<cite><a class="bibref" data-link-type="biblio" href="#bib-mallela2024" title="Enabling information continuity across BIM-GIS domains:A bSI and OGC strategic roadmap">Mallela2024</a></cite>]</p>
+<p>De behoefte aan data delen tussen de Geo- en BIM-wereld lijkt vanzelfsprekend, omdat beide werelden op het niveau van een bouwwerk dezelfde objecten lijken te definiëren. Maar voor zinvolle integratie is het goed om te beseffen dat beide werelden een andere modelleer-benadering hebben en daarom ook verschillen kennen die overbrugd moeten worden. </p>
+<p>Een fundamenteel verschil is het gebruik van een lokaal coördinatenstelsel in BIM versus het gebruik van een geografisch coördinatenstelsel in Geo. Dit kan worden opgelost door BIM-modellen te georefereren, maar dat is in de praktijk nog niet triviaal. Je gaat immers van een cartesisch, orthogonaal coördinatenstelsel waarbij de afstand tussen twee coördinaatlijnen constant is over naar coördinaten die de vorming van de aarde representeren. Vooral voor bouwwerken en infrastructuur die een groot gebied omvatten kan dit een ongewenste vertekening geven. Momenteel is dit technisch op te lossen, maar het vraagt in de praktijk veel uitzoekwerk en is bovendien niet als standaard workflow beschikbaar binnen de mainstream software omgevingen. De uitdaging hier is het ontwikkelen van breed gedragen, gestandaardiseerde oplossingen met duidelijke handreikingen zodat deze oplossingen ook beschikbaar komen voor klein-tot-middelgrote projecten waar niet altijd de benodigde expertise beschikbaar is. [<cite><a class="bibref" data-link-type="biblio" href="#bib-stoter2020" title="Gebruik van BIM in Geo in de praktijk: voorbij de hype">Stoter2020</a></cite>]</p>
+<p>Deze praktijkrichtlijn is bedoeld voor GEO- en BIM-modelleurs van infra en utuliteitsbouw. De richtlijn voorziet in werkwijze en oplossingen die nodig zijn om Geo en BIM te georefereren. Het biedt een Informatie Levering Handleiding gebaseerd op open standaard uitwisseling.</p>
+</section>
+  <section class="informative" id="toepassingsgebied"><div class="header-wrapper"><h2 id="x2-toepassingsgebied"><bdi class="secno">2. </bdi>Toepassingsgebied</h2><a class="self-link" href="#toepassingsgebied" aria-label="Permalink for Section 2."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
+<p>Deze praktijkrichtlijn kan men gebruiken in het B&amp;U- en Infra-domein. De richtlijn past men toe om een relatie te leggen met een bouwwerk of een omgeving en een coördinatenstelsel en zo de positie van het bouwwerk of de omgeving op de aardbol vast te leggen. Het bouwwerk of omgeving is hierdoor op de gewenste locatie in een BIM- of Geo-omgeving te plaatsen. Dit kan zowel 2D als 3D plaatsing betekenen.</p>
+<p>De beschreven methoden en technieken in deze praktijkrichtlijn kan men gebruiken wanneer men informatie uit wil wisselen tussen verschillende softwarepakketten of applicaties, verschillende databronnen wil combineren en bevragen.</p>
+<p>De praktijkrichtlijn kan men gebruiken wanneer men een geschikte methodiek voor georeferentie af wil spreken in een specifieke use-case die past bij de benodigde nauwkeurigheid en beoogde datasets.</p>
+<p>Ten slotte kan men de richtlijn gebruiken als handleiding om georeferentie in veelgebruikte softwarepakketten toe te passen.</p>
+<p>De richtlijn focust zich op het coordinatenstelsel en de werkwijzen die in Europees Nederland op nationaal niveau worden gebruikt.</p>
+</section>
+  <section id="coordinaattransformatie-datumtransformatie-en-coordinaatconversie"><div class="header-wrapper"><h2 id="x3-coordinaattransformatie-datumtransformatie-en-coordinaatconversie"><bdi class="secno">3. </bdi>Coördinaattransformatie, datumtransformatie en coördinaatconversie</h2><a class="self-link" href="#coordinaattransformatie-datumtransformatie-en-coordinaatconversie" aria-label="Permalink for Section 3."></a></div>
+<p>Bij het gebruik van meerdere CRS-en bestaat risico op introductie van fouten door onjuiste implementatie van de relaties tussen CRS-en. Eindgebruikers worden geadviseerd data waar mogelijk op te vragen in hetzelfde CRS.</p>
+<p>Aanbieders van data worden geadviseerd om data aan te bieden in de verschillende CRS-en gericht op de eindgebruikers. Hierbij is het advies zo nauwkeurig mogelijk te transformeren, omdat het niet altijd duidelijk is wie de eindgebruiker is.</p>
+<p>Wanneer voor opslag, uitwisseling en/of visualisatie andere CRS-en worden gebruikt zijn er een aantal aandachtspunten, de belangrijkste zijn:</p>
+<p>Voorkom dat te grote geometrische of topologische verschillen ontstaan
+Maak gebruik van een eenduidige coördinaatransformatie (en leg dit vast)</p>
+<p>bron: <a href="https://docs.geostandaarden.nl/crs/crs/">https://docs.geostandaarden.nl/crs/crs/</a></p>
+</section>
+  <section id="methodes-van-georeferentie"><div class="header-wrapper"><h2 id="x4-methodes-van-georeferentie"><bdi class="secno">4. </bdi>Methodes van Georeferentie</h2><a class="self-link" href="#methodes-van-georeferentie" aria-label="Permalink for Section 4."></a></div>
+<p>Er zijn verschillende methodes beschikbaar om een BIM en GEO modellen bij elkaar te brengen op de kaart. Deze methoden verschillen in nauwkeurigheid en mogelijkheid voor het bijeenbrengen van modellen. Dit wordt door Clemen Christian beschreven als Levels van georefereren [<cite><a class="bibref" data-link-type="biblio" href="#bib-christian2019" title="Level of Georeferencing (LoGeoRef) using IFC for BIM">Christian2019</a></cite>].</p>
+<p>Het is mogelijk om een BIM-model op de kaart te zetten door alleen het adres van waar het BIM-model dient te komen te duiden. Deze informatie geeft een indicatie van waar het model moet komen. De informatie is niet toereikend om het model exact te plaatsen, roteren en schalen. Een andere methode zoals het model plaatsen in een officieel coordinatenstelsel is hiervoor wel geschikt. Afhankelijk van de behoefte zijn verschillende methodes geschikt.</p>
 <p>
-      </p><figure id="fig-onderschrift">
-        <img src="media/Bomos_levenscyclus.svg" alt="Tekstueel alternatief voor toegankelijkheid">
-        <figcaption><a class="self-link" href="#fig-onderschrift">Figuur <bdi class="figno">1</bdi></a> <span class="fig-title">Onderschrift</span></figcaption>
+      </p><figure id="fig-verschillende-opties-van-georefereren-schematisch-weergegeven">
+        <img src="media/georefereren_opties.png" alt="Verschillende opties van georefereren schematisch weergegeven">
+        <figcaption><a class="self-link" href="#fig-verschillende-opties-van-georefereren-schematisch-weergegeven">Figuur <bdi class="figno">1</bdi></a> <span class="fig-title">Verschillende opties van georefereren schematisch weergegeven</span></figcaption>
       </figure>
     <p></p>
-</section><section id="referenties"><div class="header-wrapper"><h3 id="x2-3-referenties"><bdi class="secno">2.3 </bdi>Referenties</h3><a class="self-link" href="#referenties" aria-label="Permalink for Section 2.3"></a></div>
-<p>Referentie uit locale lijst [<cite><a class="bibref" data-link-type="biblio" href="#bib-semver" title="Semantic Versioning 2.0.0">SemVer</a></cite>]. Lijst staat in <code>organisation-config.js</code>. Alleen referenties die in de tekst voorkomen worden getoond.</p>
-<p>We gebruiken een <a href="#dfn-definitie" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-definitie-1">definitie</a> om een woord te omschrijven.</p>
-</section><section id="optioneel"><div class="header-wrapper"><h3 id="x2-4-optioneel"><bdi class="secno">2.4 </bdi>Optioneel</h3><a class="self-link" href="#optioneel" aria-label="Permalink for Section 2.4"></a></div>
-<p>De onderstaande secties (<em>Conformiteit</em> e.d.) zijn optioneel, zie <code>index.html</code>:</p>
-<pre><code aria-busy="false" class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"abstract"</span> <span class="hljs-attr">data-include-format</span>=<span class="hljs-string">"markdown"</span> <span class="hljs-attr">data-include</span>=<span class="hljs-string">"abstract.md"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sotd"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span><span class="hljs-comment">&lt;!-- Wordt automatisch gevuld --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">data-include-format</span>=<span class="hljs-string">"markdown"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"informative"</span> <span class="hljs-attr">data-include</span>=<span class="hljs-string">"ch01.md"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">data-include-format</span>=<span class="hljs-string">"markdown"</span> <span class="hljs-attr">data-include</span>=<span class="hljs-string">"ch02.md"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-comment">&lt;!-- Hieronder optionele secties. Worden automatisch gevuld --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'conformance'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'tof'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"index"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
-</code></pre>
+<p>De beschikbaarheid van informatie voor het berekenen van georeferentie-parameteres voor de verschillende methoden is onderzocht door de TU Delft. [<cite><a class="bibref" data-link-type="biblio" href="#bib-hakim2024" title="Enhancing Georeferencing of IFC Models through Surveyed Points Integration">Hakim2024</a></cite>] </p>
+<table>
+<thead>
+<tr>
+<th>Methode</th>
+<th>Plaatsing</th>
+<th>Rotatie</th>
+<th>Schaal</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Benoemen van locatie</td>
+<td>Niet mogelijk</td>
+<td>Niet mogelijk</td>
+<td>Niet mogelijk</td>
+</tr>
+<tr>
+<td>Punt op de kaart zetten</td>
+<td>Mogelijk</td>
+<td>Niet mogelijk</td>
+<td>Niet mogelijk</td>
+</tr>
+<tr>
+<td>Locatie koppelen aan één element in het model</td>
+<td>Mogelijk</td>
+<td>Eventueel mogelijk</td>
+<td>Niet mogelijk</td>
+</tr>
+<tr>
+<td>Locatie koppelen aan geheel model en noorden aangeven</td>
+<td>Mogelijk</td>
+<td>Eventueel mogelijk</td>
+<td>Niet mogelijk</td>
+</tr>
+<tr>
+<td>Het model plaatsen in een officieel coördinatenstelsel</td>
+<td>Mogelijk</td>
+<td>Mogelijk</td>
+<td>Mogelijk</td>
+</tr>
+<tr>
+<td>Het afspreken van controlepunten tussen BIM, Bouw en GEO</td>
+<td>Mogelijk</td>
+<td>Mogelijk</td>
+<td>Mogelijk</td>
+</tr>
+</tbody></table>
+<section id="x1d-2d-en-3d-geo-en-bim-modellen"><div class="header-wrapper"><h3 id="x4-1-1d-2d-en-3d-geo-en-bim-modellen"><bdi class="secno">4.1 </bdi>1D 2D en 3D Geo en BIM modellen</h3><a class="self-link" href="#x1d-2d-en-3d-geo-en-bim-modellen" aria-label="Permalink for Section 4.1"></a></div>
+<p>Zowel BIM- als GEO-modellen kunnen een 1D, 2D als 3D coordinatenstelsel gebruiken. Om een juiste  </p>
+<p>Een GEO coordinatenstelsel kan 3D (EPSG:7415), 2D (EPSG:28992) of 1D (EPSG:5709) zijn. </p>
+<table>
+<thead>
+<tr>
+<th>Van</th>
+<th>Naar</th>
+<th>Mogelijkheid</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2D BIM</td>
+<td>2D GEO</td>
+<td>...</td>
+</tr>
+<tr>
+<td>2D BIM</td>
+<td>3D GEO</td>
+<td>...</td>
+</tr>
+<tr>
+<td>3D BIM</td>
+<td>2D GEO</td>
+<td>...</td>
+</tr>
+<tr>
+<td>3D BIM</td>
+<td>3D GEO</td>
+<td>...</td>
+</tr>
+</tbody></table>
+</section><section id="georeferentie-in-uitwisseling"><div class="header-wrapper"><h3 id="x4-2-georeferentie-in-uitwisseling"><bdi class="secno">4.2 </bdi>Georeferentie in uitwisseling</h3><a class="self-link" href="#georeferentie-in-uitwisseling" aria-label="Permalink for Section 4.2"></a></div>
+</section><section id="ifc"><div class="header-wrapper"><h3 id="x4-3-ifc"><bdi class="secno">4.3 </bdi>IFC</h3><a class="self-link" href="#ifc" aria-label="Permalink for Section 4.3"></a></div>
+</section><section id="citygml"><div class="header-wrapper"><h3 id="x4-4-citygml"><bdi class="secno">4.4 </bdi>CityGML</h3><a class="self-link" href="#citygml" aria-label="Permalink for Section 4.4"></a></div>
+</section><section id="dxf"><div class="header-wrapper"><h3 id="x4-5-dxf"><bdi class="secno">4.5 </bdi>DXF</h3><a class="self-link" href="#dxf" aria-label="Permalink for Section 4.5"></a></div>
+</section><section id="geopackage"><div class="header-wrapper"><h3 id="x4-6-geopackage"><bdi class="secno">4.6 </bdi>Geopackage</h3><a class="self-link" href="#geopackage" aria-label="Permalink for Section 4.6"></a></div>
 </section></section>
-  <section id="mermaid-diagram"><div class="header-wrapper"><h2 id="x3-mermaid-diagram"><bdi class="secno">3. </bdi>Mermaid diagram</h2><a class="self-link" href="#mermaid-diagram" aria-label="Permalink for Section 3."></a></div>
-<figure id="Mermaidvoorbeeld">
+  <section id="handleiding-software"><div class="header-wrapper"><h2 id="x5-handleiding-software"><bdi class="secno">5. </bdi>Handleiding Software</h2><a class="self-link" href="#handleiding-software" aria-label="Permalink for Section 5."></a></div>
+<section id="software"><div class="header-wrapper"><h3 id="x5-1-software"><bdi class="secno">5.1 </bdi>Software</h3><a class="self-link" href="#software" aria-label="Permalink for Section 5.1"></a></div>
+<section id="revit"><div class="header-wrapper"><h4 id="x5-1-1-revit"><bdi class="secno">5.1.1 </bdi>Revit</h4><a class="self-link" href="#revit" aria-label="Permalink for Section 5.1.1"></a></div>
+<p><em>Begrippen</em></p>
+<p><em>Internal Origin:</em> De oorsprong in Revit. Dit punt is niet te verplaatsen.</p>
+<p><em>Project Basepoint:</em> Lokaal Coördinatiepunt. Dit punt wordt gebruikt om modellen op elkaar af te stemmen en als de positie op de aardbol niet relevant is, b.v. tijdens engineering.
+Survey Point: CRS-Coördinatiepunt . Dit punt wordt gebruikt om de relatie te leggen met een coördinatenstelsel en zo de positie van het model op de aardbol vast te leggen.</p>
+<p><em>Project Units:</em> De instelling van de standaard eenheden binnen het project. Hier kan b.v. opgegeven worden of er met meters of met millimeters wordt gewerkt.</p>
+<p><em>Methode 1:</em> link dwg
+1.	Gebruik een DXF of een DWG die op de juiste coördinaten is gemaakt als onderlegger en link die in Revit. Het is handig om bij het linken op te geven dat het bestand in meters is.
+2.	Verplaats en roteer het bestand naar een bekend punt of het model zodat het bestand op de juiste positie staat. Je verplaatst dus niet het model naar de juiste plek maar je schuift de locatie onder het model.
+3.	Gebruik ‘Aquire Coordinates’ en selecteer het bestand om de coördinaten over te nemen.
+4.	Selecteer het Survey Point, unclip het en verplaatst het naar de gekozen X- en Y-waarden van het CRS-Coördinatiepunt en geef als Z-waarde de hoogte ten opzichte van N.A.P. op.
+5.	Plaats een coördinatiekubus van 1x1x1m met een hoekpunt op de plek van het Project Basepoint, bij voorkeur zo dat de kubus in het negatieve kwadrant valt ten opzichte van het Project Basepoint.
+6.	Als er, zoals bij de start van een project, nog geen model is dan is het handig om in de onderlegger de positie van het CRS-Coördinatiepunt op te geven (kies een plek met hele X- en Y-waarden in het coördinatenstelsel). Link, verplaats en roteer dan het bestand zodat het CRS-Coördinatiepunt overeenkomt met het Survey Point.
+7.	Gebruik ‘Aquire Coordinates’ en selecteer het bestand om de coördinaten over te nemen.
+8.	Selecteer het Survey Point, unclip het en geef als Z-waarde de hoogte ten opzichte van N.A.P. op.
+9.	Als het ontwerp zover is dat de stramienen vaststaan dan kan het Project Basepoint verplaatst worden zodat die op 5m van de eerste stramienen staat zoals gebruikelijk. Vóór het verplaatsten van het Project Basepoint moet hij ge-unclipt worden.
+10.	Plaats een coördinatiekubus van 1x1x1m met een hoekpunt op de plek van het Project Basepoint, bij voorkeur zo dat de kubus in het negatieve kwadrant valt ten opzichte van het Project Basepoint.</p>
+<p><em>Methode 2: Project Basepoint en Survey Point aanpassen</em>
+Hoekverdraaiing en negatieve waardes voor hoeken
+<em>Units</em>
+<em>Export naar IFC</em></p>
+<p> 
+      </p><figure id="fig-lokaal-coordinatiepunt-in-revit">
+        <img src="media/Lokaal_coördinatiepunt_in_Revit_2.png" alt="Scherm in Revit dat een lokaal coördinatiepunt laat zien">
+        <figcaption><a class="self-link" href="#fig-lokaal-coordinatiepunt-in-revit">Figuur <bdi class="figno">2</bdi></a> <span class="fig-title">Lokaal coördinatiepunt in Revit</span></figcaption>
+      </figure>
+    <p></p>
+<p> 
+      </p><figure id="fig-plaatsing-van-het-lokaal-coordinatiepunt-in-gis-in-revit">
+        <img src="media/Lokaal_coördinatiepunt_in_Revit_2.png" alt="Scherm in Revit dat de plaatsing van dit referentiepunt in de wereld laat zien">
+        <figcaption><a class="self-link" href="#fig-plaatsing-van-het-lokaal-coordinatiepunt-in-gis-in-revit">Figuur <bdi class="figno">3</bdi></a> <span class="fig-title">Plaatsing van het lokaal coördinatiepunt in GIS in Revit</span></figcaption>
+      </figure>
+    <p></p>
+</section><section id="archicad"><div class="header-wrapper"><h4 id="x5-1-2-archicad"><bdi class="secno">5.1.2 </bdi>ArchiCAD</h4><a class="self-link" href="#archicad" aria-label="Permalink for Section 5.1.2"></a></div>
+<hr>
+</section><section id="vectorworks"><div class="header-wrapper"><h4 id="x5-1-3-vectorworks"><bdi class="secno">5.1.3 </bdi>VectorWorks</h4><a class="self-link" href="#vectorworks" aria-label="Permalink for Section 5.1.3"></a></div>
+<hr>
+</section><section id="bricscad"><div class="header-wrapper"><h4 id="x5-1-4-bricscad"><bdi class="secno">5.1.4 </bdi>BricsCAD</h4><a class="self-link" href="#bricscad" aria-label="Permalink for Section 5.1.4"></a></div>
+<hr>
+</section><section id="sketchup"><div class="header-wrapper"><h4 id="x5-1-5-sketchup"><bdi class="secno">5.1.5 </bdi>Sketchup</h4><a class="self-link" href="#sketchup" aria-label="Permalink for Section 5.1.5"></a></div>
+<hr>
+</section><section id="bonsai-blenderbim"><div class="header-wrapper"><h4 id="x5-1-6-bonsai-blenderbim"><bdi class="secno">5.1.6 </bdi>Bonsai (BlenderBIM)</h4><a class="self-link" href="#bonsai-blenderbim" aria-label="Permalink for Section 5.1.6"></a></div>
+<hr>
+</section><section id="illustrator"><div class="header-wrapper"><h4 id="x5-1-7-illustrator"><bdi class="secno">5.1.7 </bdi>Illustrator</h4><a class="self-link" href="#illustrator" aria-label="Permalink for Section 5.1.7"></a></div>
+<hr>
+</section><section id="definities"><div class="header-wrapper"><h4 id="x5-1-8-definities"><bdi class="secno">5.1.8 </bdi>Definities</h4><a class="self-link" href="#definities" aria-label="Permalink for Section 5.1.8"></a></div>
+<p><dfn id="dfn-definitie" tabindex="0" aria-haspopup="dialog">Definitie</dfn>: Een definitie is een beschrijving van een woord. Een ander woord voor <em>definitie</em> is betekenis of beschrijving.</p>
+</section></section></section>
+  <section id="tooling"><div class="header-wrapper"><h2 id="x6-tooling"><bdi class="secno">6. </bdi>Tooling</h2><a class="self-link" href="#tooling" aria-label="Permalink for Section 6."></a></div>
+<hr>
+<section id="ifc2gref"><div class="header-wrapper"><h3 id="x6-1-ifc2gref"><bdi class="secno">6.1 </bdi>Ifc2Gref</h3><a class="self-link" href="#ifc2gref" aria-label="Permalink for Section 6.1"></a></div>
+<p>Wanneer nog geen geo-locatie is vastgelegd kan de bim modelleur gebruik maken van de tool: IFCgref. Ten minste één bekend RD punt als invoer om de translatie te beschrijven. Geldige waarden Easting, Northing (X,Y) voor Nederland vallen in dit bereik (in km.)</p>
+<p>
+      </p><figure id="fig-kaart-met-rd-coordinaten">
+        <img src="media/kaart-met-rd-coordinaten.gif" alt="Kaart met RD Coördinaten">
+        <figcaption><a class="self-link" href="#fig-kaart-met-rd-coordinaten">Figuur <bdi class="figno">4</bdi></a> <span class="fig-title">Kaart met RD-coördinaten</span></figcaption>
+      </figure>
+    <p></p>
+<p>
+      </p><figure id="fig-ifcmapconversion-attributen-en-waarde">
+        <img src="media/IfcMapconversion_attributen.png" alt="IfcMapConversion attributen en waarden">
+        <figcaption><a class="self-link" href="#fig-ifcmapconversion-attributen-en-waarde">Figuur <bdi class="figno">5</bdi></a> <span class="fig-title">IfcMapConversion attributen en waarde</span></figcaption>
+      </figure>
+    <p></p>
+</section></section>
 
-<pre><svg id="diagram-1" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="max-width: 128.234375px;" viewBox="0 0 128.234375 230"><style>
-#diagram-1 {font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#diagram-1 .error-icon{fill:#552222;}#diagram-1 .error-text{fill:#552222;stroke:#552222;}#diagram-1 .edge-thickness-normal{stroke-width:2px;}#diagram-1 .edge-thickness-thick{stroke-width:3.5px;}#diagram-1 .edge-pattern-solid{stroke-dasharray:0;}#diagram-1 .edge-pattern-dashed{stroke-dasharray:3;}#diagram-1 .edge-pattern-dotted{stroke-dasharray:2;}#diagram-1 .marker{fill:#333333;stroke:#333333;}#diagram-1 .marker.cross{stroke:#333333;}#diagram-1 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#diagram-1 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#diagram-1 .cluster-label text{fill:#333;}#diagram-1 .cluster-label span{color:#333;}#diagram-1 .label text,#diagram-1 span{fill:#333;color:#333;}#diagram-1 .node rect,#diagram-1 .node circle,#diagram-1 .node ellipse,#diagram-1 .node polygon,#diagram-1 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#diagram-1 .node .label{text-align:center;}#diagram-1 .node.clickable{cursor:pointer;}#diagram-1 .arrowheadPath{fill:#333333;}#diagram-1 .edgePath .path{stroke:#333333;stroke-width:2.0px;}#diagram-1 .flowchart-link{stroke:#333333;fill:none;}#diagram-1 .edgeLabel{background-color:#e8e8e8;text-align:center;}#diagram-1 .edgeLabel rect{opacity:0.5;background-color:#e8e8e8;fill:#e8e8e8;}#diagram-1 .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#diagram-1 .cluster text{fill:#333;}#diagram-1 .cluster span{color:#333;}#diagram-1 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#diagram-1 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}
-</style><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath LS-A LE-B" id="L-A-B" style="opacity: 1;"><path class="path" d="M48.55859375,43.637195415583165L44.354817708333336,48.197662846319304C40.151041666666664,52.75813027705544,31.743489583333332,61.87906513852772,27.539713541666668,70.60619923593053C23.3359375,79.33333333333333,23.3359375,87.66666666666667,23.3359375,91.83333333333333L23.3359375,96" marker-end="url(#arrowhead14)" style="fill:none"></path><defs><marker id="arrowhead14" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-A LE-C" id="L-A-C" style="opacity: 1;"><path class="path" d="M79.23046875,43.637195415583165L83.43424479166667,48.197662846319304C87.63802083333333,52.75813027705544,96.04557291666667,61.87906513852772,100.24934895833333,70.60619923593053C104.453125,79.33333333333333,104.453125,87.66666666666667,104.453125,91.83333333333333L104.453125,96" marker-end="url(#arrowhead15)" style="fill:none"></path><defs><marker id="arrowhead15" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-B LE-D" id="L-B-D" style="opacity: 1;"><path class="path" d="M23.3359375,134L23.3359375,138.16666666666666C23.3359375,142.33333333333334,23.3359375,150.66666666666666,27.465494791666668,159.31328453561912C31.595052083333332,167.95990240457158,39.854166666666664,176.91980480914313,43.983723958333336,181.39975601142896L48.11328125,185.87970721371474" marker-end="url(#arrowhead16)" style="fill:none"></path><defs><marker id="arrowhead16" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-C LE-D" id="L-C-D" style="opacity: 1;"><path class="path" d="M104.453125,134L104.453125,138.16666666666666C104.453125,142.33333333333334,104.453125,150.66666666666666,100.32356770833333,159.31328453561912C96.19401041666667,167.95990240457158,87.93489583333333,176.91980480914313,83.80533854166667,181.39975601142896L79.67578125,185.87970721371474" marker-end="url(#arrowhead17)" style="fill:none"></path><defs><marker id="arrowhead17" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-A-B" class="edgeLabel L-LS-A' L-LE-B"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-A-C" class="edgeLabel L-LS-A' L-LE-C"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-B-D" class="edgeLabel L-LS-B' L-LE-D"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-C-D" class="edgeLabel L-LS-C' L-LE-D"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default" id="flowchart-A-8" transform="translate(63.89453125,27)" style="opacity: 1;"><rect rx="0" ry="0" x="-15.3359375" y="-19" width="30.671875" height="38" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-5.3359375,-9)"><foreignObject width="10.671875" height="18"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">A</div></foreignObject></g></g></g><g class="node default" id="flowchart-B-9" transform="translate(23.3359375,115)" style="opacity: 1;"><rect rx="0" ry="0" x="-15.3359375" y="-19" width="30.671875" height="38" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-5.3359375,-9)"><foreignObject width="10.671875" height="18"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">B</div></foreignObject></g></g></g><g class="node default" id="flowchart-C-11" transform="translate(104.453125,115)" style="opacity: 1;"><rect rx="0" ry="0" x="-15.78125" y="-19" width="31.5625" height="38" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-5.78125,-9)"><foreignObject width="11.5625" height="18"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">C</div></foreignObject></g></g></g><g class="node default" id="flowchart-D-13" transform="translate(63.89453125,203)" style="opacity: 1;"><rect rx="0" ry="0" x="-15.78125" y="-19" width="31.5625" height="38" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-5.78125,-9)"><foreignObject width="11.5625" height="18"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">D</div></foreignObject></g></g></g></g></g></g></svg></pre>
-<figcaption><a class="self-link" href="#Mermaidvoorbeeld">Figuur <bdi class="figno">2</bdi></a> <span class="fig-title">Mermaid voorbeeld</span></figcaption>
-</figure></section>
-
   
   
   
 
   
-  <section id="conformance"><div class="header-wrapper"><h2 id="x4-conformiteit"><bdi class="secno">4. </bdi>Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 4."></a></div><p>Naast onderdelen die als niet normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet normatief. Verder is alles in dit document normatief.</p></section> 
-  <section id="tof"><div class="header-wrapper"><h2 id="x5-lijst-met-figuren"><bdi class="secno">5. </bdi>Lijst met figuren</h2><a class="self-link" href="#tof" aria-label="Permalink for Section 5."></a></div><ul class="tof">
+  <section id="conformance"><div class="header-wrapper"><h2 id="x7-conformiteit"><bdi class="secno">7. </bdi>Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 7."></a></div><p>Naast onderdelen die als niet normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet normatief. Verder is alles in dit document normatief.</p></section> 
+  <section id="tof"><div class="header-wrapper"><h2 id="x8-lijst-met-figuren"><bdi class="secno">8. </bdi>Lijst met figuren</h2><a class="self-link" href="#tof" aria-label="Permalink for Section 8."></a></div><ul class="tof">
         <li class="tofline">
-    <a class="tocxref" href="#fig-onderschrift"><span class="self-link">Figuur <bdi class="figno">1</bdi></span> <span class="fig-title">Onderschrift</span></a>
+    <a class="tocxref" href="#fig-verschillende-opties-van-georefereren-schematisch-weergegeven"><span class="self-link">Figuur <bdi class="figno">1</bdi></span> <span class="fig-title">Verschillende opties van georefereren schematisch weergegeven</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Mermaidvoorbeeld"><span class="self-link">Figuur <bdi class="figno">2</bdi></span> <span class="fig-title">Mermaid voorbeeld</span></a>
+    <a class="tocxref" href="#fig-lokaal-coordinatiepunt-in-revit"><span class="self-link">Figuur <bdi class="figno">2</bdi></span> <span class="fig-title">Lokaal coördinatiepunt in Revit</span></a>
+  </li><li class="tofline">
+    <a class="tocxref" href="#fig-plaatsing-van-het-lokaal-coordinatiepunt-in-gis-in-revit"><span class="self-link">Figuur <bdi class="figno">3</bdi></span> <span class="fig-title">Plaatsing van het lokaal coördinatiepunt in GIS in Revit</span></a>
+  </li><li class="tofline">
+    <a class="tocxref" href="#fig-kaart-met-rd-coordinaten"><span class="self-link">Figuur <bdi class="figno">4</bdi></span> <span class="fig-title">Kaart met RD-coördinaten</span></a>
+  </li><li class="tofline">
+    <a class="tocxref" href="#fig-ifcmapconversion-attributen-en-waarde"><span class="self-link">Figuur <bdi class="figno">5</bdi></span> <span class="fig-title">IfcMapConversion attributen en waarde</span></a>
   </li>
       </ul></section>
   <section id="index" class="appendix"><div class="header-wrapper"><h2 id="a-index"><bdi class="secno">A. </bdi>Index</h2><a class="self-link" href="#index" aria-label="Permalink for Appendix A."></a></div><section id="index-defined-here">
@@ -453,7 +636,7 @@ Dit hoofdstuk is toegevoegd met <code>class="informative"</code> in <code>config
     <ul class="index">
     <li>
       <a class="index-term" href="#dfn-definitie">Definitie</a> 
-    <span class="print-only">§2.1</span></li>
+    <span class="print-only">§5.1.8</span></li>
   </ul>
   </section><section id="index-defined-elsewhere">
     <div class="header-wrapper"><h3 id="a-2-begrippen-gedefinieerd-door-verwijzing"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</h3><a class="self-link" href="#index-defined-elsewhere" aria-label="Permalink for Appendix A.2"></a></div>
@@ -466,8 +649,17 @@ Dit hoofdstuk is toegevoegd met <code>class="informative"</code> in <code>config
 
 <section id="references" class="appendix"><div class="header-wrapper"><h2 id="b-referenties"><bdi class="secno">B. </bdi>Referenties</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix B."></a></div><section id="normatieve-referenties">
     <div class="header-wrapper"><h3 id="b-1-normatieve-referenties"><bdi class="secno">B.1 </bdi>Normatieve referenties</h3><a class="self-link" href="#normatieve-referenties" aria-label="Permalink for Appendix B.1"></a></div>
-    <dl class="bibliography"><dt id="bib-semver">[SemVer]</dt><dd>
-      <a href="https://semver.org"><cite>Semantic Versioning 2.0.0</cite></a>. T. Preston-Werner. June 2013. URL: <a href="https://semver.org">https://semver.org</a>
+    <dl class="bibliography"><dt id="bib-christian2019">[Christian2019]</dt><dd>
+      <a href="https://jgcc.geoprevi.ro/docs/2019/10/jgcc_2019_no10_3.pdf"><cite>Level of Georeferencing (LoGeoRef) using IFC for BIM</cite></a>. Christian Clemens, Görne Hendrik. 2019. URL: <a href="https://jgcc.geoprevi.ro/docs/2019/10/jgcc_2019_no10_3.pdf">https://jgcc.geoprevi.ro/docs/2019/10/jgcc_2019_no10_3.pdf</a>
+    </dd><dt id="bib-hakim2024">[Hakim2024]</dt><dd>
+      <a href="https://isprs-archives.copernicus.org/articles/XLVIII-4-W11-2024/41/2024/isprs-archives-XLVIII-4-W11-2024-41-2024.pdf"><cite>Enhancing Georeferencing of IFC Models through Surveyed Points Integration</cite></a>. Amir Hakim, Ken Arroyo Ohori, Jasper van der Vaart, Siham El Yamani, Jantien Stoter. 2024. URL: <a href="https://isprs-archives.copernicus.org/articles/XLVIII-4-W11-2024/41/2024/isprs-archives-XLVIII-4-W11-2024-41-2024.pdf">https://isprs-archives.copernicus.org/articles/XLVIII-4-W11-2024/41/2024/isprs-archives-XLVIII-4-W11-2024-41-2024.pdf</a>
+    </dd></dl>
+  </section><section id="informatieve-referenties">
+    <div class="header-wrapper"><h3 id="b-2-informatieve-referenties"><bdi class="secno">B.2 </bdi>Informatieve referenties</h3><a class="self-link" href="#informatieve-referenties" aria-label="Permalink for Appendix B.2"></a></div>
+    <dl class="bibliography"><dt id="bib-mallela2024">[Mallela2024]</dt><dd>
+      <a href="https://www.buildingsmart.org/wp-content/uploads/2024/05/bSI-OGC-BIM-GIS-Strategic-Roadmap_Industry_Insight_bSI_v2.pdf"><cite>Enabling information continuity across BIM-GIS domains:A bSI and OGC strategic roadmap</cite></a>. Jagannath Mallela, Abhishek Bhargav. 2024. URL: <a href="https://www.buildingsmart.org/wp-content/uploads/2024/05/bSI-OGC-BIM-GIS-Strategic-Roadmap_Industry_Insight_bSI_v2.pdf">https://www.buildingsmart.org/wp-content/uploads/2024/05/bSI-OGC-BIM-GIS-Strategic-Roadmap_Industry_Insight_bSI_v2.pdf</a>
+    </dd><dt id="bib-stoter2020">[Stoter2020]</dt><dd>
+      <a href="https://3d.bk.tudelft.nl/ken/files/20_geoinfo.pdf"><cite>Gebruik van BIM in Geo in de praktijk: voorbij de hype</cite></a>. Jantien Stoter, Francesca Noarda, Teng Wu, Ken Arroyo Ohori, Thomas Krijnen. 2020. URL: <a href="https://3d.bk.tudelft.nl/ken/files/20_geoinfo.pdf">https://3d.bk.tudelft.nl/ken/files/20_geoinfo.pdf</a>
     </dd></dl>
   </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
@@ -479,10 +671,8 @@ Dit hoofdstuk is toegevoegd met <code>class="informative"</code> in <code>config
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
-    <li>
-    <a href="#ref-for-dfn-definitie-1" title="§ 2.3 Referenties">§ 2.3 Referenties</a> 
-  </li>
-  </ul>
+      <li>Not referenced in this document.</li>
+    </ul>
     </div><script id="respec-dfn-panel">(() => {
 // @ts-check
 if (document.respec) {
@@ -705,4 +895,4 @@ function hidePanel(panel) {
   panel.hidden = true;
   panel.classList.remove("docked");
 }
-})()</script><div class="sidelabel">Geonovum Handreiking - Werkversie</div><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
+})()</script><div class="sidelabel">Geonovum Praktijkrichtlijn - Werkversie</div><script src="https://gitdocumentatie.logius.nl/publicatie/respec/fixup.js"></script></body></html>
