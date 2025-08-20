@@ -1,0 +1,7 @@
+
+Welcome to Pa11y
+
+ > Running Pa11y on URL file:///home/runner/work/temp_geobim/temp_geobim/snapshot.html
+
+No issues found!
+
