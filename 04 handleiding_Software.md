@@ -55,6 +55,3 @@ Hoekverdraaiing en negatieve waardes voor hoeken
 
 
 
-## Definities
-<dfn>Definitie</dfn>: Een definitie is een beschrijving van een woord. Een ander woord voor _definitie_ is betekenis of beschrijving.
-
