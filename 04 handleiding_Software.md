@@ -35,6 +35,10 @@ Hoekverdraaiing en negatieve waardes voor hoeken
 
  ![Scherm in Revit dat de plaatsing van dit referentiepunt in de wereld laat zien](media/Lokaal_coördinatiepunt_in_Revit_2.png "Plaatsing van het lokaal coördinatiepunt in GIS in Revit")
 
+
+Hans Hendriks (2022)
+https://github.com/Hans-Lammerts/Sample-Test-Files/blob/master/Geolocation%20information%20from%20Revit%20to%20IFC_v1.0.pdf
+
 ## ArchiCAD
 --- 
 
