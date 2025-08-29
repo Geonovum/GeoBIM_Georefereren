@@ -29,10 +29,6 @@ Hoekverdraaiing en negatieve waardes voor hoeken
 *Units*
 *Export naar IFC*
  
- ![Scherm in Revit dat een lokaal coördinatiepunt laat zien](media/Lokaal_coördinatiepunt_in_Revit_2.png "Lokaal coördinatiepunt in Revit")
-
-
-
  ![Scherm in Revit dat de plaatsing van dit referentiepunt in de wereld laat zien](media/Lokaal_coördinatiepunt_in_Revit_2.png "Plaatsing van het lokaal coördinatiepunt in GIS in Revit")
 
 
