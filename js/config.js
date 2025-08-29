@@ -123,6 +123,18 @@ let respecConfig = {
             title: "Enabling information continuity across BIM-GIS domains:A bSI and OGC strategic roadmap",
             authors: ["Jagannath Mallela, Abhishek Bhargav"],
             date: "2024"
-      }
+      },
+      "Christian2019": {
+            href: "https://jgcc.geoprevi.ro/docs/2019/10/jgcc_2019_no10_3.pdf",
+            title: "Level of Georeferencing (LoGeoRef) using IFC for BIM",
+            authors: ["Christian Clemens, Görne Hendrik"],
+            date: "2019"
+        },
+      "Hakim2024": {
+            href: "https://isprs-archives.copernicus.org/articles/XLVIII-4-W11-2024/41/2024/isprs-archives-XLVIII-4-W11-2024-41-2024.pdf",
+            title: "Enhancing Georeferencing of IFC Models through Surveyed Points Integration",
+            authors: ["Amir Hakim, Ken Arroyo Ohori, Jasper van der Vaart, Siham El Yamani, Jantien Stoter"],
+            date: "2024"
+        }
     }   
 };
