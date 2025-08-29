@@ -29,10 +29,6 @@ Hoekverdraaiing en negatieve waardes voor hoeken
 *Units*
 *Export naar IFC*
  
- ![Scherm in Revit dat een lokaal coördinatiepunt laat zien](media/Lokaal_coördinatiepunt_in_Revit_2.png "Lokaal coördinatiepunt in Revit")
-
-
-
  ![Scherm in Revit dat de plaatsing van dit referentiepunt in de wereld laat zien](media/Lokaal_coördinatiepunt_in_Revit_2.png "Plaatsing van het lokaal coördinatiepunt in GIS in Revit")
 
 
@@ -58,7 +54,4 @@ https://github.com/Hans-Lammerts/Sample-Test-Files/blob/master/Geolocation%20inf
 --- 
 
 
-
-## Definities
-<dfn>Definitie</dfn>: Een definitie is een beschrijving van een woord. Een ander woord voor _definitie_ is betekenis of beschrijving.
 
