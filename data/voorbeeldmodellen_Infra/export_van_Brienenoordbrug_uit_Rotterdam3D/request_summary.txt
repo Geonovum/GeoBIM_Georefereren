@@ -1,0 +1,42 @@
+﻿##Export summary details##
+
+Job start time: 2025-01-15 16:29:17 (GMT)
+Export version: 5.2.13
+Exort Description: 
+
+##Request Filter##
+
+Feature selection method: Einzelobjekte
+Request area coordinates: 
+Feature GML ID list:  
+
+##Feature Information##
+
+CityGML feature type(s) : 64
+Selected LOD: haLoD
+Include generic attributes: Yes
+
+##Appearence information##
+
+Use textures: Yes
+Texture appreance theme: Rotterdam
+
+##Terrain details##
+
+Export terrain: No
+URL to terrain: 
+Terrain level: MAX
+Texture terrain: Yes
+Terrain texture type:  
+Terrain texture level 
+URL to TMS: 
+URL to WMS: 
+
+##Output details##
+
+Export Format(s) : CityGML,CityJSON,DXF,COLLADA,STEP,FBX,2D Shape,3D Shape - PolygonZ,3D Shape - Multipatch,ESRI FGDB,KMZ,DWG,3DS,OBJ,VRML,GLTF,3DPDF,FMEAR,STL,GEOPACKAGE
+Coordinate System (if not local): EPSG:28992
+Move to local coordinate system : No
+Tile output: No
+Height mode: absolute
+

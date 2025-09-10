@@ -7,3 +7,8 @@ Wanneer nog geen geo-locatie is vastgelegd kan de bim modelleur gebruik maken va
 ![Kaart met RD Coördinaten](media/kaart-met-rd-coordinaten.gif "Kaart met RD-coördinaten")
 
 ![IfcMapConversion attributen en waarden](media/IfcMapconversion_attributen.png "IfcMapConversion attributen en waarde")
+
+
+## IfcGeoRefChecker
+
+https://github.com/dd-bim/City2BIM/tree/master/IFCGeoRefCheckerGUI
