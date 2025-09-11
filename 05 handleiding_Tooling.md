@@ -11,7 +11,7 @@ Depending on the initial level of georeferencing in the IFC file, IfcGref can up
 Finally, the IFC file is updated with georeferencing attributes, which the user can download and directly visualize on a map through IfcGref’s web interface. This allows users to verify the spatial alignment immediately.
 
 ![Kaart met RD Coördinaten](media/kaart-met-rd-coordinaten.gif "Kaart met RD-coördinaten")
-![IfcProjectedCRS attributen en waarden](media/ifcProjCrs.png "IfcProjectedCRS attributen en waarde")
+![IfcProjectedCRS attributen en waarden](media/ifcProjCRS.png "IfcProjectedCRS attributen en waarde")
 
 ![IfcMapConversion attributen en waarden](media/IfcMapconversion_attributen.png "IfcMapConversion attributen en waarde")
 
