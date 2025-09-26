@@ -12,6 +12,7 @@ Depending on the initial level of georeferencing in the IFC file, IfcGref can up
 
 ![IfcMapConversion attributen en waarden](media/IfcMapconversion_attributen.png "IfcMapConversion attributen en waarde")
 
+
 Finally, the IFC file is updated with georeferencing attributes, which the user can download and directly visualize on a map through IfcGref’s web interface. This allows users to verify the spatial alignment immediately.
 
 

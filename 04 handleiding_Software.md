@@ -2,6 +2,23 @@
 
 # Software
 
+## CAD Onderlegger 
+Voor het Georefereren van BIM-modellen kan het handig zijn om een CAD-bestand van de locatie te gebruiken als onderlegger. Je kan je opdrachtgever vragen een onderlegger aan te leveren maar je kan er ook zelf een maken:
+
+
+Optie 1: 2D 1. Ga naar Pdok en selecteer in de [BGT download-viewer](https://app.pdok.nl/lv/bgt/download-viewer/) je gewenste locatie.
+
+2. Unzip je downloadbestand. 3. Drag-drop je bestanden in [QGIS](https://qgis.org/download/).
+
+4. In QGIS ga naar Project>Import/Export>Export Project to DXF…
+
+
+Optie 2: 3D 1. Ga naar [3D BAG](https://www.3dbag.nl/nl/download) en selecteer je gewenste locatie (tegel).
+
+2. Download je bestand en kies Geopackage (GPKG) als bestandformaat. 3. Drag-drop je bestanden in QGIS.
+
+4. In QGIS ga naar Project>Import/Export>Export Project to DXF…
+
 ## Revit
 
 *Begrippen*
@@ -47,6 +64,7 @@ Door een omissie in de IFC-exporter van Revit moet voorafgaand aan het exportere
 ![Scherm in Revit met instellingen voor IFC export met Project Basepoint als Coordinate Base](https://github.com/user-attachments/assets/c4bf15c6-3218-4455-8e02-82bab44b21c1)
 2.	CRS-Coördinatiepunt: exporteer een IFC (4 of hoger) met Survey Point als Coordinate Base. Vul bij EPSG Code in: 28992. De IFC is ge-Georefereerd en is Grid-noord gericht (True North in Revit)
 ![Scherm in Revit dat de plaatsing van dit referentiepunt in de wereld laat zien](media/Lokaal_coördinatiepunt_in_Revit_2.png "Plaatsing van het lokaal coördinatiepunt in GIS in Revit")
+
 
 ![Scherm in Revit met instellingen voor IFC export met Survey Point als Coordinate Base](https://github.com/user-attachments/assets/1c77bf8d-8c8b-4c37-bb9a-3a405c6dd5d1)
 

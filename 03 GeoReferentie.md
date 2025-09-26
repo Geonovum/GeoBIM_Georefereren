@@ -30,6 +30,7 @@ Een GEO coordinatenstelsel kan 3D (EPSG:7415), 2D (EPSG:28992) of 1D (EPSG:5709)
 | 3D BIM        | 2D GEO    | ... | 
 | 3D BIM        | 3D GEO    | ... | 
 
+
 ## Het hoogtecomponent 
 Het planimetrische- en hoogte-component in een geo-databestand is een fundamenteel onderdeel van de dataset. Afwijkingen in deze informatie of verschillen tussen diverse momenten van inwinning of ontwerp kunnen een grote impact hebben. Het correct refereren van het bestand ten opzichte van deze as is daarom essentieel om de juiste stappen te kunnen nemen.
 
@@ -89,26 +90,15 @@ Het AHN of een andere puntenwolk in de omgeving kan hiervoor eveneens worden geb
 - IfcMapConversion 
 - Het gebruik van generic property sets voor 
 
-calculated transformation parameters could may be stored -without extending IFC schema- through generic property sets
-
 - IFC 5 (JSON?)
 IFC 5 maakt gebruik van USD-formaat (Universal Scene Description), voor geometrie, bijvoorbeeld usdgeom::mesh – veelhoekig oppervlaktemodel.
 
 
 
+calculated transformation parameters could may be stored -without extending IFC schema- through generic property sets
 
-
-# CityGML 
-
-Individuele georeferentie:
-<gml:Point srsName="urn:ogc:def:crs:EPSG::28992">
-  <gml:pos>123456 456789</gml:pos>
-</gml:Point>
-
-Totaal georeferentie van model: 
-<gml:boundedBy>
-  <gml:Envelope srsName="urn:ogc:def:crs:EPSG::28992">
-<gml:boundedBy>
+- IFC 5 (JSON?)
+IFC 5 maakt gebruik van USD-formaat (Universal Scene Description), voor geometrie, bijvoorbeeld usdgeom::mesh – veelhoekig oppervlaktemodel.
 
 # DXF
 De objecten in de DXF worden getekend in een coördinatenruimte die matcht met een geprojecteerd CRS (zoals EPSG:28992 of EPSG:3857).
@@ -123,9 +113,21 @@ Maar: het DXF-bestand zelf bevat geen metadata die zegt: "dit is RD-coördinaten
 | bestand.dxf	| De geometrie	| CAD-weergave| 
 | bestand.prj	| CRS-informatie (in WKT)	| Georeferentie door GIS-software| 
 
+# CityGML 
+
+Individuele georeferentie:
+<gml:Point srsName="urn:ogc:def:crs:EPSG::28992">
+  <gml:pos>123456 456789</gml:pos>
+</gml:Point>
+
+Totaal georeferentie van model: 
+<gml:boundedBy>
+  <gml:Envelope srsName="urn:ogc:def:crs:EPSG::28992">
+<gml:boundedBy>
+=======
+
 # Geopackage
 Opslag van dit CRS in de tabel gpkg_spatial_ref_sys in het bestand
-
 
 # API
 
