@@ -44,22 +44,6 @@ calculated transformation parameters could may be stored -without extending IFC 
 - IFC 5 (JSON?)
 IFC 5 maakt gebruik van USD-formaat (Universal Scene Description), voor geometrie, bijvoorbeeld usdgeom::mesh – veelhoekig oppervlaktemodel.
 
-
-
-
-
-# CityGML 
-
-Individuele georeferentie:
-<gml:Point srsName="urn:ogc:def:crs:EPSG::28992">
-  <gml:pos>123456 456789</gml:pos>
-</gml:Point>
-
-Totaal georeferentie van model: 
-<gml:boundedBy>
-  <gml:Envelope srsName="urn:ogc:def:crs:EPSG::28992">
-<gml:boundedBy>
-
 # DXF
 De objecten in de DXF worden getekend in een coördinatenruimte die matcht met een geprojecteerd CRS (zoals EPSG:28992 of EPSG:3857).
 
@@ -73,9 +57,20 @@ Maar: het DXF-bestand zelf bevat geen metadata die zegt: "dit is RD-coördinaten
 | bestand.dxf	| De geometrie	| CAD-weergave| 
 | bestand.prj	| CRS-informatie (in WKT)	| Georeferentie door GIS-software| 
 
+# CityGML 
+
+Individuele georeferentie:
+<gml:Point srsName="urn:ogc:def:crs:EPSG::28992">
+  <gml:pos>123456 456789</gml:pos>
+</gml:Point>
+
+Totaal georeferentie van model: 
+<gml:boundedBy>
+  <gml:Envelope srsName="urn:ogc:def:crs:EPSG::28992">
+<gml:boundedBy>
+
 # Geopackage
 Opslag van dit CRS in de tabel gpkg_spatial_ref_sys in het bestand
-
 
 # API
 

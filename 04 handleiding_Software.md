@@ -2,6 +2,23 @@
 
 # Software
 
+## CAD Onderlegger 
+Voor het Georefereren van BIM-modellen kan het handig zijn om een CAD-bestand van de locatie te gebruiken als onderlegger. Je kan je opdrachtgever vragen een onderlegger aan te leveren maar je kan er ook zelf een maken:
+
+
+Optie 1: 2D 1. Ga naar Pdok en selecteer in de [BGT download-viewer](https://app.pdok.nl/lv/bgt/download-viewer/) je gewenste locatie.
+
+2. Unzip je downloadbestand. 3. Drag-drop je bestanden in [QGIS](https://qgis.org/download/).
+
+4. In QGIS ga naar Project>Import/Export>Export Project to DXF…
+
+
+Optie 2: 3D 1. Ga naar [3D BAG](https://www.3dbag.nl/nl/download) en selecteer je gewenste locatie (tegel).
+
+2. Download je bestand en kies Geopackage (GPKG) als bestandformaat. 3. Drag-drop je bestanden in QGIS.
+
+4. In QGIS ga naar Project>Import/Export>Export Project to DXF…
+
 ## Revit
 *Begrippen*
 
