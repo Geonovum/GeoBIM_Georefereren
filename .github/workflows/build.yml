@@ -20,10 +20,10 @@ jobs:
 
       - name: Validate HTML
         run: |
+          set -euo pipefail
           docker run --rm -v "$PWD:/site" ghcr.io/validator/validator:latest \
             vnu --errors-only --skip-non-html --format json /site/snapshot.html \
             | tee $CHECK_DIR/html-validation.json
-
 
       - name: Check for alternateFormats
         id: config
