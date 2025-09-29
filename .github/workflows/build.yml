@@ -20,8 +20,10 @@ jobs:
 
       - name: Validate HTML
         run: |
-          npm install -g nu-html-checker
-          nu-html-checker snapshot.html
+          docker run --rm -v "$PWD:/site" ghcr.io/validator/validator:latest \
+            vnu --errors-only --skip-non-html --format json /site/snapshot.html \
+            | tee $CHECK_DIR/html-validation.json
+
 
       - name: Check for alternateFormats
         id: config
@@ -94,19 +96,26 @@ jobs:
             --buffer-size 8192 > $CHECK_DIR/link-check.txt 2>&1 || echo "Geen linkfouten gevonden." > $CHECK_DIR/link-check.txt
 
       - name: Commit all results
-        if: ${{ github.event_name == 'push' }}
+        if: >
+          github.event_name == 'push'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Verplaats PDFs naar root (optioneel)
+
           if [[ "${{ steps.config.outputs.grep }}" == "true" ]] && ls static/*.pdf 1>/dev/null 2>&1; then
             mv static/*.pdf .
           fi
 
-          git add snapshot.html *.pdf $CHECK_DIR/*.txt
+          git add snapshot.html $CHECK_DIR/*.txt
+
+          if compgen -G "*.pdf" > /dev/null; then
+            git add *.pdf
+          fi
+
           git commit -m "Snapshot + checks gegenereerd" || echo "No changes to commit"
-          git push --force-with-lease origin HEAD:main
+
+          BRANCH=${GITHUB_REF#refs/heads/}
+          git push --force-with-lease origin HEAD:"$BRANCH"
 
       - name: Upload snapshot artifact
         uses: actions/upload-artifact@v4
