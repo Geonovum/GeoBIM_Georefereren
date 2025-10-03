@@ -7,3 +7,7 @@ Een fundamenteel verschil is het gebruik van een lokaal coördinatenstelsel in B
 
 Deze praktijkrichtlijn is bedoeld voor GEO- en BIM-modelleurs van infra en utuliteitsbouw. De richtlijn voorziet in werkwijze en oplossingen die nodig zijn om Geo en BIM te georefereren. Het biedt een Informatie Levering Handleiding gebaseerd op open standaard uitwisseling. 
 
+# Leeswijzer
+Deze praktijkrichtlijn is als volgt opgebouwd: 
+
+In het hoofdstuk **Coördinaattransformatie, datumtransformatie en coördinaatconversie** wordt een toelichting gegeven op coordinaatreferentiesystemen en de manier waarop transformatie en conversie van coördinaatsysteem en datum kan gebeuren. Vervolgens worden in het hoofdstuk **Methodes van georeferentie** meerderen manieren van georefereren toegelicht die kunnen worden ingezet bij het gebruik van open BIM en Geo. Ook geeft dit hoofstuk aanbevelingen voor de toe te passen methode. Het hoofdstuk **Handleiding Software** voorziet in de praktische beschrijving van de stappen die men in veelgebruikte software dient te nemen om tot de beschreven methode van georeferentie te komen. De beschreven werkwijzen zijn echter niet exclusief van toepassing op deze software. Dit hoofdstuk is dan ook niet limitatief bedoeld. Het hoofdstuk **Tooling** beschrijft tools en plugins die gebruikt kunnen worden om te ondersteunen in de georeferentie van Geo en BIM. 
