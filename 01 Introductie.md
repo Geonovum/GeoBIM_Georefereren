@@ -35,3 +35,8 @@ het project. Vaak wordt een mooi afgerond RD-coordinaat genomen. In andere softw
 Er wordt in dit geval zeer ver van het orginele nulpunt getekend in de software.
 
 Uitwisseling tussen verschillende software systemen gebeurd ook standaard op basis van RD-Coordinaten. Dit werkt echter niet fijnloos binnen het huidige softwarelandschap omdat de gebruikte software niet altijd op de hoogte is of in staat is te begrijpen dat er op RD-Coordinaten gewerkt wordt. De software interpeteerd de uitwisselbestanden bijvoorbeeld als bestanden met een lokaal coordinatenstelsel met zeer grote coordinaten in plaatst van RD-Coordinaten. Positionering gaat hierdoor niet altijd goed.
+# Leeswijzer
+Deze praktijkrichtlijn is als volgt opgebouwd: 
+
+In het hoofdstuk **Coördinaattransformatie, datumtransformatie en coördinaatconversie** wordt een toelichting gegeven op coordinaatreferentiesystemen en de manier waarop transformatie en conversie van coördinaatsysteem en datum kan gebeuren. Vervolgens worden in het hoofdstuk **Methodes van georeferentie** meerderen manieren van georefereren toegelicht die kunnen worden ingezet bij het gebruik van open BIM en Geo. Ook geeft dit hoofstuk aanbevelingen voor de toe te passen methode. Het hoofdstuk **Handleiding Software** voorziet in de praktische beschrijving van de stappen die men in veelgebruikte software dient te nemen om tot de beschreven methode van georeferentie te komen. De beschreven werkwijzen zijn echter niet exclusief van toepassing op deze software. Dit hoofdstuk is dan ook niet limitatief bedoeld. Het hoofdstuk **Tooling** beschrijft tools en plugins die gebruikt kunnen worden om te ondersteunen in de georeferentie van Geo en BIM. 
+

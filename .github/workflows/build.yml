@@ -1,20 +1,129 @@
-name: Build and Check
+name: Build / check
 on:
-  workflow_dispatch:
-  pull_request:
-  push:
-    branches:
-      - main
+  workflow_call:
+env:
+  CHECK_DIR: ".checks"
 jobs:
   build:
-    name: Build
-    uses: Logius-standaarden/Automatisering/.github/workflows/build.yml@snapshot-in-repo
-  check:
-    needs: build
-    name: Check
-    uses: Logius-standaarden/Automatisering/.github/workflows/check.yml@main    
-  publish:
-    needs: build
-    name: Publish (Logius)
-    uses: Logius-standaarden/Automatisering/.github/workflows/publish.yml@main
-    secrets: inherit
+    name: Snapshot + Checks
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Prepare directories
+        run: |
+          mkdir -p static $CHECK_DIR
+
+      - name: Generate HTML snapshot
+        run: npx respec --localhost --src index.html --out snapshot.html
+
+      - name: Validate HTML
+        run: |
+          set -euo pipefail
+          docker run --rm -v "$PWD:/site" ghcr.io/validator/validator:latest \
+            vnu --errors-only --skip-non-html --format json /site/snapshot.html \
+            | tee $CHECK_DIR/html-validation.json
+
+      - name: Check for alternateFormats
+        id: config
+        run: |
+          echo "grep=false" >> $GITHUB_OUTPUT
+          if grep -q 'alternateFormats' ./js/config.js; then
+            if grep -Pzoq 'alternateFormats:\s*\[\s*\{\s*label:\s*".+?",\s*uri:\s*".+?"\s*\}\s*\]' ./js/config.js; then
+              echo "grep=true" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+      - name: Copy pdf.js if needed
+        if: ${{ steps.config.outputs.grep == 'true' }}
+        run: cp .github/workflows/pdf.js .
+
+      - name: Generate PDF(s)
+        if: ${{ steps.config.outputs.grep == 'true' }}
+        run: |
+          cp ./js/config.js config.js
+          echo "module.exports = { respecConfig };" >> config.js
+          echo "var window = {respecMermaid:{createFigures:null}};" | cat - config.js > temp && mv temp config.js
+          npm install puppeteer
+          python3 -m http.server 8080 &
+          rm -f *.pdf
+          node pdf.js
+          mv *.pdf static/
+
+      - name: Run WCAG2AA check
+        run: |
+          npm install -g pa11y
+          pa11y snapshot.html \
+            --ignore WCAG2AA.Principle4.Guideline4_1.4_1_1.F77 \
+            > $CHECK_DIR/wcag-report.txt 2>&1 || echo "Geen WCAG-fouten gevonden." > $CHECK_DIR/wcag-report.txt
+
+      - name: Serve snapshot over HTTP
+        uses: Eun/http-server-action@v1
+        with:
+          directory: ${{ github.workspace }}
+          port: 8080
+          content-types: |
+            {
+              "css": "text/css",
+              "html": "text/html",
+              "ico": "image/x-icon",
+              "jpeg": "image/jpeg",
+              "jpg": "image/jpeg",
+              "js": "text/javascript",
+              "json": "application/json",
+              "png": "image/png",
+              "svg": "image/svg+xml",
+              "txt": "text/plain",
+              "xml": "text/xml"
+            }
+
+      - name: Run link check with Muffet
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y golang-go
+          go install github.com/raviqqe/muffet@latest
+          echo "${HOME}/go/bin" >> $GITHUB_PATH
+          muffet \
+            --exclude '\.pdf$' \
+            --exclude '^https://gitdocumentatie.*' \
+            --exclude '^https://docs.geostandaarden.*' \
+            --exclude '.*localhost.*' \
+            --header 'user-agent:Curl' \
+            --ignore-fragments \
+            --one-page-only \
+            http://localhost:8080/snapshot.html \
+            --buffer-size 8192 > $CHECK_DIR/link-check.txt 2>&1 || echo "Geen linkfouten gevonden." > $CHECK_DIR/link-check.txt
+
+      - name: Commit all results
+        if: >
+          github.event_name == 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if [[ "${{ steps.config.outputs.grep }}" == "true" ]] && ls static/*.pdf 1>/dev/null 2>&1; then
+            mv static/*.pdf .
+          fi
+
+          git add snapshot.html $CHECK_DIR/*.txt
+
+          if compgen -G "*.pdf" > /dev/null; then
+            git add *.pdf
+          fi
+
+          git commit -m "Snapshot + checks gegenereerd" || echo "No changes to commit"
+
+          BRANCH=${GITHUB_REF#refs/heads/}
+          git push --force-with-lease origin HEAD:"$BRANCH"
+
+      - name: Upload snapshot artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: snapshot
+          path: |
+            snapshot.html
+            static/*.pdf
+            media/**/*
+            js/**/*
+            data/**/*
