@@ -4,31 +4,39 @@ Er zijn verschillende methodes beschikbaar om een BIM en GEO modellen bij elkaar
 
 Het is mogelijk om een BIM-model op de kaart te zetten door alleen het adres van waar het BIM-model dient te komen te duiden. Deze informatie geeft een indicatie van waar het model moet komen. De informatie is niet toereikend om het model exact te plaatsen, roteren en schalen. Een andere methode zoals het model plaatsen in een officieel coordinatenstelsel is hiervoor wel geschikt. Afhankelijk van de behoefte zijn verschillende methodes geschikt.
 
-![Verschillende opties van georefereren schematisch weergegeven](media/georefereren_opties.png "Verschillende opties van georefereren schematisch weergegeven")
-
 De beschikbaarheid van informatie voor het berekenen van georeferentie-parameteres voor de verschillende methoden is onderzocht door de TU Delft. [[Hakim2024]] 
 
-| Methode                                                   | Plaatsing     |  Rotatie      | Schaal        |
-| -------------------------------------------------------   | ------------- | ------------- | ------------- |
-| Benoemen van locatie                                      | Niet mogelijk | Niet mogelijk | Niet mogelijk | 
-| Punt op de kaart zetten                                   | Mogelijk      | Niet mogelijk | Niet mogelijk |
-| Locatie koppelen aan één element in het model             | Mogelijk      | Eventueel mogelijk | Niet mogelijk |
-| Locatie koppelen aan geheel model en noorden aangeven     | Mogelijk      | Eventueel mogelijk | Niet mogelijk |
-| Het model plaatsen in een officieel coördinatenstelsel    | Mogelijk      | Mogelijk              | Mogelijk |
-| Het afspreken van controlepunten tussen BIM, Bouw en GEO  | Mogelijk      | Mogelijk | Mogelijk |
+| Methode                                       | Level | Beschrijving | Plaatsing     |  Rotatie      | Schaal        |
+|-----------------------------------------------| ----  | ------------ | ------------- |-------------- | ------------- |
+| <img src="media/georefereren_Level_10.png" alt="Georeferentie level 10" title="Georeferentie Level 10" width="200"> | 10 |Met deze methode wordt alleen de locatie waar een model moet komen benoemd. Bijvoorbeeld een adres als "Barchman Wuytierslaan 10, Amersfoort" in een model op te nemen. Men weet hierdoor op welk adres het model moet komen, maar exacte plaatsing, rotatie en schaling is hier niet uit te bepalen.     | Niet mogelijk | Niet mogelijk | Niet mogelijk | 
+| <img src="media/georefereren_Level_20.png" alt="Georeferentie level 20" title="Georeferentie Level 20" width="200">  | 20 | Met deze methode duidt men één enkel (lat-lon) punt waar het model geplaatst moet worden. Bijvoorbeeld met het coordinaat "52.152494076977185, 5.3720554951931385". Plaatsing van het model op de juiste plek, zowel in 2D als 3D wordt hiermee mogelijk. Rotatie en schalen van het model blijft niet mogelijk. | Mogelijk      | Niet mogelijk | Niet mogelijk |
+| <img src="media/georefereren_Level_30.png" alt="Georeferentie level 30" title="Georeferentie Level 30" width="200">                | 30 | Met deze methode wordt aan het grondvlak van een model een coordinaat toegekend. Ook is het mogelijk om de rotatie ten opzichte van het Noorden te duiden. Het schalen van het model is niet mogelijk.  | Mogelijk      | Eventueel mogelijk | Niet mogelijk |
+| <img src="media/georefereren_Level_40.png" alt="Georeferentie level 40" title="Georeferentie Level 40" width="200">         | 40| Met deze methode wordt haan het totaal model een coordinaat toegekend, en ook de rotatie ten opzichte van Noorden kan men duiden. Het schalen van het model is niet mogelijk.  | Mogelijk      | Eventueel mogelijk | Niet mogelijk |
+| <img src="media/georefereren_Level_50.png" alt="Georeferentie level 50" title="Georeferentie Level 50" width="200">      | 50 | Met deze methode geeft men aan wat het oorspronkelijk coordinatenstelsel was waarin het model is gemodelleerd. Daarnaast geeft men in het model aan naar welk coordinatenstelsel een coversie gedaan  wordt. Heeft men bijvoorbeeld gemodelleerd vanuit een lokaal assenstelsel (0,0,0) dan kan men beschrijven welke verplaatsing, rotatie en verschaling men moet toepassen om op de bedoelde locatie in het RijksDriehoeksstelsel (RD) te landen. | Mogelijk      | Mogelijk              | Mogelijk |
+| <img src="media/georefereren_Level_60.png" alt="Georeferentie level 60" title="Georeferentie Level 60" width="200">      | 60| Met deze methode koppelt men punten in model aan ingemeten punten tijdens constructie aan coordinaten in een specifiek coordinatenstelsel.   | Mogelijk      | Mogelijk | Mogelijk |
 
-## 1D 2D en 3D Geo en BIM modellen
+<div class="advisement">
+_AANBEVELING_ Gebruik minimaal Georeferentie level 50 in de combinatie van Geo en BIM. Gebruik tooling om modellen die hier niet aan voldoen te verrijken met georeferentie informatie conform level 50.  
+</div>
 
-Zowel BIM- als GEO-modellen kunnen een 1D, 2D als 3D coordinatenstelsel gebruiken. Om een juiste  
+## 1D-, 2D- en 3D-Geo- en -BIM-modellen
+
+Zowel BIM- als GEO-modellen kunnen een 1D, 2D als 3D coordinatenstelsel gebruiken. Om een juiste transformatie van coordinaten van 2D en 3D modellen te krijgen kunnen verschillende methoden worden toegepast.  
 
 Een GEO coordinatenstelsel kan 3D (EPSG:7415), 2D (EPSG:28992) of 1D (EPSG:5709) zijn. 
 
 | Van           | Naar      |  Mogelijkheid | 
 | -----------   | -------   | ------------- |
-| 2D BIM        | 2D GEO    | ... | 
-| 2D BIM        | 3D GEO    | ... | 
-| 3D BIM        | 2D GEO    | ... | 
-| 3D BIM        | 3D GEO    | ... | 
+| 2D BIM        | 2D GEO    | 2D Helmert transformatie | 
+| 2D BIM        | 3D GEO    | 2D Helmert transformatie + Interpolatie van z waarde | 
+| 3D BIM        | 2D GEO    | Optie 1: 3D Helmert transformatie + Maaiveld BIM-model transformeren naar z-waarde 0. <br>  Optie 2: Voetafdruk extraheren en 2D Helmert transformatie | 
+| 3D BIM        | 3D GEO    | 3D Helmert transformatie | 
+| 2D GEO        | 2D BIM    | 2D Helmert transformatie | 
+| 2D GEO        | 3D BIM    | 2D Helmert transformatie + Interpolatie van z waarde | 
+| 3D GEO        | 2D BIM    | Optie 1: 3D Helmert transformatie + Maaiveld Geomodel naar z-waarde 0. <br> Optie 2: Voetafdruk Geo extraheren en 2D Helmert transformatie | 
+| 3D GEO        | 3D BIM    | 3D Helmert transformatie| 
+
+Om van geprojecteerd CRS naar een Geografische CRS te gaan is een coordinaatconversie nodig i.p.v. transformatie. 
 
 
 ## Het hoogtecomponent 
@@ -82,54 +90,188 @@ In de onderstaande figuur is een BIM-model weergegeven in combinatie met het DTB
 Het AHN of een andere puntenwolk in de omgeving kan hiervoor eveneens worden gebruikt. Dit komt doordat de intensiteit, die de basis vormt van een puntenwolk, significant lager is op de weg dan op het omliggende meubilair. Daardoor is het vinden van deze objecten eenvoudiger en kunnen zij gemakkelijk uit de dataset worden geëxtraheerd.
 
 # Georeferentie in uitwisseling
-# IFC
-- IfcPostalAddress
-- IfcSite RefLatitude RefLongitude RefElevation
-- IfcAxis2Placement3D
-- IfcGeometricRepresentationContext
-- IfcMapConversion 
-- Het gebruik van generic property sets voor 
+Wanneer men in een bepaalde toepassing of softwarepakket werkt, bevindt het model zich in een assenstelsel. Dit is nodig om op een systematische, eenduidige en wiskundige manier locaties en vormen in ruimte te kunnen vastleggen, verwerken en communiceren. Wanneer men modellen wil delen of combineren buiten deze toepassing of softwarepakket kan men dit in open uitwisselformaat uitwisselen. Hieronder volgt een overzicht van verschillende open uitwisselformaten en de manieren waarop men georeferentie hierin kan doen. 
 
-- IFC 5 (JSON?)
-IFC 5 maakt gebruik van USD-formaat (Universal Scene Description), voor geometrie, bijvoorbeeld usdgeom::mesh – veelhoekig oppervlaktemodel.
+## Industry Foundation Classes (IFC)
+IFC is een uitwisselformaat bedoeld voor het uitwisselen van de Architectuur, Bouwwerk en Constructie Informatie. Het is een software-onafhankelijk open dataformaat. Binnen het IFC-schema is het mogelijk om de volgende attributen voor georeferentie te gebruiken: 
 
+- Binnen IFC (4X3) kan men [IfcPostalAddress](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPostalAddress.htm) gebruiken om level 10 georeferentie modellen uit te wisselen. 
+- Binnen IFC (4X3) kan men met de attributen RefLatitude, RefLongitude en RefElevation [IfcSite](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSite.htm) Level 20 georeferentie modellen uitwisselen. 
+- Binnen IFC (4X3) kan men [IfcAxis2Placement3D](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm) gebruiken om level 30 georeferentie modellen uit te wisselen. Met de attributen Location, Axis en RefDirection kan locatie en richting meegegeven worden.
+- Voor Georeferentie level 40 kan men [IfcGeometricRepresentationContext](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm) gebruiken. 
+- [IfcMapConversion](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm) gebruikt men binnen IFC (4X3) voor het beschrijven van georeferentie op level 50. Er is een attribuut SourceCRS, TargetCRS, attributen voor verplaatsing, verdraaiing en schaling. 
+- Er is geen klasse binnen IFC (4X3) die ondersteunt in georeferentie 60. Een work-around is de mogelijkheid om gebruik te maken van generic property sets ([IfcPropertySet](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm)) voor het opslaan van informatie over de controlepunten voor deze methodiek. Dit wordt momenteel niet ondersteund.  
 
+<div class="advisement">
+_AANBEVELING_ Gebruik IfcMapConversion voor georeferentie van BIM in IFC.
+</div>
 
-calculated transformation parameters could may be stored -without extending IFC schema- through generic property sets
+<aside class="example" title="Voorbeeld van georeferentie met IfcMapConversion in IFC">
+Voorbeeld van IfcMapConversion in IFC
+```IFC 
+#100= IFCCARTESIANPOINT((0.0, 0.0, 0.0));
+#101= IFCMAPCONVERSION(
+  'Local Engineering CRS',          -- Source CRS (coordinatenstelsel waarin gemodelleerd is)
+  'EPSG:7415',                      -- Target CRS (coordinatenstelsel waarin gepositioneerd wordt)
+  #100,                          -- Lokaal ankerpunt
+  155000.0,                     -- Oostelijke verplaatsing
+  463000.0,                     -- Noordelijke verplaatsing
+  3.55,                        -- Hoogte verplaatsing
+  1.0,                         -- Richting van de X-as
+  0.0,                         -- Richting van de Y-as
+  1.0                          -- Schaal
+);
+```
+</aside>
 
-- IFC 5 (JSON?)
-IFC 5 maakt gebruik van USD-formaat (Universal Scene Description), voor geometrie, bijvoorbeeld usdgeom::mesh – veelhoekig oppervlaktemodel.
+- IFC 5 (JSON)
+IFC 5 is een momenteel in ontwikkeling. Het is een herstructurering van het huidige IFC schemas. De functionaliteit van de huidige schema's wil men behouden, maar de technische basis en serialisatie veranderen. Waar de huidige IFC-schema's op STEP zijn gebaseerd, is het IFC 5 schema op JSON gebaseerd. 
 
-# DXF
-De objecten in de DXF worden getekend in een coördinatenruimte die matcht met een geprojecteerd CRS (zoals EPSG:28992 of EPSG:3857).
+Voor geometrie maakt IFC gebruik van USD-formaat (Universal Scene Description), voor geometrie, bijvoorbeeld usdgeom::mesh – veelhoekig oppervlaktemodel. Er zijn nog geen vastgestelde afspraken over georeferentie. Wel zijn in de eerste verkenningen de elementen van IfcMapConversion terug te zien, maar dan als json attributen. 
 
-De coördinaten zijn dan in meters, zoals in GIS.
+## DXF
+Wanneer men in 2D vectorsoftware werkt die geen .ifc bestand kan exporteren zijn er ook mogelijkheden voor georeferentie. De objecten in de DXF worden bij voorkeur getekend in een coördinatenruimte die matcht met een geprojecteerd CRS (zoals EPSG:28992 of EPSG:3857). De coördinaten zijn dan in meters, zoals in het coordinatenstelsel. Voorbeeld: een lijn van punt(110000, 450000) naar punt (110500, 450500) is dan correct gepositioneerd in RD-coördinaten.
 
-Voorbeeld: een lijn van (110000, 450000) naar (110500, 450500) is dan correct gepositioneerd in RD-coördinaten.
+Dit is niet in alle software mogelijk. Bij software die alleen werkt met lokale coordinaten is het lastig om op coordinaat 110000 - 450000 te werken, omdat dit heel ver uit het centrale punt van deze software, punt 0,0 is. 
 
-Maar: het DXF-bestand zelf bevat geen metadata die zegt: "dit is RD-coördinaten".
+Een DXF-bestand zelf bevat geen informatie waarmee aangeduid wordt dat de waardes van de geometrie bedoeld is als RD-coördinaten. Het is mogelijk om de attributen vanuit IfcMapconversion als extra bestand mee te geven naast de .dxf als een .json file. 
 
-| Bestand	| Inhoud | 	Doel| 
-| bestand.dxf	| De geometrie	| CAD-weergave| 
-| bestand.prj	| CRS-informatie (in WKT)	| Georeferentie door GIS-software| 
+<aside class="example" title="Voorbeeld van georeferentie metadatabestand in JSON">
+Voorbeeld van georeferentie metadatabestand in JSON
+```json 
+{
+  "MapConversion": {
+    "SourceCRS": {
+      "type": "Local Engineering CRS",
+      "dimension": "2",
+      "Precision": "0.001"
+    },
+    "TargetCRS": {
+      "type": "ProjectedCRS",
+      "identifier": "EPSG:28992",
+      "name": "Amersfoort / RD New"
+    },
+    "Eastings": 155000.0,
+    "Northings": 463000.0,
+    "OrthogonalHeight": 3.55,
+    "XAxisAbscissa": 1.0,       
+    "XAxisOrdinate": 0.0,       
+    "Scale": 1.0                
+  }
+}
+```
+</aside>
 
-# CityGML 
+## CityGML en CityJSON
+CityGML is een open datamodel en uitwisselformaat voor de representatie van 3D-geo-informatie. De CityGML standaard biedt twee mogelijkheden om een coordinatenstelsel te duiden voor het model. De voorkeur is om een totaal cordinatenstelsel voor een dataset te duiden. Dit doet men in de gml:Envelope die gebruikt wordt om de ruimtelijke begrenzing (bounding box) van de dataset aan te geven. 
 
-Individuele georeferentie:
-<gml:Point srsName="urn:ogc:def:crs:EPSG::28992">
-  <gml:pos>123456 456789</gml:pos>
-</gml:Point>
+<aside class="example" title="Voorbeeld van CRS van totaal model in de Envelope in CityGML">
+  Onderstaande voorbeeld geeft aan hoe CityGML een Coordinatenstelsel voor het totaal model duidt.
 
-Totaal georeferentie van model: 
-<gml:boundedBy>
-  <gml:Envelope srsName="urn:ogc:def:crs:EPSG::28992">
-<gml:boundedBy>
-=======
+  ```gml 
+  <gml:boundedBy>
+    <gml:Envelope srsName="urn:ogc:def:crs:EPSG::28992">
+  </gml:boundedBy>
+  ```
+</aside>
 
-# Geopackage
+  Ook is het mogelijk om per element een coordinatenstelsel mee te geven.
+  Individuele georeferentie:
+
+  <aside class="example" title="Voorbeeld van CRS van een enkel element in CityGML">
+  Onderstaande voorbeeld geeft aan hoe in CityGML een Coordinatenstelsel voor een enkele elemeent duidt.
+
+  ```gml 
+  <gml:Point srsName="urn:ogc:def:crs:EPSG::28992">
+    <gml:pos>123456 456789</gml:pos>
+  </gml:Point>
+  ```
+</aside>
+
+### Engineered CRS
+GML geeft de mogelijkheid om een engineered CRS uit te drukken. Dit is een lokaal coördinatenstelsel dat niet op de aarde is gebaseerd. Het is mogelijk om dit lokaal coördinatenstelsel te verbinden aan een bekend coordinatenstelsel als RD-NAP waardoor het voor uitwisseling, visualisatie en analyse gebruikt kan worden. 
+
+<aside class="example" title="Voorbeeld van CRS van een enkel element in CityGML">
+  Onderstaande voorbeeld geeft aan hoe in CityGML een Coordinatenstelsel voor een enkele elemeent duidt.
+
+  ```gml 
+ <?xml version="1.0" encoding="UTF-8"?>
+<core:CityModel
+    xmlns:core="http://www.opengis.net/citygml/3.0"
+    xmlns:bldg="http://www.opengis.net/citygml/building/3.0"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.opengis.net/gml/3.2
+                          http://schemas.opengis.net/gml/3.2.1/gml.xsd
+                        http://www.opengis.net/citygml/building/3.0
+                          https://schemas.opengis.net/citygml/building/3.0/building.xsd
+                        http://www.opengis.net/citygml/3.0
+                          https://schemas.opengis.net/citygml/3.0/core.xsd">
+
+<gml:EngineeringCRS gml:id="localEngineeredCRS3D">
+    <gml:name>Lokaal 3D Stelsel Project ABC<</gml:name>
+    <gml:usesCS>
+        <gml:CartesianCS gml:id="lokaal3DStelsel">
+            <gml:csName> Lokaal 3D Cartesiaans Grid</gml:csName>
+            <gml:axis>
+                <gml:CoordinateSystemAxis gml:id="xAxis"
+                    gml:uom="m"
+                    gml:axisAbbrev="X"
+                    gml:axisDirection="east"/>
+            </gml:axis>
+            <gml:axis>
+                <gml:CoordinateSystemAxis gml:id="yAxis"
+                    gml:uom="m"
+                    gml:axisAbbrev="Y"
+                    gml:axisDirection="north"/>
+            </gml:axis>
+            <gml:axis>
+                <gml:CoordinateSystemAxis gml:id="zAxis"
+                    gml:uom="m"
+                    gml:axisAbbrev="Z"
+                    gml:axisDirection="up"/>
+            </gml:axis>
+        </gml:CartesianCS>
+    </gml:usesCS>
+    <gml:usesEngineeringDatum>
+        <gml:EngineeringDatum gml:id="localDatum3D">
+            <gml:datumName>Local Datum – 3D Map Conversion</gml:datumName>
+            <!-- Ankerpunt en orientatie in EPSG:7415 (X, Y, Z) -->
+            <gml:anchorPoint>
+                <gml:Point gml:id="anchor_7415" srsName="urn:ogc:def:crs:EPSG::7415">
+                    <gml:pos>155000.0 463000.0 3.55</gml:pos>
+                </gml:Point>
+            </gml:anchorPoint>
+            <gml:orientation>
+                <gml:Vector gml:id="orientation_7415" srsName="urn:ogc:def:crs:EPSG::7415">
+                    <gml:pos>1.0 0.0 0.0</gml:pos>
+                </gml:Vector>
+            </gml:orientation>
+        </gml:EngineeringDatum>
+    </gml:usesEngineeringDatum>
+</gml:EngineeringCRS>
+
+  <!-- Voorbeeld gebouwmodel dat het lokaal stelsel gebruikt -->
+  <core:cityObjectMember>
+    <bldg:Building gml:id="bldg_001">
+      <gml:name> Vorbeeldgebouw </gml:name>
+      <bldg:lod0Geometry>
+        <gml:Point gml:id="pt_bldg" srsName="#Lokaal 3D Stelsel Project ABC">
+          <gml:pos>10.0 20.0 0.0</gml:pos>
+        </gml:Point>
+      </bldg:lod0Geometry>
+    </bldg:CityObject>
+  </corelcityObjectMember>
+</core:CityModel>
+  ```
+</aside>
+
+## Geopackage
+GeoPackage staat naast GML als uitwisselformaat op de Pas-toe-leg-uit lijst.
+
 Opslag van dit CRS in de tabel gpkg_spatial_ref_sys in het bestand
 
-# API
+## API
 
 Accessing Collections using HTTP GET returns a response that contains at least the list of collections. For each Collection, a link to the items in the collection (Features, path /collections/{collectionId}/items, link relation items) as well as key information about the collection. This information includes:
 
