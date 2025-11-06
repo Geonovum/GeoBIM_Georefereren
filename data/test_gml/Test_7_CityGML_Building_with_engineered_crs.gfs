@@ -1,0 +1,24 @@
+<GMLFeatureClassList>
+  <GMLFeatureClass>
+    <Name>Building</Name>
+    <ElementPath>Building</ElementPath>
+    <GeometryName>lod0Geometry</GeometryName>
+    <GeometryElementPath>lod0Geometry</GeometryElementPath>
+    <!--POINTZ-->
+    <GeometryType>-2147483647</GeometryType>
+    <SRSName>#LokaalCoordinatenstelsel</SRSName>
+    <DatasetSpecificInfo>
+      <FeatureCount>1</FeatureCount>
+      <ExtentXMin>10.00000</ExtentXMin>
+      <ExtentXMax>10.00000</ExtentXMax>
+      <ExtentYMin>20.00000</ExtentYMin>
+      <ExtentYMax>20.00000</ExtentYMax>
+    </DatasetSpecificInfo>
+    <PropertyDefn>
+      <Name>name</Name>
+      <ElementPath>name</ElementPath>
+      <Type>String</Type>
+      <Width>15</Width>
+    </PropertyDefn>
+  </GMLFeatureClass>
+</GMLFeatureClassList>

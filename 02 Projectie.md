@@ -55,6 +55,8 @@ DIT PLAATJE GEEFT HET IDEE
 Figuur afwijking hoogte: horizontaal PQ-PQ' 1 cm bij 10 km, verticaal 10 meter bij 10 km of 1 cm bij 400 meter
 DIT PLAATJE GEEFT HET IDEE
 ![alt text](media/projectie/hoogteafwijking1.png)
+![Hoogteafwijking](media/projectie/hoogteafwijking_Concept.png)
+
 
 #### Samengesteld CRS
 
