@@ -1,4 +1,4 @@
-PROJCS["Lokaal_Amersfoort",
+PROJCS["Lokaal_Dronten_Vanuit_WGS84",
     GEOGCS["WGS 84",
         DATUM["WGS_1984",
             SPHEROID["WGS 84",6378137,298.257223563]],
@@ -11,3 +11,43 @@ PROJCS["Lokaal_Amersfoort",
     PARAMETER["false_easting",0],
     PARAMETER["false_northing",0],
     UNIT["Meter",1]]
+
+
+PROJCS["RDNAP",
+    GEOGCS["Amersfoort",
+        DATUM["Amersfoort",
+            SPHEROID["Bessel 1841",6377397.155,299.1528128]],
+        PRIMEM["Greenwich",0],
+        UNIT["degree",0.0174532925199433]],
+    PROJECTION["Oblique_Stereographic"],
+    PARAMETER["latitude_of_origin",52.15616055555555],
+    PARAMETER["central_meridian",5.38763888888889],
+    PARAMETER["scale_factor",0.9999079],
+    PARAMETER["false_easting",155000],
+    PARAMETER["false_northing",463000],
+    UNIT["Meter",1]]
+
+
+Het nulpunt is gewenst op RD-coordinaat:
+Easting: 175795.246937
+Northing: 502308.499246
+
+Lokaal coordinatenstelsel wordt dan: 
+
+155000 - 175795 = -20795 (Easting)
+463000 - 502308 = -39308 (Northing)
+
+PROJCS["Lokaal_Dronten_Vanuit_RDNAP",
+    GEOGCS["Amersfoort",
+        DATUM["Amersfoort",
+            SPHEROID["Bessel 1841",6377397.155,299.1528128]],
+        PRIMEM["Greenwich",0],
+        UNIT["degree",0.0174532925199433]],
+    PROJECTION["Oblique_Stereographic"],
+    PARAMETER["latitude_of_origin",52.15616055555555],
+    PARAMETER["central_meridian",5.38763888888889],
+    PARAMETER["scale_factor",0.9999079],
+    PARAMETER["false_easting",-20795],
+    PARAMETER["false_northing",-39308],
+    UNIT["Meter",1]]
+

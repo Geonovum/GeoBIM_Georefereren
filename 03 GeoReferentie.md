@@ -133,14 +133,17 @@ IFC 5 is een momenteel in ontwikkeling. Het is een herstructurering van het huid
 
 Voor geometrie maakt IFC gebruik van USD-formaat (Universal Scene Description), voor geometrie, bijvoorbeeld usdgeom::mesh – veelhoekig oppervlaktemodel. Er zijn nog geen vastgestelde afspraken over georeferentie. Wel zijn in de eerste verkenningen de elementen van IfcMapConversion terug te zien, maar dan als json attributen. 
 
-## DXF
+## DWG/DXF
 Wanneer men in 2D vectorsoftware werkt die geen .ifc bestand kan exporteren zijn er ook mogelijkheden voor georeferentie. De objecten in de DXF worden bij voorkeur getekend in een coördinatenruimte die matcht met een geprojecteerd CRS (zoals EPSG:28992 of EPSG:3857). De coördinaten zijn dan in meters, zoals in het coordinatenstelsel. Voorbeeld: een lijn van punt(110000, 450000) naar punt (110500, 450500) is dan correct gepositioneerd in RD-coördinaten.
+
+_AANBEVELING_ Teken een ontwerp op RDNAP coordinaten.
 
 Dit is niet in alle software mogelijk. Bij software die alleen werkt met lokale coordinaten is het lastig om op coordinaat 110000 - 450000 te werken, omdat dit heel ver uit het centrale punt van deze software, punt 0,0 is. 
 
 Een DXF-bestand zelf bevat geen informatie waarmee aangeduid wordt dat de waardes van de geometrie bedoeld is als RD-coördinaten. Het is mogelijk om de attributen vanuit IfcMapconversion als extra bestand mee te geven naast de .dxf als een .WKT, .PROJ of .JSON file. 
 
-
+_AANBEVELING_ Voorzie in een extra bestand in .WKT volgens [WKT-CRS](https://www.ogc.org/standards/wkt-crs/) of in een
+.PROJ of .JSON file conform [PROJ](https://proj.org/en/stable/specifications/) of [PROJJSON](https://proj.org/en/stable/specifications/projjson.html) wanneer de georeferentie en het gebruikt crs niet in het bronbestand is gedefinieerd. 
 
 **Schaal**: Het attribuut "Scale" kan men gebruiken om de schaal van het model aan te geven. Wanneer een bron in milimeters is getekend en de target omgeving in meters, dan kan men dat met de schaal (waarde 0.001) aangeven. 
 
@@ -152,212 +155,23 @@ $$
 $$
 gemiddelde coördinaten in km van de eindpunten in het RD-stelsel zijn
 
-Ook een voorbeeld erbij zetten zonder verplaatsing
-
-Kan ook in de Geo-taal 
--> Eastings: Translatie X 
-
-## CityGML en CityJSON
+## CityGML 
 CityGML is een open datamodel en uitwisselformaat voor de representatie van 3D-geo-informatie. De CityGML standaard biedt twee mogelijkheden om een coordinatenstelsel te duiden voor het model. De voorkeur is om een totaal cordinatenstelsel voor een dataset te duiden. Dit doet men in de gml:Envelope die gebruikt wordt om de ruimtelijke begrenzing (bounding box) van de dataset aan te geven. 
 
-<aside class="example" title="Voorbeeld van CRS van totaal model in de Envelope in CityGML">
-  Het onderstaande voorbeeld geeft aan hoe CityGML een Coordinatenstelsel voor het totaal model duidt:
+Een voorbeeld van georeferentie in CityGML vindt men in de Bijlage B
 
-  ```gml 
-  <gml:boundedBy>
-    <gml:Envelope srsName="urn:ogc:def:crs:EPSG::28992">
-  </gml:boundedBy>
-  ```
-</aside>
+## CityJSON
+In CityJSON moet, anders dan in CityGML, één coordinatenstelsel voor het totaalmodel worden geduid. Dit doet men in het attribuut "Metadata": { 
+  ReferenceSystem
+}
 
-  Ook is het mogelijk om per element een coordinatenstelsel mee te geven.
-  Individuele georeferentie:
+Het is mogelijk om met het attribuut: "Transform" een verplaatsing en verschaling van een model te duiden. Dit kan voor een 0-punt Geo dataset zorgen en de hoeveelheid data reduceren. 
 
-  <aside class="example" title="Voorbeeld van CRS van een enkel element in CityGML">
-  Onderstaande voorbeeld geeft aan hoe in CityGML een Coordinatenstelsel voor een enkele elemeent duidt.
+## Wel Known CRS en Engineered CRS 
 
-  ```gml 
-  <gml:Point srsName="urn:ogc:def:crs:EPSG::28992">
-    <gml:pos>123456 456789</gml:pos>
-  </gml:Point>
-  ```
-</aside>
-
-### Engineered CRS
 GML geeft de mogelijkheid om een engineered CRS uit te drukken. Dit is een lokaal coördinatenstelsel dat niet op de aarde is gebaseerd. Het is mogelijk om dit lokaal coördinatenstelsel te verbinden aan een bekend coordinatenstelsel als RD-NAP waardoor het voor uitwisseling, visualisatie en analyse gebruikt kan worden. 
 
-<aside class="example" title="Voorbeeld van een engineered CRS in CityGML">
-  Onderstaande voorbeeld geeft aan hoe men in GML een engineered CRS kan maken.
-
-  ```gml 
- <?xml version="1.0" encoding="UTF-8"?>
-  <core:CityModel
-    xmlns:core="http://www.opengis.net/citygml/3.0"
-    xmlns:bldg="http://www.opengis.net/citygml/building/3.0"
-    xmlns:gml="http://www.opengis.net/gml/3.2"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.opengis.net/gml/3.2
-                          http://schemas.opengis.net/gml/3.2.1/gml.xsd
-                        http://www.opengis.net/citygml/building/3.0
-                          https://schemas.opengis.net/citygml/building/3.0/building.xsd
-                        http://www.opengis.net/citygml/3.0
-                          https://schemas.opengis.net/citygml/3.0/core.xsd">
-
-<gml:EngineeringCRS gml:id="LokaalCoordinatenstelsel">
-    <gml:name>Lokaal 3D Stelsel Project ABC<</gml:name>
-    <gml:usesCS>
-        <gml:CartesianCS gml:id="3DAssenStelsel">
-            <gml:csName> Lokaal 3D Orthogonaal Assenstelsel</gml:csName>
-            <gml:usesAxis>
-                <gml:CoordinateSystemAxis gml:id="xAxis"
-                    gml:uom="urn:x-si:v1999:uom:metre"> 
-                    <gml:axisName> "X-as"</gml:axisName> 
-                    <gml:axisAbbrev> "X" </gml:axisAbbrev>
-                    <gml:axisDirection>Deze as staat haaks op de kopgevel en de voordeur. Een positieve rotatie van deze as brengt de rechterkant van het gebouw, gezien van voren, naar beneden.<gml:axisDirection/>
-                    </gml:CoordinateSystemAxis>
-            </gml:usesAxis>
-            <gml:usesAxis>
-                <gml:CoordinateSystemAxis gml:id="yAxis"
-                    gml:uom="urn:x-si:v1999:uom:metre"> 
-                    <gml:axisName> "Y-as"</gml:axisName> 
-                    <gml:axisAbbrev> "Y" </gml:axisAbbrev>
-                    <gml:axisDirection>Deze as staat evenwijdig aan de kopgevel en de voordeur. Een positieve rotatie van de as brengt de achterkant van het gebouw naar beneden.<gml:axisDirection/>
-                    </gml:CoordinateSystemAxis>
-            </gml:usesAxis>
-            <gml:usesAxis>
-                <gml:CoordinateSystemAxis gml:id="zAxis"
-                    gml:uom="urn:x-si:v1999:uom:metre"> 
-                    <gml:axisName> "Z-as"</gml:axisName> 
-                    <gml:axisAbbrev> "Z" </gml:axisAbbrev>
-                    <gml:axisDirection>Deze as wijst omhoog. Een positieve rotatie van de as draait tegen de klok in.<gml:axisDirection/>
-                    </gml:CoordinateSystemAxis>
-            </gml:usesAxis>
-          </gml:CartesianCS>
-    </gml:usesCS>
-    <gml:usesEngineeringDatum>
-        <gml:EngineeringDatum gml:id="localDatum3D">
-            <gml:datumName>Lokaal nulpunt – 3D Map Conversion - naar EPSG 7415</gml:datumName>
-            <gml:anchorPoint>
-                <gml:Point gml:id="anchor_7415" srsName="urn:ogc:def:crs:EPSG::7415">
-                    <gml:pos>155000.0 463000.0 3.55</gml:pos>
-                </gml:Point>
-            </gml:anchorPoint>
-            <gml:orientation>
-                <gml:Vector gml:id="orientation_7415" srsName="urn:ogc:def:crs:EPSG::7415">
-                    <gml:pos>0.9659 0.2588 0.0</gml:pos>
-                </gml:Vector>
-            </gml:orientation>
-        </gml:EngineeringDatum>
-    </gml:usesEngineeringDatum>
-</gml:EngineeringCRS>
-
-  <!-- Voorbeeld gebouwmodel dat het lokaal stelsel gebruikt -->
-  <core:cityObjectMember>
-    <bldg:Building gml:id="bldg_001">
-      <gml:name> Vorbeeldgebouw </gml:name>
-      <bldg:lod0Geometry>
-        <gml:Point gml:id="pt_bldg" srsName="Lokaal 3D Stelsel Project ABC">
-          <gml:pos>10.0 20.0 0.0</gml:pos>
-        </gml:Point>
-      </bldg:lod0Geometry>
-    </bldg:CityObject>
-  </corelcityObjectMember>
-</core:CityModel>
-  ```
-</aside>
-
-### CRS in WKT
-Dit is een officiele standaard volgens: https://docs.ogc.org/is/18-010r11/18-010r11.pdf
-
-
-Voorbeeld engineered CRS: 
-
-```wkt 
-ENGCRS["Lokaal 3D Stelsel Project ABC",
- EDATUM["Referentiepunt van het gebouw",ANCHOR["Hoek van het kavel"]],
- CS[Cartesian,3],
- AXIS["(x)",Deze as staat haaks op de kopgevel en de voordeur. Een positieve rotatie van deze as brengt de rechterkant van het gebouw, gezien van voren, naar beneden.],
- AXIS["(y)",Deze as staat evenwijdig aan de kopgevel en de voordeur. Een positieve rotatie van de as brengt de achterkant van het gebouw naar beneden.],
- AXIS["(z)",Deze as wijst omhoog. Een positieve rotatie van de as draait tegen de klok in.],
- LENGTHUNIT["metre",1.0]
-]
-```
-
-Voorbeeld: 
-```wkt
-COORDINATEOPERATION["EngineeredCRS naar RDNAP",
- SOURCECRS[
-  ENGCRS["Lokaal 3D Stelsel Project ABC",
-    EDATUM["Referentiepunt van het gebouw",
-    ANCHOR["Hoek van het kavel"]],
-    CS[Cartesian,3],
-    AXIS["(x)",Deze as staat haaks op de kopgevel en de voordeur. Een positieve rotatie van deze as brengt de rechterkant van het gebouw, gezien van voren, naar beneden.],
-    AXIS["(y)",Deze as staat evenwijdig aan de kopgevel en de voordeur. Een positieve rotatie van de as brengt de achterkant van het gebouw naar beneden.],
-    AXIS["(z)",Deze as wijst omhoog. Een positieve rotatie van de as draait tegen de klok in.],
-    LENGTHUNIT["metre",1.0]
-    ]
-  ],
- TARGETCRS[COMPD_CS["Amersfoort / RD New + NAP height",
-    PROJCS["Amersfoort / RD New",
-        GEOGCS["Amersfoort",
-            DATUM["Amersfoort",
-                SPHEROID["Bessel 1841",6377397.155,299.1528128,
-                    AUTHORITY["EPSG","7004"]],
-                AUTHORITY["EPSG","6289"]],
-            PRIMEM["Greenwich",0.0,
-                AUTHORITY["EPSG","8901"]],
-            UNIT["degree",0.0174532925199433,
-                AUTHORITY["EPSG","9122"]],
-            AXIS["Geodetic latitude",NORTH],
-            AXIS["Geodetic longitude",EAST]],
-        PROJECTION["Oblique_Stereographic",
-            AUTHORITY["EPSG","9809"]],
-        PARAMETER["latitude_of_origin",52.15616055555556],
-        PARAMETER["central_meridian",5.38763888888889],
-        PARAMETER["scale_factor",0.9999079],
-        PARAMETER["false_easting",155000],
-        PARAMETER["false_northing",463000],
-        UNIT["metre",1.0],
-        AXIS["Easting",EAST],
-        AXIS["Northing",NORTH],
-        AUTHORITY["EPSG","28992"]],
-    VERT_CS["NAP height",
-        VERT_DATUM["Normaal Amsterdams Peil",2005,
-            AUTHORITY["EPSG","5109"]],
-        UNIT["metre",1.0],
-        AXIS["Gravity-related height",UP],
-        AUTHORITY["EPSG","5709"]],
-    AUTHORITY["EPSG","7415"]
-    ]
-  ],
- METHOD["Coordinate Frame"],
- PARAMETER["X-axis translation",565.2369,LENGTHUNIT["metre",1.0]],
- PARAMETER["Y-axis translation",50.0087,LENGTHUNIT["metre",1.0]],
- PARAMETER["Z-axis translation",465.658,LENGTHUNIT["metre",1.0]],
- PARAMETER["X-axis rotation",1.9725,ANGLEUNIT["microradian",1E-06]],
- PARAMETER["Y-axis rotation",-1.7004,ANGLEUNIT["microradian",1E-06]],
- PARAMETER["Z-axis rotation",9.0677,ANGLEUNIT["microradian",1E-06]],
- PARAMETER["Scale difference",4.0812,SCALEUNIT["parts per million",1E-06]]
- ]
-```
-
-
-
-QGIS kent een lokaal stelsel!!!, probeer dat eens.
-
-
--> Take a look at: https://docs.ogc.org/is/18-010r11/18-010r11.pdf
--> Apache SIS(Try! Check it for the GML)
--> JSON approach (PROJ-JSON) https://proj.org/en/stable/specifications/projjson.html
--> CityGML SWG (Claus Nagel, Thomas Kolbe)
--> Reach out to CRS-SWG (Keith ryden  , roger lott, martin dessruisseaux, even rouault)
-
-
-
-
-### Hoe gaat dit in CityJSON?
-
-
+_AANBEVELING_ Refereer naar een URI van Well Known CRS of een uri van een zelf gehoste CRS. Wanneer dit niet mogelijk is kan men het lokaal CRS in het CityGML of CityJSON bestand definieren.    
 
 ## Geopackage
 GeoPackage staat naast GML als uitwisselformaat op de Pas-toe-leg-uit lijst. Dit formaat is geschikt voor georeferentie wanneer men werkt met 2D GeoBIM modellen die gemodelleerd worden op een al bekend crs (Bijvoorbeeld RD-NAP of WGS84). Geopackage is OGC standaard die zich baseert op een databaseformaat (SQL-lite). In de tabel gpkg_spatial_ref_sys waarin de informatie voor coordinatenstelsel kan worden opgeslagen. De geopackage standaard heeft geen vaste manier om een engineerdCRS te duiden. Wanneer de SourceCRS een lokaal gedefinieerd grid is, is dit uitwisselformaat minder geschikt.
