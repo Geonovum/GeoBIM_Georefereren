@@ -74,6 +74,8 @@ Het referentievlak voor de orthometrische hoogte volgt het zwaartekrachtveld en 
 
 DIT PLAATJE GEEFT HET IDEE
 ![alt text](media/projectie/hoogteafwijking1.png)
+![Hoogteafwijking](media/projectie/hoogteafwijking_Concept.png)
+
 
 #### Samengesteld CRS
 

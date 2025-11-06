@@ -1,0 +1,18 @@
+<GMLFeatureClassList>
+  <GMLFeatureClass>
+    <Name>SampleFeature</Name>
+    <ElementPath>SampleFeature</ElementPath>
+    <GeometryName>location</GeometryName>
+    <GeometryElementPath>location</GeometryElementPath>
+    <!--POINT-->
+    <GeometryType>1</GeometryType>
+    <SRSName>urn:ogc:def:crs:EPSG::4326</SRSName>
+    <DatasetSpecificInfo>
+      <FeatureCount>3</FeatureCount>
+      <ExtentXMin>0.00000</ExtentXMin>
+      <ExtentXMax>20.00000</ExtentXMax>
+      <ExtentYMin>0.00000</ExtentYMin>
+      <ExtentYMax>10.00000</ExtentYMax>
+    </DatasetSpecificInfo>
+  </GMLFeatureClass>
+</GMLFeatureClassList>
