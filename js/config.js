@@ -93,6 +93,11 @@ let respecConfig = {
         name: "Cathelijne Kleijwegt",
         company: "Esri",
         companyURL: "https://www.esri.nl/nl-nl/home",
+      },
+	  {
+        name: "Amir Hakim",
+        company: "Future Insight",
+        companyURL: "https://www.futureinsight.nl",
       }
     ],
   // TODO: Vul de github URL in.
