@@ -73,7 +73,58 @@ https://github.com/Hans-Lammerts/Sample-Test-Files/blob/master/Geolocation%20inf
 
 
 ## ArchiCAD
---- 
+Instellen Georeferentie (via de IFC4 “MapConversion” methode) voor het exporteren vanuit ArchiCAD. De exacte benamingen kunnen iets afwijken afhankelijk van de versie (AC 23, 24, …), maar de kernstappen blijven gelijk.
+
+1. Projectlocatie instellen
+
+Ga naar Options > Project Preferences > Project Location….
+Vul hier de geografische coördinaten (latitude/longitude), eventueel hoogte, en stel de juiste kaartprojectie (indien van toepassing) in. 
+Plaats in het model een Survey Point (Meetpunt) op de juiste locatie in het terrein waarmee je het coördinatenreferentiepunt vastlegt. 
+In de instellingen van de Survey Point kun je bij “Geo-referencing Map…” de waarden invullen voor datum, coördinatensysteem etc. 
+
+<img width="458" height="885" alt="image" src="https://github.com/user-attachments/assets/4dd041da-458d-4327-8d60-018dc988b490" />
+
+<img width="497" height="887" alt="image" src="https://github.com/user-attachments/assets/aa12e54d-4487-4a9a-b5c9-b045de2a990c" />
+
+Tip: Werk het liefst zo dicht mogelijk op de project-oriëntatie in ArchiCAD zodat grote offset-waarden in het IFC-bestand worden vermeden. 
+
+
+2. Instellen van de IFC-exporttranslator
+
+Ga naar File > Interoperability > IFC > IFC Translators
+Maak een nieuwe translator aan of dupliceer een bestaande (bijv. “General Export”) zodat je wijzigingen veilig kunt testen. 
+In de translator instellingen:
+Kies bij IFC Schema voor IFC4. 
+Kies het juiste Model View Definition (MVD) zoals “Design Transfer View” indien vereist. 
+In de tab “Geometry Conversion” (of gelijknamige) kies je de juiste plaatsing voor de “IfcSite” entiteit. Bij IFC4 wordt de positie van het site-entiteit gekoppeld aan het Survey Point of het Project Origin. 
+
+Bijvoorbeeld:
+
+“Match IFC Site location with Survey Point position” → gebruikt het Survey Point als coördinaatreferentie.
+“Match IFC Site location with Project Origin” → gebruikt het ArchiCAD Project Origin als referentie.
+Controleer in de Data Conversion/Units sectie dat de exportunits correct zijn ingesteld en dat “IFC Base Quantities” aangevinkt is indien gewenst. 
+
+
+3. Specifieke instellingen voor georeferentie (IFC4 MapConversion)
+
+Bij IFC4 wordt de georeferentie opgenomen via de entiteiten IfcMapConversion en IfcProjectedCRS in plaats van slechts losse property sets zoals in IFC2x3. Zorg ervoor dat:In de Project Location en Survey Point de juiste coördinaten en datum/kaartprojectie zijn ingevuld.
+In de translator instellingen de “Match IFC Site location …” correct staat (zoals hierboven).
+Bij export wordt gecontroleerd of de outputbestand de entiteit IfcMapConversion bevat (dit kun je openen als tekst in een IFC-viewer of teksteditor).
+
+4. Export uitvoeren en controle
+
+Sla je project op.
+Onder File > Save As… of via File > Interoperability > IFC > Save as IFC…, selecteer je de gekozen translator.
+Exporteer het bestand.
+Open het geëxporteerde IFC bestand in een IFC-viewer (bijv. BIMcollab ZOOM) en controleer of:
+De georeferentie informatie aanwezig is (IfcMapConversion / IfcProjectedCRS).
+Het model correct gepositioneerd is t.o.v. de verwachte coördinaten.
+Test eventueel import in een andere software (bijv. GIS-omgeving of BIM coördinatie tool) om zeker te zijn dat de locatie klopt.
+
+5. Aandachtspunten / valkuilen
+
+De ingevoerde coördinaten in Project Location verplaatsen niet automatisch de geometrie in ArchiCAD: ze worden opgenomen als metadata voor export. 
+Werken met zeer grote coördinaatwaarden (bijv. UTM meters ver weg van 0,0) kan leiden tot precisieproblemen in export/import workflows: probeer model origin zo dicht mogelijk bij projectlocatie te houden. Bij import in andere software kan de “site origin” verkeerd worden geïnterpreteerd indien de instellingen van “Match IFC Site location” niet goed staan. Controleer altijd dat de gebruikte translator versie compatibel is met IFC4 en de gewenste MVD.
 
 ## VectorWorks
 --- 
