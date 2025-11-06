@@ -33,4 +33,4 @@ IfcGeoRefChecker is a free, standalone Windows-based software tool developed by 
 
 Technically, IfcGeoRefChecker runs as an independent desktop application on Windows and can extract and analyze georeferencing data from IFC2x3, IFC4, and IFC4.1 files. It checks parameters such as geographic coordinates, translation offsets, rotation to true north, elevation, and coordinate reference systems to confirm whether the model’s spatial positioning and orientation are properly defined. Users can also compare different IFC files and modify incorrect parameters directly, supported by a detailed protocol that highlights missing or inconsistent information. This makes it a quality assurance tool for ensuring spatial interoperability between BIM and GIS environments. The software is accompanied by IfcGeoRefUpdater, a complementary tool for applying corrections to IFC files based on the Checker’s findings. Together, they form a practical solution for improving geospatial consistency in digital construction workflows.
 
-![IfcGref demo](media/ifcGref00.jpg "IfcGref visualization")
+![IfcGref demo](media/ifcgeorefPic.png "IfcGeoRef Pic")
