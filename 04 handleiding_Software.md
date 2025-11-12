@@ -126,8 +126,16 @@ Test eventueel import in een andere software (bijv. GIS-omgeving of BIM coördin
 De ingevoerde coördinaten in Project Location verplaatsen niet automatisch de geometrie in ArchiCAD: ze worden opgenomen als metadata voor export. 
 Werken met zeer grote coördinaatwaarden (bijv. UTM meters ver weg van 0,0) kan leiden tot precisieproblemen in export/import workflows: probeer model origin zo dicht mogelijk bij projectlocatie te houden. Bij import in andere software kan de “site origin” verkeerd worden geïnterpreteerd indien de instellingen van “Match IFC Site location” niet goed staan. Controleer altijd dat de gebruikte translator versie compatibel is met IFC4 en de gewenste MVD.
 
-## VectorWorks
---- 
+## Tekla Structures
+In Tekla Structures spreken we van Basispunten als we het over coördinatensystemen hebben.
+Eerste eenmalig het Basispunt definiëren (1) en vervolgens in de IFC4 export dit Basispunt als Locatie aanwijzen (2).
+Je de keuze om voor methode IfcMapConversion of IfcSite als export-setting van dit betreffende Basispunt.
+
+<img width="1041" height="533" alt="image" src="https://github.com/user-attachments/assets/dc9dd2d9-cb11-49e0-820f-c832c3e33c54" />
+
+ Een uitgebreide uitleg tref je hier aan: https://support.tekla.com/nl/doc/tekla-structures/2025/int_base_point
+ 
+ En een webinar (2020) over dit onderwerp: https://www.youtube.com/watch?v=iAdi_x3enPE&t=900s
 
 ## BricsCAD
 --- 
