@@ -1,5 +1,16 @@
 # Voorbeeld van georeferentie bestanden 
 
+Coordinate operation:
+Dus heb je gewerkt in een cartesiaans assenstelsel waarbij een as (y-as) ook het Noorden is. Dan heb je een proj met een topocentric 
+x,y,z (Vanaf het middelpunt van de aard) of lat lon (niet gebruiken, QGIS snapt dit niet.)
+
+Zo niet, dan krijg je een Concattenated operation: 
+
+Stap 1: Kies een RD of een Lat Lon coordinaat waar dit op moet landen
+Stap 2: Reken deze om naar Geocentrisch met een X,Y,Z
+Stap 3: Maak een proj aan of wkt met
+
+
 
 ## PROJJSON
 <aside class="example" title="Voorbeeld van een engineeredCRS in PROJJSON">
@@ -198,6 +209,46 @@ Het voorbeeld hieronder toont een definitie van een EngineeredCRS met tranformat
 
 ## WKT
 
+```wkt (Geen idee of dit werkt)
+PROJCRS["unknown",
+    BASEGEODCRS["unknown",
+        DATUM["World Geodetic System 1984",
+            ELLIPSOID["WGS 84",6378137,298.257223563,
+                LENGTHUNIT["metre",1]],
+            ID["EPSG",6326]],
+        PRIMEM["Greenwich",0,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8901]]],
+    CONVERSION["unknown",
+        METHOD["Geocentric/topocentric conversions",
+            ID["EPSG",9836]],
+        PARAMETER["Geocentric X of topocentric origin",3871060.4331,
+            LENGTHUNIT["metre",1],
+            ID["EPSG",8837]],
+        PARAMETER["Geocentric Y of topocentric origin",385968.7003,
+            LENGTHUNIT["metre",1],
+            ID["EPSG",8838]],
+        PARAMETER["Geocentric Z of topocentric origin",5037479.6781,
+            LENGTHUNIT["metre",1],
+            ID["EPSG",8839]]],
+    CS[Cartesian,3],
+        AXIS["topocentric East (U)",east,
+            ORDER[1],
+            LENGTHUNIT["metre",1,
+                ID["EPSG",9001]]],
+        AXIS["topocentric North (V)",north,
+            ORDER[2],
+            LENGTHUNIT["metre",1,
+                ID["EPSG",9001]]],
+        AXIS["topocentric Up (W)",up,
+            ORDER[3],
+            LENGTHUNIT["metre",1,
+                ID["EPSG",9001]]]]
+
+
+```
+
+
 <aside class="example" title="Voorbeeld van een engineered CRS van  in WKT">
 ```wkt 
 ENGCRS["Lokaal 3D Stelsel Project ABC",
@@ -278,6 +329,10 @@ COORDINATEOPERATION["EngineeredCRS naar RDNAP",
 +proj=tmerc +lat_0=52.508803 +lon_0=5.694315 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs +type=crs
 ```
 </aside>
+
+DEZE WERKT!!! 
++proj=topocentric +X_0=3871060.4331 +Y_0=385968.7003 +Z_0=5037479.6781
+
 
 
 ## CityJSON

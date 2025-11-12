@@ -2,6 +2,8 @@
 ## Definities en afkortingen
 <dfn>CRS</dfn>: Coördinaat Referentie Systeem. Een systeem waarmee een gebied wordt ingedeeld zodat ieder punt binnen dat gebied eenduidig kan worden bepaalt.
 
+<dfn>Lokaal CRS</dfn>: Een arbitrair gekozen assenstelsel zonder directe relatie met de echte wereld, tenzij er coördinaattransformatie wordt toegepast.
+
 <dfn>RD</dfn> Stelsel Rijksdriehoekmeting. Ook wel RD-stelsel of (foutief) RD-new of Amersfoort genoemd. Een CRS die voor het Nederlands grondgebied wordt gebruikt met de code EPSG:28992.
 
 <dfn>Nulpunt</dfn>: 
