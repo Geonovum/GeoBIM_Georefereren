@@ -47,7 +47,7 @@ Geodetische CRS-en gebruiken een vereenvoudigd 3D-model van de aarde om locaties
       </table>
     </td>
     <td>
-      <img src="media/projectie/3DCRS.png" height="400px"/>
+      <img src="media/projectie/3DCRS.png" alt="3D CRS" height="400"/>
     </td>
   </tr>
 </table>
@@ -59,14 +59,14 @@ Geodetische CRS-en gebruiken een vereenvoudigd 3D-model van de aarde om locaties
 Om geo-informatie op een plat vlak weer te geven, worden kaartprojecties gebruikt. Veel gebruikte projectievlakken zijn een cilinderopperlvlak, kegeloppervlak en een plat vlak.
 
 PLAATJE TER ILLUSTRATIE, MOOIER OM ANDER PLAATJE TE MAKEN
-<a href="https://books.open.tudelft.nl/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=https%3A%2F%2Fbooks.open.tudelft.nl%2Fhome%2Fcatalog%2Fdownload%2F163%2F281%2F530%3Finline%3D1#page=301"><p>Bron: Tiberius et. al.</p><img src="media/projectie/projecties.png" height="400px"/></a>
+<a href="https://books.open.tudelft.nl/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=https%3A%2F%2Fbooks.open.tudelft.nl%2Fhome%2Fcatalog%2Fdownload%2F163%2F281%2F530%3Finline%3D1#page=301"><p>Bron: Tiberius et. al.</p><img src="media/projectie/projecties.png" alt="Projecties"  height="400"/></a>
 
 Elke <a>kaartprojectie</a> introduceert vervormingen in hoeken, afstanden en/of oppervlakten, omdat het onmogelijk is om het gekromde aardoppervlak af te beelden in een plat vlak en daarbij alle drie eigenschappen tegelijk exact te behouden. De keuze van een geschikte projectie hangt af van het doel van de kaart en welke eigenschappen het belangrijkst zijn voor de toepassing.
 
 In Nederland wordt het geprojecteerde RD-stelsel gebruikt. het RD-stelsel heeft als eigenschap dat hoeken onvervormd worden weergegeven en afwijkingen in afstanden en oppervlakte beperkt zijn binnen Nederland.
 
 DIT PLAATJE OOK ANDERE VERSIE VAN MAKEN
-<a href="https://commons.wikimedia.org/wiki/File:Het_RD_co%C3%B6rdinaten_stelsel_opgehangen_aan_het_geografische_co%C3%B6rd_stelsel.PNG"><p>Bron: Wikimedia</p><img src="media/projectie/RDprojectie.png" height="400px"/></a>
+<a href="https://commons.wikimedia.org/wiki/File:Het_RD_co%C3%B6rdinaten_stelsel_opgehangen_aan_het_geografische_co%C3%B6rd_stelsel.PNG"><p>Bron: Wikimedia</p><img src="media/projectie/RDprojectie.png" alt="RD Projectie" height="400"/></a>
 
 #### Vertikaal CRS 
 
@@ -127,10 +127,10 @@ De relatie tussen het lokale CRS en een geprojecteerd CRS wordt gelegd via een <
 <table>
   <tr>
     <td>
-      <img src="media/projectie/relatiegeobim.png" height="250px"/>
+      <img src="media/projectie/relatiegeobim.png" alt="Relatie GeoBIM" height="250"/>
     </td>
     <td>
-      <img src="media/projectie/2dtransformatie.png" height="250px"/>
+      <img src="media/projectie/2dtransformatie.png" alt="2D Transformatie" height="250"/>
     </td>
   </tr>
   <tr>
