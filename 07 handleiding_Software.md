@@ -19,6 +19,7 @@ Optie 2: 3D 1. Ga naar [3D BAG](https://www.3dbag.nl/nl/download) en selecteer j
 
 4. In QGIS ga naar Project>Import/Export>Export Project to DXF…
 
+
 ## Revit
 
 *Begrippen*
@@ -70,6 +71,12 @@ Door een omissie in de IFC-exporter van Revit moet voorafgaand aan het exportere
 
 Hans Hendriks (2022)
 https://github.com/Hans-Lammerts/Sample-Test-Files/blob/master/Geolocation%20information%20from%20Revit%20to%20IFC_v1.0.pdf
+
+
+## Autodesk AutoCAD
+
+
+## Autocad Civil 3D
 
 
 ## ArchiCAD
@@ -148,7 +155,7 @@ geolocation: https://www.youtube.com/shorts/SZ47268CLI8
 ## Blender
 --- 
 BlenderGIS: https://github.com/domlysz/BlenderGIS/wiki/Georeferencing-management
-BlenderBonsai: 
+BlenderBonsai: https://docs.bonsaibim.org/guides/authoring/georeferencing.html
 
 
 ## Illustrator/Inkscape

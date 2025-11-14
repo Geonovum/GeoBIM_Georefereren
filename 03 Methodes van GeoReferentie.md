@@ -136,7 +136,7 @@ Een GEO coordinatenstelsel kan 3D samengesteld (EPSG:7415), 2D (EPSG:28992) of 1
 | 3D GEO of BIM        | 3D GEO of BIM    | 3D Helmert transformatie | 
 
 
-<img src="./media/2d_en_3d_GeoBIM.png" alt="2D en 3D Geo of BIM combineren" title="Georeferentie Level 60" width="5000">
+<img src="./media/2d_en_3d_GeoBIM.png" alt="2D en 3D Geo of BIM combineren" title="Georeferentie Level 60" width="500">
 
 Om van geprojecteerd CRS naar een Geografische CRS te gaan is een coordinaatconversie nodig i.p.v. transformatie. Het is mogelijk om conversies van 2D naar 2D of van 3D naar 3D te doen.
 
