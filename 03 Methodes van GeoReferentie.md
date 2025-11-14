@@ -9,7 +9,7 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
 <table style="width:100%; table-layout:fixed;">
   <tr>
     <th style = "width:200px;"> Methode </th>
-    <th style = "width:30px;"> Level </th>
+    <th style = "width:50px;"> Level </th>
     <th style = "width:200px;"> Beschrijving </th>
     <th> Translatie </th>
     <th> Rotatie </th>
