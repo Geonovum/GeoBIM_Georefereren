@@ -22,6 +22,8 @@
 
 <dfn>Target CRS</dfn>
 
+<dfn>scan-to-BIM</dfn>
+
 <dfn>Ellipsoïdische coördinaten</dfn>: Ook wel geografische coördinaten
 
 <dfn>Geocentrische coördinaten</dfn>: Ook wel rechthoekige coördinaten genoemd
