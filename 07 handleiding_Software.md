@@ -147,9 +147,9 @@ Je de keuze om voor methode IfcMapConversion of IfcSite als export-setting van d
 ## BricsCAD
 --- 
 
-## Sketchup 
-    georeference: https://www.youtube.com/shorts/G2dFYtu4daI
-    geolocation: https://www.youtube.com/shorts/SZ47268CLI8
+## Sketchup
+georeference: https://www.youtube.com/shorts/G2dFYtu4daI
+geolocation: https://www.youtube.com/shorts/SZ47268CLI8
 --- 
 
 ## Blender
