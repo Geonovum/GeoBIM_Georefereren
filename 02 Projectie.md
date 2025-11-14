@@ -52,7 +52,7 @@ Geodetische CRS-en gebruiken een vereenvoudigd 3D-model van de aarde om locaties
   </tr>
 </table>
 
-<a>Ellipoïdische coördinaten</a> worden ook wel geografische coördianten genoemd, rechthoekige coördinaten worden ook wel <a>geocentrische coördinaten</a> genoemd.
+<a>Ellipsoïdische coördinaten</a> worden ook wel geografische coördianten genoemd, rechthoekige coördinaten worden ook wel <a>geocentrische coördinaten</a> genoemd.
 
 #### Geprojecteerd CRS
 

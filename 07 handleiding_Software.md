@@ -141,13 +141,28 @@ Je de keuze om voor methode IfcMapConversion of IfcSite als export-setting van d
 --- 
 
 ## Sketchup
+georeference: https://www.youtube.com/shorts/G2dFYtu4daI
+geolocation: https://www.youtube.com/shorts/SZ47268CLI8
 --- 
 
-## Bonsai (BlenderBIM)
+## Blender
 --- 
+BlenderGIS: https://github.com/domlysz/BlenderGIS/wiki/Georeferencing-management
+BlenderBonsai: 
 
-## Illustrator
+
+## Illustrator/Inkscape
 --- 
+The workflow is to:
+
+Georeference the raster in QGIS
+Digitize/Vectorize in QGIS
+Depending on your map, the above workflow will still be faster than attempting to georeference the vectors you created, compare: How to georeference a vector layer with control points?
+
+https://gis.stackexchange.com/questions/195527/qgis-use-svg-file-as-a-layer
+
+### Illustrator MapPublisher
+https://www.youtube.com/watch?v=SfBNL8TvAC8
 
 
 
