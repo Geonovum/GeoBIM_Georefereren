@@ -22,9 +22,9 @@
 
 <dfn>Target CRS</dfn>
 
-<dfn>Ellipsoïdische coördinaten</dfn>
+<dfn>Ellipsoïdische coördinaten</dfn>: Ook wel geografische coördinaten
 
-<dfn>Geocentrische coördinaten</dfn>
+<dfn>Geocentrische coördinaten</dfn>: Ook wel rechthoekige coördinaten genoemd
 
 <dfn>Kaartprojectie</dfn>
 
@@ -49,9 +49,9 @@ referentiepunt voor het uitwisselen van BIM-modellen zonder georeferentie. Een L
 
 <dfn>AHN</dfn> 
 
-<dfn>survey point</dfn>
+<dfn>survey points</dfn>
 
-<dfn>Footprint allginment</dfn>
+<dfn>Footprint alignment</dfn>
 
 <dfn>RD</dfn> Stelsel Rijksdriehoekmeting. Ook wel RD-stelsel of (foutief) RD-new of Amersfoort genoemd. Een CRS die voor het Nederlands grondgebied wordt gebruikt met de code EPSG:28992.
 
