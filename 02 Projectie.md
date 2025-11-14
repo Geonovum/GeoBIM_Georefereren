@@ -12,14 +12,18 @@ Om informatie te koppelen aan een locatie op aarde worden geodetische coördinaa
 
 <mark>EPSG-code is een unieke identificatie van het CRS binnen de zogenaamde EPSG-database, een wereldwijde verzameling van coördinaatsystemen en -transformaties.</mark>
 
-Binnen BIM wordt vaak gebruik gemaakt van [lokale CRS-en](#lokaal-crs). Door een link te maken tussen het lokale CRS in BIM en een geprojecteerd CRS kan een BIM model verder gebruikt worden in GEO/GIS systemen met zo min mogelijk verlies van data. Vanaf hier kan GIS/GEO software gebruik maken van projecties en andere GIS tools om het BIM model te projecteren in de wereld en hier aanvullende analyse op te doen. Het omzetten van het ene CRS naar het andere CRS wordt een <a>coördinaattransformatie</a> genoemd.
+Binnen BIM wordt vaak gebruik gemaakt van [lokale CRS-en](#lokaal-crs). Door een link te maken tussen het lokale CRS in BIM en een geprojecteerd CRS kan een BIM model verder gebruikt worden in GEO/GIS systemen met zo min mogelijk verlies van data. Vanaf hier kan GIS/GEO software gebruik maken van projecties en andere GIS tools om het BIM model te projecteren in de wereld en hier aanvullende analyse op te doen. Het omzetten van het ene CRS naar het andere CRS wordt een <a>Coördinaattransformatie</a> genoemd.
 
-Zoals hierboven aangegeven worden in Nederland meerder CRS-en Bij het gebruik van meerdere CRS-en bestaat risico op introductie van fouten door onjuiste implementatie van de relaties tussen CRS-en. Binnen Nederland worden aanbieders van data worden geadviseerd om data aan te bieden in de verschillende CRS-en gericht op de eindgebruikers. Eindgebruikers worden juist geadviseerd data waar mogelijk op te vragen in hetzelfde CRS. Dit is ook een nadrukkelijke aanbeveling voor gebruikers van BIM-software. De meeste BIM software is namelijk niet instaat transformaties uit te voeren tussen verschillende geprojecteerde CRS'en. Wanneer GIS data dus naar BIM moet worden uitgewisseld is het belangrijk dat dit al geprojecteerd is in het coördinatensysteem wat de BIM Software verwacht. Afhankelijk van de BIM Software kan het zelfs nodig zijn te transformeren naar het lokale stelsel wat gebruikt wordt door de BIM Software. Hier dienen binnen projecten duidelijk afspraken over gemaakt worden.
+Zoals hierboven aangegeven worden in Nederland meerder CRS-en Bij het gebruik van meerdere CRS-en bestaat risico op introductie van fouten door onjuiste implementatie van de relaties tussen CRS-en. Binnen Nederland worden aanbieders van data worden geadviseerd om data aan te bieden in de verschillende CRS-en gericht op de eindgebruikers. Eindgebruikers worden juist geadviseerd data waar mogelijk op te vragen in hetzelfde CRS. Dit is ook een nadrukkelijke aanbeveling voor gebruikers van BIM-software. 
 
 <aside class="note" title="Gebruik hetzelfde CRS">
-  <p>_AANBEVELING_ Vraag als eindgebruiker geodata waar mogelijk op in hetzelfde CRS</p>
+  <p>**AANBEVELING** Vraag als eindgebruiker geodata waar mogelijk op in hetzelfde CRS</p>
+</aside>
 
-  <p>_AANBEVELING_ Maak afspraken met projectpartners over te gebruiken CRS-en</p>
+De meeste BIM software is namelijk niet instaat transformaties uit te voeren tussen verschillende geprojecteerde CRS'en. Wanneer GIS data dus naar BIM moet worden uitgewisseld is het belangrijk dat dit al geprojecteerd is in het coördinatensysteem wat de BIM Software verwacht. Afhankelijk van de BIM Software kan het zelfs nodig zijn te transformeren naar het lokale stelsel wat gebruikt wordt door de BIM Software. Hier dienen binnen projecten duidelijk afspraken over gemaakt worden.
+
+<aside class="note" title="Maak vooraf afspraken over de te gebruiken CRS-en en transformatie">
+  <p>**AANBEVELING** Maak afspraken met projectpartners over te gebruiken CRS-en</p>
 </aside>
 
 De volgende pargraven gaan dieper in op de verschillende CRS-typen, de relaties tussen CRS-en die direct relevant zijn voor deze praktijkrichtlijn en introduceert de gangbare terminologie voor CRS-en. Voor nog meer informatie en adviezen wordt verwezen naar de [Handreiking Gebruik coördinaatreferentiesystemen bij uitwisseling en visualisatie van geo-informatie](https://docs.geostandaarden.nl/crs/crs/).
@@ -48,7 +52,7 @@ Geodetische CRS-en gebruiken een vereenvoudigd 3D-model van de aarde om locaties
   </tr>
 </table>
 
-<a>Ellipoïdische coördinaten</a> worden ook wel geografische coördianten genoemd, rechthoekige coördinaten worden ook wel <a>geocentrische coördinaten genoemd</a>.
+<a>Ellipoïdische coördinaten</a> worden ook wel geografische coördianten genoemd, rechthoekige coördinaten worden ook wel <a>geocentrische coördinaten</a> genoemd.
 
 #### Geprojecteerd CRS
 
@@ -72,11 +76,14 @@ Figuur ellips, geoide, aardoppervlak
 DIT PLAATJE GEEFT HET IDEE
 ![alt text](media/projectie/hoogte.png)
 
+Concept plaatje: 
+![Hoogte](media/projectie/hoogte_Concept.png)
+
 Het referentievlak voor de orthometrische hoogte volgt het zwaartekrachtveld en daarmee de kromming van de aarde. Terwijl voor de horizontale component de kromming van het aardoppervlak vaak genegeerd kan worden, geldt die niet voor de vertikale component. Onderstaande figuur illustreert afwijkingen bij het verwaarlozen van de aardkromming voor de afstand en het hoogteverschil tussen punten P en Q. Bij het verwaarlozen van de aardkromming snijden de lijn RQ en de raaklijn aan de ellips vanuit P elkaar in het punt Q. <mark>De werkelijke afstand PQ over het aardoppervlak is korter dan de afstand PQ', op een afstand van 10 kilometer is het verschil echter slecht 1 centimeter.</mark> Punt P en Q hebben beide dezelfde hoogte ten opzichte van het aardoppervlak, punt Q'ligt echter x meter boven het aardoppervlak. Het hoogteverschil is 10 meter bij 10 km of 1 cm bij 400 meter.
 
 DIT PLAATJE GEEFT HET IDEE
 ![alt text](media/projectie/hoogteafwijking1.png)
-![Hoogteafwijking](media/projectie/hoogteafwijking_Concept.png)
+
 
 
 #### Samengesteld CRS
@@ -100,15 +107,16 @@ Soms wordt de relatie van het lokale CRS ten opzicht van het Noorden gegeven. In
 * CRS obv projectie: true north is in de richting noorden van geprojecteerde stelsel vaak de Y-as of Northing-as, ook wel grid north genoemd.
 * Project North is de Y-as van het lokaal CRS. 
 
-![True North and Grid North](./media/True_North_and_Grid_North.png)
-Hebben we hier wat aan: https://www.surveydown.com/which-ways-north
+<img src="./media/True_North_and_Grid_North.png" alt="True North en Grid North" title="True North en Grid North" width="300"> 
+<mark> Bron: https://www.surveydown.com/which-ways-north </mark>
+
 
 ### Coördinaattransformatie tussen lokaal CRS en geodetisch
 
 De coördinaattransformatie tussen een geodetisch CRS en een lokaal CRS wordt, binnen de huidige standaarden, apart gegeven voor de horizontale en de vertikale component.
 
 <aside class="note" title="Aparte Horizontale en Vertikale coördinaattransformatie">
-  <p>_AANBEVELING_ Gebruik aparte transformaties voor de horizontale en vertikale componenten. Dit betekent één 2D transformatie voor het horizontale vlak en één 1D transformatie voor het verticale vlak resulteert in een 3D transformatie.</p>
+  <p>**AANBEVELING** Gebruik aparte transformaties voor de horizontale en vertikale componenten. Dit betekent één 2D transformatie voor het horizontale vlak en één 1D transformatie voor het verticale vlak resulteert in een 3D transformatie.</p>
 </aside>
 
 #### Horizontaal - 2D gelijkvormigheidstransformatie
