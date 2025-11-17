@@ -131,17 +131,18 @@ De ingevoerde coördinaten in Project Location verplaatsen niet automatisch de g
 Werken met zeer grote coördinaatwaarden (bijv. UTM meters ver weg van 0,0) kan leiden tot precisieproblemen in export/import workflows: probeer model origin zo dicht mogelijk bij projectlocatie te houden. Bij import in andere software kan de “site origin” verkeerd worden geïnterpreteerd indien de instellingen van “Match IFC Site location” niet goed staan. Controleer altijd dat de gebruikte translator versie compatibel is met IFC4 en de gewenste MVD.
 
 ## Tekla Structures
-In Tekla Structures kan met behulp van **Basispunten** een coördinatensysteem voor uitwisselbaarheid worden gebruikt. Bijvoorbeeld voor het importeren en exporteren van IFC-bestanden. 
-Deze basispunten worden gebruikt om het model nauwkeurig te positioneren en uit te lijnen binnen een groter coördinatensysteem. Ze zorgen voor consistente samenwerking en correcte uitwisseling van modellen tussen verschillende partijen.
+In Tekla Structures kan met behulp van **Basispunten** een coördinatensysteem voor uitwisselbaarheid worden gebruikt. Bijvoorbeeld voor het importeren en exporteren van IFC-bestanden. Deze basispunten worden gebruikt om het model nauwkeurig te positioneren en uit te lijnen binnen een groter coördinatensysteem. Ze zorgen voor consistente samenwerking en correcte uitwisseling van modellen tussen verschillende partijen.
 
 1. Basispunten definiëren 
 Basispunten kunnen gedefinieerd worden in de **Projecteigenschappen** van Tekla Structures. 
 Klik op _Bestand > Projecteigenschappen > Basispunten_ om het dialoogvenster **Basispunt** te openen. Definieer de benodigde gegevens zoals de coördinaten (1) en een eventuele hoek bij de optie Hoek naar het noorden (2) en sla het basispunt op onder een naam door op de “+” knop te klikken (3):
+
 <img width="782" height="678" alt="image" src="https://github.com/user-attachments/assets/b20b7fa4-43ac-41e6-864c-76b2e8e7a725" />
 
 3. IFC exporteren
 Klik op Bestand > Exporteren > IFC4 om het dialoogvenster **IFC exporteren** te openen.
 Selecteer bij Locatie door het gedefinieerde basispunt:
+
 <img width="589" height="592" alt="image" src="https://github.com/user-attachments/assets/c59fc0d3-3af2-4c5e-8706-4f419d42d964" />
 
 Definieer vervolgens de overige benodigde gegevens. Bij de optie _Basispunt exporteren_ kan gekozen worden voor de methode _IfcMapConversion_ of _IfcSite_ als export-setting van dit betreffende Basispunt.
@@ -149,9 +150,11 @@ Definieer vervolgens de overige benodigde gegevens. Bij de optie _Basispunt expo
 3. IFC importeren
 Voor het importeren van IFC-modellen wordt in Tekla Structures de functionaliteit **Referentiemodellen** gebruikt.
 Klik in het zijpaneel op Referentiemodellen:
+
 <img width="297" height="794" alt="image" src="https://github.com/user-attachments/assets/4ee89424-4632-4c19-8e41-88b401a74c37" />
 
 Klik vervolgens op de knop **+ Model toevoegen** om het dialoogvenster **Model toevoegen** te openen. Selecteer bij Locatie door het gedefinieerde basispunt:
+
 <img width="828" height="484" alt="image" src="https://github.com/user-attachments/assets/8cbc4120-2031-4130-bb5d-e45978838516" />
 
 Blader vervolgens naar het betreffende IFC-bestand en klik op de knop **Model toevoegen** om het IFC-model in te voegen.
