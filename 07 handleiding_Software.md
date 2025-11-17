@@ -133,13 +133,15 @@ Werken met zeer grote coördinaatwaarden (bijv. UTM meters ver weg van 0,0) kan 
 ## Tekla Structures
 In Tekla Structures kan met behulp van **Basispunten** een coördinatensysteem voor uitwisselbaarheid worden gebruikt. Bijvoorbeeld voor het importeren en exporteren van IFC-bestanden. Deze basispunten worden gebruikt om het model nauwkeurig te positioneren en uit te lijnen binnen een groter coördinatensysteem. Ze zorgen voor consistente samenwerking en correcte uitwisseling van modellen tussen verschillende partijen.
 
-1. Basispunten definiëren 
+1. Basispunten definiëren
+   
 Basispunten kunnen gedefinieerd worden in de **Projecteigenschappen** van Tekla Structures. 
 Klik op _Bestand > Projecteigenschappen > Basispunten_ om het dialoogvenster **Basispunt** te openen. Definieer de benodigde gegevens zoals de coördinaten (1) en een eventuele hoek bij de optie Hoek naar het noorden (2) en sla het basispunt op onder een naam door op de “+” knop te klikken (3):
 
 <img width="782" height="678" alt="image" src="https://github.com/user-attachments/assets/b20b7fa4-43ac-41e6-864c-76b2e8e7a725" />
 
-3. IFC exporteren
+2. IFC exporteren
+   
 Klik op Bestand > Exporteren > IFC4 om het dialoogvenster **IFC exporteren** te openen.
 Selecteer bij Locatie door het gedefinieerde basispunt:
 
@@ -148,6 +150,7 @@ Selecteer bij Locatie door het gedefinieerde basispunt:
 Definieer vervolgens de overige benodigde gegevens. Bij de optie _Basispunt exporteren_ kan gekozen worden voor de methode _IfcMapConversion_ of _IfcSite_ als export-setting van dit betreffende Basispunt.
 
 3. IFC importeren
+   
 Voor het importeren van IFC-modellen wordt in Tekla Structures de functionaliteit **Referentiemodellen** gebruikt.
 Klik in het zijpaneel op Referentiemodellen:
 
@@ -159,12 +162,12 @@ Klik vervolgens op de knop **+ Model toevoegen** om het dialoogvenster **Model t
 
 Blader vervolgens naar het betreffende IFC-bestand en klik op de knop **Model toevoegen** om het IFC-model in te voegen.
 
-Meer informatie over basispunten in Tekla Structures
+Meer informatie over basispunten in Tekla Structures:
+
 Een uitgebreide uitleg over basispunten in de Tekla User Assistance:
 https://support.tekla.com/nl/doc/tekla-structures/2025/int_base_point
 
-Een webinar (2020) over basispunten:
-https://www.youtube.com/watch?v=iAdi_x3enPE&t=900s
+Een webinar (2020) over basispunten: https://www.youtube.com/watch?v=iAdi_x3enPE&t=900s
 
 ## BricsCAD
 --- 
