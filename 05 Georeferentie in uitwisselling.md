@@ -41,7 +41,9 @@ Een DXF-bestand zelf bevat geen informatie waarmee aangeduid wordt dat de waarde
 [GML](https://www.ogc.org/standards/gml/) geeft de mogelijkheid om een verwijzing te maken naar een standaard CRS-en gedefinieerd door EPSG. Daarnaast geeft GML de mogelijkheid om een Engineering CRS te definieren. Het is mogelijk om dit lokaal coördinatenstelsel te verbinden aan een bekend coordinatenstelsel als RD-NAP waardoor het voor uitwisseling, visualisatie en analyse gebruikt kan worden. 
 
 ### CityGML 
-CityGML is een open datamodel en uitwisselformaat voor de representatie van 3D-geo-informatie. Het gebruikt GML als onderliggende structuur. De CityGML standaard biedt twee mogelijkheden om een coordinatenstelsel te duiden voor het model. De voorkeur is om een totaal cordinatenstelsel voor een dataset te duiden. Dit doet men in de gml:Envelope die gebruikt wordt om de ruimtelijke begrenzing (bounding box) van de dataset aan te geven. 
+CityGML is een open datamodel en uitwisselformaat voor de representatie van 3D-geo-informatie.
+Het kent verschillende encodings, waarvan XML/GML (CityGML) en JSON (CityJSON) de meest gebruikte zijn. Omdat de standaard een tijd lang alleen de GML encoding kende, en sterk verweven was met deze encoding, is vanaf het begin de term CityGML gebruikt voor zowel het data model als de GML encoding. Dat kan verwarrend zijn voor buitenstaanders.
+De CityGML encoding biedt twee mogelijkheden om een coordinatenstelsel te duiden voor het model. De voorkeur is om een totaal cordinatenstelsel voor een dataset te duiden. Dit doet men in de gml:Envelope die gebruikt wordt om de ruimtelijke begrenzing (bounding box) van de dataset aan te geven. 
 
 <aside class="note" title="Teken wanneer mogelijk op RD in 2D-Vectorsoftware">
   <p>**AANBEVELING** Refereer naar een URI van een standaard CRS of een uri van een zelf gehoste CRS. Wanneer dit niet mogelijk is kan men het Engineered CRS in een (City)GML bestand definieren. </p>
@@ -50,11 +52,11 @@ CityGML is een open datamodel en uitwisselformaat voor de representatie van 3D-g
 Een voorbeeld van georeferentie in GML en CityGML vindt men in de Bijlage B
 
 ## CityJSON
-In CityJSON moet, anders dan in CityGML, één coordinatenstelsel voor het totaalmodel worden geduid. Dit doet men in het attribuut "Metadata": { 
+In de CityJSON encoding moet, anders dan in CityGML, één coordinatenstelsel voor het totaalmodel worden geduid. Dit doet men in het attribuut "Metadata": { 
   ReferenceSystem: "https://www.opengis.net/def/crs/EPSG/0/7415",
 }
 
-Het is mogelijk om met het attribuut: "Transform" een verplaatsing en verschaling van een model te duiden. Dit kan voor een 0-punt Geo- dataset zorgen en de hoeveelheid data reduceren. 
+Het is mogelijk om met het attribuut: "Transform" een verplaatsing en verschaling van een model te duiden. Deze functionaliteit is aan CityJSON toegevoegd om de bestandsgrootte te verkleinen. Met deze functionaliteit is het mogelijk om de coördinaten van de vertices weer te geven als integers, en de schaalfactor en de translatie op te slaan die nodig is om de originele coördinaten (als floats/doubles) te verkrijgen. Deze functionaliteit kan in principe ook gebruikt kunnen worden om de hele data set rond het 0-punt te modelleren. Wel zijn hier dan extra rstricties voor nodig. 
  
 ## Geopackage
 [GeoPackage](https://www.geopackage.org/spec140/index.html) staat naast GML als uitwisselformaat op de Pas-toe-leg-uit lijst. Dit formaat is een OGC Standaard  is geschikt voor georeferentie wanneer men werkt met 2D GeoBIM modellen die gemodelleerd worden op een al bekend crs (Bijvoorbeeld RD-NAP of WGS84). Geopackage is OGC standaard die zich baseert op een databaseformaat (SQL-lite). In de tabel gpkg_spatial_ref_sys waarin de informatie voor coordinatenstelsel kan worden opgeslagen. De geopackage standaard heeft geen vaste manier om een engineerdCRS te duiden. Wanneer de SourceCRS een lokaal gedefinieerd grid is, is dit uitwisselformaat minder geschikt.
