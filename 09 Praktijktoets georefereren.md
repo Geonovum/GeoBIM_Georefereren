@@ -24,18 +24,90 @@ De gebruikte datasets zijn:
 ## Resultaten in ArcGIS
 De IFC modellen zijn direct ingelezen in ArcGIS Pro zonder extra tools of andere (referentie) bestanden. De validatie is uitgevoerd met ArcGIS Pro 3.5.
 
-| Naam | Afbeelding | Locatie | Hoogte | Oriëntatie| Schaal | Opmerkingen |
-|-|-|-|-|-|-|-|
-| Van Brienenoordbrug-IFC4X3.ifc| <afbeelding>| ✅ | ✅ | ✅| ✅ | Komt goed over |
-| ifcbridge-model01_georeferenced.ifc | <afbeelding> | ✅ | ✅ | ✅| ✅ | Komt goed over |
-| ifcbridge-model02_georeferenced.ifc| <afbeelding> | ✅  | ❌ | ❌ | ✅ | Ligt onder maaiveld |
-| ifcbridge-model03_georeferenced.ifc| <afbeelding> |🔶 | ❌ | 🔶| 🔶 | Ligt ver boven het maaiveld, mogelijk verkeerde locatie |
-|Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef.ifc| <afbeelding> | ✅  | ✅ | ✅ | ✅ | Komt goed over |
-|Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef10.ifc| <afbeelding> | ❌  | 🔶 | ✅ | ✅ | 0,0 punt van RD |
-|Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef20.ifc| <afbeelding> | ❌  | 🔶 | ✅ | ✅ |  0,0 punt van RD |
-|Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef30.ifc| <afbeelding> | ❌  | 🔶 | ✅ | ✅ |  0,0 punt van RD |
-|Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef40.ifc| <afbeelding> | ❌  | 🔶 | ✅ | ✅ |  0,0 punt van RD en het gebouw is ‘exploded’ |
-|Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef50.ifc| <afbeelding> | ✅  | ✅ | ✅ | ✅ | Komt goed over |
+
+
+<table style="width:100%; table-layout:fixed;">
+  <tr>
+    <th style = "width:100px;"> Naam</th>
+    <th style = "width:200px;"> Afbeelding </th>
+    <th style = "width:50px;"> Locatie </th>
+    <th style = "width:50px;"> Locatie </th>
+    <th style = "width:50px;"> Hoogte </th>
+    <th style = "width:50px;"> riëntatie </th>
+    <th style = "width:50px;"> Schaal </th>
+    <th> Opmerkingen</th>
+  </tr>
+  <tr>
+    <td>Van Brienenoordbrug-IFC4X3.ifc </td>
+    <td>
+      <img src="./media/Georefereren_praktijktoets_1.png" alt="Georeferentie van Brienenoordbrug ifc 4x3" title="Georeferentie van Brienenoordbrug ifc 4x3" width="190">
+    </td>
+    <td> ✅ </td><td> ✅ </td><td> ✅ </td><td> ✅ </td> <td> Komt goed over </td>
+  </tr>
+  <tr>
+    <td>ifcbridge-model01_georeferenced.ifc </td>
+    <td>
+      <img src="./media/Georefereren_praktijktoets_2.png" alt="Resultaat geogerefereerde brug ifc" title="Resultaat geogerefereerde brug ifc" width="190">
+    </td>
+    <td> ✅ </td><td> ✅ </td><td> ✅ </td><td> ✅ </td> <td> Komt goed over </td>
+  </tr>
+  <tr>
+    <td>ifcbridge-model02_georeferenced.ifc </td>
+    <td>
+      <img src="./media/Georefereren_praktijktoets_3.png" alt="Resultaat geogerefereerde brug 2 ifc" title="Resultaat geogerefereerde brug 2 ifc" width="190">
+    </td>
+    <td> ✅ </td><td> ❌ </td><td> ❌ </td><td> ✅ </td> <td> Ligt onder maaiveld </td>
+  </tr>
+  <tr>
+    <td>ifcbridge-model03_georeferenced.ifc </td>
+    <td>
+      <img src="./media/Georefereren_praktijktoets_4.png" alt="Resultaat geogerefereerde brug 3 ifc" title="Resultaat geogerefereerde brug 3 ifc" width="190">
+    </td>
+    <td> 🔶 </td><td> ❌ </td><td> 🔶 </td><td> 🔶 </td> <td> Ligt ver boven het maaiveld, mogelijk verkeerde locatie </td>
+  </tr>
+  <tr>
+    <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef.ifc</td>
+    <td>
+      <img src="./media/Georefereren_praktijktoets_5.png" alt="Resultaat geogerefereerd model met alle levels in één model" title="Resultaat geogerefereerd model met alle levels in één model" width="190">
+    </td>
+    <td> 🔶 </td><td> ❌ </td><td> 🔶 </td><td> 🔶 </td> <td> Komt goed over </td>
+  </tr>
+  <tr>
+    <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef10.ifc</td>
+    <td>
+      <img src="./media/Georefereren_praktijktoets_6.png" alt="Resultaat geogerefereerd model level 10" title="Resultaat geogerefereerd model level 10" width="190">
+    </td>
+    <td> ❌ </td><td> 🔶 </td><td> ✅ </td><td> ✅ </td> <td> 0,0 punt van RD </td>
+  </tr>
+  <tr>
+    <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef20.ifc</td>
+    <td>
+      <img src="./media/Georefereren_praktijktoets_7.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
+    </td>
+    <td> ❌ </td><td> 🔶 </td><td> ✅ </td><td> ✅ </td> <td> 0,0 punt van RD </td>
+  </tr>
+  <tr>
+    <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef30.ifc</td>
+    <td>
+      <img src="./media/Georefereren_praktijktoets_8.png" alt="Resultaat geogerefereerd model level 30" title="Resultaat geogerefereerd model level 30" width="190">
+    </td>
+    <td> ❌ </td><td> 🔶 </td><td> ✅ </td><td> ✅ </td> <td> 0,0 punt van RD </td>
+  </tr>
+  <tr>
+    <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef40.ifc</td>
+    <td>
+      <img src="./media/Georefereren_praktijktoets_9.png" alt="Resultaat geogerefereerd model level 40" title="Resultaat geogerefereerd model level 40" width="190">
+    </td>
+    <td> ❌ </td><td> 🔶 </td><td> ✅ </td><td> ✅ </td> <td>  0,0 punt van RD en het gebouw is ‘exploded’ </td>
+  </tr>
+  <tr>
+    <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef50.ifc</td>
+    <td>
+      <img src="./media/Georefereren_praktijktoets_10.png" alt="Resultaat geogerefereerd model level 50" title="Resultaat geogerefereerd model level 50" width="190">
+    </td>
+    <td> ✅ </td><td> ✅ </td><td> ✅ </td><td> ✅ </td> <td>  0,0 punt van RD en het gebouw is ‘exploded’ </td>
+  </tr>
+</table>
 
 ✅ = volledige support
 🔶 = gedeeltelijke/non-standaard support

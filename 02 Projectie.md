@@ -1,4 +1,4 @@
-## Coördinaatreferentiesystemen en Coördinaattransformatie
+# Coördinaatreferentiesystemen en Coördinaattransformatie
 
 Om informatie te koppelen aan een locatie op aarde worden geodetische coördinaatreferentiesystemen gebruikt. <a>Geodetische CRS</a>-en die relevant zijn voor het georefereren van BIM in Nederland zijn:
 
@@ -28,9 +28,9 @@ De meeste BIM software is namelijk niet instaat transformaties uit te voeren tus
 
 De volgende pargraven gaan dieper in op de verschillende CRS-typen, de relaties tussen CRS-en die direct relevant zijn voor deze praktijkrichtlijn en introduceert de gangbare terminologie voor CRS-en. Voor nog meer informatie en adviezen wordt verwezen naar de [Handreiking Gebruik coördinaatreferentiesystemen bij uitwisseling en visualisatie van geo-informatie](https://docs.geostandaarden.nl/crs/crs/).
 
-### Geodetische CRS-en
+## Geodetische CRS-en
 
-#### Geografische en geocentrisch CRS
+### Geografische en geocentrisch CRS
 
 Geodetische CRS-en gebruiken een vereenvoudigd 3D-model van de aarde om locaties vast te leggen ten opzichte van het aardoppervlak. Het vereenvoudigd model is een omwentelingsellipsoïde (een afgeplatte bol). Coördinaten worden uitgedrukt in ellipsoïdsche breedte (<span style="font-family: 'Times New Roman';">&#981;</span>), lengte (<span style="font-family: 'Times New Roman';">&lambda;</span>) en hoogte (<span style="font-family: 'Times New Roman';"><i>h</i></span>) of rechthoekige coördinaten <span style="font-family: 'Times New Roman';"><i>X</i></span>, <span style="font-family: 'Times New Roman';"><i>Y</i></span> en <span style="font-family: 'Times New Roman';"><i>Z</i></span> ten opzichte van het middelpunt van de ellpisoïde. In onderstaande figuur zijn de hoeken en assen van de ellipsoïdische en rechthoekige coördinaten weergegeven.
 
@@ -54,7 +54,7 @@ Geodetische CRS-en gebruiken een vereenvoudigd 3D-model van de aarde om locaties
 
 <a>Ellipsoïdische coördinaten</a> worden ook wel geografische coördianten genoemd, rechthoekige coördinaten worden ook wel <a>geocentrische coördinaten</a> genoemd.
 
-#### Geprojecteerd CRS
+### Geprojecteerd CRS
 
 Om geo-informatie op een plat vlak weer te geven, worden kaartprojecties gebruikt. Veel gebruikte projectievlakken zijn een cilinderopperlvlak, kegeloppervlak en een plat vlak.
 
@@ -68,7 +68,7 @@ In Nederland wordt het geprojecteerde RD-stelsel gebruikt. het RD-stelsel heeft 
 DIT PLAATJE OOK ANDERE VERSIE VAN MAKEN
 <a href="https://commons.wikimedia.org/wiki/File:Het_RD_co%C3%B6rdinaten_stelsel_opgehangen_aan_het_geografische_co%C3%B6rd_stelsel.PNG"><p>Bron: Wikimedia</p><img src="media/projectie/RDprojectie.png" alt="RD Projectie" height="400"/></a>
 
-#### Vertikaal CRS 
+### Vertikaal CRS 
 
 <a>Ellipsoïdische hoogte</a> heeft geen fysieke betekenis, het geeft hoogte van een punt of object boven een vereenvoudigd model van de aarde. Orthometrische hoogtesystemen die een relatie hebben met zwaartekracht hebben wel een fysieke betekenis, tussen punten met exact dezelfde <a>orthometrische hoogte</a> zal in theorie geen water stromen. De relatie tussen de orthometrische hoogte en ellipoidische hoogte wordt gevormd door een <a>quasi-geoïdemodel</a>. Een quasi-geoïdemodel geeft de hoogte van het referentievlak voor de orthometrische hoogte boven de ellipsoïde. Het orthometrische hoogte systeem voor Nederlands is het Normaal Amsterdams Peil (NAP).
 
@@ -87,20 +87,20 @@ DIT PLAATJE GEEFT HET IDEE
 
 
 
-#### Samengesteld CRS
+### Samengesteld CRS
 
 * geprojecteerd + hoogte  (RDNAP)
 * geografisch 2D + hoogte (ETSR89_NAP)
 
-### Lokaal CRS
+## Lokaal CRS
 
 Een <a>lokaal CRS</a> is een arbitrair gekozen assenstelsel. De oorsprong, de oriëntatie en het vertikale referentievlak van het stelsel worden gekozen op basis van praktische overwegingen <mark>en kan voordelen hebben bij bepaalde 3D modeleer software <i> is dat zo</i></mark>. <mark> Sommige applicaties voorzien ook alleen in een lokaal assenstelsel om in te modelleren</mark> Dit kan project afhankelijk zijn, bijvoorbeeld een hoekpunt, voorgevel en begane grond van een gebouw, de eenheden zijn vaak in meters of millimeters. Er is geen directe relatie met de echte wereld tenzij er een coördinaattransformatie wordt toegepast.
 
-#### Benadering van RD in lokaal CRS
+### Benadering van RD in lokaal CRS
 
 In sommige software pakketen zoals AutoCAD is het gebruikelijk om met het lokale stelsel en RD-stelsel te benaderen, bijvoorbeeld door het gebruik van bekende punten of door de oorsprong te verschuiven. AutoCAD is alleen zelf niet bewust dat dit RD-coördinaten zijn. Wat de software betreft is dit een lokaal stesel zonder verdere betekenis en worden de aardkromming en eigenschappen van de kaartprojectie niet toegepast. De link tussen de lokale coördinaten en het geprojecteerd CRS is in dit geval X<sub>bim</sub> &ne; X<sub>gis</sub>, Y<sub>bim</sub> &ne; Y<sub>gis</sub>, Z<sub>bim</sub> &ne; Z<sub>gis</sub>.
 
-#### True North, Grid North, Project North
+### True North, Grid North, Project North
 
 Soms wordt de relatie van het lokale CRS ten opzicht van het Noorden gegeven. In de BIM-sector worden hiervoor de termen <a>True North</a>, <a>Grid North</a> en <a> Project North </a> om de relatie met de oriëntatie van een geodetisch CRS aan te geven. Deze hebben afhankelijk van het type CRS de volgende betekenis.
 
@@ -112,7 +112,7 @@ Soms wordt de relatie van het lokale CRS ten opzicht van het Noorden gegeven. In
 <mark> Bron: https://www.surveydown.com/which-ways-north </mark>
 
 
-### Coördinaattransformatie tussen lokaal CRS en geodetisch
+## Coördinaattransformatie tussen lokaal CRS en geodetisch
 
 De coördinaattransformatie tussen een geodetisch CRS en een lokaal CRS wordt, binnen de huidige standaarden, apart gegeven voor de horizontale en de vertikale component.
 
@@ -120,7 +120,7 @@ De coördinaattransformatie tussen een geodetisch CRS en een lokaal CRS wordt, b
   <p>**AANBEVELING** Gebruik aparte transformaties voor de horizontale en vertikale componenten. Dit betekent één 2D transformatie voor het horizontale vlak en één 1D transformatie voor het verticale vlak resulteert in een 3D transformatie.</p>
 </aside>
 
-#### Horizontaal - 2D gelijkvormigheidstransformatie
+### Horizontaal - 2D gelijkvormigheidstransformatie
 
 De relatie tussen het lokale CRS en een geprojecteerd CRS wordt gelegd via een <a>2D gelijkvormigheidstransformatie</a> (ook wel 2D Helmert transformatie genoemd).
 
@@ -154,7 +154,7 @@ De overbepaalde gelijkvormigheidstransformatie tussen een bron- en een doelstels
 
 Hoewel deze aannames niet altijd realistisch zijn geeft het model van de Helmert transformatie een eenvoudige manier om de parameters te berekenen met lineaire vergelijkingen.
 
-#### Vertikaal - vast hoogteverschil
+### Vertikaal - vast hoogteverschil
 
 Voor de relatie tussen vertikale referentievlakken is het uitgangspunt in de huidge standaarden dat de relatie is vast te leggen via een vast hoogteverschil.
 
