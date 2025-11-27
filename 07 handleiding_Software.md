@@ -197,4 +197,15 @@ https://gis.stackexchange.com/questions/195527/qgis-use-svg-file-as-a-layer
 https://www.youtube.com/watch?v=SfBNL8TvAC8
 
 
+## QGIS
+Plug-in DXF - AnotherDXFImporter
 
+https://opengislab.com/blog/tag/Convert+DXF+DWG
+
+GDAL - Toolbox processing
+GDAL Vetor Converse Covert Format 
+
+Kaartlagen, georeferencer: DXF - openen - Ground Contro Punt Toevoegen - Kaart in de kaart toeveogen (of handmatig invoeren)
+Dit voor 4 punten doen. Druk op run 
+
+Hiermee krijg je de affine transformatie (Dat is een super-klasse van afine)
