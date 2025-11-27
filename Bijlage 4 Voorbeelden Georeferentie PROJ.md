@@ -12,11 +12,23 @@ Zo niet, dan krijg je een Concattenated operation:
 
 ## PROJ-String
 
+<mark>Het is niet mogelijk om deze te verdraaien en te schalen</mark>
+
 <aside class="example" title="Voorbeeld van een proj-string van topocentrische projectie bij dronten">
 ```proj
 +proj=topocentric +X_0=3871060.4331 +Y_0=385968.7003 +Z_0=5037479.6781
 ```
 </aside>
+
+
+
+
+<aside class="example" title="Voorbeeld van een proj-string van topocentrische projectie bij dronten">
+```proj
+-ct
+```
+</aside>
+<mark></mark>
 
 ## PROJJSON
 <aside class="example" title="Voorbeeld van een engineeredCRS in PROJJSON">

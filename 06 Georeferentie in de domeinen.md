@@ -21,6 +21,13 @@ Voorbeelden van Infra projecten zijn
  - snelwegen, tunnel, dijkverstrekingen (lang gerekt)
  - burgen, viaducten en sluizen (locatie bepaald door omgeving)
 
+
+
+Oplossings-idee. Tussenpunten berekenen. https://gnss-data.kadaster.nl/misc/docs/langelijnenadvies.pdf
+
+Misschien ook lange lijnen advies voor de Z- waarde.  
+
+
 ### Werkwijze in Infa
 Binnen een project in de Infra denken we in RD coordinaten ten opzichten van NAP. Er wordt niet in een lokaal coordinaten stelsel gewerkt. Dit wordt 
 gedaan omdat er vaak aagesloten moet worden op bestaande infrastructuur. Deze infrastructuur wordt door onze maatvoerder opgemeten in 
