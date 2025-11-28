@@ -46,10 +46,17 @@ referentiepunt dat gebruikt wordt voor de translatie van een BIM-model naar een 
 <dfn> overbepaaldheid </dfn>
 <dfn> GNSS </dfn>
 
-<dfn>Lokaal-coördinatiepunt</dfn>:
-referentiepunt voor het uitwisselen van BIM-modellen zonder georeferentie. Een Lokaal-coördinatiepunt staat op een vaste afstand (meestal 5 of 10 meter) ten opzichte van de eerste gridlijnen van een BIM-model.
+<dfn>BIM nulpunt</dfn>:
+Referentiepunt voor het uitwisselen van BIM-modellen zonder georeferentie. Een Bim nulpunt staat op een vaste afstand (meestal 5 of 10 meter) ten opzichte van de eerste gridlijnen van een BIM-model.
+
+<dfn>GEO Coördinatiepunt</dfn>:
+Referentiepunt voor het uitwisselen van Geodata. Het GEO Coördinatiepunt is een lokaal vastgesteld punt van een site, perceel of andere omgevingsdata. De RD waarde (XYZ) van dit punt is vastgesteld. Geodata wordt op deze manier op de de juiste positie in in BIM gebracht waarbij de geodata <a>Noordgericht</a> is en een translatie kent. Een voorbeeld is de IFC output van de  https://bim-tools.github.io/perceel2ifc/ om IFC data van een perceel te verkrijgen.   
+
+<dfn>Noordgericht</dfn> 
+Noordgerichte data betekent dat ietsdata  georiënteerd is in de richting van het (geografisch) kaartnoorden. Het geeft aan dat de bovenkant of hoofdrichting naar het noorden wijst
 
 <dfn>AHN</dfn> 
+AHN staat voor Actueel Hoogtebestand Nederland. Het is een digitale hoogtekaart van heel Nederland waarin de hoogte van het maaiveld en objecten (zoals gebouwen en bomen) zeer nauwkeurig is vastgelegd
 
 <dfn>survey points</dfn>
 
