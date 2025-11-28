@@ -182,6 +182,7 @@ geolocation: https://www.youtube.com/shorts/SZ47268CLI8
 --- 
 Methode is numeriek, de waarde die wilt gebruiken moet je vooraf hebben bepaald. 
 Een goed begin is de site IFC2Perceel https://bim-tools.github.io/perceel2ifc/
+Deze site geeft het het actueele kadastrale perceel op NAP hoogte met een **GEO-nulpunt**.
 
 <img width="1391" height="872" alt="image" src="https://github.com/user-attachments/assets/797b0407-712f-4b66-9329-01a7f04a7037" />
 
