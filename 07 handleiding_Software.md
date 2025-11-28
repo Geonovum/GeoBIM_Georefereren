@@ -169,7 +169,6 @@ https://support.tekla.com/nl/doc/tekla-structures/2025/int_base_point
 
 Een webinar (2020) over basispunten: https://www.youtube.com/watch?v=iAdi_x3enPE&t=900s
 
-## BricsCAD
 --- 
 
 ## Sketchup
@@ -179,9 +178,24 @@ geolocation: https://www.youtube.com/shorts/SZ47268CLI8
 
 ## Blender
 --- 
-BlenderGIS: https://github.com/domlysz/BlenderGIS/wiki/Georeferencing-management
-BlenderBonsai: https://docs.bonsaibim.org/guides/authoring/georeferencing.html
+Methode is numeriek, de waarde die wilt gebruiken moet je vooraf hebben bepaald. Een goede hulp hierbij is de site IFC2Perceel https://bim-tools.github.io/perceel2ifc/
 
+<img width="1391" height="872" alt="image" src="https://github.com/user-attachments/assets/797b0407-712f-4b66-9329-01a7f04a7037" />
+
+Waarden voor de geografische plaasing van het model nulpunt kun je bekijken en aanpassen onder Project Setup > Geometry > Georeferencing
+Dit zijn extat dezelfde waarden als IFCmapconersion. 
+
+img width="1167" height="752" alt="image" src="https://github.com/user-attachments/assets/ad879196-0827-4cab-9033-faf5e7a7cb0b" />
+
+Gebruik het oog symbooltje en size om het visueel te laten weergeven
+
+<img width="1153" height="457" alt="image" src="https://github.com/user-attachments/assets/a283aa36-2f13-41d1-871d-4b3ec30e54f8" />
+
+Handig is ook dat je de rotatie met Grid North kunt laten berekenen
+
+
+
+Meer achtergrond over de andere mogelijkheden van georeferencing in Bonsai: https://docs.bonsaibim.org/guides/authoring/advanced_modeling/georeferencing.html
 
 ## Illustrator/Inkscape
 --- 
