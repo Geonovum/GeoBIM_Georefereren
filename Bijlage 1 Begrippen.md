@@ -53,7 +53,7 @@ Referentiepunt voor het uitwisselen van BIM-modellen zonder georeferentie. Een B
 Referentiepunt voor het uitwisselen van Geodata. Het GEO Coördinatiepunt is een lokaal vastgesteld punt van een site, perceel of andere omgevingsdata. De RD waarde (XYZ) van dit punt is vastgesteld. Geodata wordt op deze manier op de de juiste positie in in BIM gebracht waarbij de geodata <a>Noordgericht</a> is en een translatie kent. Een voorbeeld is de IFC output van de  https://bim-tools.github.io/perceel2ifc/ om IFC data van een perceel te verkrijgen.   
 
 <dfn>Noordgericht</dfn> 
-Noordgerichte data betekent dat ietsdata  georiënteerd is in de richting van het (geografisch) kaartnoorden. Het geeft aan dat de bovenkant of hoofdrichting naar het noorden wijst
+Noordgerichte data betekent dat het georiënteerd is in de richting van het geografisch noorden. Het geeft aan dat de bovenkant of hoofdrichting naar het noorden wijst van de kaart. In het Engels vertaald: Grid North.
 
 <dfn>AHN</dfn> 
 AHN staat voor Actueel Hoogtebestand Nederland. Het is een digitale hoogtekaart van heel Nederland waarin de hoogte van het maaiveld en objecten (zoals gebouwen en bomen) zeer nauwkeurig is vastgelegd
