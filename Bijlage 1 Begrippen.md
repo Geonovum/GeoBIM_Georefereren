@@ -75,9 +75,6 @@ AHN staat voor Actueel Hoogtebestand Nederland. Het is een digitale hoogtekaart 
 
 Het begrip “Nulpunt” is meervoudig interpreteerbaar en dient vermeden te worden. In de praktijk heeft het meerdere betekenissen.
 
-<dfn>Geo-nulpunt</dfn>:
-[ vul dit aan ]
-
 <dfn>True North</dfn>
 "True" verwijst naar de richting naar de Noordpool. Dit is weer een andere dan het magnetische noorden. Beide worden niet gebruikt in BIM.
 
