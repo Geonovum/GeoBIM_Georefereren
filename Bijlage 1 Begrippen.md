@@ -58,9 +58,10 @@ referentiepunt voor het uitwisselen van BIM-modellen zonder georeferentie. Een L
 <dfn>RD</dfn> Stelsel Rijksdriehoekmeting. Ook wel RD-stelsel of (foutief) RD-new of Amersfoort genoemd. Een CRS die voor het Nederlands grondgebied wordt gebruikt met de code EPSG:28992.
 
 <dfn>Nulpunt</dfn>: 
-- De oorsprong in modelleersoftware (internal origin in Revit).
-- Referentiepunt voor uitwisseling van BIM-modellen (project base point in Revit).
-- Referentiepunt voor het RD-stelsel in het BIM-model (survey point in Revit).
+- De oorsprong in modelleersoftware (internal origin).
+- Referentiepunt voor uitwisseling van BIM-modellen (project base point, BIM nulpunt).
+- Referentiepunt voor het RD-stelsel in het BIM-model (survey point in Revit)
+- Referentiepunt in RD NAP voor een perceel of site (Geo-nulpunt).
 - De referentiekubus zelf die op het nulpunt staat.
 - De oorsprong van het RD-stelsel (in Amersfoort).
 - De oorsprong van het RD-stelsel na translatie (Parijs).
@@ -68,11 +69,14 @@ referentiepunt voor het uitwisselen van BIM-modellen zonder georeferentie. Een L
 Het begrip “Nulpunt” is meervoudig interpreteerbaar en dient vermeden te worden. In de praktijk heeft het meerdere betekenissen.
 
 <dfn>True North</dfn>
+"True" verwijst naar de richting naar de Noordpool. Dit is weer een andere dan het magnetische noorden. Beide worden niet gebruikt in BIM.
 
 <dfn>Grid North</dfn>:
-de richting van de Y-as in een CRS (het noorden). Alternatief: Grid noord, CRS noord. NB: hebben we dan ook het begrip Lokaal noord nodig?
+De richting van de Y-as in een CRS (het noorden). Alternatief: Grid noord, CRS noord. NB: hebben we dan ook het begrip Lokaal noord nodig?
+Wordt ook wel aangeduid met 'kaart noord' Dis is de rotatie parameter voor BIM sofwtare om te gebruiken
 
 <dfn>Project North</dfn>:
+Project North is een term uit bouwkunde en ontwerpsoftware die verwijst naar de geometrische oriëntatie van een gebouw binnen een projecttekening. Het is dus niet het echte noorden (Grid North), maar een praktische richting die gebruikt wordt om het ontwerp overzichtelijk en werkbaar te maken. De hoek tussen Project North en Grid North is belangrijk. Deze dient 3 graden precies bekend te zijn. 
 
 <dfn>MapConversion</dfn>
 beschrijving van de translatie (verplaatsing, hoekverdraaiing en schaal) ten opzichte van een CRS-coördinatiepunt.
