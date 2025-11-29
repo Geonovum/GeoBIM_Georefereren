@@ -21,20 +21,20 @@ Een coördinaatreferentiesysteem dat gebruikt wordt om hoogtes of dieptes ten op
 **<dfn>Samengesteld CRS</dfn>** <br>
 Een Samengesteld CRS (Compound Coordinate Reference System) is een coördinaatreferentiesysteem dat ontstaat door twee of meer afzonderlijke CRS’en te combineren. Het wordt vaak gebruikt wanneer je zowel horizontale als verticale coördinaten nodig hebt om een positie volledig te beschrijven. Voor BIM geldt dat RD en NAP worden gecombineerd vanuit 2 verschillende CRS systemen. EPSG:28992 voor RD (x,y) en EPSG:5709 voor NAP (z). Het samengestelde CRS is EPSG:7415.<br>
 <br>
-**<dfn>Lokaal CRS</dfn>** of ****<dfn>Engineering CRS</dfn>** <br>
+**<dfn>Lokaal CRS</dfn>** of **<dfn>Engineering CRS</dfn>** <br>
 Een lokale assenstelsel bepaald voor de bouw. Het 'grid A-1' en de coordinaten dit hieruit voortkomen zijn een voorbeeld van een  lokaal CRS. De projectie naar RD kan wordt vastgelegd met de translatie en rotatie zoals deze wordt vastgesteld in de <a>IFCmapconverion</a>.<br>
 <br>
 **<dfn>scan-to-BIM</dfn>** <br>
 Term om met technieken en software hulpmiddelen inmetingen om te zettten 3D objecten.<br> 
 <br>
-**<dfn>Ellipsoïdische coördinaten</dfn>** of **geografische coördinaten**<br> Coördinaten voor een ronde aarde. Bijvoorbeeld uitgedrukt als lon. 4.8952°E lat. 52.3702°N voor WGS84 (wereld) en ETRS89 (Europa)
+**<dfn>Ellipsoïdische coördinaten</dfn>** of **geografische coördinaten**<br>Coördinaten voor een ronde aarde. Bijvoorbeeld uitgedrukt als lon. 4.8952°E lat. 52.3702°N voor WGS84 (wereld) en ETRS89 (Europa)<br>
 <br>
-**<dfn>Geocentrische coördinaten</dfn>** <br> Geocentrische coördinaten zijn coördinaten die een positie op of nabij de aarde beschrijven ten opzichte van het zwaartepunt van de aarde. In plaats van latitude/longitude (hoekmaten) of een projectie op een vlak, gebruik je hier een cartesisch 3D-stelsel (X, Y, Z) dat in het centrum van de aarde begint. Deze worden in de bouw niet gebruikt<br>
+**<dfn>Geocentrische coördinaten</dfn>** <br> Geocentrische coördinaten zijn coördinaten die een positie op of nabij de aarde beschrijven ten opzichte van het zwaartepunt van de aarde. In plaats van latitude/longitude (hoekmaten) of een projectie op een vlak, gebruik je hier een cartesisch 3D-stelsel (X, Y, Z) dat in het centrum van de aarde begint. Deze worden in de bouw niet gebruikt.<br>
 <br>
-**<dfn>Kaartprojectie</dfn>**<br> <br>
-**<dfn>Ellipsoïdische hoogte</dfn> <br>
-**<dfn>Orthometrische hoogte</dfn> <br>
-**<dfn>quasi-geoïdemodel</dfn> <br>
+**<dfn>Kaartprojectie</dfn>**<br>
+**<dfn>Ellipsoïdische hoogte</dfn>** <br>
+**<dfn>Orthometrische hoogte</dfn>** <br>
+**<dfn>quasi-geoïdemodel</dfn>** <br>
 **<dfn>Coördinaattransformatie</dfn>:** <br>
 **<dfn>2D gelijkvormigheidstransformatie</dfn>** <br>
 **<dfn>kleinste kwadratenschatting</dfn>** <br>
