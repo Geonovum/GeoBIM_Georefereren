@@ -26,14 +26,14 @@ Een Samengesteld CRS (Compound Coordinate Reference System) is een coördinaatre
 Een lokale assenstelsel bepaald voor de bouw. Het 'grid A-1' en de coordinaten dit hieruit voortkomen zijn een voorbeeld van een  lokaal CRS. De projectie naar RD kan wordt vastgelegd met de translatie en rotatie zoals deze wordt vastgesteld in de <a>IFCmapconverion</a>.<br>
 <br>
 **<dfn>Scan-to-BIM</dfn>** <br>
-Term om met technieken en software hulpmiddelen inmetingen om te zettten 3D objecten.<br> 
+Een term voor een verzameling van technieken, methoden en software als hulpmiddelen om van inmetingen 3D geometische (BIM)objecten te vervaardigen.<br> 
 <br>
 **<dfn>Ellipsoïdische coördinaten</dfn>** of **geografische coördinaten**<br>Coördinaten voor een ronde aarde. Bijvoorbeeld uitgedrukt als lon. 4.8952°E lat. 52.3702°N voor WGS84 (wereld) en ETRS89 (Europa)<br>
 <br>
 **<dfn>Geocentrische coördinaten</dfn>** <br> Geocentrische coördinaten zijn coördinaten die een positie op of nabij de aarde beschrijven ten opzichte van het zwaartepunt van de aarde. In plaats van latitude/longitude (hoekmaten) of een projectie op een vlak, gebruik je hier een cartesisch 3D-stelsel (X, Y, Z) dat in het centrum van de aarde begint. Deze worden in de bouw niet gebruikt.<br>
 <br>
 **<dfn>Kaartprojectie</dfn>**<br>
-een wiskundige methode om de kromme, driedimensionale vorm van de aarde (of een deel daarvan) af te beelden op een plat tweedimensionaal vlak. Omdat de aarde bolvormig (ellipsoïdaal) is, kan ze nooit zonder vervorming volledig plat worden weergegeven. Kaartprojecties zijn dus altijd een compromis tussen vorm, afstand, richting en oppervlakte.<br>
+Een wiskundige methode om de kromme, driedimensionale vorm van de aarde (of een deel daarvan) af te beelden op een plat tweedimensionaal vlak. Omdat de aarde bolvormig (ellipsoïdaal) is, kan ze nooit zonder vervorming volledig plat worden weergegeven. Kaartprojecties zijn dus altijd een compromis tussen vorm, afstand, richting en oppervlakte.<br>
 <br>
 **<dfn>Ellipsoïdische hoogte</dfn>** <br>
 Ellipsoïdische hoogte is de hoogte van een punt ten opzichte van een referentie-ellipsoïde (een wiskundig model van de aarde). Het is de hoogte die je rechtstreeks krijgt uit GNSS/GPS-metingen, omdat satellietsystemen werken met een ellipsoïde zoals WGS84.<br>
@@ -68,7 +68,7 @@ Referentiepunt voor het uitwisselen van BIM-modellen zonder georeferentie. Een B
 Referentiepunt voor het uitwisselen van Geodata. Het GEO Coördinatiepunt is een lokaal vastgesteld punt van een site, perceel of andere omgevingsdata. De RD waarde (XYZ) van dit punt is vastgesteld. Geodata wordt op deze manier op de de juiste positie in in BIM gebracht waarbij de geodata <a>Noordgericht</a> is en een translatie kent. Een voorbeeld is de IFC output van de  https://bim-tools.github.io/perceel2ifc/ om IFC data van een perceel te verkrijgen. <br>
 <br>
 **<dfn>Noordgericht</dfn>** <br>
-Modeldata die <a>Noorgericht(/a> is betekent dat het georiënteerd is in de richting van het geografisch noorden (<a>Grid North</a>. Het geeft aan dat de bovenkant of hoofdrichting naar het noorden wijst van de kaart. In het Engels vertaald: Grid North.<br>
+<a>Noorgericht</a> houdt in dat het georiënteerd is in de richting van het geografisch noorden (<a>Grid North</a>). Het geeft aan dat de bovenkant naar het noorden wijst van de kaart. In het Engels vertaald: <a>Grid North</a>.De uitwisseling van modellen tussen GIS en BIM gebeurd is eenvoudiger met IFC en DXF modellen die noordgericht zijn.<br>
 <br>
 **<dfn>IFCMapconversion</dfn>** <br>
 <a>IFCMapconversion</a> is een onderdeel van de IFC-standaard (Industry Foundation Classes) dat wordt gebruikt om een lokaal coördinatensysteem van een BIM-model te koppelen aan een geografisch coördinatensysteem.<br> Het zorgt ervoor dat modellen correct worden uitgelijnd met kaarten of GIS-data. Het besschrijft de volgende coördinatentransformatie:<br> 
