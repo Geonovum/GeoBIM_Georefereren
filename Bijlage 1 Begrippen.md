@@ -27,9 +27,9 @@ Een lokale assenstelsel bepaald voor de bouw. Het 'grid A-1' en de coordinaten d
 **<dfn>scan-to-BIM</dfn>** <br>
 Term om met technieken en software hulpmiddelen inmetingen om te zettten 3D objecten.<br> 
 <br>
-**<dfn>Ellipsoïdische coördinaten</dfn>**<br>Ook wel geografische coördinaten genoemd. Bijvoorbeeld uitgedrukt als lon. 4.8952°E lat. 52.3702°N voor WGS84 (wereld) en ETRS89 (Europa)
+**<dfn>Ellipsoïdische coördinaten</dfn>** of **geografische coördinaten**<br> Coördinaten voor een ronde aarde. Bijvoorbeeld uitgedrukt als lon. 4.8952°E lat. 52.3702°N voor WGS84 (wereld) en ETRS89 (Europa)
 <br>
-**<dfn>Geocentrische coördinaten</dfn>** Ook wel rechthoekige coördinaten genoemd.<br>
+**<dfn>Geocentrische coördinaten</dfn>** <br> Geocentrische coördinaten zijn coördinaten die een positie op of nabij de aarde beschrijven ten opzichte van het zwaartepunt van de aarde. In plaats van latitude/longitude (hoekmaten) of een projectie op een vlak, gebruik je hier een cartesisch 3D-stelsel (X, Y, Z) dat in het centrum van de aarde begint. Deze worden in de bouw niet gebruikt<br>
 <br>
 **<dfn>Kaartprojectie</dfn>**<br> <br>
 **<dfn>Ellipsoïdische hoogte</dfn> <br>
@@ -76,6 +76,7 @@ True verwijst naar de richting naar de Noordpool. Dit is weer een andere dan het
 <a>Project North</a> is een term uit bouwkunde en ontwerpsoftware die verwijst naar de geometrische oriëntatie van een gebouw binnen een projecttekening. Het is dus niet het kaart noorden (Grid North), maar een praktische richting die gebruikt wordt om het ontwerp overzichtelijk en werkbaar te maken. De hoek tussen Project North en Grid North is belangrijk. Deze dient 3 graden precies bekend te zijn.<br> 
 <br>
 **<dfn>Nulpunt</dfn>** <br>
+<br>
 Het begrip “Nulpunt” is meervoudig interpreteerbaar en dient vermeden te worden. In de praktijk heeft het meerdere betekenissen.<br>
 - De oorsprong in modelleersoftware (internal origin).<br>
 - Referentiepunt voor uitwisseling van BIM-modellen (project base point, BIM nulpunt).<br>
