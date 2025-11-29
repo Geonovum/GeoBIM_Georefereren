@@ -5,9 +5,10 @@
 <a>EPSG</a> is de afkorting voorEuropean Petroleum Survey Group, de oorspronkelijke organisatie die de standaardisatie van coördinaatreferentiesystemen heeft opgezet. Hun codes zijn nu wereldwijd dé referentie in GIS, geodesie en cartografie. Van oorsprong is de EPSG  een organisatie opgericht door de Europese olie- en gasindustrie om geodetische en cartografische standaarden te ontwikkelen. Ze wilden een uniforme lijst van coördinaatreferentiesystemen (CRS) en transformaties vastleggen, zodat geografische data wereldwijd correct en consistent kon worden gebruikt. De EPSG Geodetic Parameter Dataset, een internationale standaardcatalogus met codes (zoals EPSG:4326 voor WGS84 en EPSG:5709 voor NAP). Tegenwoordig wordt de EPSG-database onderhouden door de International Association of Oil & Gas Producers (IOGP), via hun Geomatics Committee.<br>
 <br>
 **<dfn>CRS</dfn>**<br> 
-Coördinaat Referentie Systeem. Een systeem waarmee een gebied wordt ingedeeld zodat ieder punt binnen dat gebied eenduidig kan worden bepaalt.<br>
+Coördinaat Referentie Systeem. Een systeem waarmee een gebied wordt ingedeeld zodat ieder punt binnen dat gebied eenduidig kan worden bepaalt. Een CRS kan een lokaal karakter hebben, bijvoorbeeld het grid volgens systematiek 'A-1' op de bouw tot wereldwijd, in de vorm van WGS84.<br>
 <br>
-**<dfn>SRS</dfn>:**<br> Spatial Reference System <br>
+**<dfn>SRS</dfn>:**<br>
+Spatial Reference System (SRS), is een ander term voor coördinaatreferentiesysteem (CRS). Het is in beide gevallen een raamwerk waarmee locaties op aarde eenduidig worden vastgelegd en gemeten in coördinaten. Het bepaalt hoe geografische data wordt gekoppeld aan een positie op aarde.
 <br>
 **<dfn>Geodetische CRS</dfn>** <br>
 Een Geodetische CRS (Coordinate Reference System) is een coördinaatreferentiesysteem dat gebaseerd is op de ronde vorm van de aarde (meestal een ellipsoïde) om locaties op aarde nauwkeurig te beschrijven. WGS84 (wereldwijd) of ETRS89 voor het Europese continent zijn voorbeelden hiervan. Positie wordt normaliter uitgedrukt lengtegraad (longitude of kortweg lon.) en in breedtegraad (latitude of kortweg lat.) <br>
