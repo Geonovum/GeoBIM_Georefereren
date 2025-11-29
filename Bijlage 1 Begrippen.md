@@ -68,7 +68,7 @@ Referentiepunt voor het uitwisselen van BIM-modellen zonder georeferentie. Een B
 Referentiepunt voor het uitwisselen van Geodata. Het GEO Coördinatiepunt is een lokaal vastgesteld punt van een site, perceel of andere omgevingsdata. De RD waarde (XYZ) van dit punt is vastgesteld. Geodata wordt op deze manier op de de juiste positie in in BIM gebracht waarbij de geodata <a>noordgericht</a> is en een translatie kent. Een voorbeeld is de IFC output van de  https://bim-tools.github.io/perceel2ifc/ om IFC data van een perceel te verkrijgen. <br>
 <br>
 **<dfn>Noordgericht</dfn>** <br>
-<a>Noordgericht</a> houdt in dat het georiënteerd is in de richting van het geografisch noorden (<a>Grid North</a>). Het geeft aan dat de bovenkant naar het noorden wijst van de kaart. In het Engels vertaald: <a>Grid North</a>.De uitwisseling van modellen tussen GIS en BIM gebeurd is eenvoudiger met IFC en DXF modellen die <a>noordgericht</a> zijn.<br>
+Noordgericht houdt in dat het georiënteerd is in de richting van het geografisch noorden (<a>Grid North</a>). Het geeft aan dat de bovenkant naar het noorden wijst van de kaart. In het Engels vertaald: <a>Grid North</a>.De uitwisseling van modellen tussen GIS en BIM gebeurd is eenvoudiger met IFC en DXF modellen die <a>noordgericht</a> zijn.<br>
 <br>
 **<dfn>IFCMapconversion</dfn>** <br>
 <a>IFCMapconversion</a> is een onderdeel van de IFC-standaard (Industry Foundation Classes) dat wordt gebruikt om een lokaal coördinatensysteem van een BIM-model te koppelen aan een geografisch coördinatensysteem.<br> Het zorgt ervoor dat modellen correct worden uitgelijnd met kaarten of GIS-data. Het besschrijft de volgende coördinatentransformatie:<br> 
