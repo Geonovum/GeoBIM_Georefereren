@@ -1,7 +1,7 @@
 # Bijlagen 
 ## Definities en afkortingen
 
-**<dfn>CRS</dfn>:**<br> 
+**<dfn>CRS</dfn>**<br> 
 Coördinaat Referentie Systeem. Een systeem waarmee een gebied wordt ingedeeld zodat ieder punt binnen dat gebied eenduidig kan worden bepaalt.<br>
 <br>
 **<dfn>SRS</dfn>:**<br> Spatial Reference System <br>
@@ -11,17 +11,17 @@ Coördinaat Referentie Systeem. Een systeem waarmee een gebied wordt ingedeeld z
 **<dfn>Vertikaal CRS</dfn>** <br>
 **<dfn>Samengesteld CRS</dfn>** <br>
 **<dfn>Geografisch CRS</dfn>** <br>
-**<dfn>Lokaal CRS</dfn>:** <br>
+**<dfn>Lokaal CRS</dfn>** <br>
 Een arbitrair gekozen assenstelsel zonder directe relatie met de echte wereld, tenzij er coördinaattransformatie wordt toegepast.<br>
 <br>
-**<dfn>Engineering CRS</dfn>:** <br>
+**<dfn>Engineering CRS</dfn>** <br>
 **<dfn>Source CRS</dfn>** <br>
 **<dfn>scan-to-BIM</dfn>** <br>
 Algemene term om van inmetingen 3D objecten te genereren.<br> 
 <br>
-**<dfn>Ellipsoïdische coördinaten</dfn>:** <br>Ook wel geografische coördinaten genoemd.<br>
+**<dfn>Ellipsoïdische coördinaten</dfn>** <br>Ook wel geografische coördinaten genoemd.<br>
 <br>
-**<dfn>Geocentrische coördinaten</dfn>:** Ook wel rechthoekige coördinaten genoemd.<br>
+**<dfn>Geocentrische coördinaten</dfn>** Ook wel rechthoekige coördinaten genoemd.<br>
 <br>
 **<dfn>Kaartprojectie</dfn>**<br>** <br>
 **<dfn>Ellipsoïdische hoogte</dfn>** <br>
@@ -33,16 +33,16 @@ Algemene term om van inmetingen 3D objecten te genereren.<br>
 **<dfn>overbepaaldheid</dfn>**<br>
 **<dfn>GNSS</dfn>**<br>
 <br>
-**<dfn>BIM nulpunt</dfn>:** <br>
+**<dfn>BIM nulpunt</dfn>** <br>
 Referentiepunt voor het uitwisselen van BIM-modellen zonder georeferentie. Een Bim nulpunt staat op een vaste afstand (meestal 5 of 10 meter) ten opzichte van de eerste gridlijnen van een BIM-model.<br>
 
-**<dfn>GEO Coördinatiepunt</dfn>:** <br>
+**<dfn>GEO Coördinatiepunt</dfn>** <br>
 Referentiepunt voor het uitwisselen van Geodata. Het GEO Coördinatiepunt is een lokaal vastgesteld punt van een site, perceel of andere omgevingsdata. De RD waarde (XYZ) van dit punt is vastgesteld. Geodata wordt op deze manier op de de juiste positie in in BIM gebracht waarbij de geodata <a>Noordgericht</a> is en een translatie kent. Een voorbeeld is de IFC output van de  https://bim-tools.github.io/perceel2ifc/ om IFC data van een perceel te verkrijgen. <br>
 <br>
-**<dfn>Noordgericht</dfn>:** <br>
+**<dfn>Noordgericht</dfn>** <br>
 Modeldata die <a>Noorgericht(/a> is betekent dat het georiënteerd is in de richting van het geografisch noorden (<a>Grid North</a>. Het geeft aan dat de bovenkant of hoofdrichting naar het noorden wijst van de kaart. In het Engels vertaald: Grid North.<br>
 <br>
-**<dfn>IFCMapconversion</dfn>:** <br>
+**<dfn>IFCMapconversion</dfn>** <br>
 <a>IFCMapConversion</a> is een onderdeel van de IFC-standaard (Industry Foundation Classes) dat wordt gebruikt om een lokaal coördinatensysteem van een BIM-model te koppelen aan een geografisch coördinatensysteem. Het zorgt ervoor dat modellen correct worden uitgelijnd met kaarten of GIS-data. Het besschrijft de volgende coördinatentransformatie:<br> 
 Het kaartreferentiesysteem (CRS) Voor Nederland is dat EPSG:7415 met RD+NAP (XYZ, of EPSG:28992 voor alleen RD (XY).<br>
 Translatie: Het voegt verschuivingen toe in Eastings, Northings en OrthogonalHeight om het model geografisch correct te positioneren<br>
@@ -70,9 +70,9 @@ Het begrip “Nulpunt” is meervoudig interpreteerbaar en dient vermeden te wor
 **<dfn>True North</dfn>**<br>
 "True" verwijst naar de richting naar de Noordpool. Dit is weer een andere dan het magnetische noorden. Beide worden niet gebruikt in BIM.<br>
 <br>
-**<dfn>Grid North</dfn>:** <br>
+**<dfn>Grid North</dfn>** <br>
 <a>Grid North</a> is richting van de verticale rasterlijnen op een kaart (het coördinatenstelsel van de kaartprojectie). Het is dus de “noord”-richting die hoort bij het kaartgrid, en kan afwijken van zowel het ware noorden (geografische Noordpool) als het magnetische noorden (richting waarin een kompas wijst). Grid North wordt in de basis gebrruikt in zowel GIS als BIM software. <br>
 <br>
-**<dfn>Project North</dfn>:** <br>
+**<dfn>Project North</dfn>** <br>
 <a>Project North</a> is een term uit bouwkunde en ontwerpsoftware die verwijst naar de geometrische oriëntatie van een gebouw binnen een projecttekening. Het is dus niet het kaart noorden (Grid North), maar een praktische richting die gebruikt wordt om het ontwerp overzichtelijk en werkbaar te maken. De hoek tussen Project North en Grid North is belangrijk. Deze dient 3 graden precies bekend te zijn.<br> 
 
