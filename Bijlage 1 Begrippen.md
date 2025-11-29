@@ -41,7 +41,7 @@ Referentiepunt voor het uitwisselen van Geodata. Het GEO Coördinatiepunt is een
 Modeldata die <a>Noorgericht(/a> is betekent dat het georiënteerd is in de richting van het geografisch noorden (<a>Grid North</a>. Het geeft aan dat de bovenkant of hoofdrichting naar het noorden wijst van de kaart. In het Engels vertaald: Grid North.<br>
 <br>
 **<dfn>IFCMapconversion</dfn>** <br>
-<a>IFCMapConversion</a> is een onderdeel van de IFC-standaard (Industry Foundation Classes) dat wordt gebruikt om een lokaal coördinatensysteem van een BIM-model te koppelen aan een geografisch coördinatensysteem.<br> Het zorgt ervoor dat modellen correct worden uitgelijnd met kaarten of GIS-data. Het besschrijft de volgende coördinatentransformatie:<br> 
+<a>IFCMapconversion</a> is een onderdeel van de IFC-standaard (Industry Foundation Classes) dat wordt gebruikt om een lokaal coördinatensysteem van een BIM-model te koppelen aan een geografisch coördinatensysteem.<br> Het zorgt ervoor dat modellen correct worden uitgelijnd met kaarten of GIS-data. Het besschrijft de volgende coördinatentransformatie:<br> 
 Het kaartreferentiesysteem (CRS) Voor Nederland is dat EPSG:7415 met RD+NAP (XYZ, of EPSG:28992 voor alleen RD (XY).<br>
 -Translatie: Het voegt verschuivingen toe in Eastings, Northings en OrthogonalHeight om het model geografisch correct te positioneren. <br>
 -Rotatie: Het model wordt anti-clockwise geroteerd rond de z-as om de assen uit te lijnen met het kaartreferentiesysteem. <br>
