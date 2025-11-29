@@ -182,11 +182,11 @@ geolocation: https://www.youtube.com/shorts/SZ47268CLI8
 --- 
 Methode is numeriek, de waarde die wilt gebruiken moet je vooraf hebben bepaald. 
 Een goed begin is de site IFC2Perceel https://bim-tools.github.io/perceel2ifc/
-Deze site geeft het het actueele kadastrale perceel op NAP hoogte met een **GEO-nulpunt**.
+Deze site geeft het het actueele kadastrale perceel op NAP hoogte met een <a>GEO Coördinatiepunt</a>
 
 <img width="1391" height="872" alt="image" src="https://github.com/user-attachments/assets/797b0407-712f-4b66-9329-01a7f04a7037" />
 
-Waarden voor de geografische plaasing van het model nulpunt kun je bekijken en aanpassen onder Project Setup > Geometry > Georeferencing
+Waarden voor de geografische plaasing van het model <a>nulpunt</a> kun je bekijken en aanpassen onder Project Setup > Geometry > Georeferencing
 Dit zijn extat dezelfde waarden als IFCmapconersion. 
 
 <img width="1255" height="922" alt="image" src="https://github.com/user-attachments/assets/49e8f6a9-f0ca-4585-94f2-a14d76e1368a" />
