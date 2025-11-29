@@ -1,8 +1,7 @@
 # Bijlagen 
 ## Definities en afkortingen
-<dfn>CRS</dfn>: Coördinaat Referentie Systeem. Een systeem waarmee een gebied wordt ingedeeld zodat ieder punt binnen dat gebied eenduidig kan worden bepaalt.
-
-*<dfn>SRS</dfn>:\* Spatial Reference System
+*<dfn>CRS</dfn>:*\Coördinaat Referentie Systeem. Een systeem waarmee een gebied wordt ingedeeld zodat ieder punt binnen dat gebied eenduidig kan worden bepaalt.
+*<dfn>SRS</dfn>:*\Spatial Reference System
 <dfn>Geodetische CRS</dfn>
 <dfn>Geprojecteerd CRS</dfn>
 <dfn>Vertikaal CRS</dfn>
