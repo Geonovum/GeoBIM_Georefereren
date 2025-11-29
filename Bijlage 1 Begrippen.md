@@ -58,6 +58,14 @@ Meer informatie op de site van BuildingSmart <br>https://ifc43-docs.standards.bu
 <br>
 **<dfn>RD</dfn>:** <br>Stelsel Rijksdriehoekmeting. Ook wel <a>RD</a>-stelsel. Een CRS die voor het Nederlands grondgebied wordt gebruikt met de code EPSG:28992. Gecombineerd met waarde NAP is deze CRS EPSG:7415 voor BIM.<br>
 <br>
+**<dfn>True North</dfn>** <br>
+True verwijst naar de richting naar de Noordpool. Dit is weer een andere dan het magnetische noorden. Beide worden niet gebruikt in BIM.<br>
+<br>
+**<dfn>Grid North</dfn>** <br>
+<a>Grid North</a> is richting van de verticale rasterlijnen op een kaart (het coördinatenstelsel van de kaartprojectie). Het is dus de “noord”-richting die hoort bij het kaartgrid, en kan afwijken van zowel het ware noorden (geografische Noordpool) als het magnetische noorden (richting waarin een kompas wijst). Grid North wordt in de basis gebrruikt in zowel GIS als BIM software. <br>
+<br>
+**<dfn>Project North</dfn>** <br>
+<a>Project North</a> is een term uit bouwkunde en ontwerpsoftware die verwijst naar de geometrische oriëntatie van een gebouw binnen een projecttekening. Het is dus niet het kaart noorden (Grid North), maar een praktische richting die gebruikt wordt om het ontwerp overzichtelijk en werkbaar te maken. De hoek tussen Project North en Grid North is belangrijk. Deze dient 3 graden precies bekend te zijn.<br> 
 **<dfn>Nulpunt</dfn>** <br>
 Het begrip “Nulpunt” is meervoudig interpreteerbaar en dient vermeden te worden. In de praktijk heeft het meerdere betekenissen.<br>
 - De oorsprong in modelleersoftware (internal origin).<br>
@@ -68,12 +76,5 @@ Het begrip “Nulpunt” is meervoudig interpreteerbaar en dient vermeden te wor
 - De oorsprong van het RD-stelsel (in Amersfoort).<br>
 - De oorsprong van het RD-stelsel na translatie (Parijs).<br>
 <br>
-**<dfn>True North</dfn>** <br>
-True verwijst naar de richting naar de Noordpool. Dit is weer een andere dan het magnetische noorden. Beide worden niet gebruikt in BIM.<br>
-<br>
-**<dfn>Grid North</dfn>** <br>
-<a>Grid North</a> is richting van de verticale rasterlijnen op een kaart (het coördinatenstelsel van de kaartprojectie). Het is dus de “noord”-richting die hoort bij het kaartgrid, en kan afwijken van zowel het ware noorden (geografische Noordpool) als het magnetische noorden (richting waarin een kompas wijst). Grid North wordt in de basis gebrruikt in zowel GIS als BIM software. <br>
-<br>
-**<dfn>Project North</dfn>** <br>
-<a>Project North</a> is een term uit bouwkunde en ontwerpsoftware die verwijst naar de geometrische oriëntatie van een gebouw binnen een projecttekening. Het is dus niet het kaart noorden (Grid North), maar een praktische richting die gebruikt wordt om het ontwerp overzichtelijk en werkbaar te maken. De hoek tussen Project North en Grid North is belangrijk. Deze dient 3 graden precies bekend te zijn.<br> 
+
 
