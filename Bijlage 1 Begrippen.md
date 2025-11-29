@@ -55,6 +55,14 @@ Referentiepunt voor het uitwisselen van Geodata. Het GEO Coördinatiepunt is een
 <dfn>Noordgericht</dfn> 
 Noordgerichte data betekent dat het georiënteerd is in de richting van het geografisch noorden. Het geeft aan dat de bovenkant of hoofdrichting naar het noorden wijst van de kaart. In het Engels vertaald: Grid North.
 
+<dfn>IFCMapconversion</dfn>
+IfcMapConversion is een onderdeel van de IFC-standaard (Industry Foundation Classes) dat wordt gebruikt om een lokaal coördinatensysteem van een BIM-model te koppelen aan een geografisch coördinatensysteem. Het zorgt ervoor dat modellen correct worden uitgelijnd met kaarten of GIS-data. Het besschrijft de volgende coördinatentransformatie: 
+Het kaartreferentiesysteem (CRS) Voor Nederland is dat EPSG:7415 met RD+NAP (XYZ, of EPSG:28992 voor alleen RD (XY).
+Translatie: Het voegt verschuivingen toe in Eastings, Northings en OrthogonalHeight om het model geografisch correct te positioneren
+Rotatie: Het model wordt anti-clockwise geroteerd rond de z-as om de assen uit te lijnen met het kaartreferentiesysteem.
+Schaal: Er wordt één uniforme schaal toegepast op de x-, y- en z-as om eenheden te converteren.
+Meer informatie op de site van BuildingSmart https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm
+
 <dfn>AHN</dfn> 
 AHN staat voor Actueel Hoogtebestand Nederland. Het is een digitale hoogtekaart van heel Nederland waarin de hoogte van het maaiveld en objecten (zoals gebouwen en bomen) zeer nauwkeurig is vastgelegd
 
