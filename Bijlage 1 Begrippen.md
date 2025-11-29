@@ -24,7 +24,7 @@ Een Samengesteld CRS (Compound Coordinate Reference System) is een coördinaatre
 **<dfn>Lokaal CRS</dfn>** of **<dfn>Engineering CRS</dfn>** <br>
 Een lokale assenstelsel bepaald voor de bouw. Het 'grid A-1' en de coordinaten dit hieruit voortkomen zijn een voorbeeld van een  lokaal CRS. De projectie naar RD kan wordt vastgelegd met de translatie en rotatie zoals deze wordt vastgesteld in de <a>IFCmapconverion</a>.<br>
 <br>
-**<dfn>scan-to-BIM</dfn>** <br>
+**<dfn>Scan-to-BIM</dfn>** <br>
 Term om met technieken en software hulpmiddelen inmetingen om te zettten 3D objecten.<br> 
 <br>
 **<dfn>Ellipsoïdische coördinaten</dfn>** of **geografische coördinaten**<br>Coördinaten voor een ronde aarde. Bijvoorbeeld uitgedrukt als lon. 4.8952°E lat. 52.3702°N voor WGS84 (wereld) en ETRS89 (Europa)<br>
@@ -100,7 +100,7 @@ True verwijst naar de richting naar de Noordpool. Dit is weer een andere dan het
 <br>
 **<dfn>Nulpunt</dfn>** <br>
 <br>
-Het begrip “Nulpunt” is meervoudig interpreteerbaar en dient vermeden te worden. In de praktijk heeft het meerdere betekenissen.<br>
+Het begrip “<a>Nulpunt</a>” is meervoudig interpreteerbaar en dient zoveelmogelijk vermeden te worden in de communicatie tussen GIS en BIM. In de praktijk kan een nulpunt meerdere betekenissen hebben:<br>
 - De oorsprong in modelleersoftware (internal origin).<br>
 - Referentiepunt voor uitwisseling van BIM-modellen (project base point, BIM nulpunt).<br>
 - Referentiepunt voor het RD-stelsel in het BIM-model (survey point in Revit).<br>
