@@ -57,7 +57,8 @@ Meer informatie op de site van BuildingSmart <br>https://ifc43-docs.standards.bu
 **<dfn>Footprint alignment</dfn>** <br>
 <br>
 **<dfn>RD</dfn>:** <br>Stelsel Rijksdriehoekmeting. Ook wel <a>RD</a>-stelsel. Een CRS die voor het Nederlands grondgebied wordt gebruikt met de code EPSG:28992. Gecombineerd met waarde NAP is deze CRS EPSG:7415 voor BIM.<br>
-**<dfn>Nulpunt</dfn>:**<br> 
+<br>
+**<dfn>Nulpunt</dfn>**<br> 
 - De oorsprong in modelleersoftware (internal origin).<br>
 - Referentiepunt voor uitwisseling van BIM-modellen (project base point, BIM nulpunt).<br>
 - Referentiepunt voor het RD-stelsel in het BIM-model (survey point in Revit).<br>
