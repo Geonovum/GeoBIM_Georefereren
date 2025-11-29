@@ -59,7 +59,7 @@ Het kaartreferentiesysteem (CRS) Voor Nederland is dat EPSG:7415 met RD+NAP (XYZ
 -Meer informatie op de site van BuildingSmart <br>https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm<br>
 <br>
 **<dfn>AHN</dfn>:** <br>
-<a>AHN</a> staat voor Actueel Hoogtebestand Nederland. Het is een digitale hoogtekaart van heel Nederland waarin de hoogte van het maaiveld en objecten (zoals gebouwen en bomen) zeer nauwkeurig is vastgelegd. Iedere 'generatie' van AHN krijgt een nieuw volgnummer. Meest nieuw generatie is AHN5. We spreken over een 'landsdekkend' als van heel Nederland data beschikbaar is.<br>
+<a>AHN</a> staat voor Actueel Hoogtebestand Nederland. Het is een digitale hoogtekaart van heel Nederland waarin de hoogte van het maaiveld en objecten (zoals gebouwen en bomen) zeer nauwkeurig is vastgelegd. Iedere 'generatie' van AHN krijgt een nieuw volgnummer. Meest nieuwste generatie is AHN4 is landsdekkend maar er is ook AHN5 beschikbaar. We spreken over een 'landsdekkend' als van heel Nederland data beschikbaar is. Let er op dat tussen AHN inwinning en vrijgeven een tijd tussen zit.<br>
 <br>
 **<dfn>Survey points</dfn>** <br>
 Survey points zijn referentiepunten die gebruikt worden bij landmeetkunde en geodetische metingen om de positie van objecten of gebieden nauwkeurig vast te leggen. Ze vormen de basis voor het opbouwen van kaarten, het uitvoeren van bouwprojecten en het beheren van geografische informatie.<br>
