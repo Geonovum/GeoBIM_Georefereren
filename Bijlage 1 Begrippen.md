@@ -1,15 +1,25 @@
 # Bijlagen 
 ## Definities en afkortingen
 
+**<dfn>EPSG</dfn>**<br>
+<a>EPSG</a> is de afkorting voorEuropean Petroleum Survey Group, de oorspronkelijke organisatie die de standaardisatie van coördinaatreferentiesystemen heeft opgezet. Hun codes zijn nu wereldwijd dé referentie in GIS, geodesie en cartografie. Van oorsprong is de EPSG  een organisatie opgericht door de Europese olie- en gasindustrie om geodetische en cartografische standaarden te ontwikkelen. Ze wilden een uniforme lijst van coördinaatreferentiesystemen (CRS) en transformaties vastleggen, zodat geografische data wereldwijd correct en consistent kon worden gebruikt. De EPSG Geodetic Parameter Dataset, een internationale standaardcatalogus met codes (zoals EPSG:4326 voor WGS84 en EPSG:5709 voor NAP). Tegenwoordig wordt de EPSG-database onderhouden door de International Association of Oil & Gas Producers (IOGP), via hun Geomatics Committee.<br>
+<br>
 **<dfn>CRS</dfn>**<br> 
 Coördinaat Referentie Systeem. Een systeem waarmee een gebied wordt ingedeeld zodat ieder punt binnen dat gebied eenduidig kan worden bepaalt.<br>
 <br>
 **<dfn>SRS</dfn>:**<br> Spatial Reference System <br>
 <br>
-**<dfn>Geodetische CRS</dfn>** <br> 
+**<dfn>Geodetische CRS</dfn>** <br>
+Een Geodetische CRS (Coordinate Reference System) is een coördinaatreferentiesysteem dat gebaseerd is op de ronde vorm van de aarde (meestal een ellipsoïde) om locaties op aarde nauwkeurig te beschrijven. WGS84 (wereldwijd) of ETRS89 voor het Europese continent zijn voorbeelden hiervan. Positie wordt normaliter uitgedrukt lengtegraad (longitude of kortweg lon.) en in breedtegraad (latitude of kortweg lat.) <br>
+<br>
 **<dfn>Geprojecteerd CRS</dfn>** <br>
+Een Geprojecteerd CRS (Coordinate Reference System) is een coördinaatreferentiesysteem waarin de kromme, driedimensionale vorm van de aarde (zoals beschreven door een geodetische CRS) wordt afgebeeld op een plat vlak met behulp van een kaartprojectie.Het RD (Rijksdriehoeksstelsel) is een voorbeeld van een geprojecteerd CRS<br>
+<br>
 **<dfn>Vertikaal CRS</dfn>** <br>
+Een coördinaatreferentiesysteem dat gebruikt wordt om hoogtes of dieptes ten opzichte van een referentievlak vast te leggen. Waar een geodetisch CRS werkt met breedte- en lengtegraad, en een geprojecteerd CRS met x- en y-coördinaten op een plat vlak, richt een verticaal CRS zich uitsluitend op de z-as: de hoogte of diepte. NAP is een voorbeeld van een vertikaal CRS. Deze is gereistreerd onder EPSG:5709)<br>
+<br>
 **<dfn>Samengesteld CRS</dfn>** <br>
+
 **<dfn>Geografisch CRS</dfn>** <br>
 **<dfn>Lokaal CRS</dfn>** <br>
 Een arbitrair gekozen assenstelsel zonder directe relatie met de echte wereld, tenzij er coördinaattransformatie wordt toegepast.<br>
