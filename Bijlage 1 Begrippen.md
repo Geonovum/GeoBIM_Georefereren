@@ -32,11 +32,22 @@ Term om met technieken en software hulpmiddelen inmetingen om te zettten 3D obje
 **<dfn>Geocentrische coördinaten</dfn>** <br> Geocentrische coördinaten zijn coördinaten die een positie op of nabij de aarde beschrijven ten opzichte van het zwaartepunt van de aarde. In plaats van latitude/longitude (hoekmaten) of een projectie op een vlak, gebruik je hier een cartesisch 3D-stelsel (X, Y, Z) dat in het centrum van de aarde begint. Deze worden in de bouw niet gebruikt.<br>
 <br>
 **<dfn>Kaartprojectie</dfn>**<br>
+een wiskundige methode om de kromme, driedimensionale vorm van de aarde (of een deel daarvan) af te beelden op een plat tweedimensionaal vlak. Omdat de aarde bolvormig (ellipsoïdaal) is, kan ze nooit zonder vervorming volledig plat worden weergegeven. Kaartprojecties zijn dus altijd een compromis tussen vorm, afstand, richting en oppervlakte.
+<br>
 **<dfn>Ellipsoïdische hoogte</dfn>** <br>
-**<dfn>Orthometrische hoogte</dfn>** <br>
-**<dfn>quasi-geoïdemodel</dfn>** <br>
+Ellipsoïdische hoogte is de hoogte van een punt ten opzichte van een referentie-ellipsoïde (een wiskundig model van de aarde). Het is de hoogte die je rechtstreeks krijgt uit GNSS/GPS-metingen, omdat satellietsystemen werken met een ellipsoïde zoals WGS84.<br>
+<br>
+**<dfn>Orthometrische hoogte</dfn>** <br> de hoogte van een punt boven het geoïde (het gemiddeld zeeniveau), gemeten langs de richting van de zwaartekracht. Het is de hoogte die in de praktijk het meest betekenisvol is, omdat ze aansluit bij ons dagelijks begrip van “hoogte boven zeeniveau”.
+<br>
+**<dfn>Quasi-geoïdemodel</dfn>** <br>
+Een quasi-geoïdemodel is een wiskundig model dat de vorm van de geoïde (gemiddeld zeeniveau) benadert en gebruikt wordt om GNSS-hoogtes (ellipsoïdale hoogtes) om te rekenen naar fysische hoogtes zoals NAP.<br>
+<br>
 **<dfn>Coördinaattransformatie</dfn>:** <br>
+Een coördinaattransformatie is het proces waarbij coördinaten van een punt of dataset worden omgerekend van het ene coördinaatreferentiesysteem (CRS) naar een ander. Dit is nodig omdat er wereldwijd verschillende CRS’en bestaan (bijvoorbeeld WGS84, RD, NAP), die elk hun eigen referentie-ellipsoïde, projectie of referentievlak gebruiken.<br>
+<br>
 **<dfn>2D gelijkvormigheidstransformatie</dfn>** <br>
+Een 2D gelijkvormigheidstransformatie (ook wel Helmert-transformatie genoemd) is een wiskundige transformatie die een vlakke coördinatenruimte (2D) omzet naar een andere, waarbij de vorm en verhoudingen behouden blijven. Het wordt veel gebruikt in de geodesie en GIS om coördinaten van het ene stelsel naar het andere te transformeren.<br>
+<br>
 **<dfn>kleinste kwadratenschatting</dfn>** <br>
 **<dfn>overbepaaldheid</dfn>** <br>
 **<dfn>GNSS</dfn>** <br>
