@@ -7,7 +7,7 @@
 **<dfn>CRS</dfn>**<br> 
 Coördinaat Referentie Systeem. Een systeem waarmee een gebied wordt ingedeeld zodat ieder punt binnen dat gebied eenduidig kan worden bepaalt. Een CRS kan een lokaal karakter hebben, bijvoorbeeld het grid volgens systematiek 'A-1' op de bouw tot wereldwijd, in de vorm van WGS84.<br>
 <br>
-**<dfn>SRS</dfn>:**<br>
+**<dfn>SRS</dfn>:** <br>
 Spatial Reference System (SRS), is een ander term voor coördinaatreferentiesysteem (CRS). Het is in beide gevallen een raamwerk waarmee locaties op aarde eenduidig worden vastgelegd en gemeten in coördinaten. Het bepaalt hoe geografische data wordt gekoppeld aan een positie op aarde.<br>
 <br>
 **<dfn>Geodetische CRS</dfn>** <br>
@@ -23,7 +23,7 @@ Een coördinaatreferentiesysteem dat gebruikt wordt om hoogtes of dieptes ten op
 Een Samengesteld CRS (Compound Coordinate Reference System) is een coördinaatreferentiesysteem dat ontstaat door twee of meer afzonderlijke CRS’en te combineren. Het wordt vaak gebruikt wanneer je zowel horizontale als verticale coördinaten nodig hebt om een positie volledig te beschrijven. Voor BIM geldt dat RD en NAP worden gecombineerd vanuit 2 verschillende CRS systemen. EPSG:28992 voor RD (x,y) en EPSG:5709 voor NAP (z). Het samengestelde CRS is EPSG:7415.<br>
 <br>
 **<dfn>Lokaal CRS</dfn>** of **<dfn>Engineering CRS</dfn>** <br>
-Een lokale assenstelsel bepaald voor de bouw. Het 'grid A-1' en de coordinaten dit hieruit voortkomen zijn een voorbeeld van een  lokaal CRS. De projectie naar RD kan wordt vastgelegd met de translatie en rotatie zoals deze wordt vastgesteld in de <a>IFCmapconverion</a>.<br>
+Een lokale assenstelsel bepaald voor de bouw. Het 'grid A-1' en de coordinaten dit hieruit voortkomen zijn een voorbeeld van een  lokaal CRS. De projectie naar RD kan wordt vastgelegd met de translatie en rotatie zoals deze wordt vastgesteld in de <a>IFCmapconversion</a>.<br>
 <br>
 **<dfn>Scan-to-BIM</dfn>** <br>
 Een term voor een verzameling van technieken, methoden en software als hulpmiddelen om van inmetingen 3D geometische (BIM)objecten te vervaardigen.<br> 
