@@ -20,7 +20,6 @@ Een arbitrair gekozen assenstelsel zonder directe relatie met de echte wereld, t
 Algemene term om van inmetingen 3D objecten te genereren.<br> 
 <br>
 **<dfn>Ellipsoïdische coördinaten</dfn>** <br>Ook wel geografische coördinaten genoemd.<br>
-<br>
 **<dfn>Geocentrische coördinaten</dfn>** Ook wel rechthoekige coördinaten genoemd.<br>
 <br>
 **<dfn>Kaartprojectie</dfn>**<br> <br>
@@ -32,10 +31,9 @@ Algemene term om van inmetingen 3D objecten te genereren.<br>
 **<dfn>kleinste kwadratenschatting</dfn>** <br>
 **<dfn>overbepaaldheid</dfn>** <br>
 **<dfn>GNSS</dfn>** <br>
-<br>
 **<dfn>BIM nulpunt</dfn>** <br>
 Referentiepunt voor het uitwisselen van BIM-modellen zonder georeferentie. Een Bim nulpunt staat op een vaste afstand (meestal 5 of 10 meter) ten opzichte van de eerste gridlijnen van een BIM-model.<br>
-
+<br>
 **<dfn>GEO Coördinatiepunt</dfn>** <br>
 Referentiepunt voor het uitwisselen van Geodata. Het GEO Coördinatiepunt is een lokaal vastgesteld punt van een site, perceel of andere omgevingsdata. De RD waarde (XYZ) van dit punt is vastgesteld. Geodata wordt op deze manier op de de juiste positie in in BIM gebracht waarbij de geodata <a>Noordgericht</a> is en een translatie kent. Een voorbeeld is de IFC output van de  https://bim-tools.github.io/perceel2ifc/ om IFC data van een perceel te verkrijgen. <br>
 <br>
@@ -66,6 +64,7 @@ True verwijst naar de richting naar de Noordpool. Dit is weer een andere dan het
 <br>
 **<dfn>Project North</dfn>** <br>
 <a>Project North</a> is een term uit bouwkunde en ontwerpsoftware die verwijst naar de geometrische oriëntatie van een gebouw binnen een projecttekening. Het is dus niet het kaart noorden (Grid North), maar een praktische richting die gebruikt wordt om het ontwerp overzichtelijk en werkbaar te maken. De hoek tussen Project North en Grid North is belangrijk. Deze dient 3 graden precies bekend te zijn.<br> 
+<br>
 **<dfn>Nulpunt</dfn>** <br>
 Het begrip “Nulpunt” is meervoudig interpreteerbaar en dient vermeden te worden. In de praktijk heeft het meerdere betekenissen.<br>
 - De oorsprong in modelleersoftware (internal origin).<br>
@@ -76,5 +75,5 @@ Het begrip “Nulpunt” is meervoudig interpreteerbaar en dient vermeden te wor
 - De oorsprong van het RD-stelsel (in Amersfoort).<br>
 - De oorsprong van het RD-stelsel na translatie (Parijs).<br>
 <br>
-
+<br>
 
