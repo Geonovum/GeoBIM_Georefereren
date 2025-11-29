@@ -23,7 +23,7 @@ Een coördinaatreferentiesysteem dat gebruikt wordt om hoogtes of dieptes ten op
 Een Samengesteld CRS (Compound Coordinate Reference System) is een coördinaatreferentiesysteem dat ontstaat door twee of meer afzonderlijke CRS’en te combineren. Het wordt vaak gebruikt wanneer je zowel horizontale als verticale coördinaten nodig hebt om een positie volledig te beschrijven. Voor BIM geldt dat RD en NAP worden gecombineerd vanuit 2 verschillende CRS systemen. EPSG:28992 voor RD (x,y) en EPSG:5709 voor NAP (z). Het samengestelde CRS is EPSG:7415.<br>
 <br>
 **<dfn>Lokaal CRS</dfn>** of **<dfn>Engineering CRS</dfn>** <br>
-Een lokale assenstelsel bepaald voor de bouw. Het 'grid A-1' en de coordinaten dit hieruit voortkomen zijn een voorbeeld van een  lokaal CRS. De projectie naar RD kan wordt vastgelegd met de translatie en rotatie zoals deze wordt vastgesteld in de <a>IFCmapconversion</a>.<br>
+Een lokale assenstelsel bepaald voor de bouw. Het 'grid A-1' en de coordinaten dit hieruit voortkomen zijn een voorbeeld van een  lokaal CRS. De projectie naar RD kan wordt vastgelegd met de translatie en rotatie zoals deze wordt vastgesteld in de <a>IFCMapconversion</a>.<br>
 <br>
 **<dfn>Scan-to-BIM</dfn>** <br>
 Een term voor een verzameling van technieken, methoden en software als hulpmiddelen om van inmetingen 3D geometische (BIM)objecten te vervaardigen.<br> 
@@ -65,10 +65,10 @@ NSGI staat voor Nederlandse Samenwerking Geodetische Infrastructuur. Het is een 
 Referentiepunt voor het uitwisselen van BIM-modellen zonder georeferentie. Een Bim nulpunt staat op een vaste afstand (meestal 5 of 10 meter) ten opzichte van de eerste gridlijnen van een BIM-model.<br>
 <br>
 **<dfn>GEO Coördinatiepunt</dfn>** <br>
-Referentiepunt voor het uitwisselen van Geodata. Het GEO Coördinatiepunt is een lokaal vastgesteld punt van een site, perceel of andere omgevingsdata. De RD waarde (XYZ) van dit punt is vastgesteld. Geodata wordt op deze manier op de de juiste positie in in BIM gebracht waarbij de geodata <a>Noordgericht</a> is en een translatie kent. Een voorbeeld is de IFC output van de  https://bim-tools.github.io/perceel2ifc/ om IFC data van een perceel te verkrijgen. <br>
+Referentiepunt voor het uitwisselen van Geodata. Het GEO Coördinatiepunt is een lokaal vastgesteld punt van een site, perceel of andere omgevingsdata. De RD waarde (XYZ) van dit punt is vastgesteld. Geodata wordt op deze manier op de de juiste positie in in BIM gebracht waarbij de geodata Noordgericht is en een translatie kent. Een voorbeeld is de IFC output van de  https://bim-tools.github.io/perceel2ifc/ om IFC data van een perceel te verkrijgen. <br>
 <br>
 **<dfn>Noordgericht</dfn>** <br>
-<a>Noorgericht</a> houdt in dat het georiënteerd is in de richting van het geografisch noorden (<a>Grid North</a>). Het geeft aan dat de bovenkant naar het noorden wijst van de kaart. In het Engels vertaald: <a>Grid North</a>.De uitwisseling van modellen tussen GIS en BIM gebeurd is eenvoudiger met IFC en DXF modellen die noordgericht zijn.<br>
+<a>Noorgericht</a> houdt in dat het georiënteerd is in de richting van het geografisch noorden (<a>Grid North</a>). Het geeft aan dat de bovenkant naar het noorden wijst van de kaart. In het Engels vertaald: <a>Grid North</a>.De uitwisseling van modellen tussen GIS en BIM gebeurd is eenvoudiger met IFC en DXF modellen die <a>noordgericht</a> zijn.<br>
 <br>
 **<dfn>IFCMapconversion</dfn>** <br>
 <a>IFCMapconversion</a> is een onderdeel van de IFC-standaard (Industry Foundation Classes) dat wordt gebruikt om een lokaal coördinatensysteem van een BIM-model te koppelen aan een geografisch coördinatensysteem.<br> Het zorgt ervoor dat modellen correct worden uitgelijnd met kaarten of GIS-data. Het besschrijft de volgende coördinatentransformatie:<br> 
