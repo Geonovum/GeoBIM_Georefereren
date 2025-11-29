@@ -61,8 +61,11 @@ Het kaartreferentiesysteem (CRS) Voor Nederland is dat EPSG:7415 met RD+NAP (XYZ
 **<dfn>AHN</dfn>:** <br>
 <a>AHN</a> staat voor Actueel Hoogtebestand Nederland. Het is een digitale hoogtekaart van heel Nederland waarin de hoogte van het maaiveld en objecten (zoals gebouwen en bomen) zeer nauwkeurig is vastgelegd<br>
 <br>
-**<dfn>survey points</dfn>** <br>
+**<dfn>Survey points</dfn>** <br>
+Survey points zijn referentiepunten die gebruikt worden bij landmeetkunde en geodetische metingen om de positie van objecten of gebieden nauwkeurig vast te leggen. Ze vormen de basis voor het opbouwen van kaarten, het uitvoeren van bouwprojecten en het beheren van geografische informatie.<br>
+<br>
 **<dfn>Footprint alignment</dfn>** <br>
+Footprint alignment betekent het op elkaar afstemmen van de “voetafdrukken” van objecten of datasets, zodat hun geometrische grenzen en posities correct overeenkomen in een ruimtelijk referentiesysteem. Het wordt vaak gebruikt in remote sensing, GIS en beeldverwerking om satellietbeelden, luchtfoto’s of gebouwcontouren nauwkeurig te registreren en te combineren.<br>
 <br>
 **<dfn>RD</dfn>:** <br>Stelsel Rijksdriehoekmeting. Ook wel <a>RD</a>-stelsel. Een CRS die voor het Nederlands grondgebied wordt gebruikt met de code EPSG:28992. Gecombineerd met waarde NAP is deze CRS EPSG:7415 voor BIM.<br>
 <br>
