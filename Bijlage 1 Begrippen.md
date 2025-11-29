@@ -19,17 +19,16 @@ Een Geprojecteerd CRS (Coordinate Reference System) is een coördinaatreferentie
 Een coördinaatreferentiesysteem dat gebruikt wordt om hoogtes of dieptes ten opzichte van een referentievlak vast te leggen. Waar een geodetisch CRS werkt met breedte- en lengtegraad, en een geprojecteerd CRS met x- en y-coördinaten op een plat vlak, richt een verticaal CRS zich uitsluitend op de z-as: de hoogte of diepte. NAP is een voorbeeld van een vertikaal CRS. Deze is gereistreerd onder EPSG:5709)<br>
 <br>
 **<dfn>Samengesteld CRS</dfn>** <br>
-Een Samengesteld CRS (Compound Coordinate Reference System) is een coördinaatreferentiesysteem dat ontstaat door twee of meer afzonderlijke CRS’en te combineren. Het wordt vaak gebruikt wanneer je zowel horizontale als verticale coördinaten nodig hebt om een positie volledig te beschrijven. Voor BIM geldt dat RD en NAP worden gecombineerd vanuit 2 verschillende CRS systemen. EPSG:28992 voor RD (x,y) en EPSG:5709 voor NAP (z). Het samengestelde CRS is EPSG:7415. <br> 
-**<dfn>Geografisch CRS</dfn>** <br>
-**<dfn>Lokaal CRS</dfn>** <br>
-Een arbitrair gekozen assenstelsel zonder directe relatie met de echte wereld, tenzij er coördinaattransformatie wordt toegepast.<br>
+Een Samengesteld CRS (Compound Coordinate Reference System) is een coördinaatreferentiesysteem dat ontstaat door twee of meer afzonderlijke CRS’en te combineren. Het wordt vaak gebruikt wanneer je zowel horizontale als verticale coördinaten nodig hebt om een positie volledig te beschrijven. Voor BIM geldt dat RD en NAP worden gecombineerd vanuit 2 verschillende CRS systemen. EPSG:28992 voor RD (x,y) en EPSG:5709 voor NAP (z). Het samengestelde CRS is EPSG:7415.<br>
 <br>
-**<dfn>Engineering CRS</dfn>** <br>
-**<dfn>Source CRS</dfn>** <br>
+**<dfn>Lokaal CRS</dfn>** of ****<dfn>Engineering CRS</dfn>** <br>
+Een lokale assenstelsel bepaald voor de bouw. Het 'grid A-1' en de coordinaten dit hieruit voortkomen zijn een voorbeeld van een  lokaal CRS. De projectie naar RD kan wordt vastgelegd met de translatie en rotatie zoals deze wordt vastgesteld in de <a>IFCmapconverion</a>.<br>
+<br>
 **<dfn>scan-to-BIM</dfn>** <br>
-Algemene term om van inmetingen 3D objecten te genereren.<br> 
+Term om met technieken en software hulpmiddelen inmetingen om te zettten 3D objecten.<br> 
 <br>
-**<dfn>Ellipsoïdische coördinaten</dfn>** <br>Ook wel geografische coördinaten genoemd.<br>
+**<dfn>Ellipsoïdische coördinaten</dfn>**<br>Ook wel geografische coördinaten genoemd. Bijvoorbeeld uitgedrukt als lon. 4.8952°E lat. 52.3702°N voor WGS84 (wereld) en ETRS89 (Europa)
+<br>
 **<dfn>Geocentrische coördinaten</dfn>** Ook wel rechthoekige coördinaten genoemd.<br>
 <br>
 **<dfn>Kaartprojectie</dfn>**<br> <br>
