@@ -23,15 +23,15 @@ Algemene term om van inmetingen 3D objecten te genereren.<br>
 <br>
 **<dfn>Geocentrische coördinaten</dfn>** Ook wel rechthoekige coördinaten genoemd.<br>
 <br>
-**<dfn>Kaartprojectie</dfn>**<br>** <br>
-**<dfn>Ellipsoïdische hoogte</dfn>** <br>
-**<dfn>Orthometrische hoogte</dfn>** <br>
-**<dfn>quasi-geoïdemodel</dfn>** <br>
+**<dfn>Kaartprojectie</dfn>**<br> <br>
+**<dfn>Ellipsoïdische hoogte</dfn> <br>
+**<dfn>Orthometrische hoogte</dfn> <br>
+**<dfn>quasi-geoïdemodel</dfn> <br>
 **<dfn>Coördinaattransformatie</dfn>:** <br>
-**<dfn>2D gelijkvormigheidstransformatie</dfn>**<br>
-**<dfn>kleinste kwadratenschatting</dfn>**<br>
-**<dfn>overbepaaldheid</dfn>**<br>
-**<dfn>GNSS</dfn>**<br>
+**<dfn>2D gelijkvormigheidstransformatie</dfn>** <br>
+**<dfn>kleinste kwadratenschatting</dfn>** <br>
+**<dfn>overbepaaldheid</dfn>** <br>
+**<dfn>GNSS</dfn>** <br>
 <br>
 **<dfn>BIM nulpunt</dfn>** <br>
 Referentiepunt voor het uitwisselen van BIM-modellen zonder georeferentie. Een Bim nulpunt staat op een vaste afstand (meestal 5 of 10 meter) ten opzichte van de eerste gridlijnen van een BIM-model.<br>
@@ -67,7 +67,7 @@ Meer informatie op de site van BuildingSmart <br>https://ifc43-docs.standards.bu
 - De oorsprong van het RD-stelsel (in Amersfoort).<br>
 - De oorsprong van het RD-stelsel na translatie (Parijs).<br>
 Het begrip “Nulpunt” is meervoudig interpreteerbaar en dient vermeden te worden. In de praktijk heeft het meerdere betekenissen.<br>
-
+<br>
 <dfn>True North</dfn> <br>
 True verwijst naar de richting naar de Noordpool. Dit is weer een andere dan het magnetische noorden. Beide worden niet gebruikt in BIM.<br>
 <br>
