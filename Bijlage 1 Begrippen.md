@@ -63,7 +63,7 @@ Het kaartreferentiesysteem (CRS) Voor Nederland is dat EPSG:7415 met RD+NAP (XYZ
 Translatie: Het voegt verschuivingen toe in Eastings, Northings en OrthogonalHeight om het model geografisch correct te positioneren<br>
 Rotatie: Het model wordt anti-clockwise geroteerd rond de z-as om de assen uit te lijnen met het kaartreferentiesysteem.<br>
 Schaal: Er wordt één uniforme schaal toegepast op de x-, y- en z-as om eenheden te converteren.<br>
-Meer informatie op de site van BuildingSmart <br> ** https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm<br>
+Meer informatie op de site van BuildingSmart <br>https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm<br>
 
 **<dfn>AHN</dfn>:** <br>
 AHN staat voor Actueel Hoogtebestand Nederland. Het is een digitale hoogtekaart van heel Nederland waarin de hoogte van het maaiveld en objecten (zoals gebouwen en bomen) zeer nauwkeurig is vastgelegd<br>
@@ -87,9 +87,8 @@ Het begrip “Nulpunt” is meervoudig interpreteerbaar en dient vermeden te wor
 "True" verwijst naar de richting naar de Noordpool. Dit is weer een andere dan het magnetische noorden. Beide worden niet gebruikt in BIM.<br>
 
 **<dfn>Grid North</dfn>:** <br>
-De richting van de Y-as in een CRS (het noorden). Alternatief: Grid noord, CRS noord. NB: hebben we dan ook het begrip Lokaal noord nodig?
-Wordt ook wel aangeduid met 'kaart noord' Dis is de rotatie parameter voor BIM sofwtare om te gebruiken
+Ce richting van de verticale rasterlijnen op een kaart (het coördinatenstelsel van de kaartprojectie). Het is dus de “noord”-richting die hoort bij het kaartgrid, en kan afwijken van zowel het ware noorden (geografische Noordpool) als het magnetische noorden (richting waarin een kompas wijst). Grid North wordt in de basis gebrruikt in zowel GIS als BIM software. <br>
 
 **<dfn>Project North</dfn>:** <br>
-Project North is een term uit bouwkunde en ontwerpsoftware die verwijst naar de geometrische oriëntatie van een gebouw binnen een projecttekening. Het is dus niet het echte noorden (Grid North), maar een praktische richting die gebruikt wordt om het ontwerp overzichtelijk en werkbaar te maken. De hoek tussen Project North en Grid North is belangrijk. Deze dient 3 graden precies bekend te zijn.<br> 
+Project North is een term uit bouwkunde en ontwerpsoftware die verwijst naar de geometrische oriëntatie van een gebouw binnen een projecttekening. Het is dus niet het kaart noorden (Grid North), maar een praktische richting die gebruikt wordt om het ontwerp overzichtelijk en werkbaar te maken. De hoek tussen Project North en Grid North is belangrijk. Deze dient 3 graden precies bekend te zijn.<br> 
 
