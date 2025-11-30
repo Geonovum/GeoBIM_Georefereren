@@ -1,7 +1,7 @@
 # Bijlagen 
 ## Definities en afkortingen
 
-**<dfn>EPSG</dfn>**<br>
+**<dfn>EPSG </dfn>**<br>
 <a>EPSG</a> is de afkorting voorEuropean Petroleum Survey Group, de oorspronkelijke organisatie die de standaardisatie van coördinaatreferentiesystemen heeft opgezet. Hun codes zijn nu wereldwijd dé referentie in GIS, geodesie en cartografie. Van oorsprong is de EPSG  een organisatie opgericht door de Europese olie- en gasindustrie om geodetische en cartografische standaarden te ontwikkelen. Ze wilden een uniforme lijst van coördinaatreferentiesystemen (CRS) en transformaties vastleggen, zodat geografische data wereldwijd correct en consistent kon worden gebruikt. De EPSG Geodetic Parameter Dataset, een internationale standaardcatalogus met codes (zoals EPSG:4326 voor WGS84 en EPSG:5709 voor NAP). Tegenwoordig wordt de EPSG-database onderhouden door de International Association of Oil & Gas Producers (IOGP), via hun Geomatics Committee.<br>
 <br>
 **<dfn>CRS</dfn>**<br> 
@@ -104,7 +104,7 @@ True verwijst naar de richting naar de Noordpool. Dit is weer een andere dan het
 <br>
 **<dfn>Nulpunt</dfn> (definities)** <br>
 Het begrip “<a>Nulpunt</a>” is meervoudig interpreteerbaar en dient zoveel mogelijk vermeden te worden in de communicatie tussen GIS en BIM. In de praktijk kan een nulpunt namelijk veel betekenissen hebben:<br>
-- De oorsprong in modelleersoftware (<a>internal origin<</a>).<br>
+- De oorsprong in modelleersoftware (<a>internal origin</a>).<br>
 - Referentiepunt voor uitwisseling van BIM-modellen (project base point, BIM nulpunt).<br>
 - Referentiepunt voor het RD-stelsel in het BIM-model (survey point in Revit).<br>
 - Referentiepunt in RD NAP voor een perceel of site (Geo-nulpunt).<br>
