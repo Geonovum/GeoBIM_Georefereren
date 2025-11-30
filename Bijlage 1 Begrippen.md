@@ -99,9 +99,12 @@ True verwijst naar de richting naar de Noordpool. Dit is weer een andere dan het
 **<dfn>Project North</dfn>** <br>
 <a>Project North</a> is een term uit bouwkunde en ontwerpsoftware die verwijst naar de geometrische oriëntatie van een gebouw binnen een projecttekening. Het is dus niet het kaart noorden (Grid North), maar een praktische richting die gebruikt wordt om het ontwerp overzichtelijk en werkbaar te maken. De hoek tussen Project North en Grid North is belangrijk. Deze dient 3 graden precies bekend te zijn.<br> 
 <br>
+**<dfn>Internal origin</dfn>** <br>
+<a>Internal origin<br> is het vaste, niet-verplaatsbare nulpunt van het interne coördinatensysteem van software. Alle elementen in een 3D model worden uiteindelijk hiermee vastgelegd. Het wordt ook wel genoemd het  “absolute (0,0,0) nulpunt” van het model en vormt de basis voor het project base point en survey point
+<br>
 **<dfn>Nulpunt</dfn>** <br>
 Het begrip “<a>Nulpunt</a>” is meervoudig interpreteerbaar en dient zoveel mogelijk vermeden te worden in de communicatie tussen GIS en BIM. In de praktijk kan een nulpunt namelijk veel betekenissen hebben:<br>
-- De oorsprong in modelleersoftware (internal origin).<br>
+- De oorsprong in modelleersoftware (<a>internal origin<</a>).<br>
 - Referentiepunt voor uitwisseling van BIM-modellen (project base point, BIM nulpunt).<br>
 - Referentiepunt voor het RD-stelsel in het BIM-model (survey point in Revit).<br>
 - Referentiepunt in RD NAP voor een perceel of site (Geo-nulpunt).<br>
