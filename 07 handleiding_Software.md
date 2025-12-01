@@ -29,7 +29,7 @@ Optie 2: 3D 1. Ga naar [3D BAG](https://www.3dbag.nl/nl/download) en selecteer j
 *Project Basepoint:* Lokaal Coördinatiepunt. Dit punt wordt gebruikt om modellen op elkaar af te stemmen b.v. tijdens engineering en/of wanneer Georeferentie niet relevant is.
 *Survey Point:* CRS-Coördinatiepunt. CRS-Coördinatiepunt . Dit punt wordt gebruikt om de relatie te leggen met een coördinatenstelsel en zo de positie van het model op de aardbol vast te leggen.
 
-*Project Units:* De instelling van de standaard eenheden binnen het project. Hier kan b.v. opgegeven worden of er met meters of met millimeters wordt gewerkt.
+*Project Units:* De instelling van de standaard eenheden binnen het project. Hier kan b.v. opgegeven worden of er met meters of met millimeters wordt gewerkt.<br>
 ![Scherm in Revit dat Lokaal Coordinatiepunt en CRS-Coordinatiepunt laat zien](https://github.com/user-attachments/assets/7b10bf0a-77f0-456e-9ab1-e6840c05c3c5)
 
 
@@ -53,7 +53,7 @@ Optie 2: 3D 1. Ga naar [3D BAG](https://www.3dbag.nl/nl/download) en selecteer j
 6.	Zet eventueel de Project Units terug naar millimeter.
 
  *Controle*
- Het venster "Location and Site" geeft aan of alles goed is gegaan.
+ Het venster "Location and Site" geeft aan of alles goed is gegaan.<br>
  <img width="532" height="420" alt="image" src="https://github.com/user-attachments/assets/d229c509-434e-44a2-b7f9-9018d430ecde" />
 
 *Units*
@@ -61,8 +61,8 @@ Optie 2: 3D 1. Ga naar [3D BAG](https://www.3dbag.nl/nl/download) en selecteer j
 Door een omissie in de IFC-exporter van Revit moet voorafgaand aan het exporteren naar IFC de Project Units Length op meter ingesteld worden.
 
 *Export naar IFC*
-1.	Lokaal Coördinatiepunt: exporteer een IFC (4 of hoger) met Project Basepoint als Coordinate Base. De IFC is niet ge-Georefereerd (alleen de coordinaten van Project Basepoint zijn correct) en niet Grid-noord gericht (Project North in Revit).
-![Scherm in Revit met instellingen voor IFC export met Project Basepoint als Coordinate Base](https://github.com/user-attachments/assets/c4bf15c6-3218-4455-8e02-82bab44b21c1)
+1.	Lokaal Coördinatiepunt: exporteer een IFC (4 of hoger) met Project Basepoint als Coordinate Base. De IFC is niet ge-Georefereerd (alleen de coordinaten van Project Basepoint zijn correct) en niet Grid-noord gericht (Project North in Revit).<br>
+ <img width="532" height="420" alt="image" src="https://github.com/user-attachments/assets/c4bf15c6-3218-4455-8e02-82bab44b21c1" /)<br>
 2.	CRS-Coördinatiepunt: exporteer een IFC (4 of hoger) met Survey Point als Coordinate Base. Vul bij EPSG Code in: 28992. De IFC is ge-Georefereerd en is Grid-noord gericht (True North in Revit)
 ![Scherm in Revit dat de plaatsing van dit referentiepunt in de wereld laat zien](media/Lokaal_coördinatiepunt_in_Revit_2.png "Plaatsing van het lokaal coördinatiepunt in GIS in Revit")
 
