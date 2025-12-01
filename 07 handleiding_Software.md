@@ -148,7 +148,7 @@ en sla het basispunt op onder een naam door op de “+” knop te klikken (3):<b
 Klik op Bestand > Exporteren > IFC4 om het dialoogvenster **IFC exporteren** te openen.
 Selecteer bij Locatie door het gedefinieerde basispunt:
 
-<img width="294" height="296" alt="image" src="https://github.com/user-attachments/assets/c59fc0d3-3af2-4c5e-8706-4f419d42d964" />
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/c59fc0d3-3af2-4c5e-8706-4f419d42d964" />
 
 Definieer vervolgens de overige benodigde gegevens. Bij de optie _Basispunt exporteren_ kan gekozen worden voor de methode _IfcMapConversion_ of _IfcSite_ als export-setting van dit betreffende Basispunt.
 
@@ -157,11 +157,11 @@ Definieer vervolgens de overige benodigde gegevens. Bij de optie _Basispunt expo
 Voor het importeren van IFC-modellen wordt in Tekla Structures de functionaliteit **Referentiemodellen** gebruikt.
 Klik in het zijpaneel op Referentiemodellen:
 
-<img width="150" height="400" alt="image" src="https://github.com/user-attachments/assets/4ee89424-4632-4c19-8e41-88b401a74c37" />
+<img width="250" height="500" alt="image" src="https://github.com/user-attachments/assets/4ee89424-4632-4c19-8e41-88b401a74c37" />
 
 Klik vervolgens op de knop **+ Model toevoegen** om het dialoogvenster **Model toevoegen** te openen. Selecteer bij Locatie door het gedefinieerde basispunt:
 
-<img width="410" height="240" alt="image" src="https://github.com/user-attachments/assets/8cbc4120-2031-4130-bb5d-e45978838516" />
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/8cbc4120-2031-4130-bb5d-e45978838516" />
 
 Blader vervolgens naar het betreffende IFC-bestand en klik op de knop **Model toevoegen** om het IFC-model in te voegen.
 
