@@ -59,7 +59,7 @@ Overbepaaldheid betekent dat er in een wiskundig of geodetisch probleem meer ver
 GNSS staat voor Global Navigation Satellite System. Het is de verzamelnaam voor alle satellietsystemen die wereldwijd gebruikt worden om posities, snelheden en tijd te bepalen. GNSS is dus de overkoepelende term, terwijl GPS slechts één van die systemen is.<br>
 <br>
 **<dfn>NSGI</dfn>** <br>
-NSGI staat voor Nederlandse Samenwerking Geodetische Infrastructuur. Het is een samenwerkingsverband tussen het Kadaster, Rijkswaterstaat en de Dienst der Hydrografie van de Koninklijke Marine. Samen zorgen zij voor het opzetten, onderhouden en beschikbaar stellen van de geodetische infrastructuur van Nederland. DE NSGI heeft een online tool voor het omrekenen van  coördinaten van ETRS89 naar RD. <br> 
+NSGI staat voor Nederlandse Samenwerking Geodetische Infrastructuur. Het is een samenwerkingsverband tussen het Kadaster, Rijkswaterstaat en de Dienst der Hydrografie van de Koninklijke Marine. Samen zorgen zij voor het opzetten, onderhouden en beschikbaar stellen van de geodetische infrastructuur van Nederland. DE NSGI heeft een online tool voor het omrekenen van coördinaten van ETRS89 naar RD. 
 [Online coördinatentransformatie](https://www.nsgi.nl/coordinatenstelsels-en-transformaties/tools/online-coordinatentransformatie) <br>
 <br>
 **<dfn>BIM nulpunt</dfn>** <br>
@@ -78,8 +78,7 @@ Het kaartreferentiesysteem (CRS) Voor Nederland is dat EPSG:7415 met RD+NAP (XYZ
 -Rotatie: Het model wordt anti-clockwise geroteerd rond de z-as om de assen uit te lijnen met het kaartreferentiesysteem. <br>
 -Schaal: Er wordt één uniforme schaal toegepast op de x-, y- en z-as om eenheden te converteren. <br>
  van millimeter naar meter is deze waarde 0.001. <br>
--Meer informatie op de site van BuildingSmart <br>
-[documentatie BuildingSmart](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm)<br>
+-Meer informatie op de site van BuildingSmart [documentatie BuildingSmart](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm)<br>
 <br>
 **<dfn>AHN</dfn>:** <br>
 <a>AHN</a> staat voor Actueel Hoogtebestand Nederland. Het is een digitale hoogtekaart van heel Nederland waarin de hoogte van het maaiveld en objecten (zoals gebouwen en bomen) zeer nauwkeurig is vastgelegd. Iedere 'generatie' van AHN krijgt een nieuw volgnummer. Meest nieuwste generatie is AHN4 is landsdekkend maar er is ook AHN5 beschikbaar. We spreken over een 'landsdekkend' als van heel Nederland data beschikbaar is. Let er op dat tussen AHN inwinning en vrijgeven een tijd tussen zit.<br>
