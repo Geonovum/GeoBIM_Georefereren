@@ -166,9 +166,9 @@ Klik vervolgens op de knop **+ Model toevoegen** om het dialoogvenster **Model t
 Blader vervolgens naar het betreffende IFC-bestand en klik op de knop **Model toevoegen** om het IFC-model in te voegen.
 
 Meer informatie over basispunten in Tekla Structures:
-Een uitgebreide uitleg over basispunten in de [Tekla User Assistance](https://support.tekla.com/nl/doc/tekla-structures/2025/int_base_point)
-Een webinar [basispunten](https://www.youtube.com/watch?v=iAdi_x3enPE&t=900s) (2020)
-
+Een uitgebreide uitleg over basispunten in de [Tekla User Assistance](https://support.tekla.com/nl/doc/tekla-structures/2025/int_base_point)<br>
+Een webinar [basispunten](https://www.youtube.com/watch?v=iAdi_x3enPE&t=900s) (2020)<br>
+<br>
 --- 
 
 ## Sketchup
