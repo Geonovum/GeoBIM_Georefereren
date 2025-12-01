@@ -64,6 +64,7 @@ NSGI staat voor Nederlandse Samenwerking Geodetische Infrastructuur. Het is een 
 <br>
 **<dfn>BIM nulpunt</dfn>** <br>
 Referentiepunt voor het uitwisselen van BIM-modellen zonder georeferentie. Een Bim-nulpunt staat op een vaste afstand (meestal 5 of 10 meter) ten opzichte van de eerste gridlijnen van een BIM-model. De geografisch positie van dit punt worden als eigenschappen toegekend (x,y in RD en hoogte ten opzichte van NAP). Daarnaast geeft het object informatie over de rotatie van het <a>lokaal CRS</a> ten opzicht van <a>Grid North</a> (kaartnoorden).<br>
+<br>
 **<dfn>Project Basepoint</dfn>** <br>
 Het Project Base Point in Revit is de oorsprong van je projectcoördinaten, waarmee je afstanden en posities binnen het model bepaalt. Het verschilt van het Survey Point, dat juist een koppeling legt met de echte wereld. Samen zorgen deze punten voor een correcte uitlijning en coördinatie in Revit.<br>
 <br>
