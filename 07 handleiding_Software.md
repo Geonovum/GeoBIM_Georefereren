@@ -189,12 +189,12 @@ Deze site geeft het het actueele kadastrale perceel op NAP hoogte met een <a>GEO
 Waarden voor de geografische plaasing van het model <a>nulpunt</a> kun je bekijken en aanpassen onder Project Setup > Geometry > Georeferencing
 Dit zijn extat dezelfde waarden als IFCmapconersion. 
 
-<img width="620" height="460" alt="image" src="https://github.com/user-attachments/assets/49e8f6a9-f0ca-4585-94f2-a14d76e1368a" />
+<img width="700" height="460" alt="image" src="https://github.com/user-attachments/assets/49e8f6a9-f0ca-4585-94f2-a14d76e1368a" />
 
 
 Gebruik het oog symbooltje en size om het visueel te laten weergeven
 
-<img width="575" height="230" alt="image" src="https://github.com/user-attachments/assets/a283aa36-2f13-41d1-871d-4b3ec30e54f8" />
+<img width="700" height="270" alt="image" src="https://github.com/user-attachments/assets/a283aa36-2f13-41d1-871d-4b3ec30e54f8" />
 
 Handig is ook dat je de rotatie met Grid North kunt laten berekenen
 <img width="590" height="250" alt="image" src="https://github.com/user-attachments/assets/9b369f66-9f20-4369-adf7-f54ef9e33048" />
