@@ -63,7 +63,7 @@ Door een omissie in de IFC-exporter van Revit moet voorafgaand aan het exportere
 *Export naar IFC*
 1.	Lokaal Coördinatiepunt: exporteer een IFC (4 of hoger) met <a>Project Basepoint</a> als Coordinate Base.<br>
 De IFC is niet ge-georefereerd (alleen de coordinaten van <a>Project Basepoint</a> zijn correct) en niet Grid-noord gericht (Project North in Revit).<br>
- <img width="532" height="420" alt="image" src="https://github.com/user-attachments/assets/c4bf15c6-3218-4455-8e02-82bab44b21c1" /)<br>
+<img width="532" height="420" alt="image" src="https://github.com/user-attachments/assets/c4bf15c6-3218-4455-8e02-82bab44b21c1" /><br>
 2.	CRS-Coördinatiepunt: exporteer een IFC (4 of hoger) met Survey Point als Coordinate Base.<br>
 Vul bij EPSG Code in: 28992. De IFC is ge-Georefereerd en is Grid-noord gericht (True North in Revit)<br>
 ![Scherm in Revit dat de plaatsing van dit referentiepunt in de wereld laat zien](media/Lokaal_coördinatiepunt_in_Revit_2.png "Plaatsing van het lokaal coördinatiepunt in GIS in Revit")
