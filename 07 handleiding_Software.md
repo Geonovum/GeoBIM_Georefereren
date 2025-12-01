@@ -197,7 +197,7 @@ Gebruik het oog symbooltje en size om het visueel te laten weergeven
 <img width="700" height="270" alt="image" src="https://github.com/user-attachments/assets/a283aa36-2f13-41d1-871d-4b3ec30e54f8" />
 
 Handig is ook dat je de rotatie met Grid North kunt laten berekenen
-<img width="590" height="250" alt="image" src="https://github.com/user-attachments/assets/9b369f66-9f20-4369-adf7-f54ef9e33048" />
+<img width="700" height="325" alt="image" src="https://github.com/user-attachments/assets/9b369f66-9f20-4369-adf7-f54ef9e33048" />
 
 Meer achtergrond over de andere mogelijkheden van [georeferencing in Bonsai](https://docs.bonsaibim.org/guides/authoring/advanced_modeling/georeferencing.html)
 
