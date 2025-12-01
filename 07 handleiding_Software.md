@@ -75,7 +75,7 @@ Vul bij EPSG Code in: 28992. De IFC is ge-Georefereerd en is Grid-noord gericht 
 
 
 ## Autocad Civil 3D
-
+Extra Addon (betaalmuur)
 
 ## ArchiCAD
 Instellen Georeferentie (via de IFC4 “MapConversion” methode) voor het exporteren vanuit ArchiCAD. De exacte benamingen kunnen iets afwijken afhankelijk van de versie (AC 23, 24, …), maar de kernstappen blijven gelijk.
@@ -132,12 +132,14 @@ De ingevoerde coördinaten in Project Location verplaatsen niet automatisch de g
 Werken met zeer grote coördinaatwaarden (bijv. UTM meters ver weg van 0,0) kan leiden tot precisieproblemen in export/import workflows: probeer model origin zo dicht mogelijk bij projectlocatie te houden. Bij import in andere software kan de “site origin” verkeerd worden geïnterpreteerd indien de instellingen van “Match IFC Site location” niet goed staan. Controleer altijd dat de gebruikte translator versie compatibel is met IFC4 en de gewenste MVD.
 
 ## Tekla Structures
-In Tekla Structures kan met behulp van **Basispunten** een coördinatensysteem voor uitwisselbaarheid worden gebruikt. Bijvoorbeeld voor het importeren en exporteren van IFC-bestanden. Deze basispunten worden gebruikt om het model nauwkeurig te positioneren en uit te lijnen binnen een groter coördinatensysteem. Ze zorgen voor consistente samenwerking en correcte uitwisseling van modellen tussen verschillende partijen.
-
+In Tekla Structures kan met behulp van **Basispunten** een coördinatensysteem voor uitwisselbaarheid worden gebruikt. Bijvoorbeeld voor het importeren en exporteren van IFC-bestanden. Deze basispunten worden gebruikt om het model nauwkeurig te positioneren en uit te lijnen binnen een groter coördinatensysteem. Ze zorgen voor consistente samenwerking en correcte uitwisseling van modellen tussen verschillende partijen.<br>
+<br>
 1. Basispunten definiëren
    
 Basispunten kunnen gedefinieerd worden in de **Projecteigenschappen** van Tekla Structures. 
-Klik op _Bestand > Projecteigenschappen > Basispunten_ om het dialoogvenster **Basispunt** te openen. Definieer de benodigde gegevens zoals de coördinaten (1) en een eventuele hoek bij de optie Hoek naar het noorden (2) en sla het basispunt op onder een naam door op de “+” knop te klikken (3):
+Klik op _Bestand > Projecteigenschappen > Basispunten_ om het dialoogvenster **Basispunt** te openen. <br>
+Definieer de benodigde gegevens zoals de coördinaten (1) en een eventuele hoek bij de optie Hoek naar het noorden (2)<br>
+en sla het basispunt op onder een naam door op de “+” knop te klikken (3):<br>
 
 <img width="782" height="678" alt="image" src="https://github.com/user-attachments/assets/b20b7fa4-43ac-41e6-864c-76b2e8e7a725" />
 
@@ -146,7 +148,7 @@ Klik op _Bestand > Projecteigenschappen > Basispunten_ om het dialoogvenster **B
 Klik op Bestand > Exporteren > IFC4 om het dialoogvenster **IFC exporteren** te openen.
 Selecteer bij Locatie door het gedefinieerde basispunt:
 
-<img width="589" height="592" alt="image" src="https://github.com/user-attachments/assets/c59fc0d3-3af2-4c5e-8706-4f419d42d964" />
+<img width="294" height="296" alt="image" src="https://github.com/user-attachments/assets/c59fc0d3-3af2-4c5e-8706-4f419d42d964" />
 
 Definieer vervolgens de overige benodigde gegevens. Bij de optie _Basispunt exporteren_ kan gekozen worden voor de methode _IfcMapConversion_ of _IfcSite_ als export-setting van dit betreffende Basispunt.
 
@@ -155,20 +157,17 @@ Definieer vervolgens de overige benodigde gegevens. Bij de optie _Basispunt expo
 Voor het importeren van IFC-modellen wordt in Tekla Structures de functionaliteit **Referentiemodellen** gebruikt.
 Klik in het zijpaneel op Referentiemodellen:
 
-<img width="297" height="794" alt="image" src="https://github.com/user-attachments/assets/4ee89424-4632-4c19-8e41-88b401a74c37" />
+<img width="150" height="400" alt="image" src="https://github.com/user-attachments/assets/4ee89424-4632-4c19-8e41-88b401a74c37" />
 
 Klik vervolgens op de knop **+ Model toevoegen** om het dialoogvenster **Model toevoegen** te openen. Selecteer bij Locatie door het gedefinieerde basispunt:
 
-<img width="828" height="484" alt="image" src="https://github.com/user-attachments/assets/8cbc4120-2031-4130-bb5d-e45978838516" />
+<img width="410" height="240" alt="image" src="https://github.com/user-attachments/assets/8cbc4120-2031-4130-bb5d-e45978838516" />
 
 Blader vervolgens naar het betreffende IFC-bestand en klik op de knop **Model toevoegen** om het IFC-model in te voegen.
 
 Meer informatie over basispunten in Tekla Structures:
-
-Een uitgebreide uitleg over basispunten in de Tekla User Assistance:
-https://support.tekla.com/nl/doc/tekla-structures/2025/int_base_point
-
-Een webinar (2020) over basispunten: https://www.youtube.com/watch?v=iAdi_x3enPE&t=900s
+Een uitgebreide uitleg over basispunten in de [Tekla User Assistance](https://support.tekla.com/nl/doc/tekla-structures/2025/int_base_point)
+Een webinar [basispunten](https://www.youtube.com/watch?v=iAdi_x3enPE&t=900s) (2020)
 
 --- 
 
@@ -182,25 +181,25 @@ geolocation: https://www.youtube.com/shorts/SZ47268CLI8
 ## Blender
 --- 
 Methode is numeriek, de waarde die wilt gebruiken moet je vooraf hebben bepaald. 
-Een goed begin is de site IFC2Perceel https://bim-tools.github.io/perceel2ifc/
+Een goed begin is de site [IFC2Perceel](https://bim-tools.github.io/perceel2ifc/)
 Deze site geeft het het actueele kadastrale perceel op NAP hoogte met een <a>GEO Coördinatiepunt</a>
 
-<img width="1391" height="872" alt="image" src="https://github.com/user-attachments/assets/797b0407-712f-4b66-9329-01a7f04a7037" />
+<img width="700" height="438" alt="image" src="https://github.com/user-attachments/assets/797b0407-712f-4b66-9329-01a7f04a7037" />
 
 Waarden voor de geografische plaasing van het model <a>nulpunt</a> kun je bekijken en aanpassen onder Project Setup > Geometry > Georeferencing
 Dit zijn extat dezelfde waarden als IFCmapconersion. 
 
-<img width="1255" height="922" alt="image" src="https://github.com/user-attachments/assets/49e8f6a9-f0ca-4585-94f2-a14d76e1368a" />
+<img width="620" height="460" alt="image" src="https://github.com/user-attachments/assets/49e8f6a9-f0ca-4585-94f2-a14d76e1368a" />
 
 
 Gebruik het oog symbooltje en size om het visueel te laten weergeven
 
-<img width="1153" height="457" alt="image" src="https://github.com/user-attachments/assets/a283aa36-2f13-41d1-871d-4b3ec30e54f8" />
+<img width="575" height="230" alt="image" src="https://github.com/user-attachments/assets/a283aa36-2f13-41d1-871d-4b3ec30e54f8" />
 
 Handig is ook dat je de rotatie met Grid North kunt laten berekenen
-<img width="1187" height="502" alt="image" src="https://github.com/user-attachments/assets/9b369f66-9f20-4369-adf7-f54ef9e33048" />
+<img width="590" height="250" alt="image" src="https://github.com/user-attachments/assets/9b369f66-9f20-4369-adf7-f54ef9e33048" />
 
-Meer achtergrond over de andere mogelijkheden van georeferencing in Bonsai: https://docs.bonsaibim.org/guides/authoring/advanced_modeling/georeferencing.html
+Meer achtergrond over de andere mogelijkheden van [georeferencing in Bonsai](https://docs.bonsaibim.org/guides/authoring/advanced_modeling/georeferencing.html)
 
 ## Illustrator/Inkscape
 --- 
