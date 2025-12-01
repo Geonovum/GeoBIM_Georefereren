@@ -62,7 +62,7 @@ GNSS staat voor Global Navigation Satellite System. Het is de verzamelnaam voor 
 NSGI staat voor Nederlandse Samenwerking Geodetische Infrastructuur. Het is een samenwerkingsverband tussen het Kadaster, Rijkswaterstaat en de Dienst der Hydrografie van de Koninklijke Marine. Samen zorgen zij voor het opzetten, onderhouden en beschikbaar stellen van de geodetische infrastructuur van Nederland. DE NSGI heeft een online tool voor het omrekenen van  coördinaten van ETRS89 naar RD. <br> https://www.nsgi.nl/coordinatenstelsels-en-transformaties/tools/online-coordinatentransformatie <br>
 <br>
 **<dfn>BIM nulpunt</dfn>** <br>
-Referentiepunt voor het uitwisselen van BIM-modellen zonder georeferentie. Een Bim nulpunt staat op een vaste afstand (meestal 5 of 10 meter) ten opzichte van de eerste gridlijnen van een BIM-model.<br>
+Referentiepunt voor het uitwisselen van BIM-modellen zonder georeferentie. Een Bim-nulpunt staat op een vaste afstand (meestal 5 of 10 meter) ten opzichte van de eerste gridlijnen van een BIM-model. De geografisch positie van dit punt worden als eigenschappen toegekend (x,y in RD en hoogte ten opzichte van NAP). Daarnaast geeft het object informatie over de rotatie van het <a>lokaal CRS</a> ten opzicht van <a>Grid North</a> (kaartnoorden).<br>
 <br>
 **<dfn>GEO Coördinatiepunt</dfn>** <br>
 Referentiepunt voor het uitwisselen van Geodata. Het GEO Coördinatiepunt is een lokaal vastgesteld punt van een site, perceel of andere omgevingsdata. De RD waarde (XYZ) van dit punt is vastgesteld. Geodata wordt op deze manier op de de juiste positie in in BIM gebracht waarbij de geodata <a>noordgericht</a> is en een translatie kent. Een voorbeeld is de IFC output van de  https://bim-tools.github.io/perceel2ifc/ om IFC data van een perceel te verkrijgen. <br>
@@ -93,7 +93,7 @@ Footprint alignment betekent het op elkaar afstemmen van de “voetafdrukken” 
 **<dfn>True North</dfn>** <br>
 True verwijst naar de richting naar de Noordpool. Dit is weer een andere dan het magnetische noorden. Beide worden niet gebruikt in BIM.<br>
 <br>
-**<dfn>Grid North</dfn>** <br>
+**<dfn>Grid North</dfn>** of **kaartnoorden**<br>
 <a>Grid North</a> is richting van de verticale rasterlijnen op een kaart (het coördinatenstelsel van de kaartprojectie). Het is dus de “noord”-richting die hoort bij het kaartgrid, en kan afwijken van zowel het ware noorden (geografische Noordpool) als het magnetische noorden (richting waarin een kompas wijst). Grid North wordt in de basis gebrruikt in zowel GIS als BIM software. <br>
 <br>
 **<dfn>Project North</dfn>** <br>
