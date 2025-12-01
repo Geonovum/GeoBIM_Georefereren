@@ -54,7 +54,7 @@ Optie 2: 3D 1. Ga naar [3D BAG](https://www.3dbag.nl/nl/download) en selecteer j
 
  *Controle*
  Het venster "Location and Site" geeft aan of alles goed is gegaan.
- <img width="1065" height="820" alt="image" src="https://github.com/user-attachments/assets/d229c509-434e-44a2-b7f9-9018d430ecde" />
+ <img width="532" height="420" alt="image" src="https://github.com/user-attachments/assets/d229c509-434e-44a2-b7f9-9018d430ecde" />
 
 *Units*
 
