@@ -157,6 +157,7 @@ geolocation: https://www.youtube.com/shorts/SZ47268CLI8
 BlenderGIS: https://github.com/domlysz/BlenderGIS/wiki/Georeferencing-management
 BlenderBonsai: https://docs.bonsaibim.org/guides/authoring/georeferencing.html
 
+dxf import-extension
 
 ## Illustrator/Inkscape
 --- 
@@ -183,4 +184,5 @@ GDAL Vetor Converse Covert Format
 Kaartlagen, georeferencer: DXF - openen - Ground Contro Punt Toevoegen - Kaart in de kaart toeveogen (of handmatig invoeren)
 Dit voor 4 punten doen. Druk op run 
 
-Hiermee krijg je de affine transformatie (Dat is een super-klasse van afine)
+Hiermee krijg je de affine transformatie (Dat is een super-klasse van helmert)
+ 
