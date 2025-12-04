@@ -5,17 +5,17 @@ De beschreven methodes van georeferentie, gefocused op gebouwen, kunnen worden o
 Voor het refereren van datasets naar een geo domein, zijn de volgende datasets beschikbaar, die zijn weergegeven in Tabel YY. Hier is de bestandsnaam, eigenaar, nauwkeuigheid, dimensie en locatie weergegeven. 
 
 **Tabel YY.** Overzicht van nationale datasets beschikbaar voor geo-referentie van project data of modelen
-| Naam             | Eigenaar            | Nauwkeurigheid        | Dimensie | Locatie / Dekking            |
-| ---------------- | ------------------- | ---------------------- | -------- | ---------------------------- |
-| **DTB / 1GiS / BGT** | Rijkswaterstaat | cm-nauwkeurig op objectniveau | 2.5D       | Landelijk, beheerde water/wegen-infrastructuur |
-| **BGT**          | Kadaster | cm-nauwkeurig op objectniveau | 2D       | Landelijk|
-| **AHN**          | Het Waterschapshuis | 5–10 cm (verticaal)   | 3D       | Landelijk               |
-| **PMG**          | Rijkswaterstaat       | ± 2 cm (relatief)     | 3D       | RWS-wegennet, selectieve locaties |
-| **NWB**          | Het Nationaalwegenbestand        | ± 1 m (topologisch)   | 2D       | Landelijk, wegennet (NL)     |
-| **SpoorInBeeld** | ProRail    | ± 2 cm (relatief)     | 3D       | Spoortracés Nederland        |
-| **Beeldmateriaal** | Het Waterschapshuis | ± 5–10 cm (projectie) | 2.5D     | Landelijk / stedelijk        |
-| **NAP-netwerk**  | Kadaster / Rijkswaterstaat      | < 1 cm (verticaal)    | 1D (Z)   | Landelijk meetnet (peilmerken) |
-| **BAG**          | Kadaster            | ± 10 cm (objectpositie) | 2D/2.5D  | Landelijk (NL)               |
+| Naam             |  Nauwkeurigheid        | Dimensie | Domein         |
+| ---------------- |  ---------------------- | -------- | ---------------------------- |
+| <a href="[https://www.pdok.nl/introductie/-/article/digitaal-topografisch-bestand-dtb-])" target="_blank">**DTB / 1GiS**</a> |  cm-nauwkeurig op objectniveau | 2.5D       | Landelijk, beheerde water/wegen-infrastructuur |
+|  <a href="[https://www.nationaalwegenbestand.nl/nwb-downloaden]" target="_blank">**BGT**    </a>      |  cm-nauwkeurig op objectniveau | 2D       | Landelijk|
+| <a href="[https://www.ahn.nl/dataroom]" target="_blank">**AHN** </a>          | 10–15 cm (verticaal) &  13-18cm  | 3D       | Landelijk               |
+| **PMG**          |  ± 2 cm (relatief)     | 3D       | RWS-wegennet, selectieve locaties |
+| <a href="[https://www.nationaalwegenbestand.nl/nwb-downloaden]" target="_blank">**NWB**  </a>          |  ± 1 m (topologisch)   | 2D       | Landelijk, wegennet (NL)     |
+| <a href="[https://spoorinbeeld.nl/]" target="_blank"> **SpoorInBeeld** </a>|  ± 2 cm (relatief)     | 3D       | Spoortracés Nederland        |
+|  <a href="[https://www.beeldmateriaal.nl/dataroom]" target="_blank">**Beeldmateriaal** </a>|  ± 5–10 cm (projectie) | 2.5D     | Landelijk / stedelijk        |
+| <a href="[https://maps.rijkswaterstaat.nl/geoweb55/index.html?viewer=NAPinfo]" target="_blank"> **NAP-netwerk**  |  < 1 cm (verticaal)    | 1D (Z)   | Landelijk meetnet (peilmerken) |
+|  <a href="[https://www.nationaalwegenbestand.nl/nwb-downloaden]" target="_blank">**BAG**    </a>      | ± 10 cm (objectpositie) | 2D/2.5D  | Landelijk (NL)               |
 
 Naast primaire geo datasets, kunnen gemeentes, provicies en centrale overheden andere datasets beschikbaar hebben, die kleiner van scope zijn. Ook zijn er datasets die zijn geextraheerd uit de bovenbenoemde datasets. Een voorbeeld is de 3DBAG, waar het <a>AHN</a> de basis is voor het maken van deze dataset. Een analyse is in de verschillende hoogtedatasets in Nederland [source] en vanuit europa zijn de volgende hoogte datasets beschikbaar, die terug te vinden zijn via de volgende link. [https://3d.bk.tudelft.nl/europeantopography]
 
