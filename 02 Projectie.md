@@ -10,7 +10,7 @@ Om informatie te koppelen aan een locatie op aarde worden geodetische coördinaa
 | ETRS89 | [Geografisch CRS](#geografische-en-geocentrisch-crs) voor Europa en precieze (centimeter niveau) plaatsbepaling in Nederland | EPSG:4258 (2D-code) |
 | WGS 84 | Geografisch CRS voor de aarde en niet precieze (meter niveau) plaatsbepaling in Nederland, niet geschikt voor uitwisseling van data alleen voor visualisaties | EPSG:4326 (2D-code) |
 
-De <a>EPSG<a/> code is een unieke identificatie van het CRS binnen de zogenaamde EPSG-database, een wereldwijde verzameling van coördinaatsystemen en -transformaties.
+De <a>EPSG code</a> is een unieke identificatie van het CRS binnen de zogenaamde EPSG-database, een wereldwijde verzameling van coördinaatsystemen en -transformaties.
 
 Voor BIM toepassingen wordt vaak gebruik gemaakt van een <a>Lokaal CRS</a>. Door een link te maken tussen het lokale assenstelsel in BIM en een <a>geprojecteerd CRS</a> kan een BIM model verder gebruikt worden in GEO/GIS systemen met zo min mogelijk verlies van data. Vanaf hier kan GIS/GEO software gebruik maken van projecties en andere GIS tools om het BIM model te projecteren in de wereld en hier aanvullende analyse op te doen. Het omzetten van het ene CRS naar het andere CRS wordt een <a>Coördinaattransformatie</a> genoemd.
 
@@ -47,45 +47,44 @@ Geodetische CRS-en gebruiken een vereenvoudigd 3D-model van de aarde om locaties
       </table>
     </td>
     <td>
-      <img src="media/projectie/3DCRS.png" alt="3D CRS" height="400"/>
+      <figure id="3D CRS">
+                <img src="media/geonovum-geo-bim_georefereren_2.png" alt="3D CRS" height="400"/>
+                <figcaption><a class="self-link" href="#fig-3D CRS"></bdi></a><span class="fig-title">3D CRS</span></figcaption>
+      </figure>
     </td>
   </tr>
 </table>
-
+ 
 <a>Ellipsoïdische coördinaten</a> worden ook wel geografische coördianten genoemd, rechthoekige coördinaten worden ook wel <a>geocentrische coördinaten</a> genoemd.
 
 ### Geprojecteerd CRS
 
 Om geo-informatie op een plat vlak weer te geven, worden kaartprojecties gebruikt. Veel gebruikte projectievlakken zijn een cilinderopperlvlak, kegeloppervlak en een plat vlak.
 
-PLAATJE TER ILLUSTRATIE, MOOIER OM ANDER PLAATJE TE MAKEN
-<a href="https://books.open.tudelft.nl/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=https%3A%2F%2Fbooks.open.tudelft.nl%2Fhome%2Fcatalog%2Fdownload%2F163%2F281%2F530%3Finline%3D1#page=301"><p>Bron: Tiberius et. al.</p><img src="media/projectie/projecties.png" alt="Projecties"  height="400"/></a>
+
+<figure id="Projecties">
+   <img src="media/geonovum-geo-bim_georefereren_3.png" alt="Projecties" title="Onderschrift"  height="200"></a>
+    <figcaption><a class="self-link" href="#fig-Projecties"></bdi></a><span class="fig-title">Projecties</span></figcaption>
+</figure>
+
 
 Elke <a>kaartprojectie</a> introduceert vervormingen in hoeken, afstanden en/of oppervlakten, omdat het onmogelijk is om het gekromde aardoppervlak af te beelden in een plat vlak en daarbij alle drie eigenschappen tegelijk exact te behouden. De keuze van een geschikte projectie hangt af van het doel van de kaart en welke eigenschappen het belangrijkst zijn voor de toepassing.
 
 In Nederland wordt het geprojecteerde RD-stelsel gebruikt. het RD-stelsel heeft als eigenschap dat hoeken onvervormd worden weergegeven en afwijkingen in afstanden en oppervlakte beperkt zijn binnen Nederland.
 
-DIT PLAATJE OOK ANDERE VERSIE VAN MAKEN
-<a href="https://commons.wikimedia.org/wiki/File:Het_RD_co%C3%B6rdinaten_stelsel_opgehangen_aan_het_geografische_co%C3%B6rd_stelsel.PNG"><p>Bron: Wikimedia</p><img src="media/projectie/RDprojectie.png" alt="RD Projectie" height="400"/></a>
+<img src="media\geonovum-geo-bim_georefereren_6-b.png" alt="RD Projectie" height="400"/></a>
 
 ### Vertikaal CRS 
 
 <a>Ellipsoïdische hoogte</a> heeft geen fysieke betekenis, het geeft hoogte van een punt of object boven een vereenvoudigd model van de aarde. Orthometrische hoogtesystemen die een relatie hebben met zwaartekracht hebben wel een fysieke betekenis, tussen punten met exact dezelfde <a>orthometrische hoogte</a> zal in theorie geen water stromen. De relatie tussen de orthometrische hoogte en ellipoidische hoogte wordt gevormd door een <a>quasi-geoïdemodel</a>. Een quasi-geoïdemodel geeft de hoogte van het referentievlak voor de orthometrische hoogte boven de ellipsoïde. Het orthometrische hoogte systeem voor Nederlands is het Normaal Amsterdams Peil (NAP).
 
 Figuur ellips, geoide, aardoppervlak
-DIT PLAATJE GEEFT HET IDEE
-![alt text](media/projectie/hoogte.png)
-
-Concept plaatje: 
-<img src="./media/projectie/hoogte_Concept.png" alt="Hoogte concept" title="Hoogte concept"width="400">
+<img src="media\geonovum-geo-bim_georefereren_1.png" alt="Hoogte concept" width="400">
 
 
 Het referentievlak voor de orthometrische hoogte volgt het zwaartekrachtveld en daarmee de kromming van de aarde. Terwijl voor de horizontale component de kromming van het aardoppervlak vaak genegeerd kan worden, geldt die niet voor de vertikale component. Onderstaande figuur illustreert afwijkingen bij het verwaarlozen van de aardkromming voor de afstand en het hoogteverschil tussen punten P en Q. Bij het verwaarlozen van de aardkromming snijden de lijn RQ en de raaklijn aan de ellips vanuit P elkaar in het punt Q. <mark>De werkelijke afstand PQ over het aardoppervlak is korter dan de afstand PQ', op een afstand van 10 kilometer is het verschil echter slecht 1 centimeter.</mark> Punt P en Q hebben beide dezelfde hoogte ten opzichte van het aardoppervlak, punt Q'ligt echter x meter boven het aardoppervlak. Het hoogteverschil is 10 meter bij 10 km of 1 cm bij 400 meter.
 
-DIT PLAATJE GEEFT HET IDEE
-![alt text](media/projectie/hoogteafwijking1.png)
-
-
+<img src="media\geonovum-geo-bim_georefereren_4-b.png" alt="Hoogte concept" width="400">
 
 ### Samengesteld CRS
 
@@ -127,10 +126,10 @@ De relatie tussen het lokale CRS en een geprojecteerd CRS wordt gelegd via een <
 <table>
   <tr>
     <td>
-      <img src="media/projectie/relatiegeobim.png" alt="Relatie GeoBIM" height="250"/>
+      <img src="media/geonovum-geo-bim_georefereren_7.png" alt="Relatie GeoBIM" height="250"/>
     </td>
     <td>
-      <img src="media/projectie/2dtransformatie.png" alt="2D Transformatie" height="250"/>
+      <img src="media/geonovum-geo-bim_georefereren_8.png" alt="2D Transformatie" height="250"/>
     </td>
   </tr>
   <tr>
@@ -145,6 +144,7 @@ De relatie tussen het lokale CRS en een geprojecteerd CRS wordt gelegd via een <
 
 De parameters voor de 2D gelijkvormigheidstransformatie kunnen worden berekend wanneer van minimaal 2 punten de coördinaten bekend zijn in het geprojecteerde en het lokale CRS. De parameters kunnen worden berekend met behulp van een <a>kleinste kwadratenschatting</a>, wanneer voor meer dan 2 gemeenschappelijke punten de coördinaten in beide stelsels beschikbaar zijn, kan door de <a>overbepaaldheid</a> worden getoetst op eventuele fouten in de coördinaten van 1 van de punten in een van de stelsels. <mark>De toetsing kan bijvoorbeeld door naar de grootte sluitvectoren/residuen te kijken of, zoals gebruikelijk in de landmeetkunde, een statistische toetsting uit te voeren. </mark>
 
+<mark>
 DIT MAGER WEL UIT?
 
 De overbepaalde gelijkvormigheidstransformatie tussen een bron- en een doelstelsel word ook wel een Helmert-transformatie genoemd, het model van de Helmert-transformatie is een [speciaal geval van de gelijkvormigsheidtransformatie](https://www.kadaster.nl/documents/1953498/2914454/Handleiding_Technische+Werkzaamheden+Kadaster+%28HTW%29.pdf/#page=193) waarbij:
@@ -153,6 +153,14 @@ De overbepaalde gelijkvormigheidstransformatie tussen een bron- en een doelstels
 * de onzekerheid van de coördinaten van de gemeenschappelijke punten allemaal gelijk zijn en er geen correlatie is tussen de coördinaten
 
 Hoewel deze aannames niet altijd realistisch zijn geeft het model van de Helmert transformatie een eenvoudige manier om de parameters te berekenen met lineaire vergelijkingen.
+
+Wat te doen met deze plaat: 
+<img src="media/geonovum-geo-bim_georefereren_5.png" alt="Welke plaat is dit?" height="250"/>
+</mark>
+
+
+
+
 
 ### Vertikaal - vast hoogteverschil
 
