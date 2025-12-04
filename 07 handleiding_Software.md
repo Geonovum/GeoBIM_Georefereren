@@ -200,7 +200,7 @@ Gebruik het oog symbooltje en size om het visueel te laten weergeven
 Handig is ook dat je de rotatie met Grid North kunt laten berekenen
 <img width="700" height="325" alt="image" src="https://github.com/user-attachments/assets/9b369f66-9f20-4369-adf7-f54ef9e33048" />
 
-Meer achtergrond over de andere mogelijkheden van [georeferencing in Bonsai](https://docs.bonsaibim.org/guides/authoring/advanced_modeling/georeferencing.html)
+dxf import-extension
 
 ## Illustrator/Inkscape
 --- 
@@ -227,4 +227,5 @@ GDAL Vetor Converse Covert Format
 Kaartlagen, georeferencer: DXF - openen - Ground Contro Punt Toevoegen - Kaart in de kaart toeveogen (of handmatig invoeren)
 Dit voor 4 punten doen. Druk op run 
 
-Hiermee krijg je de affine transformatie (Dat is een super-klasse van afine)
+Hiermee krijg je de affine transformatie (Dat is een super-klasse van helmert)
+ 
