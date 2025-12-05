@@ -118,7 +118,6 @@ Soms wordt de relatie van het lokale CRS ten opzicht van het Noorden gegeven. In
   <figcaption><a class="self-link" href="#fig-True North en Grid North"></bdi></a><span class="fig-title">True North en Grid North</span></figcaption>
 </figure> 
 
-
 ## Coördinaattransformatie tussen lokaal CRS en geodetisch
 
 De coördinaattransformatie tussen een geodetisch CRS en een lokaal CRS wordt, binnen de huidige standaarden, apart gegeven voor de horizontale en de vertikale component.
