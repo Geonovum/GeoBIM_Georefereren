@@ -117,7 +117,6 @@ Soms wordt de relatie van het lokale CRS ten opzicht van het Noorden gegeven. In
   <img src="./media/True_North_and_Grid_North.png" alt="True North en Grid North" title="True North en Grid North" width="300"> 
   <figcaption><a class="self-link" href="#fig-True North en Grid North"></bdi></a><span class="fig-title">True North en Grid North</span></figcaption>
 </figure> 
-<mark> Bron: https://www.surveydown.com/which-ways-north </mark>
 
 
 ## Coördinaattransformatie tussen lokaal CRS en geodetisch

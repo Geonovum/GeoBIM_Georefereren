@@ -75,11 +75,6 @@ let respecConfig = {
         companyURL: "https://www.rijkswaterstaat.nl/",
       },
       {
-        name: "Joost Geveart",
-        company: "Bedrock",
-        companyURL: "https://bedrock.engineer/",
-      },
-      {
         name: "Loek Wensveen",
         company: "Mobilis",
         companyURL: "https://www.mobilis.nl/",
@@ -89,15 +84,20 @@ let respecConfig = {
         company: "Kadaster",
         companyURL: "https://www.kadaster.nl/",
       },
-            {
+      {
         name: "Cathelijne Kleijwegt",
         company: "Esri",
         companyURL: "https://www.esri.nl/nl-nl/home",
       },
-	  {
+	    {
         name: "Amir Hakim",
         company: "Future Insight",
         companyURL: "https://www.futureinsight.nl",
+      },
+      {
+        name: "Jantien Stoter",
+        company: "TU Delft",
+        companyURL: "https://3d.bk.tudelft.nl/",
       }
     ],
   // TODO: Vul de github URL in.
