@@ -47,9 +47,9 @@ Geodetische CRS-en gebruiken een vereenvoudigd 3D-model van de aarde om locaties
       </table>
     </td>
     <td>
-      <figure id="3D_RS">
+      <figure id="3D_CRS">
                 <img src="media/geonovum-geo-bim_georefereren_2.png" alt="3D CRS" height="400"/>
-                <figcaption><a class="self-link" href="#fig-3D CRS"></bdi></a><span class="fig-title">3D CRS</span></figcaption>
+                <figcaption><a class="self-link" href="#fig-3D-CRS"></bdi></a><span class="fig-title">3D CRS</span></figcaption>
       </figure>
     </td>
   </tr>
@@ -74,7 +74,7 @@ In Nederland wordt het geprojecteerde RD-stelsel gebruikt. het RD-stelsel heeft 
 
 <figure id="RD_Projectie">
   <img src="media/geonovum-geo-bim_georefereren_6-b.png" alt="RD Projectie" height="400"/></a>
-  <figcaption><a class="self-link" href="#fig-RD Projectie"></bdi></a><span class="fig-title">Projectie</span></figcaption>
+  <figcaption><a class="self-link" href="#fig-RD-Projectie"></bdi></a><span class="fig-title">Projectie</span></figcaption>
 </figure> 
 ### Vertikaal CRS 
 
@@ -83,13 +83,13 @@ In Nederland wordt het geprojecteerde RD-stelsel gebruikt. het RD-stelsel heeft 
 Figuur ellips, geoide, aardoppervlak
 <figure id="Ellips,_Geoide,_aardoppervlak">
   <img src="media/geonovum-geo-bim_georefereren_1.png" alt="Ellips, Geoide, aardoppervlak" width="400">
-  <figcaption><a class="self-link" href="#fig-Ellips, Geoide, aardoppervlak"></bdi></a><span class="fig-title">Ellips, Geoide, aardoppervlak</span></figcaption>
+  <figcaption><a class="self-link" href="#fig-Ellips,-Geoide,-aardoppervlak"></bdi></a><span class="fig-title">Ellips, Geoide, aardoppervlak</span></figcaption>
 </figure> 
 
 Het referentievlak voor de orthometrische hoogte volgt het zwaartekrachtveld en daarmee de kromming van de aarde. Terwijl voor de horizontale component de kromming van het aardoppervlak vaak genegeerd kan worden, geldt die niet voor de vertikale component. Onderstaande figuur illustreert afwijkingen bij het verwaarlozen van de aardkromming voor de afstand en het hoogteverschil tussen punten P en Q. Bij het verwaarlozen van de aardkromming snijden de lijn RQ en de raaklijn aan de ellips vanuit P elkaar in het punt Q. <mark>De werkelijke afstand PQ over het aardoppervlak is korter dan de afstand PQ', op een afstand van 10 kilometer is het verschil echter slecht 1 centimeter.</mark> Punt P en Q hebben beide dezelfde hoogte ten opzichte van het aardoppervlak, punt Q'ligt echter x meter boven het aardoppervlak. Het hoogteverschil is 10 meter bij 10 km of 1 cm bij 400 meter.
 <figure id="Afwijking_van_aardkromming">
   <img src="media/geonovum-geo-bim_georefereren_4-b.png" alt="Afwijking van aardkromming" width="400">
-  <figcaption><a class="self-link" href="#fig-Afwijking van aardkromming"></bdi></a><span class="fig-title">Afwijking van aardkromming</span></figcaption>
+  <figcaption><a class="self-link" href="#fig-Afwijking-van-aardkromming"></bdi></a><span class="fig-title">Afwijking van aardkromming</span></figcaption>
 </figure> 
 
 ### Samengesteld CRS
@@ -115,7 +115,7 @@ Soms wordt de relatie van het lokale CRS ten opzicht van het Noorden gegeven. In
 
 <figure id="True_North_en_Grid_North">
   <img src="./media/True_North_and_Grid_North.png" alt="True North en Grid North" title="True North en Grid North" width="300"> 
-  <figcaption><a class="self-link" href="#fig-True North en Grid North"></bdi></a><span class="fig-title">True North en Grid North</span></figcaption>
+  <figcaption><a class="self-link" href="#fig-True-North-en-Grid-North"></bdi></a><span class="fig-title">True North en Grid North</span></figcaption>
 </figure> 
 
 ## Coördinaattransformatie tussen lokaal CRS en geodetisch
@@ -135,13 +135,13 @@ De relatie tussen het lokale CRS en een geprojecteerd CRS wordt gelegd via een <
     <td>
     <figure id="Relatie_GeoBIM">
       <img src="media/geonovum-geo-bim_georefereren_7.png" alt="Relatie GeoBIM" height="250"/>
-    <figcaption><a class="self-link" href="#fig-Relatie GeoBIM"></bdi></a><span class="fig-title">Relatie GeoBIM</span></figcaption>
+    <figcaption><a class="self-link" href="#fig-Relatie-GeoBIM"></bdi></a><span class="fig-title">Relatie GeoBIM</span></figcaption>
     </figure> 
     </td>
     <td>
     <figure id="2D_Transformatie">
       <img src="media/geonovum-geo-bim_georefereren_8.png" alt="2D Transformatie" height="250"/>
-          <figcaption><a class="self-link" href="#fig-2D Transformatie"></bdi></a><span class="fig-title">2D Transformatie</span></figcaption>
+          <figcaption><a class="self-link" href="#fig-2D-Transformatie"></bdi></a><span class="fig-title">2D Transformatie</span></figcaption>
     </figure>
     </td>
   </tr>
@@ -171,7 +171,7 @@ Wat te doen met deze plaat:
 
 <figure id="Welke_plaat_is_dit?">
       <img src="media/geonovum-geo-bim_georefereren_5.png" alt="Welke plaat is dit?" height="250"/>
-          <figcaption><a class="self-link" href="#fig-Welke plaat is dit?"></bdi></a><span class="fig-title">Welke plaat is dit?</span></figcaption>
+          <figcaption><a class="self-link" href="#fig-Welke-plaat-is-dit?"></bdi></a><span class="fig-title">Welke plaat is dit?</span></figcaption>
     </figure>
 
 </mark>
