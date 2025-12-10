@@ -1,10 +1,3 @@
-<<<<<<< Updated upstream
-# Gebruik van geo-datasets voor georeferenties
-De beschreven methodes van georeferentie, gefocused op gebouwen, kunnen worden opgeschaalt naar infrastructuur projecten. Zodoende kunnen de voorbeelden van Figuur YY, vertaald worden naar de volgende 3 onderdelen: (1) Gebruik van survey points, (2) Footprint alignment en (3) scan-to-BIM. Om deze methodes te kunnen toepassen legt dit hoofdstuk uit, welke datasets, kwaliteitsparameters en toepassingen nodig zijn om een BIM te kunnen georefrenen. 
-
-## Geo datasets voor het refereren van modellen
-Voor het refereren van datasets naar een geo domein, zijn de volgende datasets beschikbaar, die zijn weergegeven in Tabel YY. Hier is de bestandsnaam, eigenaar, nauwkeuigheid, dimensie en locatie weergegeven. 
-=======
 # Gebruik van geo voor georeferentie
 
 ## Georeferentie Level 60 voor BIM naar Geo
@@ -32,7 +25,6 @@ Het AHN of een andere puntenwolk in de omgeving kan hiervoor eveneens worden geb
 
 ## Geo datasets voor het refereren van modellen
 Voor het refereren van datasets naar een geo domein, zijn de volgende datasets beschikbaar om op aan te sluiten, die zijn weergegeven in onderstaande [tabel](#tabel-overzicht-nationale-datasets). Hier is de bestandsnaam, eigenaar, nauwkeurigheid, dimensie en locatie weergegeven. 
->>>>>>> Stashed changes
 
 <table id="tabel-overzicht-nationale-datasets">
    <caption>Overzicht van nationale datasets beschikbaar voor geo-referentie van project data of modelen</caption>
@@ -120,13 +112,8 @@ Het doel van het refereren van een model binnen het geo-domein is het positioner
 *Voor meer informatie naar het gebruik van coordinaterefrentie systemen, zie de handreiking: https://docs.geostandaarden.nl/crs/crs/ *
 
 ## Primaire kwaliteits kenmerken voor geobestanden naar bim
-<<<<<<< Updated upstream
-Voor het gebruik van een dataset uit het **GIS-domein** zijn verschillende kenmerken van belang voor de toepassing binnen een **BIM-systeem**. Niet alle data is even geschikt om gebruikt te worden, naast het gerbuik van het juiste coordinaten systeem, spelen er kwailiteits kenmerken mee die van invloed zijn op zowel de ingewonnen als de gerbruikte referenetie data. Op basis van de onderzoeken en initiatieven  
-*[Bron: IHN / Geonovum / DigiGo]* kunnen de volgende componenten worden meegenomen, let wel er zijn meer componenten die van invloed zijn op de kwaliteit en bruikbarheid van de data. 
-=======
 Voor het gebruik van een dataset uit het **GIS-domein** zijn verschillende kenmerken van belang voor de toepassing binnen een **BIM-systeem**. Niet alle data is even geschikt om gebruikt te worden, naast het gerbuik van het juiste coordinaten systeem, spelen er kwaliteits kenmerken mee die van invloed zijn op zowel de ingewonnen als de gerbruikte referentie data. Op basis van de onderzoeken en initiatieven  
 *[Bron: IHN / Geonovum / DigiGo]* kunnen de volgende componenten worden meegenomen. Let wel er zijn meer componenten die van invloed zijn op de kwaliteit en bruikbarheid van de data. 
->>>>>>> Stashed changes
 
 ### 1. Geografische distributie van de meet punten
 Afhankelijk van de inwin methode, is de geografische distributie van de meetpunten van belang. Dit heeft namelijk een direct effect van het onderscheiden van objecten in het terrein, maar ondersteunt ook in correct vinden van de refrenetie punten. De distributie wordt omschreven door de hoeveelheid punten per vierkante meter of door de minimale afstand tussen de punten. De leert praktijk is een hoge puntdichtheid gekoppeld aan een hoger detailniveau van het 3D-model.

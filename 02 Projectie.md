@@ -2,15 +2,6 @@
 
 Om informatie te koppelen aan een locatie op aarde worden geodetische coördinaatreferentiesystemen gebruikt. <a>Geodetische CRS</a>-en die relevant zijn voor het georefereren van BIM in Nederland zijn:
 
-<<<<<<< Updated upstream
-| Naam   | Omschrijving | EPSG-code |
-|--------|------------------------------------------------------------------|--------------|
-| RD     | [Geprojecteerd CRS](#geprojecteerd-crs) voor Nederland | EPSG:28992 |
-| NAP    | [Vertikaal CRS](#vertikaal-crs) (hoogte) voor Nederland | EPSG:5709 |
-| RDNAP  | [Samengesteld CRS](#samengesteld-crs) voor Nederland | EPSG:7415 |
-| ETRS89 | [Geografisch CRS](#geografische-en-geocentrisch-crs) voor Europa en precieze (centimeter niveau) plaatsbepaling in Nederland | EPSG:4258 (2D-code) |
-| WGS 84 | Geografisch CRS voor de aarde en niet precieze (meter niveau) plaatsbepaling in Nederland, niet geschikt voor uitwisseling van data alleen voor visualisaties | EPSG:4326 (2D-code) |
-=======
 <table>
   <caption>Relevante coördinatiesystemen voor het georefereren Geo en BIM in Nederland</caption>
   <thead>
@@ -48,7 +39,6 @@ Om informatie te koppelen aan een locatie op aarde worden geodetische coördinaa
     </tr>
   </tbody>
 </table>
->>>>>>> Stashed changes
 
 De <a>EPSG code</a> is een unieke identificatie van het CRS binnen de zogenaamde EPSG-database, een wereldwijde verzameling van coördinaatsystemen en -transformaties.
 
@@ -94,13 +84,8 @@ Geodetische CRS-en gebruiken een vereenvoudigd 3D-model van de aarde om locaties
     </td>
   </tr>
 </table>
-<<<<<<< Updated upstream
- 
-<a>Ellipsoïdische coördinaten</a> worden ook wel geografische coördianten genoemd, rechthoekige coördinaten worden ook wel <a>geocentrische coördinaten</a> genoemd.
-=======
 
 <a>Ellipsoïdische coördinaten</a> worden ook wel geografische coördinaten genoemd, rechthoekige coördinaten worden ook wel <a>geocentrische coördinaten</a> genoemd.
->>>>>>> Stashed changes
 
 ### Geprojecteerd CRS
 
@@ -209,12 +194,7 @@ De relatie tussen het lokale CRS en een geprojecteerd CRS wordt gelegd via een <
 
 De parameters voor de 2D gelijkvormigheidstransformatie kunnen worden berekend wanneer van minimaal 2 punten de coördinaten bekend zijn in het geprojecteerde en het lokale CRS. De parameters kunnen worden berekend met behulp van een <a>kleinste kwadratenschatting</a>, wanneer voor meer dan 2 gemeenschappelijke punten de coördinaten in beide stelsels beschikbaar zijn, kan door de <a>overbepaaldheid</a> worden getoetst op eventuele fouten in de coördinaten van 1 van de punten in een van de stelsels. <mark>De toetsing kan bijvoorbeeld door naar de grootte sluitvectoren/residuen te kijken of, zoals gebruikelijk in de landmeetkunde, een statistische toetsting uit te voeren. </mark>
 
-<mark>
-<<<<<<< Updated upstream
-DIT MAGER WEL UIT?
-=======
-DIT MAG ER WEL UIT?</mark>
->>>>>>> Stashed changes
+<mark>DIT MAG ER WEL UIT?</mark>
 
 De overbepaalde gelijkvormigheidstransformatie tussen een bron- en een doelstelsel word ook wel een Helmert-transformatie genoemd, het model van de Helmert-transformatie is een [speciaal geval van de gelijkvormigsheidtransformatie](https://www.kadaster.nl/documents/1953498/2914454/Handleiding_Technische+Werkzaamheden+Kadaster+%28HTW%29.pdf/#page=193) waarbij:
 
