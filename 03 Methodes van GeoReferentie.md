@@ -7,6 +7,7 @@ Het is mogelijk om een BIM-model op de kaart te zetten door alleen het adres, va
 De beschikbaarheid van informatie voor het berekenen van georeferentie-parameters voor de verschillende methoden is onderzocht door de TU Delft [[Hakim2024]]. 
 
 <table style="width:100%; table-layout:fixed;">
+  <caption> Levels van georeferentie </caption>
   <tr>
     <th style = "width:200px;"> Methode </th>
     <th style = "width:50px;"> Level </th>
@@ -128,17 +129,49 @@ Zowel BIM- als GEO-modellen kunnen een 1D, 2D als 3D coordinatenstelsel gebruike
 
 Een GEO coordinatenstelsel kan 3D samengesteld (EPSG:7415), 2D (EPSG:28992) of 1D (EPSG:5709) zijn. 
 
-| Van (bron)          | Naar (target)     |  Mogelijkheid | 
-| -----------   | -------   | ------------- |
-| 2D GEO of BIM        | 2D GEO of BIM    | 2D Helmert (gelijkvormigheidstransformatie Refereren aan stuk Lennard) transformatie | 
-| 2D GEO of BIM   | 3D GEO of BIM     | 2D Helmert transformatie + Interpolatie van z waarde naar target | 
-| 3D GEO of BIM        | 2D GEO of BIM    | Optie 1: 3D Helmert transformatie + Maaiveld bron-model transformeren naar z-waarde 0. <br>  Optie 2: Voetafdruk bron-model extraheren en 2D Helmert transformatie | 
-| 3D GEO of BIM        | 3D GEO of BIM    | 3D Helmert transformatie | 
 
+<table>
+<caption>Transformatie van 2D en 3D </caption>
+  <thead>
+    <tr>
+      <th>Van (bron)</th>
+      <th>Naar (target)</th>
+      <th>Mogelijkheid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2D GEO of BIM</td>
+      <td>2D GEO of BIM</td>
+      <td><a href="#horizontaal-2d-gelijkvormigheidstransformatie">2D Helmert</a> Horizontaal transformatie</td>
+    </tr>
+    <tr>
+      <td>2D GEO of BIM</td>
+      <td>3D GEO of BIM</td>
+      <td>2D Helmert transformatie + Interpolatie van z waarde naar target</td>
+    </tr>
+    <tr>
+      <td>3D GEO of BIM</td>
+      <td>2D GEO of BIM</td>
+      <td>
+        Optie 1: 3D Helmert transformatie + Maaiveld bron-model transformeren naar z-waarde 0.<br>
+        Optie 2: Voetafdruk bron-model extraheren en 2D Helmert transformatie
+      </td>
+    </tr>
+    <tr>
+      <td>3D GEO of BIM</td>
+      <td>3D GEO of BIM</td>
+      <td>3D Helmert transformatie</td>
+    </tr>
+  </tbody>
+</table>
 
-<img src="./media/2d_en_3d_GeoBIM.png" alt="2D en 3D Geo of BIM combineren" title="Georeferentie Level 60" width="500">
+<figure id="2D-en-3D-Geo-of-BIM-combineren">
+      <img src="./media/2d_en_3d_GeoBIM.png" alt="2D en 3D Geo of BIM combineren" width="700"/>
+    <figcaption><a class="self-link" href="#fig-2D-en-3D-Geo-of-BIM-combineren"></bdi></a><span class="fig-title">2D en 3D Geo of BIM combineren</span></figcaption>
+</figure>
 
-Om van geprojecteerd CRS naar een Geografische CRS te gaan is een coordinaatconversie nodig i.p.v. transformatie. Het is mogelijk om conversies van 2D naar 2D of van 3D naar 3D te doen.
+<mark> Om van geprojecteerd CRS naar een Geografische CRS te gaan is een coordinaatconversie nodig i.p.v. transformatie. Het is mogelijk om conversies van 2D naar 2D of van 3D naar 3D te doen. Klopt dit?</mark>
 
 De mogelijkheden zijn:
 | Van (bron)         | Naar (target)     |  Mogelijkheid | 
@@ -146,17 +179,19 @@ De mogelijkheden zijn:
 | 2D GEO/BIM (geprojecteerd)       | 2D GEO/BIM (geografisch)   | RDNAPTRANS    |
 | 3D GEO/BIM (geprojecteerd)        | 3D GEO/BIM (geografisch)   | RDNAPTRANS    |
 
-## Schaal: 
+## Schaal en correctie
 Een Geo of BIM bronmodel kan in een andere eenheid getekend zijn dan de eenheid van een targetmodel waarin het bronmodel moet landen. Het is daarom van belang om de juiste verschaling van model aan te geven. Wanneer een bron in milimeters is getekend en de target omgeving in meters, dan kan men dat met een schaal, waarde 0.001, aangeven. Of wanneer men van inches naar meter gaat met een schaal, waarde 0.0254.
 
 Wanneer voor georeferentie een precisie van milimeters belangrijk is dient men daarnaast een correctie van horizontale afstanden voor lijnvergroting mee te nemen. 
 
 De formule om deze correctie te berekenen is: 
-$$
-\Delta \ell = -9,2 + \frac{r_i^2}{1629^2} \text{ mm per 100 m}
-$$
+
+$$ \Delta \ell = -9,2 + \frac{r_i^2}{1629^2} \text{ mm per 100 m} $$
+
+
 gemiddelde coördinaten in km van de eindpunten in het RD-stelsel zijn.
 
-<mark> Graag het beeld gebruiken uit: https://www.bruna.nl/images/active/InkijkPDF/eboekhuis/9789071301872.pdf#page=23 </mark>
-
-
+<figure id="correcties-aan-gemeten-afstanden">
+      <img src="./media/Correcties aan gemeten afstanden.png" alt="2D en 3D Geo of BIM combineren" height="400"/>
+    <figcaption><a class="self-link" href="#fig-correcties-aan-gemeten-afstanden"></bdi></a><span class="fig-title">Correcties aan gemeten afstanden</span></figcaption>
+</figure>
