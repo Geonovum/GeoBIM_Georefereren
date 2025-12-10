@@ -1,16 +1,7 @@
 # Coördinaatreferentiesystemen en Coördinaattransformatie
 
-Om informatie te koppelen aan een locatie op aarde worden geodetische coördinaatreferentiesystemen gebruikt. <a>Geodetische CRS</a>-en die relevant zijn voor het georefereren van BIM in Nederland zijn:
+Om informatie te koppelen aan een locatie op aarde worden geodetische coördinaatreferentiesystemen gebruikt. <a>Geodetische CRS</a>-en die relevant zijn voor het georefereren van BIM in Nederland zijn (CRS staat voor Coordinate Reference System):
 
-<<<<<<< Updated upstream
-| Naam   | Omschrijving | EPSG-code |
-|--------|------------------------------------------------------------------|--------------|
-| RD     | [Geprojecteerd CRS](#geprojecteerd-crs) voor Nederland | EPSG:28992 |
-| NAP    | [Vertikaal CRS](#vertikaal-crs) (hoogte) voor Nederland | EPSG:5709 |
-| RDNAP  | [Samengesteld CRS](#samengesteld-crs) voor Nederland | EPSG:7415 |
-| ETRS89 | [Geografisch CRS](#geografische-en-geocentrisch-crs) voor Europa en precieze (centimeter niveau) plaatsbepaling in Nederland | EPSG:4258 (2D-code) |
-| WGS 84 | Geografisch CRS voor de aarde en niet precieze (meter niveau) plaatsbepaling in Nederland, niet geschikt voor uitwisseling van data alleen voor visualisaties | EPSG:4326 (2D-code) |
-=======
 <table>
   <caption>Relevante coördinatiesystemen voor het georefereren Geo en BIM in Nederland</caption>
   <thead>
@@ -48,31 +39,31 @@ Om informatie te koppelen aan een locatie op aarde worden geodetische coördinaa
     </tr>
   </tbody>
 </table>
->>>>>>> Stashed changes
 
 De <a>EPSG code</a> is een unieke identificatie van het CRS binnen de zogenaamde EPSG-database, een wereldwijde verzameling van coördinaatsystemen en -transformaties.
 
-Voor BIM toepassingen wordt vaak gebruik gemaakt van een <a>Lokaal CRS</a>. Door een link te maken tussen het lokale assenstelsel in BIM en een <a>geprojecteerd CRS</a> kan een BIM model verder gebruikt worden in GEO/GIS systemen met zo min mogelijk verlies van data. Vanaf hier kan GIS/GEO software gebruik maken van projecties en andere GIS tools om het BIM model te projecteren in de wereld en hier aanvullende analyse op te doen. Het omzetten van het ene CRS naar het andere CRS wordt een <a>Coördinaattransformatie</a> genoemd.
+Voor BIM toepassingen wordt vaak gebruik gemaakt van een <a>Lokaal CRS</a>. Door een link te leggen tussen het lokale assenstelsel in BIM en een <a>geprojecteerd CRS</a> kan een BIM model gebruikt worden in GEO/GIS systemen met zo min mogelijk verlies van data. Vanaf hier kan GIS/GEO software gebruik maken van projecties en andere GIS tools om het BIM model te projecteren in de wereld en hier aanvullende analyse op te doen. Het omzetten van het ene CRS naar het andere CRS wordt een <a>Coördinaattransformatie</a> genoemd.
 
-Zoals hierboven aangegeven worden in Nederland meerder CRS-en Bij het gebruik van meerdere CRS-en bestaat risico op introductie van fouten door onjuiste implementatie van de relaties tussen CRS-en. Binnen Nederland worden aanbieders van data worden geadviseerd om data aan te bieden in de verschillende CRS-en gericht op de eindgebruikers. Eindgebruikers worden juist geadviseerd data waar mogelijk op te vragen in hetzelfde CRS. Dit is ook een nadrukkelijke aanbeveling voor gebruikers van BIM-software. 
+Zoals hierboven aangegeven worden in Nederland meerder CRS-en gebruikt. Bij het gebruik van meerdere CRS-en bestaat risico op introductie van fouten door onjuiste implementatie van de relaties tussen CRS-en. Binnen Nederland worden aanbieders van data daarom geadviseerd om data aan te bieden in de verschillende CRS-en gericht op de eindgebruikers. Eindgebruikers worden juist geadviseerd data waar mogelijk op te vragen in hetzelfde CRS. Dit is ook een nadrukkelijke aanbeveling voor gebruikers van BIM-software. 
 
 <aside class="note" title="Gebruik hetzelfde CRS">
   <p>**AANBEVELING** Vraag als eindgebruiker geodata waar mogelijk op in hetzelfde CRS</p>
 </aside>
 
-De meeste BIM software is namelijk niet instaat transformaties uit te voeren tussen verschillende geprojecteerde CRS'en. Wanneer GIS data dus naar BIM moet worden uitgewisseld is het belangrijk dat dit al geprojecteerd is in het coördinatensysteem wat de BIM Software verwacht. Afhankelijk van de BIM Software kan het zelfs nodig zijn te transformeren naar het lokale stelsel wat gebruikt wordt door de BIM Software. Hier dienen binnen projecten duidelijk afspraken over gemaakt worden.
+De meeste BIM software is namelijk niet in staat om transformaties uit te voeren tussen verschillende geprojecteerde CRS'en. Wanneer GIS data dus naar BIM moet worden uitgewisseld is het belangrijk dat dit al geprojecteerd is in het coördinatensysteem dat de BIM Software verwacht. Afhankelijk van de BIM Software kan het zelfs nodig zijn te transformeren naar het lokale stelsel dat gebruikt wordt door de BIM software. Hier dienen binnen projecten duidelijke afspraken over gemaakt te worden.
 
 <aside class="note" title="Maak vooraf afspraken over de te gebruiken CRS-en en transformatie">
-  <p>**AANBEVELING** Maak afspraken met projectpartners over te gebruiken CRS-en</p>
+  <p>**AANBEVELING** Maak afspraken met projectpartners over de te gebruiken CRS-en</p>
 </aside>
 
-De volgende pargraven gaan dieper in op de verschillende CRS-typen, de relaties tussen CRS-en die direct relevant zijn voor deze praktijkrichtlijn en introduceert de gangbare terminologie voor CRS-en. Voor nog meer informatie en adviezen wordt verwezen naar de [Handreiking Gebruik coördinaatreferentiesystemen bij uitwisseling en visualisatie van geo-informatie](https://docs.geostandaarden.nl/crs/crs/).
+De volgende pargrafen gaan dieper in op de verschillende CRS-typen, de relaties tussen CRS-en die direct relevant zijn voor deze praktijkrichtlijn en introduceert de gangbare terminologie voor CRS-en. Voor nog gedetailleerdere informatie en adviezen wordt verwezen naar de [Handreiking Gebruik coördinaatreferentiesystemen bij uitwisseling en visualisatie van geo-informatie](https://docs.geostandaarden.nl/crs/crs/).
 
 ## Geodetische CRS-en
 
 ### Geografische en geocentrisch CRS
 
-Geodetische CRS-en gebruiken een vereenvoudigd 3D-model van de aarde om locaties vast te leggen ten opzichte van het aardoppervlak. Het vereenvoudigd model is een omwentelingsellipsoïde (een afgeplatte bol). Coördinaten worden uitgedrukt in ellipsoïdsche breedte (<span style="font-family: 'Times New Roman';">&#981;</span>), lengte (<span style="font-family: 'Times New Roman';">&lambda;</span>) en hoogte (<span style="font-family: 'Times New Roman';"><i>h</i></span>) of rechthoekige coördinaten <span style="font-family: 'Times New Roman';"><i>X</i></span>, <span style="font-family: 'Times New Roman';"><i>Y</i></span> en <span style="font-family: 'Times New Roman';"><i>Z</i></span> ten opzichte van het middelpunt van de ellpisoïde. In onderstaande figuur zijn de hoeken en assen van de ellipsoïdische en rechthoekige coördinaten weergegeven.
+Geodetische CRS-en gebruiken een vereenvoudigd 3D-model van de aarde om locaties vast te leggen ten opzichte van het aardoppervlak. Het vereenvoudigd model is een omwentelingsellipsoïde (een afgeplatte bol). 
+Coördinaten worden uitgedrukt in ellipsoïdsche breedte (<span style="font-family: 'Times New Roman';">&#981;</span>), lengte (<span style="font-family: 'Times New Roman';">&lambda;</span>) en hoogte (<span style="font-family: 'Times New Roman';"><i>h</i></span>) of rechthoekige coördinaten <span style="font-family: 'Times New Roman';"><i>X</i></span>, <span style="font-family: 'Times New Roman';"><i>Y</i></span> en <span style="font-family: 'Times New Roman';"><i>Z</i></span> ten opzichte van het middelpunt van de ellpisoïde. In onderstaande figuur zijn de hoeken en assen van de ellipsoïdische en rechthoekige coördinaten weergegeven.
 
 <table>
   <caption>Componenten waarmee men coördinaten uit kan drukken</caption>
@@ -87,24 +78,19 @@ Geodetische CRS-en gebruiken een vereenvoudigd 3D-model van de aarde om locaties
       <p><span style="font-family: 'Times New Roman';"><strong><i>h</i></strong></span>: de hoogte boven de ellipsoïde</p>
     </td>
     <td>
-      <figure id="3D_CRS" style="margin: 0;">
-        <img src="media/geonovum-geo-bim_georefereren_2.png" alt="3D CRS" height="400"/>
-        <figcaption><span class="fig-title">3D CRS</span></figcaption>
+      <figure id="3D_CRS">
+                <img src="media/geonovum-geo-bim_georefereren_2.png" alt="3D CRS" height="400"/>
+                <figcaption><a class="self-link" href="#fig-3D-CRS"></bdi></a><span class="fig-title">3D CRS</span></figcaption>
       </figure>
     </td>
   </tr>
 </table>
-<<<<<<< Updated upstream
- 
-<a>Ellipsoïdische coördinaten</a> worden ook wel geografische coördianten genoemd, rechthoekige coördinaten worden ook wel <a>geocentrische coördinaten</a> genoemd.
-=======
 
 <a>Ellipsoïdische coördinaten</a> worden ook wel geografische coördinaten genoemd, rechthoekige coördinaten worden ook wel <a>geocentrische coördinaten</a> genoemd.
->>>>>>> Stashed changes
 
 ### Geprojecteerd CRS
 
-Om geo-informatie op een plat vlak weer te geven, worden kaartprojecties gebruikt. Veel gebruikte projectievlakken zijn een cilinderopperlvlak, kegeloppervlak en een plat vlak.
+Om geo-informatie vanaf het gekromde aardoppervlak op een plat vlak weer te geven, worden kaartprojecties gebruikt. Veel gebruikte projectievlakken zijn een cilinderopperlvlak, kegeloppervlak en een plat vlak.
 
 
 <figure id="Projecties">
@@ -115,7 +101,7 @@ Om geo-informatie op een plat vlak weer te geven, worden kaartprojecties gebruik
 
 Elke <a>kaartprojectie</a> introduceert vervormingen in hoeken, afstanden en/of oppervlakten, omdat het onmogelijk is om het gekromde aardoppervlak af te beelden in een plat vlak en daarbij alle drie eigenschappen tegelijk exact te behouden. De keuze van een geschikte projectie hangt af van het doel van de kaart en welke eigenschappen het belangrijkst zijn voor de toepassing.
 
-In Nederland wordt het geprojecteerde RD-stelsel gebruikt. het RD-stelsel heeft als eigenschap dat hoeken onvervormd worden weergegeven en afwijkingen in afstanden en oppervlakte beperkt zijn binnen Nederland.
+In Nederland wordt het geprojecteerde RD-stelsel gebruikt. Het RD-stelsel heeft als eigenschap dat hoeken onvervormd worden weergegeven en afwijkingen in afstanden en oppervlakte beperkt zijn binnen Nederland.
 
 <figure id="RD_Projectie">
   <img src="media/geonovum-geo-bim_georefereren_6-b.png" alt="RD Projectie" height="400"/></a>
@@ -124,10 +110,11 @@ In Nederland wordt het geprojecteerde RD-stelsel gebruikt. het RD-stelsel heeft 
 
 ### Vertikaal CRS 
 
-<a>Ellipsoïdische hoogte</a> heeft geen fysieke betekenis, het geeft hoogte van een punt of object boven een vereenvoudigd model van de aarde. Orthometrische hoogtesystemen die een relatie hebben met zwaartekracht hebben wel een fysieke betekenis, tussen punten met exact dezelfde <a>orthometrische hoogte</a> zal in theorie geen water stromen. De relatie tussen de orthometrische hoogte en ellipoidische hoogte wordt gevormd door een <a>quasi-geoïdemodel</a>. Een quasi-geoïdemodel geeft de hoogte van het referentievlak voor de orthometrische hoogte boven de ellipsoïde. Het orthometrische hoogte systeem voor Nederlands is het Normaal Amsterdams Peil (NAP).
+<a>Ellipsoïdische hoogte</a> heeft geen fysieke betekenis, het geeft de hoogte van een punt of object aan boven een vereenvoudigd model van de aarde. Orthometrische hoogtesystemen die een relatie hebben met zwaartekracht hebben wel een fysieke betekenis. Tussen punten met exact dezelfde <a>orthometrische hoogte</a> zal in theorie geen water stromen. De relatie tussen de orthometrische hoogte en ellipoidische hoogte wordt gevormd door een <a>quasi-geoïdemodel</a>. Een quasi-geoïdemodel geeft de hoogte van het referentievlak voor de orthometrische hoogte boven de ellipsoïde. Het orthometrische hoogte systeem voor Nederlands is het Normaal Amsterdams Peil (NAP).
 
+Figuur ellips, geoide, aardoppervlak
 <figure id="Ellips,_Geoide,_aardoppervlak">
-  <img src="media/geonovum-geo-bim_georefereren_1.png" alt="Ellips, Geoide, aardoppervlak" height="400">
+  <img src="media/geonovum-geo-bim_georefereren_1.png" alt="Ellips, Geoide, aardoppervlak" width="400">
   <figcaption><a class="self-link" href="#fig-Ellips,-Geoide,-aardoppervlak"></bdi></a><span class="fig-title">Ellips, Geoide, aardoppervlak</span></figcaption>
 </figure> 
 
@@ -144,15 +131,15 @@ Het referentievlak voor de orthometrische hoogte volgt het zwaartekrachtveld en 
 
 ## Lokaal CRS
 
-Een <a>lokaal CRS</a> is een arbitrair gekozen assenstelsel. De oorsprong, de oriëntatie en het vertikale referentievlak van het stelsel worden gekozen op basis van praktische overwegingen <mark>en kan voordelen hebben bij bepaalde 3D modeleer software <i> is dat zo</i></mark>. <mark> Sommige applicaties voorzien ook alleen in een lokaal assenstelsel om in te modelleren</mark> Dit kan project afhankelijk zijn, bijvoorbeeld een hoekpunt, voorgevel en begane grond van een gebouw, de eenheden zijn vaak in meters of millimeters. Er is geen directe relatie met de echte wereld tenzij er een coördinaattransformatie wordt toegepast.
+Een <a>lokaal CRS</a> is een arbitrair gekozen assenstelsel. De oorsprong, de oriëntatie en het vertikale referentievlak van het stelsel worden gekozen op basis van praktische overwegingen <mark>en kan voordelen hebben bij bepaalde 3D modeleer software (BIM) <i> is dat zo</i></mark>. <mark> Sommige applicaties voorzien ook alleen in een lokaal assenstelsel om in te modelleren</mark> Dit kan project afhankelijk zijn, bijvoorbeeld een hoekpunt, voorgevel en begane grond van een gebouw. De eenheden zijn vaak in meters of millimeters. Er is geen directe relatie met de echte wereld tenzij er een coördinaattransformatie wordt toegepast.
 
 ### Benadering van RD in lokaal CRS
 
-In sommige software pakketen zoals AutoCAD is het gebruikelijk om met het lokale stelsel en RD-stelsel te benaderen, bijvoorbeeld door het gebruik van bekende punten of door de oorsprong te verschuiven. AutoCAD is alleen zelf niet bewust dat dit RD-coördinaten zijn. Wat de software betreft is dit een lokaal stesel zonder verdere betekenis en worden de aardkromming en eigenschappen van de kaartprojectie niet toegepast. De link tussen de lokale coördinaten en het geprojecteerd CRS is in dit geval X<sub>bim</sub> &ne; X<sub>gis</sub>, Y<sub>bim</sub> &ne; Y<sub>gis</sub>, Z<sub>bim</sub> &ne; Z<sub>gis</sub>.
+In sommige software pakketen zoals AutoCAD is het gebruikelijk om met het lokale stelsel het RD-stelsel te benaderen, bijvoorbeeld door het gebruik van bekende punten of door de oorsprong te verschuiven. AutoCAD gaat er alleen niet bewust mee om dat dit RD-coördinaten zijn. Wat de software betreft is dit een lokaal stesel zonder verdere betekenis en worden de aardkromming en eigenschappen van de kaartprojectie niet toegepast. De link tussen de lokale coördinaten en het geprojecteerd CRS is in dit geval X<sub>bim</sub> &ne; X<sub>gis</sub>, Y<sub>bim</sub> &ne; Y<sub>gis</sub>, Z<sub>bim</sub> &ne; Z<sub>gis</sub>.
 
 ### True North, Grid North, Project North
 
-Soms wordt de relatie van het lokale CRS ten opzicht van het Noorden gegeven. In de BIM-sector worden hiervoor de termen <a>True North</a>, <a>Grid North</a> en <a> Project North </a> om de relatie met de oriëntatie van een geodetisch CRS aan te geven. Deze hebben afhankelijk van het type CRS de volgende betekenis.
+Soms wordt de relatie van het lokale CRS ten opzicht van het Noorden gegeven. In de BIM-sector worden de termen <a>True North</a>, <a>Grid North</a> en <a> Project North </a> gebruikt om de relatie met de oriëntatie van een geodetisch CRS aan te geven. Deze hebben afhankelijk van het type CRS de volgende betekenis.
 
 * CRS obv ellipsoïde: true north is in de richting van de rotatie as van de ellipsoïde (<span style="font-family: 'Times New Roman';"><i>Z</i><sub>ecef</sub></span> in eerdere figuur)
 * CRS obv projectie: true north is in de richting noorden van geprojecteerde stelsel vaak de Y-as of Northing-as, ook wel grid north genoemd.
@@ -207,16 +194,12 @@ De relatie tussen het lokale CRS en een geprojecteerd CRS wordt gelegd via een <
   </tr>
 </table>
 
-De parameters voor de 2D gelijkvormigheidstransformatie kunnen worden berekend wanneer van minimaal 2 punten de coördinaten bekend zijn in het geprojecteerde en het lokale CRS. De parameters kunnen worden berekend met behulp van een <a>kleinste kwadratenschatting</a>, wanneer voor meer dan 2 gemeenschappelijke punten de coördinaten in beide stelsels beschikbaar zijn, kan door de <a>overbepaaldheid</a> worden getoetst op eventuele fouten in de coördinaten van 1 van de punten in een van de stelsels. <mark>De toetsing kan bijvoorbeeld door naar de grootte sluitvectoren/residuen te kijken of, zoals gebruikelijk in de landmeetkunde, een statistische toetsting uit te voeren. </mark>
+De parameters voor de 2D gelijkvormigheidstransformatie kunnen worden berekend wanneer van minimaal 2 punten de coördinaten bekend zijn zowel in het geprojecteerde en het lokale CRS. De parameters kunnen worden berekend met behulp van een <a>kleinste kwadratenschatting</a>. Wanneer voor meer dan 2 gemeenschappelijke punten de coördinaten in beide stelsels beschikbaar zijn, kan door de <a>overbepaaldheid</a> worden getoetst op eventuele fouten in de coördinaten van één van de punten in een van de stelsels. <mark>De toetsing kan bijvoorbeeld door naar de grote sluitvectoren/residuen te kijken of, zoals gebruikelijk in de landmeetkunde, een statistische toetsting uit te voeren. </mark>
 
 <mark>
-<<<<<<< Updated upstream
-DIT MAGER WEL UIT?
-=======
-DIT MAG ER WEL UIT?</mark>
->>>>>>> Stashed changes
+DIT MAGER WEL UIT? </mark>
 
-De overbepaalde gelijkvormigheidstransformatie tussen een bron- en een doelstelsel word ook wel een Helmert-transformatie genoemd, het model van de Helmert-transformatie is een [speciaal geval van de gelijkvormigsheidtransformatie](https://www.kadaster.nl/documents/1953498/2914454/Handleiding_Technische+Werkzaamheden+Kadaster+%28HTW%29.pdf/#page=193) waarbij:
+De overbepaalde gelijkvormigheidstransformatie tussen een bron- en een doelstelsel word ook wel een Helmert-transformatie genoemd. Het model van de Helmert-transformatie is een [speciaal geval van de gelijkvormigsheidtransformatie](https://www.kadaster.nl/documents/1953498/2914454/Handleiding_Technische+Werkzaamheden+Kadaster+%28HTW%29.pdf/#page=193) waarbij:
 
 * de coördinaten van de gemeenschappelijke punten in het bronstelsel geen onzekerheid hebben en dus exact bekend worden verondersteld
 * de onzekerheid van de coördinaten van de gemeenschappelijke punten allemaal gelijk zijn en er geen correlatie is tussen de coördinaten
@@ -228,10 +211,10 @@ Hoewel deze aannames niet altijd realistisch zijn geeft het model van de Helmert
 <figure id="Welke_plaat_is_dit?">
       <img src="media/geonovum-geo-bim_georefereren_5.png" alt="Welke plaat is dit?" height="250"/>
           <figcaption><a class="self-link" href="#fig-Welke-plaat-is-dit?"></bdi></a><span class="fig-title">Welke plaat is dit?</span></figcaption>
-    </figure>
-
+</figure>
 
 ### Vertikaal - vast hoogteverschil
 
 Voor de relatie tussen vertikale referentievlakken is het uitgangspunt in de huidge standaarden dat de relatie is vast te leggen via een vast hoogteverschil.
+
 
