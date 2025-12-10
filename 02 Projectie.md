@@ -2,6 +2,7 @@
 
 Om informatie te koppelen aan een locatie op aarde worden geodetische coördinaatreferentiesystemen gebruikt. <a>Geodetische CRS</a>-en die relevant zijn voor het georefereren van BIM in Nederland zijn:
 
+<<<<<<< Updated upstream
 | Naam   | Omschrijving | EPSG-code |
 |--------|------------------------------------------------------------------|--------------|
 | RD     | [Geprojecteerd CRS](#geprojecteerd-crs) voor Nederland | EPSG:28992 |
@@ -9,6 +10,45 @@ Om informatie te koppelen aan een locatie op aarde worden geodetische coördinaa
 | RDNAP  | [Samengesteld CRS](#samengesteld-crs) voor Nederland | EPSG:7415 |
 | ETRS89 | [Geografisch CRS](#geografische-en-geocentrisch-crs) voor Europa en precieze (centimeter niveau) plaatsbepaling in Nederland | EPSG:4258 (2D-code) |
 | WGS 84 | Geografisch CRS voor de aarde en niet precieze (meter niveau) plaatsbepaling in Nederland, niet geschikt voor uitwisseling van data alleen voor visualisaties | EPSG:4326 (2D-code) |
+=======
+<table>
+  <caption>Relevante coördinatiesystemen voor het georefereren Geo en BIM in Nederland</caption>
+  <thead>
+    <tr>
+      <th>Naam</th>
+      <th>Omschrijving</th>
+      <th>EPSG-code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RD</td>
+      <td><a href="#geprojecteerd-crs">Geprojecteerd CRS</a> voor Nederland</td>
+      <td>EPSG:28992</td>
+    </tr>
+    <tr>
+      <td>NAP</td>
+      <td><a href="#vertikaal-crs">Vertikaal CRS</a> (hoogte) voor Nederland</td>
+      <td>EPSG:5709</td>
+    </tr>
+    <tr>
+      <td>RDNAP</td>
+      <td><a href="#samengesteld-crs">Samengesteld CRS</a> voor Nederland</td>
+      <td>EPSG:7415</td>
+    </tr>
+    <tr>
+      <td>ETRS89</td>
+      <td><a href="#geografische-en-geocentrisch-crs">Geografisch CRS</a> voor Europa en precieze (centimeter niveau) plaatsbepaling in Nederland</td>
+      <td>EPSG:4258 (2D-code)</td>
+    </tr>
+    <tr>
+      <td>WGS 84</td>
+      <td>Geografisch CRS voor de aarde en niet precieze (meter niveau) plaatsbepaling in Nederland, niet geschikt voor uitwisseling van data, alleen voor visualisaties</td>
+      <td>EPSG:4326 (2D-code)</td>
+    </tr>
+  </tbody>
+</table>
+>>>>>>> Stashed changes
 
 De <a>EPSG code</a> is een unieke identificatie van het CRS binnen de zogenaamde EPSG-database, een wereldwijde verzameling van coördinaatsystemen en -transformaties.
 
@@ -35,27 +75,32 @@ De volgende pargraven gaan dieper in op de verschillende CRS-typen, de relaties 
 Geodetische CRS-en gebruiken een vereenvoudigd 3D-model van de aarde om locaties vast te leggen ten opzichte van het aardoppervlak. Het vereenvoudigd model is een omwentelingsellipsoïde (een afgeplatte bol). Coördinaten worden uitgedrukt in ellipsoïdsche breedte (<span style="font-family: 'Times New Roman';">&#981;</span>), lengte (<span style="font-family: 'Times New Roman';">&lambda;</span>) en hoogte (<span style="font-family: 'Times New Roman';"><i>h</i></span>) of rechthoekige coördinaten <span style="font-family: 'Times New Roman';"><i>X</i></span>, <span style="font-family: 'Times New Roman';"><i>Y</i></span> en <span style="font-family: 'Times New Roman';"><i>Z</i></span> ten opzichte van het middelpunt van de ellpisoïde. In onderstaande figuur zijn de hoeken en assen van de ellipsoïdische en rechthoekige coördinaten weergegeven.
 
 <table>
+  <caption>Componenten waarmee men coördinaten uit kan drukken</caption>
   <tr>
     <td>
-      <table>
-        <tr><td><span style="font-family: 'Times New Roman';"><i>Z</i><sub>ecef</sub></span>: de rotatieas van de ellipsoïde vanaf de oorsprong</td></tr>
-        <tr><td><span style="font-family: 'Times New Roman';"><i>X</i><sub>ecef</sub></span>: de as vanaf de oorsprong richting de nulmeridiaan in het equatorvlak loodrecht op de rotatieas</td></tr>
-        <tr><td><span style="font-family: 'Times New Roman';"><i>Y</i><sub>ecef</sub></span>: de as vanaf de oorsprong loodrecht op de nulmeridiaan en de rotatieas</td></tr>
-        <tr><td><span style="font-family: 'Times New Roman';"><i>&#981;</i></span>: de hoek die de loodlijn vanaf het oppervlak van de ellipsoïde maakt met het <span style="font-family: 'Times New Roman';"><i>XY</i></span>-vlak (= equatorvlak) <mark>(let op in dit plaatje is niet goed zichtbaar dat de loodlijn niet per se door het nulpunt hoeft te gaan)</mark></td></tr>
-        <tr><td><span style="font-family: 'Times New Roman';"><i>&lambda;</i></span>: de hoek met de nulmeridiaan</td></tr>
-        <tr><td><span style="font-family: 'Times New Roman';"><i>h</i></span>: de hoogte boven de ellipsoïde</td></tr>
-      </table>
+      <p><span style="font-family: 'Times New Roman';"><strong><i>Z</i><sub>ecef</sub></strong></span>: de rotatieas van de ellipsoïde vanaf de oorsprong</p>
+      <p><span style="font-family: 'Times New Roman';"><strong><i>X</i><sub>ecef</sub></strong></span>: de as vanaf de oorsprong richting de nulmeridiaan in het equatorvlak loodrecht op de rotatieas</p>
+      <p><span style="font-family: 'Times New Roman';"><strong><i>Y</i><sub>ecef</sub></strong></span>: de as vanaf de oorsprong loodrecht op de nulmeridiaan en de rotatieas</p>
+      <p><span style="font-family: 'Times New Roman';"><strong><i>θ</i></strong></span>: de hoek die de loodlijn vanaf het oppervlak van de ellipsoïde maakt met het <span style="font-family: 'Times New Roman';"><strong><i>XY</i></strong></span>-vlak (= equatorvlak) 
+      <mark>(let op: in dit plaatje is niet goed zichtbaar dat de loodlijn niet per se door het nulpunt hoeft te gaan)</mark></p>
+      <p><span style="font-family: 'Times New Roman';"><strong><i>λ</i></strong></span>: de hoek met de nulmeridiaan</p>
+      <p><span style="font-family: 'Times New Roman';"><strong><i>h</i></strong></span>: de hoogte boven de ellipsoïde</p>
     </td>
     <td>
-      <figure id="3D_CRS">
-                <img src="media/geonovum-geo-bim_georefereren_2.png" alt="3D CRS" height="400"/>
-                <figcaption><a class="self-link" href="#fig-3D-CRS"></bdi></a><span class="fig-title">3D CRS</span></figcaption>
+      <figure id="3D_CRS" style="margin: 0;">
+        <img src="media/geonovum-geo-bim_georefereren_2.png" alt="3D CRS" height="400"/>
+        <figcaption><span class="fig-title">3D CRS</span></figcaption>
       </figure>
     </td>
   </tr>
 </table>
+<<<<<<< Updated upstream
  
 <a>Ellipsoïdische coördinaten</a> worden ook wel geografische coördianten genoemd, rechthoekige coördinaten worden ook wel <a>geocentrische coördinaten</a> genoemd.
+=======
+
+<a>Ellipsoïdische coördinaten</a> worden ook wel geografische coördinaten genoemd, rechthoekige coördinaten worden ook wel <a>geocentrische coördinaten</a> genoemd.
+>>>>>>> Stashed changes
 
 ### Geprojecteerd CRS
 
@@ -76,20 +121,20 @@ In Nederland wordt het geprojecteerde RD-stelsel gebruikt. het RD-stelsel heeft 
   <img src="media/geonovum-geo-bim_georefereren_6-b.png" alt="RD Projectie" height="400"/></a>
   <figcaption><a class="self-link" href="#fig-RD-Projectie"></bdi></a><span class="fig-title">Projectie</span></figcaption>
 </figure> 
+
 ### Vertikaal CRS 
 
 <a>Ellipsoïdische hoogte</a> heeft geen fysieke betekenis, het geeft hoogte van een punt of object boven een vereenvoudigd model van de aarde. Orthometrische hoogtesystemen die een relatie hebben met zwaartekracht hebben wel een fysieke betekenis, tussen punten met exact dezelfde <a>orthometrische hoogte</a> zal in theorie geen water stromen. De relatie tussen de orthometrische hoogte en ellipoidische hoogte wordt gevormd door een <a>quasi-geoïdemodel</a>. Een quasi-geoïdemodel geeft de hoogte van het referentievlak voor de orthometrische hoogte boven de ellipsoïde. Het orthometrische hoogte systeem voor Nederlands is het Normaal Amsterdams Peil (NAP).
 
-Figuur ellips, geoide, aardoppervlak
 <figure id="Ellips,_Geoide,_aardoppervlak">
-  <img src="media/geonovum-geo-bim_georefereren_1.png" alt="Ellips, Geoide, aardoppervlak" width="400">
+  <img src="media/geonovum-geo-bim_georefereren_1.png" alt="Ellips, Geoide, aardoppervlak" height="400">
   <figcaption><a class="self-link" href="#fig-Ellips,-Geoide,-aardoppervlak"></bdi></a><span class="fig-title">Ellips, Geoide, aardoppervlak</span></figcaption>
 </figure> 
 
 Het referentievlak voor de orthometrische hoogte volgt het zwaartekrachtveld en daarmee de kromming van de aarde. Terwijl voor de horizontale component de kromming van het aardoppervlak vaak genegeerd kan worden, geldt die niet voor de vertikale component. Onderstaande figuur illustreert afwijkingen bij het verwaarlozen van de aardkromming voor de afstand en het hoogteverschil tussen punten P en Q. Bij het verwaarlozen van de aardkromming snijden de lijn RQ en de raaklijn aan de ellips vanuit P elkaar in het punt Q. <mark>De werkelijke afstand PQ over het aardoppervlak is korter dan de afstand PQ', op een afstand van 10 kilometer is het verschil echter slecht 1 centimeter.</mark> Punt P en Q hebben beide dezelfde hoogte ten opzichte van het aardoppervlak, punt Q'ligt echter x meter boven het aardoppervlak. Het hoogteverschil is 10 meter bij 10 km of 1 cm bij 400 meter.
 <figure id="Afwijking_van_aardkromming">
-  <img src="media/geonovum-geo-bim_georefereren_4-b.png" alt="Afwijking van aardkromming" width="400">
-  <figcaption><a class="self-link" href="#fig-Afwijking-van-aardkromming"></bdi></a><span class="fig-title">Afwijking van aardkromming</span></figcaption>
+  <img src="media/geonovum-geo-bim_georefereren_4-b.png" alt="Afwijking door aardkromming" height="400">
+  <figcaption><a class="self-link" href="#fig-Afwijking-door-aardkromming"></bdi></a><span class="fig-title">Afwijking door aardkromming</span></figcaption>
 </figure> 
 
 ### Samengesteld CRS
@@ -111,11 +156,18 @@ Soms wordt de relatie van het lokale CRS ten opzicht van het Noorden gegeven. In
 
 * CRS obv ellipsoïde: true north is in de richting van de rotatie as van de ellipsoïde (<span style="font-family: 'Times New Roman';"><i>Z</i><sub>ecef</sub></span> in eerdere figuur)
 * CRS obv projectie: true north is in de richting noorden van geprojecteerde stelsel vaak de Y-as of Northing-as, ook wel grid north genoemd.
-* Project North is de Y-as van het lokaal CRS. 
+
 
 <figure id="True_North_en_Grid_North">
-  <img src="./media/True_North_and_Grid_North.png" alt="True North en Grid North" title="True North en Grid North" width="300"> 
+  <img src="./media/True_North_and_Grid_North.png" alt="True North en Grid North" title="True North en Grid North" height="300"> 
   <figcaption><a class="self-link" href="#fig-True-North-en-Grid-North"></bdi></a><span class="fig-title">True North en Grid North</span></figcaption>
+</figure>
+
+* Het Project North is normaliter gebaseerd op de voornaamste as van het bouwwerk. Het beïnvloedt hoe je schetst in views in software en hoe views op tekenbladen worden geplaatst.Het Project North richt zich vaak richting de bovenkant van een tekengebied. Dit vereenvoudigt het modelleren. 
+
+<figure id="Project_North">
+  <img src="./media/Project North.png" alt="Project North" title="Project North" height="300"> 
+  <figcaption><a class="self-link" href="#fig-Project-North"></bdi></a><span class="fig-title">Project North</span></figcaption>
 </figure> 
 
 ## Coördinaattransformatie tussen lokaal CRS en geodetisch
@@ -158,7 +210,11 @@ De relatie tussen het lokale CRS en een geprojecteerd CRS wordt gelegd via een <
 De parameters voor de 2D gelijkvormigheidstransformatie kunnen worden berekend wanneer van minimaal 2 punten de coördinaten bekend zijn in het geprojecteerde en het lokale CRS. De parameters kunnen worden berekend met behulp van een <a>kleinste kwadratenschatting</a>, wanneer voor meer dan 2 gemeenschappelijke punten de coördinaten in beide stelsels beschikbaar zijn, kan door de <a>overbepaaldheid</a> worden getoetst op eventuele fouten in de coördinaten van 1 van de punten in een van de stelsels. <mark>De toetsing kan bijvoorbeeld door naar de grootte sluitvectoren/residuen te kijken of, zoals gebruikelijk in de landmeetkunde, een statistische toetsting uit te voeren. </mark>
 
 <mark>
+<<<<<<< Updated upstream
 DIT MAGER WEL UIT?
+=======
+DIT MAG ER WEL UIT?</mark>
+>>>>>>> Stashed changes
 
 De overbepaalde gelijkvormigheidstransformatie tussen een bron- en een doelstelsel word ook wel een Helmert-transformatie genoemd, het model van de Helmert-transformatie is een [speciaal geval van de gelijkvormigsheidtransformatie](https://www.kadaster.nl/documents/1953498/2914454/Handleiding_Technische+Werkzaamheden+Kadaster+%28HTW%29.pdf/#page=193) waarbij:
 
@@ -167,15 +223,12 @@ De overbepaalde gelijkvormigheidstransformatie tussen een bron- en een doelstels
 
 Hoewel deze aannames niet altijd realistisch zijn geeft het model van de Helmert transformatie een eenvoudige manier om de parameters te berekenen met lineaire vergelijkingen.
 
-Wat te doen met deze plaat: 
+<mark>Wat te doen met deze plaat: </mark>
 
 <figure id="Welke_plaat_is_dit?">
       <img src="media/geonovum-geo-bim_georefereren_5.png" alt="Welke plaat is dit?" height="250"/>
           <figcaption><a class="self-link" href="#fig-Welke-plaat-is-dit?"></bdi></a><span class="fig-title">Welke plaat is dit?</span></figcaption>
     </figure>
-
-</mark>
-
 
 
 ### Vertikaal - vast hoogteverschil

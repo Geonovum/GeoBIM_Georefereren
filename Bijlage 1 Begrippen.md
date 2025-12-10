@@ -46,6 +46,12 @@ Een quasi-geoïdemodel is een wiskundig model dat de vorm van de geoïde (gemidd
 **<dfn>Coördinaattransformatie</dfn>:** <br>
 Een coördinaattransformatie is het proces waarbij coördinaten van een punt of dataset worden omgerekend van het ene coördinaatreferentiesysteem (CRS) naar een ander. Dit is nodig omdat er wereldwijd verschillende CRS’en bestaan (bijvoorbeeld WGS84, RD, NAP), die elk hun eigen referentie-ellipsoïde, projectie of referentievlak gebruiken.<br>
 <br>
+**<dfn>Coördinaatconversie</dfn>:** <br>
+Het uitdrukken van een coördinaat in een ander coördinatenstelsel zonder dat dit punt een andere locatie op aarde krijgt.<br>
+<br>
+
+
+
 **<dfn>2D gelijkvormigheidstransformatie</dfn>** <br>
 Een 2D gelijkvormigheidstransformatie (ook wel Helmert-transformatie genoemd) is een wiskundige transformatie die een vlakke coördinatenruimte (2D) omzet naar een andere, waarbij de vorm en verhoudingen behouden blijven. Het wordt veel gebruikt in de geodesie en GIS om coördinaten van het ene stelsel naar het andere te transformeren.<br>
 <br>
