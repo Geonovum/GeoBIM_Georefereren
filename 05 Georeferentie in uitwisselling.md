@@ -12,7 +12,7 @@ IFC is een uitwisselformaat bedoeld voor het uitwisselen van de Architectuur, Bo
 - Er is geen klasse binnen IFC (4X3) die ondersteunt in georeferentie 60. Een work-around is de mogelijkheid om gebruik te maken van generic property sets ([IfcPropertySet](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm)) voor het opslaan van informatie over de controlepunten voor deze methodiek. Dit wordt momenteel niet ondersteund.  
 
 <aside class="note" title="Gebruik IfcMapConversion">
-  <p>**AANBEVELING** Gebruik IfcMapConversion voor georeferentie van BIM in IFC t.b.v combinatie Geo en BIM.</p>
+  <p><strong>AANBEVELING:</strong> Gebruik IfcMapConversion voor georeferentie van BIM in IFC t.b.v combinatie Geo en BIM.</p>
 </aside>
 
 IFC MapConversion kan zowel gebruikt worden voor het transformeren van BIM naar Geo als van Geo naar BIM. Vanuit een digitaal 3D-stadsmodel in CityGML of CityJSON kan een deel van dit model naar IFC worden geëxporteerd. Dit deel kan dan op een 0-punt worden gepositioneerd. In de IfcMapconversion-attributen kunnen de transformatiewaarden worden ingevuld. 
@@ -26,7 +26,7 @@ Voor geometrie maakt IFC 5 gebruik van USD-formaat (Universal Scene Description)
 Wanneer men in 2D vectorsoftware werkt die geen .ifc bestand kan exporteren zijn er ook mogelijkheden voor georeferentie. De objecten in de DXF worden bij voorkeur getekend in een coördinatenruimte die matcht met een geprojecteerd CRS (zoals EPSG:28992 of EPSG:3857). De coördinaten zijn dan in meters, zoals in het coordinatenstelsel. Voorbeeld: een lijn van punt(110000, 450000) naar punt (110500, 450500) is dan correct gepositioneerd in RD-coördinaten.
 
 <aside class="note" title="Teken wanneer mogelijk op RD in 2D-Vectorsoftware">
-  <p>**AANBEVELING** Teken wanneer mogelijk in RD coordinaten in 2D vectorsoftware (CAD)</p>
+  <p><strong>AANBEVELING:</strong> Teken wanneer mogelijk in RD coordinaten in 2D vectorsoftware (CAD)</p>
 </aside>
 
 Dit is niet in alle software mogelijk. Bij software die alleen werkt met lokale coordinaten is het lastig om op coordinaat 110000 - 450000 te werken, omdat dit heel ver uit het centrale punt van deze software, punt 0,0 ligt. 
@@ -34,7 +34,7 @@ Dit is niet in alle software mogelijk. Bij software die alleen werkt met lokale 
 Een DXF-bestand zelf bevat geen informatie waarmee aangeduid wordt dat de waardes van de geometrie bedoeld is als RD-coördinaten. Het is mogelijk om de attributen vanuit IfcMapconversion als extra bestand mee te geven naast de .dxf als een .WKT, .PROJ of .JSON file. 
 
 <aside class="note" title="Voorzie in een extra bestand voor Georeferentie">
-  <p>**AANBEVELING** Voorzie in een extra bestand in .WKT volgens [WKT-CRS](https://www.ogc.org/standards/wkt-crs/) of in een .PROJ conform [PROJ](https://proj.org/en/stable/specifications/) wanneer de georeferentie en het gebruikt crs niet in het bronbestand is gedefinieerd. </p>
+  <p><strong>AANBEVELING:</strong> Voorzie in een extra bestand in .WKT volgens [WKT-CRS](https://www.ogc.org/standards/wkt-crs/) of in een .PROJ conform [PROJ](https://proj.org/en/stable/specifications/) wanneer de georeferentie en het gebruikt crs niet in het bronbestand is gedefinieerd. </p>
 </aside>
 
 ## GML 
@@ -46,7 +46,7 @@ Het kent verschillende encodings, waarvan XML/GML (CityGML) en JSON (CityJSON) d
 De CityGML encoding biedt twee mogelijkheden om een coordinatenstelsel te duiden voor het model. De voorkeur is om een totaal cöordinatenstelsel voor een dataset te duiden. Dit doet men in de gml:Envelope die gebruikt wordt om de ruimtelijke begrenzing (bounding box) van de dataset aan te geven. 
 
 <aside class="note" title="Teken wanneer mogelijk op RD in 2D-Vectorsoftware">
-  <p>**AANBEVELING** Refereer naar een URI van een standaard CRS of een uri van een zelf gehoste CRS. Wanneer dit niet mogelijk is kan men het Engineered CRS in een (City)GML bestand definieren. </p>
+  <p><strong>AANBEVELING:</strong> Refereer naar een URI van een standaard CRS of een uri van een zelf gehoste CRS. Wanneer dit niet mogelijk is kan men het Engineered CRS in een (City)GML bestand definieren. </p>
 </aside>
   
 Een voorbeeld van georeferentie in GML en CityGML vindt men in de Bijlage B.
