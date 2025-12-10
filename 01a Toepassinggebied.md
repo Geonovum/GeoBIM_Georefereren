@@ -6,7 +6,7 @@ De beschreven methoden en technieken in deze praktijkrichtlijn kan men gebruiken
 
 De praktijkrichtlijn kan men gebruiken wanneer men een geschikte methodiek voor georeferentie af wil spreken in een specifieke use-case die past bij de benodigde nauwkeurigheid en beoogde datasets.
 
-Ten slotte kan men de richtlijn gebruiken als handleiding om georeferentie in veelgebruikte softwarepakketten op een standaardwijze toe te passen.
+Tenslotte kan men de richtlijn gebruiken als handleiding om georeferentie in veelgebruikte softwarepakketten op een standaardwijze toe te passen.
 
 De richtlijn focust zich op het coordinatenstelsel en de werkwijzen die in Nederland op nationaal niveau worden gebruikt.
 
