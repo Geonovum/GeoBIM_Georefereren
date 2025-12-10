@@ -1,7 +1,7 @@
 # Georeferentie in de domeinen B&U en Infra
 
 ## Georeferentie in de B&U
-B&U projecten kenmerken zich vaak door projecten van beperkte omvang. Vaak worden deze modellen in een lokaal assenstelsel gemodelleerd. Dit verhoogt de nauwkeurigheid en vereenvoudigd de samenwerking. Vaak wordt bij integratie met IS, infra of stadsmodellen de koppeling gelegd aan een bekend (nationaal) coördinatenstelsel. 
+B&U projecten kenmerken zich vaak door projecten van beperkte omvang. Vaak worden deze modellen in een lokaal assenstelsel gemodelleerd. Dit verhoogt de nauwkeurigheid en vereenvoudigt de samenwerking. Vaak wordt bij integratie met IS, infra of stadsmodellen de koppeling gelegd aan een bekend (nationaal) coördinatenstelsel. 
 
 Voorbeelden van B&U projecten zijn 
  - Vliegvelden, ziekenhuizen (langgerekt)
@@ -14,19 +14,15 @@ Woningen, flats en ziekenhuizen beslaan meestal enkele tientallen tot honderden 
 https://publications.cms.bgu.tum.de/2019_Jaud_I3CE.pdf
 
 ### Kenmerken van Infraprojecten
-Infraprojecten kenmerken zich vaak door langgerekte projecten. De noodzaak en de positie van de objecten die gebouwt worden wordt bepaald door de omgeving. Het is vaak ook noodzakelijk om aan te sluiten op de bestaande omgeving. Als gevolg hiervan zijn er veel raakvlakken met de omgeving. Om deze raakvlakken goed in kaart te brengen is het goed in kaart brengen van de omgeving zeer belangrijk. Om alle objecten in 
-de omgeving te positioneren wordt gebruik gemaakt van RD-Coordinaten.
+Infraprojecten kenmerken zich vaak door langgerekte projecten. De noodzaak en de positie van de objecten die gebouwd worden, wordt bepaald door de omgeving. Het is vaak ook noodzakelijk om aan te sluiten op de bestaande omgeving. Als gevolg hiervan zijn er veel raakvlakken met de omgeving. Om deze raakvlakken goed in kaart te brengen is het goed in kaart brengen van de omgeving zeer belangrijk. Om alle objecten in de omgeving te positioneren wordt gebruik gemaakt van RD-Coordinaten.
 
 Voorbeelden van Infra projecten zijn 
  - snelwegen, tunnel, dijkverstrekingen (lang gerekt)
  - burgen, viaducten en sluizen (locatie bepaald door omgeving)
 
-
-
 Oplossings-idee. Tussenpunten berekenen. https://gnss-data.kadaster.nl/misc/docs/langelijnenadvies.pdf
 
 Misschien ook lange lijnen advies voor de Z- waarde.  
-
 
 ### Werkwijze in Infa
 Binnen een project in de Infra denken we in RD coordinaten ten opzichten van NAP. Er wordt niet in een lokaal coordinaten stelsel gewerkt. Dit wordt 
@@ -47,7 +43,7 @@ voor het project team. In Revit wordt bijvoorbeeld nog steeds een Basepoint gebr
 het project. Vaak wordt een mooi afgerond RD-coordinaat genomen. In andere software zoals AutoCAD of Civil3D wordt direct gewerkt op RD-coordinaten.
 Er wordt in dit geval zeer ver van het orginele nulpunt getekend in de software.
 
-Uitwisseling tussen verschillende software systemen gebeurd ook standaard op basis van RD-Coordinaten. Dit werkt echter niet fijnloos binnen het 
+Uitwisseling tussen verschillende software systemen gebeurt ook standaard op basis van RD-Coordinaten. Dit werkt echter niet feilloos binnen het 
 huidige softwarelandschap omdat de gebruikte software niet altijd op de hoogte is of in staat is te begrijpen dat er op RD-Coordinaten gewerkt 
-wordt. De software interpeteerd de uitwisselbestanden bijvoorbeeld als bestanden met een lokaal coordinatenstelsel met zeer grote coordinaten in 
+wordt. De software interpeteert de uitwisselbestanden bijvoorbeeld als bestanden met een lokaal coordinatenstelsel met zeer grote coordinaten in 
 plaatst van RD-Coordinaten. Positionering gaat hierdoor niet altijd goed.
