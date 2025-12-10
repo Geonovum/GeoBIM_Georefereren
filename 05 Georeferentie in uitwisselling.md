@@ -15,10 +15,10 @@ IFC is een uitwisselformaat bedoeld voor het uitwisselen van de Architectuur, Bo
   <p>**AANBEVELING** Gebruik IfcMapConversion voor georeferentie van BIM in IFC t.b.v combinatie Geo en BIM.</p>
 </aside>
 
-IFC MapConversion kan zowel gebruikt worden voor het transformeren van BIM naar Geo als van Geo naar BIM. Vanuit een digitaal 3D-stadsmodel in CityGML of CityJSON kan een deel van dit model naar IFC exporteren. Dit deel kan dan op een 0-punt worden gepositioneerd. In de IfcMapconversion-attributen kunnen de transformatiewaarden worden ingevuld. 
+IFC MapConversion kan zowel gebruikt worden voor het transformeren van BIM naar Geo als van Geo naar BIM. Vanuit een digitaal 3D-stadsmodel in CityGML of CityJSON kan een deel van dit model naar IFC worden geëxporteerd. Dit deel kan dan op een 0-punt worden gepositioneerd. In de IfcMapconversion-attributen kunnen de transformatiewaarden worden ingevuld. 
 
 ### IFC 5 (JSON)
-IFC 5 is een momenteel in ontwikkeling. Het is een herstructurering van het huidige IFC schemas. De functionaliteit van de huidige schema's wil men behouden, maar de technische basis en serialisatie veranderen. Waar de huidige IFC-schema's op STEP zijn gebaseerd, is het IFC 5 schema op JSON gebaseerd. 
+IFC 5 is  momenteel in ontwikkeling. Het is een herstructurering van de huidige IFC schemas. De functionaliteit van de huidige schema's wil men behouden, maar de technische basis en serialisatie veranderen. Waar de huidige IFC-schema's op STEP zijn gebaseerd, is het IFC 5 schema op JSON gebaseerd. 
 
 Voor geometrie maakt IFC 5 gebruik van USD-formaat (Universal Scene Description), voor geometrie, bijvoorbeeld usdgeom::mesh – veelhoekig oppervlaktemodel. Er zijn nog geen vastgestelde afspraken over georeferentie. Wel zijn in de eerste verkenningen de elementen van IfcMapConversion terug te zien, maar dan als json attributen. 
 
@@ -43,13 +43,13 @@ Een DXF-bestand zelf bevat geen informatie waarmee aangeduid wordt dat de waarde
 ### CityGML 
 CityGML is een open datamodel en uitwisselformaat voor de representatie van 3D-geo-informatie.
 Het kent verschillende encodings, waarvan XML/GML (CityGML) en JSON (CityJSON) de meest gebruikte zijn. Omdat de standaard een tijd lang alleen de GML encoding kende, en sterk verweven was met deze encoding, is vanaf het begin de term CityGML gebruikt voor zowel het data model als de GML encoding. Dat kan verwarrend zijn voor buitenstaanders.
-De CityGML encoding biedt twee mogelijkheden om een coordinatenstelsel te duiden voor het model. De voorkeur is om een totaal cordinatenstelsel voor een dataset te duiden. Dit doet men in de gml:Envelope die gebruikt wordt om de ruimtelijke begrenzing (bounding box) van de dataset aan te geven. 
+De CityGML encoding biedt twee mogelijkheden om een coordinatenstelsel te duiden voor het model. De voorkeur is om een totaal cöordinatenstelsel voor een dataset te duiden. Dit doet men in de gml:Envelope die gebruikt wordt om de ruimtelijke begrenzing (bounding box) van de dataset aan te geven. 
 
 <aside class="note" title="Teken wanneer mogelijk op RD in 2D-Vectorsoftware">
   <p>**AANBEVELING** Refereer naar een URI van een standaard CRS of een uri van een zelf gehoste CRS. Wanneer dit niet mogelijk is kan men het Engineered CRS in een (City)GML bestand definieren. </p>
 </aside>
   
-Een voorbeeld van georeferentie in GML en CityGML vindt men in de Bijlage B
+Een voorbeeld van georeferentie in GML en CityGML vindt men in de Bijlage B.
 
 ## CityJSON
 In de CityJSON encoding moet, anders dan in CityGML, één coordinatenstelsel voor het totaalmodel worden geduid. Dit doet men in het attribuut "Metadata": { 
@@ -59,7 +59,7 @@ In de CityJSON encoding moet, anders dan in CityGML, één coordinatenstelsel vo
 Het is mogelijk om met het attribuut: "Transform" een verplaatsing en verschaling van een model te duiden. Deze functionaliteit is aan CityJSON toegevoegd om de bestandsgrootte te verkleinen. Met deze functionaliteit is het mogelijk om de coördinaten van de vertices weer te geven als integers, en de schaalfactor en de translatie op te slaan die nodig is om de originele coördinaten (als floats/doubles) te verkrijgen. Deze functionaliteit kan in principe ook gebruikt kunnen worden om de hele data set rond het 0-punt te modelleren. Wel zijn hier dan extra restricties voor nodig.
  
 ## Geopackage
-[GeoPackage](https://www.geopackage.org/spec140/index.html) staat naast GML als uitwisselformaat op de Pas-toe-leg-uit lijst. Dit formaat is een OGC Standaard  is geschikt voor georeferentie wanneer men werkt met 2D GeoBIM modellen die gemodelleerd worden op een al bekend crs (Bijvoorbeeld RD-NAP of WGS84). Geopackage is OGC standaard die zich baseert op een databaseformaat (SQL-lite). In de tabel gpkg_spatial_ref_sys waarin de informatie voor coordinatenstelsel kan worden opgeslagen. De geopackage standaard heeft geen vaste manier om een engineerdCRS te duiden. Wanneer de SourceCRS een lokaal gedefinieerd grid is, is dit uitwisselformaat minder geschikt.
+[GeoPackage](https://www.geopackage.org/spec140/index.html) staat naast GML als uitwisselformaat op de Pas-toe-leg-uit lijst. Dit formaat is een OGC Standaard  is geschikt voor georeferentie wanneer men werkt met 2D GeoBIM modellen die gemodelleerd worden op een al bekend crs (Bijvoorbeeld RD-NAP of WGS84). Geopackage is OGC standaard die zich baseert op een databaseformaat (SQL-lite). In de tabel gpkg_spatial_ref_sys waarin de informatie voor coördinatenstelsel kan worden opgeslagen. De geopackage standaard heeft geen vaste manier om een engineerdCRS te duiden. Wanneer de SourceCRS een lokaal gedefinieerd grid is, is dit uitwisselformaat minder geschikt.
 
 Een Geopackage slaat in de tabel gpkg_spatial_ref_sys de volgende waarden op: 
 | Kolom | Kolom Beschrijving |
@@ -94,6 +94,6 @@ De OGC-API features geeft geen beperking op het definiëren van CRS-en. Het is d
 
 Om een dataset met een OGC API-features aan te bieden dient men met een URI de CRS te identificeren. Die URI moet verwijzen naar een beschrijving van het CRS zodat een client het kan begrijpen of ophalen.
 
-Wanneer men als client een server bevraagt met een CRS (gedefinieerd door EPSG of lokaal) dat niet geimplementeerd is door de server zal deze een foutmelding geven. 
+Wanneer men als client een server bevraagt met een CRS (gedefinieerd door EPSG of lokaal) dat niet geïmplementeerd is door de server zal deze een foutmelding geven. 
 
 Wanneer men met een lokaal CRS bevragingen zou willen doen aan een server die niet voorziet in dit CRS kan het mogelijk zijn om met OGC API Processes een transformCRS te duiden met input de sourceCRS, targetCRS en de coördinaten. De uitput is de getransformeerde coordinaten in het door de server geaccepteerde stelsel. Dit lijkt op deze service https://epsg.io/transform in API-vorm. 
