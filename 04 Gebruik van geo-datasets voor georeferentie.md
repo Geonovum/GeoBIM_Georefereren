@@ -1,7 +1,7 @@
 # Gebruik van geo voor georeferentie
 
 ## Georeferentie Level 60 voor BIM naar Geo
-De aanbevolen methode voor georeferentie kan worden toegepast voor infrastructuurprojecten, maar is daarvoor vaak niet toereikend en vereist in de praktijk een hogere nauwkeurigheid (level 60). Om een model op level 60 te georefereren, zijn er drie mogelijkheden om dit toe te passen: (1) Gebruik van <a>survey points</a>, (2) <a>Footprint alignment</a> en (3) <a>scan-to-BIM</a> gebaseerd op technieken <mark> als BIM&Scan Ireland? Klopt dit? </mark> [BuildingSMART et al. (2020)](https://www.buildingsmart.org/wp-content/uploads/2025/04/The-buildingSMART-Awards-Yearbook-2020.pdf). Voor iedere methode van georeferentie wordt in de theorie nader toegelicht hoe deze kan worden toegepast. Let wel, bij de derde mogelijkheid is het model reeds geogerefereerd, en is er in de meeste gevallen een conversiebestand beschikbaar dat het model vertaalt van een BIM-softwareomgeving naar het coördinatensysteem waarin de puntenwolk is ingewonnen.
+De aanbevolen methode voor georeferentie kan worden toegepast voor infrastructuurprojecten, maar is daarvoor vaak niet toereikend en vereist in de praktijk een hogere nauwkeurigheid (level 60). Om een model op level 60 te georefereren, zijn er drie mogelijkheden om dit toe te passen: (1) Gebruik van <a>survey point</a>s, (2) <a>Footprint alignment</a> en (3) <a>scan-to-BIM</a> gebaseerd op technieken <mark> als BIM&Scan Ireland? Klopt dit? </mark> [BuildingSMART et al. (2020)](https://www.buildingsmart.org/wp-content/uploads/2025/04/The-buildingSMART-Awards-Yearbook-2020.pdf). Voor iedere methode van georeferentie wordt in de theorie nader toegelicht hoe deze kan worden toegepast. Let wel, bij de derde mogelijkheid is het model reeds geogerefereerd, en is er in de meeste gevallen een conversiebestand beschikbaar dat het model vertaalt van een BIM-softwareomgeving naar het coördinatensysteem waarin de puntenwolk is ingewonnen.
 
 Daarom wordt geadviseerd om uitsluitend bij optie 1 en 2 een beoordelingstoets uit te voeren, om te verifiëren of het model zich daadwerkelijk op de correcte locatie bevindt
 
@@ -96,11 +96,12 @@ Voor het refereren van datasets naar een geo domein, zijn de volgende datasets b
 
 Naast primaire geo datasets, kunnen gemeentes, provicies en centrale overheden andere datasets beschikbaar hebben, die kleiner van scope zijn. Ook zijn er datasets die zijn geextraheerd uit de bovenbenoemde datasets. Een voorbeeld is de 3DBAG, waar het <a>AHN</a> de basis is voor het maken van deze dataset. Een analyse is in de verschillende hoogtedatasets in Nederland [source] en vanuit europa zijn de volgende hoogte datasets beschikbaar, die terug te vinden zijn via de volgende link. [https://3d.bk.tudelft.nl/europeantopography]
 
-## Kwaliteits kenmerken voor geobestanden naar BIM
+### Kwaliteits kenmerken voor geobestanden naar BIM
 De verschillende datasets die gebruikt kunnen worden, zijn van elkaar te onderscheiden. Het planimetrische en hoogtecomponent in een geo-databestand vormt een fundamenteel onderdeel van de dataset. Afwijkingen in deze informatie, of verschillen tussen diverse momenten van inwinning of ontwerp, kunnen een grote impact hebben. Het correct refereren van het bestand ten opzichte van deze assen is daarom essentieel om de juiste stappen te kunnen nemen.
 
 Het doel van het refereren van een model binnen het geo-domein is het positioneren ervan in de echte wereld. Deze echte wereld bestaat uit een lokaal en een globaal coördinatensysteem. Zoals eerder beschreven, wordt een BIM-model in de toegepaste softwarepakketten vaak in een 0,0,0-referentiesysteem geplaatst. Daarentegen bevatten globale coördinaten aanzienlijk grotere waarden, wat ertoe kan leiden dat een dataset vastloopt binnen een applicatie. De documentatie van het gebruikte coördinatensysteem is eveneens van cruciaal belang. Wanneer dit systeem niet correct is vastgelegd, kunnen er problemen ontstaan tijdens de conversie van de hoogtecomponent. De meest gebruikte coördinatenstelsels in Nederland zijn weergegeven in Tabel YY. 
 
+<!--
 **Tabel YY.** Overzicht van de globale coordinatensystemen gebruikt in Nederland
 | Naam      | Orientatie | EPSG      | Toelichting                                                                                                                                                              |
 | --------- | ---------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -109,8 +110,9 @@ Het doel van het refereren van een model binnen het geo-domein is het positioner
 | **NAP**   | Z          | **5709**  | Verticaal referentiesysteem, hoogte in meters t.o.v. Normaal Amsterdams Peil.                                                                                            |
 
 *Voor meer informatie naar het gebruik van coordinaatreferentie systemen, zie de handreiking: https://docs.geostandaarden.nl/crs/crs/ *
+-->
 
-## Primaire kwaliteits kenmerken voor geobestanden naar bim
+### Primaire kwaliteits kenmerken voor geobestanden naar bim
 Voor het gebruik van een dataset uit het **GIS-domein** zijn verschillende kenmerken van belang voor de toepassing binnen een **BIM-systeem**. Niet alle data is even geschikt om gebruikt te worden, naast het gerbuik van het juiste coordinaten systeem, spelen er kwaliteits kenmerken mee die van invloed zijn op zowel de ingewonnen als de gerbruikte referentie data. Op basis van de onderzoeken en initiatieven  
 *[Bron: IHN / Geonovum / DigiGo]* kunnen de volgende componenten worden meegenomen. Let wel er zijn meer componenten die van invloed zijn op de kwaliteit en bruikbarheid van de data. 
 

@@ -12,21 +12,21 @@ IFC is een uitwisselformaat bedoeld voor het uitwisselen van de Architectuur, Bo
 - Er is geen klasse binnen IFC (4X3) die ondersteunt in georeferentie 60. Een work-around is de mogelijkheid om gebruik te maken van generic property sets ([IfcPropertySet](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm)) voor het opslaan van informatie over de controlepunten voor deze methodiek. Dit wordt momenteel niet ondersteund.  
 
 <aside class="note" title="Gebruik IfcMapConversion">
-  <p>**AANBEVELING** Gebruik IfcMapConversion voor georeferentie van BIM in IFC t.b.v combinatie Geo en BIM.</p>
+  <p><strong>AANBEVELING:</strong> Gebruik IfcMapConversion voor georeferentie van BIM in IFC t.b.v combinatie Geo en BIM.</p>
 </aside>
 
 IFC MapConversion kan zowel gebruikt worden voor het transformeren van BIM naar Geo als van Geo naar BIM. Vanuit een digitaal 3D-stadsmodel in CityGML of CityJSON kan een deel van dit model naar IFC worden geëxporteerd. Dit deel kan dan op een 0-punt worden gepositioneerd. In de IfcMapconversion-attributen kunnen de transformatiewaarden worden ingevuld. 
 
-### IFC 5 (JSON)
+**IFC 5 (JSON)**
 IFC 5 is  momenteel in ontwikkeling. Het is een herstructurering van de huidige IFC schemas. De functionaliteit van de huidige schema's wil men behouden, maar de technische basis en serialisatie veranderen. Waar de huidige IFC-schema's op STEP zijn gebaseerd, is het IFC 5 schema op JSON gebaseerd. 
 
 Voor geometrie maakt IFC 5 gebruik van USD-formaat (Universal Scene Description), voor geometrie, bijvoorbeeld usdgeom::mesh – veelhoekig oppervlaktemodel. Er zijn nog geen vastgestelde afspraken over georeferentie. Wel zijn in de eerste verkenningen de elementen van IfcMapConversion terug te zien, maar dan als json attributen. 
 
-## DWG/DXF
+## DXF
 Wanneer men in 2D vectorsoftware werkt die geen .ifc bestand kan exporteren zijn er ook mogelijkheden voor georeferentie. De objecten in de DXF worden bij voorkeur getekend in een coördinatenruimte die matcht met een geprojecteerd CRS (zoals EPSG:28992 of EPSG:3857). De coördinaten zijn dan in meters, zoals in het coordinatenstelsel. Voorbeeld: een lijn van punt(110000, 450000) naar punt (110500, 450500) is dan correct gepositioneerd in RD-coördinaten.
 
 <aside class="note" title="Teken wanneer mogelijk op RD in 2D-Vectorsoftware">
-  <p>**AANBEVELING** Teken wanneer mogelijk in RD coordinaten in 2D vectorsoftware (CAD)</p>
+  <p><strong>AANBEVELING:</strong> Teken wanneer mogelijk in RD coordinaten in 2D vectorsoftware (CAD)</p>
 </aside>
 
 Dit is niet in alle software mogelijk. Bij software die alleen werkt met lokale coordinaten is het lastig om op coordinaat 110000 - 450000 te werken, omdat dit heel ver uit het centrale punt van deze software, punt 0,0 ligt. 
@@ -34,22 +34,26 @@ Dit is niet in alle software mogelijk. Bij software die alleen werkt met lokale 
 Een DXF-bestand zelf bevat geen informatie waarmee aangeduid wordt dat de waardes van de geometrie bedoeld is als RD-coördinaten. Het is mogelijk om de attributen vanuit IfcMapconversion als extra bestand mee te geven naast de .dxf als een .WKT, .PROJ of .JSON file. 
 
 <aside class="note" title="Voorzie in een extra bestand voor Georeferentie">
-  <p>**AANBEVELING** Voorzie in een extra bestand in .WKT volgens [WKT-CRS](https://www.ogc.org/standards/wkt-crs/) of in een .PROJ conform [PROJ](https://proj.org/en/stable/specifications/) wanneer de georeferentie en het gebruikt crs niet in het bronbestand is gedefinieerd. </p>
+  <p><strong>AANBEVELING:</strong> Voorzie in een extra bestand in <code>.WKT</code> volgens
+    <a href="https://www.ogc.org/standards/wkt-crs/" rel="noopener noreferrer" target="_blank"> WKT-CRS</a> 
+    of een <code>.PROJ</code> volgens 
+    <a href="https://proj.org/en/stable/specifications/" rel="noopener noreferrer" target="_blank">PROJ</a>
+    wanneer de georeferentie en het gebruikt crs niet in het bronbestand is gedefinieerd.</p>
 </aside>
 
-## GML 
+## (City)GML 
 [GML](https://www.ogc.org/standards/gml/) geeft de mogelijkheid om een verwijzing te maken naar een standaard CRS-en gedefinieerd door EPSG. Daarnaast geeft GML de mogelijkheid om een Engineering CRS te definieren. Het is mogelijk om dit lokaal coördinatenstelsel te verbinden aan een bekend coordinatenstelsel als RD-NAP waardoor het voor uitwisseling, visualisatie en analyse gebruikt kan worden. 
 
-### CityGML 
 CityGML is een open datamodel en uitwisselformaat voor de representatie van 3D-geo-informatie.
 Het kent verschillende encodings, waarvan XML/GML (CityGML) en JSON (CityJSON) de meest gebruikte zijn. Omdat de standaard een tijd lang alleen de GML encoding kende, en sterk verweven was met deze encoding, is vanaf het begin de term CityGML gebruikt voor zowel het data model als de GML encoding. Dat kan verwarrend zijn voor buitenstaanders.
 De CityGML encoding biedt twee mogelijkheden om een coordinatenstelsel te duiden voor het model. De voorkeur is om een totaal cöordinatenstelsel voor een dataset te duiden. Dit doet men in de gml:Envelope die gebruikt wordt om de ruimtelijke begrenzing (bounding box) van de dataset aan te geven. 
 
 <aside class="note" title="Teken wanneer mogelijk op RD in 2D-Vectorsoftware">
-  <p>**AANBEVELING** Refereer naar een URI van een standaard CRS of een uri van een zelf gehoste CRS. Wanneer dit niet mogelijk is kan men het Engineered CRS in een (City)GML bestand definieren. </p>
+  <p><strong>AANBEVELING:</strong> Refereer naar een URI van een standaard CRS of een uri van een zelf gehoste CRS. Wanneer dit niet mogelijk is kan men het Engineered CRS in een (City)GML bestand definieren. </p>
 </aside>
   
-Een voorbeeld van georeferentie in GML en CityGML vindt men in de Bijlage B.
+Een voorbeeld van georeferentie in GML en CityGML vindt men in de
+[bijlage voorbeeld georeferentie in GML](#voorbeeld-van-georeferentie-in-gml).
 
 ## CityJSON
 In de CityJSON encoding moet, anders dan in CityGML, één coordinatenstelsel voor het totaalmodel worden geduid. Dit doet men in het attribuut "Metadata": { 

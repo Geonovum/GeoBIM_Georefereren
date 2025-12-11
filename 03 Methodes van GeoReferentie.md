@@ -79,9 +79,9 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
   </tr>
 </table>
 
-<table style="width:100%; table-layout:fixed;">
+<table>
   <tr>
-    <th style = "width:30px;"> Level </th>
+    <th width ="50"> Level </th>
     <th> Methode </th>
     <th> Toepassingsvoorbeeld </th>
   </tr>
@@ -118,14 +118,14 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
 </table>
 
 <aside class="note" title="Gebruik van level van Georefereren">
-  <p>**AANBEVELING** Gebruik voor GeoBIM-integratie level 50 en voor GeoBIM-inzet voor constructiedoeleinde level 60 van georefereren.  </p>
+  <p><strong>AANBEVELING:</strong> Gebruik voor GeoBIM-integratie level 50 en voor GeoBIM-inzet voor constructiedoeleinde level 60 van georefereren.  </p>
 </aside>
 <aside class="note" title="Gebruik tooling om modellen te verrijken">
-<p>**AANBEVELING** Gebruik tooling om modellen die nog niet voldoen aan georeferentie 50, wanneer nodig, te verrijken met georeferentie informatie conform level 50. </p>
+<p><strong>AANBEVELING:</strong> Gebruik tooling om modellen die nog niet voldoen aan georeferentie 50, wanneer nodig, te verrijken met georeferentie informatie conform level 50. </p>
 </aside>
 
 
-## 1D-, 2D- en 3D-Geo- en -BIM-modellen
+## 1D, 2D en 3D Geo- en BIM-modellen
 Zowel BIM- als GEO-modellen kunnen een 1D, 2D als 3D coordinatenstelsel gebruiken. Om een juiste transformatie van coordinaten van 2D en 3D modellen te verkrijgen kunnen verschillende methoden worden toegepast.  
 
 Een GEO coordinatenstelsel kan 3D samengesteld (EPSG:7415), 2D (EPSG:28992) of 1D (EPSG:5709) zijn. 

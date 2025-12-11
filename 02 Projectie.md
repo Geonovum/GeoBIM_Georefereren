@@ -47,13 +47,13 @@ Voor BIM toepassingen wordt vaak gebruik gemaakt van een <a>Lokaal CRS</a>. Door
 Zoals hierboven aangegeven worden in Nederland meerder CRS-en gebruikt. Bij het gebruik van meerdere CRS-en bestaat risico op introductie van fouten door onjuiste implementatie van de relaties tussen CRS-en. Binnen Nederland worden aanbieders van data daarom geadviseerd om data aan te bieden in de verschillende CRS-en gericht op de eindgebruikers. Eindgebruikers worden juist geadviseerd data waar mogelijk op te vragen in hetzelfde CRS. Dit is ook een nadrukkelijke aanbeveling voor gebruikers van BIM-software. 
 
 <aside class="note" title="Gebruik hetzelfde CRS">
-  <p>**AANBEVELING** Vraag als eindgebruiker geodata waar mogelijk op in hetzelfde CRS</p>
+  <p><strong>AANBEVELING:</strong> Vraag als eindgebruiker geodata waar mogelijk op in hetzelfde CRS</p>
 </aside>
 
 De meeste BIM software is namelijk niet in staat om transformaties uit te voeren tussen verschillende geprojecteerde CRS'en. Wanneer GIS data dus naar BIM moet worden uitgewisseld is het belangrijk dat dit al geprojecteerd is in het coördinatensysteem dat de BIM Software verwacht. Afhankelijk van de BIM Software kan het zelfs nodig zijn te transformeren naar het lokale stelsel dat gebruikt wordt door de BIM software. Hier dienen binnen projecten duidelijke afspraken over gemaakt te worden.
 
 <aside class="note" title="Maak vooraf afspraken over de te gebruiken CRS-en en transformatie">
-  <p>**AANBEVELING** Maak afspraken met projectpartners over de te gebruiken CRS-en</p>
+  <p><strong>AANBEVELING:</strong> Maak afspraken met projectpartners over de te gebruiken CRS-en</p>
 </aside>
 
 De volgende pargrafen gaan dieper in op de verschillende CRS-typen, de relaties tussen CRS-en die direct relevant zijn voor deze praktijkrichtlijn en introduceert de gangbare terminologie voor CRS-en. Voor nog gedetailleerdere informatie en adviezen wordt verwezen naar de [Handreiking Gebruik coördinaatreferentiesystemen bij uitwisseling en visualisatie van geo-informatie](https://docs.geostandaarden.nl/crs/crs/).
@@ -162,7 +162,7 @@ Soms wordt de relatie van het lokale CRS ten opzicht van het Noorden gegeven. In
 De coördinaattransformatie tussen een geodetisch CRS en een lokaal CRS wordt, binnen de huidige standaarden, apart gegeven voor de horizontale en de vertikale component.
 
 <aside class="note" title="Aparte Horizontale en Vertikale coördinaattransformatie">
-  <p>**AANBEVELING** Gebruik aparte transformaties voor de horizontale en vertikale componenten. Dit betekent één 2D transformatie voor het horizontale vlak en één 1D transformatie voor het verticale vlak resulteert in een 3D transformatie.</p>
+  <p><strong>AANBEVELING:</strong> Gebruik aparte transformaties voor de horizontale en vertikale componenten. Dit betekent één 2D transformatie voor het horizontale vlak en één 1D transformatie voor het verticale vlak resulteert in een 3D transformatie.</p>
 </aside>
 
 ### Horizontaal - 2D gelijkvormigheidstransformatie
