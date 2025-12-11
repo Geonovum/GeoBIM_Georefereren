@@ -48,32 +48,49 @@ Revit kent <a>Project Units</a>. De project units bevat de instelling van de sta
 8.	Als het ontwerp zover is dat de stramienen vaststaan dan kan het Project Basepoint verplaatst worden zodat die op 5 of 10m van de eerste stramienen staat zoals gebruikelijk. Vóór het verplaatsten moet het Project Basepoint ge-unclipt worden. Verplaats vervolgens ook een coördinatie-object naar de nieuwe positie van het Project Basepoint.
 
 ## Methode 2: Project Basepoint en Survey Point aanpassen
-1.	Geeft het Revit bestand of een DWG-export uit het Revit bestand aan een landmeter of een BIM- of GIS-specialist en vraag om de RD-coördinaten van het Lokaal Coördinatiepunt (<a>Project Basepoint</a>) en vraag om een voorstel voor het CRS-Coördinatiepunt (Survey Point). 
+1.	Geeft het Revit bestand of een DWG-export uit het Revit bestand aan een landmeter of een BIM- of GIS-specialist en vraag om de RD-coördinaten van het Lokaal Coördinatiepunt (Project Basepoint) en vraag om een voorstel voor het CRS-Coördinatiepunt (Survey Point). 
 2.	Zet in Revit de Project Units op meter.
-3.	Unclip het Survey Point en verplaats het naar de opgegeven coördinaten van het Lokaal Coördinatiepunt (<a>Project Basepoint</a>). (NB: N/S=Y en E/W=X).
-4.	Clip het Survey Point en verplaats het naar het <a>Project Basepoint</a>.
+3.	Unclip het Survey Point en verplaats het naar de opgegeven coördinaten van het Lokaal Coördinatiepunt (Project Basepoint). (NB: N/S=Y en E/W=X).
+4.	Clip het Survey Point en verplaats het naar het Project Basepoint.
 9.	Unclip het Survey Point en verplaats het naar de opgegeven coördinaten van het CRS-Coördinatiepunt (Survey Point) en geef als Z-waarde de hoogte ten opzichte van N.A.P. op. Clip vervolgens het Survey Point en verplaats het Survey Point in de Z-richting terug naar 0.
-5.	Selecteer het <a>Project Basepoint</a> en geef de hoekverdraaiing ten opzichte van Grid-noord (True North) op. Het gaat hier om de hoekverdraaiing van Project North naar True North waarbij positief = tegen de klok in en negatief is met de klok mee. Revit zal negatieve hoekverdraaiingen omrekenen naar een positieve hoekverdraaiing.
+5.	Selecteer het Project Basepoint en geef de hoekverdraaiing ten opzichte van Grid-noord (True North) op. Het gaat hier om de hoekverdraaiing van Project North naar True North waarbij positief = tegen de klok in en negatief is met de klok mee. Revit zal negatieve hoekverdraaiingen omrekenen naar een positieve hoekverdraaiing.
 6.	Zet eventueel de Project Units terug naar millimeter.
 
- *Controle*
- Het venster "Location and Site" geeft aan of alles goed is gegaan.<br>
- <img width="532" height="420" alt="image" src="https://github.com/user-attachments/assets/d229c509-434e-44a2-b7f9-9018d430ecde" />
 
-*Units*
+<figure id="Controle-in-Revit">
+      <img src="./media/Revit_2.png" alt=Controle-in-Revit height="500"/>
+    <figcaption><a class="self-link" href="#fig-Controle-in-Revit"></bdi></a><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></figcaption>
+</figure>
+
+## Units
 
 Door een omissie in de IFC-exporter van Revit moet voorafgaand aan het exporteren naar IFC de Project Units Length op meter ingesteld worden.
 
-*Export naar IFC*
-1.	Lokaal Coördinatiepunt: exporteer een IFC (4 of hoger) met <a>Project Basepoint</a> als Coordinate Base.<br>
-De IFC is niet ge-georefereerd (alleen de coordinaten van <a>Project Basepoint</a> zijn correct) en niet Grid-noord gericht (Project North in Revit).<br>
-<img width="532" height="420" alt="image" src="https://github.com/user-attachments/assets/c4bf15c6-3218-4455-8e02-82bab44b21c1" /><br>
+## Export naar IFC
+1.	Lokaal Coördinatiepunt: exporteer een IFC (4 of hoger) met Project Basepoint als Coordinate Base.<br>
+De IFC is niet ge-georefereerd (alleen de coordinaten van Project Basepoint zijn correct) en niet Grid-noord gericht (Project North in Revit).<br>
+
+<figure id="Setup-in-Revit">
+      <img src="./media/Revit_3.png" alt=Setup-in-Revit height="400"/>
+    <figcaption><a class="self-link" href="#fig-Setup-in-Revit"></bdi></a><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></figcaption>
+</figure>
+
 2.	CRS-Coördinatiepunt: exporteer een IFC (4 of hoger) met Survey Point als Coordinate Base.<br>
-Vul bij EPSG Code in: 28992. De IFC is ge-Georefereerd en is Grid-noord gericht (True North in Revit)<br>
-![Scherm in Revit dat de plaatsing van dit referentiepunt in de wereld laat zien](media/Lokaal_coördinatiepunt_in_Revit_2.png "Plaatsing van het lokaal coördinatiepunt in GIS in Revit")
+Vul bij EPSG Code in: <mark> 28992</mark> **opmerking, waarom geen 7415**. De IFC is ge-Georefereerd en is Grid-noord gericht (True North in Revit)<br>
 
+<mark> dit is dezelfde figuur. Klopt dit? </mark>
 
-![Scherm in Revit met instellingen voor IFC export met Survey Point als Coordinate Base](https://github.com/user-attachments/assets/1c77bf8d-8c8b-4c37-bb9a-3a405c6dd5d1)
+<figure id="Controle-in-Revit">
+      <img src="./media/Revit_2.png" alt=Controle-in-Revit height="500"/>
+    <figcaption><a class="self-link" href="#fig-Controle-in-Revit"></bdi></a><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></figcaption>
+</figure>
+
+<figure id="Setup-in-Revit-Survey-Point">
+      <img src="./media/Revit_4.png" alt=Setup-in-Revit-Survey-Pointt height="400"/>
+    <figcaption><a class="self-link" href="#fig-Setup-in-Revit-Survey-Point"></bdi></a><span class="fig-title">Scherm in Revit met instellingen voor IFC export met Survey Point als Coordinate Base</span></figcaption>
+</figure>
+
+<mark> Vanwaar deze bron, kunnen we dit toelichten?</mark>
 
 [Hans Hendriks (2022)](https://github.com/Hans-Lammerts/Sample-Test-Files/blob/master/Geolocation%20information%20from%20Revit%20to%20IFC_v1.0.pdf)
 
