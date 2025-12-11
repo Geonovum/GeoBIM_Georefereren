@@ -193,6 +193,6 @@ $$ \Delta \ell = -9,2 + \frac{r_i^2}{1629^2} \text{ mm per 100 m} $$
 gemiddelde coördinaten in km van de eindpunten in het RD-stelsel zijn.
 
 <figure id="correcties-aan-gemeten-afstanden">
-      <img src="./media/Correcties aan gemeten afstanden.png" alt="2D en 3D Geo of BIM combineren" height="400"/>
+      <img src="./media/Correcties_aan_gemeten_afstanden.png" alt="2D en 3D Geo of BIM combineren" height="400"/>
     <figcaption><a class="self-link" href="#fig-correcties-aan-gemeten-afstanden"></bdi></a><span class="fig-title">Correcties aan gemeten afstanden</span></figcaption>
 </figure>

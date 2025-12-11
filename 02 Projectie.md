@@ -94,7 +94,7 @@ Om geo-informatie vanaf het gekromde aardoppervlak op een plat vlak weer te geve
 
 
 <figure id="Projecties">
-   <img src="media/geonovum-geo-bim_georefereren_3.png" alt="Projecties" title="Onderschrift"  height="200"></a>
+   <img src="media/geonovum-geo-bim_georefereren_3.png" alt="Projecties" height="200"></a>
     <figcaption><a class="self-link" href="#fig-Projecties"></bdi></a><span class="fig-title">Projecties</span></figcaption>
 </figure>
 
@@ -146,14 +146,14 @@ Soms wordt de relatie van het lokale CRS ten opzicht van het Noorden gegeven. In
 
 
 <figure id="True_North_en_Grid_North">
-  <img src="./media/True_North_and_Grid_North.png" alt="True North en Grid North" title="True North en Grid North" height="300"> 
+  <img src="./media/True_North_and_Grid_North.png" alt="True_North_en_Grid_North" title="True North en Grid North" height="300"> 
   <figcaption><a class="self-link" href="#fig-True-North-en-Grid-North"></bdi></a><span class="fig-title">True North en Grid North</span></figcaption>
 </figure>
 
 * Het Project North is normaliter gebaseerd op de voornaamste as van het bouwwerk. Het beïnvloedt hoe je schetst in views in software en hoe views op tekenbladen worden geplaatst.Het Project North richt zich vaak richting de bovenkant van een tekengebied. Dit vereenvoudigt het modelleren. 
 
 <figure id="Project_North">
-  <img src="./media/Project North.png" alt="Project North" title="Project North" height="300"> 
+  <img src="./media/Project North.png" alt="Project_North" title="Project North" height="300"> 
   <figcaption><a class="self-link" href="#fig-Project-North"></bdi></a><span class="fig-title">Project North</span></figcaption>
 </figure> 
 
