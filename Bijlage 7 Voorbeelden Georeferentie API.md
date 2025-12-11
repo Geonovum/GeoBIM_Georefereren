@@ -1,4 +1,3 @@
-
 # Voorbeeld van georeferentie met API's 
 
 <aside class="example" title="Voorbeeld van bevraging naar beschikbare collecties in een API-features">

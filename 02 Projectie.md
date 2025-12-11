@@ -153,7 +153,7 @@ Soms wordt de relatie van het lokale CRS ten opzicht van het Noorden gegeven. In
 * Het Project North is normaliter gebaseerd op de voornaamste as van het bouwwerk. Het beïnvloedt hoe je schetst in views in software en hoe views op tekenbladen worden geplaatst.Het Project North richt zich vaak richting de bovenkant van een tekengebied. Dit vereenvoudigt het modelleren. 
 
 <figure id="Project_North">
-  <img src="./media/Project North.png" alt="Project_North" title="Project North" height="300"> 
+  <img src="./media/Project_North.png" alt="Project_North" title="Project North" height="300"> 
   <figcaption><a class="self-link" href="#fig-Project-North"></bdi></a><span class="fig-title">Project North</span></figcaption>
 </figure> 
 
