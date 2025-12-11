@@ -7,12 +7,12 @@ Het is mogelijk om een BIM-model op de kaart te zetten door alleen het adres, va
 
 De beschikbaarheid van informatie voor het berekenen van georeferentie-parameters voor de verschillende methoden is onderzocht door de TU Delft [[Hakim2024]]. 
 
-<table style="width:100%; table-layout:fixed;">
+<table>
   <caption> Levels van georeferentie </caption>
   <tr>
-    <th style = "width:200;"> Methode </th>
-    <th style = "width:50;"> Level </th>
-    <th style = "width:200;"> Beschrijving </th>
+    <th style = "width:200px;"> Methode </th>
+    <th style = "width:50px;"> Level </th>
+    <th style = "width:200px;"> Beschrijving </th>
     <th> Translatie </th>
     <th> Rotatie </th>
     <th> Schaal </th>
