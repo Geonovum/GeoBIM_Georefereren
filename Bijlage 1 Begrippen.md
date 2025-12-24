@@ -1,9 +1,10 @@
 # Bijlagen 
 ## Definities en afkortingen
 
-**<dfn>EPSG </dfn>**<br>
+**<dfn>EPSG code</dfn>**<br>
 <a>EPSG</a> is de afkorting voorEuropean Petroleum Survey Group, de oorspronkelijke organisatie die de standaardisatie van coördinaatreferentiesystemen heeft opgezet. Hun codes zijn nu wereldwijd dé referentie in GIS, geodesie en cartografie. Van oorsprong is de EPSG  een organisatie opgericht door de Europese olie- en gasindustrie om geodetische en cartografische standaarden te ontwikkelen. Ze wilden een uniforme lijst van coördinaatreferentiesystemen (CRS) en transformaties vastleggen, zodat geografische data wereldwijd correct en consistent kon worden gebruikt. De EPSG Geodetic Parameter Dataset, een internationale standaardcatalogus met codes (zoals EPSG:4326 voor WGS84 en EPSG:5709 voor NAP). Tegenwoordig wordt de EPSG-database onderhouden door de International Association of Oil & Gas Producers (IOGP), via hun Geomatics Committee.<br>
 <br>
+
 **<dfn>CRS</dfn>**<br> 
 Coördinaat Referentie Systeem. Een systeem waarmee een gebied wordt ingedeeld zodat ieder punt binnen dat gebied eenduidig kan worden bepaalt. Een CRS kan een lokaal karakter hebben, bijvoorbeeld het grid volgens systematiek 'A-1' op de bouw tot wereldwijd, in de vorm van WGS84.<br>
 <br>
@@ -92,7 +93,7 @@ Het kaartreferentiesysteem (CRS) Voor Nederland is dat EPSG:7415 met RD+NAP (XYZ
 **<dfn>AHN</dfn>:** <br>
 <a>AHN</a> staat voor Actueel Hoogtebestand Nederland. Het is een digitale hoogtekaart van heel Nederland waarin de hoogte van het maaiveld en objecten (zoals gebouwen en bomen) zeer nauwkeurig is vastgelegd. Iedere 'generatie' van AHN krijgt een nieuw volgnummer. Meest nieuwste generatie is AHN4 is landsdekkend maar er is ook AHN5 beschikbaar. We spreken over een 'landsdekkend' als van heel Nederland data beschikbaar is. Let er op dat tussen AHN inwinning en vrijgeven een tijd tussen zit.<br>
 <br>
-**<dfn>Survey points</dfn>** <br>
+**<dfn>Survey point</dfn>** <br>
 Survey points zijn referentiepunten die gebruikt worden bij landmeetkunde en geodetische metingen om de positie van objecten of gebieden nauwkeurig vast te leggen. Ze vormen de basis voor het opbouwen van kaarten, het uitvoeren van bouwprojecten en het beheren van geografische informatie.<br>
 <br>
 **<dfn>Footprint alignment</dfn>** <br>
@@ -109,9 +110,14 @@ True verwijst naar de richting naar de Noordpool. Dit is weer een andere dan het
 **<dfn>Project North</dfn>** <br>
 <a>Project North</a> is een term uit bouwkunde en ontwerpsoftware die verwijst naar de geometrische oriëntatie van een gebouw binnen een projecttekening. Het is dus niet het kaart noorden (Grid North), maar een praktische richting die gebruikt wordt om het ontwerp overzichtelijk en werkbaar te maken. De hoek tussen Project North en Grid North is belangrijk. Deze dient 3 graden precies bekend te zijn.<br> 
 <br>
-**<dfn>Internal origin</dfn>** <br>
+
+**<dfn>Project units</dfn>** <br>
+<a>Project units</a> is een term uit bouwkunde en ontwerpsoftware die verwijst naar de geometrische oriëntatie van een gebouw binnen een projecttekening. Het is dus niet het kaart noorden (Grid North), maar een praktische richting die gebruikt wordt om het ontwerp overzichtelijk en werkbaar te maken. De hoek tussen Project North en Grid North is belangrijk. Deze dient 3 graden precies bekend te zijn.<br> 
+
+**<dfn>Internal Origin</dfn>** <br>
 <a>Internal origin</a> is het vaste, niet-verplaatsbare nulpunt van het interne coördinatensysteem van software. Alle elementen in een 3D model worden uiteindelijk hiermee vastgelegd. Het wordt ook wel genoemd het  “absolute (0,0,0) <a>nulpunt</a>” van het model en vormt de basis voor het project base point en survey point.<br>
 <br>
+
 **<dfn>Nulpunt</dfn> (definities)** <br>
 Het begrip “<a>Nulpunt</a>” is meervoudig interpreteerbaar en dient zoveel mogelijk vermeden te worden in de communicatie tussen GIS en BIM. In de praktijk kan een nulpunt namelijk veel betekenissen hebben:<br>
 - De oorsprong in modelleersoftware (<a>internal origin</a>).<br>

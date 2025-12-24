@@ -47,13 +47,13 @@ Voor BIM toepassingen wordt vaak gebruik gemaakt van een <a>Lokaal CRS</a>. Door
 Zoals hierboven aangegeven worden in Nederland meerder CRS-en gebruikt. Bij het gebruik van meerdere CRS-en bestaat risico op introductie van fouten door onjuiste implementatie van de relaties tussen CRS-en. Binnen Nederland worden aanbieders van data daarom geadviseerd om data aan te bieden in de verschillende CRS-en gericht op de eindgebruikers. Eindgebruikers worden juist geadviseerd data waar mogelijk op te vragen in hetzelfde CRS. Dit is ook een nadrukkelijke aanbeveling voor gebruikers van BIM-software. 
 
 <aside class="note" title="Gebruik hetzelfde CRS">
-  <p>**AANBEVELING** Vraag als eindgebruiker geodata waar mogelijk op in hetzelfde CRS</p>
+  <p><strong>AANBEVELING:</strong> Vraag als eindgebruiker geodata waar mogelijk op in hetzelfde CRS</p>
 </aside>
 
 De meeste BIM software is namelijk niet in staat om transformaties uit te voeren tussen verschillende geprojecteerde CRS'en. Wanneer GIS data dus naar BIM moet worden uitgewisseld is het belangrijk dat dit al geprojecteerd is in het coördinatensysteem dat de BIM Software verwacht. Afhankelijk van de BIM Software kan het zelfs nodig zijn te transformeren naar het lokale stelsel dat gebruikt wordt door de BIM software. Hier dienen binnen projecten duidelijke afspraken over gemaakt te worden.
 
 <aside class="note" title="Maak vooraf afspraken over de te gebruiken CRS-en en transformatie">
-  <p>**AANBEVELING** Maak afspraken met projectpartners over de te gebruiken CRS-en</p>
+  <p><strong>AANBEVELING:</strong> Maak afspraken met projectpartners over de te gebruiken CRS-en</p>
 </aside>
 
 De volgende pargrafen gaan dieper in op de verschillende CRS-typen, de relaties tussen CRS-en die direct relevant zijn voor deze praktijkrichtlijn en introduceert de gangbare terminologie voor CRS-en. Voor nog gedetailleerdere informatie en adviezen wordt verwezen naar de [Handreiking Gebruik coördinaatreferentiesystemen bij uitwisseling en visualisatie van geo-informatie](https://docs.geostandaarden.nl/crs/crs/).
@@ -94,7 +94,7 @@ Om geo-informatie vanaf het gekromde aardoppervlak op een plat vlak weer te geve
 
 
 <figure id="Projecties">
-   <img src="media/geonovum-geo-bim_georefereren_3.png" alt="Projecties" title="Onderschrift"  height="200"></a>
+   <img src="media/geonovum-geo-bim_georefereren_3.png" alt="Projecties" height="200"></a>
     <figcaption><a class="self-link" href="#fig-Projecties"></bdi></a><span class="fig-title">Projecties</span></figcaption>
 </figure>
 
@@ -146,14 +146,14 @@ Soms wordt de relatie van het lokale CRS ten opzicht van het Noorden gegeven. In
 
 
 <figure id="True_North_en_Grid_North">
-  <img src="./media/True_North_and_Grid_North.png" alt="True North en Grid North" title="True North en Grid North" height="300"> 
+  <img src="./media/True_North_and_Grid_North.png" alt="True_North_en_Grid_North" title="True North en Grid North" height="300"> 
   <figcaption><a class="self-link" href="#fig-True-North-en-Grid-North"></bdi></a><span class="fig-title">True North en Grid North</span></figcaption>
 </figure>
 
 * Het Project North is normaliter gebaseerd op de voornaamste as van het bouwwerk. Het beïnvloedt hoe je schetst in views in software en hoe views op tekenbladen worden geplaatst.Het Project North richt zich vaak richting de bovenkant van een tekengebied. Dit vereenvoudigt het modelleren. 
 
 <figure id="Project_North">
-  <img src="./media/Project North.png" alt="Project North" title="Project North" height="300"> 
+  <img src="./media/Project_North.png" alt="Project_North" title="Project North" height="300"> 
   <figcaption><a class="self-link" href="#fig-Project-North"></bdi></a><span class="fig-title">Project North</span></figcaption>
 </figure> 
 
@@ -162,7 +162,7 @@ Soms wordt de relatie van het lokale CRS ten opzicht van het Noorden gegeven. In
 De coördinaattransformatie tussen een geodetisch CRS en een lokaal CRS wordt, binnen de huidige standaarden, apart gegeven voor de horizontale en de vertikale component.
 
 <aside class="note" title="Aparte Horizontale en Vertikale coördinaattransformatie">
-  <p>**AANBEVELING** Gebruik aparte transformaties voor de horizontale en vertikale componenten. Dit betekent één 2D transformatie voor het horizontale vlak en één 1D transformatie voor het verticale vlak resulteert in een 3D transformatie.</p>
+  <p><strong>AANBEVELING:</strong> Gebruik aparte transformaties voor de horizontale en vertikale componenten. Dit betekent één 2D transformatie voor het horizontale vlak en één 1D transformatie voor het verticale vlak resulteert in een 3D transformatie.</p>
 </aside>
 
 ### Horizontaal - 2D gelijkvormigheidstransformatie

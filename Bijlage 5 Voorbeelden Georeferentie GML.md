@@ -1,6 +1,4 @@
-# Voorbeeld van georeferentie bestanden 
-
-## GML
+# Voorbeeld van georeferentie in GML
 
 <aside class="example" title="Voorbeeld van CRS van totaal model in de Envelope in CityGML">
   Het onderstaande voorbeeld geeft aan hoe men in CityGML een Coordinatenstelsel voor een totaal model duidt:
