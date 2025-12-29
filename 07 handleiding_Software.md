@@ -90,6 +90,13 @@ Vul bij EPSG Code in: <mark> 28992</mark> **opmerking, waarom geen 7415**. De IF
 
 <mark> Vanwaar deze bron, kunnen we dit toelichten?</mark>
 
+<figure id="Setup-in-Revit-Survey-Point">
+      <img src="./media/Revit_4.png" alt=Setup-in-Revit-Survey-Pointt height="400"/>
+    <figcaption><a class="self-link" href="#fig-Setup-in-Revit-Survey-Point"></bdi></a><span class="fig-title">Scherm in Revit met instellingen voor IFC export met Survey Point als Coordinate Base</span></figcaption>
+</figure>
+
+<mark> Vanwaar deze bron, kunnen we dit toelichten?</mark>
+
 [Hans Hendriks (2022)](https://github.com/Hans-Lammerts/Sample-Test-Files/blob/master/Geolocation%20information%20from%20Revit%20to%20IFC_v1.0.pdf)
 
 ## Autocad Civil 3D
