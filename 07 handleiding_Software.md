@@ -11,7 +11,7 @@ Optie 1: 2D
 4. In QGIS selecteer Project>Import/Export>Export Project to DXF. De CRS zal EPSG:28992 (RD NEW) tonen.
 
 <figure id="QGIS-DXF-Export-2D">
-      <img src="./media/QGIS_1.png" alt="Leefttijd van verschillende puntenwolken van de stationsregio in Delft" height="500"/>
+      <img src="./media/QGIS_1.png" alt="QGIS-DXF-Export-2D" height="500"/>
     <figcaption><a class="self-link" href="#fig-QGIS-DXF-Export-2D"></bdi></a><span class="fig-title">Export 2D project naar DXF in QGIS</span></figcaption>
 </figure>
 
@@ -22,7 +22,7 @@ Optie 2: 3D
 3. Drag-drop je bestanden in QGIS.
 4. In QGIS ga naar Project>Import/Export>Export Project to DXF. De CRS zal EPSG:74152 (RD NEW + NAP height) tonen.
 <figure id="QGIS-DXF-Export-3D">
-      <img src="./media/QGIS_2.png" alt="Leefttijd van verschillende puntenwolken van de stationsregio in Delft" height="500"/>
+      <img src="./media/QGIS_2.png" alt="QGIS-DXF-Export-3D" height="500"/>
     <figcaption><a class="self-link" href="#fig-QGIS-DXF-Export-3D"></bdi></a><span class="fig-title">Export 2D project naar DXF in QGIS</span></figcaption>
 </figure>
 
