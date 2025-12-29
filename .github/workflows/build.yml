@@ -20,19 +20,52 @@ jobs:
 
       - name: Validate HTML
         run: |
-          set -euo pipefail
+          set +e
           docker run --rm -v "$PWD:/site" ghcr.io/validator/validator:latest \
-            vnu --errors-only --skip-non-html --format json /site/snapshot.html \
-            | tee $CHECK_DIR/html-validation.json
+            java -jar /vnu.jar --errors-only --skip-non-html --format json /site/snapshot.html \
+            > $CHECK_DIR/html-validation.json
+          status=$?
+          set -e
 
-      - name: Check for alternateFormats
+          echo "HTML validator output (pretty JSON):"
+          jq '.' $CHECK_DIR/html-validation.json
+
+          jq -r '
+            if (.messages|length==0) then "Geen HTML-validatiefouten."
+            else
+              .messages[]
+              | "[\(.type|ascii_upcase)] regel \(.lastLine // "?"):\(.lastColumn // "?") - \((.message // "") | gsub("\\s+";" "))"
+            end
+          ' $CHECK_DIR/html-validation.json | tee $CHECK_DIR/html-validation.log
+
+          jq -r '
+            def esc: gsub("%";"%25") | gsub("\r";"%0D") | gsub("\n";"%0A");
+            if (.messages|length>0) then
+              .messages[]
+              | "::error file=snapshot.html,line=\(.lastLine // 1),col=\(.lastColumn // 1)::[\(.type|ascii_upcase)] \((.message // "") | esc)"
+            else empty end
+          ' $CHECK_DIR/html-validation.json
+
+          if [ "$status" -ne 0 ]; then
+            echo "HTML validatie gaf fouten. Zie annotaties hierboven en $CHECK_DIR/html-validation.log"
+            exit $status
+          fi
+
+      - name: Check for alternateFormats via Node
         id: config
         run: |
-          echo "grep=false" >> $GITHUB_OUTPUT
-          if grep -q 'alternateFormats' ./js/config.js; then
-            if grep -Pzoq 'alternateFormats:\s*\[\s*\{\s*label:\s*".+?",\s*uri:\s*".+?"\s*\}\s*\]' ./js/config.js; then
-              echo "grep=true" >> $GITHUB_OUTPUT
-            fi
+          # Maak config require-baar
+          cp ./js/config.js config.js
+          echo "module.exports = { respecConfig };" >> config.js
+
+          # Laat Node bepalen of er een PDF entry is (en exitcode gebruiken)
+          if node -e "const {respecConfig}=require('./config.js');
+            const ok = Array.isArray(respecConfig.alternateFormats)
+              && respecConfig.alternateFormats.some(f => f && f.label==='pdf' && f.uri);
+            if (!ok) process.exit(1);" ; then
+            echo "grep=true" >> $GITHUB_OUTPUT
+          else
+            echo "grep=false" >> $GITHUB_OUTPUT
           fi
 
       - name: Copy pdf.js if needed
@@ -46,7 +79,7 @@ jobs:
           echo "module.exports = { respecConfig };" >> config.js
           echo "var window = {respecMermaid:{createFigures:null}};" | cat - config.js > temp && mv temp config.js
           npm install puppeteer
-          python3 -m http.server 8080 &
+          python3 -m http.server 8081 &
           rm -f *.pdf
           node pdf.js
           mv *.pdf static/
