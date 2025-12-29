@@ -27,6 +27,9 @@ jobs:
           status=$?
           set -e
 
+          echo "HTML validator output (pretty JSON):"
+          jq '.' $CHECK_DIR/html-validation.json
+
           jq -r '
             if (.messages|length==0) then "Geen HTML-validatiefouten."
             else
