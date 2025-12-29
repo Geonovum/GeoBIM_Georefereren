@@ -1,7 +1,7 @@
 # Methodes van Georeferentie
 
 ## Levels van georeferentie
-Er zijn verschillende methodes beschikbaar om  BIM en GEO modellen bij elkaar te brengen op de kaart. Deze methoden verschillen in nauwkeurigheid en mogelijkheid voor het bijeenbrengen van modellen. Dit wordt door Clemen Christian beschreven als LoGs oftwel Levels of Georeferencing (niveaus van georefereren) [[Christian2019]].
+Er zijn verschillende methodes beschikbaar om  BIM en GEO modellen bij elkaar te brengen op de kaart. Deze methoden verschillen in nauwkeurigheid en mogelijkheid voor het bijeenbrengen van modellen. Dit wordt door Clemen Christian beschreven als <a>LoGeoRef</a> oftwel Levels of Georeferencing (niveaus van georefereren) [[Christian2019]].
 
 Het is mogelijk om een BIM-model op de kaart te zetten door alleen het adres, van waar het BIM-model dient te komen, te duiden. Deze informatie geeft een indicatie van waar het model moet komen. De informatie is niet toereikend om het model exact te plaatsen (transleren, roteren en schalen). Een andere methode zoals het model relateren aan een officieel coordinatenstelsel is hiervoor wel geschikt. Afhankelijk van de behoefte zijn verschillende methodes geschikt.
 
@@ -187,10 +187,25 @@ Wanneer voor georeferentie een precisie van milimeters belangrijk is dient men d
 
 De formule om deze correctie te berekenen is: 
 
-$$ \Delta \ell = -9,2 + \frac{r_i^2}{1629^2} \text{ mm per 100 m} $$
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>&Delta;</mi><mi>&ell;</mi>
+  <mo>=</mo>
+  <mo>−</mo><mn>9.2 </mn>
+  <mo>+</mo>
+  <mfrac>
+    <msup>
+      <msub><mi>r</mi><mi>i </mi></msub>
+      <mn>2</mn>
+    </msup>
+    <msup><mn>1629 </mn><mn>2</mn></msup>
+  </mfrac>
+  <mspace width="0.5em"/>
+  <mtext> mm per 100 m</mtext>
+</math>
 
+waarbij <span class="numerator">r<sub>i</sub><sup>2</sup></span> de gemiddelde coördinaten in km van de eindpunten in het RD-stelsel zijn.
 
-gemiddelde coördinaten in km van de eindpunten in het RD-stelsel zijn.
+Voor locaties nabij Amersfoort zal de correctie rond de -9,2 mm per 100 meter (x, y) liggen. Voor locaties rond Mastricht zal de correctie rond de + 10 mm per 100 meter (x,y) liggen. 
 
 <figure id="correcties-aan-gemeten-afstanden">
       <img src="./media/Correcties_aan_gemeten_afstanden.png" alt="2D en 3D Geo of BIM combineren" height="400"/>

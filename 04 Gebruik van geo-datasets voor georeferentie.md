@@ -116,19 +116,19 @@ Het doel van het refereren van een model binnen het geo-domein is het positioner
 Voor het gebruik van een dataset uit het **GIS-domein** zijn verschillende kenmerken van belang voor de toepassing binnen een **BIM-systeem**. Niet alle data is even geschikt om gebruikt te worden, naast het gerbuik van het juiste coordinaten systeem, spelen er kwaliteits kenmerken mee die van invloed zijn op zowel de ingewonnen als de gerbruikte referentie data. Op basis van de onderzoeken en initiatieven  
 *[Bron: IHN / Geonovum / DigiGo]* kunnen de volgende componenten worden meegenomen. Let wel er zijn meer componenten die van invloed zijn op de kwaliteit en bruikbarheid van de data. 
 
-### 1. Geografische distributie van de meet punten
+***1. Geografische distributie van de meet punten***
 Afhankelijk van de inwin methode, is de geografische distributie van de meetpunten van belang. Dit heeft namelijk een direct effect van het onderscheiden van objecten in het terrein, maar ondersteunt ook in correct vinden van de refrenetie punten. De distributie wordt omschreven door de hoeveelheid punten per vierkante meter of door de minimale afstand tussen de punten. De leert praktijk is een hoge puntdichtheid gekoppeld aan een hoger detailniveau van het 3D-model.
 
-### 2. De absolute en relatieve nauwkeurigheid van een geo-dataset
+***2. De absolute en relatieve nauwkeurigheid van een geo-dataset***
 In de literatuur en uitvraag­specificaties wordt een onderscheid gemaakt tussen de **absolute** en **relatieve** nauwkeurigheid van een geo-dataset. De **absolute nauwkeurigheid** beschrijft de afwijking tussen de inwinning of het model en de werkelijkheid, terwijl de **relatieve nauwkeurigheid** vaak wordt gebruikt om de afwijking tussen meetpunten binnen overlappende inwinningen te omschrijven. Een voorbeeld hiervan is een dwarsprofiel over een ingewonnen stuk snelweg. Beide typen nauwkeurigheden worden uitgedrukt in een planimetrische (XY) en een altimetrische (Z) component. De verschillende uitvraag­specificaties laten zien dat de relatieve nauwkeurigheid altijd kleiner is dan de absolute nauwkeurigheid.
 
-### 3. De classificatieparameters in een geo-dataset
+***3. De classificatieparameters in een geo-dataset***
 De wijze waarop objecten binnen een geo-dataset worden geclassificeerd, is essentieel voor de bruikbaarheid binnen een BIM-context. De toegepaste classificatiemethode vormt een belangrijke kwaliteitsparameter, bijvoorbeeld wanneer classificatie wordt uitgevoerd door kunstmatige intelligentie (AI) of door menselijke experts. Daarnaast zijn de gebruikte definities een cruciaal startpunt binnen dit proces. Zo kan de classificatie van vegetatie in de referentiedataset niet automatisch dezelfde definitie hebben als in de ingewonnen dataset, wat kan leiden tot interpretatieverschillen of inconsistenties in het uiteindelijke model.
 
-### 4. De inwindatum van de geo-dataset
+***4. De inwindatum van de geo-dataset***
 Het moment van inwinning bepaalt de bruikbaarheid van de dataset, aangezien iedere geo-dataset die wordt weergegeven in een GIS-omgeving een momentopname is. Een geo-dataset vertegenwoordigt nooit de volledige werkelijkheid, maar vormt slechts een benadering van de omgeving. Hierdoor kan de omgeving, afhankelijk van de mate van verandering, in de loop van de tijd sterk of minder sterk afwijken van de oorspronkelijke weergave. Dit wordt geïllustreerd in de onderstaande figuren aan de hand van de stationsregio van Delft, zoals weergegeven in het Actueel Hoogtebestand Nederland en de 3D Basisvoorziening, waarbij de bouw van de stationsregio een ingrijpende verandering in het terrein laat zien.
 
-<figure id="Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in Delft">
+<figure id="Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft">
       <img src="./media/Regio_delft_verandering.png" alt="Leefttijd van verschillende puntenwolken van de stationsregio in Delft" height="500"/>
-    <figcaption><a class="self-link" href="#fig-Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in Delft"></bdi></a><span class="fig-title">Leefttijd van verschillende puntenwolken van de stationsregio in Delft</span></figcaption>
+    <figcaption><a class="self-link" href="#fig-Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft"></bdi></a><span class="fig-title">Leefttijd van verschillende puntenwolken van de stationsregio in Delft</span></figcaption>
 </figure>

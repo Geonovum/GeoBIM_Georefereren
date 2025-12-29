@@ -130,3 +130,6 @@ Het begrip “<a>Nulpunt</a>” is meervoudig interpreteerbaar en dient zoveel m
 <br>
 <br>
 
+
+**<dfn>LoGeoRef</dfn>**
+LoGeoRef is een afkorting van Level Of Georeferencing. Dit staat voor het level van georeferentie dat kan worden gebruikt. Van globaal geogerefereert met een adresnotatie (loGeoRef 10) tot aan een stelsel van controlepunten tussen model, gis en fysieke buitenruimte (loGeoRef 60).
