@@ -84,7 +84,7 @@ Vul bij EPSG Code in: <mark> 28992</mark> **opmerking, waarom geen 7415**. De IF
 </figure>
 
 <figure id="Setup-in-Revit-Survey-Point">
-      <img src="./media/Revit_4.png" alt=Setup-in-Revit-Survey-Pointt height="400"/>
+      <img src="./media/Revit_4.png" alt=Setup-in-Revit-Survey-Point height="400"/>
     <figcaption><a class="self-link" href="#fig-Setup-in-Revit-Survey-Point"></bdi></a><span class="fig-title">Scherm in Revit met instellingen voor IFC export met Survey Point als Coordinate Base</span></figcaption>
 </figure>
 
@@ -125,35 +125,17 @@ Instellen Georeferentie (via de IFC4 “MapConversion” methode) voor het expor
     In de instellingen van de Survey Point kun je bij “Geo-referencing Map…” de waarden invullen voor datum, coördinatensysteem etc. 
 
 
-<div class="figures-container">
-  <figure id="Cordinate_system_ArchiCAD">
+<div style="display:flex; gap:20px; justify-content:center; align-items:flex-start;">
+  <figure style="text-align:center; margin:0;" id="Cordinate_system_ArchiCAD">
     <img src="./media/Archicad_01.png" alt="Cordinate_system_ArchiCAD" height="700"/>
-    <figcaption>
-      Controle van instellingen van RD-stelsel in ArchiCAD
-    </figcaption>
+    <figcaption>Controle van instellingen van RD-stelsel in ArchiCAD</figcaption>
   </figure>
 
-  <figure id="Cordinate_system_ArchiCAD_2">
+  <figure style="text-align:center; margin:0;" id="Cordinate_system_ArchiCAD_2">
     <img src="./media/Archicad_02.png" alt="Cordinate_system_ArchiCAD_2" height="700"/>
-   <figcaption>
-      Tweede figuur: voorbeeld
-    </figcaption>
+    <figcaption>Tweede figuur: voorbeeld</figcaption>
   </figure>
 </div>
-
-<style>
-.figures-container {
-  display: flex;
-  gap: 20px;       
-  justify-content: center; 
-  align-items: flex-start; 
-}
-
-figure {
-  text-align: center;
-  margin: 0;
-}
-</style>
 
 <aside class="note" title="Werk dicht op de project-oriëntatie in ArchiCAD">
   <p><strong>AANBEVELING:</strong> Werk het liefst zo dicht mogelijk op de project-oriëntatie in ArchiCAD zodat grote offset-waarden in het IFC-bestand worden vermeden.   </p>
@@ -350,10 +332,10 @@ Voor modellen die niet geogerefereerd zijn kan men de Georeferencer in QGIS gebr
 Laad eerst de 2D Vector-modellen in. Voor 2D autocad kan dit DXF zijn. 
 Gebruik in dit geval de plug-in DXF-AnotherDXFImporter
 
-<figure id="QGIS_Vector_Conversie">
-    <img src="./media/QGIS_5.png" alt="QGIS_Vector_Conversie" height="200"/>
+<figure id="QGIS_Georeferencer">
+    <img src="./media/QGIS_5.png" alt="QGIS_Georeferencer" height="200"/>
     <figcaption>
-      QGIS Vector Conversie 
+      QGIS Georeferencer
     </figcaption>
 </figure>
 
@@ -367,8 +349,8 @@ Door bekende punten uit het model in te voeren of te positoneren op de kaart, wo
 </figure>
 
 De proj-parameters worden door QGIS ingevuld zodat hiermee een 2D BIM-model juist geogerefereerd wordt. 
-<figure id="QGIS_Vector_Conversie">
-    <img src="./media/QGIS_4.png" alt="QGIS_Vector_Conversie" height="700"/>
+<figure id="QGIS_Vector_Conversie_2">
+    <img src="./media/QGIS_4.png" alt="QGIS_Vector_Conversie_2" height="700"/>
     <figcaption>
       QGIS Vector Conversie 
     </figcaption>
@@ -376,7 +358,7 @@ De proj-parameters worden door QGIS ingevuld zodat hiermee een 2D BIM-model juis
 
 Door een inverse van de proj-parameter te gebruiken kunnen ook objecten uit een geogerefereerde set, zoals de BGT (RD) naar een Lokaal coordinatenstelsel worden geconverteerd. 
 <figure id="QGIS_Inverse-Vector_Conversie">
-    <img src="./media/QGIS_3.png" alt="QGIS_Vector_Conversie" height="700"/>
+    <img src="./media/QGIS_3.png" alt="QGIS_Inverse_Vector_Conversie" height="700"/>
     <figcaption>
       QGIS Inverse Vector Conversie 
     </figcaption>
@@ -402,7 +384,7 @@ Klik op de 3D-weergave en selecteer Enkel Symbool.
     </figcaption>
 </figure>
 
-Het is hiermee mogelijk om visueel te controleren hoe het model positioneert ten opzichte van de BAG en BGT. Houdt hiermee rekening met de nauwkeurigheid van de BAG en BGT, zie <a href="04 Gebruik van geo-datasets voor georeferentie.md## Geo datasets voor het refereren van modellen">Geo datasets voor georefereren</a>
+Het is hiermee mogelijk om visueel te controleren hoe het model positioneert ten opzichte van de BAG en BGT. Houdt hiermee rekening met de nauwkeurigheid van de BAG en BGT, zie <a href="04%20Gebruik%20van%20geo-datasets%20voor%20georeferentie.md#geo-datasets-voor-het-refereren-van-modellen">Geo datasets voor georefereren</a>
 
 <mark> Onderstaande nog </mark>
 GDAL - Toolbox processing
