@@ -89,7 +89,7 @@ jobs:
           done
           curl -sf http://localhost:8081/snapshot.html > /dev/null || (echo "Local HTTP server on 8081 not reachable"; exit 1)
           rm -f *.pdf
-          node pdf.js
+          PDF_SNAPSHOT_URL=http://localhost:8081/snapshot.html node pdf.js
           mv *.pdf static/
 
       - name: Run WCAG2AA check
