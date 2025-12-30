@@ -79,7 +79,15 @@ jobs:
           echo "module.exports = { respecConfig };" >> config.js
           echo "var window = {respecMermaid:{createFigures:null}};" | cat - config.js > temp && mv temp config.js
           npm install puppeteer
-          python3 -m http.server 8081 &
+          python3 -m http.server 8081 >/dev/null 2>&1 &
+          # wacht tot de lokale server draait
+          for i in {1..30}; do
+            if curl -sf http://localhost:8081/snapshot.html > /dev/null; then
+              break
+            fi
+            sleep 1
+          done
+          curl -sf http://localhost:8081/snapshot.html > /dev/null || (echo "Local HTTP server on 8081 not reachable"; exit 1)
           rm -f *.pdf
           node pdf.js
           mv *.pdf static/
