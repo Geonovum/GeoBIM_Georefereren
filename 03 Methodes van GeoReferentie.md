@@ -1,13 +1,13 @@
 # Methodes van Georeferentie
 
 ## Levels van georeferentie
-Er zijn verschillende methodes beschikbaar om  BIM en GEO modellen bij elkaar te brengen op de kaart. Deze methoden verschillen in nauwkeurigheid en mogelijkheid voor het bijeenbrengen van modellen. Dit wordt door Clemen Christian beschreven als LoGs oftwel Levels of Georeferencing (niveaus van georefereren) [[Christian2019]].
+Er zijn verschillende methodes beschikbaar om  BIM en GEO modellen bij elkaar te brengen op de kaart. Deze methoden verschillen in nauwkeurigheid en mogelijkheid voor het bijeenbrengen van modellen. Dit wordt door Clemen Christian beschreven als <a>LoGeoRef</a> oftwel Levels of Georeferencing (niveaus van georefereren) [[Christian2019]].
 
 Het is mogelijk om een BIM-model op de kaart te zetten door alleen het adres, van waar het BIM-model dient te komen, te duiden. Deze informatie geeft een indicatie van waar het model moet komen. De informatie is niet toereikend om het model exact te plaatsen (transleren, roteren en schalen). Een andere methode zoals het model relateren aan een officieel coordinatenstelsel is hiervoor wel geschikt. Afhankelijk van de behoefte zijn verschillende methodes geschikt.
 
 De beschikbaarheid van informatie voor het berekenen van georeferentie-parameters voor de verschillende methoden is onderzocht door de TU Delft [[Hakim2024]]. 
 
-<table style="width:100%; table-layout:fixed;">
+<table>
   <caption> Levels van georeferentie </caption>
   <tr>
     <th style = "width:200px;"> Methode </th>
@@ -79,9 +79,9 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
   </tr>
 </table>
 
-<table style="width:100%; table-layout:fixed;">
+<table>
   <tr>
-    <th style = "width:30px;"> Level </th>
+    <th width ="50"> Level </th>
     <th> Methode </th>
     <th> Toepassingsvoorbeeld </th>
   </tr>
@@ -118,14 +118,14 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
 </table>
 
 <aside class="note" title="Gebruik van level van Georefereren">
-  <p>**AANBEVELING** Gebruik voor GeoBIM-integratie level 50 en voor GeoBIM-inzet voor constructiedoeleinde level 60 van georefereren.  </p>
+  <p><strong>AANBEVELING:</strong> Gebruik voor GeoBIM-integratie level 50 en voor GeoBIM-inzet voor constructiedoeleinde level 60 van georefereren.  </p>
 </aside>
 <aside class="note" title="Gebruik tooling om modellen te verrijken">
-<p>**AANBEVELING** Gebruik tooling om modellen die nog niet voldoen aan georeferentie 50, wanneer nodig, te verrijken met georeferentie informatie conform level 50. </p>
+<p><strong>AANBEVELING:</strong> Gebruik tooling om modellen die nog niet voldoen aan georeferentie 50, wanneer nodig, te verrijken met georeferentie informatie conform level 50. </p>
 </aside>
 
 
-## 1D-, 2D- en 3D-Geo- en -BIM-modellen
+## 1D, 2D en 3D Geo- en BIM-modellen
 Zowel BIM- als GEO-modellen kunnen een 1D, 2D als 3D coordinatenstelsel gebruiken. Om een juiste transformatie van coordinaten van 2D en 3D modellen te verkrijgen kunnen verschillende methoden worden toegepast.  
 
 Een GEO coordinatenstelsel kan 3D samengesteld (EPSG:7415), 2D (EPSG:28992) of 1D (EPSG:5709) zijn. 
@@ -187,12 +187,27 @@ Wanneer voor georeferentie een precisie van milimeters belangrijk is dient men d
 
 De formule om deze correctie te berekenen is: 
 
-$$ \Delta \ell = -9,2 + \frac{r_i^2}{1629^2} \text{ mm per 100 m} $$
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>&Delta;</mi><mi>&ell;</mi>
+  <mo>=</mo>
+  <mo>−</mo><mn>9.2 </mn>
+  <mo>+</mo>
+  <mfrac>
+    <msup>
+      <msub><mi>r</mi><mi>i </mi></msub>
+      <mn>2</mn>
+    </msup>
+    <msup><mn>1629 </mn><mn>2</mn></msup>
+  </mfrac>
+  <mspace width="0.5em"/>
+  <mtext> mm per 100 m</mtext>
+</math>
 
+waarbij <span class="numerator">r<sub>i</sub><sup>2</sup></span> de gemiddelde coördinaten in km van de eindpunten in het RD-stelsel zijn.
 
-gemiddelde coördinaten in km van de eindpunten in het RD-stelsel zijn.
+Voor locaties nabij Amersfoort zal de correctie rond de -9,2 mm per 100 meter (x, y) liggen. Voor locaties rond Mastricht zal de correctie rond de + 10 mm per 100 meter (x,y) liggen. 
 
 <figure id="correcties-aan-gemeten-afstanden">
-      <img src="./media/Correcties aan gemeten afstanden.png" alt="2D en 3D Geo of BIM combineren" height="400"/>
+      <img src="./media/Correcties_aan_gemeten_afstanden.png" alt="2D en 3D Geo of BIM combineren" height="400"/>
     <figcaption><a class="self-link" href="#fig-correcties-aan-gemeten-afstanden"></bdi></a><span class="fig-title">Correcties aan gemeten afstanden</span></figcaption>
 </figure>
