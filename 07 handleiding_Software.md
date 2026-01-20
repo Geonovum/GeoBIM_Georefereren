@@ -369,7 +369,7 @@ Door een inverse van de proj-parameter te gebruiken kunnen ook objecten uit een 
 **Controle van 3D Georeferentie van een IFC in QGIS:**
 Om een IFC model in QGIS te controleren, dient het bestand te worden converteert naar een QGIS native bestands format. Hierbij kan er een keuze gemaakt worden tussen bijvoorbeeld (1) geopakage of (2) geojson. Binnen het software paket is er op dit moment geen methode, die een IFC bestand automatisch omzet naar een van deze beatands types. Daarom is het nodig om een externe methode toe te passen. Hiervoor kan er gebruik worden gemaakt van de
 - [ifc2gis](https://citygeometrix.com/ifc2gis/), deze methode kan zowel via een website gedraaid worden als lokaal via een python interface. De output van deze software kan er gekozen worden tussen een geopakage of geojson. 
-- ifcGeoBIM, een jupyter notebook die ontwikkeld is voor dit project, lokaal of via google collab gedraaid kan worden. Belangijk bij deze software is dat het de voorkeur geeft dat de data altijd lokaal staat en daardoor in een veilige omgeveing blijft. De output is alleen geopakge, waardoor het gemakkelijk en in lagen kan worden ingelzen in bijvoorbeeld Qgis.
+- [ifcGeoBIM](https://colab.research.google.com/drive/1KsXuZU7zbsblhQcmUekDEG9VMCSjN_SB?usp=sharing), een jupyter notebook die ontwikkeld is voor dit project, lokaal of via google collab gedraaid kan worden. Belangijk bij deze software is dat het de voorkeur geeft dat de data altijd lokaal staat en daardoor in een veilige omgeveing blijft. De output is alleen geopakge, waardoor het gemakkelijk en in lagen kan worden ingelzen in bijvoorbeeld Qgis.
 
 
 ## IFC in Qgis
