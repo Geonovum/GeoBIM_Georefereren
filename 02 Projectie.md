@@ -1,4 +1,4 @@
-# Coördinaatreferentiesystemen en Coördinaattransformatie
+# Coördinaatreferentiesystemen en Coördinatentransformatie
 
 Om informatie te koppelen aan een locatie op aarde worden geodetische coördinaatreferentiesystemen gebruikt. <a>Geodetische CRS</a>-en die relevant zijn voor het georefereren van BIM in Nederland zijn (CRS staat voor Coordinate Reference System):
 
