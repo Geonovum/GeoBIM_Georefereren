@@ -328,9 +328,9 @@ Druk op het "+" teken naast IfcMapConversion en vul de juiste gegevens in.
 <table id="tabel-Blender-ifcmapconversion">
   <tbody>
     <tr>
-      <td><img src="./media/Blender_05.png"></td>
-      <td><img src="./media/Blender_06.png"></td>
-      <td><img src="./media/Blender_07.png"></td>
+      <td><img src="./media/Blender_05.png" alt="IfcMapConversion_in_Blender"></td>
+      <td><img src="./media/Blender_06.png" alt="IfcMapConversion_leeg_in_Blender"></td>
+      <td><img src="./media/Blender_07.png" alt="IfcMapConversion_gevuld_in_Blender"></td>
  </table>
 
 Sla het model op als ifc en gebruik tooling zoals ifcgref of andere toepassingen om de georeferentie te controleren. 

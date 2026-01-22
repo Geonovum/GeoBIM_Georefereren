@@ -108,14 +108,14 @@ waarbij:  $ x_{RD} $ en $ y_{RD} $ de gemiddelde RD-coördinaten in meter zijn v
   <tr>
     <td>
       <figure id="RD_Projectie">
-        <img src="media/geonovum-geo-bim_georefereren_6-a.png" alt="RD Projectie" wisdth="400" height="400"/></a>
+        <img src="media/geonovum-geo-bim_georefereren_6-a.png" alt="RD Projectie" width="400" height="400"/></a>
         <figcaption><a class="self-link" href="#fig-RD-Projectie"></bdi></a><span class="fig-title">Een punt op het aardoppervlak (zwart) wordt op het RD-projectievlak geprojecteerd (groen) vanaf het punt diametraal tegenover Amersfoort. Waar het projectievlak binnen de ellipsoïde valt worden afstanden korter weergegeven dan in werkelijkheid, waar het projectievlak buiten de ellipsoïde valt worden afstanden langer weergegeven dan in werkelijkheid. Het maximale effect is 10 millimeter  per 100 meter op het vaste land.</span></figcaption>
       </figure> 
     </td>
     <td>
-      <figure id="RD_Projectie">
-         <img src="./media/Correcties aan gemeten afstanden.png" alt="2D en 3D Geo of BIM combineren" height="400" width="400" />
-        <figcaption><a class="self-link" href="#fig-RD-Projectie"></bdi></a><span class="fig-title">Correcties aan gemeten afstanden voor de RD-projectie inmm per 100m.</span></figcaption>
+      <figure id="RD_Correctie">
+         <img src="./media/Correcties_aan_gemeten_afstanden.png" alt="2D en 3D Geo of BIM combineren" height="400" width="400" />
+        <figcaption><a class="self-link" href="#fig-RD-Correctie"></bdi></a><span class="fig-title">Correcties aan gemeten afstanden voor de RD-projectie inmm per 100m.</span></figcaption>
       </figure> 
     </td>
   </tr>
@@ -186,7 +186,7 @@ De relatie tussen het lokale CRS en een geprojecteerd CRS wordt gelegd via een <
 <table>
   <tr>
     <td>
-    <figure id="2D gelijkvormigheidstransformatie">
+    <figure id="2D-gelijkvormigheidstransformatie">
       <img src="media/geonovum-geo-bim_georefereren_7.png" alt="Relatie GeoBIM" height="250"/>
     <figcaption><a class="self-link" href="#fig-Relatie-GeoBIM"></bdi></a><span class="fig-title">Relatie GeoBIM</span></figcaption>
     </figure> 
@@ -209,7 +209,7 @@ Voor de relatie tussen vertikale referentievlakken is het uitgangspunt in de hui
 <table>
   <tr>
     <td>
-    <figure id="Horizontale en vertikale_transformatie">
+    <figure id="Horizontale-en-vertikale_transformatie">
       <img src="media/geonovum-geo-bim_georefereren_8.png" alt="2D Transformatie" height="250"/>
           <figcaption><a class="self-link" href="#fig-2D-Transformatie"></bdi></a><span class="fig-title">2D Transformatie</span></figcaption>
     </figure>
