@@ -181,7 +181,7 @@ De coördinatentransformatie tussen lokaal CRS een geodetisch CRS en een wordt, 
 
 ### Horizontaal - 2D gelijkvormigheidstransformatie
 
-De relatie tussen het lokale CRS en een geprojecteerd CRS wordt gelegd via een <a>2D gelijkvormigheidstransformatie</a> (ook wel <a>2D Helmert transformatie genoemd</a>).
+De relatie tussen het lokale CRS en een geprojecteerd CRS wordt gelegd via een <a>2D gelijkvormigheidstransformatie</a> (ook wel <a>2D Helmert transformatie</a> genoemd).
 
 <table>
   <tr>
