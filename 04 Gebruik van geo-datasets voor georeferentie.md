@@ -24,15 +24,15 @@ Voor deze toepassing zijn verschillende landelijke datasets van belang die, naas
 
 Door wisselende prioriteiten binnen grootschalige infrastructuurprojecten kunnen er verschillen optreden in betrouwbaarheid en in de toegepaste inwin- en meetmethoden per objecttype. Daarom is het raadzaam om vooraf het DTB-handboek te raadplegen, voordat een object wordt geselecteerd voor toepassing binnen de geografische uitlijningsmethode. Afhankelijk van de objectcategorie kan dit resulteren in planimetrische afwijkingen van circa 5 tot 15,5 cm en altimetrische afwijkingen van ongeveer 10 tot 15 cm.
 
-In de onderstaande figuur is een BIM-model gecombineerd met het DTB/1GiS, waarbij de wegmarkeringen in beide datasets goed op elkaar aansluiten. Deze overeenkomst kan worden benut om het hoogtecomponent van het BIM-model te bepalen, mits het planimetrische vlak reeds correct is uitgelijnd.
+In de <mark> onderstaande figuur </mark> is een BIM-model gecombineerd met het DTB/1GiS, waarbij de wegmarkeringen in beide datasets goed op elkaar aansluiten. Deze overeenkomst kan worden benut om het hoogtecomponent van het BIM-model te bepalen, mits het planimetrische vlak reeds correct is uitgelijnd.
 
 
 
 Naast vectoriële datasets zoals het DTB/1GiS en het NWB kan ook het AHN, of een andere beschikbare puntenwolk in de omgeving, worden ingezet. Wegmarkeringen en andere infrastructurele objecten zijn hierin vaak goed herkenbaar doordat de intensiteitswaarden van de punten op het wegdek doorgaans significant lager zijn dan die van het omliggende straatmeubilair. Hierdoor kunnen deze objecten relatief eenvoudig worden geïdentificeerd en geëxtraheerd uit de puntenwolk, wat ze geschikt maakt als referentie voor hoogteregistratie.
 
 ## Geo datasets voor het refereren van modellen
-Voor het refereren van datasets naar een geo domein, zijn de volgende datasets beschikbaar om op aan te sluiten, die zijn weergegeven in onderstaande [tabel](#tabel-overzicht-nationale-datasets) (<a href="https://cuatro.sim-cdn.nl/ahn/uploads/1_inventarisatie_van_puntenwolken_in_nederland_1.pdf?cb=mm0aYtMc"><em>WP1: Inventarisatie van puntenwolken in
-Nederland</em></a>). In de tabel zijn de volgende informatie weergegeven: de bestandsnaam, eigenaar, nauwkeurigheid, dimensie en locatie weergegeven. 
+Voor het refereren van datasets naar een geo domein, zijn een aantal datasets beschikbaar om op aan te sluiten. Deze zijn (niet limitatief) weergegeven in onderstaande [tabel](#tabel-overzicht-nationale-datasets) (<a href="https://cuatro.sim-cdn.nl/ahn/uploads/1_inventarisatie_van_puntenwolken_in_nederland_1.pdf?cb=mm0aYtMc"><em>WP1: Inventarisatie van puntenwolken in
+Nederland</em></a>). In de tabel zijn de volgende informatie weergegeven: de bestandsnaam, eigenaar, nauwkeurigheid, dimensie en locatie. 
 
 <table id="tabel-overzicht-nationale-datasets">
    <caption>Overzicht van nationale datasets beschikbaar voor geo-referentie van project data of modelen</caption>
@@ -108,17 +108,6 @@ Naast primaire geo datasets, kunnen gemeentes, provicies en centrale overheden a
 De verschillende datasets die voor dit doel kunnen worden gebruikt, zijn duidelijk van elkaar te onderscheiden. Zoals in de vorige paragraaf is benadrukt, vormen zowel het planimetrische (XY) als het altimetrische (Z) component een fundamenteel onderdeel van een geo-databestand. Afwijkingen in deze componenten, of verschillen die ontstaan door uiteenlopende momenten van inwinning of ontwerp, kunnen een aanzienlijke impact hebben op de onderlinge uitlijning van datasets. Het correct refereren van een bestand ten opzichte van deze assen is daarom essentieel om betrouwbare vervolgstappen in het uitlijnings- en integratieproces te kunnen uitvoeren.
 
 Het doel van het refereren van een model binnen het geo-domein is het positioneren ervan in de echte wereld. Deze echte wereld bestaat uit een lokaal en een globaal coördinatensysteem. Zoals eerder beschreven, wordt een BIM-model in de toegepaste softwarepakketten vaak in een 0,0,0-referentiesysteem geplaatst. Daarentegen bevatten globale coördinaten aanzienlijk grotere waarden, wat ertoe kan leiden dat een dataset vastloopt binnen een applicatie. De documentatie van het gebruikte coördinatensysteem is eveneens van cruciaal belang. Wanneer dit systeem niet correct is vastgelegd, kunnen er problemen ontstaan tijdens de conversie van de hoogtecomponent.
-
-<!--
-**Tabel YY.** Overzicht van de globale coordinatensystemen gebruikt in Nederland
-| Naam      | Orientatie | EPSG      | Toelichting                                                                                                                                                              |
-| --------- | ---------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **RDNAP** | XYZ        | **7415**  | Dit is een *compound coordinate reference system* (CRS) dat RD (XY, EPSG:28992) combineert met NAP (Z, EPSG:5709). Dus: X=Easting (RD), Y=Northing (RD), Z=hoogte (NAP). |
-| **RD**    | XY         | **28992** | Planimetrisch systeem (Rijksdriehoeksstelsel) — X is oost, Y is noord.                                                                                                   |
-| **NAP**   | Z          | **5709**  | Verticaal referentiesysteem, hoogte in meters t.o.v. Normaal Amsterdams Peil.                                                                                            |
-
-*Voor meer informatie naar het gebruik van coordinaatreferentie systemen, zie de handreiking: https://docs.geostandaarden.nl/crs/crs/ *
--->
 
 ### Primaire kwaliteits kenmerken voor geobestanden naar bim
 Voor het gebruik van een dataset uit het **GIS-domein** zijn verschillende kenmerken van belang voor de toepassing binnen een **BIM-systeem**. Niet alle data is even geschikt om gebruikt te worden, naast het gerbuik van het juiste coordinaten systeem, spelen er kwaliteits kenmerken mee die van invloed zijn op zowel de ingewonnen als de gerbruikte referentie data. Op basis van o.a. de onderzoeken en initiatieven van het <a href="https://www.ahn.nl/integrale-hoogtevoorziening-nederland"> <em>Intergaal Hoogtevoorziening Nederland</em></a> (Het Waterschapshuis, Rijkswaterstaat, TU Delft & het Kadaster), de  <a href="https://www.digigo.nu/ilsen-en-richtlijnen/basis-ils-puntenwolk/"> <em>Basis ILS puntenwolken</em></a> (DigiGo) en <a href="https://www.digigo.nu/ilsen-en-richtlijnen/basis-ils-puntenwolk/"> <em>Handreiking 3D Tiling</em></a> (Geonovumn) kunnen de volgende componenten worden meegenomen. Let wel er zijn meer componenten die van invloed zijn op de kwaliteit en bruikbarheid van de data. 

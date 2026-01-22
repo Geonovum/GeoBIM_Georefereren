@@ -37,7 +37,7 @@ Om informatie te koppelen aan een locatie op aarde worden geodetische coördinaa
       <td>Geografisch CRS voor de aarde en niet precieze (meter niveau) plaatsbepaling in Nederland, niet geschikt voor uitwisseling van data, alleen voor visualisaties</td>
       <td>EPSG:4326 (2D-code)</td>
     </tr>
-  </tbody>
+  </tbody>  
 </table>
 
 De <a>EPSG-code</a> is een unieke identificatie van het CRS binnen de zogenaamde EPSG-database, een wereldwijde verzameling van coördinaatsystemen en -transformaties.
@@ -149,7 +149,7 @@ Een <a>lokaal CRS</a> is een arbitrair gekozen assenstelsel. De oorsprong, de or
 
 ### Benadering van RD in lokaal CRS
 
-In sommige software pakketen zoals AutoCAD is het gebruikelijk om met het lokale stelsel het RD-stelsel en het NAP-niveau te benaderen, bijvoorbeeld door het gebruik van bekende punten of door de oorsprong te verschuiven. AutoCAD gaat er alleen niet bewust mee om dat dit RD-coördinaten en NAP-hoogten zijn. Wat de software betreft is dit een lokaal stesel zonder verdere betekenis en worden de aardkromming, zwaartkeracht en eigenschappen van de kaartprojectie, zoals de locatieafhankelijke schaalfactor en gridcorrecties, niet toegepast. De link tussen de lokale coördinaten en het geprojecteerd CRS is in dit geval dat coördinaten bij benadering overeen komen (X<sub>bim</sub> &cong; x<sub>RD</sub>, Y<sub>bim</sub> &cong; y<sub>RD</sub>, Z<sub>bim</sub> &cong; H<sub>NAP</sub>).
+In sommige software pakketen zoals AutoCAD is het gebruikelijk om met het lokale stelsel het RD-stelsel en het NAP-niveau te benaderen, bijvoorbeeld door het gebruik van bekende punten of door de oorsprong te verschuiven. AutoCAD gaat er alleen niet bewust mee om dat dit RD-coördinaten en NAP-hoogten zijn. Wat de software betreft is dit een lokaal stelsel zonder verdere betekenis en worden de aardkromming, zwaartkeracht en eigenschappen van de kaartprojectie, zoals de locatieafhankelijke schaalfactor en gridcorrecties, niet toegepast. De link tussen de lokale coördinaten en het geprojecteerd CRS is in dit geval dat coördinaten bij benadering overeen komen (X<sub>bim</sub> &cong; x<sub>RD</sub>, Y<sub>bim</sub> &cong; y<sub>RD</sub>, Z<sub>bim</sub> &cong; H<sub>NAP</sub>).
 
 ### True North, Grid North, Project North
 
@@ -195,7 +195,7 @@ De relatie tussen het lokale CRS en een geprojecteerd CRS wordt gelegd via een <
   <tr>
 
   <td>
-  2D relatie tussen geprojecteerd CRS en lokaalstelselsel. Parameters voor de 2D gelijkvormighedistransformatie zijn translaties (t<sub>x</sub>, t<sub>y</sub>), schaal (s) en rotatie (alpha). Er is een eenduidige relatie tussen de parameters rotatiehoek (alpha) en de inIFC/BIM gebruikte termen XAxisAbscissa (cos(alpha)) en XAxisOrdinate (sin(alpha)).
+  2D relatie tussen geprojecteerd CRS en lokaalstelselsel. Parameters voor de 2D gelijkvormighedistransformatie zijn translaties (t<sub>x</sub>, t<sub>y</sub>), schaal (s) en rotatie (alpha). Er is een eenduidige relatie tussen de parameters rotatiehoek (alpha) en de in IFC/BIM gebruikte termen XAxisAbscissa (cos(alpha)) en XAxisOrdinate (sin(alpha)).
   </td>
   </tr>
 </table>
@@ -221,4 +221,5 @@ Voor de relatie tussen vertikale referentievlakken is het uitgangspunt in de hui
   </td>
   </tr>
 </table>
+
 

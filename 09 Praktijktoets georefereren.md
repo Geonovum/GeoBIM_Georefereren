@@ -116,4 +116,97 @@ De IFC modellen zijn direct ingelezen in ArcGIS Pro zonder extra tools of andere
 De validatie toont aan dat zodra een IFC-model correct is gegeorefereerd op level 50, zoals aanbevolen in dit paper, het model probleemloos wordt ingelezen in ArcGIS Pro. Het model verschijnt op de juiste geografische locatie, met correcte hoogte, rotatie en schaal, waardoor de ruimtelijke context volledig behouden blijft. Dit bevestigt dat het toepassen van de georeferentie op het juiste niveau cruciaal is voor een consistente integratie van BIM-data in GIS-omgevingen. 
 
 ## Resultaten in QGIS
+De IFC modellen zijn <mark> ... </mark>  ingelezen in QGIS <mark> zonder/met x </mark> extra tools of andere (referentie) bestanden. De validatie is uitgevoerd met QGIS <mark> version </mark>.
+
+<table style="width:100%; table-layout:fixed;">
+  <tr>
+    <th style = "width:100px;"> Naam</th>
+    <th style = "width:200px;"> Afbeelding </th>
+    <th style = "width:50px;"> Locatie </th>
+    <th style = "width:50px;"> Locatie </th>
+    <th style = "width:50px;"> Hoogte </th>
+    <th style = "width:50px;"> riëntatie </th>
+    <th style = "width:50px;"> Schaal </th>
+    <th> Opmerkingen</th>
+  </tr>
+  <tr>
+    <td>Van Brienenoordbrug-IFC4X3.ifc </td>
+    <td>
+ <mark> beeld nog toe te voegen </mark>
+    </td>
+    <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+  </tr>
+  <tr>
+    <td>ifcbridge-model01_georeferenced.ifc </td>
+    <td>
+<mark> beeld nog toe te voegen </mark>
+    </td>
+   <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+  </tr>
+  <tr>
+    <td>ifcbridge-model02_georeferenced.ifc </td>
+    <td>
+<mark> beeld nog toe te voegen </mark>
+    </td>
+      <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+  </tr>
+  <tr>
+    <td>ifcbridge-model03_georeferenced.ifc </td>
+    <td>
+<mark> beeld nog toe te voegen </mark>
+    </td>
+       <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+  </tr>
+  <tr>
+    <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef.ifc</td>
+    <td>
+<mark> beeld nog toe te voegen </mark>
+    </td>
+       <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+  </tr>
+  <tr>
+    <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef10.ifc</td>
+    <td> <mark> beeld nog toe te voegen </mark>
+    </td>
+      <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+  </tr>
+  <tr>
+    <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef20.ifc</td>
+    <td>
+     <mark> beeld nog toe te voegen </mark>
+    </td>
+       <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+  </tr>
+  <tr>
+    <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef30.ifc</td>
+    <td>
+      <mark> beeld nog toe te voegen </mark>
+    </td>
+       <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+  </tr>
+  <tr>
+    <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef40.ifc</td>
+    <td>
+<mark> beeld nog toe te voegen </mark>
+    </td>
+       <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+  </tr>
+  <tr>
+    <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef50.ifc</td>
+    <td>
+<mark> beeld nog toe te voegen </mark>
+    </td>
+       <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+  </tr>
+</table>
+
+✅ = volledige support
+🔶 = gedeeltelijke/non-standaard support
+❌ = geen support
+
+
+
+
+
+
 <mark> Aangeleverd door Daan </mark>

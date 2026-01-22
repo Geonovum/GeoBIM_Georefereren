@@ -256,7 +256,7 @@ Zie voor [exporteren vanuit Sketchup](https://help.sketchup.com/en/sketchup-educ
 Het is mogelijk om een KMZ of DXF te exporteren. <mark>Deze zullen de coordinaten mee kunnen nemen? Is dat zo met DXF? Vragen aan Jan om te testen</mark>
 
 Zie voor [exporteren naar IFC](https://help.sketchup.com/en/importing-and-exporting-ifc-files)
-Het is in de huidige versie van Sketchup momenteel nog niet mogelkijk om op hoog detail in RD NAP te georefereren. De coordinaten vanuit Sketchup zijn uitgedrukt in UTM-coordinaten. Dit kan men (nog) niet aanpassen. 
+Het is in de huidige versie van Sketchup momenteel nog niet mogelijk om op hoog detail in RD NAP te georefereren. De coordinaten vanuit Sketchup zijn uitgedrukt in UTM-coordinaten. Dit kan men (nog) niet aanpassen. 
 
 De verwachting is dat dit op korte termijn verbeterd aangezien er in de laatste releases veel ontwikkeling is op IFCExport functie voor Sketchup. Wanneer hier plugins of wijzigingen in komen wordt dit toegevoegd aan de praktijkrichtlijn. 
 
@@ -267,10 +267,6 @@ Zie voor [exporteren naar CityGML](https://support.tygron.com/wiki/Converting_a_
 ## Blender
 
 Zorg ervoor dat de addons [Bonsai](https://bonsaibim.org/) en [BlenderGIS](https://github.com/domlysz/BlenderGIS) in Blender geinstalleerd zijn. 
-
-Import [CityGML](https://github.com/ppaawweeuu/Import_CityGML)  
-
-
 
 Methode is numeriek, de waarde die wilt gebruiken moet je vooraf hebben bepaald. 
 Vanuit de service [IFC2Perceel](https://bim-tools.github.io/perceel2ifc/) kan men een kadastraal perceel als IFC downloaden. 
@@ -283,7 +279,7 @@ Deze site geeft een actueel kadastrale perceel op NAP hoogte met een <a>GEO Coö
     </figcaption>
 </figure>
 
-Waarden voor de geografische plaasing van het model <a>nulpunt</a> kun je bekijken en aanpassen onder Project Setup > Geometry > Georeferencing
+Waarden voor de geografische plaatsing van het model <a>nulpunt</a> kun je bekijken en aanpassen onder Project Setup > Geometry > Georeferencing
 Dit zijn exact dezelfde waarden als IFCmapconversion. 
 
 <figure id="Georeferentie_van_IFC_in_Blender">
@@ -311,19 +307,95 @@ Handig is ook dat je de rotatie met Grid North kunt laten berekenen
     </figcaption>
 </figure>
 
+Op basis van deze georeferentie kan men verder modelleren in Blender. 
+
+Het is ook mogelijk om voor een project eigen IFC Mapconversion waarden toe te voegen. Om deze te achterhalen kan men een referentie-object in een andere toepassing, bijvoorbeeld QGIS maken waarmee de RD-coordinaten en de rotatiehoek achterhaald kan worden. Open de attribuuttabel van de gecreëerde geometrie en klik op open veldberekening. Voeg nieuwe velden in decimalen toe. Met het commando: x(start_point($geometry)) kan een kolom met de x-waarde (Easting) worden toegevoegd, met y(start_point($geometry)) een kolom voor de y waarde (Northing) en met het commando degrees(azimuth( start_point($geometry),end_point($geometry))) de hoekverdraaiing (Angle). 
+
+Deze waarden kan men invullen bij het attribuut IfcMapconversion. 
+
+Start hiervoor een nieuw Ifc Project, het liefst in meters: 
+
+
+<figure id="Georeferentie_van_IFC_in_Blender_4">
+    <img src="./media/Blender_04.png" alt="New_IFC_Project_In_Blender">
+    <figcaption>
+      Nieuw ifc-project, in meters, in Blender  
+    </figcaption>
+</figure>
+
+Druk op het "+" teken naast IfcMapConversion en vul de juiste gegevens in.
+
+<table id="tabel-Blender-ifcmapconversion">
+  <tbody>
+    <tr>
+      <td><img src="./media/Blender_05.png"></td>
+      <td><img src="./media/Blender_06.png"></td>
+      <td><img src="./media/Blender_07.png"></td>
+ </table>
+
+Sla het model op als ifc en gebruik tooling zoals ifcgref of andere toepassingen om de georeferentie te controleren. 
+
+Importeren van Geo
+Het is ook mogelijk om met de extensie BlenderGIS shapefiles in te laden. Deze worden op het Blender 0,0,0 punt gepositioneerd. Wel kan de geometrie gebruikt worden voor modellering. 
+
+CityGML kan men importeren met de extensie: [CityGML](https://github.com/ppaawweeuu/Import_CityGML). Op deze github staat ook beschreven hoe positionering goed te krijgen. 
+
 
 ## Illustrator/Inkscape
---- 
-The workflow is to:
 
-Georeference the raster in QGIS
-Digitize/Vectorize in QGIS
-Depending on your map, the above workflow will still be faster than attempting to georeference the vectors you created, compare: How to georeference a vector layer with control points?
+In Illustrator/Inkscape werkt men op digitaal papierformaat. Zorg ervoor dat voorafgaand aan het ontwerp er een onderlegger kaartlaag gebruikt wordt met bekende punten (zoals de BGT). Download deze onderlegger in DXF. Zie [CAD-onderlegger](#cad-onderlegger) of [QGIS](#qgis) hoe dit te doen. Laad deze DXF in Illustrator/Inkscape: 
 
-https://gis.stackexchange.com/quehttps://www.youtube.com/shorts/G2dFYtu4daIstions/195527/qgis-use-svg-file-as-a-layer
+<figure id="Import_DXF_in_Inkscape">
+    <img src="./media/Inkscape_01.png" alt="Import_DXF_in_Inkscape" height="300">
+    <figcaption>
+      Importeren van DXF-onderlegger in Inkscape.
+    </figcaption>
+</figure>
 
-### Illustrator MapPublisher
-https://www.youtube.com/watch?v=SfBNL8TvAC8
+Na ontwerp kunnen de ontwerplagen inclusief de onderlegger als DXF opgeslagen worden. 
+
+<figure id="Opslaan_Inkscape_ontwerp_als_DXF">
+    <img src="./media/Inkscape_02.png" alt="Opslaan_Inkscape_ontwerp_als_DXF" height="300">
+    <figcaption>
+      Opslaan van een ontwerp in Inkscape als DXF
+    </figcaption>
+</figure>
+
+Zonder georeferentie zal de DXF op een verkeerde locatie op de kaart getoond worden. 
+
+<figure id="Ontwerp_Naast_Parijs">
+    <img src="./media/Inkscape_03.png" alt="Ontwerp_Naast_Parijs" height="300">
+    <figcaption>
+      Ontwerp wordt geplaatst naast Parijs zonder Georeferentie
+    </figcaption>
+</figure>
+
+Voer de stappen van Georeferentie in QGIS uit om het DXF bestand op de juiste plaats te krijgen. 
+
+<figure id="Ontwerp_op_de_juiste_plek_na_georeferentie">
+    <img src="./media/Inkscape_04.png" alt="Ontwerp_op_de_juiste_plek_na_georeferentie" height="300">
+    <figcaption>
+      Ontwerp op de gewenste plek na georeferentie
+    </figcaption>
+</figure>
+
+Het is ook mogelijk om aanvullende objecten in DXF terug naar de ontwerptekening te converteren. Dit doet men met het inverse georefereren zoals in het QGIS hoofdstuk beschreven. Dit zorgt ervoor dat men bestaande objecten kan hergebruiken en opwerken. 
+
+<figure id="Extra_element_naar_Inkscape">
+    <img src="./media/Inkscape_05.png" alt="Extra_element_naar_Inkscape" height="300">
+    <figcaption>
+      Extra waterelement aan ontwerptekening toegevoegd door inverse georeferentie.
+    </figcaption>
+</figure>
+
+In Illustrator kan dezelfde functionaliteit gebruikt worden. 
+
+### Illustrator MAPublisher
+Illustrator kent een extensie [MAPublisher](https://www.avenza.com/mapublisher/) waarmee Georeferentie in Illustrator ondersteund wordt. Er is een [handeleiding](http://download.avenza.com/Downloads/Docs/MAPublisher/MP90_TutorialGuide.pdf) beschikbaar waarin beschreven staat hoe dit werkt.
+
+
+
+## ESRI ArcGIS
 
 
 ## QGIS
@@ -367,51 +439,6 @@ Door een inverse van de proj-parameter te gebruiken kunnen ook objecten uit een 
 <mark> Nog onderzoeken of 3D Georeferentie ook mogelijk is </mark>
 
 **Controle van 3D Georeferentie van een IFC in QGIS:**
-Om een IFC model in QGIS te controleren, dient het bestand te worden converteert naar een QGIS native bestands format. Hierbij kan er een keuze gemaakt worden tussen bijvoorbeeld (1) geopakage of (2) geojson. Binnen het software paket is er op dit moment geen methode, die een IFC bestand automatisch omzet naar een van deze beatands types. Daarom is het nodig om een externe methode toe te passen. Hiervoor kan er gebruik worden gemaakt van de
-- [ifc2gis](https://citygeometrix.com/ifc2gis/), deze methode kan zowel via een website gedraaid worden als lokaal via een python interface. De output van deze software kan er gekozen worden tussen een geopakage of geojson. 
-- [ifcGeoBIM](https://colab.research.google.com/drive/1KsXuZU7zbsblhQcmUekDEG9VMCSjN_SB?usp=sharing), een jupyter notebook die ontwikkeld is voor dit project, lokaal of via google collab gedraaid kan worden. Belangijk bij deze software is dat het de voorkeur geeft dat de data altijd lokaal staat en daardoor in een veilige omgeveing blijft. De output is alleen geopakge, waardoor het gemakkelijk en in lagen kan worden ingelzen in bijvoorbeeld Qgis.
-
-
-## IFC in Qgis
-Om de resulterende bestanden in te lezen, kunnen deze als vectorbestand worden geïmporteerd. Vervolgens dienen de onderstaande stappen te worden doorlopen, die essentieel zijn om het bestand correct te refereren in de ruimte.
-
-Binnen het softwarepakket IfcGeoBIM is een attribuutlaag beschikbaar die valideert of het bestand een correcte georeferentie bevat. Hierbij worden drie mogelijke situaties onderscheiden:
-
-1. Missing
-Dit betekent dat er geen verwijzing aanwezig is naar een bestaand coördinatensysteem. Het model is in dit geval uitsluitend beschikbaar in een lokaal stelsel.
-
-2. Fake georef
-Dit betekent dat er wel een referentie naar een coördinatensysteem is opgenomen, maar dat de coördinaten zelf nog in een lokaal stelsel zijn gedefinieerd.
-
-3. Projected
-Dit betekent dat de coördinaten een correcte verwijzing hebben naar een geprojecteerd coördinatensysteem en dat de coördinaten zich niet in de nabijheid van (0,0,0) bevinden.
-
-In het geval van optie 1 en 2 is een aanvullende handeling vereist om het bestand correct te positioneren, bijvoorbeeld door middel van 3D-georeferentie. Dit kan worden uitgevoerd met behulp van de methoden die in dit document zijn beschreven.
-
-Om op een eenvoudige manier een coördinatentransformatie uit te voeren, kan een lokale transformatie worden opgezet op basis van bekende referentiepunten. Hiervoor kan gebruik worden gemaakt van de QGIS-plugin Geoscience, waarbij de lokale coördinaten van bijvoorbeeld een noklijn worden ingevoerd, samen met de coördinaten van de gewenste doelpositie.
-
-Het resultaat van transformatie in combinatie met het AHN4 & AHN5 is al voorbeeld weergegeven in de ondertsaande figuren. 
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="./media/3D_50_AHN4.png"
-           alt="QGIS Georeferentie IFC model met AHN4"
-           width="400"/>
-      <br/>
-      QGIS Georeferentie controle – <strong>AHN4</strong> <em>(dataroom AHN) </em>
-    </td>
-    <td align="center">
-      <img src="./media/3D_50_AHN5.png"
-           alt="QGIS Georeferentie IFC model met AHN5"
-           width="400"/>
-      <br/>
-      QGIS 3D georeferentie – <strong>AHN5</strong><em>(dataroom AHN) </em>
-    </td>
-  </tr>
-</table>
-
-## Geojson
 Converteer IFC naar GeoJSON, bijvoorbeeld met [ifc2gis](https://citygeometrix.com/ifc2gis/) en download de file. Maak eventueel de GeoJSON file kleiner door een beperkte selectie van de IFC-elementen te maken. Bijvoorbeeld alleen de slabs en walls. 
 
 Voeg een nieuwe vectorlaag toe in QGIS en selecteer de GeoJSON-file. 
