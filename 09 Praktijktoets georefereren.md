@@ -122,7 +122,7 @@ De IFC modellen zijn <mark> ... </mark>  ingelezen in QGIS <mark> zonder/met x <
   <tr>
     <th style = "width:100px;"> Naam</th>
     <th style = "width:200px;"> Afbeelding </th>
-    <th style = "width:50px;"> Locatie </th>
+    <th style = "width:50px;"> Referentie </th>
     <th style = "width:50px;"> Locatie </th>
     <th style = "width:50px;"> Hoogte </th>
     <th style = "width:50px;"> riëntatie </th>
@@ -132,7 +132,7 @@ De IFC modellen zijn <mark> ... </mark>  ingelezen in QGIS <mark> zonder/met x <
   <tr>
     <td>Van Brienenoordbrug-IFC4X3.ifc </td>
     <td>
- <mark> beeld nog toe te voegen </mark>
+<img src="./media/briendenennoord_qgis.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
     <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
   </tr>
@@ -162,48 +162,47 @@ De IFC modellen zijn <mark> ... </mark>  ingelezen in QGIS <mark> zonder/met x <
     <td>
 <mark> beeld nog toe te voegen </mark>
     </td>
-       <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+       <td> ? </td><td> ❌ </td><td> ? </td><td> ? </td> <td> ?</td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef10.ifc</td>
     <td> <mark> beeld nog toe te voegen </mark>
     </td>
-      <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+      <td> Fake </td><td> ❌ </td><td> ? </td><td> ? </td> <td> ?</td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef20.ifc</td>
     <td>
-     <mark> beeld nog toe te voegen </mark>
+<img src="./media/ref_20_3D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-       <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+       <td> Fake </td><td>❌ </td><td> ✅ </td><td> ? </td> <td> ?</td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef30.ifc</td>
     <td>
-      <mark> beeld nog toe te voegen </mark>
+<img src="./media/ref_30_3D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-       <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+       <td> Fake </td><td> ❌ </td><td> ✅ </td><td> ? </td> <td> ?</td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef40.ifc</td>
     <td>
-<mark> beeld nog toe te voegen </mark>
+<img src="./media/ref_40_2D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-       <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+       <td> Fake </td><td> ❌ </td><td> ✅ </td><td> ✅ </td> <td> ?</td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef50.ifc</td>
     <td>
-<mark> beeld nog toe te voegen </mark>
+ <img src="./media/3D_50_AHN5.png" alt="Resultaat geogerefereerd model level 50" title="Resultaat geogerefereerd model level 50" width="190">
     </td>
-       <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+       <td> Real </td><td> ✅ </td><td> ✅ </td><td> ✅ </td> <td> ✅ </td>
   </tr>
 </table>
 
-✅ = volledige support
-🔶 = gedeeltelijke/non-standaard support
-❌ = geen support
-
+✅ = Volledig geodetisch Correct
+🔶 = Geeltelijk correct, maar bevat fouten.
+❌ = Niet correct
 
 
 
