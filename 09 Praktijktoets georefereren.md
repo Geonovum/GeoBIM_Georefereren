@@ -162,7 +162,7 @@ De IFC modellen zijn ingelezen in QGIS, waarbij er gerbuik is gemaakt van de [if
     <td>
 <img src="./media/ref_tot_3D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-       <td> Real </td><td> ❌ </td><td> ✅  </td><td> ✅  </td> <td> ✅ </td><td> In de orientie is er een kleine verschuiving zichtbaar tov het AHN </td>
+       <td> Real </td><td> ✅ </td><td> ✅  </td><td> ✅  </td> <td> ✅ </td><td> In de orientie is er een kleine verschuiving zichtbaar tov het AHN </td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef10.ifc</td>
@@ -203,9 +203,11 @@ De IFC modellen zijn ingelezen in QGIS, waarbij er gerbuik is gemaakt van de [if
 ✅ = Volledig geodetisch Correct
 🔶 = Geeltelijk correct, maar bevat fouten.
 ❌ = Niet correct
+
+
 Figuur ter verduideling van de opmerking, geplaatst bij de brienenoord brug.
-<figure id="QGIS-DXF-Export-2D">
-      <img src="./media/AHN4_verschuiving_brienenoord.png" alt="AHN4vsIFC" height="500"/>
+<figure id="AHN4vsIFC">
+      <img src="./media/AHN4_verschuiving_brienenoord.png" alt="AHN4vsIFC" height="250"/>
     <figcaption>AHN4 (rood) vergeleken met het IFC model (grijs)</figcaption>
 </figure>
 
