@@ -116,13 +116,13 @@ De IFC modellen zijn direct ingelezen in ArcGIS Pro zonder extra tools of andere
 De validatie toont aan dat zodra een IFC-model correct is gegeorefereerd op level 50, zoals aanbevolen in dit paper, het model probleemloos wordt ingelezen in ArcGIS Pro. Het model verschijnt op de juiste geografische locatie, met correcte hoogte, rotatie en schaal, waardoor de ruimtelijke context volledig behouden blijft. Dit bevestigt dat het toepassen van de georeferentie op het juiste niveau cruciaal is voor een consistente integratie van BIM-data in GIS-omgevingen. 
 
 ## Resultaten in QGIS
-De IFC modellen zijn <mark> ... </mark>  ingelezen in QGIS <mark> zonder/met x </mark> extra tools of andere (referentie) bestanden. De validatie is uitgevoerd met QGIS <mark> version </mark>.
+De IFC modellen zijn ingelezen in QGIS, waarbij er gerbuik is gemaakt van de [ifcGeoBIM](https://colab.research.google.com/drive/1KsXuZU7zbsblhQcmUekDEG9VMCSjN_SB?usp=sharing) notebook zonder gebruik te maken van andere (referentie) bestanden. De modellen zijn gevalideerd aan de hand van de volgende criteria: de aanwezigheid van een referentievermelding en de correcte vastlegging van hoogte, locatie, oriëntatie en schaal. Eventuele opmerkingen die tijdens de inspectie van de modellen in QGIS zijn vastgesteld, zijn opgenomen in de kolom opmerking.
 
 <table style="width:100%; table-layout:fixed;">
   <tr>
     <th style = "width:100px;"> Naam</th>
     <th style = "width:200px;"> Afbeelding </th>
-    <th style = "width:50px;"> Locatie </th>
+    <th style = "width:50px;"> Referentie </th>
     <th style = "width:50px;"> Locatie </th>
     <th style = "width:50px;"> Hoogte </th>
     <th style = "width:50px;"> riëntatie </th>
@@ -132,9 +132,9 @@ De IFC modellen zijn <mark> ... </mark>  ingelezen in QGIS <mark> zonder/met x <
   <tr>
     <td>Van Brienenoordbrug-IFC4X3.ifc </td>
     <td>
- <mark> beeld nog toe te voegen </mark>
+<img src="./media/briendenennoord_qgis.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-    <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+    <td> Real </td><td> ✅ </td><td> ✅</td><td> ✅ </td> <td> ✅</td> <td> Kleine verschuiving in XYZ is zichtbaar tov het AHN (zie onderstaande figuur</td>
   </tr>
   <tr>
     <td>ifcbridge-model01_georeferenced.ifc </td>
@@ -158,54 +158,58 @@ De IFC modellen zijn <mark> ... </mark>  ingelezen in QGIS <mark> zonder/met x <
        <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
   </tr>
   <tr>
-    <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef.ifc</td>
+    <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef_Totaal.ifc</td>
     <td>
-<mark> beeld nog toe te voegen </mark>
+<img src="./media/ref_tot_3D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-       <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+       <td> Real </td><td> ✅ </td><td> ✅  </td><td> ✅  </td> <td> ✅ </td><td> In de orientie is er een kleine verschuiving zichtbaar tov het AHN </td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef10.ifc</td>
-    <td> <mark> beeld nog toe te voegen </mark>
+    <td> <img src="./media/ref_10_3D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-      <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+      <td> Fake </td><td> ❌ </td><td>✅ </td><td>✅ </td> <td> ✅ </td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef20.ifc</td>
     <td>
-     <mark> beeld nog toe te voegen </mark>
+<img src="./media/ref_20_3D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-       <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+       <td> Fake </td><td>❌ </td><td> ✅ </td><td>✅ </td> <td>✅ </td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef30.ifc</td>
     <td>
-      <mark> beeld nog toe te voegen </mark>
+<img src="./media/ref_30_3D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-       <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+       <td> Fake </td><td> ❌ </td><td> ✅ </td><td> ✅ </td> <td> ✅ </td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef40.ifc</td>
     <td>
-<mark> beeld nog toe te voegen </mark>
+<img src="./media/ref_40_2D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-       <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+       <td> Fake </td><td> ❌ </td><td> ✅ </td><td> ✅ </td> <td> ?</td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef50.ifc</td>
     <td>
-<mark> beeld nog toe te voegen </mark>
+ <img src="./media/3D_50_AHN5.png" alt="Resultaat geogerefereerd model level 50" title="Resultaat geogerefereerd model level 50" width="190">
     </td>
-       <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+       <td> Real </td><td> ✅ </td><td> ✅ </td><td> ✅ </td> <td> ✅ </td>
   </tr>
 </table>
 
-✅ = volledige support
-🔶 = gedeeltelijke/non-standaard support
-❌ = geen support
+✅ = Volledig geodetisch Correct
+🔶 = Geeltelijk correct, maar bevat fouten.
+❌ = Niet correct
 
 
-
+Figuur ter verduideling van de opmerking, geplaatst bij de brienenoord brug.
+<figure id="AHN4vsIFC">
+      <img src="./media/AHN4_verschuiving_brienenoord.png" alt="AHN4vsIFC" height="250"/>
+    <figcaption>AHN4 (rood) vergeleken met het IFC model (grijs)</figcaption>
+</figure>
 
 
 
