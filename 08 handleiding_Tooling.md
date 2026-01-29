@@ -1,5 +1,5 @@
 # Tooling
---- 
+ 
 ## IfcGref
 [IfcGref](https://ifcgref.bk.tudelft.nl/) is een webgebaseerde softwaretool die is ontwikkeld om de georeferentie van IFC (Industry Foundation Classes)-modellen vast te leggen, te verbeteren en te visualiseren. IFC-modellen bevatten vaak uiteenlopende niveaus van georeferentie en geo-informatie, variërend van een eenvoudig postadres (LoGeoRef10) tot volledige projectie- en coördinatenstelselspecificaties (LoGeoRef50). De eerste stap in de workflow van IfcGref is het detecteren van de bestaande geo-informatie in een IFC-bestand en het vaststellen welke gegevens reeds op het niveau LoGeoRef50 zijn gegeorefereerd.
 
