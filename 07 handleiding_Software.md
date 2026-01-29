@@ -395,8 +395,90 @@ Illustrator kent een extensie [MAPublisher](https://www.avenza.com/mapublisher/)
 
 
 
-## ESRI ArcGIS
+## ArcGIS
+In ArcGIS Pro zijn er tools beschikbaar om een bestaand BIM-model (IFC en Revit) te georefereren. Hieronder wordt een algemene werkwijze beschreven. Er zijn twee manieren om het model op de juiste locatie te plaatsen, optie A: Transform (invoeren van coördinaat offsets) of optie B: Handmatig (handmatig het model verplaatsen). Beide worden hieronder beschreven. 
+*Deze werkwijze is getest en beschreven voor ArcGIS Pro versie 3.6*
 
+**Open het model**
+1. Voeg het model toe aan een scene door deze erin te slepen vanuit de Verkenner in Windows of door een folder connectie te maken in het catalog pane.
+
+<figure id="Ingeladen_bim_model_in_ArcGIS_Pro">
+    <img src="./media/ArcGIS_01.png" alt="Ingeladen_Bim_Model_in_ArcGIS_Pro" height="300"/>
+    <figcaption>
+      Ingeladen BIM-model in ArcGIS Pro
+    </figcaption>
+</figure>
+
+2. Selecteer de laag van het BIM model in het contents panel en open de ‘BIM Data’ tab in de ribbon bovenin
+
+<figure id="Define_projection_in_ArcGIS_Pro">
+    <img src="./media/ArcGIS_03.png" alt="Define_projection_in_ArcGIS_Pro" height="300"/>
+    <figcaption>
+      Define projection
+    </figcaption>
+</figure>
+
+Define projection (indien nodig)
+3. Om de projectie te definiëren of bevestigen selecteer ‘Define projection’ in de ribbon
+
+4. In de Geoprocessing tool selecteer het juiste coördinatensysteem en klik op Run
+
+<figure id="Geoprocessing_in_ArcGIS_Pro">
+    <img src="./media/ArcGIS_04.png" alt="Geoprocessing_in_ArcGIS_Pro" height="300"/>
+    <figcaption>
+      Geoprocessing in ArcGIS Pro
+    </figcaption>
+</figure>
+
+**Optie A: Transform (indien de offset bekend is)**
+
+5. Gebruik de ‘Transform’ optie om de transformatie van het model in te voeren
+<figure id="Transform_in_ArcGIS_Pro">
+    <img src="./media/ArcGIS_05.png" alt="Transform_in_ArcGIS_Pro" height="300"/>
+    <figcaption>
+      Transform in ArcGIS Pro
+    </figcaption>
+</figure>
+
+**Optie B: Transform (indien de offset bekend is)**
+6. In de BIM Data tab selecteer ‘Georeference’
+<figure id="Georeference_in_ArcGIS_Pro">
+    <img src="./media/ArcGIS_06.png" alt="Georeference_in_ArcGIS_Pro" height="300"/>
+    <figcaption>
+      Georeference in ArcGIS Pro
+    </figcaption>
+</figure>
+
+7. Gebruik de beschikbare tools om het BIM model op de juiste plaats te leggen
+- Locate: zoom naar een adres
+- Move to display: verplaats het model naar de huidige kaartweergave
+- Elevate to ground: plaats het model op de elevation surface (grond)
+- Move: verplaats het model (in X, Y, Z richting)
+- Scale: Schaal het model
+- Rotate: Roteer het model
+- Reset: Reset alle georefereer-acties
+
+<figure id="Georeference_functies_in_ArcGIS_Pro">
+    <img src="./media/ArcGIS_07.png" alt="Georeference_functies_in_ArcGIS_Pro" height="300"/>
+    <figcaption>
+      Georeference functions in ArcGIS Pro
+    </figcaption>
+</figure>
+
+**Opslaan**
+8. Sla de georefereer actie op via de Save opties
+- Save: maakt een .wld3 bestand aan op basis van de IFC-bestandsnaam (indien al aanwezig wordt deze overschreven)
+- Save to workspace: maakt een generiek ESRI_CAD.wld3 bestand aan voor alle BIM-modellen in dezelfde map
+- Save as new: slaat een nieuwe .wld3 bestand op met een naam naar keuze
+
+**Best practices:**
+- Vraag de maker van het BIM-model vanaf de juiste coördinaten te modelleren zodat dit georefereren vanuit de bron gedaan wordt in plaats van achteraf.
+- Controleer zowel de projectie van het BIM model als die van de scene of kaart.
+- Gebruik context data (zoals 3D BAG, BAG footprints, percelen of bomen) bij het handmatig georefereren. Veel van deze lagen zijn openbaar beschikbaar via de Levende Atlas.
+- Gebruik de ‘Exterior shell’ laag tijdens het georefereren zodat het model lichter is (zet andere lagen aan indien dit nodig is).
+- Het is ook mogelijk om het BIM model in een 2D kaart te laden en vanaf daar in 2D te georefereren.
+- Gebruik een ESRI_CAD.prj bestand bij bestanden met dezelfde projectie.
+- Raadpleeg de documentatie voor aanvullende uitleg en opties. Waaronder: [ArcGIS model to world transformation dialog](https://pro.arcgis.com/en/pro-app/latest/help/data/cad/model-to-world-transformation-dialog.htm) en [arcgis georeference bim data](https://pro.arcgis.com/en/pro-app/latest/help/data/revit/georeference-bim-data.htm) 
 
 ## QGIS
 Voor modellen die niet geogerefereerd zijn kan men de Georeferencer in QGIS gebruiken. Dit is een methode voor 2D georeferentie. 
