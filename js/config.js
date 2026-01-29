@@ -86,7 +86,7 @@ let respecConfig = {
       },
       {
         name: "Cathelijne Kleijwegt",
-        company: "Esri",
+        company: "Esri Nederland",
         companyURL: "https://www.esri.nl/nl-nl/home",
       },
 	    {
