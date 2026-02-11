@@ -3,22 +3,23 @@ Dit hoofdstuk beschrijft hoe de gegeorefereerde IFC-modellen zijn getest in vers
 
 ## Doel van de validatie 
 Het doel van deze validatie is om te beoordelen in hoeverre de informatie van de gegeorefereerde IFC-modellen over komen in gangbare GIS-omgevingen. Door de modellen te testen in zowel ArcGIS Pro als QGIS wordt inzicht verkregen in welke mate de volgende informatie mee komt:
-•	Locatie
-•	Hoogte
-•	Oriëntatie
-•	Schaal
+-	Locatie
+-	Hoogte
+-	Oriëntatie
+-	Schaal
 
 De gebruikte datasets zijn:
-•	Van Brienenoordbrug-IFC4X3.ifc
-•	ifcbridge-model01_georeferenced.ifc
-•	ifcbridge-model02_georeferenced.ifc
-•	ifcbridge-model03_georeferenced.ifc
-•	Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef.ifc
-•	Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef10.ifc
-•	Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef20.ifc
-•	Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef30.ifc
-•	Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef40.ifc
-•	Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef50.ifc
+
+- Van Brienenoordbrug-IFC4X3.ifc
+- ifcbridge-model01_georeferenced.ifc
+- ifcbridge-model02_georeferenced.ifc
+- ifcbridge-model03_georeferenced.ifc
+- Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef.ifc
+- Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef10.ifc
+- Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef20.ifc
+- Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef30.ifc
+- Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef40.ifc
+- Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef50.ifc
 
 
 ## Resultaten in ArcGIS
@@ -31,9 +32,8 @@ De IFC modellen zijn direct ingelezen in ArcGIS Pro zonder extra tools of andere
     <th style = "width:100px;"> Naam</th>
     <th style = "width:200px;"> Afbeelding </th>
     <th style = "width:50px;"> Locatie </th>
-    <th style = "width:50px;"> Locatie </th>
     <th style = "width:50px;"> Hoogte </th>
-    <th style = "width:50px;"> riëntatie </th>
+    <th style = "width:50px;"> Oriëntatie </th>
     <th style = "width:50px;"> Schaal </th>
     <th> Opmerkingen</th>
   </tr>
@@ -125,7 +125,7 @@ De IFC modellen zijn ingelezen in QGIS, waarbij er gerbuik is gemaakt van de [if
     <th style = "width:50px;"> Referentie </th>
     <th style = "width:50px;"> Locatie </th>
     <th style = "width:50px;"> Hoogte </th>
-    <th style = "width:50px;"> riëntatie </th>
+    <th style = "width:50px;"> Oriëntatie </th>
     <th style = "width:50px;"> Schaal </th>
     <th> Opmerkingen</th>
   </tr>
@@ -134,28 +134,28 @@ De IFC modellen zijn ingelezen in QGIS, waarbij er gerbuik is gemaakt van de [if
     <td>
 <img src="./media/briendenennoord_qgis.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-    <td> Real </td><td> ✅ </td><td> ✅</td><td> ✅ </td> <td> ✅</td> <td> Kleine verschuiving in XYZ is zichtbaar tov het AHN (zie onderstaande figuur</td>
+    <td> Real </td><td> ✅ </td><td> ✅</td><td> ✅ </td> <td> ✅</td> <td> Kleine verschuiving in XYZ is zichtbaar tov het AHN zie onderstaande <a class="self-link" href="#AHN4vsIFC">figuur</a></td>
   </tr>
   <tr>
     <td>ifcbridge-model01_georeferenced.ifc </td>
     <td>
 <mark> beeld nog toe te voegen </mark>
     </td>
-   <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+   <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td><td>-</td>
   </tr>
   <tr>
     <td>ifcbridge-model02_georeferenced.ifc </td>
     <td>
 <mark> beeld nog toe te voegen </mark>
     </td>
-      <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+      <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td><td>-</td>
   </tr>
   <tr>
     <td>ifcbridge-model03_georeferenced.ifc </td>
     <td>
 <mark> beeld nog toe te voegen </mark>
     </td>
-       <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td>
+       <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td><td>-</td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef_Totaal.ifc</td>
@@ -168,35 +168,35 @@ De IFC modellen zijn ingelezen in QGIS, waarbij er gerbuik is gemaakt van de [if
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef10.ifc</td>
     <td> <img src="./media/ref_10_3D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-      <td> Fake </td><td> ❌ </td><td>✅ </td><td>✅ </td> <td> ✅ </td>
+      <td> Fake </td><td> ❌ </td><td>✅ </td><td>✅ </td> <td> ✅ </td><td>-</td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef20.ifc</td>
     <td>
 <img src="./media/ref_20_3D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-       <td> Fake </td><td>❌ </td><td> ✅ </td><td>✅ </td> <td>✅ </td>
+       <td> Fake </td><td>❌ </td><td> ✅ </td><td>✅ </td> <td>✅ </td><td>-</td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef30.ifc</td>
     <td>
 <img src="./media/ref_30_3D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-       <td> Fake </td><td> ❌ </td><td> ✅ </td><td> ✅ </td> <td> ✅ </td>
+       <td> Fake </td><td> ❌ </td><td> ✅ </td><td> ✅ </td> <td> ✅ </td><td>-</td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef40.ifc</td>
     <td>
 <img src="./media/ref_40_2D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-       <td> Fake </td><td> ❌ </td><td> ✅ </td><td> ✅ </td> <td> ?</td>
+       <td> Fake </td><td> ❌ </td><td> ✅ </td><td> ✅ </td> <td> ?</td><td>-</td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef50.ifc</td>
     <td>
  <img src="./media/3D_50_AHN5.png" alt="Resultaat geogerefereerd model level 50" title="Resultaat geogerefereerd model level 50" width="190">
     </td>
-       <td> Real </td><td> ✅ </td><td> ✅ </td><td> ✅ </td> <td> ✅ </td>
+       <td> Real </td><td> ✅ </td><td> ✅ </td><td> ✅ </td> <td> ✅ </td><td>-</td>
   </tr>
 </table>
 
@@ -206,11 +206,7 @@ De IFC modellen zijn ingelezen in QGIS, waarbij er gerbuik is gemaakt van de [if
 
 
 Figuur ter verduideling van de opmerking, geplaatst bij de brienenoord brug.
-<figure id="AHN4vsIFC">
-      <img src="./media/AHN4_verschuiving_brienenoord.png" alt="AHN4vsIFC" height="250"/>
+<figure id="AHN4vsIFC" style="display: block; text-align: center; margin: 0 auto;">
+      <img src="./media/AHN4_verschuiving_brienenoord.png" alt="AHN4vsIFC" alt="BIMCollab_Georeferentie_controle" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption>AHN4 (rood) vergeleken met het IFC model (grijs)</figcaption>
 </figure>
-
-
-
-<mark> Aangeleverd door Daan </mark>
