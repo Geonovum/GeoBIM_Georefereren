@@ -360,7 +360,7 @@ Na ontwerp kunnen de ontwerplagen inclusief de onderlegger als DXF opgeslagen wo
 Zonder georeferentie zal de DXF op een verkeerde locatie op de kaart getoond worden. 
 
 <figure id="Ontwerp_Naast_Parijs" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/Inkscape_03.png" alt="Ontwerp_Naast_Parijs" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;"">
+    <img src="./media/Inkscape_03.png" alt="Ontwerp_Naast_Parijs" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;">
     <figcaption>
       Ontwerp wordt geplaatst naast Parijs zonder Georeferentie
     </figcaption>
