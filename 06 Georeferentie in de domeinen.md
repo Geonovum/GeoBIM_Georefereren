@@ -27,7 +27,7 @@ Misschien ook lange lijnen advies voor de Z- waarde.
 
 <mark>
 Uit de ISO 19107: 
-6.2.2.4 Underlying geometric space Geometry systems inherently make assumptions about the "space" in which the geometric objects are defined. 
+6.2.2.4 Underlying geometric space Geometry systems inherently make assumptions about the "space" in which the geometric objects are defined. </mark> 
 
 Classical Euclidean geometry assumes that the objects line in an infinite flat plane represented, for example, by a Cartesian coordinate space with a standard Pythagorean metric. Geographic information if restricted to relatively small areas can be analyzed using classical Euclidean methods or algebraic calculations in a Cartesian coordinate space that depend on the 'flat' Pythagorean metric. the way lines in flat Euclidean spaces define distances in the Pythagorean metric. Thus, the distance between points on a sphere is defined by the length of the great circle on the sphere joining the two points. 
 
@@ -81,7 +81,7 @@ Hoe zit dat dan met gecalculeerde m3 asfalt in snelwegen? Of m3 beton? Of voor h
 
 Vraag 2: Hoe BIM-modellen aan te passen? Kunnen we dit eens proberen met de A20 Corridor van Loek? 
 
-</mark> 
+
 
 
 

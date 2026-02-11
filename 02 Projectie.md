@@ -73,7 +73,7 @@ Coördinaten worden uitgedrukt in ellipsoïdsche breedte (<span style="font-fami
       <p><span style="font-family: 'Times New Roman';"><strong><i>X</i><sub>ecef</sub></strong></span>: de as vanaf de oorsprong richting de nulmeridiaan in het equatorvlak loodrecht op de rotatieas</p>
       <p><span style="font-family: 'Times New Roman';"><strong><i>Y</i><sub>ecef</sub></strong></span>: de as vanaf de oorsprong loodrecht op de nulmeridiaan en de rotatieas</p>
       <p><span style="font-family: 'Times New Roman';"><strong><i>&#981;</i></strong></span>: de hoek die de loodlijn vanaf het oppervlak van de ellipsoïde maakt met het <span style="font-family: 'Times New Roman';"><strong><i>XY</i></strong></span>-vlak (= equatorvlak) 
-      <mark>(let op: in dit plaatje is niet goed zichtbaar dat de loodlijn niet per se door het nulpunt hoeft te gaan)</mark></p>
+      </p>
       <p><span style="font-family: 'Times New Roman';"><strong><i>&lambda;</i></strong></span>: de hoek met de nulmeridiaan</p>
       <p><span style="font-family: 'Times New Roman';"><strong><i>h</i></strong></span>: de hoogte boven de ellipsoïde</p>
     </td>
@@ -85,6 +85,8 @@ Coördinaten worden uitgedrukt in ellipsoïdsche breedte (<span style="font-fami
     </td>
   </tr>
 </table>
+
+<mark>(let op: in bovenstaand plaatje is niet goed zichtbaar dat de loodlijn niet per se door het nulpunt hoeft te gaan) moet dit nog aangepast worden? </mark> 
 
 <a>Ellipsoïdische coördinaten</a> worden ook wel geografische coördinaten genoemd, rechthoekige coördinaten worden ook wel <a>geocentrische coördinaten</a> genoemd.
 
