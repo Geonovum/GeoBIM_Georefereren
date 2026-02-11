@@ -1,0 +1,104 @@
+<ids:ids xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd" xmlns:ids="http://standards.buildingsmart.org/IDS">
+  <ids:info>
+    <ids:title>IDS_for_LoGeRef_50_Georeferencing</ids:title>
+    <ids:copyright>VDCbase Lex Ransijn</ids:copyright>
+    <ids:version>1.0</ids:version>
+    <ids:description>IDS_for_LoGeRef_50_Georeferencing</ids:description>
+    <ids:author>lex@vdcbase.com</ids:author>
+    <ids:date>2026-02-11</ids:date>
+    <ids:purpose>Sharing knowloedge for GeoRef</ids:purpose>
+    <ids:milestone>All milestones where IFC should be related to the real world in the netherlands</ids:milestone>
+  </ids:info>
+  <ids:specifications>
+    <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="*9.01a Georeferentie met IfcProjectedCRS" description="Aanbeveling 01: Deze CRS-eis geldt alleen voor Nederlandse projecten waarbij de omvang van het project i.c.m. de kromming van de aarde geen probleem oplevert. Als dit niet geldt dan is het ook mogelijk om eventueel IfcGeographicCRS en/of andere EPSG te gebruiken." instructions="Requirement 01: &#xA;Een BIM-Model moet de IFCClass IFCMAPCONVERSION bevatten met de attributen SourceCRS, TargetCRS, Easting, Northing, OrthogonalHeight, XAxisAbscissa, XAxisOrdinate en Scale ingevuld.&#xA;&#xA;Requirement 2: Het attribuut TargetCRS voor Nederlandse indiening heeft als verplichte waarde een IfcProjectedCRS met attribuut VerticalDatum EPSG:7415 (RD+NAP)of EPSG:28992 (RD) én EPSG:5709 (NAP)">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCPROJECTEDCRS</ids:simpleValue>
+          </ids:name>
+        </ids:entity>
+        <ids:attribute>
+          <ids:name>
+            <ids:simpleValue>Name</ids:simpleValue>
+          </ids:name>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="EPSG:7415" />
+              <xs:enumeration value="EPSG:28992" />
+            </xs:restriction>
+          </ids:value>
+        </ids:attribute>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:attribute cardinality="required" instructions="Doel coördinatenstelsel waarin het BIM-model geplaatst wordt. EPSG 7415&#xA;Het attribuut TargetCRS voor Nederlandse indiening heeft als verplichte waarde een IfcProjectedCRS met attribuut VerticalDatum EPSG:7415 (RD+NAP)of EPSG:28992 (RD) én EPSG:5709 (NAP)&#xA;https://www.opengis.net/def/crs/EPSG/0/28992">
+          <ids:name>
+            <ids:simpleValue>Name</ids:simpleValue>
+          </ids:name>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="EPSG:7415" />
+              <xs:enumeration value="EPSG:28992" />
+            </xs:restriction>
+          </ids:value>
+        </ids:attribute>
+      </ids:requirements>
+    </ids:specification>
+    <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="*9.01b Georeferentie met IfcMapconversion" identifier="https://afsprakenstelseldsgo.atlassian.net/wiki/spaces/DSGO/pages/317587871/BIM+voor+vergunningaanvraag+grote+bouwprojecten+voor+gebouwen+met+als+gebruiksfunctie+woonfunctie#Georeferentie" description="Aanbeveling 01:&#xA;Deze CRS-eis geldtDeze CRS-eis geldt alleen voor Nederlandse projecten waarbij de omvang van het project i.c.m. de kromming van de aarde geen probleem oplevert. Als dit niet geldt dan is het ook mogelijk om eventueel IfcGeographicCRS en/of andere EPSG te gebruiken." instructions="Requirement 02:&#xA;Een BIM-Model moet de IFCClass IFCMAPCONVERSION bevatten met de attributen SourceCRS, TargetCRS, Easting, Northing, OrthogonalHeight, XAxisAbscissa, XAxisOrdinate en Scale ingevuld.&#xA;">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCMAPCONVERSION</ids:simpleValue>
+          </ids:name>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:attribute cardinality="required" instructions="Het broncoördinatenstelsel van het BIM-model&#xA;Voorbeeld: IfcGeometric-RepresentationContext">
+          <ids:name>
+            <ids:simpleValue>SourceCRS</ids:simpleValue>
+          </ids:name>
+        </ids:attribute>
+        <ids:attribute cardinality="required" instructions="Doel coördinatenstelsel waarin het BIM-model geplaatst wordt.&#xA;EPSG 7415&#xA;&#xA;Het attribuut TargetCRS voor Nederlandse indiening heeft als verplichte waarde een IfcProjectedCRS met attribuut VerticalDatum EPSG:7415 (RD+NAP)of EPSG:28992 (RD) én EPSG:5709 (NAP)">
+          <ids:name>
+            <ids:simpleValue>TargetCRS</ids:simpleValue>
+          </ids:name>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="EPSG:7415" />
+              <xs:enumeration value="EPSG:28992" />
+            </xs:restriction>
+          </ids:value>
+        </ids:attribute>
+        <ids:attribute cardinality="required" instructions="Verplaatsing in Oostrichting om het BIM-model op de goede plek te krijgen.&#xA;Voorbeeld: 92370.710706">
+          <ids:name>
+            <ids:simpleValue>Eastings</ids:simpleValue>
+          </ids:name>
+        </ids:attribute>
+        <ids:attribute cardinality="required" instructions="Verplaatsing in Noordrichting om het BIM-model op de goede plek te krijgen.&#xA;Voorbeeld: 437455.379788">
+          <ids:name>
+            <ids:simpleValue>Northings</ids:simpleValue>
+          </ids:name>
+        </ids:attribute>
+        <ids:attribute cardinality="required" instructions="Verplaatsing in Hoogterichting om het BIM-model op de goede plek te krijgen.&#xA;Voorbeeld: 1.3092">
+          <ids:name>
+            <ids:simpleValue>OrthogonalHeight</ids:simpleValue>
+          </ids:name>
+        </ids:attribute>
+        <ids:attribute cardinality="required" instructions="Specificeert de waarde langs de oostelijke as van het eindpunt van een vector die de positie van de lokale x-as van het engineering coördinaatreferentiesysteem aangeeft.&#xA;Voorbeeld: 0.8">
+          <ids:name>
+            <ids:simpleValue>XAxisAbscissa</ids:simpleValue>
+          </ids:name>
+        </ids:attribute>
+        <ids:attribute cardinality="required" instructions="Specificeert de waarde langs de oostelijke as van het eindpunt van een vector die de positie van de lokale x-as van het engineering coördinaatreferentiesysteem aangeeft.&#xA;Voorbeeld: 0.1">
+          <ids:name>
+            <ids:simpleValue>XAxisOrdinate</ids:simpleValue>
+          </ids:name>
+        </ids:attribute>
+        <ids:attribute cardinality="required" instructions="Schaal van eenheden in BIM-model t.o.v. eenheden in target CRS&#xA;Voorbeeld: 1/0.001">
+          <ids:name>
+            <ids:simpleValue>Scale</ids:simpleValue>
+          </ids:name>
+        </ids:attribute>
+      </ids:requirements>
+    </ids:specification>
+  </ids:specifications>
+</ids:ids>

@@ -10,8 +10,8 @@ Optie 1: 2D
 3. Drag-drop de bestanden in [QGIS](https://qgis.org/download/).
 4. In QGIS selecteer Project>Import/Export>Export Project to DXF. De CRS zal EPSG:28992 (RD NEW) tonen.
 
-<figure id="QGIS-DXF-Export-2D">
-      <img src="./media/QGIS_1.png" alt="QGIS-DXF-Export-2D" height="500"/>
+<figure id="QGIS-DXF-Export-2D" style="display: block; text-align: center; margin: 0 auto;">
+      <img src="./media/QGIS_1.png" alt="QGIS-DXF-Export-2D" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption><a class="self-link" href="#fig-QGIS-DXF-Export-2D"></bdi></a><span class="fig-title">Export 2D project naar DXF in QGIS</span></figcaption>
 </figure>
 
@@ -21,16 +21,16 @@ Optie 2: 3D
 2. Download je bestand en kies Geopackage (GPKG) als bestandformaat. 
 3. Drag-drop je bestanden in QGIS.
 4. In QGIS ga naar Project>Import/Export>Export Project to DXF. De CRS zal EPSG:74152 (RD NEW + NAP height) tonen.
-<figure id="QGIS-DXF-Export-3D">
-      <img src="./media/QGIS_2.png" alt="QGIS-DXF-Export-3D" height="500"/>
+<figure id="QGIS-DXF-Export-3D" style="display: block; text-align: center; margin: 0 auto;">
+      <img src="./media/QGIS_2.png" alt="QGIS-DXF-Export-3D" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption><a class="self-link" href="#fig-QGIS-DXF-Export-3D"></bdi></a><span class="fig-title">Export 2D project naar DXF in QGIS</span></figcaption>
 </figure>
 
 ## Revit
 Revit kent het begrip <a>Internal Origin</a>. Dit is de oorsprong in Revit die niet verplaatsbaar is. Daarnaast bestaat er een *<a>Project Basepoint</a>:*, ook wel Lokaal Coördinatiepunt. Dit punt wordt gebruikt om gemodelleerde elementen te positioneren en uitwisseling met andere modellen mogelijk te maken. tijdens engineering en/of wanneer Georeferentie niet relevant is. Ook kent Revit een <a>Survey Point</a>. Dit punt, een soort CRS-coordinatiepunt, wordt gebruikt om de relatie te leggen met een coördinatenstelsel (CRS) en zo de positie van het model op de aardbol vast te leggen.
 Revit kent <a>Project Units</a>. De project units bevat de instelling van de standaard eenheden die men binnen het project gebruikt. Hier kan men bijvoorbeeld opgegeven of er met meters of met millimeters wordt gewerkt of volume in liters of m<sup>3</sup>.<br>
-<figure id="Scherm-in-Revit-dat-Lokaal-Coordinatiepunt-en-CRS-Coordinatiepunt-laat-zien">
-      <img src="./media/Revit_1.png" alt="Scherm in Revit dat Lokaal Coordinatiepunt en CRS-Coordinatiepunt laat zien" height="400"/>
+<figure id="Scherm-in-Revit-dat-Lokaal-Coordinatiepunt-en-CRS-Coordinatiepunt-laat-zien" style="display: block; text-align: center; margin: 0 auto;">
+      <img src="./media/Revit_1.png" alt="Scherm in Revit dat Lokaal Coordinatiepunt en CRS-Coordinatiepunt laat zien" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption><a class="self-link" href="#fig-Scherm-in-Revit-dat-Lokaal-Coordinatiepunt-en-CRS-Coordinatiepunt-laat-zien"></bdi></a><span class="fig-title">Scherm in Revit dat Lokaal Coordinatiepunt en CRS-Coordinatiepunt laat zien</span></figcaption>
 </figure>
 
@@ -55,8 +55,8 @@ Revit kent <a>Project Units</a>. De project units bevat de instelling van de sta
 6. Zet eventueel de Project Units terug naar millimeter.
 
 
-<figure id="Controle-in-Revit">
-      <img src="./media/Revit_2.png" alt=Controle-in-Revit height="500"/>
+<figure id="Controle-in-Revit" style="display: block; text-align: center; margin: 0 auto;">
+      <img src="./media/Revit_2.png" alt=Controle-in-Revit style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption><a class="self-link" href="#fig-Controle-in-Revit"></bdi></a><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></figcaption>
 </figure>
 
@@ -68,29 +68,27 @@ Door een omissie in de IFC-exporter van Revit moet voorafgaand aan het exportere
 1.	Lokaal Coördinatiepunt: exporteer een IFC (4 of hoger) met Project Basepoint als Coordinate Base.<br>
 De IFC is niet ge-georefereerd (alleen de coordinaten van Project Basepoint zijn correct) en niet Grid-noord gericht (Project North in Revit).<br>
 
-<figure id="Setup-in-Revit">
-      <img src="./media/Revit_3.png" alt=Setup-in-Revit height="400"/>
+<figure id="Setup-in-Revit" style="display: block; text-align: center; margin: 0 auto;">
+      <img src="./media/Revit_3.png" alt=Setup-in-Revit style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption><a class="self-link" href="#fig-Setup-in-Revit"></bdi></a><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></figcaption>
 </figure>
 
 2.	CRS-Coördinatiepunt: exporteer een IFC (4 of hoger) met Survey Point als Coordinate Base.<br>
-Vul bij EPSG Code in: <mark> 28992</mark> **opmerking, waarom geen 7415**. De IFC is ge-Georefereerd en is Grid-noord gericht (True North in Revit)<br>
+Vul bij EPSG Code in: 28992. Dit zorgt ervoor dat de referentie wordt herkend in de software of tooling. De IFC is ge-Georefereerd en is Grid-noord gericht (True North in Revit)<br> Officieel is de EPSG Code 7415 vanwege de 3 dimensies van coordinaten. Dit wordt (nog) niet ondersteund in Revit. 
 
 <mark> dit is dezelfde figuur. Klopt dit? </mark>
 
-<figure id="Controle-in-Revit-2">
-      <img src="./media/Revit_2.png" alt=Controle-in-Revit-2 height="500"/>
+<figure id="Controle-in-Revit-2" style="display: block; text-align: center; margin: 0 auto;">
+      <img src="./media/Revit_2.png" alt=Controle-in-Revit-2 style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption><a class="self-link" href="#fig-Controle-in-Revit"></bdi></a><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></figcaption>
 </figure>
 
-<figure id="Setup-in-Revit-Survey-Point">
-      <img src="./media/Revit_4.png" alt=Setup-in-Revit-Survey-Point height="400"/>
+<figure id="Setup-in-Revit-Survey-Point" style="display: block; text-align: center; margin: 0 auto;">
+      <img src="./media/Revit_4.png" alt=Setup-in-Revit-Survey-Point style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption><a class="self-link" href="#fig-Setup-in-Revit-Survey-Point"></bdi></a><span class="fig-title">Scherm in Revit met instellingen voor IFC export met Survey Point als Coordinate Base</span></figcaption>
 </figure>
 
-<mark> Vanwaar deze bron, kunnen we dit toelichten?</mark>
-
-[Hans Hendriks (2022)](https://github.com/Hans-Lammerts/Sample-Test-Files/blob/master/Geolocation%20information%20from%20Revit%20to%20IFC_v1.0.pdf)
+Zie ook [Hans Hendriks (2022)](https://github.com/Hans-Lammerts/Sample-Test-Files/blob/master/Geolocation%20information%20from%20Revit%20to%20IFC_v1.0.pdf) voor aanvullende toelichting.
 
 ## Autocad Civil 3D
 
@@ -102,8 +100,8 @@ Stappenplan IFC Export Civil3D “IFCINFRAEXPORT”
 1. Maak je Civil3D model zoals je dit altijd doen. Uiteraard rekening houdend met werken op RD-Coördinaten
 2. Controleer of het RD stelsel correct is ingesteld met de het commando “EDITDRAWINGSETTING” of het commando “MAPCSASSIGN”
 
-<figure id="Cordinate_system_Civil3D">
-      <img src="./media/Coordinate_System_Civil3D.png" alt=Cordinate_system_Civil3D height="500"/>
+<figure id="Cordinate_system_Civil3D" style="display: block; text-align: center; margin: 0 auto;">
+      <img src="./media/Coordinate_System_Civil3D.png" alt=Cordinate_system_Civil3D style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption><a class="self-link" href="#fig-Cordinate_system_Civil3D"></bdi></a><span class="fig-title">Controle van instellingen van RD-stelsel in Civil 3D</span></figcaption>
 </figure>
 
@@ -127,13 +125,13 @@ Instellen Georeferentie (via de IFC4 “MapConversion” methode) voor het expor
 
 <div style="display:flex; gap:20px; justify-content:center; align-items:flex-start;">
   <figure style="text-align:center; margin:0;" id="Cordinate_system_ArchiCAD">
-    <img src="./media/Archicad_01.png" alt="Cordinate_system_ArchiCAD" height="700"/>
+    <img src="./media/Archicad_01.png" alt="Cordinate_system_ArchiCAD" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption>Controle van instellingen van RD-stelsel in ArchiCAD</figcaption>
   </figure>
 
   <figure style="text-align:center; margin:0;" id="Cordinate_system_ArchiCAD_2">
-    <img src="./media/Archicad_02.png" alt="Cordinate_system_ArchiCAD_2" height="700"/>
-    <figcaption>Tweede figuur: voorbeeld</figcaption>
+    <img src="./media/Archicad_02.png" alt="Cordinate_system_ArchiCAD_2" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
+    <figcaption>Aanpassing van instellingen van RD-stelsel in ArchiCAD</figcaption>
   </figure>
 </div>
 
@@ -188,8 +186,8 @@ In Tekla Structures kan met behulp van **Basispunten** een coördinatensysteem v
     Definieer de benodigde gegevens zoals de coördinaten (1) en een eventuele hoek bij de optie Hoek naar het noorden (2)<br>
     en sla het basispunt op onder een naam door op de “+” knop te klikken (3):<br>
 
-<figure id="Basispunt_in_Tekla">
-    <img src="./media/Tekla_01.png" alt="Basispunt_in_Tekla" height="400"/>
+<figure id="Basispunt_in_Tekla" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/Tekla_01.png" alt="Basispunt_in_Tekla" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption>
       Basispunt in Tekla
     </figcaption>
@@ -198,8 +196,8 @@ In Tekla Structures kan met behulp van **Basispunten** een coördinatensysteem v
 2. IFC exporteren  
     Klik op Bestand > Exporteren > IFC4 om het dialoogvenster **IFC exporteren** te openen.
     Selecteer bij Locatie door het gedefinieerde basispunt:
-<figure id="IFC_Export_in_Tekla">
-  <img src="./media/Tekla_02.png" alt="IFC_Export_in_Tekla" height="400"/>
+<figure id="IFC_Export_in_Tekla" style="display: block; text-align: center; margin: 0 auto;">
+  <img src="./media/Tekla_02.png" alt="IFC_Export_in_Tekla" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
    <figcaption>
       IFC exporteren in Tekla
     </figcaption>
@@ -210,8 +208,8 @@ Definieer vervolgens de overige benodigde gegevens. Bij de optie _Basispunt expo
 3. IFC importeren  
    Voor het importeren van IFC-modellen wordt in Tekla Structures de functionaliteit **Referentiemodellen** gebruikt.
    Klik in het zijpaneel op Referentiemodellen:
-<figure id="IFC_importeren_in_Tekla">
-  <img src="./media/Tekla_03.png" alt="IFC_importeren_in_Tekla" height="400"/>
+<figure id="IFC_importeren_in_Tekla" style="display: block; text-align: center; margin: 0 auto;">
+  <img src="./media/Tekla_03.png" alt="IFC_importeren_in_Tekla" style="width: 100%; max-width: 200px; height: auto; display: block; margin: 0 auto;"/>
    <figcaption>
       IFC importeren in Tekla
     </figcaption>
@@ -219,8 +217,8 @@ Definieer vervolgens de overige benodigde gegevens. Bij de optie _Basispunt expo
 
 Klik vervolgens op de knop **+ Model toevoegen** om het dialoogvenster **Model toevoegen** te openen. Selecteer bij Locatie door het gedefinieerde basispunt:
 
-<figure id="Model_toevoegen_in_Tekla">
-  <img src="./media/Tekla_04.png" alt="Model_toevoegen_in_Tekla" height="250"/>
+<figure id="Model_toevoegen_in_Tekla" style="display: block; text-align: center; margin: 0 auto;">
+  <img src="./media/Tekla_04.png" alt="Model_toevoegen_in_Tekla" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
    <figcaption>
       Model toevoegen in Tekla
     </figcaption>
@@ -272,8 +270,8 @@ Methode is numeriek, de waarde die wilt gebruiken moet je vooraf hebben bepaald.
 Vanuit de service [IFC2Perceel](https://bim-tools.github.io/perceel2ifc/) kan men een kadastraal perceel als IFC downloaden. 
 Deze site geeft een actueel kadastrale perceel op NAP hoogte met een <a>GEO Coördinatiepunt</a>
 
-<figure id="Perceel_2_IFC">
-    <img src="./media/Perceel2IFC.png" alt="Perceel_2_IFC" height="400"/>
+<figure id="Perceel_2_IFC" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/Perceel2IFC.png" alt="Perceel_2_IFC" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption>
       Perceel2IFC 
     </figcaption>
@@ -282,8 +280,8 @@ Deze site geeft een actueel kadastrale perceel op NAP hoogte met een <a>GEO Coö
 Waarden voor de geografische plaatsing van het model <a>nulpunt</a> kun je bekijken en aanpassen onder Project Setup > Geometry > Georeferencing
 Dit zijn exact dezelfde waarden als IFCmapconversion. 
 
-<figure id="Georeferentie_van_IFC_in_Blender">
-    <img src="./media/Blender_01.png" alt="Georeferentie_van_IFC_in_Blender" height="400"/>
+<figure id="Georeferentie_van_IFC_in_Blender" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/Blender_01.png" alt="Georeferentie_van_IFC_in_Blender" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption>
       Georeferentie van IFC bekijken in Blender 
     </figcaption>
@@ -291,8 +289,8 @@ Dit zijn exact dezelfde waarden als IFCmapconversion.
 
 Gebruik het oog symbooltje en size om het visueel te laten weergeven
 
-<figure id="Georeferentie_van_IFC_in_Blender_2">
-    <img src="./media/Blender_02.png" alt="Georeferentie_van_IFC_in_Blender_2" height="400"/>
+<figure id="Georeferentie_van_IFC_in_Blender_2" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/Blender_02.png" alt="Georeferentie_van_IFC_in_Blender_2" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption>
       Georeferentie van IFC bekijken in Blender 
     </figcaption>
@@ -300,8 +298,8 @@ Gebruik het oog symbooltje en size om het visueel te laten weergeven
 
 Handig is ook dat je de rotatie met Grid North kunt laten berekenen
 
-<figure id="Georeferentie_van_IFC_in_Blender_3">
-    <img src="./media/Blender_03.png" alt="Georeferentie_van_IFC_in_Blender_3" height="400"/>
+<figure id="Georeferentie_van_IFC_in_Blender_3" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/Blender_03.png" alt="Georeferentie_van_IFC_in_Blender_3" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption>
       Georeferentie van IFC bekijken in Blender 
     </figcaption>
@@ -316,8 +314,8 @@ Deze waarden kan men invullen bij het attribuut IfcMapconversion.
 Start hiervoor een nieuw Ifc Project, het liefst in meters: 
 
 
-<figure id="Georeferentie_van_IFC_in_Blender_4">
-    <img src="./media/Blender_04.png" alt="New_IFC_Project_In_Blender">
+<figure id="Georeferentie_van_IFC_in_Blender_4" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/Blender_04.png" alt="New_IFC_Project_In_Blender" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;">
     <figcaption>
       Nieuw ifc-project, in meters, in Blender  
     </figcaption>
@@ -325,13 +323,11 @@ Start hiervoor een nieuw Ifc Project, het liefst in meters:
 
 Druk op het "+" teken naast IfcMapConversion en vul de juiste gegevens in.
 
-<table id="tabel-Blender-ifcmapconversion">
-  <tbody>
-    <tr>
-      <td><img src="./media/Blender_05.png" alt="IfcMapConversion_in_Blender"></td>
-      <td><img src="./media/Blender_06.png" alt="IfcMapConversion_leeg_in_Blender"></td>
-      <td><img src="./media/Blender_07.png" alt="IfcMapConversion_gevuld_in_Blender"></td>
- </table>
+<div id="tabel-Blender-ifcmapconversion" style="display: flex; flex-wrap: nowrap; gap: 1em; justify-content: center;">
+  <img src="./media/Blender_05.png" alt="IfcMapConversion_in_Blender" style="width: 400px; height: auto; display: block;">
+  <img src="./media/Blender_06.png" alt="IfcMapConversion_leeg_in_Blender" style="width: 400px; height: auto; display: block;">
+  <img src="./media/Blender_07.png" alt="IfcMapConversion_gevuld_in_Blender" style="width: 400px; height: auto; display: block;">
+</div>
 
 Sla het model op als ifc en gebruik tooling zoals ifcgref of andere toepassingen om de georeferentie te controleren. 
 
@@ -345,7 +341,7 @@ CityGML kan men importeren met de extensie: [CityGML](https://github.com/ppaawwe
 
 In Illustrator/Inkscape werkt men op digitaal papierformaat. Zorg ervoor dat voorafgaand aan het ontwerp er een onderlegger kaartlaag gebruikt wordt met bekende punten (zoals de BGT). Download deze onderlegger in DXF. Zie [CAD-onderlegger](#cad-onderlegger) of [QGIS](#qgis) hoe dit te doen. Laad deze DXF in Illustrator/Inkscape: 
 
-<figure id="Import_DXF_in_Inkscape">
+<figure id="Import_DXF_in_Inkscape" style="display: block; text-align: center; margin: 0 auto;">
     <img src="./media/Inkscape_01.png" alt="Import_DXF_in_Inkscape" height="300">
     <figcaption>
       Importeren van DXF-onderlegger in Inkscape.
@@ -354,8 +350,8 @@ In Illustrator/Inkscape werkt men op digitaal papierformaat. Zorg ervoor dat voo
 
 Na ontwerp kunnen de ontwerplagen inclusief de onderlegger als DXF opgeslagen worden. 
 
-<figure id="Opslaan_Inkscape_ontwerp_als_DXF">
-    <img src="./media/Inkscape_02.png" alt="Opslaan_Inkscape_ontwerp_als_DXF" height="300">
+<figure id="Opslaan_Inkscape_ontwerp_als_DXF" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/Inkscape_02.png" alt="Opslaan_Inkscape_ontwerp_als_DXF" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;"">
     <figcaption>
       Opslaan van een ontwerp in Inkscape als DXF
     </figcaption>
@@ -363,8 +359,8 @@ Na ontwerp kunnen de ontwerplagen inclusief de onderlegger als DXF opgeslagen wo
 
 Zonder georeferentie zal de DXF op een verkeerde locatie op de kaart getoond worden. 
 
-<figure id="Ontwerp_Naast_Parijs">
-    <img src="./media/Inkscape_03.png" alt="Ontwerp_Naast_Parijs" height="300">
+<figure id="Ontwerp_Naast_Parijs" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/Inkscape_03.png" alt="Ontwerp_Naast_Parijs" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;"">
     <figcaption>
       Ontwerp wordt geplaatst naast Parijs zonder Georeferentie
     </figcaption>
@@ -372,8 +368,8 @@ Zonder georeferentie zal de DXF op een verkeerde locatie op de kaart getoond wor
 
 Voer de stappen van Georeferentie in QGIS uit om het DXF bestand op de juiste plaats te krijgen. 
 
-<figure id="Ontwerp_op_de_juiste_plek_na_georeferentie">
-    <img src="./media/Inkscape_04.png" alt="Ontwerp_op_de_juiste_plek_na_georeferentie" height="300">
+<figure id="Ontwerp_op_de_juiste_plek_na_georeferentie" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/Inkscape_04.png" alt="Ontwerp_op_de_juiste_plek_na_georeferentie" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;">
     <figcaption>
       Ontwerp op de gewenste plek na georeferentie
     </figcaption>
@@ -381,8 +377,8 @@ Voer de stappen van Georeferentie in QGIS uit om het DXF bestand op de juiste pl
 
 Het is ook mogelijk om aanvullende objecten in DXF terug naar de ontwerptekening te converteren. Dit doet men met het inverse georefereren zoals in het QGIS hoofdstuk beschreven. Dit zorgt ervoor dat men bestaande objecten kan hergebruiken en opwerken. 
 
-<figure id="Extra_element_naar_Inkscape">
-    <img src="./media/Inkscape_05.png" alt="Extra_element_naar_Inkscape" height="300">
+<figure id="Extra_element_naar_Inkscape" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/Inkscape_05.png" alt="Extra_element_naar_Inkscape" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
     <figcaption>
       Extra waterelement aan ontwerptekening toegevoegd door inverse georeferentie.
     </figcaption>
@@ -402,8 +398,8 @@ In ArcGIS Pro zijn er tools beschikbaar om een bestaand BIM-model (IFC en Revit)
 **Open het model**
 1. Voeg het model toe aan een scene door deze erin te slepen vanuit de Verkenner in Windows of door een folder connectie te maken in het catalog pane.
 
-<figure id="Ingeladen_bim_model_in_ArcGIS_Pro">
-    <img src="./media/ArcGIS_01.png" alt="Ingeladen_Bim_Model_in_ArcGIS_Pro" height="300"/>
+<figure id="Ingeladen_bim_model_in_ArcGIS_Pro" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/ArcGIS_01.png" alt="Ingeladen_Bim_Model_in_ArcGIS_Pro" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption>
       Ingeladen BIM-model in ArcGIS Pro
     </figcaption>
@@ -411,8 +407,8 @@ In ArcGIS Pro zijn er tools beschikbaar om een bestaand BIM-model (IFC en Revit)
 
 2. Selecteer de laag van het BIM model in het contents panel en open de ‘BIM Data’ tab in de ribbon bovenin
 
-<figure id="Define_projection_in_ArcGIS_Pro">
-    <img src="./media/ArcGIS_03.png" alt="Define_projection_in_ArcGIS_Pro" height="300"/>
+<figure id="Define_projection_in_ArcGIS_Pro" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/ArcGIS_03.png" alt="Define_projection_in_ArcGIS_Pro" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption>
       Define projection
     </figcaption>
@@ -423,8 +419,8 @@ Define projection (indien nodig)
 
 4. In de Geoprocessing tool selecteer het juiste coördinatensysteem en klik op Run
 
-<figure id="Geoprocessing_in_ArcGIS_Pro">
-    <img src="./media/ArcGIS_04.png" alt="Geoprocessing_in_ArcGIS_Pro" height="300"/>
+<figure id="Geoprocessing_in_ArcGIS_Pro" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/ArcGIS_04.png" alt="Geoprocessing_in_ArcGIS_Pro"style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption>
       Geoprocessing in ArcGIS Pro
     </figcaption>
@@ -434,7 +430,7 @@ Define projection (indien nodig)
 
 5. Gebruik de ‘Transform’ optie om de transformatie van het model in te voeren
 <figure id="Transform_in_ArcGIS_Pro">
-    <img src="./media/ArcGIS_05.png" alt="Transform_in_ArcGIS_Pro" height="300"/>
+    <img src="./media/ArcGIS_05.png" alt="Transform_in_ArcGIS_Pro" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption>
       Transform in ArcGIS Pro
     </figcaption>
@@ -442,8 +438,8 @@ Define projection (indien nodig)
 
 **Optie B: Transform (indien de offset bekend is)**
 6. In de BIM Data tab selecteer ‘Georeference’
-<figure id="Georeference_in_ArcGIS_Pro">
-    <img src="./media/ArcGIS_06.png" alt="Georeference_in_ArcGIS_Pro" height="300"/>
+<figure id="Georeference_in_ArcGIS_Pro" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/ArcGIS_06.png" alt="Georeference_in_ArcGIS_Pro" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption>
       Georeference in ArcGIS Pro
     </figcaption>
@@ -458,8 +454,8 @@ Define projection (indien nodig)
 - Rotate: Roteer het model
 - Reset: Reset alle georefereer-acties
 
-<figure id="Georeference_functies_in_ArcGIS_Pro">
-    <img src="./media/ArcGIS_07.png" alt="Georeference_functies_in_ArcGIS_Pro" height="300"/>
+<figure id="Georeference_functies_in_ArcGIS_Pro" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/ArcGIS_07.png" alt="Georeference_functies_in_ArcGIS_Pro" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption>
       Georeference functions in ArcGIS Pro
     </figcaption>
@@ -483,11 +479,11 @@ Define projection (indien nodig)
 ## QGIS
 Voor modellen die niet geogerefereerd zijn kan men de Georeferencer in QGIS gebruiken. Dit is een methode voor 2D georeferentie. 
 
-Laad eerst de 2D Vector-modellen in. Voor 2D autocad kan dit DXF zijn. 
-Gebruik in dit geval de plug-in DXF-AnotherDXFImporter
+Laad eerst de 2D Vector-modellen in. Voor 2D autocad kan dit DXF zijn. Andere formaten zijn ook mogelijk. <br>
+Gebruik in het geval an DXF de plug-in DXF-AnotherDXFImporter
 
-<figure id="QGIS_Georeferencer">
-    <img src="./media/QGIS_5.png" alt="QGIS_Georeferencer" height="200"/>
+<figure id="QGIS_Georeferencer" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/QGIS_5.png" alt="QGIS_Georeferencer" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption>
       QGIS Georeferencer
     </figcaption>
@@ -495,30 +491,46 @@ Gebruik in dit geval de plug-in DXF-AnotherDXFImporter
 
 Door bekende punten uit het model in te voeren of te positoneren op de kaart, worden de waardes voor Helmert transformatie berekend.   
 
-<figure id="QGIS_Georeferentie_resultaat">
-    <img src="./media/QGIS_6.png" alt="QGIS_Georeferentie_resultaat" height="200"/>
+<figure id="QGIS_Georeferentie_resultaat" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/QGIS_6.png" alt="QGIS_Georeferentie_resultaat" style="width: 100%; max-width: 00px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption>
       QGIS Georeferentie rapportage
     </figcaption>
 </figure>
 
-De proj-parameters worden door QGIS ingevuld zodat hiermee een 2D BIM-model juist geogerefereerd wordt. 
-<figure id="QGIS_Vector_Conversie_2">
-    <img src="./media/QGIS_4.png" alt="QGIS_Vector_Conversie_2" height="700"/>
+Selecteer de GDAL Vector Conversie - Convert Format functie in de toolbox processing: 
+
+<figure id="QGIS_Toolbox_Processing" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/QGIS_8.png" alt="QGIS_Toolbox_Processing" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;"/>
+    <figcaption>
+      QGIS Vector conversie 
+    </figcaption>
+</figure>
+
+De proj-parameters zijn in QGIS ingevuld zodat hiermee een 2D BIM-model juist geogerefereerd wordt. 
+
+Door op uitvoeren te drukken vidnt een affine transformatie plaats. Dit is een super-klasse van de Helmert transformatie.
+
+<figure id="QGIS_Vector_Conversie_2" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/QGIS_4.png" alt="QGIS_Vector_Conversie_2" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption>
       QGIS Vector Conversie 
     </figcaption>
 </figure>
 
 Door een inverse van de proj-parameter te gebruiken kunnen ook objecten uit een geogerefereerde set, zoals de BGT (RD) naar een Lokaal coordinatenstelsel worden geconverteerd. 
-<figure id="QGIS_Inverse-Vector_Conversie">
-    <img src="./media/QGIS_3.png" alt="QGIS_Inverse_Vector_Conversie" height="700"/>
+<figure id="QGIS_Inverse-Vector_Conversie" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/QGIS_3.png" alt="QGIS_Inverse_Vector_Conversie" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption>
       QGIS Inverse Vector Conversie 
     </figcaption>
 </figure>
 
 <mark> Nog onderzoeken of 3D Georeferentie ook mogelijk is </mark>
+
+
+## Controle van georeferentie in QGIS, Solibri en BIMCollab
+Onderstaande voorbeelden beschrijven hoe men georeferentie kan controleren in software. Het is met onderstaande voorbeelden niet mogelijk om dit aan te passen.   
 
 **Controle van 3D Georeferentie van een IFC in QGIS:**
 Converteer IFC naar GeoJSON, bijvoorbeeld met [ifc2gis](https://citygeometrix.com/ifc2gis/) en download de file. Maak eventueel de GeoJSON file kleiner door een beperkte selectie van de IFC-elementen te maken. Bijvoorbeeld alleen de slabs en walls. 
@@ -530,8 +542,8 @@ Open, bijvoorbeeld met de PDOK-Locatieserver-plugin, vanuit de PDOK de BAG en de
 Open een nieuwe 3D-kaartweergave. 
 Druk met de rechter muisknop op de 3D geoJSON file en klik op eigenschappen. 
 Klik op de 3D-weergave en selecteer Enkel Symbool.
-<figure id="QGIS_Georeferentie_controle">
-    <img src="./media/QGIS_7.png" alt="QGIS_Georeferentie_controle" height="700"/>
+<figure id="QGIS_Georeferentie_controle" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/QGIS_7.png" alt="QGIS_Georeferentie_controle" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption>
       QGIS Georeferentie controle
     </figcaption>
@@ -539,14 +551,26 @@ Klik op de 3D-weergave en selecteer Enkel Symbool.
 
 Het is hiermee mogelijk om visueel te controleren hoe het model positioneert ten opzichte van de BAG en BGT. Houdt hiermee rekening met de nauwkeurigheid van de BAG en BGT, zie <a href="04%20Gebruik%20van%20geo-datasets%20voor%20georeferentie.md#geo-datasets-voor-het-refereren-van-modellen">Geo datasets voor georefereren</a>
 
-<mark> Onderstaande nog </mark>
-GDAL - Toolbox processing
-GDAL Vetor Converse Covert Format 
+De [IFC2GIS procedure video](https://www.youtube.com/watch?v=pBAhAcyTLSY&t=86s) van Hans Lammerts toont de flow van georeferentie naar QGIS. Zie ook het [BuildingSMART forum](https://forums.buildingsmart.org/t/ifc-to-gis/6115/8) voor een discussie over dit onderwerp. 
 
-Kaartlagen, georeferencer: DXF - openen - Ground Contro Punt Toevoegen - Kaart in de kaart toeveogen (of handmatig invoeren)
-Dit voor 4 punten doen. Druk op run 
+**Controle van 3D Georeferentie van een IFC in Solibri:**
 
-Hiermee krijg je de affine transformatie (Dat is een super-klasse van helmert)
 
-Zie: [IFC2GIS procedure video van Hans Lammerts](https://www.youtube.com/watch?v=pBAhAcyTLSY&t=86s)
-https://forums.buildingsmart.org/t/ifc-to-gis/6115/8
+
+<figure id="Solibri_Georeferentie_controle" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/GeoReferentieLoGref50-InSolibri.jpg" alt="Solibri_Georeferentie_controle" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;"/>
+    <figcaption>
+      Solibri Georeferentie controle
+    </figcaption>
+</figure>
+
+**Controle van 3D Georeferentie van een IFC in BIMCollab:**
+
+
+
+<figure id="BIMCollab_Georeferentie_controle" style="display: block; text-align: center; margin: 0 auto;">
+    <img src="./media/GeoReferentieLoGref50-InBIMColllabZoom-2.jpg" alt="BIMCollab_Georeferentie_controle" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;"/>
+    <figcaption>
+      BIMCollab Georeferentie controle
+    </figcaption>
+</figure>

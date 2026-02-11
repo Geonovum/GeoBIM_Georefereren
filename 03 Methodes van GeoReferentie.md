@@ -185,29 +185,7 @@ Een Geo of BIM bronmodel kan in een andere eenheid getekend zijn dan de eenheid 
 
 Wanneer voor georeferentie een precisie van milimeters belangrijk is dient men daarnaast een correctie van horizontale afstanden voor lijnvergroting mee te nemen. 
 
-De formule om deze correctie te berekenen is: 
 
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>&Delta;</mi><mi>&ell;</mi>
-  <mo>=</mo>
-  <mo>−</mo><mn>9.2 </mn>
-  <mo>+</mo>
-  <mfrac>
-    <msup>
-      <msub><mi>r</mi><mi>i </mi></msub>
-      <mn>2</mn>
-    </msup>
-    <msup><mn>1629 </mn><mn>2</mn></msup>
-  </mfrac>
-  <mspace width="0.5em"/>
-  <mtext> mm per 100 m</mtext>
-</math>
 
-waarbij <span class="numerator">r<sub>i</sub><sup>2</sup></span> de gemiddelde coördinaten in km van de eindpunten in het RD-stelsel zijn.
+De formule om deze correctie te berekenen is beschreven in de paragraaf <a class="self-link" href="#geprojecteerd-crs"> Geprojecteerd CRS</a>. Voor locaties nabij Amersfoort zal de correctie rond de -9,2 mm per 100 meter (x, y) liggen. Voor locaties rond Maastricht zal de correctie rond de + 10 mm per 100 meter (x,y) liggen. 
 
-Voor locaties nabij Amersfoort zal de correctie rond de -9,2 mm per 100 meter (x, y) liggen. Voor locaties rond Mastricht zal de correctie rond de + 10 mm per 100 meter (x,y) liggen. 
-
-<figure id="correcties-aan-gemeten-afstanden">
-      <img src="./media/Correcties_aan_gemeten_afstanden.png" alt="2D en 3D Geo of BIM combineren" height="400"/>
-    <figcaption><a class="self-link" href="#fig-correcties-aan-gemeten-afstanden"></bdi></a><span class="fig-title">Correcties aan gemeten afstanden</span></figcaption>
-</figure>

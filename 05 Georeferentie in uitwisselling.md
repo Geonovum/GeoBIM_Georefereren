@@ -56,11 +56,15 @@ Een voorbeeld van georeferentie in GML en CityGML vindt men in de
 [bijlage voorbeeld georeferentie in GML](#voorbeeld-van-georeferentie-in-gml).
 
 ## CityJSON
-In de CityJSON encoding moet, anders dan in CityGML, één coordinatenstelsel voor het totaalmodel worden geduid. Dit doet men in het attribuut "Metadata": { 
+In de CityJSON encoding moet, anders dan in CityGML, één coordinatenstelsel voor het totaalmodel worden geduid. Dit doet men in het attribuut: 
+``` json
+"Metadata": { 
   ReferenceSystem: "https://www.opengis.net/def/crs/EPSG/0/7415",
 }
-
+```
 Het is mogelijk om met het attribuut: "Transform" een verplaatsing en verschaling van een model te duiden. Deze functionaliteit is aan CityJSON toegevoegd om de bestandsgrootte te verkleinen. Met deze functionaliteit is het mogelijk om de coördinaten van de vertices weer te geven als integers, en de schaalfactor en de translatie op te slaan die nodig is om de originele coördinaten (als floats/doubles) te verkrijgen. Deze functionaliteit kan in principe ook gebruikt kunnen worden om de hele data set rond het 0-punt te modelleren. Wel zijn hier dan extra restricties voor nodig.
+
+Een voorbeeld van georeferentie in JSON en CityGML vindt men in de [bijlage voorbeeld georeferentie in CityJSON](#cityjson-0)
  
 ## Geopackage
 [GeoPackage](https://www.geopackage.org/spec140/index.html) staat naast GML als uitwisselformaat op de Pas-toe-leg-uit lijst. Dit formaat is een OGC Standaard  is geschikt voor georeferentie wanneer men werkt met 2D GeoBIM modellen die gemodelleerd worden op een al bekend crs (Bijvoorbeeld RD-NAP of WGS84). Geopackage is OGC standaard die zich baseert op een databaseformaat (SQL-lite). In de tabel gpkg_spatial_ref_sys waarin de informatie voor coördinatenstelsel kan worden opgeslagen. De geopackage standaard heeft geen vaste manier om een engineerdCRS te duiden. Wanneer de SourceCRS een lokaal gedefinieerd grid is, is dit uitwisselformaat minder geschikt.
