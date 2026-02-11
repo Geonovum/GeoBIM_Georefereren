@@ -95,6 +95,16 @@ let respecConfig = {
         companyURL: "https://www.futureinsight.nl",
       },
       {
+        name: "Lex Ransijn",
+        company: "VDC Base",
+        companyURL: "https://vdcbase.com/",
+      },
+      {
+        name: "Jan Brouwer",
+        company: "on-track",
+        companyURL: "https://www.on-track.nl/",
+      },
+      {
         name: "Jantien Stoter",
         company: "TU Delft",
         companyURL: "https://3d.bk.tudelft.nl/",
