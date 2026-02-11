@@ -351,7 +351,7 @@ In Illustrator/Inkscape werkt men op digitaal papierformaat. Zorg ervoor dat voo
 Na ontwerp kunnen de ontwerplagen inclusief de onderlegger als DXF opgeslagen worden. 
 
 <figure id="Opslaan_Inkscape_ontwerp_als_DXF" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/Inkscape_02.png" alt="Opslaan_Inkscape_ontwerp_als_DXF" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;"">
+    <img src="./media/Inkscape_02.png" alt="Opslaan_Inkscape_ontwerp_als_DXF" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;">
     <figcaption>
       Opslaan van een ontwerp in Inkscape als DXF
     </figcaption>
