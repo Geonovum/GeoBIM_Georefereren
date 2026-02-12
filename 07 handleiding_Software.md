@@ -76,13 +76,6 @@ De IFC is niet ge-georefereerd (alleen de coordinaten van Project Basepoint zijn
 2.	CRS-Coördinatiepunt: exporteer een IFC (4 of hoger) met Survey Point als Coordinate Base.<br>
 Vul bij EPSG Code in: 28992. Dit zorgt ervoor dat de referentie wordt herkend in de software of tooling. De IFC is ge-Georefereerd en is Grid-noord gericht (True North in Revit)<br> Officieel is de EPSG Code 7415 vanwege de 3 dimensies van coordinaten. Dit wordt (nog) niet ondersteund in Revit. 
 
-<mark> dit is dezelfde figuur. Klopt dit? </mark>
-
-<figure id="Controle-in-Revit-2" style="display: block; text-align: center; margin: 0 auto;">
-      <img src="./media/Revit_2.png" alt=Controle-in-Revit-2 style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
-    <figcaption><a class="self-link" href="#fig-Controle-in-Revit"></bdi></a><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></figcaption>
-</figure>
-
 <figure id="Setup-in-Revit-Survey-Point" style="display: block; text-align: center; margin: 0 auto;">
       <img src="./media/Revit_4.png" alt=Setup-in-Revit-Survey-Point style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption><a class="self-link" href="#fig-Setup-in-Revit-Survey-Point"></bdi></a><span class="fig-title">Scherm in Revit met instellingen voor IFC export met Survey Point als Coordinate Base</span></figcaption>
