@@ -79,7 +79,7 @@ Een Geopackage slaat in de tabel gpkg_spatial_ref_sys de volgende waarden op:
 | definition | Well known text representatie van de SRS |
 
 # API
-Conform de [OGC-API's](https://ogcapi.ogc.org/) kan men een server bevragen op de collecties die deze aanbiedt. Door met een OGC-API Features een HTTP GET request naar collecties te doen krijgt men een lijst met de beschikbare collecties. Als men vervolgens een specifieke collectie bevraagt kan men een lijst van coordinaatreferentiesystemen inzien in de property "crs" waarmee de items door de server geleverd kunnen worden. 
+Conform de [OGC-API's](https://ogcapi.ogc.org/) (Core-specificatie) kan men een server bevragen op de collecties die deze aanbiedt. Door met een OGC-API Features een HTTP GET request naar collecties te doen krijgt men een lijst met de beschikbare collecties. Als men vervolgens een specifieke collectie bevraagt kan men een lijst van coordinaatreferentiesystemen inzien in de property "crs" waarmee de items door de server geleverd kunnen worden. 
 
 Zo kan men vanuit de PDOK-API bij features van de BGT kiezen uit: 
 ```
