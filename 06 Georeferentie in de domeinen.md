@@ -17,8 +17,6 @@ dergelijke afstanden zijn de effecten van aardkromming en kaartprojectievervormi
 verwaarloosbaar. Het gebruik van vlakke coördinaten veroorzaakt daardoor in de praktijk geen 
 meetbare geometrische afwijkingen.
 
----
-
 ## Georeferentie in de Infra
 
 ### Kenmerken van infraprojecten
@@ -31,8 +29,6 @@ dit doorgaans met RD-coördinaten in combinatie met NAP-hoogten.
 **Voorbeelden van infraprojecten**
 - Snelwegen, tunnels en dijkversterkingen (langgerekt)  
 - Bruggen, viaducten en sluizen (locatiegebonden)
-
----
 
 ### Werkwijze binnen Infra
 Binnen infraprojecten wordt gewerkt met RD-coördinaten ten opzichte van NAP. Dit maakt directe 
@@ -54,8 +50,6 @@ Het RD-stelsel is historisch gebaseerd op het Bessel 1841-ellipsoïde. In de pra
 transformaties tussen referentiestelsels uitgevoerd met officiële gridtransformaties, waardoor 
 nauwkeurige omzettingen tussen internationale en nationale stelsels mogelijk zijn.
 
----
-
 ### Toepassing van 3D-software
 Tijdens het ontwerp wordt software ingesteld op werken met RD-coördinaten, zodat de modelruimte 
 overeenkomt met de projectrealiteit. Afhankelijk van het softwarepakket wordt intern nog met een 
@@ -69,8 +63,6 @@ verloopt niet altijd probleemloos, omdat niet alle software het gebruikte refere
 herkent. Wanneer CRS-informatie ontbreekt of verkeerd wordt geïnterpreteerd, kunnen bestanden worden 
 ingelezen alsof zij een lokaal stelsel met grote coördinaatwaarden bevatten. Dit kan leiden tot foutieve 
 positionering.
-
----
 
 ### Gevolgen van projectievervorming
 Ontwerpen worden opgesteld in een geprojecteerd CRS. Kaartprojecties hebben een schaalfactor die licht 
