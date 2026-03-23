@@ -2,7 +2,9 @@ name: Publish
 on:
   workflow_call:
     secrets:
-      GH_PUSH_TOKEN:
+      GH_APP_ID:
+        required: true
+      GH_APP_PRIVATE_KEY:
         required: true
   workflow_dispatch:
 
@@ -15,10 +17,10 @@ jobs:
       pull-requests: write
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Download snapshot artefact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: snapshot
           path: .
@@ -106,7 +108,7 @@ jobs:
           CONFIG_JSON=pubDomainList.json
           if [[ ! -f "$CONFIG_JSON" ]]; then
             curl -sSL \
-              https://raw.githubusercontent.com/Geonovum/respec-utils/master/src/autodeploy/config/pubDomainList.json \
+              https://docs.geostandaarden.nl/pubDomainList.json \
               -o "$CONFIG_JSON"
           fi
 
@@ -129,7 +131,9 @@ jobs:
           fi
 
           # 9. Bouw de folder-path en exporteer als output
-          FOLDER_PATH="${DOMAIN}/${SPEC_STATUS}-${SPEC_TYPE}-${SHORT_NAME}-${PUBLISH_DATE}/"
+          PUBLISH_DATE_COMPACT="$(echo "$PUBLISH_DATE" | tr -d '-')"
+          FOLDER_PATH="${DOMAIN}/${SPEC_STATUS}-${SPEC_TYPE}-${SHORT_NAME}-${PUBLISH_DATE_COMPACT}/"
+
           echo "folderPath=$FOLDER_PATH"    >> $GITHUB_OUTPUT
           echo "pubdomain=$DOMAIN"          >> $GITHUB_OUTPUT
           echo "specStatus=$SPEC_STATUS"    >> $GITHUB_OUTPUT
@@ -139,11 +143,21 @@ jobs:
 
           echo "Metadata en folder-path gevalideerd en opgeslagen"
 
+      - name: Generate GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          app-id: ${{ secrets.GH_APP_ID }}
+          private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+          owner: Geonovum
+          repositories: |
+            docs.geostandaarden.nl
+
       - name: Checkout private docs
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: Geonovum/docs.geostandaarden.nl
-          token: ${{ secrets.GH_PUSH_TOKEN }}
+          token: ${{ steps.app-token.outputs.token }}
           path: docs.geostandaarden.nl
 
       - name: Switch naar develop branch bij pre-release
@@ -161,25 +175,61 @@ jobs:
           cp -r content/* docs.geostandaarden.nl/${{ steps.metadata.outputs.folderPath }}/
           rm docs.geostandaarden.nl/${{ steps.metadata.outputs.folderPath }}/js/config.js
           
+      - name: Update .htaccess “latest” pointer
+        run: |
+          set -euo pipefail
+
+          FOLDER_PATH="${{ steps.metadata.outputs.folderPath }}"
+          SHORT_NAME="${{ steps.metadata.outputs.shortName }}"
+          REPO_DIR="docs.geostandaarden.nl"
+
+          TOPIC="$(echo "$FOLDER_PATH" | cut -d/ -f1)"
+          VERSION_DIR="$(basename "$FOLDER_PATH")"
+          VERSION_DIR="${VERSION_DIR%/}"
+          LINK_DIR="$TOPIC/$SHORT_NAME"
+
+          mkdir -p "$REPO_DIR/$LINK_DIR"
+
+          # .htaccess updaten: redirect root + subpaden naar nieuwste versie-map
+          cat > "$REPO_DIR/$LINK_DIR/.htaccess" <<'EOF'
+          RewriteEngine On
+          # Redirect map-root en onderliggende paden naar de nieuwste versie-map
+          RewriteRule ^$           /__TOPIC__/__VERSION__/ [R=302,L]
+          RewriteRule ^(.+)$       /__TOPIC__/__VERSION__/$1 [R=302,L]
+          Options -Indexes
+          EOF
+
+          # Variabelen invullen
+          sed -i \
+            -e "s#__TOPIC__#${TOPIC}#g" \
+            -e "s#__VERSION__#${VERSION_DIR}#g" \
+            "$REPO_DIR/$LINK_DIR/.htaccess"
+
+          echo "Updated $REPO_DIR/$LINK_DIR/.htaccess -> /$TOPIC/$VERSION_DIR/"
+
       - name: Push naar develop bij pre-release
         if: ${{ github.event.release.prerelease == true }}
         run: |
           cd docs.geostandaarden.nl
           git add .
-          git commit -m "Automatische pre-release update van ${{ github.repository }}"
+          git commit -m "Automatische pre-release update van ${{ github.repository }} (triggered by ${{ github.actor }})"
           git push origin develop
 
       - name: Create PR naar main bij release
         if: ${{ github.event.release.prerelease != true }}
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v8
         with:
-          token: ${{ secrets.GH_PUSH_TOKEN }}
+          token: ${{ steps.app-token.outputs.token }}
           path: docs.geostandaarden.nl
           branch: auto-update-${{ github.run_id }}
           base: main
           author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
+          committer: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
+          commit-message: "Automated update from ${{ github.repository }} (triggered by ${{ github.actor }})"
           title: "Automated update from ${{ github.repository }} to main"
           body: |
+            Triggered by: @${{ github.actor }}  
+            Release: `${{ github.event.release.tag_name }}`  
             Update vanuit workflow voor domein ${{ steps.metadata.outputs.pubdomain }}  
             Folder: `${{ steps.metadata.outputs.folderPath }}`
             To branch: `main`
