@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: Prepare directories
         run: |
@@ -27,7 +27,7 @@ jobs:
           fi
 
       - name: Validate HTML
-        uses: anishathalye/proof-html@v2
+        uses: anishathalye/proof-html@a76b66427e600c6992e8937a741afffd2264a613 # v2.2.3
         continue-on-error: true
         with:
           directory: ${{ env.CHECK_DIR }}/site
@@ -79,24 +79,10 @@ jobs:
           mv *.pdf static/
 
       - name: Serve snapshot over HTTP
-        uses: Eun/http-server-action@v1
-        with:
-          directory: ${{ github.workspace }}
-          port: 8080
-          content-types: |
-            {
-              "css": "text/css",
-              "html": "text/html",
-              "ico": "image/x-icon",
-              "jpeg": "image/jpeg",
-              "jpg": "image/jpeg",
-              "js": "text/javascript",
-              "json": "application/json",
-              "png": "image/png",
-              "svg": "image/svg+xml",
-              "txt": "text/plain",
-              "xml": "text/xml"
-            }
+        run: |
+          cd "${{ github.workspace }}"
+          python3 -m http.server 8080 >/dev/null 2>&1 &
+          echo "SNAPSHOT_SERVER_PID=$!" >> "$GITHUB_ENV"
 
       - name: Ensure Chrome + matching ChromeDriver for WCAG check
         id: browser
@@ -192,6 +178,13 @@ jobs:
             http://localhost:8080/snapshot.html \
             --buffer-size 8192 > $CHECK_DIR/link-check.txt 2>&1 || echo "Geen linkfouten gevonden." > $CHECK_DIR/link-check.txt
 
+      - name: Stop snapshot HTTP server
+        if: always()
+        run: |
+          if [[ -n "${SNAPSHOT_SERVER_PID:-}" ]]; then
+            kill "$SNAPSHOT_SERVER_PID" || true
+          fi
+
       - name: Commit all results
         if: >
           github.event_name == 'push'
@@ -215,7 +208,7 @@ jobs:
           git push --force-with-lease origin HEAD:"$BRANCH"
 
       - name: Upload snapshot artifact
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
           name: snapshot
           path: |
