@@ -161,7 +161,7 @@
     "url": "http://localhost:8080/snapshot.html",
     "id": "scrollable-region-focusable",
     "impact": "serious",
-    "description": "Ensure elements that have scrollable content are accessible by keyboard",
+    "description": "Ensure elements that have scrollable content are accessible by keyboard in Safari",
     "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/scrollable-region-focusable?application=webdriverjs",
     "nodes": [
       {
@@ -176,13 +176,6 @@
           "#example-voorbeeld-van-een-engineered-crs-in-wkt > pre > .javascript.hljs"
         ],
         "html": "<code aria-busy=\"false\" class=\"hljs javascript\">",
-        "failureSummary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
-      },
-      {
-        "target": [
-          "#example-voorbeeld-van-een-engineeredcrs-in-projjson > pre:nth-child(3) > .json.hljs"
-        ],
-        "html": "<code class=\"json hljs\" aria-busy=\"false\">",
         "failureSummary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
       },
       {
