@@ -244,7 +244,13 @@ Zie [Tutorial Add Location in Sketchup](https://www.youtube.com/watch?v=-jOXDByV
 
 **Exporteer in open formaat** 
 Zie voor [exporteren vanuit Sketchup](https://help.sketchup.com/en/sketchup-education/exporting-model)
-Het is mogelijk om een KMZ of DXF te exporteren. <mark>Deze zullen de coordinaten mee kunnen nemen? Is dat zo met DXF? Vragen aan Jan om te testen</mark>
+Het is mogelijk om een KMZ of DXF te exporteren. Deze zullen de coordinaten mee kunnen nemen. 
+
+De export bestaat uit: 
+- Een .dae mesh bestand. Dit is het 3D model in COLLADA. 
+- Een doc.kml bestand. Dit bestand bevat de positie van het 3D model (lat/lon/hoogte)
+
+Deze 
 
 Zie voor [exporteren naar IFC](https://help.sketchup.com/en/importing-and-exporting-ifc-files)
 Het is in de huidige versie van Sketchup momenteel nog niet mogelijk om op hoog detail in RD NAP te georefereren. De coordinaten vanuit Sketchup zijn uitgedrukt in UTM-coordinaten. Dit kan men (nog) niet aanpassen. 
@@ -547,8 +553,7 @@ Het is hiermee mogelijk om visueel te controleren hoe het model positioneert ten
 De [IFC2GIS procedure video](https://www.youtube.com/watch?v=pBAhAcyTLSY&t=86s) van Hans Lammerts toont de flow van georeferentie naar QGIS. Zie ook het [BuildingSMART forum](https://forums.buildingsmart.org/t/ifc-to-gis/6115/8) voor een discussie over dit onderwerp. 
 
 **Controle van 3D Georeferentie van een IFC in Solibri:**
-
-
+Klik in de Model Tree het model open tot je het IfcProject niveau ziet. Zorg dat je een Ifc4 of hoger model hebt. Klik op het IfcProject (icon lijkt op een papiertje met regels erop). Klik op IFC Coordinates. Lees uit de IfcCoordinateReferenceSystem, IfcMapconversion, IfcProjectedCRS (van het lokale nulpunt).
 
 <figure id="Solibri_Georeferentie_controle" style="display: block; text-align: center; margin: 0 auto;">
     <img src="./media/GeoReferentieLoGref50-InSolibri.jpg" alt="Solibri_Georeferentie_controle" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;"/>
@@ -556,6 +561,9 @@ De [IFC2GIS procedure video](https://www.youtube.com/watch?v=pBAhAcyTLSY&t=86s) 
       Solibri Georeferentie controle
     </figcaption>
 </figure>
+
+Het is ook mogelijk om LoGref20 te controleren. In dit geval: 
+Klik in de Model Tree het model open tot je het IfcSite niveau ziet.Dit kan in zowel Ifc2x3, Ifc4 en Ifc4x3 het kan ook soms dubbel zijn met Mapconversion. Klik op het IfcSite object (icon zou een kavel moeten voostellen). Onder in de “Info view” verschijnen tabbladen. Waaronder “Location”. Klik op Location. Lees bij coördinaten>Latitude, Longitude de WGS84 coördinaten uit (van het lokale nulpunt)
 
 **Controle van 3D Georeferentie van een IFC in BIMCollab:**
 

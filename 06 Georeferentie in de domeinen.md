@@ -33,9 +33,7 @@ dit doorgaans met RD-coördinaten in combinatie met NAP-hoogten.
 ### Werkwijze binnen Infra
 Binnen infraprojecten wordt gewerkt met RD-coördinaten ten opzichte van NAP. Dit maakt directe 
 aansluiting op bestaande infrastructuur mogelijk. Bestaande objecten en terreinpunten worden door 
-landmeters ingemeten met GNSS- of tachymetrische metingen. GNSS-metingen worden daarbij eerst bepaald 
-in een geodetisch referentiestelsel (zoals ETRS89) en vervolgens via officiële transformaties 
-omgerekend naar RD- en NAP-coördinaten. Op basis van deze gegevens wordt het ontwerp opgesteld.
+landmeters ingemeten met GNSS- of tachymetrische metingen. GNSS-metingen worden daarbij eerst bepaald in een geodetisch referentiestelsel (zoals ETRS89) en vervolgens via officiële transformaties omgerekend naar RD- en NAP-coördinaten. Op basis van deze gegevens wordt het ontwerp opgesteld.
 
 Ook andere geometrische projectinformatie wordt doorgaans in RD aangeleverd. Het RD-stelsel vormt 
 daardoor de logische standaard voor gegevensuitwisseling en ontwerp binnen infraprojecten.
