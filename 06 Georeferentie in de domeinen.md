@@ -1,49 +1,79 @@
 # Georeferentie in de domeinen B&U en Infra
 
 ## Georeferentie in de B&U
-B&U projecten kenmerken zich vaak door projecten van beperkte omvang. Vaak worden deze modellen in een lokaal assenstelsel gemodelleerd. Dit verhoogt de nauwkeurigheid en vereenvoudigt de samenwerking. Vaak wordt bij integratie met IS, infra of stadsmodellen de koppeling gelegd aan een bekend (nationaal) coördinatenstelsel. 
+B&U-projecten kenmerken zich doorgaans door een beperkte ruimtelijke omvang. Modellen worden 
+daarom vaak in een lokaal assenstelsel opgezet. Dit verhoogt de numerieke stabiliteit van 
+berekeningen en voorkomt afrondingsfouten in ontwerpsoftware. Daarnaast vereenvoudigt het 
+de samenwerking tussen disciplines binnen één modelomgeving. Wanneer integratie met 
+informatiesystemen, infrastructuurmodellen of stadsmodellen nodig is, wordt het model 
+gekoppeld aan een bekend nationaal coördinatenstelsel.
 
-Voorbeelden van B&U projecten zijn 
- - Vliegvelden, ziekenhuizen (langgerekt)
- - Woningen (beperkt in omvang)
+**Voorbeelden van B&U-projecten**
+- Vliegvelden en ziekenhuizen (relatief langgerekte objecten)  
+- Woningen (beperkte omvang)
 
-Woningen, flats en ziekenhuizen beslaan meestal enkele tientallen tot honderden meters. De kromming van de aarde en de projectie-afwijkingen zijn over zo’n klein gebied verwaarloosbaar. Het gebruik van coördinaten in het platte vlak leveren hierdoor verwaarloosbare problemen op. 
-
+Woningen, flats en ziekenhuizen beslaan meestal enkele tientallen tot honderden meters. Over 
+dergelijke afstanden zijn de effecten van aardkromming en kaartprojectievervorming 
+verwaarloosbaar. Het gebruik van vlakke coördinaten veroorzaakt daardoor in de praktijk geen 
+meetbare geometrische afwijkingen.
 
 ## Georeferentie in de Infra
-https://publications.cms.bgu.tum.de/2019_Jaud_I3CE.pdf
 
-### Kenmerken van Infraprojecten
-Infraprojecten kenmerken zich vaak door langgerekte projecten. De noodzaak en de positie van de objecten die gebouwd worden, wordt bepaald door de omgeving. Het is vaak ook noodzakelijk om aan te sluiten op de bestaande omgeving. Als gevolg hiervan zijn er veel raakvlakken met de omgeving. Om deze raakvlakken goed in kaart te brengen is het goed in kaart brengen van de omgeving zeer belangrijk. Om alle objecten in de omgeving te positioneren wordt gebruik gemaakt van RD-Coordinaten.
+### Kenmerken van infraprojecten
+Infraprojecten zijn vaak langgerekt en sterk afhankelijk van hun omgeving. De ligging van 
+objecten wordt bepaald door bestaande infrastructuur, terreincondities en wettelijke liggingseisen. 
+Hierdoor bestaan veel raakvlakken met de omgeving. Om deze raakvlakken goed te beheersen is een 
+nauwkeurige positionering van zowel het ontwerp als de omgeving essentieel. In Nederland gebeurt 
+dit doorgaans met RD-coördinaten in combinatie met NAP-hoogten.
 
-Voorbeelden van Infra projecten zijn 
- - snelwegen, tunnel, dijkverstrekingen (lang gerekt)
- - burgen, viaducten en sluizen (locatie bepaald door omgeving)
+**Voorbeelden van infraprojecten**
+- Snelwegen, tunnels en dijkversterkingen (langgerekt)  
+- Bruggen, viaducten en sluizen (locatiegebonden)
 
-Oplossings-idee. Tussenpunten berekenen. https://gnss-data.kadaster.nl/misc/docs/langelijnenadvies.pdf
+### Werkwijze binnen Infra
+Binnen infraprojecten wordt gewerkt met RD-coördinaten ten opzichte van NAP. Dit maakt directe 
+aansluiting op bestaande infrastructuur mogelijk. Bestaande objecten en terreinpunten worden door 
+landmeters ingemeten met GNSS- of tachymetrische metingen. GNSS-metingen worden daarbij eerst bepaald in een geodetisch referentiestelsel (zoals ETRS89) en vervolgens via officiële transformaties omgerekend naar RD- en NAP-coördinaten. Op basis van deze gegevens wordt het ontwerp opgesteld.
 
-Misschien ook lange lijnen advies voor de Z- waarde.  
+Ook andere geometrische projectinformatie wordt doorgaans in RD aangeleverd. Het RD-stelsel vormt 
+daardoor de logische standaard voor gegevensuitwisseling en ontwerp binnen infraprojecten.
 
-### Werkwijze in Infa
-Binnen een project in de Infra denken we in RD coordinaten ten opzichten van NAP. Er wordt niet in een lokaal coordinaten stelsel gewerkt. Dit wordt 
-gedaan omdat er vaak aagesloten moet worden op bestaande infrastructuur. Deze infrastructuur wordt door onze maatvoerder opgemeten in 
-het RD-stelsel. Op basis hiervan kan verder worden ontworpen. Ook andere geometrische informatie welke benodigd is voor het project wordt
-vaak in RD beschikbaar gesteld. Het RD-Stelsel is dus een logische afspraak om te gebruiken voor het ontwerp van een infraproject.
+Het ontwerp wordt uitgewerkt in een geprojecteerd coördinatenreferentiesysteem (CRS), waarbij op 
+tekeningen RD-coördinaten en NAP-hoogten worden vermeld om objectlocaties eenduidig vast te leggen. 
+Op de bouwplaats worden ontwerpen uitgezet met meetapparatuur die is georiënteerd op bekende 
+RD-grondslagpunten. Hierdoor kunnen ontwerpcoördinaten rechtstreeks in het veld worden gerealiseerd 
+met de vereiste nauwkeurigheid.
 
-Het ontwerp wordt direct in het RD stelsel (een Geprojecteerd CRS) uitgewerkt, op tekeningen staan RD coordinaten en NAP niveau aangegeven om 
-de locaties van (een deel van) een kustwerk aan te geven. Translate van het ontwerp in het RD-stelsel naar de werkelijkse situatie buiten wordt 
-gedaan door maatvoerders. Zij vertalen (middels gespecialiseerde software en total stations) de RD coordinaten van het ontwerp naar een Geografische 
-CRS zodat het in de werkelijke wereld geplaatst kan worden. Hierbij wordt gebruik gemaakt van grondslagen om de nauwkeurigheid tot op het gewenste 
-niveau te krijgen.
+Het RD-stelsel is historisch gebaseerd op het Bessel 1841-ellipsoïde. In de praktijk worden moderne 
+transformaties tussen referentiestelsels uitgevoerd met officiële gridtransformaties, waardoor 
+nauwkeurige omzettingen tussen internationale en nationale stelsels mogelijk zijn.
 
-### Toepassing van 3D Software
-Tijdens het ontwerp proberen we onze ontwerpsoftware af te stellen op het feit dat we in RD coordinaten werken zodat dit overeenkomt met de manier
-waarop wij denken binnen het project. Afhakelijk van de software wordt binnen de software nog steeds een lokaal stelsel gebruikt maar dit heeft geen waarde
-voor het project team. In Revit wordt bijvoorbeeld nog steeds een Basepoint gebruikt maar de locatie hiervan is niet persee relevent voor
-het project. Vaak wordt een mooi afgerond RD-coordinaat genomen. In andere software zoals AutoCAD of Civil3D wordt direct gewerkt op RD-coordinaten.
-Er wordt in dit geval zeer ver van het orginele nulpunt getekend in de software.
+### Toepassing van 3D-software
+Tijdens het ontwerp wordt software ingesteld op werken met RD-coördinaten, zodat de modelruimte 
+overeenkomt met de projectrealiteit. Afhankelijk van het softwarepakket wordt intern nog met een 
+lokaal systeem gerekend, maar dit heeft geen inhoudelijke betekenis voor het projectteam. In 
+sommige toepassingen wordt bijvoorbeeld een intern referentiepunt gebruikt waarvan de positie 
+projectmatig wordt gekozen, vaak als afgerond RD-coördinaat. Andere pakketten ondersteunen directe 
+modellering op nationale coördinaten, waarbij ver van de interne oorsprong wordt gewerkt.
 
-Uitwisseling tussen verschillende software systemen gebeurt ook standaard op basis van RD-Coordinaten. Dit werkt echter niet feilloos binnen het 
-huidige softwarelandschap omdat de gebruikte software niet altijd op de hoogte is of in staat is te begrijpen dat er op RD-Coordinaten gewerkt 
-wordt. De software interpreteert de uitwisselbestanden bijvoorbeeld als bestanden met een lokaal coordinatenstelsel met zeer grote coordinaten in 
-plaatst van RD-Coordinaten. Positionering gaat hierdoor niet altijd goed.
+Gegevensuitwisseling tussen softwarepakketten vindt eveneens plaats op basis van RD-coördinaten. Dit 
+verloopt niet altijd probleemloos, omdat niet alle software het gebruikte referentiestelsel automatisch 
+herkent. Wanneer CRS-informatie ontbreekt of verkeerd wordt geïnterpreteerd, kunnen bestanden worden 
+ingelezen alsof zij een lokaal stelsel met grote coördinaatwaarden bevatten. Dit kan leiden tot foutieve 
+positionering.
+
+### Gevolgen van projectievervorming
+Ontwerpen worden opgesteld in een geprojecteerd CRS. Kaartprojecties hebben een schaalfactor die licht 
+afwijkt van 1 (zie ook hoofdstuk 3.1.2). Hierdoor kan de afstand tussen twee punten in het ontwerp iets 
+verschillen van de werkelijke afstand in het terrein. Dit effect wordt projectievervorming genoemd en 
+is afhankelijk van de locatie binnen het projectiestelsel.
+
+Voor geprefabriceerde elementen, zoals prefab liggers die in een fabriek worden geproduceerd, blijft 
+dit effect zeer beperkt omdat de elementlengtes meestal ruim onder de 100 meter liggen. De afwijking 
+blijft daardoor doorgaans beperkt tot millimeters en valt binnen constructietoleranties.
+
+Voor objecten die over grote afstanden worden gerealiseerd, zoals wegen van meerdere kilometers lang, worden 
+langs het tracé meerdere uitzetpunten gebruikt. Hierdoor wordt het effect van de projectieschaal verdeeld 
+over de totale lengte. De afwijking bedraagt typisch millimeters tot centimeters per kilometer, afhankelijk 
+van de ligging binnen het projectiestelsel. Dit vormt in de praktijk geen probleem omdat aansluitende 
+infrastructuur in hetzelfde referentiestelsel is ingemeten.

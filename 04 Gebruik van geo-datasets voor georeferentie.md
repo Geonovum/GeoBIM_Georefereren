@@ -24,9 +24,22 @@ Voor deze toepassing zijn verschillende landelijke datasets van belang die, naas
 
 Door wisselende prioriteiten binnen grootschalige infrastructuurprojecten kunnen er verschillen optreden in betrouwbaarheid en in de toegepaste inwin- en meetmethoden per objecttype. Daarom is het raadzaam om vooraf het DTB-handboek te raadplegen, voordat een object wordt geselecteerd voor toepassing binnen de geografische uitlijningsmethode. Afhankelijk van de objectcategorie kan dit resulteren in planimetrische afwijkingen van circa 5 tot 15,5 cm en altimetrische afwijkingen van ongeveer 10 tot 15 cm.
 
-In de <mark> onderstaande figuur </mark> is een BIM-model gecombineerd met het DTB/1GiS, waarbij de wegmarkeringen in beide datasets goed op elkaar aansluiten. Deze overeenkomst kan worden benut om het hoogtecomponent van het BIM-model te bepalen, mits het planimetrische vlak reeds correct is uitgelijnd.
+De onderstaande figuur toont de combinatie van een BIM-model met het DTB/1GiS van de Drechtentunnel. Het volledige overzicht boven (links) en onder (rechts) maaiveld illustreert hoe een geo-gereferereerd BIM-model is gepositioneerd binnen zijn geografische context.
+<figure id="Geo_overzicht_BIM_DTB">
 
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+    <img src="./media/geo_overzicht.png" alt="geo_overzicht" height="250"/>
+    <img src="./media/geo_overzicht_2.png" alt="geo_overzicht_2" height="250"/>
+  </div>
 
+  <figcaption>
+    <em>
+      Overzicht van de Drechttunnel met het DTB en de 3DBAG. Links geeft de data boven de grond weer, en rechts de data onder de grond.  
+      Dit overzicht is gemaakt vanuit de RWS Digital Twin Basisvoorziening.
+    </em>
+  </figcaption>
+
+</figure>
 
 Naast vectoriële datasets zoals het DTB/1GiS en het NWB kan ook het AHN, of een andere beschikbare puntenwolk in de omgeving, worden ingezet. Wegmarkeringen en andere infrastructurele objecten zijn hierin vaak goed herkenbaar doordat de intensiteitswaarden van de punten op het wegdek doorgaans significant lager zijn dan die van het omliggende straatmeubilair. Hierdoor kunnen deze objecten relatief eenvoudig worden geïdentificeerd en geëxtraheerd uit de puntenwolk, wat ze geschikt maakt als referentie voor hoogteregistratie.
 
@@ -130,5 +143,5 @@ Het moment van inwinning bepaalt de bruikbaarheid van de dataset, aangezien iede
 
 <figure id="Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft">
       <img src="./media/Regio_delft_verandering.png" alt="Leefttijd van verschillende puntenwolken van de stationsregio in Delft" height="500"/>
-    <figcaption><a class="self-link" href="#fig-Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft"></bdi></a><span class="fig-title">Leefttijd van verschillende puntenwolken van de stationsregio in Delft</span></figcaption>
+    <figcaption><a class="self-link" href="#fig-Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft"></bdi></a><span class="fig-title">Leefttijd van verschillende puntenwolken van de stationsregio in Delft (figuur is uit wp1 van het <a href="https://www.ahn.nl/integrale-hoogtevoorziening-nederland"> <em>Intergaal Hoogtevoorziening Nederland</em></a> overgenomen.) </span></figcaption>
 </figure>

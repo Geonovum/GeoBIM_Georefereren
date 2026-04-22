@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="nl"><head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
-<meta name="generator" content="ReSpec 35.4.1">
+<meta name="generator" content="ReSpec 35.8.0">
 <style>
 span.example-title{text-transform:none}
 :is(aside,div).example,div.illegal-example{padding:.5em;margin:1em 0;position:relative;clear:both}
@@ -813,7 +813,11 @@ img.license{float:left;padding-right:5px;background:0 0}
     <h2>
       Geonovum Praktijkrichtlijn<br>
       Werkversie
+<<<<<<< HEAD
       <time class="dt-published" datetime="2026-02-12">12 februari 2026</time>
+=======
+      <time class="dt-published" datetime="2026-04-18">18 april 2026</time>
+>>>>>>> 0d773b998f2f2f5e1763bea762dc548a2f000963
     </h2>
     <dl>
       
@@ -884,7 +888,7 @@ img.license{float:left;padding-right:5px;background:0 0}
 <p>BIM- en GEO-modellen ontstaan vaak in software en tooling. Om dit generiek bij elkaar te brengen is georeferentie in open uitwisselformaten nodig. In IFC (met name IFC 4.3) speelt IfcMapConversion een centrale rol voor georeferentie op level 50. Andere formaten zoals DXF, (City)GML/CityJSON, GeoPackage en OGC-API’s bieden elk eigen mogelijkheden en beperkingen voor het vastleggen van CRS-informatie en transformaties.</p>
 <p>De praktijkrichtlijn biedt onderscheid tussen de toepassing in B&amp;U- en infraprojecten. B&amp;U-projecten zijn vaak kleinschalig en kunnen goed in een lokaal stelsel worden gemodelleerd, terwijl infraprojecten meestal langgerekt zijn en direct in RD/NAP worden ontworpen vanwege aansluiting op bestaande infrastructuur. De richtlijn sluit af met praktische software- en tooling handleidingen (o.a. Revit en Civil 3D) die laten zien hoe georeferentie in de praktijk kan worden ingericht en geëxporteerd. Aanvullend hierop laat de praktijkrichtlijn in software zien wat het effect van modellen van verschillend LevelOfGeoreferencing is op de plaatsing. Deze praktijktoets bevestigd de aanbevling van minimaal LevelOfGeoreferencing 50.</p>
 </section> 
-  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#introductie"><bdi class="secno">1. </bdi>Introductie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#leeswijzer"><bdi class="secno">1.1 </bdi>Leeswijzer</a></li></ol></li><li class="tocline"><a class="tocxref" href="#toepassingsgebied"><bdi class="secno">2. </bdi>Toepassingsgebied</a></li><li class="tocline"><a class="tocxref" href="#coordinaatreferentiesystemen-en-coordinatentransformatie"><bdi class="secno">3. </bdi>Coördinaatreferentiesystemen en Coördinatentransformatie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#geodetische-crs-en"><bdi class="secno">3.1 </bdi>Geodetische CRS-en</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#geografische-en-geocentrisch-crs"><bdi class="secno">3.1.1 </bdi>Geografische en geocentrisch CRS</a></li><li class="tocline"><a class="tocxref" href="#geprojecteerd-crs"><bdi class="secno">3.1.2 </bdi>Geprojecteerd CRS</a></li><li class="tocline"><a class="tocxref" href="#vertikaal-crs"><bdi class="secno">3.1.3 </bdi>Vertikaal CRS</a></li><li class="tocline"><a class="tocxref" href="#samengesteld-crs"><bdi class="secno">3.1.4 </bdi>Samengesteld CRS</a></li></ol></li><li class="tocline"><a class="tocxref" href="#lokaal-crs"><bdi class="secno">3.2 </bdi>Lokaal CRS</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#benadering-van-rd-in-lokaal-crs"><bdi class="secno">3.2.1 </bdi>Benadering van RD in lokaal CRS</a></li><li class="tocline"><a class="tocxref" href="#true-north-grid-north-project-north"><bdi class="secno">3.2.2 </bdi>True North, Grid North, Project North</a></li></ol></li><li class="tocline"><a class="tocxref" href="#coordinatentransformatie-tussen-lokaal-crs-en-geodetisch"><bdi class="secno">3.3 </bdi>Coördinatentransformatie tussen lokaal CRS en geodetisch</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#horizontaal-2d-gelijkvormigheidstransformatie"><bdi class="secno">3.3.1 </bdi>Horizontaal - 2D gelijkvormigheidstransformatie</a></li><li class="tocline"><a class="tocxref" href="#vertikaal-vast-hoogteverschil"><bdi class="secno">3.3.2 </bdi>Vertikaal - vast hoogteverschil</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#methodes-van-georeferentie"><bdi class="secno">4. </bdi>Methodes van Georeferentie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#levels-van-georeferentie"><bdi class="secno">4.1 </bdi>Levels van georeferentie</a></li><li class="tocline"><a class="tocxref" href="#x1d-2d-en-3d-geo-en-bim-modellen"><bdi class="secno">4.2 </bdi>1D, 2D en 3D Geo- en BIM-modellen</a></li><li class="tocline"><a class="tocxref" href="#schaal-en-correctie"><bdi class="secno">4.3 </bdi>Schaal en correctie</a></li></ol></li><li class="tocline"><a class="tocxref" href="#georeferentie-in-uitwisseling"><bdi class="secno">5. </bdi>Georeferentie in uitwisseling</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#industry-foundation-classes-ifc"><bdi class="secno">5.1 </bdi>Industry Foundation Classes (IFC)</a></li><li class="tocline"><a class="tocxref" href="#dxf"><bdi class="secno">5.2 </bdi>DXF</a></li><li class="tocline"><a class="tocxref" href="#city-gml"><bdi class="secno">5.3 </bdi>(City)GML</a></li><li class="tocline"><a class="tocxref" href="#cityjson"><bdi class="secno">5.4 </bdi>CityJSON</a></li><li class="tocline"><a class="tocxref" href="#geopackage"><bdi class="secno">5.5 </bdi>Geopackage</a></li><li class="tocline"><a class="tocxref" href="#api"><bdi class="secno">5.6 </bdi>API</a></li></ol></li><li class="tocline"><a class="tocxref" href="#georeferentie-in-de-domeinen-b-u-en-infra"><bdi class="secno">6. </bdi>Georeferentie in de domeinen B&amp;U en Infra</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#georeferentie-in-de-b-u"><bdi class="secno">6.1 </bdi>Georeferentie in de B&amp;U</a></li><li class="tocline"><a class="tocxref" href="#georeferentie-in-de-infra"><bdi class="secno">6.2 </bdi>Georeferentie in de Infra</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kenmerken-van-infraprojecten"><bdi class="secno">6.2.1 </bdi>Kenmerken van Infraprojecten</a></li><li class="tocline"><a class="tocxref" href="#werkwijze-in-infa"><bdi class="secno">6.2.2 </bdi>Werkwijze in Infa</a></li><li class="tocline"><a class="tocxref" href="#toepassing-van-3d-software"><bdi class="secno">6.2.3 </bdi>Toepassing van 3D Software</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#handleiding-software"><bdi class="secno">7. </bdi>Handleiding Software</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#cad-onderlegger"><bdi class="secno">7.1 </bdi>CAD Onderlegger</a></li><li class="tocline"><a class="tocxref" href="#revit"><bdi class="secno">7.2 </bdi>Revit</a></li><li class="tocline"><a class="tocxref" href="#autocad-civil-3d"><bdi class="secno">7.3 </bdi>Autocad Civil 3D</a></li><li class="tocline"><a class="tocxref" href="#archicad"><bdi class="secno">7.4 </bdi>ArchiCAD</a></li><li class="tocline"><a class="tocxref" href="#tekla-structures"><bdi class="secno">7.5 </bdi>Tekla Structures</a></li><li class="tocline"><a class="tocxref" href="#sketchup"><bdi class="secno">7.6 </bdi>Sketchup</a></li><li class="tocline"><a class="tocxref" href="#blender"><bdi class="secno">7.7 </bdi>Blender</a></li><li class="tocline"><a class="tocxref" href="#illustrator-inkscape"><bdi class="secno">7.8 </bdi>Illustrator/Inkscape</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#illustrator-mapublisher"><bdi class="secno">7.8.1 </bdi>Illustrator MAPublisher</a></li></ol></li><li class="tocline"><a class="tocxref" href="#arcgis"><bdi class="secno">7.9 </bdi>ArcGIS</a></li><li class="tocline"><a class="tocxref" href="#qgis"><bdi class="secno">7.10 </bdi>QGIS</a></li><li class="tocline"><a class="tocxref" href="#controle-van-georeferentie-in-qgis-solibri-en-bimcollab"><bdi class="secno">7.11 </bdi>Controle van georeferentie in QGIS, Solibri en BIMCollab</a></li></ol></li><li class="tocline"><a class="tocxref" href="#tooling"><bdi class="secno">8. </bdi>Tooling</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ifcgref"><bdi class="secno">8.1 </bdi>IfcGref</a></li></ol></li><li class="tocline"><a class="tocxref" href="#validatie-van-gegeorefereerde-ifc-modellen"><bdi class="secno">9. </bdi>Validatie van gegeorefereerde IFC-modellen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#doel-van-de-validatie"><bdi class="secno">9.1 </bdi>Doel van de validatie</a></li><li class="tocline"><a class="tocxref" href="#resultaten-in-arcgis"><bdi class="secno">9.2 </bdi>Resultaten in ArcGIS</a></li><li class="tocline"><a class="tocxref" href="#resultaten-in-qgis"><bdi class="secno">9.3 </bdi>Resultaten in QGIS</a></li></ol></li><li class="tocline"><a class="tocxref" href="#bijlagen"><bdi class="secno">A. </bdi>Bijlagen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#definities-en-afkortingen"><bdi class="secno">A.1 </bdi>Definities en afkortingen</a></li></ol></li><li class="tocline"><a class="tocxref" href="#ifc"><bdi class="secno">B. </bdi>IFC</a></li><li class="tocline"><a class="tocxref" href="#wkt"><bdi class="secno">C. </bdi>WKT</a></li><li class="tocline"><a class="tocxref" href="#proj"><bdi class="secno">D. </bdi>PROJ</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#proj-string"><bdi class="secno">D.1 </bdi>PROJ-String</a></li><li class="tocline"><a class="tocxref" href="#projjson"><bdi class="secno">D.2 </bdi>PROJJSON</a></li></ol></li><li class="tocline"><a class="tocxref" href="#voorbeeld-van-georeferentie-in-gml"><bdi class="secno">E. </bdi>Voorbeeld van georeferentie in GML</a></li><li class="tocline"><a class="tocxref" href="#cityjson-0"><bdi class="secno">F. </bdi>CityJSON</a></li><li class="tocline"><a class="tocxref" href="#voorbeeld-van-georeferentie-met-api-s"><bdi class="secno">G. </bdi>Voorbeeld van georeferentie met API's</a></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">H. </bdi>Lijst met figuren</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">I. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informatieve-referenties"><bdi class="secno">I.1 </bdi>Informatieve referenties</a></li></ol></li></ol></nav>
+  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#introductie"><bdi class="secno">1. </bdi>Introductie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#leeswijzer"><bdi class="secno">1.1 </bdi>Leeswijzer</a></li></ol></li><li class="tocline"><a class="tocxref" href="#toepassingsgebied"><bdi class="secno">2. </bdi>Toepassingsgebied</a></li><li class="tocline"><a class="tocxref" href="#coordinaatreferentiesystemen-en-coordinatentransformatie"><bdi class="secno">3. </bdi>Coördinaatreferentiesystemen en Coördinatentransformatie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#geodetische-crs-en"><bdi class="secno">3.1 </bdi>Geodetische CRS-en</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#geografische-en-geocentrisch-crs"><bdi class="secno">3.1.1 </bdi>Geografische en geocentrisch CRS</a></li><li class="tocline"><a class="tocxref" href="#geprojecteerd-crs"><bdi class="secno">3.1.2 </bdi>Geprojecteerd CRS</a></li><li class="tocline"><a class="tocxref" href="#vertikaal-crs"><bdi class="secno">3.1.3 </bdi>Vertikaal CRS</a></li><li class="tocline"><a class="tocxref" href="#samengesteld-crs"><bdi class="secno">3.1.4 </bdi>Samengesteld CRS</a></li></ol></li><li class="tocline"><a class="tocxref" href="#lokaal-crs"><bdi class="secno">3.2 </bdi>Lokaal CRS</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#benadering-van-rd-in-lokaal-crs"><bdi class="secno">3.2.1 </bdi>Benadering van RD in lokaal CRS</a></li><li class="tocline"><a class="tocxref" href="#true-north-grid-north-project-north"><bdi class="secno">3.2.2 </bdi>True North, Grid North, Project North</a></li></ol></li><li class="tocline"><a class="tocxref" href="#coordinatentransformatie-tussen-lokaal-crs-en-geodetisch"><bdi class="secno">3.3 </bdi>Coördinatentransformatie tussen lokaal CRS en geodetisch</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#horizontaal-2d-gelijkvormigheidstransformatie"><bdi class="secno">3.3.1 </bdi>Horizontaal - 2D gelijkvormigheidstransformatie</a></li><li class="tocline"><a class="tocxref" href="#vertikaal-vast-hoogteverschil"><bdi class="secno">3.3.2 </bdi>Vertikaal - vast hoogteverschil</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#methodes-van-georeferentie"><bdi class="secno">4. </bdi>Methodes van Georeferentie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#levels-van-georeferentie"><bdi class="secno">4.1 </bdi>Levels van georeferentie</a></li><li class="tocline"><a class="tocxref" href="#x1d-2d-en-3d-geo-en-bim-modellen"><bdi class="secno">4.2 </bdi>1D, 2D en 3D Geo- en BIM-modellen</a></li><li class="tocline"><a class="tocxref" href="#schaal-en-correctie"><bdi class="secno">4.3 </bdi>Schaal en correctie</a></li></ol></li><li class="tocline"><a class="tocxref" href="#georeferentie-in-uitwisseling"><bdi class="secno">5. </bdi>Georeferentie in uitwisseling</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#industry-foundation-classes-ifc"><bdi class="secno">5.1 </bdi>Industry Foundation Classes (IFC)</a></li><li class="tocline"><a class="tocxref" href="#dxf"><bdi class="secno">5.2 </bdi>DXF</a></li><li class="tocline"><a class="tocxref" href="#city-gml"><bdi class="secno">5.3 </bdi>(City)GML</a></li><li class="tocline"><a class="tocxref" href="#cityjson"><bdi class="secno">5.4 </bdi>CityJSON</a></li><li class="tocline"><a class="tocxref" href="#geopackage"><bdi class="secno">5.5 </bdi>Geopackage</a></li><li class="tocline"><a class="tocxref" href="#api"><bdi class="secno">5.6 </bdi>API</a></li></ol></li><li class="tocline"><a class="tocxref" href="#georeferentie-in-de-domeinen-b-u-en-infra"><bdi class="secno">6. </bdi>Georeferentie in de domeinen B&amp;U en Infra</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#georeferentie-in-de-b-u"><bdi class="secno">6.1 </bdi>Georeferentie in de B&amp;U</a></li><li class="tocline"><a class="tocxref" href="#georeferentie-in-de-infra"><bdi class="secno">6.2 </bdi>Georeferentie in de Infra</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kenmerken-van-infraprojecten"><bdi class="secno">6.2.1 </bdi>Kenmerken van infraprojecten</a></li><li class="tocline"><a class="tocxref" href="#werkwijze-binnen-infra"><bdi class="secno">6.2.2 </bdi>Werkwijze binnen Infra</a></li><li class="tocline"><a class="tocxref" href="#toepassing-van-3d-software"><bdi class="secno">6.2.3 </bdi>Toepassing van 3D-software</a></li><li class="tocline"><a class="tocxref" href="#gevolgen-van-projectievervorming"><bdi class="secno">6.2.4 </bdi>Gevolgen van projectievervorming</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#handleiding-software"><bdi class="secno">7. </bdi>Handleiding Software</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#cad-onderlegger"><bdi class="secno">7.1 </bdi>CAD Onderlegger</a></li><li class="tocline"><a class="tocxref" href="#revit"><bdi class="secno">7.2 </bdi>Revit</a></li><li class="tocline"><a class="tocxref" href="#autocad-civil-3d"><bdi class="secno">7.3 </bdi>Autocad Civil 3D</a></li><li class="tocline"><a class="tocxref" href="#archicad"><bdi class="secno">7.4 </bdi>ArchiCAD</a></li><li class="tocline"><a class="tocxref" href="#tekla-structures"><bdi class="secno">7.5 </bdi>Tekla Structures</a></li><li class="tocline"><a class="tocxref" href="#sketchup"><bdi class="secno">7.6 </bdi>Sketchup</a></li><li class="tocline"><a class="tocxref" href="#blender"><bdi class="secno">7.7 </bdi>Blender</a></li><li class="tocline"><a class="tocxref" href="#illustrator-inkscape"><bdi class="secno">7.8 </bdi>Illustrator/Inkscape</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#illustrator-mapublisher"><bdi class="secno">7.8.1 </bdi>Illustrator MAPublisher</a></li></ol></li><li class="tocline"><a class="tocxref" href="#arcgis"><bdi class="secno">7.9 </bdi>ArcGIS</a></li><li class="tocline"><a class="tocxref" href="#qgis"><bdi class="secno">7.10 </bdi>QGIS</a></li><li class="tocline"><a class="tocxref" href="#controle-van-georeferentie-in-qgis-solibri-en-bimcollab"><bdi class="secno">7.11 </bdi>Controle van georeferentie in QGIS, Solibri en BIMCollab</a></li></ol></li><li class="tocline"><a class="tocxref" href="#tooling"><bdi class="secno">8. </bdi>Tooling</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ifcgref"><bdi class="secno">8.1 </bdi>IfcGref</a></li></ol></li><li class="tocline"><a class="tocxref" href="#validatie-van-gegeorefereerde-ifc-modellen"><bdi class="secno">9. </bdi>Validatie van gegeorefereerde IFC-modellen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#doel-van-de-validatie"><bdi class="secno">9.1 </bdi>Doel van de validatie</a></li><li class="tocline"><a class="tocxref" href="#resultaten-in-arcgis"><bdi class="secno">9.2 </bdi>Resultaten in ArcGIS</a></li><li class="tocline"><a class="tocxref" href="#resultaten-in-qgis"><bdi class="secno">9.3 </bdi>Resultaten in QGIS</a></li></ol></li><li class="tocline"><a class="tocxref" href="#bijlagen"><bdi class="secno">A. </bdi>Bijlagen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#definities-en-afkortingen"><bdi class="secno">A.1 </bdi>Definities en afkortingen</a></li></ol></li><li class="tocline"><a class="tocxref" href="#ifc"><bdi class="secno">B. </bdi>IFC</a></li><li class="tocline"><a class="tocxref" href="#wkt"><bdi class="secno">C. </bdi>WKT</a></li><li class="tocline"><a class="tocxref" href="#proj"><bdi class="secno">D. </bdi>PROJ</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#proj-string"><bdi class="secno">D.1 </bdi>PROJ-String</a></li><li class="tocline"><a class="tocxref" href="#projjson"><bdi class="secno">D.2 </bdi>PROJJSON</a></li></ol></li><li class="tocline"><a class="tocxref" href="#voorbeeld-van-georeferentie-in-gml"><bdi class="secno">E. </bdi>Voorbeeld van georeferentie in GML</a></li><li class="tocline"><a class="tocxref" href="#cityjson-0"><bdi class="secno">F. </bdi>CityJSON</a></li><li class="tocline"><a class="tocxref" href="#voorbeeld-van-georeferentie-met-api-s"><bdi class="secno">G. </bdi>Voorbeeld van georeferentie met API's</a></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">H. </bdi>Lijst met figuren</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">I. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informatieve-referenties"><bdi class="secno">I.1 </bdi>Informatieve referenties</a></li></ol></li></ol></nav>
 
   
   <section id="introductie"><div class="header-wrapper"><h2 id="x1-introductie"><bdi class="secno">1. </bdi>Introductie</h2><a class="self-link" href="#introductie" aria-label="Permalink for Section 1."></a></div>
@@ -897,7 +901,7 @@ img.license{float:left;padding-right:5px;background:0 0}
 <p>In het hoofdstuk <strong>Coördinaattransformatie, datumtransformatie en coördinaatconversie</strong> wordt een toelichting gegeven op coordinaatreferentiesystemen en de manier waarop transformatie en conversie van coördinaatsysteem en datum kan worden uitgevoerd. 
 Vervolgens worden in het hoofdstuk <strong>Methodes van georeferentie</strong> meerderen manieren van georefereren toegelicht die kunnen worden ingezet bij het gebruik van open BIM en Geo. Ook geeft dit hoofstuk aanbevelingen voor de toe te passen methode van georeferentie. In het hoofdstuk <strong>Gebruik van geo voor georeferentie</strong> vindt men een beschrijving van verschillende geodatasets voor georeferentie, en een toelichting van nauwkeurigheid en hoe deze gebruikt kunnen worden. Het hoofdstuk <strong>Georeferentie in uitwisseling</strong> geeft aanbevelingen voor georeferentie in verschillende open uitwisselingformaten. Het volgend hoofdstuk <strong>Georeferentie B&amp;U en Infra</strong> schetst de verschillen van georeferentie in de domein. Het verschil in lengte van objecten en coordinatenstelsel waarin het domein werkt wordt beschreven en de impact die dit heeft op georefereren. 
 Het hoofdstuk <strong>Handleiding Software</strong> voorziet in de praktische beschrijving van de stappen die men in veelgebruikte software dient te nemen om tot de beschreven methode van georeferentie te komen. De beschreven werkwijzen zijn echter niet exclusief van toepassing op deze software. Dit hoofdstuk is dan ook niet limitatief bedoeld. 
-Het hoofdstuk <strong>Tooling</strong> beschrijft tools en plugins die gebruikt kunnen worden om te ondersteunen in de georeferentie van Geo en BIM. 
+Het hoofdstuk <strong>Tooling</strong> beschrijft tools en plugins die gebruikt kunnen worden om te ondersteunen in de georeferentie van Geo en BIM. Er is een <a href="https://github.com/Geonovum/GeoBIM_Georefereren/blob/71cabd4fa02266da96f3203e6a4ad8a1b413da9d/Pamflet%20Geonovum%20geopositioneren%20v0.8%2009-12-2025.pdf">pamflet</a> opgesteld voor de praktijk van BIM. 
 Ten slotte ziet men in hoofdstuk <strong>Praktijktoets georefereren</strong> de resultaten van de verschillende methodes van georefereren in software.</p>
 </section></section>
   <section id="toepassingsgebied"><div class="header-wrapper"><h2 id="x2-toepassingsgebied"><bdi class="secno">2. </bdi>Toepassingsgebied</h2><a class="self-link" href="#toepassingsgebied" aria-label="Permalink for Section 2."></a></div>
@@ -1316,7 +1320,23 @@ Deze methode, vrij beschikbaar via de dataroom van het AHN, maakt het mogelijk o
 Bij infrastructuurprojecten zijn in veel gevallen geen gebouwen aanwezig, waardoor het gebruik van noklijnen beperkt is voor de hoogteregistratie binnen infrastructurele BIM-modellen buiten stedelijke gebieden. In dergelijke situaties kan gebruik worden gemaakt van straatmeubilair en andere infrastructuurobjecten met een duidelijke geometrische of semantische herkenbaarheid, zoals wegmarkeringen, kantverharding en overige vaste objecten.</p>
 <p>Voor deze toepassing zijn verschillende landelijke datasets van belang die, naast het Actueel Hoogtebestand Nederland (AHN), kunnen worden ingezet. Voorbeelden hiervan zijn het Digitaal Topografisch Bestand (DTB/1GiS) en het Nationaal Wegenbestand (NWB). Het is hierbij van belang te onderkennen dat deze datasets niet volledig driedimensionaal zijn. Zo is het DTB/1GiS een 2.5D-dataset, waarbij per XY-coördinaat slechts één hoogtewaarde beschikbaar is, terwijl het huidige NWB uitsluitend tweedimensionale geometrie bevat.</p>
 <p>Door wisselende prioriteiten binnen grootschalige infrastructuurprojecten kunnen er verschillen optreden in betrouwbaarheid en in de toegepaste inwin- en meetmethoden per objecttype. Daarom is het raadzaam om vooraf het DTB-handboek te raadplegen, voordat een object wordt geselecteerd voor toepassing binnen de geografische uitlijningsmethode. Afhankelijk van de objectcategorie kan dit resulteren in planimetrische afwijkingen van circa 5 tot 15,5 cm en altimetrische afwijkingen van ongeveer 10 tot 15 cm.</p>
-<p>In de <mark> onderstaande figuur </mark> is een BIM-model gecombineerd met het DTB/1GiS, waarbij de wegmarkeringen in beide datasets goed op elkaar aansluiten. Deze overeenkomst kan worden benut om het hoogtecomponent van het BIM-model te bepalen, mits het planimetrische vlak reeds correct is uitgelijnd.</p>
+<p>De onderstaande figuur toont de combinatie van een BIM-model met het DTB/1GiS van de Drechtentunnel. Het volledige overzicht boven (links) en onder (rechts) maaiveld illustreert hoe een geo-gereferereerd BIM-model is gepositioneerd binnen zijn geografische context.</p>
+<figure id="Geo_overzicht_BIM_DTB">
+
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+    <img src="./media/geo_overzicht.png" alt="geo_overzicht" height="250">
+    <img src="./media/geo_overzicht_2.png" alt="geo_overzicht_2" height="250">
+  </div>
+
+  <figcaption><a class="self-link" href="#Geo_overzicht_BIM_DTB">Figuur <bdi class="figno">12</bdi></a> <span class="fig-title">
+    <em>
+      Overzicht van de Drechttunnel met het DTB en de 3DBAG. Links geeft de data boven de grond weer, en rechts de data onder de grond.  
+      Dit overzicht is gemaakt vanuit de RWS Digital Twin Basisvoorziening.
+    </em>
+  </span></figcaption>
+
+</figure>
+
 <p>Naast vectoriële datasets zoals het DTB/1GiS en het NWB kan ook het AHN, of een andere beschikbare puntenwolk in de omgeving, worden ingezet. Wegmarkeringen en andere infrastructurele objecten zijn hierin vaak goed herkenbaar doordat de intensiteitswaarden van de punten op het wegdek doorgaans significant lager zijn dan die van het omliggende straatmeubilair. Hierdoor kunnen deze objecten relatief eenvoudig worden geïdentificeerd en geëxtraheerd uit de puntenwolk, wat ze geschikt maakt als referentie voor hoogteregistratie.</p>
 </section></section><section><div class="header-wrapper"><h3 id="geo-datasets-voor-het-refereren-van-modellen">Geo datasets voor het refereren van modellen</h3><a class="self-link" href="#geo-datasets-voor-het-refereren-van-modellen" aria-label="Permalink for this Section"></a></div>
 <p>Voor het refereren van datasets naar een geo domein, zijn een aantal datasets beschikbaar om op aan te sluiten. Deze zijn (niet limitatief) weergegeven in onderstaande <a href="#tabel-overzicht-nationale-datasets">tabel</a> (<a href="https://cuatro.sim-cdn.nl/ahn/uploads/1_inventarisatie_van_puntenwolken_in_nederland_1.pdf?cb=mm0aYtMc"><em>WP1: Inventarisatie van puntenwolken in
@@ -1405,7 +1425,7 @@ Nederland</em></a>). In de tabel zijn de volgende informatie weergegeven: de bes
 <p>Het moment van inwinning bepaalt de bruikbaarheid van de dataset, aangezien iedere geo-dataset die wordt weergegeven in een GIS-omgeving een momentopname is. Een geo-dataset vertegenwoordigt nooit de volledige werkelijkheid, maar vormt slechts een benadering van de omgeving. Hierdoor kan de omgeving, afhankelijk van de mate van verandering, in de loop van de tijd sterk of minder sterk afwijken van de oorspronkelijke weergave. Dit wordt geïllustreerd in de onderstaande figuren aan de hand van de stationsregio van Delft, zoals weergegeven in het Actueel Hoogtebestand Nederland en de 3D Basisvoorziening, waarbij de bouw van de stationsregio een ingrijpende verandering in het terrein laat zien.</p>
 <figure id="Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft">
       <img src="./media/Regio_delft_verandering.png" alt="Leefttijd van verschillende puntenwolken van de stationsregio in Delft" height="500">
-    <figcaption><a class="self-link" href="#Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft">Figuur <bdi class="figno">12</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft"></a><span class="fig-title">Leefttijd van verschillende puntenwolken van de stationsregio in Delft</span></span></figcaption>
+    <figcaption><a class="self-link" href="#Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft">Figuur <bdi class="figno">13</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft"></a><span class="fig-title">Leefttijd van verschillende puntenwolken van de stationsregio in Delft (figuur is uit wp1 van het <a href="https://www.ahn.nl/integrale-hoogtevoorziening-nederland"> <em>Intergaal Hoogtevoorziening Nederland</em></a> overgenomen.) </span></span></figcaption>
 </figure></section></section></section>
   <section id="georeferentie-in-uitwisseling"><div class="header-wrapper"><h2 id="x5-georeferentie-in-uitwisseling"><bdi class="secno">5. </bdi>Georeferentie in uitwisseling</h2><a class="self-link" href="#georeferentie-in-uitwisseling" aria-label="Permalink for Section 5."></a></div>
 <p>Wanneer men in een bepaalde toepassing of softwarepakket werkt, bevindt een model zich binnen deze toepassing in een assenstelsel. Dit is nodig om op een systematische, eenduidige en wiskundige manier locaties en vormen in ruimte te kunnen vastleggen, verwerken en communiceren. Wanneer men modellen wil delen of combineren buiten deze toepassing of softwarepakket kan men dit in open uitwisselformaat uitwisselen. Hieronder volgt een overzicht van verschillende open uitwisselformaten en de manieren waarop men georeferentie hierin kan doen. </p>
@@ -1516,82 +1536,74 @@ De CityGML encoding biedt twee mogelijkheden om een coordinatenstelsel te duiden
 </section></section>
   <section id="georeferentie-in-de-domeinen-b-u-en-infra"><div class="header-wrapper"><h2 id="x6-georeferentie-in-de-domeinen-b-u-en-infra"><bdi class="secno">6. </bdi>Georeferentie in de domeinen B&amp;U en Infra</h2><a class="self-link" href="#georeferentie-in-de-domeinen-b-u-en-infra" aria-label="Permalink for Section 6."></a></div>
 <section id="georeferentie-in-de-b-u"><div class="header-wrapper"><h3 id="x6-1-georeferentie-in-de-b-u"><bdi class="secno">6.1 </bdi>Georeferentie in de B&amp;U</h3><a class="self-link" href="#georeferentie-in-de-b-u" aria-label="Permalink for Section 6.1"></a></div>
-<p>B&amp;U projecten kenmerken zich vaak door projecten van beperkte omvang. Vaak worden deze modellen in een lokaal assenstelsel gemodelleerd. Dit verhoogt de nauwkeurigheid en vereenvoudigt de samenwerking. Vaak wordt bij integratie met IS, infra of stadsmodellen de koppeling gelegd aan een bekend (nationaal) coördinatenstelsel. </p>
-<p>Voorbeelden van B&amp;U projecten zijn </p>
+<p>B&amp;U-projecten kenmerken zich doorgaans door een beperkte ruimtelijke omvang. Modellen worden 
+daarom vaak in een lokaal assenstelsel opgezet. Dit verhoogt de numerieke stabiliteit van 
+berekeningen en voorkomt afrondingsfouten in ontwerpsoftware. Daarnaast vereenvoudigt het 
+de samenwerking tussen disciplines binnen één modelomgeving. Wanneer integratie met 
+informatiesystemen, infrastructuurmodellen of stadsmodellen nodig is, wordt het model 
+gekoppeld aan een bekend nationaal coördinatenstelsel.</p>
+<p><strong>Voorbeelden van B&amp;U-projecten</strong></p>
 <ul>
-<li>Vliegvelden, ziekenhuizen (langgerekt)</li>
-<li>Woningen (beperkt in omvang)</li>
+<li>Vliegvelden en ziekenhuizen (relatief langgerekte objecten)  </li>
+<li>Woningen (beperkte omvang)</li>
 </ul>
-<p>Woningen, flats en ziekenhuizen beslaan meestal enkele tientallen tot honderden meters. De kromming van de aarde en de projectie-afwijkingen zijn over zo’n klein gebied verwaarloosbaar. Het gebruik van coördinaten in het platte vlak leveren hierdoor verwaarloosbare problemen op. </p>
+<p>Woningen, flats en ziekenhuizen beslaan meestal enkele tientallen tot honderden meters. Over 
+dergelijke afstanden zijn de effecten van aardkromming en kaartprojectievervorming 
+verwaarloosbaar. Het gebruik van vlakke coördinaten veroorzaakt daardoor in de praktijk geen 
+meetbare geometrische afwijkingen.</p>
 </section><section id="georeferentie-in-de-infra"><div class="header-wrapper"><h3 id="x6-2-georeferentie-in-de-infra"><bdi class="secno">6.2 </bdi>Georeferentie in de Infra</h3><a class="self-link" href="#georeferentie-in-de-infra" aria-label="Permalink for Section 6.2"></a></div>
-<p><a href="https://publications.cms.bgu.tum.de/2019_Jaud_I3CE.pdf">https://publications.cms.bgu.tum.de/2019_Jaud_I3CE.pdf</a></p>
-<section id="kenmerken-van-infraprojecten"><div class="header-wrapper"><h4 id="x6-2-1-kenmerken-van-infraprojecten"><bdi class="secno">6.2.1 </bdi>Kenmerken van Infraprojecten</h4><a class="self-link" href="#kenmerken-van-infraprojecten" aria-label="Permalink for Section 6.2.1"></a></div>
-<p>Infraprojecten kenmerken zich vaak door langgerekte projecten. De noodzaak en de positie van de objecten die gebouwd worden, wordt bepaald door de omgeving. Het is vaak ook noodzakelijk om aan te sluiten op de bestaande omgeving. Als gevolg hiervan zijn er veel raakvlakken met de omgeving. Om deze raakvlakken goed in kaart te brengen is het goed in kaart brengen van de omgeving zeer belangrijk. Om alle objecten in de omgeving te positioneren wordt gebruik gemaakt van RD-Coordinaten.</p>
-<p>Voorbeelden van Infra projecten zijn </p>
+<section id="kenmerken-van-infraprojecten"><div class="header-wrapper"><h4 id="x6-2-1-kenmerken-van-infraprojecten"><bdi class="secno">6.2.1 </bdi>Kenmerken van infraprojecten</h4><a class="self-link" href="#kenmerken-van-infraprojecten" aria-label="Permalink for Section 6.2.1"></a></div>
+<p>Infraprojecten zijn vaak langgerekt en sterk afhankelijk van hun omgeving. De ligging van 
+objecten wordt bepaald door bestaande infrastructuur, terreincondities en wettelijke liggingseisen. 
+Hierdoor bestaan veel raakvlakken met de omgeving. Om deze raakvlakken goed te beheersen is een 
+nauwkeurige positionering van zowel het ontwerp als de omgeving essentieel. In Nederland gebeurt 
+dit doorgaans met RD-coördinaten in combinatie met NAP-hoogten.</p>
+<p><strong>Voorbeelden van infraprojecten</strong></p>
 <ul>
-<li>snelwegen, tunnel, dijkverstrekingen (lang gerekt)</li>
-<li>burgen, viaducten en sluizen (locatie bepaald door omgeving)</li>
+<li>Snelwegen, tunnels en dijkversterkingen (langgerekt)  </li>
+<li>Bruggen, viaducten en sluizen (locatiegebonden)</li>
 </ul>
-<p>Oplossings-idee. Tussenpunten berekenen. <a href="https://gnss-data.kadaster.nl/misc/docs/langelijnenadvies.pdf">https://gnss-data.kadaster.nl/misc/docs/langelijnenadvies.pdf</a></p>
-<p>Misschien ook lange lijnen advies voor de Z- waarde.  </p>
-<mark>
-Uit de ISO 19107: 
-6.2.2.4 Underlying geometric space Geometry systems inherently make assumptions about the "space" in which the geometric objects are defined. </mark> 
-
-<p>Classical Euclidean geometry assumes that the objects line in an infinite flat plane represented, for example, by a Cartesian coordinate space with a standard Pythagorean metric. Geographic information if restricted to relatively small areas can be analyzed using classical Euclidean methods or algebraic calculations in a Cartesian coordinate space that depend on the 'flat' Pythagorean metric. the way lines in flat Euclidean spaces define distances in the Pythagorean metric. Thus, the distance between points on a sphere is defined by the length of the great circle on the sphere joining the two points. </p>
-<p>For ellipsoids, the geodesics are more complex, but they are defined as curves of shortest distances between points, and their length defines the metric on the underlying surface. The surfaces in most general use are: 
-— Maps, — a relatively local map projection onto a 2D plane where Euclidean geometry properly scaled is a close approximation to reality, 
-— Spheres – a 2-sphere with a fixed radius, allowing the use of classical spherical geometry and trigonometry, 
-— Ellipsoids – a bi-radial surface of revolution using an ellipse of revolution whose minor axis is approximately aligned with the Earth's polar axis, or 
-— Calculated GeometricReferenceSurfaces or Geoids – an adjustment of an ellipsoid to an equipotential surface of gravity to adjust for the variations in Earth's local density and thus it gravity potential. </p>
-<p>In ISO 19111 a sphere can be considered to be a special case of an ellipsoid and no distinction need be made between them for CRS definitions. In this International Standard a distinction is made because geometric calculations on a sphere use simpler formulas based on the symmetries of a sphere, e.g. those based on "great circles" geodesics, whereas many geometric calculations on an ellipsoid are more complex and may require the use of more complex approximations. An approximation is not necessarily less accurate than a closed-form formula, which will use polynomial approximation for trigonometric functions, but different implementations may treat these differently. Issues of local usage can adjust CRS's to work particular well based on a local best fit of the Reference Surface. </p>
-<p>For example, in the United States local mapping agencies often use State Plane Coordinate system specifically to preserve the accuracy of Euclidean geometry. To do this, there are 124 distinct state plane systems used to cover the country. Such a system could use the "Reference Surface — Plane" parameter for the coordinate conformance class. For larger areas, the effects of the Earth's curvature become significant even for primitive surveying systems. EXAMPLE: Much of the United States is surveyed using the Land Ordinance of 1785, which defines Public Land Survey System (PLSS) commonly called "the Jeffersonian Grid". In this system, major boundaries are defined by "equally spaced" horizontal (east-west) lines of constant latitude and vertical (north south) lines of constant longitude. Since these lines are generally the boundary lines between owned parcels, roads often follow them. Since the lines are space by distances (6 or 24 miles, approximately 10 or 38 kilometers), they misalign due to the curvature of the Earth, the north-south roads often "jog" (meaning a brief abrupt double change in direction, "left then quick right" or vice versa) when they cross the major east-west lines also being used as rights-of-way for other roads. The further away from the origin of the "grid" the greater the width of the "jog". Similarly, on any UTM projection, the meters easting and northing for a grid square would not be sufficient to calculate the area of that square with the distortion of the area dependent on the square's position. </p>
-<p>In other words, Euclidean-based intuition is inaccurate on a curved, and therefore non-Euclidean, surface. To make such calculations more accurate, a more accurate model of the Earth's surface is needed. The most common models involve 2D surfaces embedded in a 3D space. The 3D space is a Euclidean space, with a Pythagorean metric represented by Cartesian coordinates. The geometric/metric structure of the surfaces is inherited from the embedding 3D Cartesian space. On the surface, the distance between points is defined by curves of shortest distance lying on the surface that joins the points in question, similarly to the way lines in flat Euclidean spaces define distances in the Pythagorean metric. Thus, the distance between points on a sphere is defined by the length of the great circle on the sphere joining the two points. </p>
-<p>For ellipsoids, the geodesics are more complex, but they are defined as curves of shortest distances between points, and their length defines the metric on the underlying surface. The surfaces in most general use are: — Maps, — a relatively local map projection onto a 2D plane where Euclidean geometry properly scaled is a close approximation to reality, 
-— Spheres – a 2-sphere with a fixed radius, allowing the use of classical spherical geometry and trigonometry, 
-— Ellipsoids – a bi-radial surface of revolution using an ellipse of revolution whose minor axis is approximately aligned with the Earth's polar axis, or 
-— Calculated GeometricReferenceSurfaces or Geoids – an adjustment of an ellipsoid to an equipotential surface of gravity to adjust for the variations in Earth's local density and thus it gravity potential. </p>
-<p>In ISO 19111 a sphere can be considered to be a special case of an ellipsoid and no distinction need be made between them for CRS definitions. In this International Standard a distinction is made because geometric calculations on a sphere use simpler formulas based on the symmetries of a sphere, e.g. those based on "great circles" geodesics, whereas many geometric calculations on an ellipsoid are more complex and may require the use of more complex approximations. An approximation is not necessarily less accurate than a closed-form formula, which will use polynomial approximation for trigonometric functions, but different implementations may treat these differently. </p>
-<p>Issues of local usage can adjust CRS's to work particular well based on a local best fit of the Reference Surface. For example, in the United States local mapping agencies often use State Plane Coordinate system specifically to preserve the accuracy of Euclidean geometry. To do this, there are 124 distinct state plane systems used to cover the country. Such a system could use the "Reference Surface — Plane" parameter for the coordinate conformance class.</p>
-<p>Requirement 14: If the GeometricReferenceSurface is not embedded in a Euclidean space, then it
-shall have either a Riemannian metric or some other mechanism to determine
-distance and area metrics within a documented level of accuracy.</p>
-<p>Moet je Riemannian gebruiken? Of Vincenty's Formula? </p>
-<p>Because many curves are defined using standard calculus in a standard, flat, Euclidean space 𝔼2, a local
-engineering CRS is required, which can then transform to the CRS of the data set. The most universally
-applicable Engineering CRS is the tangent plane at a particular point, which maps back to the
-GeometricReferenceSurface using the exponential map.
-Let ct    xt , y t  be a curve, which is represented by a function 2 c :  . The variable t is any
-continuous parameterization of the curve. The derivative
-ct   xt , yt  (59)
-is a vector in the tangent space of vectors at c(t). The length of the derivative tangent is given by the
-Pythagorean Theorem (t and s increase in the same direction of the curve)</p>
-<p>Vraag 1: In het werk: 
-Volgens mij het probleem: Men modelleert in een 3D Cartesiaans Stelsel. Dit is ook hoe men het in de fabriek (Pre-Fab) zal maken. Stel dat het 100% aansluit zonder foutmarge, dan gaat het mis over een afstand "x". </p>
-<p>Stel dat men het op het werk maakt, men maakt bekisting en gebruikt een waterpas. Dan kan men geen Kubus maken! </p>
-<p>Of, het is niet waterpas, Of, het is geen kubus. Wanneer wordt dit een probleem? </p>
-<p>Hoe zit dat dan met gecalculeerde m3 asfalt in snelwegen? Of m3 beton? Of voor hoekcalculaties? Wanneer wordt dit een probleem? </p>
-<p>Vraag 2: Hoe BIM-modellen aan te passen? Kunnen we dit eens proberen met de A20 Corridor van Loek? </p>
-</section><section id="werkwijze-in-infa"><div class="header-wrapper"><h4 id="x6-2-2-werkwijze-in-infa"><bdi class="secno">6.2.2 </bdi>Werkwijze in Infa</h4><a class="self-link" href="#werkwijze-in-infa" aria-label="Permalink for Section 6.2.2"></a></div>
-<p>Binnen een project in de Infra denken we in RD coordinaten ten opzichten van NAP. Er wordt niet in een lokaal coordinaten stelsel gewerkt. Dit wordt 
-gedaan omdat er vaak aagesloten moet worden op bestaande infrastructuur. Deze infrastructuur wordt door onze maatvoerder opgemeten in 
-het RD-stelsel. Op basis hiervan kan verder worden ontworpen. Ook andere geometrische informatie welke benodigd is voor het project wordt
-vaak in RD beschikbaar gesteld. Het RD-Stelsel is dus een logische afspraak om te gebruiken voor het ontwerp van een infraproject.</p>
-<p>Het ontwerp wordt direct in het RD stelsel (een Geprojecteerd CRS) uitgewerkt, op tekeningen staan RD coordinaten en NAP niveau aangegeven om 
-de locaties van (een deel van) een kustwerk aan te geven. Translate van het ontwerp in het RD-stelsel naar de werkelijkse situatie buiten wordt 
-gedaan door maatvoerders. Zij vertalen (middels gespecialiseerde software en total stations) de RD coordinaten van het ontwerp naar een Geografische 
-CRS zodat het in de werkelijke wereld geplaatst kan worden. Hierbij wordt gebruik gemaakt van grondslagen om de nauwkeurigheid tot op het gewenste 
-niveau te krijgen.</p>
-</section><section id="toepassing-van-3d-software"><div class="header-wrapper"><h4 id="x6-2-3-toepassing-van-3d-software"><bdi class="secno">6.2.3 </bdi>Toepassing van 3D Software</h4><a class="self-link" href="#toepassing-van-3d-software" aria-label="Permalink for Section 6.2.3"></a></div>
-<p>Tijdens het ontwerp proberen we onze ontwerpsoftware af te stellen op het feit dat we in RD coordinaten werken zodat dit overeenkomt met de manier
-waarop wij denken binnen het project. Afhakelijk van de software wordt binnen de software nog steeds een lokaal stelsel gebruikt maar dit heeft geen waarde
-voor het project team. In Revit wordt bijvoorbeeld nog steeds een Basepoint gebruikt maar de locatie hiervan is niet persee relevent voor
-het project. Vaak wordt een mooi afgerond RD-coordinaat genomen. In andere software zoals AutoCAD of Civil3D wordt direct gewerkt op RD-coordinaten.
-Er wordt in dit geval zeer ver van het orginele nulpunt getekend in de software.</p>
-<p>Uitwisseling tussen verschillende software systemen gebeurt ook standaard op basis van RD-Coordinaten. Dit werkt echter niet feilloos binnen het 
-huidige softwarelandschap omdat de gebruikte software niet altijd op de hoogte is of in staat is te begrijpen dat er op RD-Coordinaten gewerkt 
-wordt. De software interpreteert de uitwisselbestanden bijvoorbeeld als bestanden met een lokaal coordinatenstelsel met zeer grote coordinaten in 
-plaatst van RD-Coordinaten. Positionering gaat hierdoor niet altijd goed.</p>
+</section><section id="werkwijze-binnen-infra"><div class="header-wrapper"><h4 id="x6-2-2-werkwijze-binnen-infra"><bdi class="secno">6.2.2 </bdi>Werkwijze binnen Infra</h4><a class="self-link" href="#werkwijze-binnen-infra" aria-label="Permalink for Section 6.2.2"></a></div>
+<p>Binnen infraprojecten wordt gewerkt met RD-coördinaten ten opzichte van NAP. Dit maakt directe 
+aansluiting op bestaande infrastructuur mogelijk. Bestaande objecten en terreinpunten worden door 
+landmeters ingemeten met GNSS- of tachymetrische metingen. GNSS-metingen worden daarbij eerst bepaald 
+in een geodetisch referentiestelsel (zoals ETRS89) en vervolgens via officiële transformaties 
+omgerekend naar RD- en NAP-coördinaten. Op basis van deze gegevens wordt het ontwerp opgesteld.</p>
+<p>Ook andere geometrische projectinformatie wordt doorgaans in RD aangeleverd. Het RD-stelsel vormt 
+daardoor de logische standaard voor gegevensuitwisseling en ontwerp binnen infraprojecten.</p>
+<p>Het ontwerp wordt uitgewerkt in een geprojecteerd coördinatenreferentiesysteem (CRS), waarbij op 
+tekeningen RD-coördinaten en NAP-hoogten worden vermeld om objectlocaties eenduidig vast te leggen. 
+Op de bouwplaats worden ontwerpen uitgezet met meetapparatuur die is georiënteerd op bekende 
+RD-grondslagpunten. Hierdoor kunnen ontwerpcoördinaten rechtstreeks in het veld worden gerealiseerd 
+met de vereiste nauwkeurigheid.</p>
+<p>Het RD-stelsel is historisch gebaseerd op het Bessel 1841-ellipsoïde. In de praktijk worden moderne 
+transformaties tussen referentiestelsels uitgevoerd met officiële gridtransformaties, waardoor 
+nauwkeurige omzettingen tussen internationale en nationale stelsels mogelijk zijn.</p>
+</section><section id="toepassing-van-3d-software"><div class="header-wrapper"><h4 id="x6-2-3-toepassing-van-3d-software"><bdi class="secno">6.2.3 </bdi>Toepassing van 3D-software</h4><a class="self-link" href="#toepassing-van-3d-software" aria-label="Permalink for Section 6.2.3"></a></div>
+<p>Tijdens het ontwerp wordt software ingesteld op werken met RD-coördinaten, zodat de modelruimte 
+overeenkomt met de projectrealiteit. Afhankelijk van het softwarepakket wordt intern nog met een 
+lokaal systeem gerekend, maar dit heeft geen inhoudelijke betekenis voor het projectteam. In 
+sommige toepassingen wordt bijvoorbeeld een intern referentiepunt gebruikt waarvan de positie 
+projectmatig wordt gekozen, vaak als afgerond RD-coördinaat. Andere pakketten ondersteunen directe 
+modellering op nationale coördinaten, waarbij ver van de interne oorsprong wordt gewerkt.</p>
+<p>Gegevensuitwisseling tussen softwarepakketten vindt eveneens plaats op basis van RD-coördinaten. Dit 
+verloopt niet altijd probleemloos, omdat niet alle software het gebruikte referentiestelsel automatisch 
+herkent. Wanneer CRS-informatie ontbreekt of verkeerd wordt geïnterpreteerd, kunnen bestanden worden 
+ingelezen alsof zij een lokaal stelsel met grote coördinaatwaarden bevatten. Dit kan leiden tot foutieve 
+positionering.</p>
+</section><section id="gevolgen-van-projectievervorming"><div class="header-wrapper"><h4 id="x6-2-4-gevolgen-van-projectievervorming"><bdi class="secno">6.2.4 </bdi>Gevolgen van projectievervorming</h4><a class="self-link" href="#gevolgen-van-projectievervorming" aria-label="Permalink for Section 6.2.4"></a></div>
+<p>Ontwerpen worden opgesteld in een geprojecteerd CRS. Kaartprojecties hebben een schaalfactor die licht 
+afwijkt van 1 (zie ook hoofdstuk 3.1.2). Hierdoor kan de afstand tussen twee punten in het ontwerp iets 
+verschillen van de werkelijke afstand in het terrein. Dit effect wordt projectievervorming genoemd en 
+is afhankelijk van de locatie binnen het projectiestelsel.</p>
+<p>Voor geprefabriceerde elementen, zoals prefab liggers die in een fabriek worden geproduceerd, blijft 
+dit effect zeer beperkt omdat de elementlengtes meestal ruim onder de 100 meter liggen. De afwijking 
+blijft daardoor doorgaans beperkt tot millimeters en valt binnen constructietoleranties.</p>
+<p>Voor objecten die over grote afstanden worden gerealiseerd, zoals wegen van meerdere kilometers lang, worden 
+langs het tracé meerdere uitzetpunten gebruikt. Hierdoor wordt het effect van de projectieschaal verdeeld 
+over de totale lengte. De afwijking bedraagt typisch millimeters tot centimeters per kilometer, afhankelijk 
+van de ligging binnen het projectiestelsel. Dit vormt in de praktijk geen probleem omdat aansluitende 
+infrastructuur in hetzelfde referentiestelsel is ingemeten.</p>
 </section></section></section>
   <section id="handleiding-software"><div class="header-wrapper"><h2 id="x7-handleiding-software"><bdi class="secno">7. </bdi>Handleiding Software</h2><a class="self-link" href="#handleiding-software" aria-label="Permalink for Section 7."></a></div>
 <section id="cad-onderlegger"><div class="header-wrapper"><h3 id="x7-1-cad-onderlegger"><bdi class="secno">7.1 </bdi>CAD Onderlegger</h3><a class="self-link" href="#cad-onderlegger" aria-label="Permalink for Section 7.1"></a></div>
@@ -1605,7 +1617,7 @@ plaatst van RD-Coordinaten. Positionering gaat hierdoor niet altijd goed.</p>
 </ol>
 <figure id="QGIS-DXF-Export-2D" style="display: block; text-align: center; margin: 0 auto;">
       <img src="./media/QGIS_1.png" alt="QGIS-DXF-Export-2D" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#QGIS-DXF-Export-2D">Figuur <bdi class="figno">13</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-QGIS-DXF-Export-2D"></a><span class="fig-title">Export 2D project naar DXF in QGIS</span></span></figcaption>
+    <figcaption><a class="self-link" href="#QGIS-DXF-Export-2D">Figuur <bdi class="figno">14</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-QGIS-DXF-Export-2D"></a><span class="fig-title">Export 2D project naar DXF in QGIS</span></span></figcaption>
 </figure>
 
 
@@ -1616,7 +1628,7 @@ plaatst van RD-Coordinaten. Positionering gaat hierdoor niet altijd goed.</p>
 <li>Drag-drop je bestanden in QGIS.</li>
 <li>In QGIS ga naar Project&gt;Import/Export&gt;Export Project to DXF. De CRS zal EPSG:74152 (RD NEW + NAP height) tonen.<figure id="QGIS-DXF-Export-3D" style="display: block; text-align: center; margin: 0 auto;">
    <img src="./media/QGIS_2.png" alt="QGIS-DXF-Export-3D" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
- <figcaption><a class="self-link" href="#QGIS-DXF-Export-3D">Figuur <bdi class="figno">14</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-QGIS-DXF-Export-3D"></a><span class="fig-title">Export 2D project naar DXF in QGIS</span></span></figcaption>
+ <figcaption><a class="self-link" href="#QGIS-DXF-Export-3D">Figuur <bdi class="figno">15</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-QGIS-DXF-Export-3D"></a><span class="fig-title">Export 2D project naar DXF in QGIS</span></span></figcaption>
 </figure></li>
 </ol>
 </section><section id="revit"><div class="header-wrapper"><h3 id="x7-2-revit"><bdi class="secno">7.2 </bdi>Revit</h3><a class="self-link" href="#revit" aria-label="Permalink for Section 7.2"></a></div>
@@ -1624,7 +1636,7 @@ plaatst van RD-Coordinaten. Positionering gaat hierdoor niet altijd goed.</p>
 Revit kent <a href="#dfn-project-units" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-project-units-1">Project Units</a>. De project units bevat de instelling van de standaard eenheden die men binnen het project gebruikt. Hier kan men bijvoorbeeld opgegeven of er met meters of met millimeters wordt gewerkt of volume in liters of m<sup>3</sup>.<br></p>
 <figure id="Scherm-in-Revit-dat-Lokaal-Coordinatiepunt-en-CRS-Coordinatiepunt-laat-zien" style="display: block; text-align: center; margin: 0 auto;">
       <img src="./media/Revit_1.png" alt="Scherm in Revit dat Lokaal Coordinatiepunt en CRS-Coordinatiepunt laat zien" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Scherm-in-Revit-dat-Lokaal-Coordinatiepunt-en-CRS-Coordinatiepunt-laat-zien">Figuur <bdi class="figno">15</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Scherm-in-Revit-dat-Lokaal-Coordinatiepunt-en-CRS-Coordinatiepunt-laat-zien"></a><span class="fig-title">Scherm in Revit dat Lokaal Coordinatiepunt en CRS-Coordinatiepunt laat zien</span></span></figcaption>
+    <figcaption><a class="self-link" href="#Scherm-in-Revit-dat-Lokaal-Coordinatiepunt-en-CRS-Coordinatiepunt-laat-zien">Figuur <bdi class="figno">16</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Scherm-in-Revit-dat-Lokaal-Coordinatiepunt-en-CRS-Coordinatiepunt-laat-zien"></a><span class="fig-title">Scherm in Revit dat Lokaal Coordinatiepunt en CRS-Coordinatiepunt laat zien</span></span></figcaption>
 </figure>
 
 
@@ -1651,7 +1663,7 @@ Revit kent <a href="#dfn-project-units" class="internalDFN" data-link-type="dfn"
 </ol>
 <figure id="Controle-in-Revit" style="display: block; text-align: center; margin: 0 auto;">
       <img src="./media/Revit_2.png" alt="Controle-in-Revit" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Controle-in-Revit">Figuur <bdi class="figno">16</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Controle-in-Revit"></a><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></span></figcaption>
+    <figcaption><a class="self-link" href="#Controle-in-Revit">Figuur <bdi class="figno">17</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Controle-in-Revit"></a><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></span></figcaption>
 </figure>
 
 <p><strong>Units</strong>
@@ -1663,7 +1675,7 @@ De IFC is niet ge-georefereerd (alleen de coordinaten van Project Basepoint zijn
 </ol>
 <figure id="Setup-in-Revit" style="display: block; text-align: center; margin: 0 auto;">
       <img src="./media/Revit_3.png" alt="Setup-in-Revit" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Setup-in-Revit">Figuur <bdi class="figno">17</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Setup-in-Revit"></a><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></span></figcaption>
+    <figcaption><a class="self-link" href="#Setup-in-Revit">Figuur <bdi class="figno">18</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Setup-in-Revit"></a><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></span></figcaption>
 </figure>
 
 <ol start="2">
@@ -2260,28 +2272,26 @@ Klik op de 3D-weergave en selecteer Enkel Symbool.</p>
     <td>
 <img src="./media/briendenennoord_qgis.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-    <td> Real </td><td> ✅ </td><td> ✅</td><td> ✅ </td> <td> ✅</td> <td> Kleine verschuiving in XYZ is zichtbaar tov het AHN zie onderstaande <a class="self-link" href="#AHN4vsIFC">figuur</a></td>
+    <td> EPSG:28992 </td><td> ✅ </td><td> ✅</td><td> ✅ </td> <td> ✅</td> <td> Kleine verschuiving in XYZ is zichtbaar tov het AHN zie onderstaande <a class="self-link" href="#AHN4vsIFC">figuur</a></td>
   </tr>
   <tr>
     <td>ifcbridge-model01_georeferenced.ifc </td>
     <td>
-<mark> beeld nog toe te voegen </mark>
+<img src="./media/ifcbrigde_model01_qgis.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-   <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td><td>-</td>
+   <td> EPSG:8395 </td><td> ✅ </td><td> ✅ </td><td> ✅ </td> <td> ✅ </td><td>-</td>
   </tr>
   <tr>
     <td>ifcbridge-model02_georeferenced.ifc </td>
-    <td>
-<mark> beeld nog toe te voegen </mark>
-    </td>
-      <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td><td>-</td>
+    <td><img src="./media/ifcbrigde_model02_qgis.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190"></td>
+<td> EPSG:31468 </td><td> ✅ </td><td> 🔶 </td><td> 🔶 </td> <td> 🔶</td><td>Er zijn correcties toegepast voor de schaal (0,001) en de hoogte (-10 m). Voor deze praktijktoets zijn geen geo-referentiegegevens beschikbaar ter verificatie.</td>
   </tr>
   <tr>
     <td>ifcbridge-model03_georeferenced.ifc </td>
     <td>
-<mark> beeld nog toe te voegen </mark>
+<img src="./media/ifcbrigde_model03_qgis.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-       <td> ? </td><td> ? </td><td> ? </td><td> ? </td> <td> ?</td><td>-</td>
+       <td> EPSG:27700 </td><td> ✅ </td><td> 🔶 </td><td> 🔶 </td> <td> 🔶</td><td>De schaalcorrectie bedraagt 0,001 en de oriëntatie is -1,0. Voor deze praktijktoets zijn geen geo-referentiegegevens beschikbaar ter verificatie. Tevens is geen MapUnit gedefinieerd in het model.</td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef_Totaal.ifc</td>
@@ -2294,35 +2304,35 @@ Klik op de 3D-weergave en selecteer Enkel Symbool.</p>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef10.ifc</td>
     <td> <img src="./media/ref_10_3D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-      <td> Fake </td><td> ❌ </td><td>✅ </td><td>✅ </td> <td> ✅ </td><td>-</td>
+      <td>EPSG:28992 (Fake) </td><td> ❌ </td><td>✅ </td><td>✅ </td> <td> 🔶 </td><td>Het coördinatensysteem is correct gespecificeerd. Echter ontbreken correcte northing- en easting-waarden in de IFC. De schaal is niet expliciet gedefinieerd in het model, maar dit heeft geen consequenties vanwege de correcte hoogte-informatie</td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef20.ifc</td>
     <td>
 <img src="./media/ref_20_3D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-       <td> Fake </td><td>❌ </td><td> ✅ </td><td>✅ </td> <td>✅ </td><td>-</td>
+       <td> EPSG:28992 (Fake) </td><td>❌ </td><td> ✅ </td><td>✅ </td> <td>🔶 </td><td>Het coördinatensysteem is correct gespecificeerd. Echter ontbreken correcte northing- en easting-waarden in de IFC. De schaal is niet expliciet gedefinieerd in het model, maar dit heeft geen consequenties vanwege de correcte hoogte-informatie </td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef30.ifc</td>
     <td>
 <img src="./media/ref_30_3D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-       <td> Fake </td><td> ❌ </td><td> ✅ </td><td> ✅ </td> <td> ✅ </td><td>-</td>
+       <td> EPSG:28992 (Fake) </td><td> ❌ </td><td> ✅ </td><td> ✅ </td> <td> 🔶 </td><td>Het coördinatensysteem is correct gespecificeerd. Echter ontbreken correcte northing- en easting-waarden in de IFC. De schaal is niet expliciet gedefinieerd in het model, maar dit heeft geen consequenties vanwege de correcte hoogte-informaties</td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef40.ifc</td>
     <td>
 <img src="./media/ref_40_2D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
-       <td> Fake </td><td> ❌ </td><td> ✅ </td><td> ✅ </td> <td> ?</td><td>-</td>
+       <td> EPSG:28992 (Fake) </td><td> ❌ </td><td> ✅ </td><td> ✅ </td> <td> ?</td><td>coordinaten systeem goed aangegeven, maar geen correct northing en easting in de ifc aanwezig;schaal niet aangegeven in het model, verder is dit model uit geklapt.. </td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef50.ifc</td>
     <td>
  <img src="./media/3D_50_AHN5.png" alt="Resultaat geogerefereerd model level 50" title="Resultaat geogerefereerd model level 50" width="190">
     </td>
-       <td> Real </td><td> ✅ </td><td> ✅ </td><td> ✅ </td> <td> ✅ </td><td>-</td>
+       <td> EPSG:28992 </td><td> ✅ </td><td> ✅ </td><td> ✅ </td> <td> ✅ </td><td>-</td>
   </tr>
 </tbody></table>
 
@@ -2330,9 +2340,17 @@ Klik op de 3D-weergave en selecteer Enkel Symbool.</p>
 🔶 = Geeltelijk correct, maar bevat fouten.
 ❌ = Niet correct</p>
 <p>Figuur ter verduideling van de opmerking, geplaatst bij de brienenoord brug.</p>
+<<<<<<< HEAD
 <figure id="AHN4vsIFC" style="display: block; text-align: center; margin: 0 auto;">
       <img src="./media/AHN4_verschuiving_brienenoord.png" alt="AHN4vsIFC" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;">
     <figcaption><a class="self-link" href="#AHN4vsIFC">Figuur <bdi class="figno">53</bdi></a> <span class="fig-title">AHN4 (rood) vergeleken met het IFC model (grijs)</span></figcaption>
+=======
+<figure id="AHN4vsIFC" style="text-align: center; margin: 0 auto;">
+  <img src="./media/AHN4_verschuiving_brienenoord.png" alt="AHN4vsIFC" style="width: 200px; height: auto; display: block; margin: 0 auto;">
+  <figcaption style="font-size: 0.9em;"><a class="self-link" href="#AHN4vsIFC">Figuur <bdi class="figno">54</bdi></a> <span class="fig-title">
+    AHN4 (rood) vergeleken met het IFC model (grijs)
+  </span></figcaption>
+>>>>>>> 0d773b998f2f2f5e1763bea762dc548a2f000963
 </figure></section></section>
   <section class="appendix" id="bijlagen"><div class="header-wrapper"><h2 id="a-bijlagen"><bdi class="secno">A. </bdi>Bijlagen</h2><a class="self-link" href="#bijlagen" aria-label="Permalink for Appendix A."></a></div>
 <section id="definities-en-afkortingen"><div class="header-wrapper"><h3 id="a-1-definities-en-afkortingen"><bdi class="secno">A.1 </bdi>Definities en afkortingen</h3><a class="self-link" href="#definities-en-afkortingen" aria-label="Permalink for Appendix A.1"></a></div>
@@ -3093,19 +3111,28 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
   </li><li class="tofline">
     <a class="tocxref" href="#2D-en-3D-Geo-of-BIM-combineren"><span class="self-link">Figuur <bdi class="figno">11</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">2D en 3D Geo of BIM combineren</span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft"><span class="self-link">Figuur <bdi class="figno">12</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Leefttijd van verschillende puntenwolken van de stationsregio in Delft</span></span></a>
+    <a class="tocxref" href="#Geo_overzicht_BIM_DTB"><span class="self-link">Figuur <bdi class="figno">12</bdi></span> <span class="fig-title">
+    <em>
+      Overzicht van de Drechttunnel met het DTB en de 3DBAG. Links geeft de data boven de grond weer, en rechts de data onder de grond.  
+      Dit overzicht is gemaakt vanuit de RWS Digital Twin Basisvoorziening.
+    </em>
+  </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#QGIS-DXF-Export-2D"><span class="self-link">Figuur <bdi class="figno">13</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Export 2D project naar DXF in QGIS</span></span></a>
+    <a class="tocxref" href="#Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft"><span class="self-link">Figuur <bdi class="figno">13</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Leefttijd van verschillende puntenwolken van de stationsregio in Delft (figuur is uit wp1 van het <span> <em>Intergaal Hoogtevoorziening Nederland</em></span> overgenomen.) </span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#QGIS-DXF-Export-3D"><span class="self-link">Figuur <bdi class="figno">14</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Export 2D project naar DXF in QGIS</span></span></a>
+    <a class="tocxref" href="#QGIS-DXF-Export-2D"><span class="self-link">Figuur <bdi class="figno">14</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Export 2D project naar DXF in QGIS</span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Scherm-in-Revit-dat-Lokaal-Coordinatiepunt-en-CRS-Coordinatiepunt-laat-zien"><span class="self-link">Figuur <bdi class="figno">15</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Scherm in Revit dat Lokaal Coordinatiepunt en CRS-Coordinatiepunt laat zien</span></span></a>
+    <a class="tocxref" href="#QGIS-DXF-Export-3D"><span class="self-link">Figuur <bdi class="figno">15</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Export 2D project naar DXF in QGIS</span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Controle-in-Revit"><span class="self-link">Figuur <bdi class="figno">16</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></span></a>
+    <a class="tocxref" href="#Scherm-in-Revit-dat-Lokaal-Coordinatiepunt-en-CRS-Coordinatiepunt-laat-zien"><span class="self-link">Figuur <bdi class="figno">16</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Scherm in Revit dat Lokaal Coordinatiepunt en CRS-Coordinatiepunt laat zien</span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Setup-in-Revit"><span class="self-link">Figuur <bdi class="figno">17</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></span></a>
+    <a class="tocxref" href="#Controle-in-Revit"><span class="self-link">Figuur <bdi class="figno">17</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></span></a>
   </li><li class="tofline">
+<<<<<<< HEAD
     <a class="tocxref" href="#Setup-in-Revit-Survey-Point"><span class="self-link">Figuur <bdi class="figno">18</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Scherm in Revit met instellingen voor IFC export met Survey Point als Coordinate Base</span></span></a>
+=======
+    <a class="tocxref" href="#Setup-in-Revit"><span class="self-link">Figuur <bdi class="figno">18</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></span></a>
+>>>>>>> 0d773b998f2f2f5e1763bea762dc548a2f000963
   </li><li class="tofline">
     <a class="tocxref" href="#Cordinate_system_Civil3D"><span class="self-link">Figuur <bdi class="figno">19</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Controle van instellingen van RD-stelsel in Civil 3D</span></span></a>
   </li><li class="tofline">
@@ -3231,7 +3258,13 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
   </li><li class="tofline">
     <a class="tocxref" href="#fig-ifcgref-visualization"><span class="self-link">Figuur <bdi class="figno">52</bdi></span> <span class="fig-title">IfcGref visualization</span></a>
   </li><li class="tofline">
+<<<<<<< HEAD
     <a class="tocxref" href="#AHN4vsIFC"><span class="self-link">Figuur <bdi class="figno">53</bdi></span> <span class="fig-title">AHN4 (rood) vergeleken met het IFC model (grijs)</span></a>
+=======
+    <a class="tocxref" href="#AHN4vsIFC"><span class="self-link">Figuur <bdi class="figno">54</bdi></span> <span class="fig-title">
+    AHN4 (rood) vergeleken met het IFC model (grijs)
+  </span></a>
+>>>>>>> 0d773b998f2f2f5e1763bea762dc548a2f000963
   </li>
       </ul></section>
   
@@ -3250,7 +3283,7 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       <a href="https://3d.bk.tudelft.nl/ken/files/20_geoinfo.pdf"><cite>Gebruik van BIM in Geo in de praktijk: voorbij de hype</cite></a>. Jantien Stoter, Francesca Noarda, Teng Wu, Ken Arroyo Ohori, Thomas Krijnen. 2020. URL: <a href="https://3d.bk.tudelft.nl/ken/files/20_geoinfo.pdf">https://3d.bk.tudelft.nl/ken/files/20_geoinfo.pdf</a>
     </dd></dl>
   </section></section><p role="navigation" id="back-to-top">
-    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+    <a href="#title"><abbr title="Terug naar boven">↑</abbr></a>
   </p><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-epsg-code" aria-label="Links in this document to definition: EPSG-code">
       <span class="caret"></span>
       <div>
