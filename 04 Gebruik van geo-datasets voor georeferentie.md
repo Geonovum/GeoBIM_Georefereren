@@ -1,4 +1,4 @@
-foot# Gebruik van geo voor georeferentie
+# Gebruik van geo voor georeferentie
 
 ## Georeferentie Level 60 voor BIM naar Geo
 De aanbevolen methode voor georeferentie kan worden toegepast voor infrastructuurprojecten, maar is daarvoor vaak niet toereikend en vereist in de praktijk een hogere nauwkeurigheid (level 60). Om een model op level 60 te georefereren, zijn er o.a. drie mogelijkheden om dit toe te passen: (1) Gebruik van <a>survey point</a>s, (2) <a>Geografische uitlijning</a> en (3) <a>scan-to-BIM</a> gebaseerd op technieken [BuildingSMART et al. (2020)](https://www.buildingsmart.org/wp-content/uploads/2025/04/The-buildingSMART-Awards-Yearbook-2020.pdf). Voor iedere methode van georeferentie wordt in de theorie nader toegelicht hoe deze kan worden toegepast. Let wel, bij de derde mogelijkheid is het model reeds geogerefereerd, en is er in de meeste gevallen een conversiebestand beschikbaar dat het model vertaalt van een BIM-softwareomgeving naar het coördinatensysteem waarin de puntenwolk is ingewonnen.

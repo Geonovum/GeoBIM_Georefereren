@@ -42,15 +42,15 @@ Om informatie te koppelen aan een locatie op aarde worden geodetische coördinaa
 
 De <a>EPSG-code</a> is een unieke identificatie van het CRS binnen de zogenaamde EPSG-database, een wereldwijde verzameling van coördinaatsystemen en -transformaties.
 
-Voor BIM-toepassingen wordt vaak gebruik gemaakt van een <a>Lokaal CRS</a>. Door een link te leggen tussen het lokale assenstelsel in BIM en een <a>geprojecteerd CRS</a> kan een BIM-model gebruikt worden in GEO/GIS systemen met zo min mogelijk verlies van data. Vanaf hier kan GIS/GEO-software gebruik maken van projecties en andere GIS-tools om het BIM model te projecteren in de wereld en hier aanvullende analyse op te doen. Het omzetten van het ene CRS naar het andere CRS wordt een <a>Coördinatentransformatie</a> genoemd.
+Voor BIM-toepassingen wordt vaak gebruik gemaakt van een <a>Lokaal CRS</a>. Door een link te leggen tussen het lokale assenstelsel in BIM en een <a>geprojecteerd CRS</a> kan een BIM-model gebruikt worden in GEO- of GIS-systemen. Daarna kan GIS- of GEO-software gebruik maken van projecties en andere GIS-tools om het BIM model te projecteren in de wereld en hier aanvullende analyse op te doen. Het omzetten van het ene CRS naar het andere CRS wordt een <a>Coördinatentransformatie</a> genoemd.
 
-Zoals hierboven aangegeven worden in Nederland meerder CRS-en gebruikt. Bij het gebruik van meerdere CRS-en bestaat risico op introductie van fouten door onjuiste implementatie van de relaties tussen CRS-en. Binnen Nederland worden aanbieders van data daarom geadviseerd om data aan te bieden in de verschillende CRS-en gericht op de eindgebruikers. Eindgebruikers worden juist geadviseerd data waar mogelijk op te vragen in hetzelfde CRS. Dit is ook een nadrukkelijke aanbeveling voor gebruikers van BIM-software. 
+Zoals hierboven aangegeven worden in Nederland meerder CRS-en gebruikt. Bij het gebruik van meerdere CRS-en bestaat risico op introductie van fouten door onjuiste implementatie van de transformaties tussen CRS-en. Binnen Nederland worden aanbieders van data daarom geadviseerd om data aan te bieden in de verschillende CRS-en gericht op de eindgebruikers. Eindgebruikers worden juist geadviseerd data waar mogelijk op te vragen in hetzelfde CRS. Dit is ook een nadrukkelijke aanbeveling voor gebruikers van BIM-software. 
 
 <aside class="note" title="Gebruik hetzelfde CRS">
-  <p><strong>AANBEVELING:</strong> Vraag als eindgebruiker geodata waar mogelijk op in hetzelfde CRS</p>
+  <p><strong>AANBEVELING:</strong> Vraag als eindgebruiker geo- en bim-data waar mogelijk op in hetzelfde CRS</p>
 </aside>
 
-De meeste BIM software is namelijk niet in staat om transformaties uit te voeren tussen verschillende geprojecteerde CRS'en. Wanneer GIS data dus naar BIM moet worden uitgewisseld is het belangrijk dat dit al geprojecteerd is in het coördinatensysteem dat de BIM Software verwacht. Afhankelijk van de BIM Software kan het zelfs nodig zijn te transformeren naar het lokale stelsel dat gebruikt wordt door de BIM software. Hier dienen binnen projecten duidelijke afspraken over gemaakt te worden.
+De meeste BIM-software is namelijk niet in staat om transformaties uit te voeren tussen verschillende geprojecteerde CRS'en. Wanneer GIS-data naar BIM moet worden uitgewisseld is het belangrijk dat dit al geprojecteerd is in het coördinatensysteem dat de BIM Software verwacht. Afhankelijk van de BIM Software kan het zelfs nodig zijn te transformeren naar het lokale stelsel dat gebruikt wordt door de BIM software. Hier dienen binnen projecten duidelijke afspraken over gemaakt te worden.
 
 <aside class="note" title="Maak vooraf afspraken over de te gebruiken CRS-en en transformatie">
   <p><strong>AANBEVELING:</strong> Maak afspraken met projectpartners over de te gebruiken CRS-en</p>
@@ -86,7 +86,9 @@ Coördinaten worden uitgedrukt in ellipsoïdsche breedte (<span style="font-fami
   </tr>
 </table>
 
-<mark>(let op: in bovenstaand plaatje is niet goed zichtbaar dat de loodlijn niet per se door het nulpunt hoeft te gaan) moet dit nog aangepast worden? </mark> 
+In het getoonde beeld lijkt de loodlijn door het nulpunt te gaan. Voor locaties in Nederland gaat de loodlijn niet exact door het 0-punt.
+
+<mark>Figuur aanpassen. De x-as moet door de greenwich meridiaan. Snijpunt van de evenaar en de greenwich meridiaan. De evenaar ligt niet op de goede plek. </mark>
 
 <a>Ellipsoïdische coördinaten</a> worden ook wel geografische coördinaten genoemd, rechthoekige coördinaten worden ook wel <a>geocentrische coördinaten</a> genoemd.
 
@@ -99,13 +101,15 @@ Om geo-informatie vanaf het gekromde aardoppervlak op een plat vlak weer te geve
    <img src="media/geonovum-geo-bim_georefereren_3.png" alt="Projecties" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;"/></a>
     <figcaption><a class="self-link" href="#fig-Projecties"></bdi></a><span class="fig-title">Projecties</span></figcaption>
 </figure>
+
+
  
 
 Elke <a>kaartprojectie</a> introduceert vervormingen in hoeken, afstanden en/of oppervlakten, omdat het onmogelijk is om het gekromde aardoppervlak af te beelden in een plat vlak en daarbij alle drie eigenschappen tegelijk exact te behouden. De keuze van een geschikte projectie hangt af van het doel van de kaart en welke eigenschappen het belangrijkst zijn voor de toepassing.
 
 In Nederland wordt het geprojecteerde RD-stelsel gebruikt. Het RD-stelsel heeft als eigenschap dat hoeken onvervormd worden weergegeven en afwijkingen in afstanden en oppervlakte beperkt zijn binnen Nederland. Voor nauwkeurige toepassingen kan de variabele schaal van het RD-stelsel leiden tot lijnvergroting. Wanneer voor georeferentie een precisie van milimeters belangrijk is dient men een correctie Δℓ van horizontale afstanden voor lijnvergroting mee te nemen. De formule om de toe te passen correctie  op werkelijke afstanden naar afstanden in het RD-stelsel te berekenen is: 
 
-<math display="block"><mi>Δℓ</mi><mo>=</mo><mo>-</mo><mn>9,2</mn><mo>+</mo><mfrac><mrow><msup><mrow><mo>(</mo><msub><mi>x</mi><mi>RD</mi></msub><mo>-</mo><mn>155000</mn><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><msub><mi>y</mi><mi>RD</mi></msub><mo>-</mo><mn>155000</mn> <mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mn>1629</mn><mo>·</mo><msup><mn>10</mn><mo>-9</mo></msup></mrow></mfrac><mtext> mm per 100 m</mtext>
+<math display="block"><mi>Δℓ</mi><mo>=</mo><mo>-</mo><mn>9,2</mn><mo>+</mo><mfrac><mrow><msup><mrow><mo>(</mo><msub><mi>x</mi><mi>RD</mi></msub><mo>-</mo><mn>155000</mn><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><msub><mi>y</mi><mi>RD</mi></msub><mo>-</mo><mn>436000</mn> <mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mn>1629</mn><mo>·</mo><msup><mn>10</mn><mo>-9</mo></msup></mrow></mfrac><mtext> mm per 100 m</mtext>
 </math>
 
 waarbij:  <math><msub><mi>x</mi><mi>RD</mi></math> en <math><msub><mi>y</mi><mi>RD</mi></math> de gemiddelde RD-coördinaten in meter zijn van locatie van het BIM-project.
@@ -142,7 +146,7 @@ Figuur ellips, geoide, aardoppervlak
   <figcaption style="margin-top: 0.5em;"><a class="self-link" href="#fig-Ellips,-Geoide,-aardoppervlak"></bdi></a><span class="fig-title">Ellips, Geoide, aardoppervlak</span></figcaption>
 </figure> 
 
-Het referentievlak voor de orthometrische hoogte volgt het zwaartekrachtveld en daarmee globaal de kromming van de aarde. Terwijl voor de horizontale component de kromming van het aardoppervlak vaak genegeerd kan worden, geldt die niet voor de vertikale component. Onderstaande figuur illustreert afwijkingen bij het verwaarlozen van de aardkromming voor de afstand en het hoogteverschil tussen punten P en Q. Bij het verwaarlozen van de aardkromming snijden de lijn RQ en de raaklijn aan de ellips vanuit P elkaar in het punt Q. <mark>De werkelijke afstand PQ over het aardoppervlak is korter dan de afstand PQ', op een afstand van 10 kilometer is het verschil echter slecht 1 centimeter.</mark> Punt P en Q hebben beide dezelfde hoogte ten opzichte van het aardoppervlak, punt Q'ligt echter x meter boven het aardoppervlak. Het hoogteverschil is 10 meter bij 10 km of 1 cm bij 400 meter.
+Het referentievlak voor de orthometrische hoogte volgt het zwaartekrachtveld en daarmee globaal de kromming van de aarde. Voor kleine projecten, tot 1 km, kan de horizontale component voor de kromming van het aardoppervlak vaak genegeerd worden. Dit geldt die niet voor de vertikale component. Onderstaande figuur illustreert afwijkingen bij het verwaarlozen van de aardkromming voor de afstand en het hoogteverschil tussen punten P en Q. Bij het verwaarlozen van de aardkromming snijden de lijn RQ en de raaklijn aan de ellips vanuit P elkaar in het punt Q. <mark>De werkelijke afstand PQ over het aardoppervlak is korter dan de afstand PQ', op een afstand van 10 kilometer is het verschil echter slecht 1 centimeter.</mark> Punt P en Q hebben beide dezelfde hoogte ten opzichte van het aardoppervlak, punt Q'ligt echter x meter boven het aardoppervlak. Het hoogteverschil is 10 meter bij 10 km of 1 cm bij 400 meter.
 <figure id="Afwijking_van_aardkromming" style="display: block; text-align: center; margin: 0 auto;">
   <img src="media/geonovum-geo-bim_georefereren_4-b.png" alt="Afwijking door aardkromming" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;">
   <figcaption><a class="self-link" href="#fig-Afwijking-door-aardkromming"></bdi></a><span class="fig-title">Afwijking door aardkromming</span></figcaption>
@@ -175,12 +179,16 @@ Soms wordt de relatie van het lokale CRS ten opzicht van het Noorden gegeven. In
   <figcaption><a class="self-link" href="#fig-True-North-en-Grid-North"></bdi></a><span class="fig-title">True North en Grid North</span></figcaption>
 </figure>
 
+<mark> In de gecombineerde versie zorgen dat het in het plaatje grid loopt volgens inverse projectie. </mark>
+
 * Het Project North is normaliter gebaseerd op de voornaamste as van het bouwwerk. Het beïnvloedt hoe je schetst in views in software en hoe views op tekenbladen worden geplaatst.Het Project North richt zich vaak richting de bovenkant van een tekengebied. Dit vereenvoudigt het modelleren. 
 
 <figure id="Project_North" style="display: block; text-align: center; margin: 0 auto;">
   <img src="./media/Project_North.png" alt="Project_North" title="Project North" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;"> 
   <figcaption><a class="self-link" href="#fig-Project-North"></bdi></a><span class="fig-title">Project North</span></figcaption>
 </figure> 
+
+<mark> Kan je dit aanpassen dat Project North misschien minder lijkt op het echte Noorden. Hans vragen.  </mark>
 
 ## Coördinatentransformatie tussen lokaal CRS en geodetisch
 
@@ -222,7 +230,7 @@ Voor de relatie tussen vertikale referentievlakken is het uitgangspunt in de hui
     <td>
     <figure id="Horizontale-en-vertikale_transformatie"  style="display: block; text-align: center; margin: 0 auto;">
       <img src="media/geonovum-geo-bim_georefereren_8.png" alt="2D Transformatie" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;"/>
-          <figcaption><a class="self-link" href="#fig-2D-Transformatie"></bdi></a><span class="fig-title">2D Transformatie</span></figcaption>
+          <figcaption><a class="self-link" href="#fig-2D-Transformatie"></bdi></a><span class="fig-title">2D Transformatie + 1D Transformatie</span></figcaption>
     </figure>
     </td>
   </tr>
@@ -233,4 +241,5 @@ Voor de relatie tussen vertikale referentievlakken is het uitgangspunt in de hui
   </tr>
 </table>
 
+<mark> Dit figuur moet niet hier. Onderschrift past wel bij de figuur. </mark>
 

@@ -79,6 +79,10 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
   </tr>
 </table>
 
+<mark> Duidelijker maken van Georeferentie 30 en 40 verschil </mark>
+
+
+
 <table>
   <tr>
     <th width ="50"> Level </th>
@@ -123,6 +127,8 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
 <aside class="note" title="Gebruik tooling om modellen te verrijken">
 <p><strong>AANBEVELING:</strong> Gebruik tooling om modellen die nog niet voldoen aan georeferentie 50, wanneer nodig, te verrijken met georeferentie informatie conform level 50. </p>
 </aside>
+
+<mark> Tabel toevoegen of het ook mogelijk is om de Hoogte in translatie mee te nemen </mark>
 
 
 ## 1D, 2D en 3D Geo- en BIM-modellen

@@ -1,6 +1,6 @@
 # Toepassingsgebied
 
-Deze praktijkrichtlijn kan men gebruiken in het B&U- en Infra-domein. Georeferentie volgens deze richtlijn past men toe om een relatie te leggen tussen een bouwwerk of omgeving met een coördinatenstelsel en zo de positie van het bouwwerk of omgeving op de aardbol vast te leggen. Het bouwwerk of omgeving zijn hierdoor op de gewenste locatie in een Geo-omgeving te plaatsen. Dit kan zowel gaan om 2D als 3D plaatsing.
+Deze praktijkrichtlijn kan men gebruiken in het B&U- en Infra-domein. Georeferentie volgens deze richtlijn past men toe om een relatie te leggen tussen een bouwwerk en/of andere objecten met een coördinatenstelsel en zo de positie van het bouwwerk en/of andere objecten op de aardbol vast te leggen. Het bouwwerk of omgeving zijn hierdoor op de gewenste locatie in GIS- of BIM-software te plaatsen en te combineren met andere geogerefereerde GIS- of BIM-data. Dit kan zowel gaan om 2D als 3D plaatsing.
 
 De beschreven methoden en technieken in deze praktijkrichtlijn kan men gebruiken wanneer men informatie wil uitwisselen tussen verschillende softwarepakketten of applicaties, of wanneer men verschillende databronnen wil combineren en bevragen.
 
