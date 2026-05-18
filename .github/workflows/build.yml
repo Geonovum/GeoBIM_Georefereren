@@ -7,13 +7,81 @@ jobs:
   build:
     name: Snapshot + Checks
     runs-on: ubuntu-22.04
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
+      - name: Bepaal branch voor terugschrijven
+        id: commit-target
+        if: ${{ github.event_name == 'push' || github.event_name == 'release' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          case "${{ github.event_name }}" in
+            push)
+              TARGET_BRANCH="${GITHUB_REF#refs/heads/}"
+              ;;
+            release)
+              TARGET_BRANCH="${{ github.event.release.target_commitish }}"
+              ;;
+          esac
+
+          TARGET_BRANCH="${TARGET_BRANCH#refs/heads/}"
+
+          if [[ -z "$TARGET_BRANCH" ]]; then
+            echo "::error title=Doelbranch ontbreekt::Kan geen branch bepalen om snapshot en checkresultaten naar terug te schrijven."
+            exit 1
+          fi
+
+          if ! git fetch --no-tags origin "refs/heads/$TARGET_BRANCH:refs/remotes/origin/$TARGET_BRANCH"; then
+            echo "::error title=Doelbranch niet gevonden::Kan branch '$TARGET_BRANCH' niet ophalen om snapshot en checkresultaten terug te schrijven."
+            exit 1
+          fi
+
+          TARGET_SHA="$(git rev-parse "refs/remotes/origin/$TARGET_BRANCH")"
+          if [[ "$TARGET_SHA" != "$GITHUB_SHA" ]]; then
+            echo "::error title=Doelbranch is gewijzigd::Branch '$TARGET_BRANCH' staat op $TARGET_SHA, maar deze workflow draait voor commit $GITHUB_SHA. Snapshot en checkresultaten worden daarom niet automatisch teruggeschreven."
+            exit 1
+          fi
+
+          git checkout -B "$TARGET_BRANCH" "refs/remotes/origin/$TARGET_BRANCH"
+          echo "should_commit=true" >> "$GITHUB_OUTPUT"
+          echo "target_branch=$TARGET_BRANCH" >> "$GITHUB_OUTPUT"
+
       - name: Prepare directories
         run: |
           mkdir -p static $CHECK_DIR
+
+      - name: Blokkeer raw.githubusercontent.com-links in bronbestand
+        shell: bash
+        run: |
+          set -euo pipefail
+          MATCH_FILE="$(mktemp)"
+          trap 'rm -f "$MATCH_FILE"' EXIT
+
+          GREP_STATUS=0
+          grep -nE 'raw\.githubusercontent\.com' index.html > "$MATCH_FILE" || GREP_STATUS=$?
+
+          if [[ "$GREP_STATUS" -gt 1 ]]; then
+            echo "Zoeken naar raw.githubusercontent.com-links in index.html mislukte."
+            exit "$GREP_STATUS"
+          fi
+
+          if [[ -s "$MATCH_FILE" ]]; then
+            if [[ "${{ github.event_name }}" == "release" ]]; then
+              echo "::error title=Publicatie geblokkeerd::index.html bevat verwijzingen naar raw.githubusercontent.com. Vervang deze links door verwijzingen naar docs.geostandaarden.nl."
+              echo "Gevonden verwijzingen in index.html:"
+              cat "$MATCH_FILE"
+              exit 1
+            fi
+
+            echo "::warning title=Controlewaarschuwing::index.html bevat verwijzingen naar raw.githubusercontent.com. Vervang deze links door verwijzingen naar docs.geostandaarden.nl."
+            echo "Gevonden verwijzingen in index.html:"
+            cat "$MATCH_FILE"
+          fi
 
       - name: Generate HTML snapshot
         run: npx respec --localhost --src index.html --out snapshot.html
@@ -186,9 +254,9 @@ jobs:
           fi
 
       - name: Commit all results
-        if: >
-          github.event_name == 'push'
+        if: ${{ steps.commit-target.outputs.should_commit == 'true' }}
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
@@ -204,11 +272,11 @@ jobs:
 
           git commit -m "Snapshot + checks gegenereerd" || echo "No changes to commit"
 
-          BRANCH=${GITHUB_REF#refs/heads/}
-          git push --force-with-lease origin HEAD:"$BRANCH"
+          TARGET_BRANCH="${{ steps.commit-target.outputs.target_branch }}"
+          git push origin HEAD:"$TARGET_BRANCH"
 
       - name: Upload snapshot artifact
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: snapshot
           path: |

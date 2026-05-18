@@ -243,7 +243,6 @@ Voor de relatie tussen vertikale referentievlakken is het uitgangspunt in de hui
 
 <mark> Dit figuur moet niet hier. Onderschrift past wel bij de figuur. </mark>
 
-
 ## Geometrische effecten bij BIM-georeferentie en BIM-transformatie
 Bij het georefereren van een BIM-model naar een geografisch referentiestelsel zijn er twee opties. Bij de eerste benadering blijft het model volledig Euclidisch en lokaal cartesisch. Daarbij blijven hoeken, lengtes en vormen exact behouden binnen het model. In dit geval resulteert het verschil tussen het platte vlak van het BIM-model en het gekromde aardoppervlak in dat horizontaal, verticaal en waterpas geleidelijk af gaat wijken van de fysieke werkelijkheid en van geodetische referentiesystemen als ETRS89 en NAP. Deze effecten worden vooral merkbaar bij lange infrastructuur of zeer hoge nauwkeurigheidseisen of wanneer de combinatie met GEO-datasets gemaakt worden.
 
