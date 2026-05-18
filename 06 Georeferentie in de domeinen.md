@@ -48,8 +48,6 @@ Het RD-stelsel is historisch gebaseerd op het Bessel 1841-ellipsoïde. In de pra
 transformaties tussen referentiestelsels uitgevoerd met officiële gridtransformaties, waardoor 
 nauwkeurige omzettingen tussen internationale en nationale stelsels mogelijk zijn.
 
-
-
 ### Toepassing van 3D-software
 Tijdens het ontwerp wordt software ingesteld op werken met RD-coördinaten, zodat de modelruimte 
 overeenkomt met de projectrealiteit. Afhankelijk van het softwarepakket wordt intern nog met een 

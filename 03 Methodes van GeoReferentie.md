@@ -1,6 +1,17 @@
 # Methodes van Georeferentie
 
-Er zijn verschillende methodes beschikbaar om  BIM en GEO modellen bij elkaar te brengen op de kaart. 
+## Routes van georeferentie
+
+Wanneer men een BIM-model daadwerkelijk gaat realiseren op de bouwplaats, wordt het model uitgezet in de werkelijkheid. Dit betekent dat het digitale coördinatensysteem van het BIM-model wordt gekoppeld aan vaste referentiepunten op de bouwplaats. Vanuit deze koppeling worden assen, stramienen, hoogtes en punten exact uitgezet met meetapparatuur als een total station. Op die manier worden posities van constructieve elementen, overgenomen vanuit het model, fysiek gemarkeerd in het veld, bijvoorbeeld met piketten of markeringen. Voor schrootschalige werkzaamheden kan dit proces ook worden ondersteund door machinebesturing. Een BIM-model vormt zo de basis voor de maatvoering in constructie in de werkelijkheid. Met bijvoorbeeld een rolmaat, of laser doet men snelle metingen en detailcontrole op de werkvloer. 
+
+Om de gecreëerde fysieke werkelijkheid vast te leggen in een coördinatensysteem meet men objecten in met meetapparatuur als een total station. Hiervoor met men o.a. de hoekenpunten en dakranden van gebouwen in. Alle gemeten punten worden omgerekend naar RD (X,Y) met de hoogte in NAP. Vervolgens worden de punten in GIS/CAD-software verbonden tot polygonen, classiificeert men de objecten en voegt men attributen toe.  
+
+<figure id="Routes voor georefereren" style="display: block; text-align: center; margin: 0 auto;">
+  <img src="media/Routes_voor_Georefereren.png" alt="Routes voor georefereren" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;">
+  <figcaption><a class="self-link" href="#fig-Afwijking-door-aardkromming"></bdi></a><span class="fig-title">Routes voor georefereren</span></figcaption>
+</figure>
+
+Wanneer men een BIM-model, dat gemodelleerd is in een lokaal coördinatenstelsel (engineering CRS), naar een GEO-omgeving wil brengen dient men een transformatie te doen. Afhankelijk van de gebruikte route zijn en verschillende methodes beschikbaar om  BIM en GEO modellen bij elkaar te brengen op de kaart. Een in RD ingemeten gebouwgeometrie (as-built) kan men vergelijken met een as-designed gebouwgeometrie in BIM na een 2D-Helmert transformatie waarin de schaal, translatie en rotatie aangegeven dient te worden. 
 
 ## Methodes van Georeferentie 
 

@@ -133,9 +133,11 @@ Het begrip “<a>Nulpunt</a>” is meervoudig interpreteerbaar en dient zoveel m
 **<dfn>LoGeoRef</dfn>**
 LoGeoRef is een afkorting van Level Of Georeferencing. Dit staat voor het level van georeferentie dat kan worden gebruikt. Van globaal geogerefereert met een adresnotatie (loGeoRef 10) tot aan een stelsel van controlepunten tussen model, gis en fysieke buitenruimte (loGeoRef 60).
 
-
 **<dfn>GEO-systeem</dfn>**
-<mark> Nog toevoegen. Breder begrip. Niet elk geo-systeem is een GIS. PDOK is GEO maar geen GIS.  </mark>
+Een geo-systeem is een gestandaardiseerd coördinaten- en referentiekader (CRS + datamodel + services) dat de positie van objecten op of rond de aarde eenduidig definieert en uitwisselbaar maakt tussen systemen.
+
+**<dfn>GEO-omgeving</dfn>**
+Een geo-omgeving is het geheel van data, standaarden, services en infrastructuur waarmee geografische informatie wordt uitgewisseld en beschikbaar gemaakt.
 
 **<dfn>GIS-systeem</dfn>**
-<mark> Nog toevoegen. Software met tooling/operations (Je kunt GEO-data bewerken en analyses doen) </mark>
+Een complete omgeving om geografische data te beheren, analyseren en visualiseren. Dit is software met tooling/operations. Het is hierin mogelijk om GEO-data te bewerken of analyses te doen.

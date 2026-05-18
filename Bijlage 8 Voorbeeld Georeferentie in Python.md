@@ -2,7 +2,7 @@ Python libs:
 
 Het is ook mogelijk om georeferentie te doen met python scripts. 
 
-Transformeren met [Py-proj](https://pyproj4.github.io/): 
+Transformeren met [Py-proj](https://pyproj4.github.io/pyproj): 
 
 ``` python 
 from pyproj import Transformer
