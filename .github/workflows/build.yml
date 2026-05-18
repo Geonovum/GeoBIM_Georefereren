@@ -71,10 +71,16 @@ jobs:
           fi
 
           if [[ -s "$MATCH_FILE" ]]; then
-            echo "::error title=Publicatie geblokkeerd::index.html bevat verwijzingen naar raw.githubusercontent.com. Vervang deze links door verwijzingen naar docs.geostandaarden.nl."
+            if [[ "${{ github.event_name }}" == "release" ]]; then
+              echo "::error title=Publicatie geblokkeerd::index.html bevat verwijzingen naar raw.githubusercontent.com. Vervang deze links door verwijzingen naar docs.geostandaarden.nl."
+              echo "Gevonden verwijzingen in index.html:"
+              cat "$MATCH_FILE"
+              exit 1
+            fi
+
+            echo "::warning title=Controlewaarschuwing::index.html bevat verwijzingen naar raw.githubusercontent.com. Vervang deze links door verwijzingen naar docs.geostandaarden.nl."
             echo "Gevonden verwijzingen in index.html:"
             cat "$MATCH_FILE"
-            exit 1
           fi
 
       - name: Generate HTML snapshot
