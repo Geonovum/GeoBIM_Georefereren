@@ -1,9 +1,50 @@
 # Methodes van Georeferentie
 
-## Levels van georeferentie
-Er zijn verschillende methodes beschikbaar om  BIM en GEO modellen bij elkaar te brengen op de kaart. Deze methoden verschillen in nauwkeurigheid en mogelijkheid voor het bijeenbrengen van modellen. Dit wordt door Clemen Christian beschreven als <a>LoGeoRef</a> oftwel Levels of Georeferencing (niveaus van georefereren) [[Christian2019]].
+## Routes van georeferentie
 
-Het is mogelijk om een BIM-model op de kaart te zetten door alleen het adres, van waar het BIM-model dient te komen, te duiden. Deze informatie geeft een indicatie van waar het model moet komen. De informatie is niet toereikend om het model exact te plaatsen (transleren, roteren en schalen). Een andere methode zoals het model relateren aan een officieel coordinatenstelsel is hiervoor wel geschikt. Afhankelijk van de behoefte zijn verschillende methodes geschikt.
+Wanneer men een BIM-model daadwerkelijk gaat realiseren op de bouwplaats, wordt het model uitgezet in de werkelijkheid. Dit betekent dat het digitale coördinatensysteem van het BIM-model wordt gekoppeld aan vaste referentiepunten op de bouwplaats. Vanuit deze koppeling worden assen, stramienen, hoogtes en punten exact uitgezet met meetapparatuur als een total station. Op die manier worden posities van constructieve elementen, overgenomen vanuit het model, fysiek gemarkeerd in het veld, bijvoorbeeld met piketten of markeringen. Voor schrootschalige werkzaamheden kan dit proces ook worden ondersteund door machinebesturing. Een BIM-model vormt zo de basis voor de maatvoering in constructie in de werkelijkheid. Met bijvoorbeeld een rolmaat, of laser doet men snelle metingen en detailcontrole op de werkvloer. 
+
+Om de gecreëerde fysieke werkelijkheid vast te leggen in een coördinatensysteem meet men objecten in met meetapparatuur als een total station. Hiervoor met men o.a. de hoekenpunten en dakranden van gebouwen in. Alle gemeten punten worden omgerekend naar RD (X,Y) met de hoogte in NAP. Vervolgens worden de punten in GIS/CAD-software verbonden tot polygonen, classiificeert men de objecten en voegt men attributen toe.  
+
+<figure id="Routes voor georefereren" style="display: block; text-align: center; margin: 0 auto;">
+  <img src="media/Routes_voor_Georefereren.png" alt="Routes voor georefereren" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;">
+  <figcaption><a class="self-link" href="#fig-Afwijking-door-aardkromming"></bdi></a><span class="fig-title">Routes voor georefereren</span></figcaption>
+</figure>
+
+Wanneer men een BIM-model, dat gemodelleerd is in een lokaal coördinatenstelsel (engineering CRS), naar een GEO-omgeving wil brengen dient men een transformatie te doen. Afhankelijk van de gebruikte route zijn en verschillende methodes beschikbaar om  BIM en GEO modellen bij elkaar te brengen op de kaart. Een in RD ingemeten gebouwgeometrie (as-built) kan men vergelijken met een as-designed gebouwgeometrie in BIM na een 2D-Helmert transformatie waarin de schaal, translatie en rotatie aangegeven dient te worden. 
+
+## Methodes van Georeferentie 
+
+### RD-gemodelleerd BIM naar RDNAP 
+Het is mogelijk om "RD bewust" te modelleren in BIM. Wanneer men dit doet moet men rekening houden met de lijnvergroting of -reductie. Een project in de stad Amersfoort zal vanwege projectie een lijnreductie van +/-  9 mm per 100 meter in RD krijgen. Een lijn van 400 meter zal dan als een lijn van +/- 399,964 meter gemodelleerd moeten worden. De vergroting of reductie geldt niet voor de Z-waarde van lijnen in het model. Dit vereist veel discipline van de modelleur.  
+De conversie van een RD-BIM naar een RDNAP is "null". 
+
+### XYZ gemodeleerd BIM als RD naar RDNAP 
+Het is mogelijk dat de conversie van XYZ in BIM naar RD + NAP coordinaten door software wordt ondersteund. Wanneer men dit doet zal de software bij een commando van een lijn van 400 meter in BIM eigenlijk een lijn van 399,964 meter in RD maken. Deze methode komt overeen met de methode hierboven beschreven. Het verschil in de methode zit in het feit dat niet de modelleur, maar de software het model RD maakt. 
+De conversie van een XYZ-BIM als RD naar een RDNAP is "null". 
+
+ Wanneer men dit doet moet men rekening houden met de lijnvergroting of -reductie. Een project in de stad Amersfoort zal vanwege projectie een lijnreductie van +/-  9 mm per 100 meter in RD krijgen. Een lijn van 400 meter zal dan als een lijn van +/- 399,964 meter gemodelleerd moeten worden. De vergroting of reductie geldt niet voor de Z-waarde van lijnen in het model. Dit vereist veel discipline van de modelleur.  
+
+### XYZ gemodelleerd BIM via 2D Helmert naar RDNAP 
+Een andere methode is om een XYZ gemodelleerd BIM-model met een 2D Helmert-transformatie naar RD-NAP transformeren. Een translatie en rotatie zijn afhankelijk van het gebruikte grid in BIM nodig. Een schaal-transformatie is, afhankelijk van de plek, zo goed als altijd nodig. Belangrijk hierbij is dat de z-waarde geen schaal dient te krijgen. 
+
+### XYZ gemodelleerd BIM via 3D Helmert naar ETRS89 
+Een volgende methode is om een XYZ gemodelleerd BIM-model met een 3D Helmert transformatie te plaatsen op de aarde met het ETRS89 XYZ coordinatenstelsel. Vanuit dit getransformeerde model kan men een ETRS89 lat/lon/h maken en ook RDNAP. 
+
+### XYZ gemodeleerd BIM via 3D Helmert naar ETRS89 en hoogte naar NAP 
+Deze methode waarbij men BIM via een 3D Helmert naar ETRS89 brengt en de hoogte naar NAP lijkt op de hiervoor beschreven methode. Het verschil zit erin dat in deze methode alleen XY met een 3D Helmert-transformatie naar ETRS89 getransformeerd wordt. De hoogte transformeert men apart als 1D transformatie naar NAP. De XY en Z wordt samengebracht in ETRS89 coordinaten.
+
+### XYZ lokale projectie ETRS89 
+De laatste methode is om een BIM-model XYZ te modelleren met een lokale projectie naar ETRS89 lat/lon. De lokale projectie is zo opgestelde dat afwijkingingen minimaal zijn. Het is mogelijk om een 1D transformatie te doen naar NAP of een 1D transformatie naar ellipsoidische hoogte. 
+
+## Levels van georeferentie-informatie
+Voor het uitvoeren van een georeferering zijn verschillende parameters en referentiegegevens nodig die de ruimtelijke positionering ondersteunen. Deze parameters beschrijven bijvoorbeeld het gebruikte coördinatenstelsel, de projectie, schaal, rotatie, referentiepunten of transformatie-informatie die nodig is om de brondata correct te koppelen aan een geografische locatie.
+
+Deze ondersteunende parameters kunnen op verschillende manieren beschikbaar zijn. Soms zijn deze aanwezig in de brondata waarin georeferentiegegevens reeds opgenomen zijn, of in metadata of gekoppelde projectiebestanden. Hierdoor kan de positionering grotendeels automatisch plaatsvinden. Wanneer parameters voor een bepaalde methode (gedeeltelijk) ontbreken kan men dit aanvullen. Gegevens kan men verzamelen via externe bronnen, handmatige interpretatie, referentiekaarten of bekende controlepunten. Dit proces vraagt extra validatie om de nauwkeurigheid en consistentie van de georeferering te waarborgen.
+
+De beschikbaarheid en kwaliteit van deze parameters hebben directe invloed op de betrouwbaarheid van het georefereringsproces en de uiteindelijke bruikbaarheid van de ruimtelijke data. In een onderzoek van Clemen Christian [[Christian2019]] worden verschillende levels van georeferentie-informatie beschreven. De verschillende levels faciliteren verschillende methode van georeferentie en verschillen in de te behalen nauwkeurigheid en mogelijkheid voor het bijeenbrengen van modellen. Dit wordt door  beschreven als <a>LoGeoRef</a> oftwel Levels of Georeferencing (niveaus van georeferentie-informatie) .
+
+Het is mogelijk om een BIM-model te voorzien van georeferentie-informatie door alleen het adres, van waar het BIM-model dient te komen, te duiden. Deze informatie geeft hiermee een globale indicatie van waar het model moet komen. De informatie is niet toereikend om het model exact te plaatsen (transleren, roteren en schalen). Een andere level van informatie zoals het model relateren aan een officieel coordinatenstelsel is hiervoor wel geschikt. Afhankelijk van de behoefte zijn verschillende levels van georeferentie-informatie geschikt.
 
 De beschikbaarheid van informatie voor het berekenen van georeferentie-parameters voor de verschillende methoden is onderzocht door de TU Delft [[Hakim2024]]. 
 
@@ -22,7 +63,7 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
       <img src="./media/georefereren_Level_10.png" alt="Georeferentie level 10" title="Georeferentie Level 10" width="190">
     </td>
     <td> 10</td>
-    <td> Met deze methode wordt alleen de locatie waar een model moet komen benoemd. Bijvoorbeeld een adres als "Barchman Wuytierslaan 10, Amersfoort" in een model op te nemen. Men weet hierdoor op welk adres het model moet komen, maar exacte plaatsing, rotatie en schaling is hier niet uit te bepalen.</td>
+    <td> Met dit informatielevel wordt alleen de locatie waar een model moet komen benoemd. Bijvoorbeeld een adres als "Barchman Wuytierslaan 10, Amersfoort" in een model op te nemen. Men weet hierdoor op welk adres het model moet komen, maar exacte plaatsing, rotatie en schaling is hier niet uit te bepalen.</td>
     <td> Niet mogelijk </td> 
     <td> Niet mogelijk </td> 
     <td> Niet mogelijk </td> 
@@ -32,7 +73,7 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
       <img src="./media/georefereren_Level_20.png" alt="Georeferentie level 20" title="Georeferentie Level 20" width="190">
     </td>
     <td> 20</td>
-    <td> Met deze methode duidt men één enkel (lat-lon) punt waar het model geplaatst moet worden. Bijvoorbeeld met het coordinaat "52.152494076977185, 5.3720554951931385". Plaatsing van het model op de juiste plek, zowel in 2D als 3D wordt hiermee mogelijk. Rotatie en schalen van het model blijft niet mogelijk.</td>
+    <td> Met dit informatielevel duidt men één enkel (lat-lon) punt waar het model geplaatst moet worden. Bijvoorbeeld met het coordinaat "52.152494076977185, 5.3720554951931385". Plaatsing van het model op de juiste plek, zowel in 2D als 3D wordt hiermee mogelijk. Rotatie en schalen van het model blijft niet mogelijk.</td>
     <td> Mogelijk </td> 
     <td> Niet mogelijk </td> 
     <td> Niet mogelijk </td> 
@@ -42,7 +83,7 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
       <img src="./media/georefereren_Level_30.png" alt="Georeferentie level 30" title="Georeferentie Level 30" width="190">
     </td>
     <td> 30</td>
-    <td> Met deze methode wordt aan het grondvlak van een model een coordinaat toegekend. Ook is het mogelijk om de rotatie ten opzichte van het Noorden te duiden. Het schalen van het model is niet mogelijk.</td>
+    <td> Met dit informatielevel wordt aan het grondvlak van een model een coordinaat toegekend. Ook is het mogelijk om de rotatie ten opzichte van het Noorden te duiden. Het schalen van het model is niet mogelijk.</td>
     <td> Mogelijk </td> 
     <td> Eventueel mogelijk </td> 
     <td> Niet mogelijk </td> 
@@ -52,7 +93,7 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
       <img src="./media/georefereren_Level_40.png" alt="Georeferentie level 40" title="Georeferentie Level 40" width="190">
     </td>
     <td> 40</td>
-    <td> Met deze methode wordt aan het totaal model een coordinaat toegekend, en ook de rotatie ten opzichte van Noorden kan men duiden. Het schalen van het model is niet mogelijk.</td>
+    <td> Met dit informatielevel wordt aan het totaal model een coordinaat toegekend, en ook de rotatie ten opzichte van Noorden kan men duiden. Het schalen van het model is niet mogelijk.</td>
     <td> Mogelijk </td> 
     <td> Eventueel mogelijk </td> 
     <td> Niet mogelijk </td> 
@@ -62,7 +103,7 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
       <img src="./media/georefereren_Level_50.png" alt="Georeferentie level 50" title="Georeferentie Level 50" width="190">
     </td>
     <td> 50 </td>
-    <td> Met deze methode geeft men aan wat het oorspronkelijk coordinatenstelsel was waarin het model is gemodelleerd. Daarnaast geeft men in het model aan naar welk coordinatenstelsel een coversie gedaan  wordt. Heeft men bijvoorbeeld gemodelleerd vanuit een lokaal assenstelsel (0,0,0) dan kan men beschrijven welke translatie, rotatie en verschaling men moet toepassen om te kunnen combineren met data in RijksDriehoeksstelsel (RD).</td>
+    <td> Met dit informatielevel geeft men aan wat het oorspronkelijk coordinatenstelsel was waarin het model is gemodelleerd. Daarnaast geeft men in het model aan naar welk coordinatenstelsel een coversie gedaan  wordt. Heeft men bijvoorbeeld gemodelleerd vanuit een lokaal assenstelsel (0,0,0) dan kan men beschrijven welke translatie, rotatie en verschaling men moet toepassen om te kunnen combineren met data in RijksDriehoeksstelsel (RD).</td>
     <td> Mogelijk </td> 
     <td> Mogelijk </td> 
     <td> Mogelijk </td> 
@@ -72,7 +113,7 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
       <img src="./media/georefereren_Level_60.png" alt="Georeferentie level 60" title="Georeferentie Level 60" width="190">
     </td>
     <td> 60 </td>
-    <td> Met deze methode koppelt men punten in model aan ingemeten punten tijdens constructie aan coordinaten in een specifiek coordinatenstelsel. </td>
+    <td> Met dit informatielevel koppelt men punten in model aan ingemeten punten tijdens constructie aan coordinaten in een specifiek coordinatenstelsel. </td>
     <td> Mogelijk </td> 
     <td> Mogelijk </td> 
     <td> Mogelijk </td> 
@@ -86,7 +127,7 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
 <table>
   <tr>
     <th width ="50"> Level </th>
-    <th> Methode </th>
+    <th> Georeferentie informatie </th>
     <th> Toepassingsvoorbeeld </th>
   </tr>
   <tr>

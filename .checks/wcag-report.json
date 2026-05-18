@@ -94,6 +94,20 @@
       },
       {
         "target": [
+          "#Geometrische_effecten_bij_transformatie > figcaption > .fig-title > .self-link"
+        ],
+        "html": "<a class=\"self-link\" href=\"#fig-Geometrische_effecten_bij_transformatie\"></a>",
+        "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+      },
+      {
+        "target": [
+          "#Routes\\ voor\\ georefereren > figcaption > .fig-title > .self-link"
+        ],
+        "html": "<a class=\"self-link\" href=\"#fig-Afwijking-door-aardkromming\"></a>",
+        "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+      },
+      {
+        "target": [
           "#\\32 D-en-3D-Geo-of-BIM-combineren > figcaption > .fig-title > .self-link"
         ],
         "html": "<a class=\"self-link\" href=\"#fig-2D-en-3D-Geo-of-BIM-combineren\"></a>",
@@ -176,6 +190,20 @@
           "#example-voorbeeld-van-een-engineered-crs-in-wkt > pre > .javascript.hljs"
         ],
         "html": "<code aria-busy=\"false\" class=\"hljs javascript\">",
+        "failureSummary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
+      },
+      {
+        "target": [
+          "#example-voorbeeld-van-een-proj-string-van-helmert-conversie > pre > .proj.hljs"
+        ],
+        "html": "<code class=\"proj hljs\" aria-busy=\"false\">-ct \"proj=helmert convention = coordinate_frame x=175507.112 y=502108.807 s=2.91569 theta=-216.5814\"\n</code>",
+        "failureSummary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
+      },
+      {
+        "target": [
+          "#example-voorbeeld-van-een-inverse-proj-string-van-helmert-conversie > pre > .proj.hljs"
+        ],
+        "html": "<code class=\"proj hljs\" aria-busy=\"false\">-ct \"inv proj=helmert convention = coordinate_frame x=175507.112 y=502108.807 s=2.91569 theta=-216.5814\"\n</code>",
         "failureSummary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
       },
       {

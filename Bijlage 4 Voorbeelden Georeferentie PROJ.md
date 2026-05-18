@@ -2,7 +2,7 @@
 # PROJ
 
 Coordinate operation:
-Wanneer men werkt in een cartesiaans assenstelsel waarbij een as (y-as) ook het Noorden is. Dan heb je een proj met een topocentric x,y,z (Vanaf het middelpunt van de aarde) of lat lon (niet gebruiken, QGIS snapt dit niet.)
+Wanneer men werkt in een engineering CRS in een cartesiaans assenstelsel waarbij een as (y-as) ook het Noorden is. Dan kan men werken met een proj met een topocentric x,y,z (Vanaf het middelpunt van de aarde) of lat lon.
 
 Stap 1: Kies een RD of een Lat Lon coordinaat waar dit op moet landen
 Stap 2: Reken deze om naar Geocentrisch met een X,Y,Z
@@ -11,24 +11,27 @@ Stap 3: Maak een proj aan of wkt met met deze waarden.
 Zo niet, dan krijg je een Concattenated operation: 
 
 ## PROJ-String
-
-<mark>Het is niet mogelijk om deze te verdraaien en te schalen</mark>
-
-<aside class="example" title="Voorbeeld van een proj-string van topocentrische projectie bij dronten">
+<aside class="example" title="Voorbeeld van een proj-string van topocentrische projectie">
 ```proj
 +proj=topocentric +X_0=3871060.4331 +Y_0=385968.7003 +Z_0=5037479.6781
 ```
 </aside>
 
 
+<aside class="example" title="Voorbeeld van een proj-string van helmert conversie ">
 
-
-<aside class="example" title="Voorbeeld van een proj-string van topocentrische projectie bij dronten">
 ```proj
--ct
+-ct "proj=helmert convention = coordinate_frame x=175507.112 y=502108.807 s=2.91569 theta=-216.5814"
 ```
 </aside>
-<mark></mark>
+
+<aside class="example" title="Voorbeeld van een inverse proj-string van helmert conversie ">
+
+```proj
+-ct "inv proj=helmert convention = coordinate_frame x=175507.112 y=502108.807 s=2.91569 theta=-216.5814"
+```
+</aside>
+
 
 ## PROJJSON
 <aside class="example" title="Voorbeeld van een engineeredCRS in PROJJSON">
