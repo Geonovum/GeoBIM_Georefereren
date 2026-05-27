@@ -1,6 +1,6 @@
-# Methodes van Georeferentie
+# Methodes voor Georeferentie
 
-## Routes van georeferentie
+## Routes voor georeferentie
 
 Wanneer men een BIM-model daadwerkelijk gaat realiseren op de bouwplaats, wordt het model uitgezet in de werkelijkheid. Dit betekent dat het digitale coördinatensysteem van het BIM-model wordt gekoppeld aan vaste referentiepunten op de bouwplaats. Vanuit deze koppeling worden assen, <mark>stramienen,</mark> hoogtes en punten exact uitgezet met meetapparatuur zoals een total station. Op die manier worden posities van constructieve elementen, overgenomen vanuit het model, fysiek gemarkeerd in het veld, bijvoorbeeld met piketten of andere markeringen. Voor omvangrijke projecten kan dit proces ook worden ondersteund door machinebesturing. Een BIM-model vormt zo de basis voor de maatvoering in constructie in de werkelijkheid. Met bijvoorbeeld een rolmaat, of laser doet men snelle metingen en detailcontrole op de bowplaats. 
 
@@ -21,21 +21,19 @@ De transformatie van XYZ-BIM als RDNAP in BIM naar RDNAP is een "nultransformati
 
 ### XYZ gemodeleerd BIM als RD naar RDNAP 
 Het is mogelijk dat de transformatie van XYZ in BIM naar RDNAP-coördinaten door BIM-software wordt ondersteund. In dit geval zal de software bij een commando om een lijn van 400 meter te maken in BIM in Amersfoort eigenlijk een lijn van 399,964 meter in RD maken die overeen komt met een lijn van 400 m in werkelijkheid. Deze methode komt overeen met de methode hierboven beschreven. Het verschil in de methode zit in het feit dat niet de modelleur, maar de software de schaalcorrectie doet om het model in RD te tekenen. 
-De transformatie van RDNAP in BIM naar RDNAP een "nultransformatie". 
+De transformatie van RDNAP in BIM naar RDNAP is een "nultransformatie". 
 
-Wanneer men dit doet moet men rekening houden met de lijnvergroting of -reductie. Een project in de stad Amersfoort zal vanwege projectie een lijnreductie van +/-  9 mm per 100 meter in RD krijgen. Een lijn van 400 meter zal dan als een lijn van +/- 399,964 meter gemodelleerd moeten worden. De vergroting of reductie geldt niet voor de Z-waarde van lijnen in het model. Dit vereist veel discipline van de modelleur.  
+### XYZ gemodelleerd BIM via een 2D gelijkvormigheidstransformatie naar RDNAP 
+Een andere methode is om een in lokaal cartesisch XYZ gemodelleerd BIM-model met een 2D gelijkvormigheidstransformatie naar RD met NAP-hoogte te transformeren. Een translatie en rotatie zijn afhankelijk van het gebruikte grid in BIM nodig. Een schaal-transformatie is, afhankelijk van de lokatie in Nederland, vaak nodig. Belangrijk hierbij is dat de hoogte-waarde geen schaalcorrectie dient te krijgen. 
 
-### XYZ gemodelleerd BIM via 2D Helmert naar RDNAP 
-Een andere methode is om een XYZ gemodelleerd BIM-model met een 2D Helmert-transformatie naar RD-NAP transformeren. Een translatie en rotatie zijn afhankelijk van het gebruikte grid in BIM nodig. Een schaal-transformatie is, afhankelijk van de plek, zo goed als altijd nodig. Belangrijk hierbij is dat de z-waarde geen schaal dient te krijgen. 
+### XYZ gemodelleerd BIM via een 3D gelijkvormigheidstransformatie naar ETRS89 
+Een volgende methode is om een in lokaal cartesisch XYZ gemodelleerd BIM-model met een 3D gelijkvormigheidstransformatie te naar cartesisch XYZ in het geocetrische ETRS89-coördinatenstelsel. Dit getransformeerde model kan men vervolgens converteren naar ETRS89 breedte, lengte en hoogte en transformeren naar RDNAP. 
 
-### XYZ gemodelleerd BIM via 3D Helmert naar ETRS89 
-Een volgende methode is om een XYZ gemodelleerd BIM-model met een 3D Helmert transformatie te plaatsen op de aarde met het ETRS89 XYZ coordinatenstelsel. Vanuit dit getransformeerde model kan men een ETRS89 lat/lon/h maken en ook RDNAP. 
+### XYZ gemodeleerd BIM via 3D een 3D gelijkvormigheidstransformatie naar ETRS89 en hoogte naar NAP 
+Deze methode waarbij men BIM via een 3D gelijkvormigheidstransformatie naar ETRS89 brengt en de hoogte naar NAP lijkt op de hiervoor beschreven methode. Het verschil zit erin dat in deze methode alleen XY met een 3D gelijkvormigheidstransformatie naar ETRS89 getransformeerd wordt. De hoogte transformeert men apart als 1D transformatie naar NAP. De breedte en lengte in ETRS89 kan men vervolgens transformeren naar RD en er de NAP-hoogte aan toevoegen voor RDNAP-coördinaten.
 
-### XYZ gemodeleerd BIM via 3D Helmert naar ETRS89 en hoogte naar NAP 
-Deze methode waarbij men BIM via een 3D Helmert naar ETRS89 brengt en de hoogte naar NAP lijkt op de hiervoor beschreven methode. Het verschil zit erin dat in deze methode alleen XY met een 3D Helmert-transformatie naar ETRS89 getransformeerd wordt. De hoogte transformeert men apart als 1D transformatie naar NAP. De XY en Z wordt samengebracht in ETRS89 coordinaten.
-
-### XYZ lokale projectie ETRS89 
-De laatste methode is om een BIM-model XYZ te modelleren met een lokale projectie naar ETRS89 lat/lon. De lokale projectie is zo opgestelde dat afwijkingingen minimaal zijn. Het is mogelijk om een 1D transformatie te doen naar NAP of een 1D transformatie naar ellipsoidische hoogte. 
+### XYZ met lokale projectie naar ETRS89 
+De laatste methode is om een BIM-model in lokaal cartesisch XYZ te modelleren en met een lokale projectie naar ETRS89 breedte en lengte te transformeren. De lokale projectie is zo opgestelde dat afwijkingingen minimaal zijn. Het is mogelijk om voor de hoogte daarnaast een 1D transformatie te doen naar NAP. 
 
 ## Levels van georeferentie-informatie
 Voor het uitvoeren van een georeferering zijn verschillende parameters en referentiegegevens nodig die de ruimtelijke positionering ondersteunen. Deze parameters beschrijven bijvoorbeeld het gebruikte coördinatenstelsel, de projectie, schaal, rotatie, referentiepunten of transformatie-informatie die nodig is om de brondata correct te koppelen aan een geografische locatie.
