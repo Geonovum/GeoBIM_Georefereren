@@ -160,7 +160,7 @@ Een CRS dat bestaat uit de combinatie van CRS-en, bijvoorbeeld een geprojecteerd
 
 ## Lokaal CRS
 
-Een <a>lokaal CRS</a> is een arbitrair gekozen assenstelsel. De oorsprong, de oriëntatie en het vertikale referentievlak van het stelsel worden gekozen op basis van praktische overwegingen en kan voordelen hebben bij bepaalde 2D- of  3D- modeleersoftware (BIM).  Sommige applicaties voorzien ook alleen in een lokaal assenstelsel om in te modelleren. De oorsprong van het assenstelsel kan project afhankelijk zijn, bijvoorbeeld een hoekpunt, voorgevel en begane grond van een gebouw, of een x-aantal meter hiervandaan. De eenheden zijn vaak in meters of millimeters. Er is geen directe relatie met de echte wereld tenzij er een coördinatentransformatie wordt toegepast.
+Een <a>lokaal CRS</a> is een arbitrair gekozen assenstelsel. De oorsprong, de oriëntatie en het vertikale referentievlak van het stelsel worden gekozen op basis van praktische overwegingen en kan voordelen hebben bij bepaalde 2D- of  3D- modeleersoftware (BIM).  Sommige applicaties voorzien ook alleen in een lokaal assenstelsel om in te modelleren. De oorsprong van het assenstelsel kan project afhankelijk zijn, bijvoorbeeld een hoekpunt, voorgevel en begane grond van een gebouw, of een aantal meter in XY<mark>Z</mark> hiervandaan. De eenheden zijn vaak in meters of millimeters. Er is geen directe relatie met de echte wereld tenzij er een coördinatentransformatie wordt toegepast.
 
 ### Benadering van RD in lokaal CRS
 
