@@ -35,6 +35,10 @@ Deze methode waarbij men BIM via een 3D gelijkvormigheidstransformatie naar ETRS
 ### XYZ met lokale projectie naar ETRS89 
 De laatste methode is om een BIM-model in lokaal cartesisch XYZ te modelleren en met een lokale projectie naar ETRS89 breedte en lengte te transformeren. De lokale projectie is zo opgestelde dat afwijkingingen minimaal zijn. Het is mogelijk om voor de hoogte daarnaast een 1D transformatie te doen naar NAP. 
 
+
+<mark> Let op! Hier moet toegevoegd worden een combinaties van Methode en Level Of Georeferentie-informatie. Met Level 50 kan RDNAP-RDNAP mogelijk gemaakt worden. En 2D + 1D Helmert. Een 3D Helmert en een 3D + 1D Helmert kan alleen bij impliciete aannames of uitbreiding van Level 50 naar een uitbreiding van Level 50. Ook bij gebruik van level 60 kan dit werken. </mark>
+
+
 ## Levels van georeferentie-informatie
 Voor gegeorefereerde data zijn verschillende referentiegegevens of transformatieparameters nodig die de het ruimtelijk positioneren van de data ondersteunen. Deze metgegevens beschrijven bijvoorbeeld het gebruikte coördinatenstelsel, de projectie, schaal, rotatie, referentiepunten of transformatieparameters - informatie die nodig is om de brondata correct te koppelen aan een geografische locatie.
 

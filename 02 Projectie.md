@@ -257,13 +257,20 @@ In de tweede benadering transformeert men het model naar een CRS dat de aardkrom
 ## Afwijkingen
 <mark>Deze tekst nog aanpassen op basis van berekeningen van de NSGI</mark>
 
+
+
+<mark> Hier moeten de stukken komen over afwijking. Dus CorrectieGrid, en buiging. 
+ 
 Punt 1: De afwijking door projectie: lijnvergroting of -verkleining door projectie. Dit is het geval bij RD, maar niet bij NAP. -> Dit punt gaat spelen als we BIM willen combineren met RD, of als men RD als onderlegger voor BIM gebruikt. 
 
-+/- 10 mm bij 100 meter en 10 mm bij 1 km. 
++/- 10 mm bij 100 meter en 10 cm bij 1 km. 
 
 Punt 2: De afwijking door aardkromming: De kromming van de aarde die afwijkingen veroorzaken bij cartesisch gemodelleerde modellen. -> Dit punt speelt als we euclidisch cartesisch BIM willen combineren met geodetisch ETRS-89
 
 +/- 8 cm bij km en 8 meter bij 10 km. 
+
+(Let op! Wanneer men iets "recht" wil maken in de werklijkheid, is dit eigenlijk krom.)
+
 
 Punt 3: Lijnuitbuiging: Het effect dat een rechte lijn in het ene stelsel geen rechte lijn is in het andere stelsel. 
 +/- 1,3 mm bij 1km en  +/- 3 cm bij 5 km 
@@ -272,5 +279,16 @@ zie [handreiking gebruik coordinaatreferentiesystemen](https://docs.geostandaard
 
 Voor een nauwkeurigheid van 1 mm zijn dus punten met 200 m tussenafstand nodig voor de in Nederland gangbare projecties. Voor het genereren van synthetische tussenpunten kan afhankelijk van wat bedoeld is, gekozen worden tussen punten op een rechte lijn in de kaart of een rechte lijn in werkelijkheid (geodetische lijn in ETRS89).
 
+Punt 4: Kaartnoorden, ware noorden (meridiaanrichting) (zonne noorden), magnetisch noorden (tijdsafhankelijk)
+Afwijking van maximaal 3 graden (In Duitsland en in Zee, grenzen van het correctiegrid) In Bessel is deze 0.
+Voor zonnestudies is dit belangrijk. 
 
+
+Conclusie Jochem: 
+
+
+
+
+Aanbeveling: 
+Bepaal voor elk project de omvang (lengte, breedte, hoogte) en de gewenste nauwkeurigheid. Kies op basis hiervan de route, methode en informatievoorziening van georeferentie. 
 
