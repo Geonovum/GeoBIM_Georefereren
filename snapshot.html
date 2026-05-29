@@ -813,7 +813,7 @@ img.license{float:left;padding-right:5px;background:0 0}
     <h2>
       Geonovum Praktijkrichtlijn<br>
       Werkversie
-      <time class="dt-published" datetime="2026-05-18">18 mei 2026</time>
+      <time class="dt-published" datetime="2026-05-29">29 mei 2026</time>
     </h2>
     <dl>
       
@@ -1125,14 +1125,22 @@ Coördinaten worden uitgedrukt in ellipsoïdsche breedte (<span style="font-fami
 
 
 </section><section id="afwijkingen"><div class="header-wrapper"><h3 id="x3-5-afwijkingen"><bdi class="secno">3.5 </bdi>Afwijkingen</h3><a class="self-link" href="#afwijkingen" aria-label="Permalink for Section 3.5"></a></div>
+<p><mark> Hier moeten de stukken komen over afwijking. Dus CorrectieGrid, en buiging. </mark></p>
 <p>Punt 1: De afwijking door projectie: lijnvergroting of -verkleining door projectie. Dit is het geval bij RD, maar niet bij NAP. -&gt; Dit punt gaat spelen als we BIM willen combineren met RD, of als men RD als onderlegger voor BIM gebruikt. </p>
-<p>+/- 10 mm bij 100 meter en 10 mm bij 1 km. </p>
+<p>+/- 10 mm bij 100 meter en 10 cm bij 1 km. </p>
 <p>Punt 2: De afwijking door aardkromming: De kromming van de aarde die afwijkingen veroorzaken bij cartesisch gemodelleerde modellen. -&gt; Dit punt speelt als we euclidisch cartesisch BIM willen combineren met geodetisch ETRS-89</p>
 <p>+/- 8 cm bij km en 8 meter bij 10 km. </p>
+<p>(Let op! Wanneer men iets "recht" wil maken in de werklijkheid, is dit eigenlijk krom.)</p>
 <p>Punt 3: Lijnuitbuiging: Het effect dat een rechte lijn in het ene stelsel geen rechte lijn is in het andere stelsel. 
 +/- 1,3 mm bij 1km en  +/- 3 cm bij 5 km </p>
 <p>zie <a href="https://docs.geostandaarden.nl/crs/crs/#vormvastheid">handreiking gebruik coordinaatreferentiesystemen</a> en het <a href="https://gnss-data.kadaster.nl/misc/docs/langelijnenadvies.pdf">langelijnenadvies</a>. </p>
 <p>Voor een nauwkeurigheid van 1 mm zijn dus punten met 200 m tussenafstand nodig voor de in Nederland gangbare projecties. Voor het genereren van synthetische tussenpunten kan afhankelijk van wat bedoeld is, gekozen worden tussen punten op een rechte lijn in de kaart of een rechte lijn in werkelijkheid (geodetische lijn in ETRS89).</p>
+<p>Punt 4: Kaartnoorden, ware noorden (meridiaanrichting) (zonne noorden), magnetisch noorden (tijdsafhankelijk)
+Afwijking van maximaal 3 graden (In Duitsland en in Zee, grenzen van het correctiegrid) In Bessel is deze 0.
+Voor zonnestudies is dit belangrijk. </p>
+<p>Conclusie Jochem: </p>
+<p>Aanbeveling: 
+Bepaal voor elk project de omvang (lengte, breedte, hoogte) en de gewenste nauwkeurigheid. Kies op basis hiervan de route, methode en informatievoorziening van georeferentie.</p>
 </section></section>
   <section id="methodes-van-georeferentie"><div class="header-wrapper"><h2 id="x4-methodes-van-georeferentie"><bdi class="secno">4. </bdi>Methodes van Georeferentie</h2><a class="self-link" href="#methodes-van-georeferentie" aria-label="Permalink for Section 4."></a></div>
 <section id="routes-van-georeferentie"><div class="header-wrapper"><h3 id="x4-1-routes-van-georeferentie"><bdi class="secno">4.1 </bdi>Routes van georeferentie</h3><a class="self-link" href="#routes-van-georeferentie" aria-label="Permalink for Section 4.1"></a></div>
@@ -1159,6 +1167,7 @@ De conversie van een XYZ-BIM als RD naar een RDNAP is "null". </p>
 <p>Deze methode waarbij men BIM via een 3D Helmert naar ETRS89 brengt en de hoogte naar NAP lijkt op de hiervoor beschreven methode. Het verschil zit erin dat in deze methode alleen XY met een 3D Helmert-transformatie naar ETRS89 getransformeerd wordt. De hoogte transformeert men apart als 1D transformatie naar NAP. De XY en Z wordt samengebracht in ETRS89 coordinaten.</p>
 </section><section id="xyz-lokale-projectie-etrs89"><div class="header-wrapper"><h4 id="x4-2-6-xyz-lokale-projectie-etrs89"><bdi class="secno">4.2.6 </bdi>XYZ lokale projectie ETRS89</h4><a class="self-link" href="#xyz-lokale-projectie-etrs89" aria-label="Permalink for Section 4.2.6"></a></div>
 <p>De laatste methode is om een BIM-model XYZ te modelleren met een lokale projectie naar ETRS89 lat/lon. De lokale projectie is zo opgestelde dat afwijkingingen minimaal zijn. Het is mogelijk om een 1D transformatie te doen naar NAP of een 1D transformatie naar ellipsoidische hoogte. </p>
+<p><mark> Let op! Hier moet toegevoegd worden een combinaties van Methode en Level Of Georeferentie-informatie. Met Level 50 kan RDNAP-RDNAP mogelijk gemaakt worden. En 2D + 1D Helmert. Een 3D Helmert en een 3D + 1D Helmert kan alleen bij impliciete aannames of uitbreiding van Level 50 naar een uitbreiding van Level 50. Ook bij gebruik van level 60 kan dit werken. </mark></p>
 </section></section><section id="levels-van-georeferentie-informatie"><div class="header-wrapper"><h3 id="x4-3-levels-van-georeferentie-informatie"><bdi class="secno">4.3 </bdi>Levels van georeferentie-informatie</h3><a class="self-link" href="#levels-van-georeferentie-informatie" aria-label="Permalink for Section 4.3"></a></div>
 <p>Voor het uitvoeren van een georeferering zijn verschillende parameters en referentiegegevens nodig die de ruimtelijke positionering ondersteunen. Deze parameters beschrijven bijvoorbeeld het gebruikte coördinatenstelsel, de projectie, schaal, rotatie, referentiepunten of transformatie-informatie die nodig is om de brondata correct te koppelen aan een geografische locatie.</p>
 <p>Deze ondersteunende parameters kunnen op verschillende manieren beschikbaar zijn. Soms zijn deze aanwezig in de brondata waarin georeferentiegegevens reeds opgenomen zijn, of in metadata of gekoppelde projectiebestanden. Hierdoor kan de positionering grotendeels automatisch plaatsvinden. Wanneer parameters voor een bepaalde methode (gedeeltelijk) ontbreken kan men dit aanvullen. Gegevens kan men verzamelen via externe bronnen, handmatige interpretatie, referentiekaarten of bekende controlepunten. Dit proces vraagt extra validatie om de nauwkeurigheid en consistentie van de georeferering te waarborgen.</p>
