@@ -160,7 +160,7 @@ Een CRS dat bestaat uit de combinatie van CRS-en, bijvoorbeeld een geprojecteerd
 
 ## Lokaal CRS
 
-Een <a>lokaal CRS</a> is een arbitrair gekozen assenstelsel. De oorsprong, de oriëntatie en het vertikale referentievlak van het stelsel worden gekozen op basis van praktische overwegingen en kan voordelen hebben bij bepaalde 2D- of  3D- modeleersoftware (BIM).  Sommige applicaties voorzien ook alleen in een lokaal assenstelsel om in te modelleren. De oorsprong van het assenstelsel kan project afhankelijk zijn, bijvoorbeeld een hoekpunt, voorgevel en begane grond van een gebouw, of een x-aantal meter hiervandaan. De eenheden zijn vaak in meters of millimeters. Er is geen directe relatie met de echte wereld tenzij er een coördinatentransformatie wordt toegepast.
+Een <a>lokaal CRS</a> is een arbitrair gekozen assenstelsel. De oorsprong, de oriëntatie en het vertikale referentievlak van het stelsel worden gekozen op basis van praktische overwegingen en kan voordelen hebben bij bepaalde 2D- of  3D- modeleersoftware (BIM).  Sommige applicaties voorzien ook alleen in een lokaal assenstelsel om in te modelleren. De oorsprong van het assenstelsel kan project afhankelijk zijn, bijvoorbeeld een hoekpunt, voorgevel en begane grond van een gebouw, of een aantal meter in XY<mark>Z</mark> hiervandaan. De eenheden zijn vaak in meters of millimeters. Er is geen directe relatie met de echte wereld tenzij er een coördinatentransformatie wordt toegepast.
 
 ### Benadering van RD in lokaal CRS
 
@@ -244,17 +244,19 @@ Voor de relatie tussen vertikale referentievlakken is het uitgangspunt in de hui
 <mark> Dit figuur moet niet hier. Onderschrift past wel bij de figuur. </mark>
 
 ## Geometrische effecten bij BIM-georeferentie en BIM-transformatie
-Bij het georefereren van een BIM-model naar een geografisch referentiestelsel zijn er twee opties. Bij de eerste benadering blijft het model volledig Euclidisch en lokaal cartesisch. Daarbij blijven hoeken, lengtes en vormen exact behouden binnen het model. In dit geval resulteert het verschil tussen het platte vlak van het BIM-model en het gekromde aardoppervlak in dat horizontaal, verticaal en waterpas geleidelijk af gaat wijken van de fysieke werkelijkheid en van geodetische referentiesystemen als ETRS89 en NAP. Deze effecten worden vooral merkbaar bij lange infrastructuur of zeer hoge nauwkeurigheidseisen of wanneer de combinatie met GEO-datasets gemaakt worden.
+Bij het georefereren van een BIM-model ten opzichte van een CRS zijn er twee opties. Bij de eerste benadering blijft het model volledig cartesisch. Daarbij blijven hoeken, lengtes en vormen exact behouden binnen het model. In dit geval resulteert het verschil tussen het platte vlak van het BIM-model en het gekromde aardoppervlak in dat horizontaal en verticaal/waterpas geleidelijk af gaat wijken van de fysieke werkelijkheid en van CRSen als ETRS89 en NAP. Deze effecten worden vooral merkbaar bij lange infrastructuur of zeer hoge nauwkeurigheidseisen of wanneer de combinatie met Geo-datasets gemaakt worden.
 
-In de tweede benadering transformeert men het model naar een geodetisch referentiekader, zodat de geometrie de aardkromming volgt. In dit geval ontstaan verschillende geometrische afwijkingen die samenhangen met de overgang tussen een lokaal cartesisch model en een aardgebonden coördinatensysteem. Een BIM-model is in de basis Euclidisch en lokaal vlak, terwijl geodetische referentiesystemen rekening houden met projectie, aardkromming en niet-uniforme transformaties. Door een transformatie te doen zullen de hoeken, en/of de lijnvorm en -lengte, en/of de oppervlaktes afwijken van het orginele model. 
+In de tweede benadering transformeert men het model naar een CRS dat de aardkromming volgt. In dit geval ontstaan verschillende geometrische vervormingen die samenhangen met de overgang tussen een lokaal cartesisch model en een CRS voor de aarde. Een BIM-model is in de basis cartesisch en lokaal vlak, terwijl CRSen rekening houden met projectie en aardkromming. Door de transformatie zullen de hoeken, en/of de lijnvorm en -lengte, en/of de oppervlaktes afwijken van het orginele model. 
 
 <figure id="Geometrische_effecten_bij_transformatie"  style="display: block; text-align: center; margin: 0 auto;">
       <img src="media\Geometrische_verandering_bij_transformatie_voor_georeferentie.png" alt="Geometrische_effecten_bij_transformatie" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;"/>
-          <figcaption><a class="self-link" href="#fig-Geometrische_effecten_bij_transformatie"></bdi></a><span class="fig-title">Geometrische effecten die op kunnen treden bij transformaties van modellen tussen Euclidische en Geodetische ruimte </span></figcaption>
+          <figcaption><a class="self-link" href="#fig-Geometrische_effecten_bij_transformatie"></bdi></a><span class="fig-title">Enkele geometrische effecten die op kunnen treden bij transformaties tussen cartesische modellen en een CRS voor de aarde <mark>Aanpassingen: Driehoek wat verplaatsen zodat de bais en zuiden van de evenaar komt te liggen, anders zou de basis de andere kant op gekromd moeten zijn. Bij de cirkel duidelijk maken dat het over oppevlak gaat, bijvoorbeeld door >&nbsp;&pi; te veranderen in m<sup>2</sup>&nbsp;>&nbsp;&pi;&nbsp;r<sup>2</sup> en de cirkel mag wel wat ronder want het oppervlak wordt groter maar de vorm niet anders.</mark></span></figcaption>
   </figure>
 
 
 ## Afwijkingen
+<mark>Deze tekst nog aanpassen op basis van berekeningen van de NSGI</mark>
+
 
 
 <mark> Hier moeten de stukken komen over afwijking. Dus CorrectieGrid, en buiging. 
