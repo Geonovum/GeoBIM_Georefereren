@@ -37,6 +37,10 @@ Deze methode waarbij men BIM via een 3D Helmert naar ETRS89 brengt en de hoogte 
 ### XYZ lokale projectie ETRS89 
 De laatste methode is om een BIM-model XYZ te modelleren met een lokale projectie naar ETRS89 lat/lon. De lokale projectie is zo opgestelde dat afwijkingingen minimaal zijn. Het is mogelijk om een 1D transformatie te doen naar NAP of een 1D transformatie naar ellipsoidische hoogte. 
 
+
+<mark> Let op! Hier moet toegevoegd worden een combinaties van Methode en Level Of Georeferentie-informatie. Met Level 50 kan RDNAP-RDNAP mogelijk gemaakt worden. En 2D + 1D Helmert. Een 3D Helmert en een 3D + 1D Helmert kan alleen bij impliciete aannames of uitbreiding van Level 50 naar een uitbreiding van Level 50. Ook bij gebruik van level 60 kan dit werken. </mark>
+
+
 ## Levels van georeferentie-informatie
 Voor het uitvoeren van een georeferering zijn verschillende parameters en referentiegegevens nodig die de ruimtelijke positionering ondersteunen. Deze parameters beschrijven bijvoorbeeld het gebruikte coördinatenstelsel, de projectie, schaal, rotatie, referentiepunten of transformatie-informatie die nodig is om de brondata correct te koppelen aan een geografische locatie.
 
