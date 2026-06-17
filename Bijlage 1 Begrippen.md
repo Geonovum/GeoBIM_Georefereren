@@ -141,3 +141,4 @@ Een geo-omgeving is het geheel van data, standaarden, services en infrastructuur
 
 **<dfn>GIS-systeem</dfn>**
 Een complete omgeving om geografische data te beheren, analyseren en visualiseren. Dit is software met tooling/operations. Het is hierin mogelijk om GEO-data te bewerken of analyses te doen.
+
