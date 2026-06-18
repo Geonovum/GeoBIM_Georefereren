@@ -74,7 +74,7 @@ Een GEO coordinatenstelsel kan 3D samengesteld (EPSG:7415), 2D (EPSG:28992) of 1
       <td>3D gelijkvormigheidstransformatie</td>
       <td>0-transformatie</td>
     </tr>
-
+</table>
 
 <figure id="2D-en-3D-Geo-of-BIM-combineren">
       <img src="./media/2d_en_3d_GeoBIM.png" alt="2D en 3D Geo of BIM combineren" width="700"/>
