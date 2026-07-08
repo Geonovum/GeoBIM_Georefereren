@@ -85,6 +85,11 @@ let respecConfig = {
         companyURL: "https://www.kadaster.nl/",
       },
       {
+        name: "Jochem Lesparre",
+        company: "Kadaster",
+        companyURL: "https://www.kadaster.nl/",
+      },
+      {
         name: "Cathelijne Kleijwegt",
         company: "Esri Nederland",
         companyURL: "https://www.esri.nl/nl-nl/home",
