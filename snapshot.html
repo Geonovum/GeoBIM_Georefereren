@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="nl"><head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
-<meta name="generator" content="ReSpec 37.0.0">
+<meta name="generator" content="ReSpec 37.2.0">
 <style>
 span.example-title{text-transform:none}
 :is(aside,div).example,div.illegal-example{padding:.5em;margin:1em 0;position:relative;clear:both}
@@ -848,7 +848,7 @@ body:has(input[name=color-scheme][value=dark]:checked) .hljs{
     <h2>
       Geonovum Praktijkrichtlijn<br>
       Werkversie
-      <time class="dt-published" datetime="2026-06-18">18 juni 2026</time>
+      <time class="dt-published" datetime="2026-07-08">08 juli 2026</time>
     </h2>
     <dl>
       
@@ -921,7 +921,7 @@ body:has(input[name=color-scheme][value=dark]:checked) .hljs{
 <p>BIM- en GEO-modellen ontstaan vaak in software en tooling. Om dit generiek bij elkaar te brengen is georeferentie in open uitwisselformaten nodig. In IFC (met name IFC 4.3) speelt IfcMapConversion een centrale rol voor georeferentie op level 50. Andere formaten zoals DXF, (City)GML/CityJSON, GeoPackage en OGC-API’s bieden elk eigen mogelijkheden en beperkingen voor het vastleggen van CRS-informatie en transformaties.</p>
 <p>De praktijkrichtlijn biedt onderscheid tussen de toepassing in B&amp;U- en infraprojecten. B&amp;U-projecten zijn vaak kleinschalig en kunnen goed in een lokaal stelsel worden gemodelleerd, terwijl infraprojecten meestal langgerekt zijn en direct in RD/NAP worden ontworpen vanwege aansluiting op bestaande infrastructuur. De richtlijn sluit af met praktische software- en tooling handleidingen (o.a. Revit en Civil 3D) die laten zien hoe georeferentie in de praktijk kan worden ingericht en geëxporteerd. Aanvullend hierop laat de praktijkrichtlijn in software zien wat het effect van modellen van verschillend LevelOfGeoreferencing is op de plaatsing. Deze praktijktoets bevestigd de aanbevling van minimaal LevelOfGeoreferencing 50.</p>
 </section> 
-  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#introductie"><bdi class="secno">1. </bdi>Introductie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#leeswijzer"><bdi class="secno">1.1 </bdi>Leeswijzer</a></li></ol></li><li class="tocline"><a class="tocxref" href="#toepassingsgebied"><bdi class="secno">2. </bdi>Toepassingsgebied</a></li><li class="tocline"><a class="tocxref" href="#coordinaatreferentiesystemen-en-coordinatentransformatie"><bdi class="secno">3. </bdi>Coördinaatreferentiesystemen en Coördinatentransformatie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#geodetische-crs-en"><bdi class="secno">3.1 </bdi>Geodetische CRS-en</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#geografische-en-geocentrisch-crs"><bdi class="secno">3.1.1 </bdi>Geografische en geocentrisch CRS</a></li><li class="tocline"><a class="tocxref" href="#geprojecteerd-crs"><bdi class="secno">3.1.2 </bdi>Geprojecteerd CRS</a></li><li class="tocline"><a class="tocxref" href="#vertikaal-crs"><bdi class="secno">3.1.3 </bdi>Vertikaal CRS</a></li><li class="tocline"><a class="tocxref" href="#samengesteld-crs"><bdi class="secno">3.1.4 </bdi>Samengesteld CRS</a></li></ol></li><li class="tocline"><a class="tocxref" href="#lokaal-crs"><bdi class="secno">3.2 </bdi>Lokaal CRS</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#benadering-van-rd-in-lokaal-crs"><bdi class="secno">3.2.1 </bdi>Benadering van RD in lokaal CRS</a></li><li class="tocline"><a class="tocxref" href="#true-north-grid-north-project-north"><bdi class="secno">3.2.2 </bdi>True North, Grid North, Project North</a></li></ol></li><li class="tocline"><a class="tocxref" href="#coordinatentransformatie-tussen-lokaal-crs-en-geodetisch"><bdi class="secno">3.3 </bdi>Coördinatentransformatie tussen lokaal CRS en geodetisch</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#horizontaal-2d-gelijkvormigheidstransformatie"><bdi class="secno">3.3.1 </bdi>Horizontaal - 2D gelijkvormigheidstransformatie</a></li><li class="tocline"><a class="tocxref" href="#vertikaal-vast-hoogteverschil"><bdi class="secno">3.3.2 </bdi>Vertikaal - vast hoogteverschil</a></li></ol></li><li class="tocline"><a class="tocxref" href="#geometrische-effecten-bij-bim-georeferentie-en-bim-transformatie"><bdi class="secno">3.4 </bdi>Geometrische effecten bij BIM-georeferentie en BIM-transformatie</a></li><li class="tocline"><a class="tocxref" href="#afwijkingen"><bdi class="secno">3.5 </bdi>Afwijkingen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#afwijking-door-projectie"><bdi class="secno">3.5.1 </bdi>Afwijking door projectie</a></li><li class="tocline"><a class="tocxref" href="#afwijking-door-aardkromming"><bdi class="secno">3.5.2 </bdi>Afwijking door aardkromming</a></li><li class="tocline"><a class="tocxref" href="#afwijking-door-lijnuitbuiging"><bdi class="secno">3.5.3 </bdi>Afwijking door lijnuitbuiging</a></li><li class="tocline"><a class="tocxref" href="#afwijking-van-kaart-noorden"><bdi class="secno">3.5.4 </bdi>Afwijking van kaart Noorden</a></li><li class="tocline"><a class="tocxref" href="#conclusie"><bdi class="secno">3.5.5 </bdi>Conclusie</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#methodes-voor-georeferentie"><bdi class="secno">4. </bdi>Methodes voor Georeferentie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#x1d-2d-en-3d-geo-en-bim-modellen"><bdi class="secno">4.1 </bdi>1D, 2D en 3D Geo- en BIM-modellen</a></li><li class="tocline"><a class="tocxref" href="#routes-voor-georeferentie"><bdi class="secno">4.2 </bdi>Routes voor georeferentie</a></li><li class="tocline"><a class="tocxref" href="#methodes-van-georeferentie"><bdi class="secno">4.3 </bdi>Methodes van Georeferentie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#rd-gemodelleerd-bim-naar-rdnap"><bdi class="secno">4.3.1 </bdi>RD-gemodelleerd BIM naar RDNAP</a></li><li class="tocline"><a class="tocxref" href="#xyz-gemodeleerd-bim-als-rd-naar-rdnap"><bdi class="secno">4.3.2 </bdi>XYZ gemodeleerd BIM als RD naar RDNAP</a></li><li class="tocline"><a class="tocxref" href="#xyz-gemodelleerd-bim-via-een-2d-gelijkvormigheidstransformatie-naar-rdnap"><bdi class="secno">4.3.3 </bdi>XYZ gemodelleerd BIM via een 2D gelijkvormigheidstransformatie naar RDNAP</a></li><li class="tocline"><a class="tocxref" href="#xyz-gemodelleerd-bim-via-een-3d-gelijkvormigheidstransformatie-naar-etrs89"><bdi class="secno">4.3.4 </bdi>XYZ gemodelleerd BIM via een 3D gelijkvormigheidstransformatie naar ETRS89</a></li><li class="tocline"><a class="tocxref" href="#xyz-gemodeleerd-bim-via-3d-een-3d-gelijkvormigheidstransformatie-naar-etrs89-en-hoogte-naar-nap"><bdi class="secno">4.3.5 </bdi>XYZ gemodeleerd BIM via 3D een 3D gelijkvormigheidstransformatie naar ETRS89 en hoogte naar NAP</a></li><li class="tocline"><a class="tocxref" href="#xyz-met-lokale-projectie-naar-etrs89"><bdi class="secno">4.3.6 </bdi>XYZ met lokale projectie naar ETRS89</a></li></ol></li><li class="tocline"><a class="tocxref" href="#levels-van-georeferentie-informatie"><bdi class="secno">4.4 </bdi>Levels van georeferentie-informatie</a></li><li class="tocline"><a class="tocxref" href="#schaal-en-correctie-op-basis-van-gebruikte-eeenheden"><bdi class="secno">4.5 </bdi>Schaal en correctie op basis van gebruikte eeenheden</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gebruik-van-geo-voor-georeferentie"><bdi class="secno">5. </bdi>Gebruik van geo voor georeferentie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#georeferentie-level-60-voor-bim-naar-geo"><bdi class="secno">5.1 </bdi>Georeferentie Level 60 voor BIM naar Geo</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-gebruik-van-survey-points"><bdi class="secno">5.1.1 </bdi>Het gebruik van survey points</a></li><li class="tocline"><a class="tocxref" href="#geografische-uitlijning"><bdi class="secno">5.1.2 </bdi>Geografische uitlijning</a></li></ol></li><li class="tocline"><a class="tocxref" href="#geo-datasets-voor-het-refereren-van-modellen"><bdi class="secno">5.2 </bdi>Geo datasets voor het refereren van modellen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kwaliteits-kenmerken-voor-geobestanden-naar-bim"><bdi class="secno">5.2.1 </bdi>Kwaliteits kenmerken voor geobestanden naar BIM</a></li><li class="tocline"><a class="tocxref" href="#primaire-kwaliteits-kenmerken-voor-geobestanden-naar-bim"><bdi class="secno">5.2.2 </bdi>Primaire kwaliteits kenmerken voor geobestanden naar bim</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#georeferentie-in-uitwisseling"><bdi class="secno">6. </bdi>Georeferentie in uitwisseling</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#industry-foundation-classes-ifc"><bdi class="secno">6.1 </bdi>Industry Foundation Classes (IFC)</a></li><li class="tocline"><a class="tocxref" href="#dxf"><bdi class="secno">6.2 </bdi>DXF</a></li><li class="tocline"><a class="tocxref" href="#city-gml"><bdi class="secno">6.3 </bdi>(City)GML</a></li><li class="tocline"><a class="tocxref" href="#cityjson"><bdi class="secno">6.4 </bdi>CityJSON</a></li><li class="tocline"><a class="tocxref" href="#geopackage"><bdi class="secno">6.5 </bdi>Geopackage</a></li><li class="tocline"><a class="tocxref" href="#api"><bdi class="secno">6.6 </bdi>API</a></li></ol></li><li class="tocline"><a class="tocxref" href="#georeferentie-in-de-domeinen-b-u-en-infra"><bdi class="secno">7. </bdi>Georeferentie in de domeinen B&amp;U en Infra</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#georeferentie-in-de-b-u"><bdi class="secno">7.1 </bdi>Georeferentie in de B&amp;U</a></li><li class="tocline"><a class="tocxref" href="#georeferentie-in-de-infra"><bdi class="secno">7.2 </bdi>Georeferentie in de Infra</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kenmerken-van-infraprojecten"><bdi class="secno">7.2.1 </bdi>Kenmerken van infraprojecten</a></li><li class="tocline"><a class="tocxref" href="#werkwijze-binnen-infra"><bdi class="secno">7.2.2 </bdi>Werkwijze binnen Infra</a></li><li class="tocline"><a class="tocxref" href="#toepassing-van-3d-software"><bdi class="secno">7.2.3 </bdi>Toepassing van 3D-software</a></li><li class="tocline"><a class="tocxref" href="#gevolgen-van-projectievervorming"><bdi class="secno">7.2.4 </bdi>Gevolgen van projectievervorming</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#handleiding-software"><bdi class="secno">8. </bdi>Handleiding Software</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#cad-onderlegger"><bdi class="secno">8.1 </bdi>CAD Onderlegger</a></li><li class="tocline"><a class="tocxref" href="#revit"><bdi class="secno">8.2 </bdi>Revit</a></li><li class="tocline"><a class="tocxref" href="#autocad-civil-3d"><bdi class="secno">8.3 </bdi>Autocad Civil 3D</a></li><li class="tocline"><a class="tocxref" href="#archicad"><bdi class="secno">8.4 </bdi>ArchiCAD</a></li><li class="tocline"><a class="tocxref" href="#tekla-structures"><bdi class="secno">8.5 </bdi>Tekla Structures</a></li><li class="tocline"><a class="tocxref" href="#sketchup"><bdi class="secno">8.6 </bdi>Sketchup</a></li><li class="tocline"><a class="tocxref" href="#blender"><bdi class="secno">8.7 </bdi>Blender</a></li><li class="tocline"><a class="tocxref" href="#illustrator-inkscape"><bdi class="secno">8.8 </bdi>Illustrator/Inkscape</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#illustrator-mapublisher"><bdi class="secno">8.8.1 </bdi>Illustrator MAPublisher</a></li></ol></li><li class="tocline"><a class="tocxref" href="#arcgis"><bdi class="secno">8.9 </bdi>ArcGIS</a></li><li class="tocline"><a class="tocxref" href="#qgis"><bdi class="secno">8.10 </bdi>QGIS</a></li><li class="tocline"><a class="tocxref" href="#controle-van-georeferentie-in-qgis-solibri-en-bimcollab"><bdi class="secno">8.11 </bdi>Controle van georeferentie in QGIS, Solibri en BIMCollab</a></li></ol></li><li class="tocline"><a class="tocxref" href="#tooling"><bdi class="secno">9. </bdi>Tooling</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ifcgref"><bdi class="secno">9.1 </bdi>IfcGref</a></li></ol></li><li class="tocline"><a class="tocxref" href="#validatie-van-gegeorefereerde-ifc-modellen"><bdi class="secno">10. </bdi>Validatie van gegeorefereerde IFC-modellen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#doel-van-de-validatie"><bdi class="secno">10.1 </bdi>Doel van de validatie</a></li><li class="tocline"><a class="tocxref" href="#resultaten-in-arcgis"><bdi class="secno">10.2 </bdi>Resultaten in ArcGIS</a></li><li class="tocline"><a class="tocxref" href="#resultaten-in-qgis"><bdi class="secno">10.3 </bdi>Resultaten in QGIS</a></li></ol></li><li class="tocline"><a class="tocxref" href="#bijlagen"><bdi class="secno">A. </bdi>Bijlagen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#definities-en-afkortingen"><bdi class="secno">A.1 </bdi>Definities en afkortingen</a></li></ol></li><li class="tocline"><a class="tocxref" href="#ifc"><bdi class="secno">B. </bdi>IFC</a></li><li class="tocline"><a class="tocxref" href="#wkt"><bdi class="secno">C. </bdi>WKT</a></li><li class="tocline"><a class="tocxref" href="#proj"><bdi class="secno">D. </bdi>PROJ</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#proj-string"><bdi class="secno">D.1 </bdi>PROJ-String</a></li><li class="tocline"><a class="tocxref" href="#projjson"><bdi class="secno">D.2 </bdi>PROJJSON</a></li></ol></li><li class="tocline"><a class="tocxref" href="#voorbeeld-van-georeferentie-in-gml"><bdi class="secno">E. </bdi>Voorbeeld van georeferentie in GML</a></li><li class="tocline"><a class="tocxref" href="#cityjson-0"><bdi class="secno">F. </bdi>CityJSON</a></li><li class="tocline"><a class="tocxref" href="#voorbeeld-van-georeferentie-met-api-s"><bdi class="secno">G. </bdi>Voorbeeld van georeferentie met API's</a></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">H. </bdi>Lijst met figuren</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">I. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informatieve-referenties"><bdi class="secno">I.1 </bdi>Informatieve referenties</a></li></ol></li></ol></nav>
+  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#introductie"><bdi class="secno">1. </bdi>Introductie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#leeswijzer"><bdi class="secno">1.1 </bdi>Leeswijzer</a></li></ol></li><li class="tocline"><a class="tocxref" href="#toepassingsgebied"><bdi class="secno">2. </bdi>Toepassingsgebied</a></li><li class="tocline"><a class="tocxref" href="#coordinaatreferentiesystemen-en-coordinatentransformatie"><bdi class="secno">3. </bdi>Coördinaatreferentiesystemen en Coördinatentransformatie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#geodetische-crs-en"><bdi class="secno">3.1 </bdi>Geodetische CRS-en</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#geografische-en-geocentrisch-crs"><bdi class="secno">3.1.1 </bdi>Geografische en geocentrisch CRS</a></li><li class="tocline"><a class="tocxref" href="#geprojecteerd-crs"><bdi class="secno">3.1.2 </bdi>Geprojecteerd CRS</a></li><li class="tocline"><a class="tocxref" href="#vertikaal-crs"><bdi class="secno">3.1.3 </bdi>Vertikaal CRS</a></li><li class="tocline"><a class="tocxref" href="#samengesteld-crs"><bdi class="secno">3.1.4 </bdi>Samengesteld CRS</a></li></ol></li><li class="tocline"><a class="tocxref" href="#lokaal-crs"><bdi class="secno">3.2 </bdi>Lokaal CRS</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#benadering-van-rd-in-lokaal-crs"><bdi class="secno">3.2.1 </bdi>Benadering van RD in lokaal CRS</a></li><li class="tocline"><a class="tocxref" href="#true-north-grid-north-project-north"><bdi class="secno">3.2.2 </bdi>True North, Grid North, Project North</a></li></ol></li><li class="tocline"><a class="tocxref" href="#coordinatentransformatie-tussen-lokaal-crs-en-geodetisch"><bdi class="secno">3.3 </bdi>Coördinatentransformatie tussen lokaal CRS en geodetisch</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#horizontaal-2d-gelijkvormigheidstransformatie"><bdi class="secno">3.3.1 </bdi>Horizontaal - 2D gelijkvormigheidstransformatie</a></li><li class="tocline"><a class="tocxref" href="#vertikaal-vast-hoogteverschil"><bdi class="secno">3.3.2 </bdi>Vertikaal - vast hoogteverschil</a></li></ol></li><li class="tocline"><a class="tocxref" href="#geometrische-effecten-bij-bim-georeferentie-en-bim-transformatie"><bdi class="secno">3.4 </bdi>Geometrische effecten bij BIM-georeferentie en BIM-transformatie</a></li><li class="tocline"><a class="tocxref" href="#afwijkingen"><bdi class="secno">3.5 </bdi>Afwijkingen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#afwijking-door-projectie"><bdi class="secno">3.5.1 </bdi>Afwijking door projectie</a></li><li class="tocline"><a class="tocxref" href="#afwijking-door-aardkromming"><bdi class="secno">3.5.2 </bdi>Afwijking door aardkromming</a></li><li class="tocline"><a class="tocxref" href="#afwijking-door-lijnuitbuiging"><bdi class="secno">3.5.3 </bdi>Afwijking door lijnuitbuiging</a></li><li class="tocline"><a class="tocxref" href="#afwijking-van-kaart-noorden"><bdi class="secno">3.5.4 </bdi>Afwijking van kaart Noorden</a></li><li class="tocline"><a class="tocxref" href="#conclusie"><bdi class="secno">3.5.5 </bdi>Conclusie</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#methodes-voor-georeferentie"><bdi class="secno">4. </bdi>Methodes voor Georeferentie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#routes-voor-georeferentie"><bdi class="secno">4.1 </bdi>Routes voor georeferentie</a></li><li class="tocline"><a class="tocxref" href="#x1d-2d-en-3d-geo-en-bim-modellen"><bdi class="secno">4.2 </bdi>1D, 2D en 3D Geo- en BIM-modellen</a></li><li class="tocline"><a class="tocxref" href="#methodes-van-georeferentie"><bdi class="secno">4.3 </bdi>Methodes van Georeferentie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#rd-gemodelleerd-bim-naar-rdnap"><bdi class="secno">4.3.1 </bdi>RD-gemodelleerd BIM naar RDNAP</a></li><li class="tocline"><a class="tocxref" href="#xyz-gemodeleerd-bim-als-rd-naar-rdnap"><bdi class="secno">4.3.2 </bdi>XYZ gemodeleerd BIM als RD naar RDNAP</a></li><li class="tocline"><a class="tocxref" href="#xyz-gemodelleerd-bim-via-een-2d-gelijkvormigheidstransformatie-naar-rdnap"><bdi class="secno">4.3.3 </bdi>XYZ gemodelleerd BIM via een 2D gelijkvormigheidstransformatie naar RDNAP</a></li><li class="tocline"><a class="tocxref" href="#xyz-gemodelleerd-bim-via-een-3d-gelijkvormigheidstransformatie-naar-etrs89"><bdi class="secno">4.3.4 </bdi>XYZ gemodelleerd BIM via een 3D gelijkvormigheidstransformatie naar ETRS89</a></li><li class="tocline"><a class="tocxref" href="#xyz-gemodeleerd-bim-via-3d-een-3d-gelijkvormigheidstransformatie-naar-etrs89-en-hoogte-naar-nap"><bdi class="secno">4.3.5 </bdi>XYZ gemodeleerd BIM via 3D een 3D gelijkvormigheidstransformatie naar ETRS89 en hoogte naar NAP</a></li><li class="tocline"><a class="tocxref" href="#xyz-met-lokale-projectie-naar-etrs89"><bdi class="secno">4.3.6 </bdi>XYZ met lokale projectie naar ETRS89</a></li></ol></li><li class="tocline"><a class="tocxref" href="#levels-van-georeferentie-informatie"><bdi class="secno">4.4 </bdi>Levels van georeferentie-informatie</a></li><li class="tocline"><a class="tocxref" href="#schaal-en-correctie-op-basis-van-gebruikte-eeenheden"><bdi class="secno">4.5 </bdi>Schaal en correctie op basis van gebruikte eeenheden</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gebruik-van-geo-voor-georeferentie"><bdi class="secno">5. </bdi>Gebruik van geo voor georeferentie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#georeferentie-level-60-voor-bim-naar-geo"><bdi class="secno">5.1 </bdi>Georeferentie Level 60 voor BIM naar Geo</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-gebruik-van-survey-points"><bdi class="secno">5.1.1 </bdi>Het gebruik van survey points</a></li><li class="tocline"><a class="tocxref" href="#geografische-uitlijning"><bdi class="secno">5.1.2 </bdi>Geografische uitlijning</a></li></ol></li><li class="tocline"><a class="tocxref" href="#geo-datasets-voor-het-refereren-van-modellen"><bdi class="secno">5.2 </bdi>Geo datasets voor het refereren van modellen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kwaliteits-kenmerken-voor-geobestanden-naar-bim"><bdi class="secno">5.2.1 </bdi>Kwaliteits kenmerken voor geobestanden naar BIM</a></li><li class="tocline"><a class="tocxref" href="#primaire-kwaliteits-kenmerken-voor-geobestanden-naar-bim"><bdi class="secno">5.2.2 </bdi>Primaire kwaliteits kenmerken voor geobestanden naar bim</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#georeferentie-in-uitwisseling"><bdi class="secno">6. </bdi>Georeferentie in uitwisseling</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#industry-foundation-classes-ifc"><bdi class="secno">6.1 </bdi>Industry Foundation Classes (IFC)</a></li><li class="tocline"><a class="tocxref" href="#dxf"><bdi class="secno">6.2 </bdi>DXF</a></li><li class="tocline"><a class="tocxref" href="#city-gml"><bdi class="secno">6.3 </bdi>(City)GML</a></li><li class="tocline"><a class="tocxref" href="#cityjson"><bdi class="secno">6.4 </bdi>CityJSON</a></li><li class="tocline"><a class="tocxref" href="#geopackage"><bdi class="secno">6.5 </bdi>Geopackage</a></li><li class="tocline"><a class="tocxref" href="#api"><bdi class="secno">6.6 </bdi>API</a></li></ol></li><li class="tocline"><a class="tocxref" href="#georeferentie-in-de-domeinen-b-u-en-infra"><bdi class="secno">7. </bdi>Georeferentie in de domeinen B&amp;U en Infra</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#georeferentie-in-de-b-u"><bdi class="secno">7.1 </bdi>Georeferentie in de B&amp;U</a></li><li class="tocline"><a class="tocxref" href="#georeferentie-in-de-infra"><bdi class="secno">7.2 </bdi>Georeferentie in de Infra</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kenmerken-van-infraprojecten"><bdi class="secno">7.2.1 </bdi>Kenmerken van infraprojecten</a></li><li class="tocline"><a class="tocxref" href="#werkwijze-binnen-infra"><bdi class="secno">7.2.2 </bdi>Werkwijze binnen Infra</a></li><li class="tocline"><a class="tocxref" href="#toepassing-van-3d-software"><bdi class="secno">7.2.3 </bdi>Toepassing van 3D-software</a></li><li class="tocline"><a class="tocxref" href="#gevolgen-van-projectievervorming"><bdi class="secno">7.2.4 </bdi>Gevolgen van projectievervorming</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#handleiding-software"><bdi class="secno">8. </bdi>Handleiding Software</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#cad-onderlegger"><bdi class="secno">8.1 </bdi>CAD Onderlegger</a></li><li class="tocline"><a class="tocxref" href="#revit"><bdi class="secno">8.2 </bdi>Revit</a></li><li class="tocline"><a class="tocxref" href="#autocad-civil-3d"><bdi class="secno">8.3 </bdi>Autocad Civil 3D</a></li><li class="tocline"><a class="tocxref" href="#archicad"><bdi class="secno">8.4 </bdi>ArchiCAD</a></li><li class="tocline"><a class="tocxref" href="#tekla-structures"><bdi class="secno">8.5 </bdi>Tekla Structures</a></li><li class="tocline"><a class="tocxref" href="#sketchup"><bdi class="secno">8.6 </bdi>Sketchup</a></li><li class="tocline"><a class="tocxref" href="#blender"><bdi class="secno">8.7 </bdi>Blender</a></li><li class="tocline"><a class="tocxref" href="#illustrator-inkscape"><bdi class="secno">8.8 </bdi>Illustrator/Inkscape</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#illustrator-mapublisher"><bdi class="secno">8.8.1 </bdi>Illustrator MAPublisher</a></li></ol></li><li class="tocline"><a class="tocxref" href="#arcgis"><bdi class="secno">8.9 </bdi>ArcGIS</a></li><li class="tocline"><a class="tocxref" href="#qgis"><bdi class="secno">8.10 </bdi>QGIS</a></li><li class="tocline"><a class="tocxref" href="#controle-van-georeferentie-in-qgis-solibri-en-bimcollab"><bdi class="secno">8.11 </bdi>Controle van georeferentie in QGIS, Solibri en BIMCollab</a></li></ol></li><li class="tocline"><a class="tocxref" href="#tooling"><bdi class="secno">9. </bdi>Tooling</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ifcgref"><bdi class="secno">9.1 </bdi>IfcGref</a></li></ol></li><li class="tocline"><a class="tocxref" href="#validatie-van-gegeorefereerde-ifc-modellen"><bdi class="secno">10. </bdi>Validatie van gegeorefereerde IFC-modellen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#doel-van-de-validatie"><bdi class="secno">10.1 </bdi>Doel van de validatie</a></li><li class="tocline"><a class="tocxref" href="#resultaten-in-arcgis"><bdi class="secno">10.2 </bdi>Resultaten in ArcGIS</a></li><li class="tocline"><a class="tocxref" href="#resultaten-in-qgis"><bdi class="secno">10.3 </bdi>Resultaten in QGIS</a></li></ol></li><li class="tocline"><a class="tocxref" href="#bijlagen"><bdi class="secno">A. </bdi>Bijlagen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#definities-en-afkortingen"><bdi class="secno">A.1 </bdi>Definities en afkortingen</a></li></ol></li><li class="tocline"><a class="tocxref" href="#ifc"><bdi class="secno">B. </bdi>IFC</a></li><li class="tocline"><a class="tocxref" href="#wkt"><bdi class="secno">C. </bdi>WKT</a></li><li class="tocline"><a class="tocxref" href="#proj"><bdi class="secno">D. </bdi>PROJ</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#proj-string"><bdi class="secno">D.1 </bdi>PROJ-String</a></li><li class="tocline"><a class="tocxref" href="#projjson"><bdi class="secno">D.2 </bdi>PROJJSON</a></li></ol></li><li class="tocline"><a class="tocxref" href="#voorbeeld-van-georeferentie-in-gml"><bdi class="secno">E. </bdi>Voorbeeld van georeferentie in GML</a></li><li class="tocline"><a class="tocxref" href="#cityjson-0"><bdi class="secno">F. </bdi>CityJSON</a></li><li class="tocline"><a class="tocxref" href="#voorbeeld-van-georeferentie-met-api-s"><bdi class="secno">G. </bdi>Voorbeeld van georeferentie met API's</a></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">H. </bdi>Lijst met figuren</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">I. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informatieve-referenties"><bdi class="secno">I.1 </bdi>Informatieve referenties</a></li></ol></li></ol></nav>
 
   
   <section id="introductie"><div class="header-wrapper"><h2 id="x1-introductie"><bdi class="secno">1. </bdi>Introductie</h2><a class="self-link" href="#introductie" aria-label="Permalink for Section 1."></a></div>
@@ -1174,7 +1174,14 @@ Voor zonnestudies kan dit belangrijk zijn.</p>
   <p><strong>AANBEVELING:</strong> Bepaal voor elk project de omvang (lengte, breedte, hoogte) en de gewenste nauwkeurigheid. Kies op basis hiervan de route, methode en informatievoorziening van georeferentie.  </p>
 </aside></div></section></section></section>
   <section id="methodes-voor-georeferentie"><div class="header-wrapper"><h2 id="x4-methodes-voor-georeferentie"><bdi class="secno">4. </bdi>Methodes voor Georeferentie</h2><a class="self-link" href="#methodes-voor-georeferentie" aria-label="Permalink for Section 4."></a></div>
-<section id="x1d-2d-en-3d-geo-en-bim-modellen"><div class="header-wrapper"><h3 id="x4-1-1d-2d-en-3d-geo-en-bim-modellen"><bdi class="secno">4.1 </bdi>1D, 2D en 3D Geo- en BIM-modellen</h3><a class="self-link" href="#x1d-2d-en-3d-geo-en-bim-modellen" aria-label="Permalink for Section 4.1"></a></div>
+<section id="routes-voor-georeferentie"><div class="header-wrapper"><h3 id="x4-1-routes-voor-georeferentie"><bdi class="secno">4.1 </bdi>Routes voor georeferentie</h3><a class="self-link" href="#routes-voor-georeferentie" aria-label="Permalink for Section 4.1"></a></div>
+<p>Wanneer men een BIM-model daadwerkelijk gaat realiseren op de bouwplaats, wordt het model uitgezet in de werkelijkheid. Dit betekent dat het digitale coördinatensysteem van het BIM-model wordt gekoppeld aan vaste referentiepunten op de bouwplaats. Vanuit deze koppeling worden assen, stramienen, hoogtes en punten vanuit het BIM-model uitgezet met meetapparatuur zoals een total station. Op die manier worden posities van constructieve elementen, overgenomen vanuit het model. Deze posities markeert men fysiek in het veld, bijvoorbeeld met piketten of andere markeringen. Voor omvangrijke projecten kan dit proces ook worden ondersteund door machinebesturing. Een BIM-model vormt zo de basis voor de maatvoering in constructie in de werkelijkheid. Met bijvoorbeeld een rolmaat, of laser doet men snelle metingen en detailcontrole op de bowplaats. </p>
+<p>Om de gecreëerde fysieke werkelijkheid vast te leggen in een coördinatensysteem meet men objecten in, met meetapparatuur zoals een total station en RTK-GNSS. Hiervoor meet men o.a. de hoekenpunten en dakranden van gebouwen in. Alle gemeten punten worden omgerekend naar RD (x,y) met de hoogte in NAP. Vervolgens worden de punten in GIS/CAD-software verbonden tot polygonen, classificeert men de objecten en voegt men attributen toe.  </p>
+<figure id="Routes voor georefereren" style="display: block; text-align: center; margin: 0 auto;">
+  <img src="media/Routes_voor_Georefereren.png" alt="Routes voor georefereren" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
+  <figcaption><a class="self-link" href="#Routes voor georefereren">Figuur <bdi class="figno">12</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Afwijking-door-aardkromming"></a><span class="fig-title">Routes voor georefereren</span></span></figcaption>
+</figure><p>Wanneer men een BIM-model, dat gemodelleerd is in een lokaal cartesisch CRS (engineering CRS), in een <a href="#dfn-geo-omgeving" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-geo-omgeving-1">GEO-omgeving</a> wil importeren, zonder de route uitzetten en inmeten, moet men een transformatie doen. Afhankelijk van de situatie zijn er verschillende methodes beschikbaar om  BIM- en Geo-modellen samen te voegen op de kaart. Een in RD ingemeten (as-built) GEO-gebouwgeometrie kan men bijvoorbeeld vergelijken met een XYZ(as-designed) BIM-gebouwgeometrie na een 2D gelijkvormigheidstransformatie en hoogtecorrectie, waarin de schaal, translaties en rotatie aangegeven dienen te worden. </p>
+</section><section id="x1d-2d-en-3d-geo-en-bim-modellen"><div class="header-wrapper"><h3 id="x4-2-1d-2d-en-3d-geo-en-bim-modellen"><bdi class="secno">4.2 </bdi>1D, 2D en 3D Geo- en BIM-modellen</h3><a class="self-link" href="#x1d-2d-en-3d-geo-en-bim-modellen" aria-label="Permalink for Section 4.2"></a></div>
 <p>Zowel BIM- als GEO-modellen kunnen een 1D, 2D als 3D coordinatenstelsel gebruiken. Om een juiste transformatie van coordinaten van 2D en 3D modellen te verkrijgen kunnen verschillende methoden worden toegepast.  </p>
 <p>Een GEO coordinatenstelsel kan 3D samengesteld (EPSG:7415), 2D (EPSG:28992) of 1D (EPSG:5709) zijn. </p>
 <table>
@@ -1246,16 +1253,12 @@ Voor zonnestudies kan dit belangrijk zijn.</p>
       <td>0-transformatie</td>
     </tr>
 </tbody></table><figure id="2D-en-3D-Geo-of-BIM-combineren">
-      <img src="./media/2d_en_3d_GeoBIM.png" alt="2D en 3D Geo of BIM combineren" width="700">
-    <figcaption><a class="self-link" href="#2D-en-3D-Geo-of-BIM-combineren">Figuur <bdi class="figno">12</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-2D-en-3D-Geo-of-BIM-combineren"></a><span class="fig-title">2D en 3D Geo of BIM combineren</span></span></figcaption>
-</figure></section><section id="routes-voor-georeferentie"><div class="header-wrapper"><h3 id="x4-2-routes-voor-georeferentie"><bdi class="secno">4.2 </bdi>Routes voor georeferentie</h3><a class="self-link" href="#routes-voor-georeferentie" aria-label="Permalink for Section 4.2"></a></div>
-<p>Wanneer men een BIM-model daadwerkelijk gaat realiseren op de bouwplaats, wordt het model uitgezet in de werkelijkheid. Dit betekent dat het digitale coördinatensysteem van het BIM-model wordt gekoppeld aan vaste referentiepunten op de bouwplaats. Vanuit deze koppeling worden assen, stramienen, hoogtes en punten vanuit het BIM-model exact uitgezet met meetapparatuur zoals een total station. Op die manier worden posities van constructieve elementen, overgenomen vanuit het model. Deze posities markeert men fysiek in het veld, bijvoorbeeld met piketten of andere markeringen. Voor omvangrijke projecten kan dit proces ook worden ondersteund door machinebesturing. Een BIM-model vormt zo de basis voor de maatvoering in constructie in de werkelijkheid. Met bijvoorbeeld een rolmaat, of laser doet men snelle metingen en detailcontrole op de bowplaats. </p>
-<p>Om de gecreëerde fysieke werkelijkheid vast te leggen in een coördinatensysteem meet men objecten in, met meetapparatuur zoals een total station en RTK-GNSS. Hiervoor meet men o.a. de hoekenpunten en dakranden van gebouwen in. Alle gemeten punten worden omgerekend naar RD (x,y) met de hoogte in NAP. Vervolgens worden de punten in GIS/CAD-software verbonden tot polygonen, classificeert men de objecten en voegt men attributen toe.  </p>
-<figure id="Routes voor georefereren" style="display: block; text-align: center; margin: 0 auto;">
-  <img src="media/Routes_voor_Georefereren.png" alt="Routes voor georefereren" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
-  <figcaption><a class="self-link" href="#Routes voor georefereren">Figuur <bdi class="figno">13</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Afwijking-door-aardkromming"></a><span class="fig-title">Routes voor georefereren</span></span></figcaption>
-</figure><p>Wanneer men een BIM-model, dat gemodelleerd is in een lokaal cartesisch CRS (engineering CRS), in een <a href="#dfn-geo-omgeving" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-geo-omgeving-1">GEO-omgeving</a> wil importeren, zonder de route uitzetten en inmeten, moet men een transformatie doen. Afhankelijk van de situatie zijn er verschillende methodes beschikbaar om  BIM- en Geo-modellen samen te voegen op de kaart. Een in RD ingemeten (as-built) GEO-gebouwgeometrie kan men bijvoorbeeld vergelijken met een (as-designed) BIM-gebouwgeometrie na een 2D gelijkvormigheidstransformatie en hoogtecorrectie, waarin de schaal, translaties en rotatie aangegeven dienen te worden. </p>
-</section><section id="methodes-van-georeferentie"><div class="header-wrapper"><h3 id="x4-3-methodes-van-georeferentie"><bdi class="secno">4.3 </bdi>Methodes van Georeferentie</h3><a class="self-link" href="#methodes-van-georeferentie" aria-label="Permalink for Section 4.3"></a></div>
+      <img src="./media/2d_en_3d_GeoBIM_1.png" alt="2D en 3D Geo of BIM combineren" width="700">
+    <figcaption><a class="self-link" href="#2D-en-3D-Geo-of-BIM-combineren">Figuur <bdi class="figno">13</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-2D-en-3D-Geo-of-BIM-combineren"></a><span class="fig-title">2D en 3D Geo of BIM combineren</span></span></figcaption>
+</figure><figure id="2D-en-3D-Geo-of-BIM-combineren">
+      <img src="./media/2d_en_3d_GeoBIM_2.png" alt="2D en 3D Geo of BIM combineren" width="700">
+    <figcaption><a class="self-link" href="#2D-en-3D-Geo-of-BIM-combineren">Figuur <bdi class="figno">14</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-2D-en-3D-Geo-of-BIM-combineren"></a><span class="fig-title">2D en 3D Geo of BIM combineren</span></span></figcaption>
+</figure></section><section id="methodes-van-georeferentie"><div class="header-wrapper"><h3 id="x4-3-methodes-van-georeferentie"><bdi class="secno">4.3 </bdi>Methodes van Georeferentie</h3><a class="self-link" href="#methodes-van-georeferentie" aria-label="Permalink for Section 4.3"></a></div>
 <section id="rd-gemodelleerd-bim-naar-rdnap"><div class="header-wrapper"><h4 id="x4-3-1-rd-gemodelleerd-bim-naar-rdnap"><bdi class="secno">4.3.1 </bdi>RD-gemodelleerd BIM naar RDNAP</h4><a class="self-link" href="#rd-gemodelleerd-bim-naar-rdnap" aria-label="Permalink for Section 4.3.1"></a></div>
 <p>Het is mogelijk om "RD bewust" te modelleren in BIM. Wanneer men dit doet moet men rekening houden met de schaalcorrectie voor RD. Een project in de stad Amersfoort zal vanwege projectie, in RD +/-  9 mm per 100 meter kleiner getekend worden dan hoe het in werkelijkheid moet worden. Een lijn van 400 meter zal dan als een lijn van +/- 396,4 meter gemodelleerd moeten worden. De vergroting of reductie geldt niet voor verticale lijnen en NAP-hoogtes in het model. Dit vereist grote zorgvuldigheid van de modelleur.<br>De transformatie van XYZ-BIM als RDNAP in BIM naar RDNAP is een "nultransformatie". </p>
 </section><section id="xyz-gemodeleerd-bim-als-rd-naar-rdnap"><div class="header-wrapper"><h4 id="x4-3-2-xyz-gemodeleerd-bim-als-rd-naar-rdnap"><bdi class="secno">4.3.2 </bdi>XYZ gemodeleerd BIM als RD naar RDNAP</h4><a class="self-link" href="#xyz-gemodeleerd-bim-als-rd-naar-rdnap" aria-label="Permalink for Section 4.3.2"></a></div>
@@ -1473,7 +1476,7 @@ Bij infrastructuurprojecten zijn in veel gevallen geen gebouwen aanwezig, waardo
 <figure id="Geo_overzicht_BIM_DTB">  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
     <img src="./media/geo_overzicht.png" alt="geo_overzicht" height="250">
     <img src="./media/geo_overzicht_2.png" alt="geo_overzicht_2" height="250">
-  </div>  <figcaption><a class="self-link" href="#Geo_overzicht_BIM_DTB">Figuur <bdi class="figno">14</bdi></a> <span class="fig-title">
+  </div>  <figcaption><a class="self-link" href="#Geo_overzicht_BIM_DTB">Figuur <bdi class="figno">15</bdi></a> <span class="fig-title">
     <em>
       Overzicht van de Drechttunnel met het DTB en de 3DBAG. Links geeft de data boven de grond weer, en rechts de data onder de grond.  
       Dit overzicht is gemaakt vanuit de RWS Digital Twin Basisvoorziening.
@@ -1564,7 +1567,7 @@ Nederland</em></a>). In de tabel zijn de volgende informatie weergegeven: de bes
 <p>Het moment van inwinning bepaalt de bruikbaarheid van de dataset, aangezien iedere geo-dataset die wordt weergegeven in een GIS-omgeving een momentopname is. Een geo-dataset vertegenwoordigt nooit de volledige werkelijkheid, maar vormt slechts een benadering van de omgeving. Hierdoor kan de omgeving, afhankelijk van de mate van verandering, in de loop van de tijd sterk of minder sterk afwijken van de oorspronkelijke weergave. Dit wordt geïllustreerd in de onderstaande figuren aan de hand van de stationsregio van Delft, zoals weergegeven in het Actueel Hoogtebestand Nederland en de 3D Basisvoorziening, waarbij de bouw van de stationsregio een ingrijpende verandering in het terrein laat zien.</p>
 <figure id="Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft">
       <img src="./media/Regio_delft_verandering.png" alt="Leefttijd van verschillende puntenwolken van de stationsregio in Delft" height="500">
-    <figcaption><a class="self-link" href="#Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft">Figuur <bdi class="figno">15</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft"></a><span class="fig-title">Leefttijd van verschillende puntenwolken van de stationsregio in Delft (figuur is uit wp1 van het <a href="https://www.ahn.nl/integrale-hoogtevoorziening-nederland"> <em>Intergaal Hoogtevoorziening Nederland</em></a> overgenomen.) </span></span></figcaption>
+    <figcaption><a class="self-link" href="#Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft">Figuur <bdi class="figno">16</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft"></a><span class="fig-title">Leefttijd van verschillende puntenwolken van de stationsregio in Delft (figuur is uit wp1 van het <a href="https://www.ahn.nl/integrale-hoogtevoorziening-nederland"> <em>Intergaal Hoogtevoorziening Nederland</em></a> overgenomen.) </span></span></figcaption>
 </figure></section></section></section>
   <section id="georeferentie-in-uitwisseling"><div class="header-wrapper"><h2 id="x6-georeferentie-in-uitwisseling"><bdi class="secno">6. </bdi>Georeferentie in uitwisseling</h2><a class="self-link" href="#georeferentie-in-uitwisseling" aria-label="Permalink for Section 6."></a></div>
 <p>Wanneer men in een bepaalde toepassing of softwarepakket werkt, bevindt een model zich binnen deze toepassing in een assenstelsel. Dit is nodig om op een systematische, eenduidige en wiskundige manier locaties en vormen in ruimte te kunnen vastleggen, verwerken en communiceren. Wanneer men modellen wil delen of combineren buiten deze toepassing of softwarepakket kan men dit in open uitwisselformaat uitwisselen. Hieronder volgt een overzicht van verschillende open uitwisselformaten en de manieren waarop men georeferentie hierin kan doen. </p>
@@ -1746,8 +1749,8 @@ infrastructuur in hetzelfde referentiestelsel is ingemeten.</p>
 <li>In QGIS selecteer Project&gt;Import/Export&gt;Export Project to DXF. De CRS zal EPSG:28992 (RD NEW) tonen.</li>
 </ol>
 <figure id="QGIS-DXF-Export-2D" style="display: block; text-align: center; margin: 0 auto;">
-      <img src="./media/QGIS_1.png" alt="QGIS-DXF-Export-2D" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#QGIS-DXF-Export-2D">Figuur <bdi class="figno">16</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-QGIS-DXF-Export-2D"></a><span class="fig-title">Export 2D project naar DXF in QGIS</span></span></figcaption>
+      <img src="./media/Handleiding/QGIS/QGIS_1.png" alt="QGIS-DXF-Export-2D" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#QGIS-DXF-Export-2D">Figuur <bdi class="figno">17</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-QGIS-DXF-Export-2D"></a><span class="fig-title">Export 2D project naar DXF in QGIS</span></span></figcaption>
 </figure><p>Optie 2: 3D </p>
 <ol>
 <li>Ga naar <a href="https://www.3dbag.nl/nl/download">3D BAG</a> en selecteer je gewenste locatie (tegel).</li>
@@ -1756,14 +1759,14 @@ infrastructuur in hetzelfde referentiestelsel is ingemeten.</p>
 <li>In QGIS ga naar Project&gt;Import/Export&gt;Export Project to DXF. De CRS zal EPSG:74152 (RD NEW + NAP height) tonen.</li>
 </ol>
 <figure id="QGIS-DXF-Export-3D" style="display: block; text-align: center; margin: 0 auto;">
-      <img src="./media/QGIS_2.png" alt="QGIS-DXF-Export-3D" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#QGIS-DXF-Export-3D">Figuur <bdi class="figno">17</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-QGIS-DXF-Export-3D"></a><span class="fig-title">Export 2D project naar DXF in QGIS</span></span></figcaption>
+      <img src="./media/Handleiding/QGIS/QGIS_2.png" alt="QGIS-DXF-Export-3D" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#QGIS-DXF-Export-3D">Figuur <bdi class="figno">18</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-QGIS-DXF-Export-3D"></a><span class="fig-title">Export 2D project naar DXF in QGIS</span></span></figcaption>
 </figure></section><section id="revit"><div class="header-wrapper"><h3 id="x8-2-revit"><bdi class="secno">8.2 </bdi>Revit</h3><a class="self-link" href="#revit" aria-label="Permalink for Section 8.2"></a></div>
 <p>Revit kent het begrip <a href="#dfn-internal-origin" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-internal-origin-1">Internal Origin</a>. Dit is de oorsprong in Revit die niet verplaatsbaar is. Daarnaast bestaat er een <em><a href="#dfn-project-basepoint" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-project-basepoint-1">Project Basepoint</a>:</em>, ook wel Lokaal Coördinatiepunt. Dit punt wordt gebruikt om gemodelleerde elementen te positioneren en uitwisseling met andere modellen mogelijk te maken. tijdens engineering en/of wanneer Georeferentie niet relevant is. Ook kent Revit een <a href="#dfn-survey-point" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-survey-point-2">Survey Point</a>. Dit punt, een soort CRS-coordinatiepunt, wordt gebruikt om de relatie te leggen met een coördinatenstelsel (CRS) en zo de positie van het model op de aardbol vast te leggen.
 Revit kent <a href="#dfn-project-units" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-project-units-1">Project Units</a>. De project units bevat de instelling van de standaard eenheden die men binnen het project gebruikt. Hier kan men bijvoorbeeld opgegeven of er met meters of met millimeters wordt gewerkt of volume in liters of m<sup>3</sup>.<br></p>
 <figure id="Scherm-in-Revit-dat-Lokaal-Coordinatiepunt-en-CRS-Coordinatiepunt-laat-zien" style="display: block; text-align: center; margin: 0 auto;">
-      <img src="./media/Revit_1.png" alt="Scherm in Revit dat Lokaal Coordinatiepunt en CRS-Coordinatiepunt laat zien" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Scherm-in-Revit-dat-Lokaal-Coordinatiepunt-en-CRS-Coordinatiepunt-laat-zien">Figuur <bdi class="figno">18</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Scherm-in-Revit-dat-Lokaal-Coordinatiepunt-en-CRS-Coordinatiepunt-laat-zien"></a><span class="fig-title">Scherm in Revit dat Lokaal Coordinatiepunt en CRS-Coordinatiepunt laat zien</span></span></figcaption>
+      <img src="./media/Handleiding/Revit/Revit_1.png" alt="Scherm in Revit dat Lokaal Coordinatiepunt en CRS-Coordinatiepunt laat zien" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Scherm-in-Revit-dat-Lokaal-Coordinatiepunt-en-CRS-Coordinatiepunt-laat-zien">Figuur <bdi class="figno">19</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Scherm-in-Revit-dat-Lokaal-Coordinatiepunt-en-CRS-Coordinatiepunt-laat-zien"></a><span class="fig-title">Scherm in Revit dat Lokaal Coordinatiepunt en CRS-Coordinatiepunt laat zien</span></span></figcaption>
 </figure><p><strong>Methode 1: link DXF, DWG of RVT</strong></p>
 <ol>
 <li>Gebruik een DXF, DWG of een RVT in de gewenste CRS-coördinaten als onderlegger en link die in Revit. Daarbij is het aan te raden om bij het linken op te geven dat de eenheid van het bestand meters. Gebruik bij voorkeur een onderlegger die CRS-informatie in de bron bevat zodat Revit de EPSG-code overneemt en je die niet handmatig hoeft toe te voegen.</li>
@@ -1786,8 +1789,8 @@ Revit kent <a href="#dfn-project-units" class="internalDFN" data-link-type="dfn"
 <li>Zet eventueel de Project Units terug naar millimeter.</li>
 </ol>
 <figure id="Controle-in-Revit" style="display: block; text-align: center; margin: 0 auto;">
-      <img src="./media/Revit_2.png" alt="Controle-in-Revit" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Controle-in-Revit">Figuur <bdi class="figno">19</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Controle-in-Revit"></a><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></span></figcaption>
+      <img src="./media/Handleiding/Revit/Revit_2.png" alt="Controle-in-Revit" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Controle-in-Revit">Figuur <bdi class="figno">20</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Controle-in-Revit"></a><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></span></figcaption>
 </figure><p><strong>Units</strong>
 Door een omissie in de IFC-exporter van Revit moet voorafgaand aan het exporteren naar IFC de Project Units Length op meter ingesteld worden.</p>
 <p><strong>Export naar IFC</strong></p>
@@ -1796,15 +1799,15 @@ Door een omissie in de IFC-exporter van Revit moet voorafgaand aan het exportere
 De IFC is niet ge-georefereerd (alleen de coordinaten van Project Basepoint zijn correct) en niet Grid-noord gericht (Project North in Revit).<br></li>
 </ol>
 <figure id="Setup-in-Revit" style="display: block; text-align: center; margin: 0 auto;">
-      <img src="./media/Revit_3.png" alt="Setup-in-Revit" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Setup-in-Revit">Figuur <bdi class="figno">20</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Setup-in-Revit"></a><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></span></figcaption>
+      <img src="./media/Handleiding/Revit/Revit_3.png" alt="Setup-in-Revit" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Setup-in-Revit">Figuur <bdi class="figno">21</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Setup-in-Revit"></a><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></span></figcaption>
 </figure><ol start="2">
 <li>CRS-Coördinatiepunt: exporteer een IFC (4 of hoger) met Survey Point als Coordinate Base.<br>
 Vul bij EPSG Code in: 28992. Dit zorgt ervoor dat de referentie wordt herkend in de software of tooling. De IFC is ge-Georefereerd en is Grid-noord gericht (True North in Revit)<br> Officieel is de EPSG Code 7415 vanwege de 3 dimensies van coordinaten. Dit wordt (nog) niet ondersteund in Revit.</li>
 </ol>
 <figure id="Setup-in-Revit-Survey-Point" style="display: block; text-align: center; margin: 0 auto;">
-      <img src="./media/Revit_4.png" alt="Setup-in-Revit-Survey-Point" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Setup-in-Revit-Survey-Point">Figuur <bdi class="figno">21</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Setup-in-Revit-Survey-Point"></a><span class="fig-title">Scherm in Revit met instellingen voor IFC export met Survey Point als Coordinate Base</span></span></figcaption>
+      <img src="./media/Handleiding/Revit/Revit_4.png" alt="Setup-in-Revit-Survey-Point" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Setup-in-Revit-Survey-Point">Figuur <bdi class="figno">22</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Setup-in-Revit-Survey-Point"></a><span class="fig-title">Scherm in Revit met instellingen voor IFC export met Survey Point als Coordinate Base</span></span></figcaption>
 </figure><p>Zie ook <a href="https://github.com/Hans-Lammerts/Sample-Test-Files/blob/master/Geolocation%20information%20from%20Revit%20to%20IFC_v1.0.pdf">Hans Hendriks (2022)</a> voor aanvullende toelichting.</p>
 </section><section id="autocad-civil-3d"><div class="header-wrapper"><h3 id="x8-3-autocad-civil-3d"><bdi class="secno">8.3 </bdi>Autocad Civil 3D</h3><a class="self-link" href="#autocad-civil-3d" aria-label="Permalink for Section 8.3"></a></div>
 <p>Er zijn momenteel 2 manieren om een Export te maken in Civil3D. De oude manier middels het commando “IFCEXPORT”. Hiermee worden alle Solids in het huidige model geëxporteerd. Dit maakt echter geen gebruikt van de nieuwe functionaliteiten van IFC4x3. Met de oude manier is het ook nodig om een Corridor eerst als solids te exporteren voordat je deze naar IFC exporteert. 
@@ -1816,8 +1819,8 @@ Deze <a href="https://www.autodesk.com/support/technical/article/caas/sfdcarticl
 <li>Controleer of het RD stelsel correct is ingesteld met de het commando “EDITDRAWINGSETTING” of het commando “MAPCSASSIGN”</li>
 </ol>
 <figure id="Cordinate_system_Civil3D" style="display: block; text-align: center; margin: 0 auto;">
-      <img src="./media/Coordinate_System_Civil3D.png" alt="Cordinate_system_Civil3D" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Cordinate_system_Civil3D">Figuur <bdi class="figno">22</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Cordinate_system_Civil3D"></a><span class="fig-title">Controle van instellingen van RD-stelsel in Civil 3D</span></span></figcaption>
+      <img src="./media/Handleiding/Civil3D/Coordinate_System_Civil3D.png" alt="Cordinate_system_Civil3D" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Cordinate_system_Civil3D">Figuur <bdi class="figno">23</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Cordinate_system_Civil3D"></a><span class="fig-title">Controle van instellingen van RD-stelsel in Civil 3D</span></span></figcaption>
 </figure><ol start="3">
 <li>Spreek een BIM Base Point af binnen je project af. In het voorbeeld is X=93000, Y=441000 gekozen. Het is slim om dit punt te markeren met een symbool</li>
 <li>Gebruik het commando “IFCInfraSetProjectBasePoint” om het zojuist afgestemde basepoint te selecteren als basispunt voor de IFC Export. Er wordt een COGO point aangemaakt op deze locatie.</li>
@@ -1836,11 +1839,11 @@ In deze <a href="https://help.autodesk.com/view/CIV3D/2024/ENU/?guid=GUID-FBA4D6
 </ol>
 <div style="display:flex; gap:20px; justify-content:center; align-items:flex-start;">
   <figure style="text-align:center; margin:0;" id="Cordinate_system_ArchiCAD">
-    <img src="./media/Archicad_01.png" alt="Cordinate_system_ArchiCAD" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Cordinate_system_ArchiCAD">Figuur <bdi class="figno">23</bdi></a> <span class="fig-title">Controle van instellingen van RD-stelsel in ArchiCAD</span></figcaption>
+    <img src="./media/Handleiding/ArchiCAD/Archicad_01.png" alt="Cordinate_system_ArchiCAD" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Cordinate_system_ArchiCAD">Figuur <bdi class="figno">24</bdi></a> <span class="fig-title">Controle van instellingen van RD-stelsel in ArchiCAD</span></figcaption>
   </figure>  <figure style="text-align:center; margin:0;" id="Cordinate_system_ArchiCAD_2">
-    <img src="./media/Archicad_02.png" alt="Cordinate_system_ArchiCAD_2" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Cordinate_system_ArchiCAD_2">Figuur <bdi class="figno">24</bdi></a> <span class="fig-title">Aanpassing van instellingen van RD-stelsel in ArchiCAD</span></figcaption>
+    <img src="./media/Handleiding/ArchiCAD/Archicad_02.png" alt="Cordinate_system_ArchiCAD_2" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Cordinate_system_ArchiCAD_2">Figuur <bdi class="figno">25</bdi></a> <span class="fig-title">Aanpassing van instellingen van RD-stelsel in ArchiCAD</span></figcaption>
   </figure>
 </div><div class="note" role="note" id="issue-container-generatedID-10"><div role="heading" class="note-title marker" id="h-note-10" aria-level="4"><span>Noot</span><span class="issue-label">: Werk dicht op de project-oriëntatie in ArchiCAD</span></div><aside class="">
   <p><strong>AANBEVELING:</strong> Werk het liefst zo dicht mogelijk op de project-oriëntatie in ArchiCAD zodat grote offset-waarden in het IFC-bestand worden vermeden.   </p>
@@ -1897,8 +1900,8 @@ Controleer in de Data Conversion/Units sectie dat de exportunits correct zijn in
  en sla het basispunt op onder een naam door op de “+” knop te klikken (3):<br></li>
 </ol>
 <figure id="Basispunt_in_Tekla" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/Tekla_01.png" alt="Basispunt_in_Tekla" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Basispunt_in_Tekla">Figuur <bdi class="figno">25</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/Tekla/Tekla_01.png" alt="Basispunt_in_Tekla" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Basispunt_in_Tekla">Figuur <bdi class="figno">26</bdi></a> <span class="fig-title">
       Basispunt in Tekla
     </span></figcaption>
 </figure><ol start="2">
@@ -1906,8 +1909,8 @@ Controleer in de Data Conversion/Units sectie dat de exportunits correct zijn in
  Selecteer bij Locatie door het gedefinieerde basispunt:</li>
 </ol>
 <figure id="IFC_Export_in_Tekla" style="display: block; text-align: center; margin: 0 auto;">
-  <img src="./media/Tekla_02.png" alt="IFC_Export_in_Tekla" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
-   <figcaption><a class="self-link" href="#IFC_Export_in_Tekla">Figuur <bdi class="figno">26</bdi></a> <span class="fig-title">
+  <img src="./media/Handleiding/Tekla/Tekla_02.png" alt="IFC_Export_in_Tekla" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
+   <figcaption><a class="self-link" href="#IFC_Export_in_Tekla">Figuur <bdi class="figno">27</bdi></a> <span class="fig-title">
       IFC exporteren in Tekla
     </span></figcaption>
 </figure><p>Definieer vervolgens de overige benodigde gegevens. Bij de optie <em>Basispunt exporteren</em> kan gekozen worden voor de methode <em>IfcMapConversion</em> of <em>IfcSite</em> als export-setting van dit betreffende Basispunt.</p>
@@ -1916,14 +1919,14 @@ Controleer in de Data Conversion/Units sectie dat de exportunits correct zijn in
 Klik in het zijpaneel op Referentiemodellen:</li>
 </ol>
 <figure id="IFC_importeren_in_Tekla" style="display: block; text-align: center; margin: 0 auto;">
-  <img src="./media/Tekla_03.png" alt="IFC_importeren_in_Tekla" style="width: 100%; max-width: 200px; height: auto; display: block; margin: 0 auto;">
-   <figcaption><a class="self-link" href="#IFC_importeren_in_Tekla">Figuur <bdi class="figno">27</bdi></a> <span class="fig-title">
+  <img src="./media/Handleiding/Tekla/Tekla_03.png" alt="IFC_importeren_in_Tekla" style="width: 100%; max-width: 200px; height: auto; display: block; margin: 0 auto;">
+   <figcaption><a class="self-link" href="#IFC_importeren_in_Tekla">Figuur <bdi class="figno">28</bdi></a> <span class="fig-title">
       IFC importeren in Tekla
     </span></figcaption>
 </figure><p>Klik vervolgens op de knop <strong>+ Model toevoegen</strong> om het dialoogvenster <strong>Model toevoegen</strong> te openen. Selecteer bij Locatie door het gedefinieerde basispunt:</p>
 <figure id="Model_toevoegen_in_Tekla" style="display: block; text-align: center; margin: 0 auto;">
-  <img src="./media/Tekla_04.png" alt="Model_toevoegen_in_Tekla" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
-   <figcaption><a class="self-link" href="#Model_toevoegen_in_Tekla">Figuur <bdi class="figno">28</bdi></a> <span class="fig-title">
+  <img src="./media/Handleiding/Tekla/Tekla_04.png" alt="Model_toevoegen_in_Tekla" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
+   <figcaption><a class="self-link" href="#Model_toevoegen_in_Tekla">Figuur <bdi class="figno">29</bdi></a> <span class="fig-title">
       Model toevoegen in Tekla
     </span></figcaption>
 </figure><p>Blader vervolgens naar het betreffende IFC-bestand en klik op de knop <strong>Model toevoegen</strong> om het IFC-model in te voegen.
@@ -1965,27 +1968,27 @@ Het is in de huidige versie van Sketchup momenteel nog niet mogelijk om op hoog 
 Vanuit de service <a href="https://bim-tools.github.io/perceel2ifc/">IFC2Perceel</a> kan men een kadastraal perceel als IFC downloaden. 
 Deze site geeft een actueel kadastrale perceel op NAP hoogte met een <a href="#dfn-geo-coordinatiepunt" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-geo-coordinatiepunt-1">GEO Coördinatiepunt</a></p>
 <figure id="Perceel_2_IFC" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/Perceel2IFC.png" alt="Perceel_2_IFC" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Perceel_2_IFC">Figuur <bdi class="figno">29</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/Blender/Perceel2IFC.png" alt="Perceel_2_IFC" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Perceel_2_IFC">Figuur <bdi class="figno">30</bdi></a> <span class="fig-title">
       Perceel2IFC 
     </span></figcaption>
 </figure><p>Waarden voor de geografische plaatsing van het model <a href="#dfn-nulpunt" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-nulpunt-1">nulpunt</a> kun je bekijken en aanpassen onder Project Setup &gt; Geometry &gt; Georeferencing
 Dit zijn exact dezelfde waarden als IFCmapconversion. </p>
 <figure id="Georeferentie_van_IFC_in_Blender" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/Blender_01.png" alt="Georeferentie_van_IFC_in_Blender" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Georeferentie_van_IFC_in_Blender">Figuur <bdi class="figno">30</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/Blender/Blender_01.png" alt="Georeferentie_van_IFC_in_Blender" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Georeferentie_van_IFC_in_Blender">Figuur <bdi class="figno">31</bdi></a> <span class="fig-title">
       Georeferentie van IFC bekijken in Blender 
     </span></figcaption>
 </figure><p>Gebruik het oog symbooltje en size om het visueel te laten weergeven</p>
 <figure id="Georeferentie_van_IFC_in_Blender_2" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/Blender_02.png" alt="Georeferentie_van_IFC_in_Blender_2" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Georeferentie_van_IFC_in_Blender_2">Figuur <bdi class="figno">31</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/Blender/Blender_02.png" alt="Georeferentie_van_IFC_in_Blender_2" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Georeferentie_van_IFC_in_Blender_2">Figuur <bdi class="figno">32</bdi></a> <span class="fig-title">
       Georeferentie van IFC bekijken in Blender 
     </span></figcaption>
 </figure><p>Handig is ook dat je de rotatie met Grid North kunt laten berekenen</p>
 <figure id="Georeferentie_van_IFC_in_Blender_3" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/Blender_03.png" alt="Georeferentie_van_IFC_in_Blender_3" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Georeferentie_van_IFC_in_Blender_3">Figuur <bdi class="figno">32</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/Blender/Blender_03.png" alt="Georeferentie_van_IFC_in_Blender_3" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Georeferentie_van_IFC_in_Blender_3">Figuur <bdi class="figno">33</bdi></a> <span class="fig-title">
       Georeferentie van IFC bekijken in Blender 
     </span></figcaption>
 </figure><p>Op basis van deze georeferentie kan men verder modelleren in Blender. </p>
@@ -1993,15 +1996,15 @@ Dit zijn exact dezelfde waarden als IFCmapconversion. </p>
 <p>Deze waarden kan men invullen bij het attribuut IfcMapconversion. </p>
 <p>Start hiervoor een nieuw Ifc Project, het liefst in meters: </p>
 <figure id="Georeferentie_van_IFC_in_Blender_4" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/Blender_04.png" alt="New_IFC_Project_In_Blender" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Georeferentie_van_IFC_in_Blender_4">Figuur <bdi class="figno">33</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/Blender/Blender_04.png" alt="New_IFC_Project_In_Blender" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Georeferentie_van_IFC_in_Blender_4">Figuur <bdi class="figno">34</bdi></a> <span class="fig-title">
       Nieuw ifc-project, in meters, in Blender  
     </span></figcaption>
 </figure><p>Druk op het "+" teken naast IfcMapConversion en vul de juiste gegevens in.</p>
 <div id="tabel-Blender-ifcmapconversion" style="display: flex; flex-wrap: nowrap; gap: 1em; justify-content: center;">
-  <img src="./media/Blender_05.png" alt="IfcMapConversion_in_Blender" style="width: 400px; height: auto; display: block;">
-  <img src="./media/Blender_06.png" alt="IfcMapConversion_leeg_in_Blender" style="width: 400px; height: auto; display: block;">
-  <img src="./media/Blender_07.png" alt="IfcMapConversion_gevuld_in_Blender" style="width: 400px; height: auto; display: block;">
+  <img src="./media/Handleiding/Blender/Blender_05.png" alt="IfcMapConversion_in_Blender" style="width: 400px; height: auto; display: block;">
+  <img src="./media/Handleiding/Blender/Blender_06.png" alt="IfcMapConversion_leeg_in_Blender" style="width: 400px; height: auto; display: block;">
+  <img src="./media/Handleiding/Blender/Blender_07.png" alt="IfcMapConversion_gevuld_in_Blender" style="width: 400px; height: auto; display: block;">
 </div><p>Sla het model op als ifc en gebruik tooling zoals ifcgref of andere toepassingen om de georeferentie te controleren. </p>
 <p>Importeren van Geo
 Het is ook mogelijk om met de extensie BlenderGIS shapefiles in te laden. Deze worden op het Blender 0,0,0 punt gepositioneerd. Wel kan de geometrie gebruikt worden voor modellering. </p>
@@ -2009,32 +2012,32 @@ Het is ook mogelijk om met de extensie BlenderGIS shapefiles in te laden. Deze w
 </section><section id="illustrator-inkscape"><div class="header-wrapper"><h3 id="x8-8-illustrator-inkscape"><bdi class="secno">8.8 </bdi>Illustrator/Inkscape</h3><a class="self-link" href="#illustrator-inkscape" aria-label="Permalink for Section 8.8"></a></div>
 <p>In Illustrator/Inkscape werkt men op digitaal papierformaat. Zorg ervoor dat voorafgaand aan het ontwerp er een onderlegger kaartlaag gebruikt wordt met bekende punten (zoals de BGT). Download deze onderlegger in DXF. Zie <a href="#cad-onderlegger">CAD-onderlegger</a> of <a href="#qgis">QGIS</a> hoe dit te doen. Laad deze DXF in Illustrator/Inkscape: </p>
 <figure id="Import_DXF_in_Inkscape" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/Inkscape_01.png" alt="Import_DXF_in_Inkscape" height="300">
-    <figcaption><a class="self-link" href="#Import_DXF_in_Inkscape">Figuur <bdi class="figno">34</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/Inkscape/Inkscape_01.png" alt="Import_DXF_in_Inkscape" height="300">
+    <figcaption><a class="self-link" href="#Import_DXF_in_Inkscape">Figuur <bdi class="figno">35</bdi></a> <span class="fig-title">
       Importeren van DXF-onderlegger in Inkscape.
     </span></figcaption>
 </figure><p>Na ontwerp kunnen de ontwerplagen inclusief de onderlegger als DXF opgeslagen worden. </p>
 <figure id="Opslaan_Inkscape_ontwerp_als_DXF" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/Inkscape_02.png" alt="Opslaan_Inkscape_ontwerp_als_DXF" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Opslaan_Inkscape_ontwerp_als_DXF">Figuur <bdi class="figno">35</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/Inkscape/Inkscape_02.png" alt="Opslaan_Inkscape_ontwerp_als_DXF" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Opslaan_Inkscape_ontwerp_als_DXF">Figuur <bdi class="figno">36</bdi></a> <span class="fig-title">
       Opslaan van een ontwerp in Inkscape als DXF
     </span></figcaption>
 </figure><p>Zonder georeferentie zal de DXF op een verkeerde locatie op de kaart getoond worden. </p>
 <figure id="Ontwerp_Naast_Parijs" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/Inkscape_03.png" alt="Ontwerp_Naast_Parijs" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Ontwerp_Naast_Parijs">Figuur <bdi class="figno">36</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/Inkscape/Inkscape_03.png" alt="Ontwerp_Naast_Parijs" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Ontwerp_Naast_Parijs">Figuur <bdi class="figno">37</bdi></a> <span class="fig-title">
       Ontwerp wordt geplaatst naast Parijs zonder Georeferentie
     </span></figcaption>
 </figure><p>Voer de stappen van Georeferentie in QGIS uit om het DXF bestand op de juiste plaats te krijgen. </p>
 <figure id="Ontwerp_op_de_juiste_plek_na_georeferentie" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/Inkscape_04.png" alt="Ontwerp_op_de_juiste_plek_na_georeferentie" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Ontwerp_op_de_juiste_plek_na_georeferentie">Figuur <bdi class="figno">37</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/Inkscape/Inkscape_04.png" alt="Ontwerp_op_de_juiste_plek_na_georeferentie" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Ontwerp_op_de_juiste_plek_na_georeferentie">Figuur <bdi class="figno">38</bdi></a> <span class="fig-title">
       Ontwerp op de gewenste plek na georeferentie
     </span></figcaption>
 </figure><p>Het is ook mogelijk om aanvullende objecten in DXF terug naar de ontwerptekening te converteren. Dit doet men met het inverse georefereren zoals in het QGIS hoofdstuk beschreven. Dit zorgt ervoor dat men bestaande objecten kan hergebruiken en opwerken. </p>
 <figure id="Extra_element_naar_Inkscape" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/Inkscape_05.png" alt="Extra_element_naar_Inkscape" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Extra_element_naar_Inkscape">Figuur <bdi class="figno">38</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/Inkscape/Inkscape_05.png" alt="Extra_element_naar_Inkscape" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Extra_element_naar_Inkscape">Figuur <bdi class="figno">39</bdi></a> <span class="fig-title">
       Extra waterelement aan ontwerptekening toegevoegd door inverse georeferentie.
     </span></figcaption>
 </figure><p>In Illustrator kan dezelfde functionaliteit gebruikt worden. </p>
@@ -2048,16 +2051,16 @@ Het is ook mogelijk om met de extensie BlenderGIS shapefiles in te laden. Deze w
 <li>Voeg het model toe aan een scene door deze erin te slepen vanuit de Verkenner in Windows of door een folder connectie te maken in het catalog pane.</li>
 </ol>
 <figure id="Ingeladen_bim_model_in_ArcGIS_Pro" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/ArcGIS_01.png" alt="Ingeladen_Bim_Model_in_ArcGIS_Pro" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Ingeladen_bim_model_in_ArcGIS_Pro">Figuur <bdi class="figno">39</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/ArcGIS/ArcGIS_01.png" alt="Ingeladen_Bim_Model_in_ArcGIS_Pro" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Ingeladen_bim_model_in_ArcGIS_Pro">Figuur <bdi class="figno">40</bdi></a> <span class="fig-title">
       Ingeladen BIM-model in ArcGIS Pro
     </span></figcaption>
 </figure><ol start="2">
 <li>Selecteer de laag van het BIM model in het contents panel en open de ‘BIM Data’ tab in de ribbon bovenin</li>
 </ol>
 <figure id="Define_projection_in_ArcGIS_Pro" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/ArcGIS_03.png" alt="Define_projection_in_ArcGIS_Pro" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Define_projection_in_ArcGIS_Pro">Figuur <bdi class="figno">40</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/ArcGIS/ArcGIS_03.png" alt="Define_projection_in_ArcGIS_Pro" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Define_projection_in_ArcGIS_Pro">Figuur <bdi class="figno">41</bdi></a> <span class="fig-title">
       Define projection
     </span></figcaption>
 </figure><p>Define projection (indien nodig)
@@ -2066,8 +2069,8 @@ Het is ook mogelijk om met de extensie BlenderGIS shapefiles in te laden. Deze w
 <li>In de Geoprocessing tool selecteer het juiste coördinatensysteem en klik op Run</li>
 </ol>
 <figure id="Geoprocessing_in_ArcGIS_Pro" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/ArcGIS_04.png" alt="Geoprocessing_in_ArcGIS_Pro" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Geoprocessing_in_ArcGIS_Pro">Figuur <bdi class="figno">41</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/ArcGIS/ArcGIS_04.png" alt="Geoprocessing_in_ArcGIS_Pro" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Geoprocessing_in_ArcGIS_Pro">Figuur <bdi class="figno">42</bdi></a> <span class="fig-title">
       Geoprocessing in ArcGIS Pro
     </span></figcaption>
 </figure><p><strong>Optie A: Transform (indien de offset bekend is)</strong></p>
@@ -2075,15 +2078,15 @@ Het is ook mogelijk om met de extensie BlenderGIS shapefiles in te laden. Deze w
 <li>Gebruik de ‘Transform’ optie om de transformatie van het model in te voeren</li>
 </ol>
 <figure id="Transform_in_ArcGIS_Pro">
-    <img src="./media/ArcGIS_05.png" alt="Transform_in_ArcGIS_Pro" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Transform_in_ArcGIS_Pro">Figuur <bdi class="figno">42</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/ArcGIS/ArcGIS_05.png" alt="Transform_in_ArcGIS_Pro" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Transform_in_ArcGIS_Pro">Figuur <bdi class="figno">43</bdi></a> <span class="fig-title">
       Transform in ArcGIS Pro
     </span></figcaption>
 </figure><p><strong>Optie B: Transform (indien de offset bekend is)</strong>
 6. In de BIM Data tab selecteer ‘Georeference’</p>
 <figure id="Georeference_in_ArcGIS_Pro" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/ArcGIS_06.png" alt="Georeference_in_ArcGIS_Pro" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Georeference_in_ArcGIS_Pro">Figuur <bdi class="figno">43</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/ArcGIS/ArcGIS_06.png" alt="Georeference_in_ArcGIS_Pro" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Georeference_in_ArcGIS_Pro">Figuur <bdi class="figno">44</bdi></a> <span class="fig-title">
       Georeference in ArcGIS Pro
     </span></figcaption>
 </figure><ol start="7">
@@ -2099,8 +2102,8 @@ Het is ook mogelijk om met de extensie BlenderGIS shapefiles in te laden. Deze w
 <li>Reset: Reset alle georefereer-acties</li>
 </ul>
 <figure id="Georeference_functies_in_ArcGIS_Pro" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/ArcGIS_07.png" alt="Georeference_functies_in_ArcGIS_Pro" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Georeference_functies_in_ArcGIS_Pro">Figuur <bdi class="figno">44</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/ArcGIS/ArcGIS_07.png" alt="Georeference_functies_in_ArcGIS_Pro" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Georeference_functies_in_ArcGIS_Pro">Figuur <bdi class="figno">45</bdi></a> <span class="fig-title">
       Georeference functions in ArcGIS Pro
     </span></figcaption>
 </figure><p><strong>Opslaan</strong>
@@ -2125,33 +2128,33 @@ Het is ook mogelijk om met de extensie BlenderGIS shapefiles in te laden. Deze w
 <p>Laad eerst de 2D Vector-modellen in. Voor 2D autocad kan dit DXF zijn. Andere formaten zijn ook mogelijk. <br>
 Gebruik in het geval an DXF de plug-in DXF-AnotherDXFImporter</p>
 <figure id="QGIS_Georeferencer" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/QGIS_5.png" alt="QGIS_Georeferencer" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#QGIS_Georeferencer">Figuur <bdi class="figno">45</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/QGIS/QGIS_5.png" alt="QGIS_Georeferencer" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#QGIS_Georeferencer">Figuur <bdi class="figno">46</bdi></a> <span class="fig-title">
       QGIS Georeferencer
     </span></figcaption>
 </figure><p>Door bekende punten uit het model in te voeren of te positoneren op de kaart, worden de waardes voor Helmert transformatie berekend.   </p>
 <figure id="QGIS_Georeferentie_resultaat" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/QGIS_6.png" alt="QGIS_Georeferentie_resultaat" style="width: 100%; max-width: 00px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#QGIS_Georeferentie_resultaat">Figuur <bdi class="figno">46</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/QGIS/QGIS_6.png" alt="QGIS_Georeferentie_resultaat" style="width: 100%; max-width: 00px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#QGIS_Georeferentie_resultaat">Figuur <bdi class="figno">47</bdi></a> <span class="fig-title">
       QGIS Georeferentie rapportage
     </span></figcaption>
 </figure><p>Selecteer de GDAL Vector Conversie - Convert Format functie in de toolbox processing: </p>
 <figure id="QGIS_Toolbox_Processing" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/QGIS_8.png" alt="QGIS_Toolbox_Processing" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#QGIS_Toolbox_Processing">Figuur <bdi class="figno">47</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/QGIS/QGIS_8.png" alt="QGIS_Toolbox_Processing" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#QGIS_Toolbox_Processing">Figuur <bdi class="figno">48</bdi></a> <span class="fig-title">
       QGIS Vector conversie 
     </span></figcaption>
 </figure><p>De proj-parameters zijn in QGIS ingevuld zodat hiermee een 2D BIM-model juist geogerefereerd wordt. </p>
 <p>Door op uitvoeren te drukken vidnt een affine transformatie plaats. Dit is een super-klasse van de Helmert transformatie.</p>
 <figure id="QGIS_Vector_Conversie_2" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/QGIS_4.png" alt="QGIS_Vector_Conversie_2" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#QGIS_Vector_Conversie_2">Figuur <bdi class="figno">48</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/QGIS/QGIS_4.png" alt="QGIS_Vector_Conversie_2" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#QGIS_Vector_Conversie_2">Figuur <bdi class="figno">49</bdi></a> <span class="fig-title">
       QGIS Vector Conversie 
     </span></figcaption>
 </figure><p>Door een inverse van de proj-parameter te gebruiken kunnen ook objecten uit een geogerefereerde set, zoals de BGT (RD) naar een Lokaal coordinatenstelsel worden geconverteerd. </p>
 <figure id="QGIS_Inverse-Vector_Conversie" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/QGIS_3.png" alt="QGIS_Inverse_Vector_Conversie" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#QGIS_Inverse-Vector_Conversie">Figuur <bdi class="figno">49</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/QGIS/QGIS_3.png" alt="QGIS_Inverse_Vector_Conversie" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#QGIS_Inverse-Vector_Conversie">Figuur <bdi class="figno">50</bdi></a> <span class="fig-title">
       QGIS Inverse Vector Conversie 
     </span></figcaption>
 </figure><p><mark> Nog onderzoeken of 3D Georeferentie ook mogelijk is </mark></p>
@@ -2165,8 +2168,8 @@ Converteer IFC naar GeoJSON, bijvoorbeeld met <a href="https://citygeometrix.com
 Druk met de rechter muisknop op de 3D geoJSON file en klik op eigenschappen. 
 Klik op de 3D-weergave en selecteer Enkel Symbool.</p>
 <figure id="QGIS_Georeferentie_controle" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/QGIS_7.png" alt="QGIS_Georeferentie_controle" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#QGIS_Georeferentie_controle">Figuur <bdi class="figno">50</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/QGIS/QGIS_7.png" alt="QGIS_Georeferentie_controle" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#QGIS_Georeferentie_controle">Figuur <bdi class="figno">51</bdi></a> <span class="fig-title">
       QGIS Georeferentie controle
     </span></figcaption>
 </figure><p>Het is hiermee mogelijk om visueel te controleren hoe het model positioneert ten opzichte van de BAG en BGT. Houdt hiermee rekening met de nauwkeurigheid van de BAG en BGT, zie <a href="04%20Gebruik%20van%20geo-datasets%20voor%20georeferentie.md#geo-datasets-voor-het-refereren-van-modellen">Geo datasets voor georefereren</a></p>
@@ -2174,16 +2177,16 @@ Klik op de 3D-weergave en selecteer Enkel Symbool.</p>
 <p><strong>Controle van 3D Georeferentie van een IFC in Solibri:</strong>
 Klik in de Model Tree het model open tot je het IfcProject niveau ziet. Zorg dat je een Ifc4 of hoger model hebt. Klik op het IfcProject (icon lijkt op een papiertje met regels erop). Klik op IFC Coordinates. Lees uit de IfcCoordinateReferenceSystem, IfcMapconversion, IfcProjectedCRS (van het lokale nulpunt).</p>
 <figure id="Solibri_Georeferentie_controle" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/GeoReferentieLoGref50-InSolibri.jpg" alt="Solibri_Georeferentie_controle" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#Solibri_Georeferentie_controle">Figuur <bdi class="figno">51</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/Solibri/GeoReferentieLoGref50-InSolibri.jpg" alt="Solibri_Georeferentie_controle" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#Solibri_Georeferentie_controle">Figuur <bdi class="figno">52</bdi></a> <span class="fig-title">
       Solibri Georeferentie controle
     </span></figcaption>
 </figure><p>Het is ook mogelijk om LoGref20 te controleren. In dit geval: 
 Klik in de Model Tree het model open tot je het IfcSite niveau ziet.Dit kan in zowel Ifc2x3, Ifc4 en Ifc4x3 het kan ook soms dubbel zijn met Mapconversion. Klik op het IfcSite object (icon zou een kavel moeten voostellen). Onder in de “Info view” verschijnen tabbladen. Waaronder “Location”. Klik op Location. Lees bij coördinaten&gt;Latitude, Longitude de WGS84 coördinaten uit (van het lokale nulpunt)</p>
 <p><strong>Controle van 3D Georeferentie van een IFC in BIMCollab:</strong></p>
 <figure id="BIMCollab_Georeferentie_controle" style="display: block; text-align: center; margin: 0 auto;">
-    <img src="./media/GeoReferentieLoGref50-InBIMColllabZoom-2.jpg" alt="BIMCollab_Georeferentie_controle" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#BIMCollab_Georeferentie_controle">Figuur <bdi class="figno">52</bdi></a> <span class="fig-title">
+    <img src="./media/Handleiding/BIMCollab//GeoReferentieLoGref50-InBIMColllabZoom-2.jpg" alt="BIMCollab_Georeferentie_controle" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+    <figcaption><a class="self-link" href="#BIMCollab_Georeferentie_controle">Figuur <bdi class="figno">53</bdi></a> <span class="fig-title">
       BIMCollab Georeferentie controle
     </span></figcaption>
 </figure></section></section>
@@ -2195,20 +2198,20 @@ Klik in de Model Tree het model open tot je het IfcSite niveau ziet.Dit kan in z
 <p>
       </p><figure id="fig-ifcprojectedcrs-attributen-en-waarde">
         <img src="media/ifcProjCRS.png" alt="IfcProjectedCRS attributen en waarden">
-        <figcaption><a class="self-link" href="#fig-ifcprojectedcrs-attributen-en-waarde">Figuur <bdi class="figno">53</bdi></a> <span class="fig-title">IfcProjectedCRS attributen en waarde</span></figcaption>
+        <figcaption><a class="self-link" href="#fig-ifcprojectedcrs-attributen-en-waarde">Figuur <bdi class="figno">54</bdi></a> <span class="fig-title">IfcProjectedCRS attributen en waarde</span></figcaption>
       </figure>
     <p></p>
 <p>
       </p><figure id="fig-ifcmapconversion-attributen-en-waarde">
         <img src="media/IfcMapconversion_attributen.png" alt="IfcMapConversion attributen en waarden">
-        <figcaption><a class="self-link" href="#fig-ifcmapconversion-attributen-en-waarde">Figuur <bdi class="figno">54</bdi></a> <span class="fig-title">IfcMapConversion attributen en waarde</span></figcaption>
+        <figcaption><a class="self-link" href="#fig-ifcmapconversion-attributen-en-waarde">Figuur <bdi class="figno">55</bdi></a> <span class="fig-title">IfcMapConversion attributen en waarde</span></figcaption>
       </figure>
     <p></p>
 <p>Aan het einde van het IfcGref georeferentie-proces wordt het IFC-bestand bijgewerkt met georeferentieattributen, waarna de gebruiker het bewerkte IFC-bestand kan downloaden en direct kan visualiseren op een kaart via de webinterface van IfcGref. Hierdoor kunnen gebruikers de ruimtelijke uitlijning onmiddellijk controleren.
 
       </p><figure id="fig-ifcgref-visualization">
         <img src="media/ifcGref00.jpg" alt="IfcGref visualization">
-        <figcaption><a class="self-link" href="#fig-ifcgref-visualization">Figuur <bdi class="figno">55</bdi></a> <span class="fig-title">IfcGref visualization</span></figcaption>
+        <figcaption><a class="self-link" href="#fig-ifcgref-visualization">Figuur <bdi class="figno">56</bdi></a> <span class="fig-title">IfcGref visualization</span></figcaption>
       </figure>
     <p></p>
 </section></section>
@@ -2407,7 +2410,7 @@ Klik in de Model Tree het model open tot je het IfcSite niveau ziet.Dit kan in z
 <p>Figuur ter verduideling van de opmerking, geplaatst bij de brienenoord brug.</p>
 <figure id="AHN4vsIFC" style="text-align: center; margin: 0 auto;">
   <img src="./media/AHN4_verschuiving_brienenoord.png" alt="AHN4vsIFC" style="width: 200px; height: auto; display: block; margin: 0 auto;">
-  <figcaption style="font-size: 0.9em;"><a class="self-link" href="#AHN4vsIFC">Figuur <bdi class="figno">56</bdi></a> <span class="fig-title">
+  <figcaption style="font-size: 0.9em;"><a class="self-link" href="#AHN4vsIFC">Figuur <bdi class="figno">57</bdi></a> <span class="fig-title">
     AHN4 (rood) vergeleken met het IFC model (grijs)
   </span></figcaption>
 </figure></section></section>
@@ -3149,156 +3152,158 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
   </li><li class="tofline">
     <a class="tocxref" href="#Geometrische_effecten_bij_transformatie"><span class="self-link">Figuur <bdi class="figno">11</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Enkele geometrische effecten die op kunnen treden bij transformaties tussen cartesische modellen en een CRS voor de aarde.</span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#2D-en-3D-Geo-of-BIM-combineren"><span class="self-link">Figuur <bdi class="figno">12</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">2D en 3D Geo of BIM combineren</span></span></a>
+    <a class="tocxref" href="#Routes voor georefereren"><span class="self-link">Figuur <bdi class="figno">12</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Routes voor georefereren</span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Routes voor georefereren"><span class="self-link">Figuur <bdi class="figno">13</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Routes voor georefereren</span></span></a>
+    <a class="tocxref" href="#2D-en-3D-Geo-of-BIM-combineren"><span class="self-link">Figuur <bdi class="figno">13</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">2D en 3D Geo of BIM combineren</span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Geo_overzicht_BIM_DTB"><span class="self-link">Figuur <bdi class="figno">14</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#2D-en-3D-Geo-of-BIM-combineren"><span class="self-link">Figuur <bdi class="figno">14</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">2D en 3D Geo of BIM combineren</span></span></a>
+  </li><li class="tofline">
+    <a class="tocxref" href="#Geo_overzicht_BIM_DTB"><span class="self-link">Figuur <bdi class="figno">15</bdi></span> <span class="fig-title">
     <em>
       Overzicht van de Drechttunnel met het DTB en de 3DBAG. Links geeft de data boven de grond weer, en rechts de data onder de grond.  
       Dit overzicht is gemaakt vanuit de RWS Digital Twin Basisvoorziening.
     </em>
   </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft"><span class="self-link">Figuur <bdi class="figno">15</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Leefttijd van verschillende puntenwolken van de stationsregio in Delft (figuur is uit wp1 van het <span> <em>Intergaal Hoogtevoorziening Nederland</em></span> overgenomen.) </span></span></a>
+    <a class="tocxref" href="#Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft"><span class="self-link">Figuur <bdi class="figno">16</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Leefttijd van verschillende puntenwolken van de stationsregio in Delft (figuur is uit wp1 van het <span> <em>Intergaal Hoogtevoorziening Nederland</em></span> overgenomen.) </span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#QGIS-DXF-Export-2D"><span class="self-link">Figuur <bdi class="figno">16</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Export 2D project naar DXF in QGIS</span></span></a>
+    <a class="tocxref" href="#QGIS-DXF-Export-2D"><span class="self-link">Figuur <bdi class="figno">17</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Export 2D project naar DXF in QGIS</span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#QGIS-DXF-Export-3D"><span class="self-link">Figuur <bdi class="figno">17</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Export 2D project naar DXF in QGIS</span></span></a>
+    <a class="tocxref" href="#QGIS-DXF-Export-3D"><span class="self-link">Figuur <bdi class="figno">18</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Export 2D project naar DXF in QGIS</span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Scherm-in-Revit-dat-Lokaal-Coordinatiepunt-en-CRS-Coordinatiepunt-laat-zien"><span class="self-link">Figuur <bdi class="figno">18</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Scherm in Revit dat Lokaal Coordinatiepunt en CRS-Coordinatiepunt laat zien</span></span></a>
+    <a class="tocxref" href="#Scherm-in-Revit-dat-Lokaal-Coordinatiepunt-en-CRS-Coordinatiepunt-laat-zien"><span class="self-link">Figuur <bdi class="figno">19</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Scherm in Revit dat Lokaal Coordinatiepunt en CRS-Coordinatiepunt laat zien</span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Controle-in-Revit"><span class="self-link">Figuur <bdi class="figno">19</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></span></a>
+    <a class="tocxref" href="#Controle-in-Revit"><span class="self-link">Figuur <bdi class="figno">20</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Setup-in-Revit"><span class="self-link">Figuur <bdi class="figno">20</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></span></a>
+    <a class="tocxref" href="#Setup-in-Revit"><span class="self-link">Figuur <bdi class="figno">21</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Controle van georeferentie in Revit. Het venster "Location and Site" geeft aan of alles goed is gegaan</span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Setup-in-Revit-Survey-Point"><span class="self-link">Figuur <bdi class="figno">21</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Scherm in Revit met instellingen voor IFC export met Survey Point als Coordinate Base</span></span></a>
+    <a class="tocxref" href="#Setup-in-Revit-Survey-Point"><span class="self-link">Figuur <bdi class="figno">22</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Scherm in Revit met instellingen voor IFC export met Survey Point als Coordinate Base</span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Cordinate_system_Civil3D"><span class="self-link">Figuur <bdi class="figno">22</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Controle van instellingen van RD-stelsel in Civil 3D</span></span></a>
+    <a class="tocxref" href="#Cordinate_system_Civil3D"><span class="self-link">Figuur <bdi class="figno">23</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Controle van instellingen van RD-stelsel in Civil 3D</span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Cordinate_system_ArchiCAD"><span class="self-link">Figuur <bdi class="figno">23</bdi></span> <span class="fig-title">Controle van instellingen van RD-stelsel in ArchiCAD</span></a>
+    <a class="tocxref" href="#Cordinate_system_ArchiCAD"><span class="self-link">Figuur <bdi class="figno">24</bdi></span> <span class="fig-title">Controle van instellingen van RD-stelsel in ArchiCAD</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Cordinate_system_ArchiCAD_2"><span class="self-link">Figuur <bdi class="figno">24</bdi></span> <span class="fig-title">Aanpassing van instellingen van RD-stelsel in ArchiCAD</span></a>
+    <a class="tocxref" href="#Cordinate_system_ArchiCAD_2"><span class="self-link">Figuur <bdi class="figno">25</bdi></span> <span class="fig-title">Aanpassing van instellingen van RD-stelsel in ArchiCAD</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Basispunt_in_Tekla"><span class="self-link">Figuur <bdi class="figno">25</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#Basispunt_in_Tekla"><span class="self-link">Figuur <bdi class="figno">26</bdi></span> <span class="fig-title">
       Basispunt in Tekla
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#IFC_Export_in_Tekla"><span class="self-link">Figuur <bdi class="figno">26</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#IFC_Export_in_Tekla"><span class="self-link">Figuur <bdi class="figno">27</bdi></span> <span class="fig-title">
       IFC exporteren in Tekla
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#IFC_importeren_in_Tekla"><span class="self-link">Figuur <bdi class="figno">27</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#IFC_importeren_in_Tekla"><span class="self-link">Figuur <bdi class="figno">28</bdi></span> <span class="fig-title">
       IFC importeren in Tekla
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Model_toevoegen_in_Tekla"><span class="self-link">Figuur <bdi class="figno">28</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#Model_toevoegen_in_Tekla"><span class="self-link">Figuur <bdi class="figno">29</bdi></span> <span class="fig-title">
       Model toevoegen in Tekla
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Perceel_2_IFC"><span class="self-link">Figuur <bdi class="figno">29</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#Perceel_2_IFC"><span class="self-link">Figuur <bdi class="figno">30</bdi></span> <span class="fig-title">
       Perceel2IFC 
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Georeferentie_van_IFC_in_Blender"><span class="self-link">Figuur <bdi class="figno">30</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#Georeferentie_van_IFC_in_Blender"><span class="self-link">Figuur <bdi class="figno">31</bdi></span> <span class="fig-title">
       Georeferentie van IFC bekijken in Blender 
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Georeferentie_van_IFC_in_Blender_2"><span class="self-link">Figuur <bdi class="figno">31</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#Georeferentie_van_IFC_in_Blender_2"><span class="self-link">Figuur <bdi class="figno">32</bdi></span> <span class="fig-title">
       Georeferentie van IFC bekijken in Blender 
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Georeferentie_van_IFC_in_Blender_3"><span class="self-link">Figuur <bdi class="figno">32</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#Georeferentie_van_IFC_in_Blender_3"><span class="self-link">Figuur <bdi class="figno">33</bdi></span> <span class="fig-title">
       Georeferentie van IFC bekijken in Blender 
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Georeferentie_van_IFC_in_Blender_4"><span class="self-link">Figuur <bdi class="figno">33</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#Georeferentie_van_IFC_in_Blender_4"><span class="self-link">Figuur <bdi class="figno">34</bdi></span> <span class="fig-title">
       Nieuw ifc-project, in meters, in Blender  
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Import_DXF_in_Inkscape"><span class="self-link">Figuur <bdi class="figno">34</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#Import_DXF_in_Inkscape"><span class="self-link">Figuur <bdi class="figno">35</bdi></span> <span class="fig-title">
       Importeren van DXF-onderlegger in Inkscape.
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Opslaan_Inkscape_ontwerp_als_DXF"><span class="self-link">Figuur <bdi class="figno">35</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#Opslaan_Inkscape_ontwerp_als_DXF"><span class="self-link">Figuur <bdi class="figno">36</bdi></span> <span class="fig-title">
       Opslaan van een ontwerp in Inkscape als DXF
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Ontwerp_Naast_Parijs"><span class="self-link">Figuur <bdi class="figno">36</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#Ontwerp_Naast_Parijs"><span class="self-link">Figuur <bdi class="figno">37</bdi></span> <span class="fig-title">
       Ontwerp wordt geplaatst naast Parijs zonder Georeferentie
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Ontwerp_op_de_juiste_plek_na_georeferentie"><span class="self-link">Figuur <bdi class="figno">37</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#Ontwerp_op_de_juiste_plek_na_georeferentie"><span class="self-link">Figuur <bdi class="figno">38</bdi></span> <span class="fig-title">
       Ontwerp op de gewenste plek na georeferentie
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Extra_element_naar_Inkscape"><span class="self-link">Figuur <bdi class="figno">38</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#Extra_element_naar_Inkscape"><span class="self-link">Figuur <bdi class="figno">39</bdi></span> <span class="fig-title">
       Extra waterelement aan ontwerptekening toegevoegd door inverse georeferentie.
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Ingeladen_bim_model_in_ArcGIS_Pro"><span class="self-link">Figuur <bdi class="figno">39</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#Ingeladen_bim_model_in_ArcGIS_Pro"><span class="self-link">Figuur <bdi class="figno">40</bdi></span> <span class="fig-title">
       Ingeladen BIM-model in ArcGIS Pro
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Define_projection_in_ArcGIS_Pro"><span class="self-link">Figuur <bdi class="figno">40</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#Define_projection_in_ArcGIS_Pro"><span class="self-link">Figuur <bdi class="figno">41</bdi></span> <span class="fig-title">
       Define projection
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Geoprocessing_in_ArcGIS_Pro"><span class="self-link">Figuur <bdi class="figno">41</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#Geoprocessing_in_ArcGIS_Pro"><span class="self-link">Figuur <bdi class="figno">42</bdi></span> <span class="fig-title">
       Geoprocessing in ArcGIS Pro
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Transform_in_ArcGIS_Pro"><span class="self-link">Figuur <bdi class="figno">42</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#Transform_in_ArcGIS_Pro"><span class="self-link">Figuur <bdi class="figno">43</bdi></span> <span class="fig-title">
       Transform in ArcGIS Pro
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Georeference_in_ArcGIS_Pro"><span class="self-link">Figuur <bdi class="figno">43</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#Georeference_in_ArcGIS_Pro"><span class="self-link">Figuur <bdi class="figno">44</bdi></span> <span class="fig-title">
       Georeference in ArcGIS Pro
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Georeference_functies_in_ArcGIS_Pro"><span class="self-link">Figuur <bdi class="figno">44</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#Georeference_functies_in_ArcGIS_Pro"><span class="self-link">Figuur <bdi class="figno">45</bdi></span> <span class="fig-title">
       Georeference functions in ArcGIS Pro
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#QGIS_Georeferencer"><span class="self-link">Figuur <bdi class="figno">45</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#QGIS_Georeferencer"><span class="self-link">Figuur <bdi class="figno">46</bdi></span> <span class="fig-title">
       QGIS Georeferencer
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#QGIS_Georeferentie_resultaat"><span class="self-link">Figuur <bdi class="figno">46</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#QGIS_Georeferentie_resultaat"><span class="self-link">Figuur <bdi class="figno">47</bdi></span> <span class="fig-title">
       QGIS Georeferentie rapportage
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#QGIS_Toolbox_Processing"><span class="self-link">Figuur <bdi class="figno">47</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#QGIS_Toolbox_Processing"><span class="self-link">Figuur <bdi class="figno">48</bdi></span> <span class="fig-title">
       QGIS Vector conversie 
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#QGIS_Vector_Conversie_2"><span class="self-link">Figuur <bdi class="figno">48</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#QGIS_Vector_Conversie_2"><span class="self-link">Figuur <bdi class="figno">49</bdi></span> <span class="fig-title">
       QGIS Vector Conversie 
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#QGIS_Inverse-Vector_Conversie"><span class="self-link">Figuur <bdi class="figno">49</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#QGIS_Inverse-Vector_Conversie"><span class="self-link">Figuur <bdi class="figno">50</bdi></span> <span class="fig-title">
       QGIS Inverse Vector Conversie 
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#QGIS_Georeferentie_controle"><span class="self-link">Figuur <bdi class="figno">50</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#QGIS_Georeferentie_controle"><span class="self-link">Figuur <bdi class="figno">51</bdi></span> <span class="fig-title">
       QGIS Georeferentie controle
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Solibri_Georeferentie_controle"><span class="self-link">Figuur <bdi class="figno">51</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#Solibri_Georeferentie_controle"><span class="self-link">Figuur <bdi class="figno">52</bdi></span> <span class="fig-title">
       Solibri Georeferentie controle
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#BIMCollab_Georeferentie_controle"><span class="self-link">Figuur <bdi class="figno">52</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#BIMCollab_Georeferentie_controle"><span class="self-link">Figuur <bdi class="figno">53</bdi></span> <span class="fig-title">
       BIMCollab Georeferentie controle
     </span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#fig-ifcprojectedcrs-attributen-en-waarde"><span class="self-link">Figuur <bdi class="figno">53</bdi></span> <span class="fig-title">IfcProjectedCRS attributen en waarde</span></a>
+    <a class="tocxref" href="#fig-ifcprojectedcrs-attributen-en-waarde"><span class="self-link">Figuur <bdi class="figno">54</bdi></span> <span class="fig-title">IfcProjectedCRS attributen en waarde</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#fig-ifcmapconversion-attributen-en-waarde"><span class="self-link">Figuur <bdi class="figno">54</bdi></span> <span class="fig-title">IfcMapConversion attributen en waarde</span></a>
+    <a class="tocxref" href="#fig-ifcmapconversion-attributen-en-waarde"><span class="self-link">Figuur <bdi class="figno">55</bdi></span> <span class="fig-title">IfcMapConversion attributen en waarde</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#fig-ifcgref-visualization"><span class="self-link">Figuur <bdi class="figno">55</bdi></span> <span class="fig-title">IfcGref visualization</span></a>
+    <a class="tocxref" href="#fig-ifcgref-visualization"><span class="self-link">Figuur <bdi class="figno">56</bdi></span> <span class="fig-title">IfcGref visualization</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#AHN4vsIFC"><span class="self-link">Figuur <bdi class="figno">56</bdi></span> <span class="fig-title">
+    <a class="tocxref" href="#AHN4vsIFC"><span class="self-link">Figuur <bdi class="figno">57</bdi></span> <span class="fig-title">
     AHN4 (rood) vergeleken met het IFC model (grijs)
   </span></a>
   </li>
@@ -3888,7 +3893,7 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-geo-omgeving-1" title="§ 4.2 Routes voor georeferentie">§ 4.2 Routes voor georeferentie</a> 
+      <a href="#ref-for-dfn-geo-omgeving-1" title="§ 4.1 Routes voor georeferentie">§ 4.1 Routes voor georeferentie</a> 
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-gis-systeem" aria-label="Links in this document to definition: GIS-systeem">
