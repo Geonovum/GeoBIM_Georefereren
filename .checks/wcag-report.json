@@ -108,14 +108,7 @@
       },
       {
         "target": [
-          "#x1d-2d-en-3d-geo-en-bim-modellen > figure:nth-child(5) > figcaption > .fig-title > .self-link"
-        ],
-        "html": "<a class=\"self-link\" href=\"#fig-2D-en-3D-Geo-of-BIM-combineren\"></a>",
-        "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
-      },
-      {
-        "target": [
-          "#x1d-2d-en-3d-geo-en-bim-modellen > figure:nth-child(6) > figcaption > .fig-title > .self-link"
+          "#\\32 D-en-3D-Geo-of-BIM-combineren > figcaption > .fig-title > .self-link"
         ],
         "html": "<a class=\"self-link\" href=\"#fig-2D-en-3D-Geo-of-BIM-combineren\"></a>",
         "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
@@ -185,6 +178,13 @@
     "description": "Ensure elements that have scrollable content are accessible by keyboard in Safari",
     "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/scrollable-region-focusable?application=webdriverjs",
     "nodes": [
+      {
+        "target": [
+          "#qgis > pre > .proj.hljs"
+        ],
+        "html": "<code class=\"proj hljs\" aria-busy=\"false\">cct +proj=pipeline +step +proj=helmert +convention=coordinate_frame +x=12345 +y=54321 +s=3.200.000 +theta=(108000) +step +proj=geogoffset +dh=13\n</code>",
+        "failureSummary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
+      },
       {
         "target": [
           "#example-voorbeeld-van-georeferentie-met-ifcmapconversion-in-ifc > pre > .ifc.hljs"
