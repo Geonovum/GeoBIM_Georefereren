@@ -14,3 +14,14 @@ Afhankelijk van het initiële georeferentieniveau van het IFC-bestand kan IfcGre
 Aan het einde van het IfcGref georeferentie-proces wordt het IFC-bestand bijgewerkt met georeferentieattributen, waarna de gebruiker het bewerkte IFC-bestand kan downloaden en direct kan visualiseren op een kaart via de webinterface van IfcGref. Hierdoor kunnen gebruikers de ruimtelijke uitlijning onmiddellijk controleren.
 ![IfcGref visualization](media/ifcGref00.jpg "IfcGref visualization")
 
+
+## Ifc georeferencer 
+[IFC Georeferencer](https://geo.buildingsmart.nl/) is een browsergebaseerde tool waarmee IFC-modellen kunnen worden georefereerd. De verwerking vindt volledig lokaal in de browser plaats, waardoor IFC-bestanden niet naar een server worden geüpload.
+
+De tool kan bestaande georeferentie-informatie uitlezen, zoals IfcSite, TrueNorth, IfcMapConversion, IfcProjectedCRS, de IFC4.3-entiteit IfcRigidOperation en IFC2X3-propertyset-alternatieven. Vervolgens kan de aangepaste georeferentie worden weggeschreven naar een nieuw IFC-bestand dat kan worden gedownload.
+
+Gebruikers kunnen een doel-EPSG-coördinatenstelsel kiezen, een model positioneren op basis van IfcSite, een kaartpunt of ingemeten punten. Daarnaast kan een Helmert-transformatie worden berekend, kunnen restafwijkingen worden beoordeeld en kan het resultaat worden bekeken op een ondergrondkaart met optionele Nederlandse geodata-lagen.
+
+De tool ondersteunt openBIM-workflows waarbij IFC-modellen moeten worden gekoppeld aan GIS, landmeetkundige data, gebiedsontwikkeling, digitale tweelingen of coördinatie van meerdere gebouwen. Hiermee kan georeferentie correct worden toegepast zonder afhankelijk te zijn van gesloten of specifieke authoringsoftware.
+
+

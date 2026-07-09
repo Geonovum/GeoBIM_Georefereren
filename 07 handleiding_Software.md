@@ -525,8 +525,30 @@ Door een inverse van de proj-parameter te gebruiken kunnen ook objecten uit een 
     </figcaption>
 </figure>
 
-<mark> Nog onderzoeken of 3D Georeferentie ook mogelijk is </mark>
+Het is in QGIS niet mogelijk om met bovenstaande methode 3D Georeferentie te doen. Wanneer x,y,z verplaatsingen, rotatie en schaal bekent is kan men wel proj-waarden invullen in de onderstaande proj pipeline. Veel software begrijpt deze proj pipeline direct. 
 
+Wanneer x, y, z, locatie en schaal niet bekend is kan men met tools als [Ifc georeferencer](#Ifc-georeferencer) dit achterhalen door het model op de juiste locatie te plaatsen, als IFC te downloaden en de waarden van de IFCMAPConversion uit te lezen en te vertalen naar de juiste proj parameter.  
+
+Easting = +x
+Northing = +y
+OrthogonalHeight = +dh
+XAxisOrdinate = +theta
+Scale = +s
+
+Stel men heeft onderstaande mapconversion: 
+- Easting = 12345
+- Northing= 54321
+- OrthogonalHeight = 13 
+- XAxisAbscissa = 0.866025
+- XAxisOrdinate = 0.5
+- Scale = 3.2
+
+Dan kan men creëeren:
+(arcsin0.5*3600)=108000
+
+```proj 2D + 1D
+cct +proj=pipeline +step +proj=helmert +convention=coordinate_frame +x=12345 +y=54321 +s=3.200.000 +theta=(108000) +step +proj=geogoffset +dh=13
+```
 
 ## Controle van georeferentie in QGIS, Solibri en BIMCollab
 Onderstaande voorbeelden beschrijven hoe men georeferentie kan controleren in software. Het is met onderstaande voorbeelden niet mogelijk om dit aan te passen.   
@@ -548,7 +570,7 @@ Klik op de 3D-weergave en selecteer Enkel Symbool.
     </figcaption>
 </figure>
 
-Het is hiermee mogelijk om visueel te controleren hoe het model positioneert ten opzichte van de BAG en BGT. Houdt hiermee rekening met de nauwkeurigheid van de BAG en BGT, zie <a href="04%20Gebruik%20van%20geo-datasets%20voor%20georeferentie.md#geo-datasets-voor-het-refereren-van-modellen">Geo datasets voor georefereren</a>
+Het is hiermee mogelijk om visueel te controleren hoe het model positioneert ten opzichte van de BAG en BGT. Houdt hiermee rekening met de nauwkeurigheid van de BAG en BGT, zie <a href="04%20Gebruik%20van%20geo-datasets%20voor%20georeferentie.md#ge o-datasets-voor-het-refereren-van-modellen">Geo datasets voor georefereren</a>
 
 De [IFC2GIS procedure video](https://www.youtube.com/watch?v=pBAhAcyTLSY&t=86s) van Hans Lammerts toont de flow van georeferentie naar QGIS. Zie ook het [BuildingSMART forum](https://forums.buildingsmart.org/t/ifc-to-gis/6115/8) voor een discussie over dit onderwerp. 
 
@@ -566,8 +588,8 @@ Het is ook mogelijk om LoGref20 te controleren. In dit geval:
 Klik in de Model Tree het model open tot je het IfcSite niveau ziet.Dit kan in zowel Ifc2x3, Ifc4 en Ifc4x3 het kan ook soms dubbel zijn met Mapconversion. Klik op het IfcSite object (icon zou een kavel moeten voostellen). Onder in de “Info view” verschijnen tabbladen. Waaronder “Location”. Klik op Location. Lees bij coördinaten>Latitude, Longitude de WGS84 coördinaten uit (van het lokale nulpunt)
 
 **Controle van 3D Georeferentie van een IFC in BIMCollab:**
-
-
+BIMcollab kan worden gebruikt om de georeferentie van een BIM-model te controleren. Hiermee wordt inzicht verkregen in de locatie, oriëntatie en coördinatie van het model.
+Zie [uitlijnen met IfcMapconversion in BIMCollab](https://helpcenter.bimcollab.com/nl/articles/326917-ifc-modellen-coordineren-met-worldcoordinatesystem-informatie)
 
 <figure id="BIMCollab_Georeferentie_controle" style="display: block; text-align: center; margin: 0 auto;">
     <img src="./media/Handleiding/BIMCollab//GeoReferentieLoGref50-InBIMColllabZoom-2.jpg" alt="BIMCollab_Georeferentie_controle" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;"/>

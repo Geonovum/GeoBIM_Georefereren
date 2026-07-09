@@ -11,38 +11,38 @@ Om de gecreëerde fysieke werkelijkheid vast te leggen in een coördinatensystee
   <figcaption><a class="self-link" href="#fig-Afwijking-door-aardkromming"></bdi></a><span class="fig-title">Routes voor georefereren</span></figcaption>
 </figure>
 
-Wanneer men een BIM-model, dat gemodelleerd is in een lokaal cartesisch CRS (engineering CRS), in een <a>GEO-omgeving</a> wil importeren, zonder de route uitzetten en inmeten, moet men een transformatie doen. Afhankelijk van de situatie zijn er verschillende methodes beschikbaar om  BIM- en Geo-modellen samen te voegen op de kaart. Een in RD ingemeten (as-built) GEO-gebouwgeometrie kan men bijvoorbeeld vergelijken met een XYZ(as-designed) BIM-gebouwgeometrie na een 2D gelijkvormigheidstransformatie en hoogtecorrectie, waarin de schaal, translaties en rotatie aangegeven dienen te worden. 
+Wanneer men een BIM-model, dat gemodelleerd is in een lokaal cartesisch CRS (engineering CRS), in een <a>GEO-omgeving</a> wil importeren, zonder de route uitzetten en inmeten, moet men een transformatie doen. Afhankelijk van de situatie zijn er verschillende methodes beschikbaar om  BIM- en GEO-modellen samen te voegen op de kaart. Een in RD ingemeten (as-built) GEO-gebouwgeometrie kan men bijvoorbeeld vergelijken met een XYZ(as-designed) BIM-gebouwgeometrie na een 2D gelijkvormigheidstransformatie en hoogtecorrectie, waarin de schaal, translaties en rotatie aangegeven dienen te worden. 
 
-## 1D, 2D en 3D Geo- en BIM-modellen
+## 1D, 2D en 3D GEO- en BIM-modellen
 Zowel BIM- als GEO-modellen kunnen een 1D, 2D als 3D coordinatenstelsel gebruiken. Om een juiste transformatie van coordinaten van 2D en 3D modellen te verkrijgen kunnen verschillende methoden worden toegepast.  
 
 Een GEO coordinatenstelsel kan 3D samengesteld (EPSG:7415), 2D (EPSG:28992) of 1D (EPSG:5709) zijn. 
 
 <table>
-<caption>Transformatie van 2D en 3D </caption>
+<caption>Transformatie van 2D en 3D GEO en/of BIM</caption>
   <thead>
     <tr>
-      <th>Van/Naar</th>
-      <th>2D RD GEO of BIM</th>
-      <th>2D XY GEO of BIM</th>
-      <th>2D ETRS89 GEO of BIM</th>
-      <th>3D RDNAP GEO of BIM</th>
-      <th>3D XYZ GEO of BIM</th>
-      <th>3D ETRS89 GEO of BIM</th>
+      <th>Source/Target</th>
+      <th>2D RD</th>
+      <th>2D XY</th>
+      <th>2D ETRS89</th>
+      <th>3D RDNAP</th>
+      <th>3D XYZ</th>
+      <th>3D ETRS89</th>
       </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>2D RD GEO of BIM</strong></td>
+      <td><strong>2D RD</strong></td>
       <td>0-transformatie</td>
       <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmert</a> Horizontaal transformatie</td>
-      <td>RDNAPTRANS met NAP = 0 zonder gebruik elipsoidische h </td>
+      <td>RDNAPTRANS zonder gebruik hoogte </td>
       <td>0-transformatie en Interpolatie van z waarde naar target  </td>
       <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmert</a> Horizontaal transformatie en interpolatie van z waarde naar target  </td>
       <td>RDNAPTRANS </td>
     </tr>
     <tr>
-      <td><strong>2D XY GEO of BIM</strong></td>
+      <td><strong>2D XY</strong></td>
       <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmert</a> Horizontaal transformatie</td>
       <td>0-transformatie</td>
       <td>3D gelijkvormigheidstransformatie met NAP = 0 zonder gebruik elipsoidische h</td>
@@ -51,7 +51,7 @@ Een GEO coordinatenstelsel kan 3D samengesteld (EPSG:7415), 2D (EPSG:28992) of 1
       <td>3D gelijkvormigheidstransformatie + Interpolatie van z waarde naar target </td>
     </tr>
     <tr>
-      <td><strong>2D ETRS89 GEO of BIM</strong></td>
+      <td><strong>2D ETRS89</strong></td>
       <td>RDNAPTRANS met alleen RD gebruik</td>
       <td>3D gelijkvormigheidstransformatie zonder gebruik elipsoidische h</td>
       <td>0-transformatie</td>
@@ -60,7 +60,7 @@ Een GEO coordinatenstelsel kan 3D samengesteld (EPSG:7415), 2D (EPSG:28992) of 1
       <td>0-transformatie met interpolatie elipsoidische hoogte</td>
     </tr>
     <tr>
-      <td><strong>3D RDNAP GEO of BIM</strong></td>
+      <td><strong>3D RDNAP</strong></td>
       <td>0-transformatie en Interpolatie van z waarde naar target</td>
       <td>Projectie en 2D Helmert Horizontaal transformatie</td>
       <td>RDNAPTRANS zonder gebruik van ellipsoidische h</td>
@@ -69,7 +69,7 @@ Een GEO coordinatenstelsel kan 3D samengesteld (EPSG:7415), 2D (EPSG:28992) of 1
       <td>RDNAPTRANS</td>
     </tr>
     <tr>
-      <td><strong>3D XYZ GEO of BIM</strong></td>
+      <td><strong>3D XYZ</strong></td>
       <td>Projectie en 2D Helmert Horizontaal transformatie</td>
       <td>Projectie en 0-transfomatie</td>
       <td> Projectie, 3D gelijkvormigheidstransformatie NAP = projectieniveau zonder gebruik elipsoidische h</td>
@@ -78,7 +78,7 @@ Een GEO coordinatenstelsel kan 3D samengesteld (EPSG:7415), 2D (EPSG:28992) of 1
       <td>3D gelijkvormigheidstransformatie</td>
     </tr>
     <tr>
-      <td><strong>3D ETRS89 GEO of BIM</strong></td>
+      <td><strong>3D ETRS89</strong></td>
       <td>RDNAPTRANS met alleen RD gebruik</td>
       <td>3D gelijkvormigheidstransformatie en projectie (z-weghalen)</td>
       <td>0-transformatie zonder elipsoidische h</td>
@@ -89,21 +89,14 @@ Een GEO coordinatenstelsel kan 3D samengesteld (EPSG:7415), 2D (EPSG:28992) of 1
 </table>
 
 <figure id="2D-en-3D-Geo-of-BIM-combineren">
-      <img src="./media/2d_en_3d_GeoBIM_1.png" alt="2D en 3D Geo of BIM combineren" width="700"/>
+      <img src="./media/2d_en_3d_GeoBIM.png" alt="2D en 3D Geo of BIM combineren" width="700"/>
     <figcaption><a class="self-link" href="#fig-2D-en-3D-Geo-of-BIM-combineren"></bdi></a><span class="fig-title">2D en 3D Geo of BIM combineren</span></figcaption>
 </figure>
-
-<figure id="2D-en-3D-Geo-of-BIM-combineren">
-      <img src="./media/2d_en_3d_GeoBIM_2.png" alt="2D en 3D Geo of BIM combineren" width="700"/>
-    <figcaption><a class="self-link" href="#fig-2D-en-3D-Geo-of-BIM-combineren"></bdi></a><span class="fig-title">2D en 3D Geo of BIM combineren</span></figcaption>
-</figure>
-
-
 
 ## Methodes van Georeferentie 
 
 ### RD-gemodelleerd BIM naar RDNAP 
-Het is mogelijk om "RD bewust" te modelleren in BIM. Wanneer men dit doet moet men rekening houden met de schaalcorrectie voor RD. Een project in de stad Amersfoort zal vanwege projectie, in RD +/-  9 mm per 100 meter kleiner getekend worden dan hoe het in werkelijkheid moet worden. Een lijn van 400 meter zal dan als een lijn van +/- 396,4 meter gemodelleerd moeten worden. De vergroting of reductie geldt niet voor verticale lijnen en NAP-hoogtes in het model. Dit vereist grote zorgvuldigheid van de modelleur.  
+Het is mogelijk om "RD bewust" te modelleren in BIM. Wanneer men dit doet moet men rekening houden met de schaalcorrectie voor RD. Een project in de stad Amersfoort zal vanwege projectie, in RD +/-  9 mm per 100 meter kleiner getekend worden dan hoe het in werkelijkheid moet worden. Een lijn van 400 meter zal dan als een lijn van +/- 396,4 meter gemodelleerd moeten worden. De vergroting of reductie geldt niet voor verticale lijnen en NAP-hoogtes in het model. Dit vereist grote zorgvuldigheid van de modelleur. Of men moet de afwijking accepteren. 
 De transformatie van XYZ-BIM als RDNAP in BIM naar RDNAP is een "nultransformatie". 
 
 ### XYZ gemodeleerd BIM als RD naar RDNAP 
@@ -113,11 +106,17 @@ De transformatie van RDNAP in BIM naar RDNAP is een "nultransformatie".
 ### XYZ gemodelleerd BIM via een 2D gelijkvormigheidstransformatie naar RDNAP 
 Een andere methode is om een in lokaal cartesisch XYZ gemodelleerd BIM-model met een 2D gelijkvormigheidstransformatie naar RD met NAP-hoogte te transformeren. Een translatie en rotatie zijn afhankelijk van het gebruikte grid in BIM nodig. Een schaal-transformatie is, afhankelijk van de locatie in Nederland, vaak nodig. Belangrijk hierbij is dat de hoogte-waarde geen schaalcorrectie dient te krijgen. 
 
+Zonder correctie ontstaat een afwijking van 1 cm bij 100 meter wanneer source en target gecombineerd wordt. Bij toepassing van correctie van het totaalmodel met 1 schaal voor xyz, dan is de afwijking 10 mm bij een model van 500 meter en maximaal 100 meter hoogteverschil. Bij toepassing van correctie van het totaalmodel met 2 schalen, 1 xy en 1 voor z, dan is de afwijking 10 mm bij 500 meter en maximaal 128 meter hoogteverschil. Voordeel van deze laatste methode is dat deze ook op zee te gebruiken is.
+
 ### XYZ gemodelleerd BIM via een 3D gelijkvormigheidstransformatie naar ETRS89 
 Een volgende methode is om een in lokaal cartesisch XYZ gemodelleerd BIM-model met een 3D gelijkvormigheidstransformatie te transformeren naar cartesisch XYZ in het geocetrische ETRS89-coördinatenstelsel. Dit getransformeerde model kan men vervolgens converteren naar ETRS89 breedte, lengte en hoogte en transformeren naar RDNAP. 
 
+Bij deze methode ontstaat er na 360 meter een 10 mm hoogtefout. Na 1,1 km 10 cm. Deze afwijk neemt quadratisch toe. Er treedt geen vervorming op van het model. Dit geeft verwaarloosbare problemen met dat objecten uit het model niet loodrecht op het gekromd aardoppervlak staan.
+
 ### XYZ gemodeleerd BIM via 3D een 3D gelijkvormigheidstransformatie naar ETRS89 en hoogte naar NAP 
 Deze methode waarbij men BIM via een 3D gelijkvormigheidstransformatie naar ETRS89 brengt en de hoogte naar NAP lijkt op de hiervoor beschreven methode. Het verschil zit erin dat in deze methode XYZ met een 3D gelijkvormigheidstransformatie naar ETRS89 getransformeerd wordt. De hoogte transformeert men daarna apart als 1D-transformatie naar NAP. De breedte en lengte in ETRS89 kan men vervolgens transformeren naar RD en er de NAP-hoogte aan toevoegen voor RDNAP-coördinaten.
+
+Deze optie geeft een oplossing voor de hoogteafwijking zoals in de hiervoor beschreven methode optreedt. Wel genereert deze methode vervorming van het orgineel model. Deze afwijking is 1 cm bij een model dat zich maximaal 2 km strekt en een maximale hoogte heeft van 32m. De afwijking is ook 1cm bij een model dat zich 200m uitstrekt met een hoogte van maximaal 320 meter.
 
 ### XYZ met lokale projectie naar ETRS89 
 De laatste methode is om een BIM-model in lokaal cartesisch XYZ te modelleren en met een lokale projectie naar ETRS89 breedte en lengte te transformeren. De lokale projectie is zo opgestelde dat afwijkingingen minimaal zijn. Het is mogelijk om voor de hoogte daarnaast een 1D transformatie te doen naar NAP. 
@@ -147,6 +146,9 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
     <th> Schaal  xy </th>
     <th> Schaal z </th>
   </tr>
+      <tr>
+          <td colspan="7">  Een locatienaam opgeven:</td>
+  </tr>
   <tr>
     <td>
       <img src="./media/georefereren_Level_10.png" alt="Georeferentie level 10" title="Georeferentie Level 10" width="300">
@@ -158,15 +160,13 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
     <td> Niet mogelijk </td>
     <td> Niet mogelijk </td>
     </tr> 
-    <tr>
-        <td> Een locatienaam opgeven:</td>
-        <td colspan="6"> Met dit informatielevel wordt alleen de locatie waar een model moet komen benoemd. Bijvoorbeeld een adres als "Barchman Wuytierslaan 10, Amersfoort" in een model op te nemen. Men weet hierdoor op welk adres het model moet komen, maar exacte plaatsing, rotatie en schaling is hier niet uit te bepalen.</td>
+      <tr>
+        <td colspan="7"> Met dit informatielevel wordt alleen de locatie waar een model moet komen benoemd. Bijvoorbeeld een adres als "Barchman Wuytierslaan 10, Amersfoort" in een model op te nemen. Men weet hierdoor op welk adres het model moet komen, maar exacte plaatsing, rotatie en schaling is hier niet uit te bepalen.</td>
   </tr>
   <tr>
-    <td colspan="7">
-    <hr>
-  </td>
   <tr>
+        <td colspan="7">  Eén coordinaat opgeven: </td>
+  </tr>
     <td>
       <img src="./media/georefereren_Level_20.png" alt="Georeferentie level 20" title="Georeferentie Level 20" width="300">
     </td>
@@ -178,11 +178,10 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
     <td> Niet mogelijk </td> 
     </tr> 
       <tr>
-      <td> Eén coordinaat opgeven: </td>
-        <td colspan="6"> Met dit informatielevel duidt men één enkel (lat-lon) punt waar het model geplaatst moet worden. Bijvoorbeeld met het coordinaat "52.152494076977185, 5.3720554951931385". Plaatsing van het model op de juiste plek, zowel in 2D als 3D wordt hiermee mogelijk. Rotatie en schalen van het model blijft niet mogelijk.</td>
+        <td colspan="7"> Met dit informatielevel duidt men één enkel (lat-lon) punt waar het model geplaatst moet worden. Bijvoorbeeld met het coordinaat "52.152494076977185, 5.3720554951931385". Plaatsing van het model op de juiste plek, zowel in 2D als 3D wordt hiermee mogelijk. Rotatie en schalen van het model blijft niet mogelijk.</td>
   </tr>
   <tr>
-    <td colspan="7">
+    <td colspan="7"> De positie en richting van het grondvlak duiden: </td>
     <hr>
   </td>
   </tr>
@@ -199,11 +198,10 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
   </tr>
   </tr>
         <tr>
-      <td> De positie en richting van het grondvlak duiden: </td>
-        <td colspan="6"> Met dit informatielevel wordt aan het grondvlak van een model een verplaatsing ten opzichte van het model 0-punt toegekend die overeenkomt met het beoogd coordinaatrefentiesysteem. Objectplaatsing wordt gebruikt als georeferentie. Doordat elementen een ruimtelijke relatie hebben met het grondvlak worden deze elementen ook juist geplaatst en kunnen coordinaten van deze elementen klein gehouden worden. Ook is het mogelijk om de rotatie ten opzichte van het Noorden te duiden. Het schalen van het model is niet mogelijk. Ook is het niet mogelijk om het CRS waarvoor het coordinaat geldt te duiden.</td>
+        <td colspan="7"> Met dit informatielevel wordt aan het grondvlak van een model een verplaatsing ten opzichte van het model 0-punt toegekend die overeenkomt met het beoogd coordinaatrefentiesysteem. Objectplaatsing wordt gebruikt als georeferentie. Doordat elementen een ruimtelijke relatie hebben met het grondvlak worden deze elementen ook juist geplaatst en kunnen coordinaten van deze elementen klein gehouden worden. Ook is het mogelijk om de rotatie ten opzichte van het Noorden te duiden. Het schalen van het model is niet mogelijk. Ook is het niet mogelijk om het CRS waarvoor het coordinaat geldt te duiden.</td>
   </tr>
   <tr>
-    <td colspan="7">
+    <td colspan="7">De positie en richting van het totaal model duiden: </td>
     <hr>
   </td>
   <tr>
@@ -218,11 +216,10 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
     <td> Niet mogelijk </td> 
   </tr>
           <tr>
-      <td> De positie en richting van het grondvlak duiden: </td>
-        <td colspan="6"> Met dit informatielevel wordt aan het <strong>totaal model</strong> een coordinaat toegekend, en ook de rotatie ten opzichte van Noorden kan men duiden. De georeferentie is een aparte entiteit, en is daarmee expliciet geduid. De methode komt overeen met LevelOfGeoreferencing Het schalen van het model is niet mogelijk. Ook is het niet mogelijk om het CRS waarvoor het coordinaat geldt te duiden.</td>
+        <td colspan="7"> Met dit informatielevel wordt aan het <strong>totaal model</strong> een coordinaat toegekend, en ook de rotatie ten opzichte van Noorden kan men duiden. De georeferentie is een aparte entiteit, en is daarmee expliciet geduid. De methode komt overeen met LevelOfGeoreferencing Het schalen van het model is niet mogelijk. Ook is het niet mogelijk om het CRS waarvoor het coordinaat geldt te duiden.</td>
   </tr>
   <tr>
-    <td colspan="7">
+    <td colspan="7"> De positie en richting van het grondvlak duiden: </td>
     <hr>
   </td>
   <tr>
@@ -238,11 +235,10 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
     <td> Eventueel mogelijk </td> 
   </tr>
            <tr>
-      <td> De positie en richting van het grondvlak duiden: </td>
         <td colspan="6"> Met dit informatielevel geeft men aan wat het oorspronkelijk coordinatenstelsel is waarin het model is gemodelleerd. Daarnaast geeft men in het model aan naar welk coordinatenstelsel een coversie gedaan  wordt. Heeft men bijvoorbeeld gemodelleerd vanuit een lokaal assenstelsel (0,0,0) dan kan men beschrijven welke translatie, rotatie en verschaling men moet toepassen om te kunnen combineren met data in RijksDriehoeksstelsel (RD).</td>
   </tr>
   <tr>
-    <td colspan="7">
+    <td colspan="7"> Surveypoints uit BIM de werkelijkheid en GEO: </td>
     <hr>
   </td>
   <tr>
@@ -258,14 +254,8 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
     <td> Mogelijk </td>
   </tr>
              <tr>
-      <td> De positie en richting van het grondvlak duiden: </td>
         <td colspan="6"> Met dit informatielevel koppelt men punten in model aan ingemeten punten tijdens constructie aan coordinaten in een specifiek coordinatenstelsel..</td>
   </tr>
-  <tr>
-    <td colspan="7">
-    <hr>
-  </td>
-  <tr>
 </table>
 
 Een hoger LoGeoRef-niveau geeft een model expliciteitere, completere en betere gestructureerde georeferentie informatie. Dit geeft meer mogelijkheden in gebruik. Een hoger level van georeferentie stelt ook hogere eisen aan datakwaliteit en expertise. Men kan in sommige situaties besluiten een lager level van georeferentie aan te houden. De hierboven beschreven methodes van Georeferentie kunnen worden toegepast onderstaande situaties. Bij een hoger level georefentiemodel blijven de toepassingsvoorbeelden van lager niveaus ook werken. 
@@ -318,7 +308,7 @@ Een hoger LoGeoRef-niveau geeft een model expliciteitere, completere en betere g
 
 
 ## Schaal en correctie op basis van gebruikte eeenheden
-Een Geo- of BIM-bronmodel kan in een andere eenheid zijn opgesteld dan het doelsysteem waarin het model wordt geplaatst. Het is daarom essentieel om de gebruikte eenheden expliciet te specificeren in het model. Wanneer een bronmodel bijvoorbeeld in millimeters is gemodelleerd en de doelomgeving meters gebruikt, moet er een eenheidsconversie worden toegepast om consistente interpretatie van de geometrie te garanderen. 
+Een GEO- of BIM-bronmodel kan in een andere eenheid zijn opgesteld dan het doelsysteem waarin het model wordt geplaatst. Het is daarom essentieel om de gebruikte eenheden expliciet te specificeren in het model. Wanneer een bronmodel bijvoorbeeld in millimeters is gemodelleerd en de doelomgeving meters gebruikt, moet er een eenheidsconversie worden toegepast om consistente interpretatie van de geometrie te garanderen. 
 
 Een mogelijke workaround, wanneer software geen correcte eenheidsconversie uitvoert, is het toepassen van een schaalfactor binnen de georeferentie-informatie, bijvoorbeeld 0.001 voor millimeter naar meter of 0.0254 voor inch naar meter. Het risico van deze aanpak is dat software die de eenheden wél correct interpreteert, deze schaalcorrectie opnieuw toepast, wat leidt tot een dubbele conversie en dus foutieve geometrie.
 
