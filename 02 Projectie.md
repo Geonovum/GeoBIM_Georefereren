@@ -1,9 +1,9 @@
-# Coördinaatreferentiesystemen en Coördinatentransformatie
+# Coördinatenstelsels en Coördinaattransformatie
 
-Om informatie te koppelen aan een locatie op aarde worden geodetische coördinaatreferentiesystemen (CRS-en) gebruikt. In nederland worden meerdere CRS-en gebruikt, de <a>Geodetische CRS</a>-en die relevant zijn voor het georefereren van BIM in Nederland zijn opgenomen in onderstaande tabel:
+Om informatie te koppelen aan een locatie op aarde worden coördinatenstelsels gebruikt, die in de geo-informatie coördinaatreferentiesystemen (CRS'en) genoemd worden. In nederland worden meerdere CRS'en gebruikt, de <a>CRS</a>-en die relevant zijn voor het georefereren van BIM in Nederland zijn opgenomen in onderstaande tabel:
 
 <table>
-  <caption>Relevante coördinatiesystemen voor het georefereren Geo en BIM in Nederland</caption>
+  <caption>Relevante coördinatenstelsels voor het georefereren van geo- en BIM-data in Nederland</caption>
   <thead>
     <tr>
       <th>Naam</th>
@@ -29,50 +29,50 @@ Om informatie te koppelen aan een locatie op aarde worden geodetische coördinaa
     </tr>
     <tr>
       <td>ETRS89</td>
-      <td><a href="#geografische-en-geocentrisch-crs">Geografisch CRS</a> voor Europa en precieze (centimeter niveau) plaatsbepaling in Nederland</td>
+      <td><a href="#geografische-en-geocentrisch-crs">Geografisch CRS</a> voor Europa en precieze (centimeterniveau) plaatsbepaling in Nederland</td>
       <td>EPSG:4258 (2D-code)</td>
     </tr>
     <tr>
       <td>WGS 84</td>
-      <td>Geografisch CRS voor de aarde en niet precieze (meter niveau) plaatsbepaling in Nederland, niet geschikt voor uitwisseling van data, alleen voor visualisaties</td>
+      <td>Geografisch CRS voor de aarde en niet-precieze (meterniveau) plaatsbepaling in Nederland, niet geschikt voor uitwisseling van data</td>
       <td>EPSG:4326 (2D-code)</td>
     </tr>
   </tbody>  
 </table>
 
-De <a>EPSG-code</a> is een unieke identificatie van het CRS binnen de zogenaamde EPSG-database, een wereldwijde verzameling van coördinaatsystemen en -transformaties.
+De <a>EPSG-code</a> is een unieke identificatie van het CRS binnen de zogenaamde EPSG-database, een wereldwijde verzameling van coördinatenstelsel en -transformaties.
 
-Voor BIM-toepassingen wordt vaak gebruik gemaakt van een <a>Lokaal CRS</a>. Door een link te leggen tussen het lokale assenstelsel in BIM en een <a>geprojecteerd CRS</a> kan een BIM-model gebruikt worden in een <a>GEO-systeem</a> of <a>GIS-systeem</a>. Daarna kan GIS- of GEO-software gebruik maken van projecties en andere GIS-tools om het BIM model te projecteren in de wereld en hier aanvullende analyse op te doen. Het omzetten van het ene CRS naar het andere CRS wordt een <a>Coördinatentransformatie</a> genoemd.
+Voor BIM-toepassingen wordt vaak gebruik gemaakt van een <a>Lokaal CRS</a>. Door een link te leggen tussen het lokale assenstelsel in BIM en bijvoorbeeld een <a>geprojecteerd CRS</a> kan een BIM-model gebruikt worden in een <a>GIS-systeem</a> of andere geo-software. Daarna kan deze software gebruik maken van andere projecties en GIS-tools om het BIM-model te visualiseren in de wereld en hier aanvullende analyse op te doen. Het omrekenen van het ene CRS naar het andere CRS wordt een <a>Coördinatentransformatie</a> genoemd.
 
-Zoals hierboven aangegeven worden in Nederland meerdere CRS-en gebruikt. Bij het gebruik van meerdere CRS-en bestaat risico op introductie van fouten door onjuiste implementatie van de transformaties tussen CRS-en. Binnen Nederland worden aanbieders van data daarom geadviseerd om data aan te bieden in de verschillende CRS-en gericht op de eindgebruikers. Eindgebruikers worden juist geadviseerd data waar mogelijk op te vragen in hetzelfde CRS. Dit is ook een nadrukkelijke aanbeveling voor gebruikers van BIM-software. 
+Zoals hierboven aangegeven worden in Nederland meerdere CRS-en gebruikt. Bij het gebruik van meerdere CRS'en bestaat risico op introductie van fouten door onjuiste implementatie van de transformaties tussen CRS'en. Binnen Nederland worden aanbieders van data daarom geadviseerd om data aan te bieden in de verschillende CRS'en gericht op de eindgebruikers. Eindgebruikers worden juist geadviseerd data waar mogelijk op te vragen in hetzelfde CRS. Dit is ook een nadrukkelijke aanbeveling voor gebruikers van BIM-software. 
 
 <aside class="note" title="Gebruik hetzelfde CRS">
   <p><strong>AANBEVELING:</strong> Vraag als eindgebruiker geo- en bim-data waar mogelijk op in hetzelfde CRS</p>
 </aside>
 
-De meeste BIM-software is namelijk niet in staat om transformaties uit te voeren tussen verschillende geprojecteerde CRS'en. Wanneer GIS-data naar BIM moet worden uitgewisseld is het belangrijk dat dit al geprojecteerd is in het coördinatensysteem dat de BIM Software verwacht. Afhankelijk van de BIM Software kan het zelfs nodig zijn te transformeren naar het lokale stelsel dat gebruikt wordt door de BIM software. Hier dienen binnen projecten duidelijke afspraken over gemaakt te worden.
+De meeste BIM-software is namelijk niet in staat om transformaties uit te voeren tussen verschillende CRS'en. Wanneer GIS-data naar BIM moet worden uitgewisseld is het belangrijk dat dit al geprojecteerd is in het coördinatensysteem dat de BIM-software verwacht. Afhankelijk van de BIM-software kan het zelfs nodig zijn te transformeren naar het lokale stelsel dat gebruikt wordt door de BIM-software. Hier dienen binnen projecten duidelijke afspraken over gemaakt te worden.
 
-<aside class="note" title="Maak vooraf afspraken over de te gebruiken CRS-en en transformatie">
-  <p><strong>AANBEVELING:</strong> Maak afspraken met projectpartners over de te gebruiken CRS-en</p>
+<aside class="note" title="Maak vooraf afspraken over de te gebruiken CRS'en">
+  <p><strong>AANBEVELING:</strong> Maak afspraken met projectpartners over de te gebruiken CRS'en en coördinatentransformatie</p>
 </aside>
 
-De volgende pargrafen gaan dieper in op de verschillende CRS-typen, de relaties tussen CRS-en die direct relevant zijn voor deze praktijkrichtlijn en introduceert de gangbare terminologie voor CRS-en. Voor nog gedetailleerdere informatie en adviezen wordt verwezen naar de [Handreiking Gebruik coördinaatreferentiesystemen bij uitwisseling en visualisatie van geo-informatie](https://docs.geostandaarden.nl/crs/crs/).
+De volgende paragrafen gaan dieper in op de verschillende CRS-typen, de relaties tussen CRS-en die direct relevant zijn voor deze praktijkrichtlijn en introduceert de gangbare terminologie voor CRS-en. Voor nog gedetailleerdere informatie en adviezen wordt verwezen naar de [Handreiking Gebruik coördinaatreferentiesystemen bij uitwisseling en visualisatie van geo-informatie](https://docs.geostandaarden.nl/crs/crs/).
 
-## Geodetische CRS-en
+## Geodetische CRS'en
 
-### Geografische en geocentrisch CRS
+### Geografisch en geocentrisch CRS
 
-Geodetische CRS-en gebruiken een vereenvoudigd 3D-model van de aarde om locaties vast te leggen ten opzichte van het aardoppervlak. Het vereenvoudigd model is een omwentelingsellipsoïde (een afgeplatte bol). 
-Coördinaten worden uitgedrukt in ellipsoïdsche breedte (<span style="font-family: 'Times New Roman';">&#981;</span>), lengte (<span style="font-family: 'Times New Roman';">&lambda;</span>) en hoogte (<span style="font-family: 'Times New Roman';"><i>h</i></span>) of rechthoekige coördinaten <span style="font-family: 'Times New Roman';"><i>X</i></span>, <span style="font-family: 'Times New Roman';"><i>Y</i></span> en <span style="font-family: 'Times New Roman';"><i>Z</i></span> ten opzichte van het middelpunt van de ellpisoïde. In onderstaande figuur zijn de hoeken en assen van de ellipsoïdische en rechthoekige coördinaten weergegeven.
+Geodetische CRS'en gebruiken een wiskundig 3D model van de aarde om locaties vast te leggen ten opzichte van het aardoppervlak. Het wiskundig model is een omwentelingsellipsoïde (een afgeplatte bol). 
+Coördinaten worden uitgedrukt in ellipsoïdsche breedte (<span style="font-family: 'Times New Roman';">&#966;</span>), lengte (<span style="font-family: 'Times New Roman';">&lambda;</span>) en hoogte (<span style="font-family: 'Times New Roman';"><i>h</i></span>) of rechthoekige coördinaten <span style="font-family: 'Times New Roman';"><i>X</i></span>, <span style="font-family: 'Times New Roman';"><i>Y</i></span> en <span style="font-family: 'Times New Roman';"><i>Z</i></span> ten opzichte van het middelpunt van de ellipsoïde. In onderstaande figuur zijn de hoeken en assen van de ellipsoïdische en rechthoekige coördinaten weergegeven.
 
 <table style="width: 100%; table-layout: fixed;">
-  <caption>Componenten waarmee men coördinaten uit kan drukken</caption>
+  <caption>Variabelen waarmee men coördinaten uit kan drukken</caption>
   <tr>
     <td style="width: 50%; vertical-align: top; padding-right: 1em;">
       <p><span style="font-family: 'Times New Roman';"><strong><i>Z</i><sub>ecef</sub></strong></span>: de rotatieas van de ellipsoïde vanaf de oorsprong</p>
       <p><span style="font-family: 'Times New Roman';"><strong><i>X</i><sub>ecef</sub></strong></span>: de as vanaf de oorsprong richting de nulmeridiaan in het equatorvlak loodrecht op de rotatieas</p>
       <p><span style="font-family: 'Times New Roman';"><strong><i>Y</i><sub>ecef</sub></strong></span>: de as vanaf de oorsprong loodrecht op de nulmeridiaan en de rotatieas</p>
-      <p><span style="font-family: 'Times New Roman';"><strong><i>&#981;</i></strong></span>: de hoek die de loodlijn vanaf het oppervlak van de ellipsoïde maakt met het <span style="font-family: 'Times New Roman';"><strong><i>XY</i></strong></span>-vlak (= equatorvlak) 
+      <p><span style="font-family: 'Times New Roman';"><strong><i>&#966;</i></strong></span>: de hoek die de loodlijn vanaf het oppervlak van de ellipsoïde maakt met het <span style="font-family: 'Times New Roman';"><strong><i>XY</i></strong></span>-vlak (= equatorvlak) 
       </p>
       <p><span style="font-family: 'Times New Roman';"><strong><i>&lambda;</i></strong></span>: de hoek met de nulmeridiaan</p>
       <p><span style="font-family: 'Times New Roman';"><strong><i>h</i></strong></span>: de hoogte boven de ellipsoïde</p>
@@ -86,9 +86,9 @@ Coördinaten worden uitgedrukt in ellipsoïdsche breedte (<span style="font-fami
   </tr>
 </table>
 
-<mark>Figuur aanpassen. De x-as moet door de greenwich meridiaan. Snijpunt van de evenaar en de greenwich meridiaan. De evenaar ligt niet op de goede plek. Voor locaties in Nederland gaat de loodlijn niet exact door het 0-punt.</mark>
+<mark>Figuur aanpassen. De x-as moet door dhet snijpunt van de evenaar en de greenwichmeridiaan. De evenaar ligt niet op de goede plek. Voor locaties in Nederland gaat de loodlijn niet exact door het 0-punt. Voor de letter phi moet &#966; gebruikt worden i.p.v. &#981;.</mark>
 
-<a>Ellipsoïdische coördinaten</a> worden ook wel geografische coördinaten genoemd, rechthoekige coördinaten worden ook wel <a>geocentrische coördinaten</a> genoemd.
+<a>Ellipsoïdische coördinaten</a> worden ook wel geografische coördinaten genoemd, rechthoekige coördinaten vanuit het middelpunt van de aarde worden ook wel <a>geocentrische coördinaten</a> genoemd.
 
 ### Geprojecteerd CRS
 
@@ -241,7 +241,7 @@ Door de horizontale 2D-gelijkvormigheidstransformatie te combineren met een vast
 
 
 ## Geometrische effecten bij BIM-georeferentie en BIM-transformatie
-Bij het georefereren van een BIM-model ten opzichte van een CRS zijn er twee opties. Bij de eerste benadering blijft het model volledig cartesisch. Daarbij blijven hoeken, lengtes en vormen exact behouden binnen het model. In dit geval resulteert het verschil tussen het platte vlak van het BIM-model en het gekromde aardoppervlak in dat horizontaal en verticaal/waterpas geleidelijk af gaat wijken van de fysieke werkelijkheid en van CRSen als ETRS89 en NAP. Deze effecten worden vooral merkbaar bij lange infrastructuur of zeer hoge nauwkeurigheidseisen of wanneer de combinatie met Geo-datasets gemaakt worden.
+Bij het georefereren van een BIM-model ten opzichte van een CRS zijn er twee opties. Bij de eerste benadering blijft het model volledig cartesisch. Daarbij blijven hoeken, lengtes en vormen exact behouden binnen het model. In dit geval resulteert het verschil tussen het platte vlak van het BIM-model en het gekromde aardoppervlak in dat horizontaal en verticaal/waterpas geleidelijk af gaat wijken van de fysieke werkelijkheid en van CRSen als ETRS89 en NAP. Deze effecten worden vooral merkbaar bij lange infrastructuur of zeer hoge nauwkeurigheidseisen of wanneer de combinatie met geodatasets gemaakt worden.
 
 In de tweede benadering transformeert men het model naar een CRS dat de aardkromming volgt. In dit geval ontstaan verschillende geometrische vervormingen die samenhangen met de overgang tussen een lokaal cartesisch model en een CRS voor de aarde. Een BIM-model is in de basis cartesisch en lokaal vlak, terwijl CRSen rekening houden met projectie en aardkromming. Door de transformatie zullen de hoeken, en/of de lijnvorm en -lengte, en/of de oppervlaktes afwijken van het orginele model. 
 
