@@ -2,89 +2,89 @@
 
 ## Routes voor georeferentie
 
-Wanneer men een BIM-model daadwerkelijk gaat realiseren op de bouwplaats, wordt het model uitgezet in de werkelijkheid. Dit betekent dat het digitale coördinatensysteem van het BIM-model wordt gekoppeld aan vaste referentiepunten op de bouwplaats. Vanuit deze koppeling worden assen, stramienen, hoogtes en punten vanuit het BIM-model uitgezet met meetapparatuur zoals een total station. Op die manier worden posities van constructieve elementen, overgenomen vanuit het model. Deze posities markeert men fysiek in het veld, bijvoorbeeld met piketten of andere markeringen. Voor omvangrijke projecten kan dit proces ook worden ondersteund door machinebesturing. Een BIM-model vormt zo de basis voor de maatvoering in constructie in de werkelijkheid. Met bijvoorbeeld een rolmaat, of laser doet men snelle metingen en detailcontrole op de bowplaats. 
+Wanneer men een BIM-model daadwerkelijk gaat realiseren op de bouwplaats, worden de coördinaten uit het model uitgezet in de werkelijkheid. Dit betekent dat het digitale coördinatensysteem van het BIM-model wordt gekoppeld aan vaste referentiepunten op de bouwplaats. Vanuit deze koppeling worden assen, stramienen (hulplijnen), hoogtes en punten vanuit het BIM-model uitgezet met meetapparatuur zoals een total station. De posities daarvan markeert men fysiek in het veld, bijvoorbeeld met piketten of andere markeringen. Voor omvangrijke projecten kan dit proces ook worden ondersteund door machinebesturing. Een BIM-model vormt zo de basis voor de maatvoering in constructie in de werkelijkheid. Met bijvoorbeeld een rolmaat, of laser doet men snelle metingen en detailcontrole op de bowplaats. 
 
-Om de gecreëerde fysieke werkelijkheid vast te leggen in een coördinatensysteem meet men objecten in, met meetapparatuur zoals een total station en RTK-GNSS. Hiervoor meet men o.a. de hoekenpunten en dakranden van gebouwen in. Alle gemeten punten worden omgerekend naar RD (x,y) met de hoogte in NAP. Vervolgens worden de punten in GIS/CAD-software verbonden tot polygonen, classificeert men de objecten en voegt men attributen toe.  
+Om de gecreëerde fysieke werkelijkheid vast te leggen in een coördinatensysteem meet men objecten weer in, met meetapparatuur zoals een total station en RTK-GNSS. Hiervoor meet men o.a. de hoekenpunten en dakranden van gebouwen in. Alle gemeten punten worden omgerekend naar RD (x,y) met de hoogte in NAP. Vervolgens worden de punten in GIS/CAD-software verbonden tot polygonen, classificeert men de objecten en voegt men attributen toe.  
 
 <figure id="Routes voor georefereren" style="display: block; text-align: center; margin: 0 auto;">
   <img src="media/Routes_voor_Georefereren.png" alt="Routes voor georefereren" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
   <figcaption><a class="self-link" href="#fig-Afwijking-door-aardkromming"></bdi></a><span class="fig-title">Routes voor georefereren</span></figcaption>
 </figure>
+<mark>verkeerde self-link in de code?</mark>
 
-Wanneer men een BIM-model, dat gemodelleerd is in een lokaal cartesisch CRS (engineering CRS), in een <a>GEO-omgeving</a> wil importeren, zonder de route uitzetten en inmeten, moet men een transformatie doen. Afhankelijk van de situatie zijn er verschillende methodes beschikbaar om  BIM- en GEO-modellen samen te voegen op de kaart. Een in RD ingemeten (as-built) GEO-gebouwgeometrie kan men bijvoorbeeld vergelijken met een XYZ(as-designed) BIM-gebouwgeometrie na een 2D gelijkvormigheidstransformatie en hoogtecorrectie, waarin de schaal, translaties en rotatie aangegeven dienen te worden. 
+Wanneer men een BIM-model, dat gemodelleerd is in een lokaal cartesisch CRS (engineering CRS), in <a>geo-software</a> wil importeren, zonder de route uitzetten en inmeten, moet men een transformatie doen. Afhankelijk van de situatie zijn er verschillende methodes beschikbaar om  BIM-modellen en geodata samen te voegen op de kaart. Een in RD ingemeten (as-built) gebouwgeometrie kan men bijvoorbeeld vergelijken met een XYZ (as-designed) BIM-gebouwgeometrie, na een 2D gelijkvormigheidstransformatie en hoogtecorrectie, waarin translaties, rotatie en schaal aangegeven dienen te worden. 
 
 ## 1D, 2D en 3D GEO- en BIM-modellen
-Zowel BIM- als GEO-modellen kunnen een 1D, 2D als 3D coordinatenstelsel gebruiken. Om een juiste transformatie van coordinaten van 2D en 3D modellen te verkrijgen kunnen verschillende methoden worden toegepast.  
+Zowel BIM-modellen als geoodata kunnen een 2D, 3D of samengesteld coördinatenstelsel gebruiken. Om een juiste transformatie te verkrijgen kunnen verschillende transformatiemethoden worden toegepast.  
 
-Een GEO coordinatenstelsel kan 3D samengesteld (EPSG:7415), 2D (EPSG:28992) of 1D (EPSG:5709) zijn. 
-
+<mark>tabel past in breedte niet op bladzijde</mark>  
 <table>
-<caption>Transformatie van 2D en 3D GEO en/of BIM</caption>
+<caption>Transformatie tussen 2D, 3D en samengestelde coördinatenstelsel van BIM-modellen en/of geodata</caption>
   <thead>
     <tr>
-      <th>Source/Target</th>
+      <th>Source/Target <mark>vertalen naar Bron/Doel?</mark></th>
       <th>2D RD</th>
-      <th>2D XY</th>
+      <th>2D lokaal</th>
       <th>2D ETRS89</th>
-      <th>3D RDNAP</th>
-      <th>3D XYZ</th>
+      <th>2D+1D RDNAP</th>
+      <th>3D lokaal</th>
       <th>3D ETRS89</th>
       </tr>
   </thead>
   <tbody>
     <tr>
       <td><strong>2D RD</strong></td>
-      <td>0-transformatie</td>
-      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmert</a> Horizontaal transformatie</td>
-      <td>RDNAPTRANS zonder gebruik hoogte </td>
-      <td>0-transformatie en Interpolatie van z waarde naar target  </td>
-      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmert</a> Horizontaal transformatie en interpolatie van z waarde naar target  </td>
-      <td>RDNAPTRANS </td>
+      <td>Nultransformatie</td>
+      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmerttransformatie</a></td>
+      <td>RDNAPTRANS zonder hoogte</td>
+      <td>Nultransformatie en interpolatie naar NAP-hoogte van target</td>
+      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmerttransfomatie</a> en interpolatie naar Z-waarde van target</td>
+      <td>RDNAPTRANS</td>
     </tr>
     <tr>
-      <td><strong>2D XY</strong></td>
-      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmert</a> Horizontaal transformatie</td>
-      <td>0-transformatie</td>
-      <td>3D gelijkvormigheidstransformatie met NAP = 0 zonder gebruik elipsoidische h</td>
-      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmert</a> Horizontaal transformatie en interpolatie van z waarde naar target</td>
-      <td>0-transformatie + Interpolatie van z waarde naar target</td>
-      <td>3D gelijkvormigheidstransformatie + Interpolatie van z waarde naar target </td>
+      <td><strong>2D lokaal</strong></td>
+      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmerttransformatie</a></td>
+      <td>Nultransformatie</td>
+      <td><a href="#3D-gelijkvormigheidstransformatie">3D Helmerttransformatie</a> met Z=0 (zonder gebruik elipsoïdische hoogte)</td>
+      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmerttransfomatie</a> en interpolatie naar NAP-hoogte van target</td>
+      <td>Nultransformatie en interpolatie naar Z-waarde van target</td>
+      <td><a href="#3D-gelijkvormigheidstransformatie">3D Helmerttransformatie</a> met Z=0 en interpolatie naar ellipsoïdische hoogte van target</td>
     </tr>
     <tr>
       <td><strong>2D ETRS89</strong></td>
-      <td>RDNAPTRANS met alleen RD gebruik</td>
-      <td>3D gelijkvormigheidstransformatie zonder gebruik elipsoidische h</td>
-      <td>0-transformatie</td>
-      <td>RDNAPTRANS met interpolatie van ellipsoidische hoogte naar target NAP</td>
-      <td>3D gelijkvormigheidstransformatie met interpolatie van ellipsoidische hoogte naar target z</td>
-      <td>0-transformatie met interpolatie elipsoidische hoogte</td>
+      <td>RDNAPTRANS zonder hoogte</td>
+      <td><a href="#3D-gelijkvormigheidstransformatie">3D Helmerttransformatie</a> met h=43 m (zonder gebruik Z-waarde)</td>
+      <td>Nultransformatie</td>
+      <td>RDNAPTRANS zonder hoogte en interpolatie naar NAP-hoogte van target</td>
+      <td><a href="#3D-gelijkvormigheidstransformatie">3D Helmerttransformatie</a> met h=43 m en interpolatie naar Z-waarde van target</td>
+      <td>Nultransformatie en interpolatie naar elipsoidische hoogte van target</td>
     </tr>
     <tr>
-      <td><strong>3D RDNAP</strong></td>
-      <td>0-transformatie en Interpolatie van z waarde naar target</td>
-      <td>Projectie en 2D Helmert Horizontaal transformatie</td>
-      <td>RDNAPTRANS zonder gebruik van ellipsoidische h</td>
-      <td>0-transformatie</td>
-      <td>2D Helmert Horizontaal transformatie en 1D Helmert Verticaal transormatie</td>
+      <td><strong>2D+1D RDNAP</strong></td>
+      <td>Nultransformatie (zonder gebruik NAP-hoogte)</td>
+      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmerttransformatie</a> (zonder gebruik NAP-hoogte)</td>
+      <td>RDNAPTRANS zonder hoogte</td>
+      <td>Nultransformatie</td>
+      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmerttransformatie</a> en 1D Helmerttransformatie van hoogte</td>
       <td>RDNAPTRANS</td>
     </tr>
     <tr>
-      <td><strong>3D XYZ</strong></td>
-      <td>Projectie en 2D Helmert Horizontaal transformatie</td>
-      <td>Projectie en 0-transfomatie</td>
-      <td> Projectie, 3D gelijkvormigheidstransformatie NAP = projectieniveau zonder gebruik elipsoidische h</td>
-      <td>2D Helmert Horizontaal transformatie en 1D Helmert Verticaal transormatie</td>
-      <td>0-transformatie</td>
-      <td>3D gelijkvormigheidstransformatie</td>
+      <td><strong>3D lokaal</strong></td>
+      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmerttransformatie</a></td>
+      <td>Nultransfomatie (zonder gebruik Z-waarde)</td>
+      <td><a href="#3D-gelijkvormigheidstransformatie">3D Helmerttransformatie</a> (zonder gebruik elipsoïdische hoogte)</td>
+      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmerttransformatie</a> en 1D Helmerttransformatie van hoogte</td>
+      <td>Nultransformatie</td>
+      <td><a href="#3D-gelijkvormigheidstransformatie">3D Helmerttransformatie</a></td>
     </tr>
     <tr>
       <td><strong>3D ETRS89</strong></td>
-      <td>RDNAPTRANS met alleen RD gebruik</td>
-      <td>3D gelijkvormigheidstransformatie en projectie (z-weghalen)</td>
-      <td>0-transformatie zonder elipsoidische h</td>
+      <td>RDNAPTRANS zonder hoogte</td>
+      <td><a href="#3D-gelijkvormigheidstransformatie">3D Helmerttransformatie</a> (zonder gebruik Z-waarde)</td>
+      <td>Nultransformatie (zonder gebruik elipsoïdische hoogte)</td>
       <td>RDNAPTRANS</td>
       <td>3D gelijkvormigheidstransformatie</td>
-      <td>0-transformatie</td>
+      <td>Nultransformatie</td>
     </tr>
 </table>
 
