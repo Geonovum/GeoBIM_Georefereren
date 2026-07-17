@@ -20,7 +20,7 @@ Deze methode, vrij beschikbaar via de dataroom van het AHN, maakt het mogelijk o
 *Straatmeubilair*
 Bij infrastructuurprojecten zijn in veel gevallen geen gebouwen aanwezig, waardoor het gebruik van noklijnen beperkt is voor de hoogteregistratie binnen infrastructurele BIM-modellen buiten stedelijke gebieden. In dergelijke situaties kan gebruik worden gemaakt van straatmeubilair en andere infrastructuurobjecten met een duidelijke geometrische of semantische herkenbaarheid, zoals wegmarkeringen, kantverharding en overige vaste objecten.
 
-Voor deze toepassing zijn verschillende landelijke datasets van belang die, naast het Actueel Hoogtebestand Nederland (AHN), kunnen worden ingezet. Voorbeelden hiervan zijn het Digitaal Topografisch Bestand (DTB/1GiS) en het Nationaal Wegenbestand (NWB). Het is hierbij van belang te onderkennen dat deze datasets niet volledig driedimensionaal zijn. Zo is het DTB/1GiS een 2.5D-dataset, waarbij per XY-coördinaat slechts één hoogtewaarde beschikbaar is, terwijl het huidige NWB uitsluitend tweedimensionale geometrie bevat.
+Voor deze toepassing zijn verschillende landelijke datasets van belang die, naast het Actueel Hoogtebestand Nederland (AHN), kunnen worden ingezet. Voorbeelden hiervan zijn het Digitaal Topografisch Bestand (DTB/1GiS) en het Nationaal Wegenbestand (NWB). Het is hierbij van belang te onderkennen dat deze datasets niet volledig driedimensionaal zijn. Zo is het DTB/1GiS een 2.5D-dataset, waarbij per xy-coördinaat slechts één hoogtewaarde beschikbaar is, terwijl het huidige NWB uitsluitend tweedimensionale geometrie bevat.
 
 Door wisselende prioriteiten binnen grootschalige infrastructuurprojecten kunnen er verschillen optreden in betrouwbaarheid en in de toegepaste inwin- en meetmethoden per objecttype. Daarom is het raadzaam om vooraf het DTB-handboek te raadplegen, voordat een object wordt geselecteerd voor toepassing binnen de geografische uitlijningsmethode. Afhankelijk van de objectcategorie kan dit resulteren in planimetrische afwijkingen van circa 5 tot 15,5 cm en altimetrische afwijkingen van ongeveer 10 tot 15 cm.
 
@@ -43,12 +43,12 @@ De onderstaande figuur toont de combinatie van een BIM-model met het DTB/1GiS va
 
 Naast vectoriële datasets zoals het DTB/1GiS en het NWB kan ook het AHN, of een andere beschikbare puntenwolk in de omgeving, worden ingezet. Wegmarkeringen en andere infrastructurele objecten zijn hierin vaak goed herkenbaar doordat de intensiteitswaarden van de punten op het wegdek doorgaans significant lager zijn dan die van het omliggende straatmeubilair. Hierdoor kunnen deze objecten relatief eenvoudig worden geïdentificeerd en geëxtraheerd uit de puntenwolk, wat ze geschikt maakt als referentie voor hoogteregistratie.
 
-## Geo datasets voor het refereren van modellen
-Voor het refereren van datasets naar een geo domein, zijn een aantal datasets beschikbaar om op aan te sluiten. Deze zijn (niet limitatief) weergegeven in onderstaande [tabel](#tabel-overzicht-nationale-datasets) (<a href="https://cuatro.sim-cdn.nl/ahn/uploads/1_inventarisatie_van_puntenwolken_in_nederland_1.pdf?cb=mm0aYtMc"><em>WP1: Inventarisatie van puntenwolken in
-Nederland</em></a>). In de tabel zijn de volgende informatie weergegeven: de bestandsnaam, eigenaar, nauwkeurigheid, dimensie en locatie. 
+## Geodatasets voor het georefereren van BIM-modellen
+Voor georefereren zijn een aantal datasets en RD- en NAP-referentiepunten beschikbaar om op aan te sluiten. Deze zijn (niet limitatief) weergegeven in onderstaande [tabel](#tabel-overzicht-nationale-datasets) (<a href="https://cuatro.sim-cdn.nl/ahn/uploads/1_inventarisatie_van_puntenwolken_in_nederland_1.pdf?cb=mm0aYtMc"><em>WP1: Inventarisatie van puntenwolken in
+Nederland</em></a>). In de tabel zijn de volgende informatie weergegeven: de naam, eigenaar, nauwkeurigheid, dimensie en locatie. 
 
 <table id="tabel-overzicht-nationale-datasets">
-   <caption>Overzicht van nationale datasets beschikbaar voor geo-referentie van project data of modelen</caption>
+   <caption>Overzicht van nationale datasets en refrentiepunten beschikbaar voor georeferentie</caption>
   <thead>
     <tr>
       <th>Naam</th>
@@ -62,7 +62,7 @@ Nederland</em></a>). In de tabel zijn de volgende informatie weergegeven: de bes
       <td><a href="https://www.pdok.nl/introductie/-/article/digitaal-topografisch-bestand-dtb-"><strong>DTB / 1GiS</strong></a></td>
       <td>cm-nauwkeurig op objectniveau</td>
       <td>2.5D</td>
-      <td>Landelijk, beheerde water/wegen-infrastructuur</td>
+      <td>Landelijkbeheerde water/wegen-infrastructuur</td>
     </tr>
     <tr>
       <td><a href="https://www.pdok.nl/introductie/-/article/basisregistratie-grootschalige-topografie-bgt-"><strong>BGT</strong></a></td>
@@ -86,13 +86,13 @@ Nederland</em></a>). In de tabel zijn de volgende informatie weergegeven: de bes
       <td><a href="https://www.nationaalwegenbestand.nl/nwb-downloaden"><strong>NWB</strong></a></td>
       <td>± 1 m (topologisch)</td>
       <td>2D</td>
-      <td>Landelijk, wegennet (NL)</td>
+      <td>Landelijk, wegennet</td>
     </tr>
     <tr>
       <td><a href="https://spoorinbeeld.nl/"><strong>SpoorInBeeld - Helicopter vluchten</strong></a></td>
-      <td>± 12 cm (XYZ)</td>
+      <td>± 12 cm (xyH)</td>
       <td>3D</td>
-      <td>Spoortracés Nederland</td>
+      <td>Spoortracés</td>
     </tr>
     <tr>
       <td><a href="https://www.beeldmateriaal.nl/dataroom"><strong>Beeldmateriaal</strong></a></td>
@@ -101,45 +101,51 @@ Nederland</em></a>). In de tabel zijn de volgende informatie weergegeven: de bes
       <td>Landelijk / stedelijk</td>
     </tr>
     <tr>
-      <td><a href="https://maps.rijkswaterstaat.nl/geoweb55/index.html?viewer=NAPinfo"><strong>NAP-netwerk</strong></a></td>
+      <td><a href="https://maps.rijkswaterstaat.nl/geoweb55/index.html?viewer=NAPinfo"><strong>RD-referentiepunten</strong></a></td>
+      <td>&lt; 1 cm (horizontaal en verticaal)</td>
+      <td>3D</td>
+      <td>Landelijk netwerk (GNSS-kernnetpunten)</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.nsgi.nl/referentiepunten-en-gnss-data/informatie-referentiepunten/rdinfo"><strong>RD-netwerk</strong></a></td>
       <td>&lt; 1 cm (verticaal)</td>
-      <td>1D (Z)</td>
-      <td>Landelijk meetnet (peilmerken)</td>
+      <td>1D</td>
+      <td>Landelijk netwwerk (peilmerken)</td>
     </tr>
     <tr>
       <td><a href="https://www.pdok.nl/introductie/-/article/basisregistratie-adressen-en-gebouwen-ba-1"><strong>BAG</strong></a></td>
       <td>± 10 cm (objectpositie)</td>
       <td>2D/2.5D</td>
-      <td>Landelijk (NL)</td>
+      <td>Landelijk</td>
     </tr>
   </tbody>
 </table>
 
-Naast primaire geo datasets, kunnen gemeentes, provicies en centrale overheden andere datasets beschikbaar hebben, die kleiner van scope zijn. Ook zijn er datasets die zijn geextraheerd uit de bovenbenoemde datasets. Een voorbeeld is de 3DBAG, waar het <a>AHN</a> de basis is voor het maken van deze dataset, maar het <a> DTB </a> is ook opgebouwd uit verschillende meet technieken met verschillende standaarden. Vanuit het onderzoek van Rijkswaterstaat, Tu Delft, Het Waterschapshuis en de EuroSDR is er een analyse uitgevoerd voor alle LiDAR datasets in europa, deze zijn weergegeven via <a href="https://3d.bk.tudelft.nl/eupc/"> <strong>European Pointclouds (EUPC)</strong></a>
+Naast primaire geodatasets, kunnen gemeentes, provicies en centrale overheden andere datasets beschikbaar hebben, die een kleiner gebied beslaan. Ook zijn er datasets die zijn afgeleid uit de bovenbenoemde datasets. Een voorbeeld is de 3DBAG, waar de BAG en het <a>AHN</a> de basis zijn voor het maken van deze dataset. Het <a>DTB</a> is opgebouwd met verschillende meettechnieken en verschillende standaarden. Vanuit het onderzoek van Rijkswaterstaat, TU Delft, Het Waterschapshuis en EuroSDR is er een analyse uitgevoerd voor alle LiDAR-datasets in Europa, deze zijn weergegeven via <a href="https://3d.bk.tudelft.nl/eupc/"> <strong>European Pointclouds (EUPC)</strong></a>
 
-### Kwaliteits kenmerken voor geobestanden naar BIM
-De verschillende datasets die voor dit doel kunnen worden gebruikt, zijn duidelijk van elkaar te onderscheiden. Zoals in de vorige paragraaf is benadrukt, vormen zowel het planimetrische (XY) als het altimetrische (Z) component een fundamenteel onderdeel van een geo-databestand. Afwijkingen in deze componenten, of verschillen die ontstaan door uiteenlopende momenten van inwinning of ontwerp, kunnen een aanzienlijke impact hebben op de onderlinge uitlijning van datasets. Het correct refereren van een bestand ten opzichte van deze assen is daarom essentieel om betrouwbare vervolgstappen in het uitlijnings- en integratieproces te kunnen uitvoeren.
+### Kwaliteitskenmerken voor geodata in BIM-modellen
+De verschillende datasets die voor dit doel kunnen worden gebruikt, zijn duidelijk van elkaar te onderscheiden. Zoals in de vorige paragraaf is benadrukt, vormen zowel het planimetrische (xy) als het altimetrische (H) component een fundamenteel onderdeel van geodata. Afwijkingen in deze componenten, of verschillen die ontstaan door uiteenlopende momenten van inwinning of ontwerp, kunnen een aanzienlijke impact hebben op de onderlinge uitlijning van datasets. Het correct georefereren van een bestand ten opzichte een CRS is daarom essentieel om betrouwbare vervolgstappen in het uitlijnings- en integratieproces te kunnen uitvoeren.
 
-Het doel van het refereren van een model binnen het geo-domein is het positioneren ervan in de echte wereld. Deze echte wereld bestaat uit een lokaal en een globaal coördinatensysteem. Zoals eerder beschreven, wordt een BIM-model in de toegepaste softwarepakketten vaak in een 0,0,0-referentiesysteem geplaatst. Daarentegen bevatten globale coördinaten aanzienlijk grotere waarden, wat ertoe kan leiden dat een dataset vastloopt binnen een applicatie. De documentatie van het gebruikte coördinatensysteem is eveneens van cruciaal belang. Wanneer dit systeem niet correct is vastgelegd, kunnen er problemen ontstaan tijdens de conversie van de hoogtecomponent.
+Het doel van het georefereren van een BIM-model in het geo-software is het positioneren ervan in de echte wereld. Deze echte wereld bestaat uit nationale, regionale en internationale coördinatenstelsels. Zoals eerder beschreven, worden voor BIM-modellen in de gebruikte softwarepakketten vaak een lokaal coördinatenstelsel gebruikt. Coördinaten in geodetische coördinatenstelsels vaak aanzienlijk grotere waarden, wat ertoe kan leiden dat een dataset vastloopt in een applicatie. De documentatie van het gebruikte coördinatenstelsel is eveneens van cruciaal belang. Wanneer dit niet correct is vastgelegd, kunnen er problemen ontstaan tijdens transformatie.
 
-### Primaire kwaliteits kenmerken voor geobestanden naar bim
-Voor het gebruik van een dataset uit het **GIS-domein** zijn verschillende kenmerken van belang voor de toepassing binnen een **BIM-systeem**. Niet alle data is even geschikt om gebruikt te worden, naast het gerbuik van het juiste coordinaten systeem, spelen er kwaliteits kenmerken mee die van invloed zijn op zowel de ingewonnen als de gerbruikte referentie data. Op basis van o.a. de onderzoeken en initiatieven van het <a href="https://www.ahn.nl/integrale-hoogtevoorziening-nederland"> <em>Intergaal Hoogtevoorziening Nederland</em></a> (Het Waterschapshuis, Rijkswaterstaat, TU Delft & het Kadaster), de  <a href="https://www.digigo.nu/ilsen-en-richtlijnen/basis-ils-puntenwolk/"> <em>Basis ILS puntenwolken</em></a> (DigiGo) en <a href="https://www.digigo.nu/ilsen-en-richtlijnen/basis-ils-puntenwolk/"> <em>Handreiking 3D Tiling</em></a> (Geonovumn) kunnen de volgende componenten worden meegenomen. Let wel er zijn meer componenten die van invloed zijn op de kwaliteit en bruikbarheid van de data. 
+### Primaire kwaliteitskenmerken voor geodata in BIM-modellen
+Voor het gebruik van een dataset uit het **GIS-domein** zijn verschillende kenmerken van belang voor de toepassing binnen een **BIM-systeem**. Niet alle data is even geschikt om gebruikt te worden, naast het gerbuik van het juiste coördinatenstelsel, spelen er kwaliteitskenmerken mee die van invloed zijn op zowel de ingewonnen als de gerbruikte referentiedata. Op basis van o.a. de onderzoeken en initiatieven van het <a href="https://www.ahn.nl/integrale-hoogtevoorziening-nederland"> <em>Intergaal Hoogtevoorziening Nederland</em></a> (Het Waterschapshuis, Rijkswaterstaat, TU Delft & het Kadaster), de  <a href="https://www.digigo.nu/ilsen-en-richtlijnen/basis-ils-puntenwolk/"> <em>Basis ILS puntenwolken</em></a> (DigiGo) en <a href="https://www.digigo.nu/ilsen-en-richtlijnen/basis-ils-puntenwolk/"> <em>Handreiking 3D Tiling</em></a> (Geonovumn) kunnen de volgende componenten worden meegenomen. Let wel, er zijn meer componenten die van invloed zijn op de kwaliteit en bruikbarheid van de data. 
 
-***1. Geografische distributie van de meet punten***
+***1. Geografische distributie van de meetpunten***
 
-Afhankelijk van de inwin methode, is de geografische distributie van de meetpunten van belang. Dit heeft namelijk een direct effect van het onderscheiden van objecten in het terrein, maar ondersteunt ook in correct vinden van de refrenetie punten. De distributie wordt omschreven door de hoeveelheid punten per vierkante meter of door de minimale afstand tussen de punten. De leert praktijk is een hoge puntdichtheid gekoppeld aan een hoger detailniveau van het 3D-model.
+Afhankelijk van de inwinmethode, is de geografische distributie van de meetpunten van belang. Dit heeft namelijk een direct effect van het onderscheiden van objecten in het terrein, maar ondersteunt ook in correct vinden van georeferentiepunten. De distributie wordt omschreven door de hoeveelheid punten per vierkante meter of door de minimale afstand tussen de punten. De leert praktijk is een hoge puntdichtheid gekoppeld aan een hoger detailniveau van het 3D-model.
 
-***2. De absolute en relatieve nauwkeurigheid van een geo-dataset***
+***2. De absolute en relatieve nauwkeurigheid van geodata***
 
-In de literatuur en uitvraag­specificaties wordt een onderscheid gemaakt tussen de **absolute** en **relatieve** nauwkeurigheid van een geo-dataset. De **absolute nauwkeurigheid** beschrijft de afwijking tussen de inwinning of het model en de werkelijkheid, terwijl de **relatieve nauwkeurigheid** vaak wordt gebruikt om de afwijking tussen meetpunten binnen overlappende inwinningen te omschrijven. Een voorbeeld hiervan is een dwarsprofiel over een ingewonnen stuk snelweg. Beide typen nauwkeurigheden worden uitgedrukt in een planimetrische (XY) en een altimetrische (Z) component. De verschillende uitvraag­specificaties laten zien dat de relatieve nauwkeurigheid altijd kleiner is dan de absolute nauwkeurigheid.
+In de literatuur en uitvraag­specificaties wordt een onderscheid gemaakt tussen de **absolute** en **relatieve** nauwkeurigheid van een geodata. De **absolute nauwkeurigheid** beschrijft de afwijking tussen de inwinning of het model en de werkelijkheid, terwijl de **relatieve nauwkeurigheid** vaak wordt gebruikt om de afwijking tussen meetpunten binnen de dataset te omschrijven. Een voorbeeld hiervan is een dwarsprofiel over een ingewonnen stuk snelweg. Beide typen nauwkeurigheden worden uitgedrukt in een planimetrische (xy) en een altimetrische (H) component. De verschillende uitvraag­specificaties laten zien dat de relatieve nauwkeurigheid altijd beter is dan de absolute nauwkeurigheid.
 
-***3. De classificatieparameters in een geo-dataset***
+***3. De classificatieparameters in een geodataset***
 
-De wijze waarop objecten binnen een geo-dataset worden geclassificeerd, is essentieel voor de bruikbaarheid binnen een BIM-context. De toegepaste classificatiemethode vormt een belangrijke kwaliteitsparameter, bijvoorbeeld wanneer classificatie wordt uitgevoerd door kunstmatige intelligentie (AI) of door menselijke experts. Daarnaast zijn de gebruikte definities een cruciaal startpunt binnen dit proces. Zo kan de classificatie van vegetatie in de referentiedataset niet automatisch dezelfde definitie hebben als in de ingewonnen dataset, wat kan leiden tot interpretatieverschillen of inconsistenties in het uiteindelijke model.
+De wijze waarop objecten binnen een geodataset worden geclassificeerd, is essentieel voor de bruikbaarheid binnen de context van BIM-modellen. De toegepaste classificatiemethode vormt een belangrijke kwaliteitsparameter, bijvoorbeeld wanneer classificatie wordt uitgevoerd door kunstmatige intelligentie (AI) of door menselijke experts. Daarnaast zijn de gebruikte definities cruciaal. Zo kan de classificatie van vegetatie in een referentiedataset een andere definitie hebben als in de ingewonnen dataset, wat kan leiden tot interpretatieverschillen of inconsistenties in het uiteindelijke model.
 
-***4. De inwindatum van de geo-dataset***
+***4. De inwindatum van de geodataset***
 
-Het moment van inwinning bepaalt de bruikbaarheid van de dataset, aangezien iedere geo-dataset die wordt weergegeven in een GIS-omgeving een momentopname is. Een geo-dataset vertegenwoordigt nooit de volledige werkelijkheid, maar vormt slechts een benadering van de omgeving. Hierdoor kan de omgeving, afhankelijk van de mate van verandering, in de loop van de tijd sterk of minder sterk afwijken van de oorspronkelijke weergave. Dit wordt geïllustreerd in de onderstaande figuren aan de hand van de stationsregio van Delft, zoals weergegeven in het Actueel Hoogtebestand Nederland en de 3D Basisvoorziening, waarbij de bouw van de stationsregio een ingrijpende verandering in het terrein laat zien.
+Het moment van inwinning bepaalt de bruikbaarheid van de dataset, aangezien iedere geodataset die wordt weergegeven in een GIS-omgeving een momentopname is. Een geodataset vertegenwoordigt nooit de volledige werkelijkheid, maar vormt slechts een benadering van de omgeving. Hierdoor kan de omgeving, afhankelijk van de mate van verandering, in de loop van de tijd sterk of minder sterk afwijken van de oorspronkelijke weergave. Dit wordt geïllustreerd in de onderstaande figuren aan de hand van de stationsregio van Delft, zoals weergegeven in het Actueel Hoogtebestand Nederland en de 3D Basisvoorziening, waarbij de bouw van de stationsregio een ingrijpende verandering in het terrein laat zien.
 
 <figure id="Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft">
       <img src="./media/Regio_delft_verandering.png" alt="Leefttijd van verschillende puntenwolken van de stationsregio in Delft" height="500"/>
