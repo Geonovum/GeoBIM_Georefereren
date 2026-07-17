@@ -90,13 +90,15 @@ Zowel BIM-modellen als geoodata kunnen een 2D, 3D of samengesteld coördinatenst
 
 <figure id="2D-en-3D-Geo-of-BIM-combineren">
       <img src="./media/2d_en_3d_GeoBIM.png" alt="2D en 3D Geo of BIM combineren" width="700"/>
-    <figcaption><a class="self-link" href="#fig-2D-en-3D-Geo-of-BIM-combineren"></bdi></a><span class="fig-title">2D en 3D Geo of BIM combineren</span></figcaption>
+    <figcaption><a class="self-link" href="#fig-2D-en-3D-Geo-of-BIM-combineren"></bdi></a><span class="fig-title">2D en 3D BIM-model en geodata combineren</span></figcaption>
 </figure>
 
-## Methodes van Georeferentie 
+## Methodes voor georeferentie 
+
+<mark>overlap met paragraaf "Coördinatentransformatie tussel lokaal CRS en geodetisch CRS?</mark>
 
 ### RD-gemodelleerd BIM naar RDNAP 
-Het is mogelijk om "RD bewust" te modelleren in BIM. Wanneer men dit doet moet men rekening houden met de schaalcorrectie voor RD. Een project in de stad Amersfoort zal vanwege projectie, in RD +/-  9 mm per 100 meter kleiner getekend worden dan hoe het in werkelijkheid moet worden. Een lijn van 400 meter zal dan als een lijn van +/- 396,4 meter gemodelleerd moeten worden. De vergroting of reductie geldt niet voor verticale lijnen en NAP-hoogtes in het model. Dit vereist grote zorgvuldigheid van de modelleur. Of men moet de afwijking accepteren. 
+Het is mogelijk om "RD bewust" te modelleren in BIM. Wanneer men dit doet moet men rekening houden met de schaalcorrectie voor RD. Een project in de stad Amersfoort zal vanwege projectie, in RD ca. 9 mm per 100 meter kleiner getekend worden dan hoe het in werkelijkheid moet worden. Een lijn van 400 meter zal dan als een lijn van +/- 396,4 meter gemodelleerd moeten worden. De vergroting of reductie geldt niet voor verticale lijnen en NAP-hoogtes in het model. Dit vereist grote zorgvuldigheid van de modelleur. Of men moet de afwijking accepteren. 
 De transformatie van XYZ-BIM als RDNAP in BIM naar RDNAP is een "nultransformatie". 
 
 ### XYZ gemodeleerd BIM als RD naar RDNAP 
@@ -125,13 +127,13 @@ Om bovenstaande methodes uit te voeren is een bepaald level aan georeferentie-in
 
 
 ## Levels van georeferentie-informatie
-Voor gegeorefereerde data zijn verschillende referentiegegevens of transformatieparameters nodig die de het ruimtelijk positioneren van de data ondersteunen. Deze metgegevens beschrijven bijvoorbeeld het gebruikte coördinatenstelsel, de projectie, schaal, rotatie, referentiepunten of transformatieparameters - informatie die nodig is om de brondata correct te koppelen aan een geografische locatie.
+Voor gegeorefereerde data zijn verschillende referentiegegevens of transformatieparameters nodig. Deze gegevens beschrijven bijvoorbeeld het gebruikte coördinatenstelsel, transformatieparameters of referentiepunten - informatie die nodig is om de brondata correct te koppelen aan een geografische locatie.
 
-Deze gegevens kunnen op verschillende manieren beschikbaar zijn. Soms zijn deze aanwezig in de brondata waarin informatie voor georeferentie reeds opgenomen is, of in metadata of gekoppelde projectiebestanden. Hierdoor kan de positionering grotendeels automatisch plaatsvinden. Wanneer parameters voor een bepaalde methode (gedeeltelijk) ontbreken kan men dit aanvullen. Gegevens kan men verzamelen via externe bronnen, handmatige interpretatie, referentiekaarten of bekende controlepunten. Dit proces vraagt extra validatie om de nauwkeurigheid en consistentie van de georeferentie te waarborgen.
+Deze gegevens kunnen op verschillende manieren beschikbaar zijn. Soms zijn deze aanwezig in de brondata waarin informatie voor georeferentie reeds opgenomen is, of in metadata of in gekoppelde bestanden zoals een prj-bestand. Hierdoor kan de positionering grotendeels automatisch plaatsvinden. Wanneer parameters voor een bepaalde methode (gedeeltelijk) ontbreken kan men dit aanvullen. De gegevens daarvoor kan men verzamelen uit externe bronnen of door handmatige interpretatie van referentiekaarten of bekende referentiepunten. Dit proces vergt extra validatie om de nauwkeurigheid en betrouwbaarheid van de georeferentie te waarborgen.
 
-De beschikbaarheid en nauwkeurigheid van deze parameters hebben directe invloed op de kwaliteit van het georefereringsproces en de uiteindelijke bruikbaarheid van de ruimtelijke data. In een onderzoek van Clemen Christian [[Christian2019]] worden verschillende levels van georeferentie-informatie beschreven. De verschillende levels faciliteren verschillende methode van georeferentie en verschillen in de te behalen nauwkeurigheid en mogelijkheid voor het samenvoegen van modellen. Dit wordt door  beschreven als <a>LoGeoRef</a> oftwel Levels of Georeferencing (niveaus van georeferentie-informatie) .
+De kwaliteit van deze parameters heeft directe invloed op het georefereringsproces en de uiteindelijke bruikbaarheid van de ruimtelijke data. In een onderzoek van Clemen Christian [[Christian2019]] worden verschillende levels van georeferentie-informatie beschreven. De verschillende levels faciliteren verschillende methodes van georeferentie en verschillen in de te behalen nauwkeurigheid en mogelijkheid voor het samenvoegen van modellen. Dit wordt door  beschreven als <mark><a>LoGeoRef</a></mark> oftwel Levels of Georeferencing (niveaus van georeferentie-informatie) .
 
-Het is mogelijk om een BIM-model te voorzien van georeferentie-informatie door alleen het adres, van waar het BIM-model dient te komen, te velmelden. Deze informatie geeft hiermee een grove indicatie van waar het model moet komen. De informatie is niet toereikend om het model exact te plaatsen (transleren, roteren en schalen). Een andere level van informatie zoals het model relateren aan een officieel coördinatenstelsel is hiervoor wel geschikt. Afhankelijk van de behoefte zijn verschillende levels van georeferentie-informatie geschikt.
+Het is mogelijk om een BIM-model te voorzien van georeferentie-informatie door alleen het adres, van waar het BIM-model dient te komen, te velmelden. Deze informatie geeft hiermee een grove indicatie van waar het model moet komen. De informatie is niet toereikend om het model exact te plaatsen (transleren, roteren en schalen). Een ander level van informatie dat het BIM-model relateert aan een officieel coördinatenstelsel is hiervoor wel geschikt. Afhankelijk van de behoefte zijn verschillende levels van georeferentie-informatie geschikt.
 
 De beschikbaarheid van informatie voor het berekenen van georeferentie-parameters voor de verschillende methoden is onderzocht door de TU Delft [[Hakim2024]]. 
 
