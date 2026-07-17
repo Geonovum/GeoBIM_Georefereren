@@ -1,4 +1,4 @@
-# Coördinatenstelsels en Coördinaattransformatie
+# Coördinatenstelsels en coördinatentransformatie
 
 Om informatie te koppelen aan een locatie op aarde worden coördinatenstelsels gebruikt, die in de geo-informatie coördinaatreferentiesystemen (CRS'en) genoemd worden. In nederland worden meerdere CRS'en gebruikt, de <a>CRS</a>-en die relevant zijn voor het georefereren van BIM in Nederland zijn opgenomen in onderstaande tabel:
 
@@ -80,13 +80,13 @@ Coördinaten worden uitgedrukt in ellipsoïdsche breedte (<span style="font-fami
     <td style="width: 50%; vertical-align: top; padding-left: 1em;">
       <figure id="3D_CRS" style="margin: 0;">
                 <img src="media/geonovum-geo-bim_georefereren_2.png" alt="3D CRS" style="width: 100%; max-width: 600px; height: auto;"/>
-                <figcaption><a class="self-link" href="#fig-3D-CRS"></bdi></a><span class="fig-title">3D CRS</span></figcaption>
+                <figcaption><a class="self-link" href="#fig-3D-CRS"></bdi></a><span class="fig-title">Geografisch en geocentrisch CRS</span></figcaption>
       </figure>
     </td>
   </tr>
 </table>
 
-<mark>Figuur aanpassen. De x-as moet door dhet snijpunt van de evenaar en de greenwichmeridiaan. De evenaar ligt niet op de goede plek. Voor locaties in Nederland gaat de loodlijn niet exact door het 0-punt. Voor de letter phi moet &#966; gebruikt worden i.p.v. &#981;.</mark>
+<mark>Figuur aanpassen. De x-as moet door dhet snijpunt van de evenaar en de greenwich-nulmeridiaan. De evenaar en nulmeridiaan liggen niet op de goede plek. Voor locaties in Nederland gaat de loodlijn niet exact door het 0-punt. Voor de letter phi moet &#966; gebruikt worden i.p.v. &#981;. De letter h in de figuur weergeven bij de ellipsoïdische hoogte.</mark>
 
 <a>Ellipsoïdische coördinaten</a> worden ook wel geografische coördinaten genoemd, rechthoekige coördinaten vanuit het middelpunt van de aarde worden ook wel <a>geocentrische coördinaten</a> genoemd.
 
@@ -172,37 +172,43 @@ Een <a>lokaal CRS</a> is een arbitrair gekozen assenstelsel. De oorsprong, de or
 
 In sommige softwarepakketen, zoals AutoCAD, is het gebruikelijk om met het lokale stelsel het RD-stelsel en het NAP-niveau te benaderen, bijvoorbeeld door het gebruik van bekende punten of door de oorsprong te verschuiven. AutoCAD gaat er alleen niet bewust mee om dat dit RD-coördinaten en NAP-hoogten zijn. Wat de software betreft is dit een lokaal stelsel zonder verdere betekenis en worden de aardkromming, zwaartekracht en eigenschappen van de kaartprojectie, zoals de locatieafhankelijke schaalfactor en gridcorrecties, niet toegepast. De link tussen de lokale coördinaten en het geprojecteerd CRS is in dit geval dat coördinaten bij benadering overeen komen (X<sub>bim</sub> &cong; x<sub>RD</sub>, Y<sub>bim</sub> &cong; y<sub>RD</sub>, Z<sub>bim</sub> &cong; H<sub>NAP</sub>).
 
-### True North, Grid North, Project North
+### Ware noorden, kaartnoorden, magnetisch noorden en projectnoorden
 
-Soms wordt de relatie van het lokale CRS ten opzicht van het Noorden gegeven. In de BIM-sector worden de termen <a>True North</a>, <a>Grid North</a> en <a> Project North </a> gebruikt om de relatie met de oriëntatie van een geodetisch CRS aan te geven. Deze hebben afhankelijk van het type CRS de volgende betekenis.
+Soms wordt de relatie van het lokale CRS ten opzicht van het noorden gegeven. In de BIM-sector worden de termen ware noorden, kaartnoorden en projectnoorden gebruikt om de relatie met de oriëntatie van een geodetisch CRS aan te geven. Daarnaast is er ook nog magnetisch noorden.
 
-* CRS obv ellipsoïde: true north is in de richting van de rotatie as van de ellipsoïde (<span style="font-family: 'Times New Roman';"><i>Z</i><sub>ecef</sub></span> in eerdere figuur)
-* CRS obv projectie: true north is in de richting noorden van geprojecteerde stelsel vaak de Y-as of Northing-as, ook wel grid north genoemd.
+* Ware noorden (<a>True North</a>): de richting langs de plaatselijke meridiaan naar de noordpool (het snijpunt van de Z-as met de ellipsoïde in de eerdere figuur Geografisch en geocentrisch CRS) in een modern geografisch CRS zoals ETRS89.
 
+* Kaartnoorden (<a>Grid North</a>): de plaatselijke richting evenwijdig aan de y-as (Northing) van een geprojecteerd CRS. Door de vervorming van een kaartprojectie is dit over het algemeen niet gelijk aan het ware noorden. Voor de RD-projectie vallen het ware noorden en kaartnoorden alleen samen op de meridiaan door Amersfoort. Daarbuiten loopt deze in Nederland op land op tot maximaal 2&deg; naar het oosten of westen en tot ca. 3&deg; in op zee. <mark>Correctieformule weergeven? (zie: https://nl.wikipedia.org/wiki/Stelsel_van_de_Rijksdriehoeksmeting#Projectie)</mark> 
 
 <figure id="True_North_en_Grid_North" style="display: block; text-align: center; margin: 0 auto;">
   <img src="./media/True_North_and_Grid_North.png" alt="True_North_en_Grid_North" title="True North en Grid North" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;"> 
-  <figcaption><a class="self-link" href="#fig-True-North-en-Grid-North"></bdi></a><span class="fig-title">True North en Grid North</span></figcaption>
+  <figcaption><a class="self-link" href="#fig-True-North-en-Grid-North"></bdi></a><span class="fig-title">Ware noorden (True North) en kaartnoorden (Grid North)</span></figcaption>
 </figure>
 
+* Magnetisch noorden (<a>Magnetic North</a>): de plaatselijke veranderlijke richting van het magneetveld van de aarde. Dit is de richting die een kompas aangeeft. In Nederland is de afwijking van het magnetisch noorden ten opzichte van het ware noorden (declinatie) nu ca. +3&deg; (naar het oosten), en deze afwijking wordt momenteel per 6 jaar ongeveer een graad groter. Er zijn modellen die de afwijking voorspellen voor een plaats en tijd op aarde.  
 
-* Het Project North is normaliter gebaseerd op de voornaamste as van het bouwwerk. Het beïnvloedt hoe je schetst in views in software en hoe views op tekenbladen worden geplaatst.Het Project North richt zich vaak richting de bovenkant van een tekengebied. Dit vereenvoudigt het modelleren. 
+* Projectnoorden (<a>Project North</a>): de richting van de <mark>Y-as</mark> van een BIM-model, normaliter gebaseerd op de voornaamste as van het bouwwerk. Het beïnvloedt hoe je schetst in views in software en hoe views op tekenbladen worden geplaatst. Het Project North richt zich vaak richting de bovenkant van een tekengebied. Dit vereenvoudigt het modelleren. Het verschil tussen projectnoorden en het noorden van het voor georeferentie gebruikte CRS (afhankelijk van het CRS is dit het ware noorden of het kaartnoorden) kan groot zijn.
 
 <figure id="Project_North" style="display: block; text-align: center; margin: 0 auto;">
   <img src="./media/Project_North.png" alt="Project_North" title="Project North" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;"> 
   <figcaption><a class="self-link" href="#fig-Project-North"></bdi></a><span class="fig-title">Project North</span></figcaption>
 </figure> 
 
-## Coördinatentransformatie tussen lokaal CRS en geodetisch
+Het verschil tussen ware noorden en kaartnoorden kan van belang zijn bij zonnestudies. Het verschil met magnetisch noorden is alleen van belang bij het gebruik van een kompas en dat is niet gebruikelijk in maatvoering of landmeetkundige projecten. 
 
-De coördinatentransformatie tussen lokaal CRS en een geodetisch CRS wordt, binnen de huidige BIM-standaarden, apart gegeven voor de horizontale en de vertikale component. Dit is dus hetzelfde als voor transformaties van samengestelde CRS-en.
+## Coördinatentransformatie tussen lokaal CRS en geodetisch CRS
+
+De coördinatentransformatie tussen lokaal CRS en een geodetisch CRS wordt, binnen de huidige BIM-standaarden, apart gegeven voor de horizontale en de vertikale component, niet alleen bij transformaties van samengestelde CRS'en.
 
 <aside class="note" title="Aparte Horizontale en Vertikale coördinaattransformatie">
-  <p><strong>AANBEVELING:</strong> Gebruik aparte transformaties voor de horizontale en vertikale componenten. Dit betekent één 2D transformatie voor het horizontale vlak en één 1D transformatie voor het verticale vlak resulteert in een 3D transformatie.</p>
+  <p><strong>AANBEVELING:</strong> Gebruik aparte transformaties voor de horizontale en vertikale component. Dit betekent één 2D (of 3D) transformatie voor het horizontale vlak en één 1D transformatie voor de verticale richting die samen resulteren in een transformatie van 3D data.</p>
 </aside>
 
-### Horizontaal - 2D gelijkvormigheidstransformatie
+### Horizontaal: gelijkvormigheidstransformatie
 
+De parameters voor de 2D of 3D gelijkvormigheidstransformatie kunnen worden berekend wanneer respectievelijk van minimaal 2 of 3 punten de coördinaten bekend zijn zowel in het lokale CRS als het geprojecteerde of geografsiche CRS. Wanneer voor meer gemeenschappelijke punten de coördinaten in beide stelsels beschikbaar zijn, kunnen de parameters worden berekend met behulp van een <a>kleinstekwadratenschatting</a>. Dit levert betere precisie op. Door de <a>overbepaaldheid</a> kan dan ook worden getoetst op eventuele fouten in de coördinaten van één van de punten in een van de stelsels. De toetsing kan bijvoorbeeld door naar de grote van de sluitvectoren/residuen van de gebruikte punten te kijken of, zoals gebruikelijk in de landmeetkunde, een statistische toetsting uit te voeren.
+
+#### 2D gelijkvormigheidstransformatie voor geprojecteerd CRS 
 De relatie tussen het lokale CRS en een geprojecteerd CRS wordt gelegd via een <a>2D gelijkvormigheidstransformatie</a> (ook wel <a>2D Helmert transformatie</a> genoemd).
 
 <table>
@@ -210,42 +216,48 @@ De relatie tussen het lokale CRS en een geprojecteerd CRS wordt gelegd via een <
     <td>
     <figure id="2D-gelijkvormigheidstransformatie" style="display: block; text-align: center; margin: 0 auto;">
       <img src="media/geonovum-geo-bim_georefereren_7.png" alt="Relatie GeoBIM" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;"/>
-    <figcaption><a class="self-link" href="#fig-Relatie-GeoBIM"></bdi></a><span class="fig-title">Relatie GeoBIM</span></figcaption>
+    <figcaption><a class="self-link" href="#fig-Relatie-GeoBIM"></bdi></a><span class="fig-title">Transformatie naar RD voor een lokaal stelsel van een BIM-model</span></figcaption>
     </figure> 
     </td>
   </tr>
   <tr>
 
   <td>
-  2D relatie tussen geprojecteerd CRS en lokaalstelselsel. Parameters voor de 2D gelijkvormighedistransformatie zijn translaties (t<sub>x</sub>, t<sub>y</sub>), schaal (s) en rotatie (alpha). Er is een eenduidige relatie tussen de parameters rotatiehoek (alpha) en de in IFC/BIM gebruikte termen XAxisAbscissa (cos(alpha)) en XAxisOrdinate (sin(alpha)).
+De parameters voor een 2D gelijkvormighedistransformatie zijn translaties (t<sub>x</sub>, t<sub>y</sub>), schaal (s) en rotatie (alpha). Er is een eenduidige relatie tussen de parameters rotatiehoek (alpha) en de in IFC/BIM gebruikte termen XAxisAbscissa (cos(alpha)) en XAxisOrdinate (sin(alpha)).
   </td>
   </tr>
 </table>
-
-De parameters voor de 2D gelijkvormigheidstransformatie kunnen worden berekend wanneer van minimaal 2 punten de coördinaten bekend zijn zowel in het geprojecteerde en het lokale CRS. Wanneer voor meer dan 2 gemeenschappelijke punten de coördinaten in beide stelsels beschikbaar zijn, kunnen de parameters worden berekend met behulp van een <a>kleinste kwadratenschatting</a>. Door de <a>overbepaaldheid</a> kan dan ook worden getoetst op eventuele fouten in de coördinaten van één van de punten in een van de stelsels. De toetsing kan bijvoorbeeld door naar de grote van de sluitvectoren/residuen van de gebruikte punten te kijken of, zoals gebruikelijk in de landmeetkunde, een statistische toetsting uit te voeren.
-
-### Vertikaal - vast hoogteverschil
-
-Voor de relatie tussen vertikale referentievlakken is het uitgangspunt in de huidige standaarden dat de relatie is vast te leggen via een vast hoogteverschil. 
-
-Door de horizontale 2D-gelijkvormigheidstransformatie te combineren met een vast hoogteverschil ontstaat één geïntegreerde 2D + 1D-transformatie. Deze transformatie is in onderstaand figuur schematisch weergegeven. 
 
 <table>
   <tr>
     <td>
     <figure id="Horizontale-en-vertikale_transformatie"  style="display: block; text-align: center; margin: 0 auto;">
       <img src="media/geonovum-geo-bim_georefereren_8.png" alt="2D Transformatie" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;"/>
-          <figcaption><a class="self-link" href="#fig-2D-Transformatie"></bdi></a><span class="fig-title">2D Transformatie + 1D Transformatie</span></figcaption>
+          <figcaption><a class="self-link" href="#fig-2D-Transformatie"></bdi></a><span class="fig-title">Relatie tussen geografisch, geocentrisch en geprojecteerd CRS en een lokaal stelsel</span></figcaption>
     </figure>
     </td>
   </tr>
   <tr>
   <td>
-  Relatie tussen geografisch, geocentrisch en geprojecteerd CRS en lokaalstelselsel voor horizontaal (2D) en verikaal (hoogte). Parameters voor de 2D gelijkvormighedistransformatie zijn translaties (t<sub>x</sub>, t<sub>y</sub>), schaal (s) en rotatie (alpha). Er is een eenduidige relatie tussen de parameters rotatiehoek (alpha) en de inIFC/BIM gebruikte termen XAxisAbscissa (cos(alpha)) en XAxisOrdinate (sin(alpha)). Voor de hoogte is er een vast hoogteverschil, de parameter t<sub>H</a>.
+De parameters voor een 2D gelijkvormighedistransformatie zijn translaties (t<sub>x</sub>, t<sub>y</sub>), schaal (s) en rotatie (alpha).
   </td>
   </tr>
 </table>
+<mark>Is deze complexe figuur nodig?</mark>
 
+#### 3D gelijkvormigheidstransformatie voor geografisch CRS
+
+De relatie tussen het lokale CRS en een geografisch CRS wordt gelegd via een <a>3D gelijkvormigheidstransformatie</a> (ook wel <a>3D Helmert transformatie</a> genoemd) via het bijbehorende geocentrische CRS.
+
+<mark>formule en een figuur voor de vertikale transformatie toevoegen</mark>
+
+### Vertikaal: vast hoogteverschil
+
+Voor de relatie tussen vertikale referentievlakken is het uitgangspunt in de huidige standaarden dat de relatie is vast te leggen via een vast hoogteverschil. 
+
+<mark>formule (H<sub>NAP = H<sub>BIM + t<sub>H) en een figuur voor de vertikale transformatie toevoegen</mark>
+
+Door de gelijkvormigheidstransformatie voor de horizontale component te combineren met een vast hoogteverschil voor de verticale component ontstaat één geïntegreerde transformatie. 
 
 ## Geometrische effecten bij BIM-georeferentie en BIM-transformatie
 Bij het georefereren van een BIM-model ten opzichte van een CRS zijn er twee opties. Bij de eerste benadering blijft het model volledig cartesisch. Daarbij blijven hoeken, lengtes en vormen exact behouden binnen het model. In dit geval resulteert het verschil tussen het platte vlak van het BIM-model en het gekromde aardoppervlak in dat horizontaal en verticaal/waterpas geleidelijk af gaat wijken van de fysieke werkelijkheid en van CRSen als ETRS89 en NAP. Deze effecten worden vooral merkbaar bij lange infrastructuur of zeer hoge nauwkeurigheidseisen of wanneer de combinatie met geodatasets gemaakt worden.
