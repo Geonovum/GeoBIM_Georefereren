@@ -221,12 +221,12 @@ De relatie tussen het lokale CRS en een geprojecteerd CRS wordt gelegd via een <
     </td>
   </tr>
   <tr>
-
   <td>
-De parameters voor een 2D gelijkvormighedistransformatie zijn translaties (t<sub>x</sub>, t<sub>y</sub>), schaal (s) en rotatie (alpha). Er is een eenduidige relatie tussen de parameters rotatiehoek (alpha) en de in IFC/BIM gebruikte termen XAxisAbscissa (cos(alpha)) en XAxisOrdinate (sin(alpha)).
+De parameters voor een 2D gelijkvormighedistransformatie zijn translaties (t<sub>x</sub>, t<sub>y</sub>), schaal (s) en rotatie (&alpha;). Er is een eenduidige relatie tussen de parameters rotatiehoek (&alpha;) en de in IFC/BIM gebruikte termen XAxisAbscissa (cos &alpha;) en XAxisOrdinate (sin &alpha;).
   </td>
   </tr>
 </table>
+<mark>txRD en tyRD bij de assen zetten: nu lijkt tyRD de oost-westafstand weer te geven van de horizontale streepjeslijn.</mark>
 
 <table>
   <tr>
@@ -257,7 +257,7 @@ Voor de relatie tussen vertikale referentievlakken is het uitgangspunt in de hui
 
 <mark>formule (H<sub>NAP = H<sub>BIM + t<sub>H) en een figuur voor de vertikale transformatie toevoegen</mark>
 
-Door de gelijkvormigheidstransformatie voor de horizontale component te combineren met een vast hoogteverschil voor de verticale component ontstaat één geïntegreerde transformatie. 
+Door de gelijkvormigheidstransformatie voor de horizontale component te combineren met een vast hoogteverschil voor de verticale component ontstaat één geïntegreerde transformatie voor 3D data. 
 
 ## Geometrische effecten bij BIM-georeferentie en BIM-transformatie
 Bij het georefereren van een BIM-model ten opzichte van een CRS zijn er twee opties. Bij de eerste benadering blijft het model volledig cartesisch. Daarbij blijven hoeken, lengtes en vormen exact behouden binnen het model. In dit geval resulteert het verschil tussen het platte vlak van het BIM-model en het gekromde aardoppervlak in dat horizontaal en verticaal/waterpas geleidelijk af gaat wijken van de fysieke werkelijkheid en van CRSen als ETRS89 en NAP. Deze effecten worden vooral merkbaar bij lange infrastructuur of zeer hoge nauwkeurigheidseisen of wanneer de combinatie met geodatasets gemaakt worden.
