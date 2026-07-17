@@ -113,7 +113,9 @@ In Nederland wordt het geprojecteerde RD-stelsel gebruikt. Het RD-stelsel heeft 
 
 waarbij:  <math><msub><mi>x</mi><mi>RD</mi></math> en <math><msub><mi>y</mi><mi>RD</mi></math> de gemiddelde RD-coördinaten in meter zijn van locatie van het BIM-project.
 
-Let op, voor een precisie beter dan 1 cm per 500 meter (10 centimeter per 5 kilometer) moet ook rekening gehouden worden met het onregelmatige RD-correctiegrid en volstaat bovenstaande formule niet.
+Let op, voor een precisie beter dan 1 cm per 500 meter (10 centimeter per 5 km) moet ook rekening gehouden worden met het onregelmatige RD-correctiegrid en volstaat bovenstaande formule niet.
+
+<mark>Bovenstaande heeft te veel overlap met paragraaf "Afwijking door projectie"</mark>
 
 <table style="width: 100%; table-layout: fixed;">
   <tr>
@@ -273,67 +275,47 @@ In de tweede benadering transformeert men het model naar een CRS dat de aardkrom
 ## Afwijkingen
 Veel BIM-modellen zijn gebaseerd op cartesische geometrie, waarbij wordt aangenomen dat de ruimte vlak is en kan worden beschreven met een orthogonaal coördinatenstelsel. Deze benadering introduceert afwijkingen wanneer zij wordt toegepast op het aardoppervlak. De aarde is immers geen vlak maar een gekromd lichaam dat benaderd wordt door een ellipsoïde.
 
-Wanneer geografische coördinaten zonder passende conversies of projecties rechtstreeks worden verwerkt binnen een cartesisch model, ontstaan systematische verschillen tussen de gemodelleerde en de werkelijke afstanden, richtingen en oppervlakken. Deze afwijkingen nemen toe naarmate de beschouwde afstanden groter worden en de invloed van de aardkromming sterker doorwerkt. Ook veroorzaakt het gebruik van een cartesisch model zonder passende conversies op een gekromd aardoppervlak afwijkingen
+Wanneer geografische coördinaten zonder passende transformatie of projectie rechtstreeks worden verwerkt binnen een cartesisch model, ontstaan systematische verschillen tussen de gemodelleerde en de werkelijke afstanden, richtingen en oppervlakken. Deze afwijkingen nemen toe naarmate de beschouwde afstanden groter worden en de invloed van de aardkromming sterker doorwerkt. Ook veroorzaakt het gebruik van een cartesisch model op een gekromd aardoppervlak zonder passende maatregelen afwijkingen in de hoogte.
 
-Het verschil tussen een vlak cartesisch referentiekader en de werkelijke geometrie van het aardoppervlak vormt een fundamentele bron van meet- en modelafwijkingen. Een goed begrip van deze afwijkingen is essentieel om de nauwkeurigheid van ruimtelijke analyses te kunnen beoordelen en om te bepalen wanneer correcties voor aardkromming noodzakelijk zijn.
+Het verschil tussen een vlak cartesisch stelsel en de werkelijke geometrie van het aardoppervlak vormt een fundamentele bron van meet- en modelafwijkingen. Een goed begrip van deze afwijkingen is essentieel om de nauwkeurigheid van ruimtelijke analyses te kunnen beoordelen en om te bepalen wanneer correcties voor aardkromming noodzakelijk zijn.
 
-### Afwijking door projectie 
-Een afwijking waarmee men rekening moet houden bij het gebruik van een geprojecteerde CRS (RD) is de afwijking door lijnvergroting of -verkleining door projectie. Deze afwijking komt door het effect beschreven in [Geprojecteerd CRS](#geprojecteerd-crs). Deze lijnvergroting of -verkleining is het geval bij XY naar RD-coordinaten, maar niet bij Z naar NAP-coordinaten. 
+### Schaalfout door projectie 
+Een afwijking waarmee men rekening moet houden bij het gebruik van een geprojecteerd CRS met een hoekgetrouwe projectie (zoals RD) is de afwijking door lijnvergroting of -verkleining door de projectie. Deze afwijking komt door de schaalfout beschreven in [Geprojecteerd CRS](#geprojecteerd-crs). Dit schaalverschhil treedt op tussen bij XY-coördinaten van een BIM-model en RD-coordinaten, maar niet bij de Z-coördinaat van een BIM-model nen NAP-hoogte. 
 
-Problemen met deze afwijking kunnen gaan spelen als men BIM zonder conversie wil combineren met RD, of als men GEO in RD zonder conversie als onderlegger voor BIM gebruikt, en daar in werkelijke meters binnen gaat tekenen.   
+Problemen met deze afwijking kunnen gaan spelen als men een BIM-model zonder transformatie wil combineren met geodata in RD, of als men geodata in RD zonder transformatie als ondergrond voor een BIM-model gebruikt, en daar in werkelijke meters in gaat tekenen.   
 
-De afwijkingen die hierbij kunnen ontstaan zijn +/- 10 mm bij 100 meter en 10 cm bij 1 km op land. En tot 1 m/km op zee.
+De afwijkingen die hierbij kunnen ontstaan zijn maximaal 1 cm per 100 meter (10 cm per 1 km) op land. En tot 10 cm per 100 meter (1 meter per km) op zee.
 
-Daarnaast is er een correctiegrid voor RD. Deze afwijking is minder dan 2 cm per km. 
+Daarnaast is er een correctiegrid voor RD dat een vervorming geeft. Deze afwijking is maximaal 1 cm per 500 meter (10 cm per 5 km). 
 
 ### Afwijking door aardkromming
-Een tweede soort afwijking waarmee men rekening kan houden is de afwijking door aardkromming. De kromming van de aarde die afwijkingen veroorzaken bij cartesisch gemodelleerde modellen. Hier zijn twee effecten. De **hoogteafwijking** en de **vervorming**. Wanneer men iets horizontaal "recht", waterpas, wil maken in de werklijkheid, is dit eigenlijk krom.
+Een andere soort afwijking waarmee men rekening kan houden is de afwijking door aardkromming. De kromming van de aarde die afwijkingen veroorzaken bij cartesisch gemodelleerde modellen. Hier zijn twee effecten. De **hoogteafwijking** en de **vervorming door aardkromming**. Wanneer men iets horizontaal vlak, waterpas, wil maken in de werklijkheid, is dit feitelijk licht krom.
 
-Dit punt speelt als we euclidisch cartesisch BIM willen combineren met geodetisch ETRS-89 
+Dit geeft een **hoogtefout** als we een cartesisch BIM-model willen combineren met geodetisch ETRS89. De afwijking die hierdoor ontstaat is 1 cm op 360 m afstand (10 cm op 1,1 km) van het punt waar de horizontaal en vertikaal van het BIM-model overeenkomen met die van de aarde, maar loopt kwadratisch op met de afstand. Als dat punt in het midden van het BIM-model gekozen wordt geeft dit een fout van 1 cm per 720 meter (10 cm op 2,2 km). Deze fout kan meestal voorkomen worden door een afzonderlijker
 
-De afwijkingen die hierbij kunnen ontstaan zijn:
-1 cm op 360 m
-10 cm op 1,1 km
-1 m op 3,6 km
-10 m op 11,3 km 
-Dit effect is kwadratisch.
+De **vervorming door aardkromming** treedt op doordat in de gekromde wereld de verticaal aan de ene kant van een model niet helemaal evenwijdig is aan de verticaal aan de andere kant van het model, en dus de afstand tussen de verticalen hoger boven het aardoppervlak steeds groter wordt. De grootte van het effect is afhankelijk van de modelgrootte: de lengte (L) van het model en het hoogteverschil (∆H) binnen het model. Voor een nauwkeurigheid van 1 cm mag L×∆H niet meer dan 64 km×m zijn en voor een nauwkeurigheid van 10 cm niet meer 640 km×m zijn. Dit probleem is niet oplosbaar, maar zal alleen bij grote modellen met grote hoogteverschillen relevant kunnen worden. 
 
-Er bestaat ook **vervorming door aardkromming**.
-Doordat in de gekromde wereld de verticaal aan de ene kant van een model niet helemaal evenwijdig is aan de verticaal aan de andere kant van het model, wordt de afstand tussen de verticalen hoger boven het aardoppervlak steeds groter. De grootte van het effect is afhankelijk van de modelgrootte: de lengte (L) van het model en het hoogteverschil (∆H) binnen het model. Voor een nauwkeurigheid van 1 cm mag L×∆H niet meer dan 64 km×m zijn en voor een nauwkeurigheid van 10 cm niet meer 640 km×m zijn. Alleen bij grote modellen met grote hoogteverschillen zou dit relevant kunnen worden.
-
-Nauwkeurigheid Maximale modelgrootte
-
-1 cm 2 km voor ∆H tot 32 m, 200 m voor ∆H tot 320 m
-
-10 cm 2 km voor ∆H tot 320 m
+Voor een nauwkeurigheid van 1 cm kan een model tot L = 2 km voor ∆H tot 32 m gebruikt worden, of L = 200 m voor ∆H tot 320 m. Voor een nauwkeurigheid van 10 cm kan een model tot 20 km voor ∆H tot 32 m gebruikt worden, of L = 20 km voor ∆H tot 320 m. 
 
 ### Afwijking door lijnuitbuiging
-Een volgende afwijking is lijnuitbuiging. Dit is het effect dat een rechte lijn in het ene stelsel geen rechte lijn is in het andere stelsel. 
+Een volgende afwijking is horizontale uitbuiging van lijnen. Dit komt doordat een rechte lijn in het een geprojecteerd coördinatenstelsel geen rechte lijn is in een ander coördinatenstelsel of in de werkelijkheid. Voor RD valt deze afwijking mee (ca. 1,3 mm bij 1 km, ca. 3 cm bij 5 km en ca. 8 cm bij 10 km), maar voor andere kaartprojecties (met name webmercator) kan deze afwijking problemen geven. 
 
-Deze afwijking bedraagt
-+/- 1,3 mm bij 1km en  +/- 3 cm bij 5 km 
-Horizontale uitbuiging van rechte lijnen in coördinatenstelsels
+In Nederland (tot 56° noorderbreedte):
+* Afwijkingen tot 1 cm bij een afstand van 587 m <mark>(ca. 900 m in RD)</mark>
+* Afwijkingen tot 10 cm bij een afstand van 1857 m <mark>(ca. 11 km in RD)</mark>
 
-- < 1 cm bij afstanden tot 587 m (voor 56°NB)
-- < 10 cm bij afstanden tot 1857 m (voor 56°NB)
+Als oplossing kan er voor gezorgd worden dat er in geodate en BIM-modellen geen lijnsegmenten gebruikt worden die te lang zijn voor de gewenste nauwkeurigheid. Voor een nauwkeurigheid van 1 mm zijn punten met een maximale tussenafstand van 200 meter nodig voor de in Nederland gangbare projecties. Voor het genereren van synthetische tussenpunten kan afhankelijk van wat bedoeld is, gekozen worden tussen punten op een rechte lijn in de kaart of een rechte lijn in werkelijkheid (geodetische lijn in ETRS89), zie [handreiking gebruik coordinaatreferentiesystemen](https://docs.geostandaarden.nl/crs/crs/#vormvastheid) en het [langelijnenadvies](https://gnss-data.kadaster.nl/misc/docs/langelijnenadvies.pdf). 
 
-zie [handreiking gebruik coordinaatreferentiesystemen](https://docs.geostandaarden.nl/crs/crs/#vormvastheid) en het [langelijnenadvies](https://gnss-data.kadaster.nl/misc/docs/langelijnenadvies.pdf). 
-
-Voor een nauwkeurigheid van 1 mm zijn dus punten met 200 m tussenafstand nodig voor de in Nederland gangbare projecties. Voor het genereren van synthetische tussenpunten kan afhankelijk van wat bedoeld is, gekozen worden tussen punten op een rechte lijn in de kaart of een rechte lijn in werkelijkheid (geodetische lijn in ETRS89).
-
-### Afwijking van kaart Noorden
-Tenslotte adresseert deze praktijkrichtlijn de afwijking van kaartnoorden, ware noorden (meridiaanrichting of zonne noorden) en tijdsafhankelijk magnetisch noorden.
-Afhankelijk van de positie in Nederland kan dit een afwijking van maximaal 3 graden opleveren (in Duitsland en in Zee, de grenzen van het correctiegrid). In Bessel is de afwijking 0.
-Voor zonnestudies kan dit belangrijk zijn.
+### Afwijking van het noorden
+<mark>te veel overlap met eerdere paragraaf over noorden</mark>
 
 ### Conclusie
 
-Voor modellen van minder dan 100 m kunnen lokaal cartesische XYZ-coördinaten in BIM rechtstreeks in het terrein uitgezet worden met een nauwkeurigheid van 1 cm, en modellen tot 1 km met een nauwkeurigheid van 10 cm. Voor grotere modellen of hogere nauwkeurigheidseisen is correctie nodig of moet via het RDNAP-coördinaten getransformeerd worden.
+Voor modellen van minder dan 360 m kunnen cartesische XYZ-coördinaten in BIM rechtstreeks in het terrein uitgezet worden met een nauwkeurigheid van 1 cm, en modellen tot 1,1 km met een nauwkeurigheid van 10 cm. Voor grotere modellen of hogere nauwkeurigheidseisen is correctie nodig of moet via het RDNAP-coördinaten getransformeerd worden.
 
-Zodra nauwkeurige aansluiting op geo-informatie, zoals BAG-, BGT- of kadastrale gegevens, vereist is, volstaat een lokaal cartesisch stelsel niet meer. In dat geval moeten coördinaten worden gekoppeld aan het officiële referentiestelsel als RDNAP en dient men bijbehorende projectie- en schaalcorrecties toe te passen. Hiermee wordt het mogelijk om nauwkeurige ruimtelijke bevragingen te doen. 
-
+Voor modellen van minder dan 100 m kunnen RDNAP-coördinaten lokaal als cartesische XYZ-coördinaten in BIM gebruikt worden met een nauwkeurigheid van 1 cm, en modellen tot 1 km met een nauwkeurigheid van 10 cm. Voor grotere modellen of hogere nauwkeurigheidseisen is correctie nodig of moet getransformeerd worden voor nauwkeurige aansluiting op geo-informatie, zoals BAG-, BGT- of kadastrale gegevens. Hiermee wordt het mogelijk om nauwkeurige ruimtelijke bevragingen te doen. 
 
 <aside class="note" title="Bepaal georeferentiemethode en route op basis van projectomvang en nauwkeurigheidsbehoefte">
-  <p><strong>AANBEVELING:</strong> Bepaal voor elk project de omvang (lengte, breedte, hoogte) en de gewenste nauwkeurigheid. Kies op basis hiervan de route, methode en informatievoorziening van georeferentie.  </p>
+  <p><strong>AANBEVELING:</strong> Bepaal voor elk project de omvang (lengte, breedte, hoogte) en de gewenste nauwkeurigheid. Kies op basis hiervan de benodigde correcties of transformatieroute voor de benodigde methode voor georefereren en de metadata over de georeferentie.</p>
 </aside>
   
