@@ -853,7 +853,7 @@ body:has(input[name=color-scheme][value=dark]:checked) .hljs{
     <h2>
       Geonovum Praktijkrichtlijn<br>
       Werkversie
-      <time class="dt-published" datetime="2026-07-09">09 juli 2026</time>
+      <time class="dt-published" datetime="2026-07-23">23 juli 2026</time>
     </h2>
     <dl>
       
@@ -928,7 +928,7 @@ body:has(input[name=color-scheme][value=dark]:checked) .hljs{
 <p>BIM- en GEO-modellen ontstaan vaak in software en tooling. Om dit generiek bij elkaar te brengen is georeferentie in open uitwisselformaten nodig. In IFC (met name IFC 4.3) speelt IfcMapConversion een centrale rol voor georeferentie op level 50. Andere formaten zoals DXF, (City)GML/CityJSON, GeoPackage en OGC-API’s bieden elk eigen mogelijkheden en beperkingen voor het vastleggen van CRS-informatie en transformaties.</p>
 <p>De praktijkrichtlijn biedt onderscheid tussen de toepassing in B&amp;U- en infraprojecten. B&amp;U-projecten zijn vaak kleinschalig en kunnen goed in een lokaal stelsel worden gemodelleerd, terwijl infraprojecten meestal langgerekt zijn en direct in RD/NAP worden ontworpen vanwege aansluiting op bestaande infrastructuur. De richtlijn sluit af met praktische software- en tooling handleidingen (o.a. Revit en Civil 3D) die laten zien hoe georeferentie in de praktijk kan worden ingericht en geëxporteerd. Aanvullend hierop laat de praktijkrichtlijn in software zien wat het effect van modellen van verschillend LevelOfGeoreferencing is op de plaatsing. Deze praktijktoets bevestigd de aanbevling van minimaal LevelOfGeoreferencing 50.</p>
 </section> 
-  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#introductie"><bdi class="secno">1. </bdi>Introductie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#leeswijzer"><bdi class="secno">1.1 </bdi>Leeswijzer</a></li></ol></li><li class="tocline"><a class="tocxref" href="#toepassingsgebied"><bdi class="secno">2. </bdi>Toepassingsgebied</a></li><li class="tocline"><a class="tocxref" href="#coordinaatreferentiesystemen-en-coordinatentransformatie"><bdi class="secno">3. </bdi>Coördinaatreferentiesystemen en Coördinatentransformatie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#geodetische-crs-en"><bdi class="secno">3.1 </bdi>Geodetische CRS-en</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#geografische-en-geocentrisch-crs"><bdi class="secno">3.1.1 </bdi>Geografische en geocentrisch CRS</a></li><li class="tocline"><a class="tocxref" href="#geprojecteerd-crs"><bdi class="secno">3.1.2 </bdi>Geprojecteerd CRS</a></li><li class="tocline"><a class="tocxref" href="#vertikaal-crs"><bdi class="secno">3.1.3 </bdi>Vertikaal CRS</a></li><li class="tocline"><a class="tocxref" href="#samengesteld-crs"><bdi class="secno">3.1.4 </bdi>Samengesteld CRS</a></li></ol></li><li class="tocline"><a class="tocxref" href="#lokaal-crs"><bdi class="secno">3.2 </bdi>Lokaal CRS</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#benadering-van-rd-in-lokaal-crs"><bdi class="secno">3.2.1 </bdi>Benadering van RD in lokaal CRS</a></li><li class="tocline"><a class="tocxref" href="#true-north-grid-north-project-north"><bdi class="secno">3.2.2 </bdi>True North, Grid North, Project North</a></li></ol></li><li class="tocline"><a class="tocxref" href="#coordinatentransformatie-tussen-lokaal-crs-en-geodetisch"><bdi class="secno">3.3 </bdi>Coördinatentransformatie tussen lokaal CRS en geodetisch</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#horizontaal-2d-gelijkvormigheidstransformatie"><bdi class="secno">3.3.1 </bdi>Horizontaal - 2D gelijkvormigheidstransformatie</a></li><li class="tocline"><a class="tocxref" href="#vertikaal-vast-hoogteverschil"><bdi class="secno">3.3.2 </bdi>Vertikaal - vast hoogteverschil</a></li></ol></li><li class="tocline"><a class="tocxref" href="#geometrische-effecten-bij-bim-georeferentie-en-bim-transformatie"><bdi class="secno">3.4 </bdi>Geometrische effecten bij BIM-georeferentie en BIM-transformatie</a></li><li class="tocline"><a class="tocxref" href="#afwijkingen"><bdi class="secno">3.5 </bdi>Afwijkingen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#afwijking-door-projectie"><bdi class="secno">3.5.1 </bdi>Afwijking door projectie</a></li><li class="tocline"><a class="tocxref" href="#afwijking-door-aardkromming"><bdi class="secno">3.5.2 </bdi>Afwijking door aardkromming</a></li><li class="tocline"><a class="tocxref" href="#afwijking-door-lijnuitbuiging"><bdi class="secno">3.5.3 </bdi>Afwijking door lijnuitbuiging</a></li><li class="tocline"><a class="tocxref" href="#afwijking-van-kaart-noorden"><bdi class="secno">3.5.4 </bdi>Afwijking van kaart Noorden</a></li><li class="tocline"><a class="tocxref" href="#conclusie"><bdi class="secno">3.5.5 </bdi>Conclusie</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#methodes-voor-georeferentie"><bdi class="secno">4. </bdi>Methodes voor Georeferentie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#routes-voor-georeferentie"><bdi class="secno">4.1 </bdi>Routes voor georeferentie</a></li><li class="tocline"><a class="tocxref" href="#x1d-2d-en-3d-geo-en-bim-modellen"><bdi class="secno">4.2 </bdi>1D, 2D en 3D GEO- en BIM-modellen</a></li><li class="tocline"><a class="tocxref" href="#methodes-van-georeferentie"><bdi class="secno">4.3 </bdi>Methodes van Georeferentie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#rd-gemodelleerd-bim-naar-rdnap"><bdi class="secno">4.3.1 </bdi>RD-gemodelleerd BIM naar RDNAP</a></li><li class="tocline"><a class="tocxref" href="#xyz-gemodeleerd-bim-als-rd-naar-rdnap"><bdi class="secno">4.3.2 </bdi>XYZ gemodeleerd BIM als RD naar RDNAP</a></li><li class="tocline"><a class="tocxref" href="#xyz-gemodelleerd-bim-via-een-2d-gelijkvormigheidstransformatie-naar-rdnap"><bdi class="secno">4.3.3 </bdi>XYZ gemodelleerd BIM via een 2D gelijkvormigheidstransformatie naar RDNAP</a></li><li class="tocline"><a class="tocxref" href="#xyz-gemodelleerd-bim-via-een-3d-gelijkvormigheidstransformatie-naar-etrs89"><bdi class="secno">4.3.4 </bdi>XYZ gemodelleerd BIM via een 3D gelijkvormigheidstransformatie naar ETRS89</a></li><li class="tocline"><a class="tocxref" href="#xyz-gemodeleerd-bim-via-3d-een-3d-gelijkvormigheidstransformatie-naar-etrs89-en-hoogte-naar-nap"><bdi class="secno">4.3.5 </bdi>XYZ gemodeleerd BIM via 3D een 3D gelijkvormigheidstransformatie naar ETRS89 en hoogte naar NAP</a></li><li class="tocline"><a class="tocxref" href="#xyz-met-lokale-projectie-naar-etrs89"><bdi class="secno">4.3.6 </bdi>XYZ met lokale projectie naar ETRS89</a></li></ol></li><li class="tocline"><a class="tocxref" href="#levels-van-georeferentie-informatie"><bdi class="secno">4.4 </bdi>Levels van georeferentie-informatie</a></li><li class="tocline"><a class="tocxref" href="#schaal-en-correctie-op-basis-van-gebruikte-eeenheden"><bdi class="secno">4.5 </bdi>Schaal en correctie op basis van gebruikte eeenheden</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gebruik-van-geo-voor-georeferentie"><bdi class="secno">5. </bdi>Gebruik van geo voor georeferentie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#georeferentie-level-60-voor-bim-naar-geo"><bdi class="secno">5.1 </bdi>Georeferentie Level 60 voor BIM naar Geo</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-gebruik-van-survey-points"><bdi class="secno">5.1.1 </bdi>Het gebruik van survey points</a></li><li class="tocline"><a class="tocxref" href="#geografische-uitlijning"><bdi class="secno">5.1.2 </bdi>Geografische uitlijning</a></li></ol></li><li class="tocline"><a class="tocxref" href="#geo-datasets-voor-het-refereren-van-modellen"><bdi class="secno">5.2 </bdi>Geo datasets voor het refereren van modellen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kwaliteits-kenmerken-voor-geobestanden-naar-bim"><bdi class="secno">5.2.1 </bdi>Kwaliteits kenmerken voor geobestanden naar BIM</a></li><li class="tocline"><a class="tocxref" href="#primaire-kwaliteits-kenmerken-voor-geobestanden-naar-bim"><bdi class="secno">5.2.2 </bdi>Primaire kwaliteits kenmerken voor geobestanden naar bim</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#georeferentie-in-uitwisseling"><bdi class="secno">6. </bdi>Georeferentie in uitwisseling</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#industry-foundation-classes-ifc"><bdi class="secno">6.1 </bdi>Industry Foundation Classes (IFC)</a></li><li class="tocline"><a class="tocxref" href="#dxf"><bdi class="secno">6.2 </bdi>DXF</a></li><li class="tocline"><a class="tocxref" href="#city-gml"><bdi class="secno">6.3 </bdi>(City)GML</a></li><li class="tocline"><a class="tocxref" href="#cityjson"><bdi class="secno">6.4 </bdi>CityJSON</a></li><li class="tocline"><a class="tocxref" href="#geopackage"><bdi class="secno">6.5 </bdi>Geopackage</a></li><li class="tocline"><a class="tocxref" href="#api"><bdi class="secno">6.6 </bdi>API</a></li></ol></li><li class="tocline"><a class="tocxref" href="#georeferentie-in-de-domeinen-b-u-en-infra"><bdi class="secno">7. </bdi>Georeferentie in de domeinen B&amp;U en Infra</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#georeferentie-in-de-b-u"><bdi class="secno">7.1 </bdi>Georeferentie in de B&amp;U</a></li><li class="tocline"><a class="tocxref" href="#georeferentie-in-de-infra"><bdi class="secno">7.2 </bdi>Georeferentie in de Infra</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#toepassing-van-3d-software"><bdi class="secno">7.2.1 </bdi>Toepassing van 3D-software</a></li><li class="tocline"><a class="tocxref" href="#gevolgen-van-projectievervorming"><bdi class="secno">7.2.2 </bdi>Gevolgen van projectievervorming</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#handleiding-software"><bdi class="secno">8. </bdi>Handleiding Software</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#cad-onderlegger"><bdi class="secno">8.1 </bdi>CAD Onderlegger</a></li><li class="tocline"><a class="tocxref" href="#revit"><bdi class="secno">8.2 </bdi>Revit</a></li><li class="tocline"><a class="tocxref" href="#autocad-civil-3d"><bdi class="secno">8.3 </bdi>Autocad Civil 3D</a></li><li class="tocline"><a class="tocxref" href="#archicad"><bdi class="secno">8.4 </bdi>ArchiCAD</a></li><li class="tocline"><a class="tocxref" href="#tekla-structures"><bdi class="secno">8.5 </bdi>Tekla Structures</a></li><li class="tocline"><a class="tocxref" href="#sketchup"><bdi class="secno">8.6 </bdi>Sketchup</a></li><li class="tocline"><a class="tocxref" href="#blender"><bdi class="secno">8.7 </bdi>Blender</a></li><li class="tocline"><a class="tocxref" href="#illustrator-inkscape"><bdi class="secno">8.8 </bdi>Illustrator/Inkscape</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#illustrator-mapublisher"><bdi class="secno">8.8.1 </bdi>Illustrator MAPublisher</a></li></ol></li><li class="tocline"><a class="tocxref" href="#arcgis"><bdi class="secno">8.9 </bdi>ArcGIS</a></li><li class="tocline"><a class="tocxref" href="#qgis"><bdi class="secno">8.10 </bdi>QGIS</a></li><li class="tocline"><a class="tocxref" href="#controle-van-georeferentie-in-qgis-solibri-en-bimcollab"><bdi class="secno">8.11 </bdi>Controle van georeferentie in QGIS, Solibri en BIMCollab</a></li></ol></li><li class="tocline"><a class="tocxref" href="#tooling"><bdi class="secno">9. </bdi>Tooling</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ifcgref"><bdi class="secno">9.1 </bdi>IfcGref</a></li><li class="tocline"><a class="tocxref" href="#ifc-georeferencer"><bdi class="secno">9.2 </bdi>Ifc georeferencer</a></li></ol></li><li class="tocline"><a class="tocxref" href="#validatie-van-gegeorefereerde-ifc-modellen"><bdi class="secno">10. </bdi>Validatie van gegeorefereerde IFC-modellen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#doel-van-de-validatie"><bdi class="secno">10.1 </bdi>Doel van de validatie</a></li><li class="tocline"><a class="tocxref" href="#resultaten-in-arcgis"><bdi class="secno">10.2 </bdi>Resultaten in ArcGIS</a></li><li class="tocline"><a class="tocxref" href="#resultaten-in-qgis"><bdi class="secno">10.3 </bdi>Resultaten in QGIS</a></li></ol></li><li class="tocline"><a class="tocxref" href="#bijlagen"><bdi class="secno">A. </bdi>Bijlagen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#definities-en-afkortingen"><bdi class="secno">A.1 </bdi>Definities en afkortingen</a></li></ol></li><li class="tocline"><a class="tocxref" href="#ifc"><bdi class="secno">B. </bdi>IFC</a></li><li class="tocline"><a class="tocxref" href="#wkt"><bdi class="secno">C. </bdi>WKT</a></li><li class="tocline"><a class="tocxref" href="#proj"><bdi class="secno">D. </bdi>PROJ</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#proj-string"><bdi class="secno">D.1 </bdi>PROJ-String</a></li><li class="tocline"><a class="tocxref" href="#projjson"><bdi class="secno">D.2 </bdi>PROJJSON</a></li></ol></li><li class="tocline"><a class="tocxref" href="#voorbeeld-van-georeferentie-in-gml"><bdi class="secno">E. </bdi>Voorbeeld van georeferentie in GML</a></li><li class="tocline"><a class="tocxref" href="#cityjson-0"><bdi class="secno">F. </bdi>CityJSON</a></li><li class="tocline"><a class="tocxref" href="#voorbeeld-van-georeferentie-met-api-s"><bdi class="secno">G. </bdi>Voorbeeld van georeferentie met API's</a></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">H. </bdi>Lijst met figuren</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">I. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informatieve-referenties"><bdi class="secno">I.1 </bdi>Informatieve referenties</a></li></ol></li></ol></nav>
+  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#introductie"><bdi class="secno">1. </bdi>Introductie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#leeswijzer"><bdi class="secno">1.1 </bdi>Leeswijzer</a></li></ol></li><li class="tocline"><a class="tocxref" href="#toepassingsgebied"><bdi class="secno">2. </bdi>Toepassingsgebied</a></li><li class="tocline"><a class="tocxref" href="#coordinatenstelsels-en-coordinatentransformatie"><bdi class="secno">3. </bdi>Coördinatenstelsels en coördinatentransformatie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#geodetische-crs-en"><bdi class="secno">3.1 </bdi>Geodetische CRS'en</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#geografisch-en-geocentrisch-crs"><bdi class="secno">3.1.1 </bdi>Geografisch en geocentrisch CRS</a></li><li class="tocline"><a class="tocxref" href="#geprojecteerd-crs"><bdi class="secno">3.1.2 </bdi>Geprojecteerd CRS</a></li><li class="tocline"><a class="tocxref" href="#vertikaal-crs"><bdi class="secno">3.1.3 </bdi>Vertikaal CRS</a></li><li class="tocline"><a class="tocxref" href="#samengesteld-crs"><bdi class="secno">3.1.4 </bdi>Samengesteld CRS</a></li></ol></li><li class="tocline"><a class="tocxref" href="#lokaal-crs"><bdi class="secno">3.2 </bdi>Lokaal CRS</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#benadering-van-rd-in-lokaal-crs"><bdi class="secno">3.2.1 </bdi>Benadering van RD in lokaal CRS</a></li><li class="tocline"><a class="tocxref" href="#ware-noorden-kaartnoorden-magnetisch-noorden-en-projectnoorden"><bdi class="secno">3.2.2 </bdi>Ware noorden, kaartnoorden, magnetisch noorden en projectnoorden</a></li></ol></li><li class="tocline"><a class="tocxref" href="#coordinatentransformatie-tussen-lokaal-crs-en-geodetisch-crs"><bdi class="secno">3.3 </bdi>Coördinatentransformatie tussen lokaal CRS en geodetisch CRS</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#horizontaal-gelijkvormigheidstransformatie"><bdi class="secno">3.3.1 </bdi>Horizontaal: gelijkvormigheidstransformatie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#x2d-gelijkvormigheidstransformatie-voor-geprojecteerd-crs"><bdi class="secno">3.3.1.1 </bdi>2D gelijkvormigheidstransformatie voor geprojecteerd CRS</a></li><li class="tocline"><a class="tocxref" href="#x3d-gelijkvormigheidstransformatie-voor-geografisch-crs"><bdi class="secno">3.3.1.2 </bdi>3D gelijkvormigheidstransformatie voor geografisch CRS</a></li></ol></li><li class="tocline"><a class="tocxref" href="#vertikaal-vast-hoogteverschil"><bdi class="secno">3.3.2 </bdi>Vertikaal: vast hoogteverschil</a></li></ol></li><li class="tocline"><a class="tocxref" href="#geometrische-effecten-bij-bim-georeferentie-en-bim-transformatie"><bdi class="secno">3.4 </bdi>Geometrische effecten bij BIM-georeferentie en BIM-transformatie</a></li><li class="tocline"><a class="tocxref" href="#afwijkingen"><bdi class="secno">3.5 </bdi>Afwijkingen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#schaalfout-door-projectie"><bdi class="secno">3.5.1 </bdi>Schaalfout door projectie</a></li><li class="tocline"><a class="tocxref" href="#afwijking-door-aardkromming"><bdi class="secno">3.5.2 </bdi>Afwijking door aardkromming</a></li><li class="tocline"><a class="tocxref" href="#afwijking-door-lijnuitbuiging"><bdi class="secno">3.5.3 </bdi>Afwijking door lijnuitbuiging</a></li><li class="tocline"><a class="tocxref" href="#afwijking-van-het-noorden"><bdi class="secno">3.5.4 </bdi>Afwijking van het noorden</a></li><li class="tocline"><a class="tocxref" href="#conclusie"><bdi class="secno">3.5.5 </bdi>Conclusie</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#methodes-voor-georeferentie"><bdi class="secno">4. </bdi>Methodes voor Georeferentie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#routes-voor-georeferentie"><bdi class="secno">4.1 </bdi>Routes voor georeferentie</a></li><li class="tocline"><a class="tocxref" href="#x1d-2d-en-3d-geo-en-bim-modellen"><bdi class="secno">4.2 </bdi>1D, 2D en 3D GEO- en BIM-modellen</a></li><li class="tocline"><a class="tocxref" href="#methodes-voor-georeferentie-0"><bdi class="secno">4.3 </bdi>Methodes voor georeferentie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#rd-gemodelleerd-bim-naar-rdnap"><bdi class="secno">4.3.1 </bdi>RD-gemodelleerd BIM naar RDNAP</a></li><li class="tocline"><a class="tocxref" href="#xyz-gemodeleerd-bim-als-rd-naar-rdnap"><bdi class="secno">4.3.2 </bdi>XYZ gemodeleerd BIM als RD naar RDNAP</a></li><li class="tocline"><a class="tocxref" href="#xyz-gemodelleerd-bim-via-een-2d-gelijkvormigheidstransformatie-naar-rdnap"><bdi class="secno">4.3.3 </bdi>XYZ gemodelleerd BIM via een 2D gelijkvormigheidstransformatie naar RDNAP</a></li><li class="tocline"><a class="tocxref" href="#xyz-gemodelleerd-bim-via-een-3d-gelijkvormigheidstransformatie-naar-etrs89"><bdi class="secno">4.3.4 </bdi>XYZ gemodelleerd BIM via een 3D gelijkvormigheidstransformatie naar ETRS89</a></li><li class="tocline"><a class="tocxref" href="#xyz-gemodeleerd-bim-via-3d-een-3d-gelijkvormigheidstransformatie-naar-etrs89-en-hoogte-naar-nap"><bdi class="secno">4.3.5 </bdi>XYZ gemodeleerd BIM via 3D een 3D gelijkvormigheidstransformatie naar ETRS89 en hoogte naar NAP</a></li><li class="tocline"><a class="tocxref" href="#xyz-met-lokale-projectie-naar-etrs89"><bdi class="secno">4.3.6 </bdi>XYZ met lokale projectie naar ETRS89</a></li><li class="tocline"><a class="tocxref" href="#conclusie-0"><bdi class="secno">4.3.7 </bdi>Conclusie</a></li></ol></li><li class="tocline"><a class="tocxref" href="#levels-van-georeferentie-informatie"><bdi class="secno">4.4 </bdi>Levels van georeferentie-informatie</a></li><li class="tocline"><a class="tocxref" href="#schaal-en-correctie-op-basis-van-gebruikte-eeenheden"><bdi class="secno">4.5 </bdi>Schaal en correctie op basis van gebruikte eeenheden</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gebruik-van-geodata-voor-georeferentie"><bdi class="secno">5. </bdi>Gebruik van geodata voor georeferentie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#georeferentie-level-60-voor-bim-modellen"><bdi class="secno">5.1 </bdi>Georeferentie Level 60 voor BIM-modellen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-gebruik-van-referentiepunten"><bdi class="secno">5.1.1 </bdi>Het gebruik van referentiepunten</a></li><li class="tocline"><a class="tocxref" href="#geografische-uitlijning"><bdi class="secno">5.1.2 </bdi>Geografische uitlijning</a></li></ol></li><li class="tocline"><a class="tocxref" href="#geodatasets-voor-het-georefereren-van-bim-modellen"><bdi class="secno">5.2 </bdi>Geodatasets voor het georefereren van BIM-modellen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kwaliteitskenmerken-voor-geodata-in-bim-modellen"><bdi class="secno">5.2.1 </bdi>Kwaliteitskenmerken voor geodata in BIM-modellen</a></li><li class="tocline"><a class="tocxref" href="#primaire-kwaliteitskenmerken-voor-geodata-in-bim-modellen"><bdi class="secno">5.2.2 </bdi>Primaire kwaliteitskenmerken voor geodata in BIM-modellen</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#georeferentie-in-uitwisseling"><bdi class="secno">6. </bdi>Georeferentie in uitwisseling</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#industry-foundation-classes-ifc"><bdi class="secno">6.1 </bdi>Industry Foundation Classes (IFC)</a></li><li class="tocline"><a class="tocxref" href="#dxf"><bdi class="secno">6.2 </bdi>DXF</a></li><li class="tocline"><a class="tocxref" href="#city-gml"><bdi class="secno">6.3 </bdi>(City)GML</a></li><li class="tocline"><a class="tocxref" href="#cityjson"><bdi class="secno">6.4 </bdi>CityJSON</a></li><li class="tocline"><a class="tocxref" href="#geopackage"><bdi class="secno">6.5 </bdi>Geopackage</a></li><li class="tocline"><a class="tocxref" href="#api"><bdi class="secno">6.6 </bdi>API</a></li></ol></li><li class="tocline"><a class="tocxref" href="#georeferentie-in-de-domeinen-b-u-en-infra"><bdi class="secno">7. </bdi>Georeferentie in de domeinen B&amp;U en Infra</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#georeferentie-in-de-b-u"><bdi class="secno">7.1 </bdi>Georeferentie in de B&amp;U</a></li><li class="tocline"><a class="tocxref" href="#georeferentie-in-de-infra"><bdi class="secno">7.2 </bdi>Georeferentie in de Infra</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#toepassing-van-3d-software"><bdi class="secno">7.2.1 </bdi>Toepassing van 3D-software</a></li><li class="tocline"><a class="tocxref" href="#gevolgen-van-projectievervorming"><bdi class="secno">7.2.2 </bdi>Gevolgen van projectievervorming</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#handleiding-software"><bdi class="secno">8. </bdi>Handleiding Software</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#cad-onderlegger"><bdi class="secno">8.1 </bdi>CAD Onderlegger</a></li><li class="tocline"><a class="tocxref" href="#revit"><bdi class="secno">8.2 </bdi>Revit</a></li><li class="tocline"><a class="tocxref" href="#autocad-civil-3d"><bdi class="secno">8.3 </bdi>Autocad Civil 3D</a></li><li class="tocline"><a class="tocxref" href="#archicad"><bdi class="secno">8.4 </bdi>ArchiCAD</a></li><li class="tocline"><a class="tocxref" href="#tekla-structures"><bdi class="secno">8.5 </bdi>Tekla Structures</a></li><li class="tocline"><a class="tocxref" href="#sketchup"><bdi class="secno">8.6 </bdi>Sketchup</a></li><li class="tocline"><a class="tocxref" href="#blender"><bdi class="secno">8.7 </bdi>Blender</a></li><li class="tocline"><a class="tocxref" href="#illustrator-inkscape"><bdi class="secno">8.8 </bdi>Illustrator/Inkscape</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#illustrator-mapublisher"><bdi class="secno">8.8.1 </bdi>Illustrator MAPublisher</a></li></ol></li><li class="tocline"><a class="tocxref" href="#arcgis"><bdi class="secno">8.9 </bdi>ArcGIS</a></li><li class="tocline"><a class="tocxref" href="#qgis"><bdi class="secno">8.10 </bdi>QGIS</a></li><li class="tocline"><a class="tocxref" href="#controle-van-georeferentie-in-qgis-solibri-en-bimcollab"><bdi class="secno">8.11 </bdi>Controle van georeferentie in QGIS, Solibri en BIMCollab</a></li></ol></li><li class="tocline"><a class="tocxref" href="#tooling"><bdi class="secno">9. </bdi>Tooling</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ifcgref"><bdi class="secno">9.1 </bdi>IfcGref</a></li><li class="tocline"><a class="tocxref" href="#ifc-georeferencer"><bdi class="secno">9.2 </bdi>Ifc georeferencer</a></li></ol></li><li class="tocline"><a class="tocxref" href="#validatie-van-gegeorefereerde-ifc-modellen"><bdi class="secno">10. </bdi>Validatie van gegeorefereerde IFC-modellen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#doel-van-de-validatie"><bdi class="secno">10.1 </bdi>Doel van de validatie</a></li><li class="tocline"><a class="tocxref" href="#resultaten-in-arcgis"><bdi class="secno">10.2 </bdi>Resultaten in ArcGIS</a></li><li class="tocline"><a class="tocxref" href="#resultaten-in-qgis"><bdi class="secno">10.3 </bdi>Resultaten in QGIS</a></li></ol></li><li class="tocline"><a class="tocxref" href="#bijlagen"><bdi class="secno">A. </bdi>Bijlagen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#definities-en-afkortingen"><bdi class="secno">A.1 </bdi>Definities en afkortingen</a></li></ol></li><li class="tocline"><a class="tocxref" href="#ifc"><bdi class="secno">B. </bdi>IFC</a></li><li class="tocline"><a class="tocxref" href="#wkt"><bdi class="secno">C. </bdi>WKT</a></li><li class="tocline"><a class="tocxref" href="#proj"><bdi class="secno">D. </bdi>PROJ</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#proj-string"><bdi class="secno">D.1 </bdi>PROJ-String</a></li><li class="tocline"><a class="tocxref" href="#projjson"><bdi class="secno">D.2 </bdi>PROJJSON</a></li></ol></li><li class="tocline"><a class="tocxref" href="#voorbeeld-van-georeferentie-in-gml"><bdi class="secno">E. </bdi>Voorbeeld van georeferentie in GML</a></li><li class="tocline"><a class="tocxref" href="#cityjson-0"><bdi class="secno">F. </bdi>CityJSON</a></li><li class="tocline"><a class="tocxref" href="#voorbeeld-van-georeferentie-met-api-s"><bdi class="secno">G. </bdi>Voorbeeld van georeferentie met API's</a></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">H. </bdi>Lijst met figuren</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">I. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informatieve-referenties"><bdi class="secno">I.1 </bdi>Informatieve referenties</a></li></ol></li></ol></nav>
 
   
   <section id="introductie"><div class="header-wrapper"><h2 id="x1-introductie"><bdi class="secno">1. </bdi>Introductie</h2><a class="self-link" href="#introductie" aria-label="Permalink for Section 1."></a></div>
@@ -950,12 +950,12 @@ Ten slotte ziet men in hoofdstuk <strong>Praktijktoets georefereren</strong> de 
 <p>De beschreven methoden en technieken in deze praktijkrichtlijn kan men gebruiken wanneer men informatie wil uitwisselen tussen verschillende softwarepakketten of applicaties, of wanneer men verschillende databronnen wil combineren en bevragen.</p>
 <p>De praktijkrichtlijn kan men gebruiken wanneer men een geschikte methodiek voor georeferentie af wil spreken in een specifieke use-case die past bij de benodigde nauwkeurigheid en beoogde datasets.</p>
 <p>Tenslotte kan men de richtlijn gebruiken als handleiding om georeferentie in veelgebruikte softwarepakketten op een standaardwijze toe te passen.</p>
-<p>De richtlijn focust zich op het coordinatenstelsel en de werkwijzen die in Nederland op nationaal niveau worden gebruikt.</p>
+<p>De richtlijn focust op het coordinatenstelsel en de werkwijzen die in Nederland op nationaal niveau worden gebruikt.</p>
 </section>
-  <section id="coordinaatreferentiesystemen-en-coordinatentransformatie"><div class="header-wrapper"><h2 id="x3-coordinaatreferentiesystemen-en-coordinatentransformatie"><bdi class="secno">3. </bdi>Coördinaatreferentiesystemen en Coördinatentransformatie</h2><a class="self-link" href="#coordinaatreferentiesystemen-en-coordinatentransformatie" aria-label="Permalink for Section 3."></a></div>
-<p>Om informatie te koppelen aan een locatie op aarde worden geodetische coördinaatreferentiesystemen (CRS-en) gebruikt. In nederland worden meerdere CRS-en gebruikt, de <a href="#dfn-geodetische-crs" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-geodetische-crs-1">Geodetische CRS</a>-en die relevant zijn voor het georefereren van BIM in Nederland zijn opgenomen in onderstaande tabel:</p>
+  <section id="coordinatenstelsels-en-coordinatentransformatie"><div class="header-wrapper"><h2 id="x3-coordinatenstelsels-en-coordinatentransformatie"><bdi class="secno">3. </bdi>Coördinatenstelsels en coördinatentransformatie</h2><a class="self-link" href="#coordinatenstelsels-en-coordinatentransformatie" aria-label="Permalink for Section 3."></a></div>
+<p>Om informatie te koppelen aan een locatie op aarde worden coördinatenstelsels gebruikt, die in de geo-informatie coördinaatreferentiesystemen (CRS'en) genoemd worden. In nederland worden meerdere CRS'en gebruikt, de <a href="#dfn-crs" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-crs-1">CRS</a>-en die relevant zijn voor het georefereren van BIM in Nederland zijn opgenomen in onderstaande tabel:</p>
 <table>
-  <caption>Relevante coördinatiesystemen voor het georefereren Geo en BIM in Nederland</caption>
+  <caption>Relevante coördinatenstelsels voor het georefereren van geo- en BIM-data in Nederland</caption>
   <thead>
     <tr>
       <th>Naam</th>
@@ -981,36 +981,36 @@ Ten slotte ziet men in hoofdstuk <strong>Praktijktoets georefereren</strong> de 
     </tr>
     <tr>
       <td>ETRS89</td>
-      <td><a href="#geografische-en-geocentrisch-crs">Geografisch CRS</a> voor Europa en precieze (centimeter niveau) plaatsbepaling in Nederland</td>
+      <td><a href="#geografische-en-geocentrisch-crs">Geografisch CRS</a> voor Europa en precieze (centimeterniveau) plaatsbepaling in Nederland</td>
       <td>EPSG:4258 (2D-code)</td>
     </tr>
     <tr>
       <td>WGS 84</td>
-      <td>Geografisch CRS voor de aarde en niet precieze (meter niveau) plaatsbepaling in Nederland, niet geschikt voor uitwisseling van data, alleen voor visualisaties</td>
+      <td>Geografisch CRS voor de aarde en niet-precieze (meterniveau) plaatsbepaling in Nederland, niet geschikt voor uitwisseling van data</td>
       <td>EPSG:4326 (2D-code)</td>
     </tr>
   </tbody>  
-</table><p>De <a href="#dfn-epsg-code" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-epsg-code-1">EPSG-code</a> is een unieke identificatie van het CRS binnen de zogenaamde EPSG-database, een wereldwijde verzameling van coördinaatsystemen en -transformaties.</p>
-<p>Voor BIM-toepassingen wordt vaak gebruik gemaakt van een <a href="#dfn-lokaal-crs" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-lokaal-crs-1">Lokaal CRS</a>. Door een link te leggen tussen het lokale assenstelsel in BIM en een <a href="#dfn-geprojecteerd-crs" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-geprojecteerd-crs-1">geprojecteerd CRS</a> kan een BIM-model gebruikt worden in een <a href="#dfn-geo-systeem" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-geo-systeem-1">GEO-systeem</a> of <a href="#dfn-gis-systeem" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-gis-systeem-1">GIS-systeem</a>. Daarna kan GIS- of GEO-software gebruik maken van projecties en andere GIS-tools om het BIM model te projecteren in de wereld en hier aanvullende analyse op te doen. Het omzetten van het ene CRS naar het andere CRS wordt een <a href="#dfn-coordinatentransformatie" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-coordinatentransformatie-1">Coördinatentransformatie</a> genoemd.</p>
-<p>Zoals hierboven aangegeven worden in Nederland meerdere CRS-en gebruikt. Bij het gebruik van meerdere CRS-en bestaat risico op introductie van fouten door onjuiste implementatie van de transformaties tussen CRS-en. Binnen Nederland worden aanbieders van data daarom geadviseerd om data aan te bieden in de verschillende CRS-en gericht op de eindgebruikers. Eindgebruikers worden juist geadviseerd data waar mogelijk op te vragen in hetzelfde CRS. Dit is ook een nadrukkelijke aanbeveling voor gebruikers van BIM-software. </p>
+</table><p>De <a href="#dfn-epsg-code" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-epsg-code-1">EPSG-code</a> is een unieke identificatie van het CRS binnen de zogenaamde EPSG-database, een wereldwijde verzameling van coördinatenstelsel en -transformaties.</p>
+<p>Voor BIM-toepassingen wordt vaak gebruik gemaakt van een <a href="#dfn-lokaal-crs" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-lokaal-crs-1">Lokaal CRS</a>. Door een link te leggen tussen het lokale assenstelsel in BIM en bijvoorbeeld een <a href="#dfn-geprojecteerd-crs" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-geprojecteerd-crs-1">geprojecteerd CRS</a> kan een BIM-model gebruikt worden in een <a href="#dfn-gis-systeem" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-gis-systeem-1">GIS-systeem</a> of andere geo-software. Daarna kan deze software gebruik maken van andere projecties en GIS-tools om het BIM-model te visualiseren in de wereld en hier aanvullende analyse op te doen. Het omrekenen van het ene CRS naar het andere CRS wordt een <a href="#dfn-coordinatentransformatie" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-coordinatentransformatie-1">Coördinatentransformatie</a> genoemd.</p>
+<p>Zoals hierboven aangegeven worden in Nederland meerdere CRS-en gebruikt. Bij het gebruik van meerdere CRS'en bestaat risico op introductie van fouten door onjuiste implementatie van de transformaties tussen CRS'en. Binnen Nederland worden aanbieders van data daarom geadviseerd om data aan te bieden in de verschillende CRS'en gericht op de eindgebruikers. Eindgebruikers worden juist geadviseerd data waar mogelijk op te vragen in hetzelfde CRS. Dit is ook een nadrukkelijke aanbeveling voor gebruikers van BIM-software. </p>
 <div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="3"><span>Noot</span><span class="issue-label">: Gebruik hetzelfde CRS</span></div><aside class="">
   <p><strong>AANBEVELING:</strong> Vraag als eindgebruiker geo- en bim-data waar mogelijk op in hetzelfde CRS</p>
-</aside></div><p>De meeste BIM-software is namelijk niet in staat om transformaties uit te voeren tussen verschillende geprojecteerde CRS'en. Wanneer GIS-data naar BIM moet worden uitgewisseld is het belangrijk dat dit al geprojecteerd is in het coördinatensysteem dat de BIM Software verwacht. Afhankelijk van de BIM Software kan het zelfs nodig zijn te transformeren naar het lokale stelsel dat gebruikt wordt door de BIM software. Hier dienen binnen projecten duidelijke afspraken over gemaakt te worden.</p>
-<div class="note" role="note" id="issue-container-generatedID-0"><div role="heading" class="note-title marker" id="h-note-0" aria-level="3"><span>Noot</span><span class="issue-label">: Maak vooraf afspraken over de te gebruiken CRS-en en transformatie</span></div><aside class="">
-  <p><strong>AANBEVELING:</strong> Maak afspraken met projectpartners over de te gebruiken CRS-en</p>
-</aside></div><p>De volgende pargrafen gaan dieper in op de verschillende CRS-typen, de relaties tussen CRS-en die direct relevant zijn voor deze praktijkrichtlijn en introduceert de gangbare terminologie voor CRS-en. Voor nog gedetailleerdere informatie en adviezen wordt verwezen naar de <a href="https://docs.geostandaarden.nl/crs/crs/">Handreiking Gebruik coördinaatreferentiesystemen bij uitwisseling en visualisatie van geo-informatie</a>.</p>
-<section id="geodetische-crs-en"><div class="header-wrapper"><h3 id="x3-1-geodetische-crs-en"><bdi class="secno">3.1 </bdi>Geodetische CRS-en</h3><a class="self-link" href="#geodetische-crs-en" aria-label="Permalink for Section 3.1"></a></div>
-<section id="geografische-en-geocentrisch-crs"><div class="header-wrapper"><h4 id="x3-1-1-geografische-en-geocentrisch-crs"><bdi class="secno">3.1.1 </bdi>Geografische en geocentrisch CRS</h4><a class="self-link" href="#geografische-en-geocentrisch-crs" aria-label="Permalink for Section 3.1.1"></a></div>
-<p>Geodetische CRS-en gebruiken een vereenvoudigd 3D-model van de aarde om locaties vast te leggen ten opzichte van het aardoppervlak. Het vereenvoudigd model is een omwentelingsellipsoïde (een afgeplatte bol). 
-Coördinaten worden uitgedrukt in ellipsoïdsche breedte (<span style="font-family: 'Times New Roman';">ϕ</span>), lengte (<span style="font-family: 'Times New Roman';">λ</span>) en hoogte (<span style="font-family: 'Times New Roman';"><i>h</i></span>) of rechthoekige coördinaten <span style="font-family: 'Times New Roman';"><i>X</i></span>, <span style="font-family: 'Times New Roman';"><i>Y</i></span> en <span style="font-family: 'Times New Roman';"><i>Z</i></span> ten opzichte van het middelpunt van de ellpisoïde. In onderstaande figuur zijn de hoeken en assen van de ellipsoïdische en rechthoekige coördinaten weergegeven.</p>
+</aside></div><p>De meeste BIM-software is namelijk niet in staat om transformaties uit te voeren tussen verschillende CRS'en. Wanneer GIS-data naar BIM moet worden uitgewisseld is het belangrijk dat dit al geprojecteerd is in het coördinatensysteem dat de BIM-software verwacht. Afhankelijk van de BIM-software kan het zelfs nodig zijn te transformeren naar het lokale stelsel dat gebruikt wordt door de BIM-software. Hier dienen binnen projecten duidelijke afspraken over gemaakt te worden.</p>
+<div class="note" role="note" id="issue-container-generatedID-0"><div role="heading" class="note-title marker" id="h-note-0" aria-level="3"><span>Noot</span><span class="issue-label">: Maak vooraf afspraken over de te gebruiken CRS'en</span></div><aside class="">
+  <p><strong>AANBEVELING:</strong> Maak afspraken met projectpartners over de te gebruiken CRS'en en coördinatentransformatie</p>
+</aside></div><p>De volgende paragrafen gaan dieper in op de verschillende CRS-typen, de relaties tussen CRS-en die direct relevant zijn voor deze praktijkrichtlijn en introduceert de gangbare terminologie voor CRS-en. Voor nog gedetailleerdere informatie en adviezen wordt verwezen naar de <a href="https://docs.geostandaarden.nl/crs/crs/">Handreiking Gebruik coördinaatreferentiesystemen bij uitwisseling en visualisatie van geo-informatie</a>.</p>
+<section id="geodetische-crs-en"><div class="header-wrapper"><h3 id="x3-1-geodetische-crs-en"><bdi class="secno">3.1 </bdi>Geodetische CRS'en</h3><a class="self-link" href="#geodetische-crs-en" aria-label="Permalink for Section 3.1"></a></div>
+<section id="geografisch-en-geocentrisch-crs"><div class="header-wrapper"><h4 id="x3-1-1-geografisch-en-geocentrisch-crs"><bdi class="secno">3.1.1 </bdi>Geografisch en geocentrisch CRS</h4><a class="self-link" href="#geografisch-en-geocentrisch-crs" aria-label="Permalink for Section 3.1.1"></a></div>
+<p>Geodetische CRS'en gebruiken een wiskundig 3D model van de aarde om locaties vast te leggen ten opzichte van het aardoppervlak. Het wiskundig model is een omwentelingsellipsoïde (een afgeplatte bol). 
+Coördinaten worden uitgedrukt in ellipsoïdsche breedte (<span style="font-family: 'Times New Roman';">φ</span>), lengte (<span style="font-family: 'Times New Roman';">λ</span>) en hoogte (<span style="font-family: 'Times New Roman';"><i>h</i></span>) of rechthoekige coördinaten <span style="font-family: 'Times New Roman';"><i>X</i></span>, <span style="font-family: 'Times New Roman';"><i>Y</i></span> en <span style="font-family: 'Times New Roman';"><i>Z</i></span> ten opzichte van het middelpunt van de ellipsoïde. In onderstaande figuur zijn de hoeken en assen van de ellipsoïdische en rechthoekige coördinaten weergegeven.</p>
 <table style="width: 100%; table-layout: fixed;">
-  <caption>Componenten waarmee men coördinaten uit kan drukken</caption>
+  <caption>Hoeken en assen waarmee men geografische en geocentrische coördinaten uit kan drukken</caption>
   <tbody><tr>
     <td style="width: 50%; vertical-align: top; padding-right: 1em;">
       <p><span style="font-family: 'Times New Roman';"><strong><i>Z</i><sub>ecef</sub></strong></span>: de rotatieas van de ellipsoïde vanaf de oorsprong</p>
       <p><span style="font-family: 'Times New Roman';"><strong><i>X</i><sub>ecef</sub></strong></span>: de as vanaf de oorsprong richting de nulmeridiaan in het equatorvlak loodrecht op de rotatieas</p>
       <p><span style="font-family: 'Times New Roman';"><strong><i>Y</i><sub>ecef</sub></strong></span>: de as vanaf de oorsprong loodrecht op de nulmeridiaan en de rotatieas</p>
-      <p><span style="font-family: 'Times New Roman';"><strong><i>ϕ</i></strong></span>: de hoek die de loodlijn vanaf het oppervlak van de ellipsoïde maakt met het <span style="font-family: 'Times New Roman';"><strong><i>XY</i></strong></span>-vlak (= equatorvlak) 
+      <p><span style="font-family: 'Times New Roman';"><strong><i>φ</i></strong></span>: de hoek die de loodlijn vanaf het oppervlak van de ellipsoïde maakt met het <span style="font-family: 'Times New Roman';"><strong><i>XY</i></strong></span>-vlak (= equatorvlak) 
       </p>
       <p><span style="font-family: 'Times New Roman';"><strong><i>λ</i></strong></span>: de hoek met de nulmeridiaan</p>
       <p><span style="font-family: 'Times New Roman';"><strong><i>h</i></strong></span>: de hoogte boven de ellipsoïde</p>
@@ -1018,22 +1018,25 @@ Coördinaten worden uitgedrukt in ellipsoïdsche breedte (<span style="font-fami
     <td style="width: 50%; vertical-align: top; padding-left: 1em;">
       <figure id="3D_CRS" style="margin: 0;">
                 <img src="media/geonovum-geo-bim_georefereren_2.png" alt="3D CRS" style="width: 100%; max-width: 600px; height: auto;">
-                <figcaption><a class="self-link" href="#3D_CRS">Figuur <bdi class="figno">1</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-3D-CRS"></a><span class="fig-title">3D CRS</span></span></figcaption>
+                <figcaption><a class="self-link" href="#3D_CRS">Figuur <bdi class="figno">1</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-3D-CRS"></a><span class="fig-title">Geografisch en geocentrisch CRS</span></span></figcaption>
       </figure>
     </td>
   </tr>
-</tbody></table><p><mark>Figuur aanpassen. De x-as moet door de greenwich meridiaan. Snijpunt van de evenaar en de greenwich meridiaan. De evenaar ligt niet op de goede plek. Voor locaties in Nederland gaat de loodlijn niet exact door het 0-punt.</mark></p>
-<p><a href="#dfn-ellipsoidische-coordinaten" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-ellipsoidische-coordinaten-1">Ellipsoïdische coördinaten</a> worden ook wel geografische coördinaten genoemd, rechthoekige coördinaten worden ook wel <a href="#dfn-geocentrische-coordinaten" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-geocentrische-coordinaten-1">geocentrische coördinaten</a> genoemd.</p>
+</tbody></table><p><mark>Figuur aanpassen. De x-as moet door dhet snijpunt van de evenaar en de greenwich-nulmeridiaan. De evenaar en nulmeridiaan liggen niet op de goede plek. Voor locaties in Nederland gaat de loodlijn niet exact door het 0-punt. Voor de letter phi moet φ gebruikt worden i.p.v. ϕ. De letter h in de figuur weergeven bij de ellipsoïdische hoogte.</mark></p>
+<p><a href="#dfn-ellipsoidische-coordinaten" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-ellipsoidische-coordinaten-1">Ellipsoïdische coördinaten</a> worden ook wel geografische coördinaten genoemd, rechthoekige coördinaten vanuit het middelpunt van de aarde worden ook wel <a href="#dfn-geocentrische-coordinaten" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-geocentrische-coordinaten-1">geocentrische coördinaten</a> genoemd.</p>
 </section><section id="geprojecteerd-crs"><div class="header-wrapper"><h4 id="x3-1-2-geprojecteerd-crs"><bdi class="secno">3.1.2 </bdi>Geprojecteerd CRS</h4><a class="self-link" href="#geprojecteerd-crs" aria-label="Permalink for Section 3.1.2"></a></div>
 <p>Om geo-informatie vanaf het gekromde aardoppervlak op een plat vlak weer te geven, worden kaartprojecties gebruikt. Veel gebruikte projectievlakken zijn een cilinderopperlvlak, kegeloppervlak en een plat vlak.</p>
 <figure id="Projecties" style="display: block; text-align: center; margin: 0 auto;">
    <img src="media/geonovum-geo-bim_georefereren_3.png" alt="Projecties" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;">
     <figcaption><a class="self-link" href="#Projecties">Figuur <bdi class="figno">2</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Projecties"></a><span class="fig-title">Projecties</span></span></figcaption>
-</figure><p>Elke <a href="#dfn-kaartprojectie" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-kaartprojectie-1">kaartprojectie</a> introduceert vervormingen in hoeken, afstanden en/of oppervlakten, omdat het onmogelijk is om het gekromde aardoppervlak af te beelden in een plat vlak en daarbij alle drie eigenschappen tegelijk exact te behouden. De keuze van een geschikte projectie hangt af van het doel van de kaart en welke eigenschappen het belangrijkst zijn voor de toepassing.</p>
-<p>In Nederland wordt het geprojecteerde RD-stelsel gebruikt. Het RD-stelsel heeft als eigenschap dat hoeken onvervormd worden weergegeven en afwijkingen in afstanden en oppervlakte beperkt zijn binnen Nederland. Voor nauwkeurige toepassingen kan de variabele schaal van het RD-stelsel leiden tot lijnvergroting. Wanneer voor georeferentie een precisie van milimeters belangrijk is dient men een correctie Δℓ van horizontale afstanden voor lijnvergroting mee te nemen. De formule om de toe te passen correctie  op werkelijke afstanden naar afstanden in het RD-stelsel te berekenen is: </p>
-<p><math display="block"><mi>Δℓ</mi><mo>=</mo><mo>-</mo><mn>9,2</mn><mo>+</mo><mfrac><mrow><msup><mrow><mo>(</mo><msub><mi>x</mi><mi>RD</mi></msub><mo>-</mo><mn>155000</mn><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><msub><mi>y</mi><mi>RD</mi></msub><mo>-</mo><mn>436000</mn> <mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mn>1629</mn><mo>·</mo><msup><mn>10</mn><mo>-9</mo></msup></mrow></mfrac><mtext> mm per 100 m</mtext>
+</figure><p><mark>Waarom alleen een lampje bij een plat vlak? De pijljtes bij cilinder en kegel geven bovendien iets heel anders weer (het krullen van het projectievlak) dan bij het platte vlak (daar zijn het de stralen van het lampje). Dat is nogal verwarrend!</mark></p>
+<p>Elke <a href="#dfn-kaartprojectie" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-kaartprojectie-1">kaartprojectie</a> introduceert vervormingen in hoeken, afstanden en/of oppervlakten, omdat het onmogelijk is om het gekromde aardoppervlak af te beelden in een plat vlak en daarbij alle drie eigenschappen tegelijk exact te behouden. De keuze van een geschikte projectie hangt af van het doel van de kaart en welke eigenschappen het belangrijkst zijn voor de toepassing.</p>
+<p>In Nederland wordt het geprojecteerde RD-stelsel gebruikt. Het RD-stelsel heeft als eigenschap dat hoeken onvervormd worden weergegeven en afwijkingen in afstanden en oppervlakte beperkt zijn binnen Nederland. Voor nauwkeurige toepassingen kan de variabele schaal van het RD-stelsel leiden tot vergroting of verkleining. Wanneer voor georeferentie op land een precisie beter dan 1 cm per 100 meter (10 centimeter per kilometer) belangrijk is dient men een schaalcorrectie Δℓ op horizontale afstanden toe te passen voor RD. Op de Nederlandse Exclusieve Economische Zone (EEZ) van de Noordzee loopt de schaalcorrectie op tot 1 cm per 10 meter (10 cm per 100 meter). De formule om werkelijke afstanden te schalen naar afstanden in het RD-stelsel is: </p>
+<p><math display="block"><mi>Δℓ</mi><mo>=</mo><mo>-</mo><mn>9,2</mn><mo>+</mo><mfrac><mrow><msup><mrow><mo>(</mo><msub><mi>x</mi><mi>RD</mi></msub><mo>-</mo><mn>155000</mn><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><msub><mi>y</mi><mi>RD</mi></msub><mo>-</mo><mn>436000</mn> <mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mn>1629</mn><mo>·</mo><msup><mn>10</mn><mo>6</mo></msup></mrow></mfrac><mtext> mm per 100 m</mtext>
 </math></p>
 <p>waarbij:  <math><msub><mi>x</mi><mi>RD</mi></msub></math> en <math><msub><mi>y</mi><mi>RD</mi></msub></math> de gemiddelde RD-coördinaten in meter zijn van locatie van het BIM-project.</p>
+<p>Let op, voor een precisie beter dan 1 cm per 500 meter (10 centimeter per 5 km) moet ook rekening gehouden worden met het onregelmatige RD-correctiegrid en volstaat bovenstaande formule niet.</p>
+<p><mark>Bovenstaande heeft te veel overlap met paragraaf "Afwijking door projectie"</mark></p>
 <table style="width: 100%; table-layout: fixed;">
   <tbody><tr>
     <td style="width: 50%; vertical-align: top;">
@@ -1049,249 +1052,255 @@ Coördinaten worden uitgedrukt in ellipsoïdsche breedte (<span style="font-fami
          <div style="width: 100%; max-width: 400px; height: 300px;">
          <img src="./media/Correcties_aan_gemeten_afstanden.png" alt="2D en 3D Geo of BIM combineren" style="width: 100%; height: 100%; object-fit: contain;">
          </div>
-        <figcaption><a class="self-link" href="#RD_Correctie">Figuur <bdi class="figno">4</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-RD-Correctie"></a><span class="fig-title">Correcties aan gemeten afstanden voor de RD-projectie inmm per 100m.</span></span></figcaption>
+        <figcaption><a class="self-link" href="#RD_Correctie">Figuur <bdi class="figno">4</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-RD-Correctie"></a><span class="fig-title">Correcties aan gemeten afstanden voor de RD-projectie in mm per 100 m.</span></span></figcaption>
       </figure> 
     </td>
   </tr>
 </tbody></table><p>Waar het projectievlak binnen de ellipsoïde valt worden afstanden korter weergegeven dan in werkelijkheid, waar het projectievlak buiten de ellipsoïde valt worden afstanden langer weergegeven dan in werkelijkheid. Het maximale effect is 10 millimeter  per 100 meter op het vaste land.</p>
 </section><section id="vertikaal-crs"><div class="header-wrapper"><h4 id="x3-1-3-vertikaal-crs"><bdi class="secno">3.1.3 </bdi>Vertikaal CRS</h4><a class="self-link" href="#vertikaal-crs" aria-label="Permalink for Section 3.1.3"></a></div>
-<p><a href="#dfn-ellipsoidische-hoogte" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-ellipsoidische-hoogte-1">Ellipsoïdische hoogte</a> heeft geen fysieke betekenis, het geeft de hoogte van een punt of object aan boven een vereenvoudigd model van de aarde. Orthometrische hoogtesystemen die een relatie hebben met zwaartekracht hebben wel een fysieke betekenis. Tussen punten met exact dezelfde <a href="#dfn-orthometrische-hoogte" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-orthometrische-hoogte-1">orthometrische hoogte</a> zal in theorie geen water stromen. De relatie tussen de orthometrische hoogte en ellipoidische hoogte wordt gevormd door een <a href="#dfn-quasi-geoidemodel" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-quasi-geoidemodel-1">quasi-geoïdemodel</a>. Een quasi-geoïdemodel geeft de hoogte van het referentievlak voor de orthometrische hoogte boven de ellipsoïde. Het orthometrische hoogte systeem voor Nederlands is het Normaal Amsterdams Peil (NAP).</p>
+<p><a href="#dfn-ellipsoidische-hoogte" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-ellipsoidische-hoogte-1">Ellipsoïdische hoogte</a> heeft geen fysieke betekenis, het geeft de hoogte van een punt of object aan boven een vereenvoudigd model van de aarde. Hoogtesystemen die een relatie hebben met de zwaartekracht hebben wel een fysieke betekenis. Tussen punten met exact dezelfde <a class="respec-offending-element" title="Linking error: no matching `&lt;dfn&gt;`" id="respec-offender-linking-error-no-matching-dfn">fysische hoogte</a> zal in theorie geen water stromen. De relatie tussen de fysische hoogte en ellipoidische hoogte wordt gevormd door een <a href="#dfn-quasi-geoidemodel" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-quasi-geoidemodel-1">quasi-geoïdemodel</a>. Een quasi-geoïdemodel geeft de hoogte van het referentievlak voor de fysische hoogte boven de ellipsoïde. Het fysische hoogtesysteem voor Nederland is het Normaal Amsterdams Peil (NAP).</p>
 <figure id="Ellips,_Geoide,_aardoppervlak" style="display: block; text-align: center; margin: 0 auto;">
   <img src="media/geonovum-geo-bim_georefereren_1.png" alt="Ellips, Geoide, aardoppervlak" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;">
-  <figcaption style="margin-top: 0.5em;"><a class="self-link" href="#Ellips,_Geoide,_aardoppervlak">Figuur <bdi class="figno">5</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Ellips,-Geoide,-aardoppervlak"></a><span class="fig-title">Ellips, Geoide, aardoppervlak</span></span></figcaption>
-</figure> <p>Het referentievlak voor de orthometrische hoogte volgt het zwaartekrachtveld en daarmee globaal de kromming van de aarde. Voor kleine projecten, tot 1 km, kan de horizontale component voor de kromming van het aardoppervlak vaak genegeerd worden. Dit geldt niet voor de vertikale component. Onderstaande figuur illustreert afwijkingen bij het verwaarlozen van de aardkromming voor de afstand en het hoogteverschil tussen punten P en Q. Bij het verwaarlozen van de aardkromming snijden de lijn RQ en de raaklijn aan de ellips vanuit P elkaar in het punt Q. <mark>De werkelijke afstand PQ over het aardoppervlak is korter dan de afstand PQ', op een afstand van 10 kilometer is het verschil echter slecht 1 centimeter.</mark> Punt P en Q hebben beide dezelfde hoogte ten opzichte van het aardoppervlak, punt Q'ligt echter x meter boven het aardoppervlak. Het hoogteverschil is 8 meter bij 10 km of 1 cm bij 400 meter.</p>
+  <figcaption style="margin-top: 0.5em;"><a class="self-link" href="#Ellips,_Geoide,_aardoppervlak">Figuur <bdi class="figno">5</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Ellips,-Geoide,-aardoppervlak"></a><span class="fig-title">Ellipsoïde, quasi-geoïdemodel en aardoppervlak</span></span></figcaption>
+</figure> <p><mark>In bovenstaand figuur aanpassen: Zeeniveau naar quasi-geoïdemodel; Aardbolling naar ellispoïde. En toevoegen: ellispoïdeische hoogte (bij het lange pijltje); fysische hoogte (bij het korte pijltje); aardoppervlak (de de overgang tussen groen en bruin).</mark></p>
+<p><mark>Deze paragraaf en bijbehorende afbeelding verplaatsen naar het stuk tekst over afwijkingen.</mark> Het referentievlak voor de fysische hoogte volgt het zwaartekrachtveld en daarmee ook de kromming van de aarde. Voor projecten tot 2 km kan de kromming van het aardoppervlak vaak genegeerd worden voor de horizontale component. Dit geldt niet voor de vertikale component. Onderstaande figuur illustreert afwijkingen bij het verwaarlozen van de aardkromming voor de afstand en het hoogteverschil tussen punten P en Q. Bij het verwaarlozen van de aardkromming ontstaat in punt Q een hoogtefout x. De hoogtefout is 1 cm bij 360 meter en 10 cm bij 1100 meter. <mark>De werkelijke afstand PQ' over het aardoppervlak is korter dan de afstand PQ, maar dit effect is kleiner dan een millimeter bij afstanden tot enkele kilometers.</mark> </p>
 <figure id="Afwijking_van_aardkromming" style="display: block; text-align: center; margin: 0 auto;">
   <img src="media/geonovum-geo-bim_georefereren_4-b.png" alt="Afwijking door aardkromming" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;">
-  <figcaption><a class="self-link" href="#Afwijking_van_aardkromming">Figuur <bdi class="figno">6</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Afwijking-door-aardkromming"></a><span class="fig-title">Afwijking door aardkromming</span></span></figcaption>
-</figure> </section><section id="samengesteld-crs"><div class="header-wrapper"><h4 id="x3-1-4-samengesteld-crs"><bdi class="secno">3.1.4 </bdi>Samengesteld CRS</h4><a class="self-link" href="#samengesteld-crs" aria-label="Permalink for Section 3.1.4"></a></div>
-<p>Een CRS dat bestaat uit de combinatie van CRS-en, bijvoorbeeld een geprojecteerd CRS en een verticaal CRS, noemen we een <a href="#dfn-samengesteld-crs" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-samengesteld-crs-1">Samengesteld CRS</a>. Een <a href="#dfn-coordinatentransformatie" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-coordinatentransformatie-2">Coördinatentransformatie</a> van of naar een samengesteld CRS wordt afzonderlijk uitgevoerd. Bijvoorbeeld voor de transformatie van 3D geografische ETRS89 naar het samengestelde RDNAP, wordt apart van ETRS89 naar RD en apart van ETRS89 naar NAP getransformeerd. Samengestelde CRS-en in Nederland die relevant zijn voor BIM-modellen zijn:</p>
+  <figcaption><a class="self-link" href="#Afwijking_van_aardkromming">Figuur <bdi class="figno">6</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Afwijking-door-aardkromming"></a><span class="fig-title">Afwijking in de hoogte door aardkromming</span></span></figcaption>
+</figure> <p><mark>PQ^1 veranderen in PQ'; Q' toevoegen (op het aardoppervlak onder Q); O toevoegen in het middelpunt van de aarde; Werelddelen vervangen voor een correcte orthogonale projectie.</mark></p>
+</section><section id="samengesteld-crs"><div class="header-wrapper"><h4 id="x3-1-4-samengesteld-crs"><bdi class="secno">3.1.4 </bdi>Samengesteld CRS</h4><a class="self-link" href="#samengesteld-crs" aria-label="Permalink for Section 3.1.4"></a></div>
+<p>Een CRS dat bestaat uit de combinatie van een 2D CRS en een vertikaal CRS, bijvoorbeeld een geprojecteerd CRS en een verticaal CRS, noemen we een <a href="#dfn-samengesteld-crs" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-samengesteld-crs-1">Samengesteld CRS</a>. Een <a href="#dfn-coordinatentransformatie" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-coordinatentransformatie-2">Coördinatentransformatie</a> van of naar een samengesteld CRS wordt afzonderlijk uitgevoerd voor de CRS'en van het samengestelde CRS, bijvoorbeeld: voor de transformatie van 3D geografisch ETRS89 naar het samengestelde RDNAP, wordt apart van ETRS89 naar RD en apart van ETRS89 naar NAP getransformeerd. Samengestelde CRS'en in Nederland die relevant zijn voor BIM-modellen zijn:</p>
 <ul>
-<li>RDNAP (EPSG:7415), de samenstelling van geprojecteerd RD (EPSG:28992) en het verticale CRS NAP (ESPG:5709).</li>
-<li>ETRS89 + NAP height (EPSG:9286), de samenstelling van geografisch 2D ETRS89 *EPSG:4258 en het verticale CRS NAP (ESPG:5709).</li>
+<li>RDNAP (EPSG:7415), de samenstelling van geprojecteerd CRS RD (EPSG:28992) en verticaal CRS NAP (ESPG:5709).</li>
+<li>ETRS89 met NAP-hoogte (EPSG:9286), de samenstelling van 2D geografisch CRS ETRS89 (EPSG:4258) en verticaal CRS NAP (ESPG:5709).</li>
 </ul>
 </section></section><section id="lokaal-crs"><div class="header-wrapper"><h3 id="x3-2-lokaal-crs"><bdi class="secno">3.2 </bdi>Lokaal CRS</h3><a class="self-link" href="#lokaal-crs" aria-label="Permalink for Section 3.2"></a></div>
-<p>Een <a href="#dfn-lokaal-crs" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-lokaal-crs-2">lokaal CRS</a> is een arbitrair gekozen assenstelsel. De oorsprong, de oriëntatie en het vertikale referentievlak van het stelsel worden gekozen op basis van praktische overwegingen en kan voordelen hebben bij bepaalde 2D- of  3D- modeleersoftware (BIM).  Sommige applicaties voorzien ook alleen in een lokaal assenstelsel om in te modelleren. De oorsprong van het assenstelsel kan projectafhankelijk zijn, bijvoorbeeld een hoekpunt, voorgevel en begane grond van een gebouw, of een aantal meter hiervandaan. De eenheden zijn vaak in meters of millimeters. Er is geen directe relatie met de echte wereld tenzij er een coördinatentransformatie wordt toegepast.</p>
+<p>Een <a href="#dfn-lokaal-crs" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-lokaal-crs-2">lokaal CRS</a> is een arbitrair gekozen assenstelsel. De oorsprong, de oriëntatie en het vertikale referentievlak van het stelsel worden gekozen op basis van praktische overwegingen en kan voordelen hebben bij bepaalde 2D- of  3D- modeleersoftware (BIM). Sommige applicaties voorzien ook alleen in een lokaal assenstelsel om in te modelleren. De oorsprong van het assenstelsel kan projectafhankelijk zijn, bijvoorbeeld een hoekpunt, voorgevel en begane grond van een gebouw, of een aantal meter hiervandaan. De eenheden zijn vaak in meters of millimeters. Er is geen directe relatie met de echte wereld tenzij er een coördinatentransformatie wordt toegepast.</p>
 <section id="benadering-van-rd-in-lokaal-crs"><div class="header-wrapper"><h4 id="x3-2-1-benadering-van-rd-in-lokaal-crs"><bdi class="secno">3.2.1 </bdi>Benadering van RD in lokaal CRS</h4><a class="self-link" href="#benadering-van-rd-in-lokaal-crs" aria-label="Permalink for Section 3.2.1"></a></div>
 <p>In sommige softwarepakketen, zoals AutoCAD, is het gebruikelijk om met het lokale stelsel het RD-stelsel en het NAP-niveau te benaderen, bijvoorbeeld door het gebruik van bekende punten of door de oorsprong te verschuiven. AutoCAD gaat er alleen niet bewust mee om dat dit RD-coördinaten en NAP-hoogten zijn. Wat de software betreft is dit een lokaal stelsel zonder verdere betekenis en worden de aardkromming, zwaartekracht en eigenschappen van de kaartprojectie, zoals de locatieafhankelijke schaalfactor en gridcorrecties, niet toegepast. De link tussen de lokale coördinaten en het geprojecteerd CRS is in dit geval dat coördinaten bij benadering overeen komen (X<sub>bim</sub> ≅ x<sub>RD</sub>, Y<sub>bim</sub> ≅ y<sub>RD</sub>, Z<sub>bim</sub> ≅ H<sub>NAP</sub>).</p>
-</section><section id="true-north-grid-north-project-north"><div class="header-wrapper"><h4 id="x3-2-2-true-north-grid-north-project-north"><bdi class="secno">3.2.2 </bdi>True North, Grid North, Project North</h4><a class="self-link" href="#true-north-grid-north-project-north" aria-label="Permalink for Section 3.2.2"></a></div>
-<p>Soms wordt de relatie van het lokale CRS ten opzicht van het Noorden gegeven. In de BIM-sector worden de termen <a href="#dfn-true-north" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-true-north-1">True North</a>, <a href="#dfn-grid-north" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-grid-north-1">Grid North</a> en <a href="#dfn-project-north" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-project-north-1"> Project North </a> gebruikt om de relatie met de oriëntatie van een geodetisch CRS aan te geven. Deze hebben afhankelijk van het type CRS de volgende betekenis.</p>
+</section><section id="ware-noorden-kaartnoorden-magnetisch-noorden-en-projectnoorden"><div class="header-wrapper"><h4 id="x3-2-2-ware-noorden-kaartnoorden-magnetisch-noorden-en-projectnoorden"><bdi class="secno">3.2.2 </bdi>Ware noorden, kaartnoorden, magnetisch noorden en projectnoorden</h4><a class="self-link" href="#ware-noorden-kaartnoorden-magnetisch-noorden-en-projectnoorden" aria-label="Permalink for Section 3.2.2"></a></div>
+<p>Soms wordt de relatie van het lokale CRS ten opzicht van het noorden gegeven. In de BIM-sector worden de termen ware noorden, kaartnoorden en projectnoorden gebruikt om de relatie met de oriëntatie van een geodetisch CRS aan te geven. Daarnaast is er ook nog magnetisch noorden.</p>
 <ul>
-<li>CRS obv ellipsoïde: true north is in de richting van de rotatie as van de ellipsoïde (<span style="font-family: 'Times New Roman';"><i>Z</i><sub>ecef</sub></span> in eerdere figuur)</li>
-<li>CRS obv projectie: true north is in de richting noorden van geprojecteerde stelsel vaak de Y-as of Northing-as, ook wel grid north genoemd.</li>
+<li><p>Ware noorden (<a href="#dfn-true-north" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-true-north-1">True North</a>): de richting langs de plaatselijke meridiaan naar de noordpool (het snijpunt van de Z-as met de ellipsoïde in de eerdere figuur Geografisch en geocentrisch CRS) in een modern geografisch CRS zoals ETRS89.</p>
+</li>
+<li><p>Kaartnoorden (<a href="#dfn-grid-north" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-grid-north-1">Grid North</a>): de plaatselijke richting evenwijdig aan de y-as (Northing) van een geprojecteerd CRS. Door de vervorming van een kaartprojectie is dit over het algemeen niet gelijk aan het ware noorden. Voor de RD-projectie vallen het ware noorden en kaartnoorden alleen samen op de meridiaan door Amersfoort. Daarbuiten loopt deze in Nederland op land op tot maximaal 2° naar het oosten of westen en tot ca. 3° in op zee. <mark>Correctieformule weergeven? (zie: <a href="https://nl.wikipedia.org/wiki/Stelsel_van_de_Rijksdriehoeksmeting#Projectie">https://nl.wikipedia.org/wiki/Stelsel_van_de_Rijksdriehoeksmeting#Projectie</a>)</mark></p>
+</li>
 </ul>
 <figure id="True_North_en_Grid_North" style="display: block; text-align: center; margin: 0 auto;">
   <img src="./media/True_North_and_Grid_North.png" alt="True_North_en_Grid_North" title="True North en Grid North" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;"> 
-  <figcaption><a class="self-link" href="#True_North_en_Grid_North">Figuur <bdi class="figno">7</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-True-North-en-Grid-North"></a><span class="fig-title">True North en Grid North</span></span></figcaption>
+  <figcaption><a class="self-link" href="#True_North_en_Grid_North">Figuur <bdi class="figno">7</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-True-North-en-Grid-North"></a><span class="fig-title">Ware noorden (True North) en kaartnoorden (Grid North)</span></span></figcaption>
 </figure><ul>
-<li>Het Project North is normaliter gebaseerd op de voornaamste as van het bouwwerk. Het beïnvloedt hoe je schetst in views in software en hoe views op tekenbladen worden geplaatst.Het Project North richt zich vaak richting de bovenkant van een tekengebied. Dit vereenvoudigt het modelleren.</li>
+<li><p>Magnetisch noorden (<a class="respec-offending-element" title="Linking error: no matching `&lt;dfn&gt;`" id="respec-offender-linking-error-no-matching-dfn-0">Magnetic North</a>): de plaatselijke veranderlijke richting van het magneetveld van de aarde. Dit is de richting die een kompas aangeeft. In Nederland is de afwijking van het magnetisch noorden ten opzichte van het ware noorden (declinatie) nu ca. +3° (naar het oosten), en deze afwijking wordt momenteel per 6 jaar ongeveer een graad groter. Er zijn modellen die de afwijking voorspellen voor een plaats en tijd op aarde.  </p>
+</li>
+<li><p>Projectnoorden (<a href="#dfn-project-north" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-project-north-1">Project North</a>): de richting van de <mark>Y-as</mark> van een BIM-model, normaliter gebaseerd op de voornaamste as van het bouwwerk. Het beïnvloedt hoe je schetst in views in software en hoe views op tekenbladen worden geplaatst. Het Project North richt zich vaak richting de bovenkant van een tekengebied. Dit vereenvoudigt het modelleren. Het verschil tussen projectnoorden en het noorden van het voor georeferentie gebruikte CRS (afhankelijk van het CRS is dit het ware noorden of het kaartnoorden) kan groot zijn.</p>
+</li>
 </ul>
 <figure id="Project_North" style="display: block; text-align: center; margin: 0 auto;">
   <img src="./media/Project_North.png" alt="Project_North" title="Project North" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;"> 
   <figcaption><a class="self-link" href="#Project_North">Figuur <bdi class="figno">8</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Project-North"></a><span class="fig-title">Project North</span></span></figcaption>
-</figure> </section></section><section id="coordinatentransformatie-tussen-lokaal-crs-en-geodetisch"><div class="header-wrapper"><h3 id="x3-3-coordinatentransformatie-tussen-lokaal-crs-en-geodetisch"><bdi class="secno">3.3 </bdi>Coördinatentransformatie tussen lokaal CRS en geodetisch</h3><a class="self-link" href="#coordinatentransformatie-tussen-lokaal-crs-en-geodetisch" aria-label="Permalink for Section 3.3"></a></div>
-<p>De coördinatentransformatie tussen lokaal CRS en een geodetisch CRS wordt, binnen de huidige BIM-standaarden, apart gegeven voor de horizontale en de vertikale component. Dit is dus hetzelfde als voor transformaties van samengestelde CRS-en.</p>
+</figure> <p>Het verschil tussen ware noorden en kaartnoorden kan van belang zijn bij zonnestudies. Het verschil met magnetisch noorden is alleen van belang bij het gebruik van een kompas en dat is niet gebruikelijk in maatvoering of landmeetkundige projecten. </p>
+</section></section><section id="coordinatentransformatie-tussen-lokaal-crs-en-geodetisch-crs"><div class="header-wrapper"><h3 id="x3-3-coordinatentransformatie-tussen-lokaal-crs-en-geodetisch-crs"><bdi class="secno">3.3 </bdi>Coördinatentransformatie tussen lokaal CRS en geodetisch CRS</h3><a class="self-link" href="#coordinatentransformatie-tussen-lokaal-crs-en-geodetisch-crs" aria-label="Permalink for Section 3.3"></a></div>
+<p>De coördinatentransformatie tussen lokaal CRS en een geodetisch CRS wordt, binnen de huidige BIM-standaarden, apart gegeven voor de horizontale en de vertikale component, niet alleen bij transformaties van samengestelde CRS'en.</p>
 <div class="note" role="note" id="issue-container-generatedID-1"><div role="heading" class="note-title marker" id="h-note-1" aria-level="4"><span>Noot</span><span class="issue-label">: Aparte Horizontale en Vertikale coördinaattransformatie</span></div><aside class="">
-  <p><strong>AANBEVELING:</strong> Gebruik aparte transformaties voor de horizontale en vertikale componenten. Dit betekent één 2D transformatie voor het horizontale vlak en één 1D transformatie voor het verticale vlak resulteert in een 3D transformatie.</p>
-</aside></div><section id="horizontaal-2d-gelijkvormigheidstransformatie"><div class="header-wrapper"><h4 id="x3-3-1-horizontaal-2d-gelijkvormigheidstransformatie"><bdi class="secno">3.3.1 </bdi>Horizontaal - 2D gelijkvormigheidstransformatie</h4><a class="self-link" href="#horizontaal-2d-gelijkvormigheidstransformatie" aria-label="Permalink for Section 3.3.1"></a></div>
+  <p><strong>AANBEVELING:</strong> Gebruik aparte transformaties voor de horizontale en vertikale component. Dit betekent één 2D (of 3D) transformatie voor het horizontale vlak en één 1D transformatie voor de verticale richting die samen resulteren in een transformatie van 3D data.</p>
+</aside></div><section id="horizontaal-gelijkvormigheidstransformatie"><div class="header-wrapper"><h4 id="x3-3-1-horizontaal-gelijkvormigheidstransformatie"><bdi class="secno">3.3.1 </bdi>Horizontaal: gelijkvormigheidstransformatie</h4><a class="self-link" href="#horizontaal-gelijkvormigheidstransformatie" aria-label="Permalink for Section 3.3.1"></a></div>
+<p>De parameters voor de 2D of 3D gelijkvormigheidstransformatie kunnen worden berekend wanneer respectievelijk van minimaal 2 of 3 punten de coördinaten bekend zijn zowel in het lokale CRS als het geprojecteerde of geografsiche CRS. Wanneer voor meer gemeenschappelijke punten de coördinaten in beide stelsels beschikbaar zijn, kunnen de parameters worden berekend met behulp van een <a class="respec-offending-element" title="Linking error: no matching `&lt;dfn&gt;`" id="respec-offender-linking-error-no-matching-dfn-1">kleinstekwadratenschatting</a>. Dit levert betere precisie op. Door de <a href="#dfn-overbepaaldheid" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-overbepaaldheid-1">overbepaaldheid</a> kan dan ook worden getoetst op eventuele fouten in de coördinaten van één van de punten in een van de stelsels. De toetsing kan bijvoorbeeld door naar de grote van de sluitvectoren/residuen van de gebruikte punten te kijken of, zoals gebruikelijk in de landmeetkunde, een statistische toetsting uit te voeren.</p>
+<section id="x2d-gelijkvormigheidstransformatie-voor-geprojecteerd-crs"><div class="header-wrapper"><h5 id="x3-3-1-1-2d-gelijkvormigheidstransformatie-voor-geprojecteerd-crs"><bdi class="secno">3.3.1.1 </bdi>2D gelijkvormigheidstransformatie voor geprojecteerd CRS</h5><a class="self-link" href="#x2d-gelijkvormigheidstransformatie-voor-geprojecteerd-crs" aria-label="Permalink for Section 3.3.1.1"></a></div>
 <p>De relatie tussen het lokale CRS en een geprojecteerd CRS wordt gelegd via een <a href="#dfn-2d-gelijkvormigheidstransformatie" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-2d-gelijkvormigheidstransformatie-1">2D gelijkvormigheidstransformatie</a> (ook wel <a href="#dfn-2d-helmert-transformatie" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-2d-helmert-transformatie-1">2D Helmert transformatie</a> genoemd).</p>
 <table>
   <tbody><tr>
     <td>
     <figure id="2D-gelijkvormigheidstransformatie" style="display: block; text-align: center; margin: 0 auto;">
       <img src="media/geonovum-geo-bim_georefereren_7.png" alt="Relatie GeoBIM" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;">
-    <figcaption><a class="self-link" href="#2D-gelijkvormigheidstransformatie">Figuur <bdi class="figno">9</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Relatie-GeoBIM"></a><span class="fig-title">Relatie GeoBIM</span></span></figcaption>
+    <figcaption><a class="self-link" href="#2D-gelijkvormigheidstransformatie">Figuur <bdi class="figno">9</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Relatie-GeoBIM"></a><span class="fig-title">Transformatie naar RD voor een lokaal stelsel van een BIM-model</span></span></figcaption>
     </figure> 
     </td>
   </tr>
-  <tr>  <td>
-  2D relatie tussen geprojecteerd CRS en lokaalstelselsel. Parameters voor de 2D gelijkvormighedistransformatie zijn translaties (t<sub>x</sub>, t<sub>y</sub>), schaal (s) en rotatie (alpha). Er is een eenduidige relatie tussen de parameters rotatiehoek (alpha) en de in IFC/BIM gebruikte termen XAxisAbscissa (cos(alpha)) en XAxisOrdinate (sin(alpha)).
+  <tr>
+  <td>
+De parameters voor een 2D gelijkvormighedistransformatie zijn translaties (t<sub>x</sub>, t<sub>y</sub>), schaal (s) en rotatie (α). Er is een eenduidige relatie tussen de parameters rotatiehoek (α) en de in IFC/BIM gebruikte termen XAxisAbscissa (cos α) en XAxisOrdinate (sin α).
   </td>
   </tr>
-</tbody></table><p>De parameters voor de 2D gelijkvormigheidstransformatie kunnen worden berekend wanneer van minimaal 2 punten de coördinaten bekend zijn zowel in het geprojecteerde en het lokale CRS. Wanneer voor meer dan 2 gemeenschappelijke punten de coördinaten in beide stelsels beschikbaar zijn, kunnen de parameters worden berekend met behulp van een <a href="#dfn-kleinste-kwadratenschatting" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-kleinste-kwadratenschatting-1">kleinste kwadratenschatting</a>. Door de <a href="#dfn-overbepaaldheid" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-overbepaaldheid-1">overbepaaldheid</a> kan dan ook worden getoetst op eventuele fouten in de coördinaten van één van de punten in een van de stelsels. De toetsing kan bijvoorbeeld door naar de grote van de sluitvectoren/residuen van de gebruikte punten te kijken of, zoals gebruikelijk in de landmeetkunde, een statistische toetsting uit te voeren.</p>
-</section><section id="vertikaal-vast-hoogteverschil"><div class="header-wrapper"><h4 id="x3-3-2-vertikaal-vast-hoogteverschil"><bdi class="secno">3.3.2 </bdi>Vertikaal - vast hoogteverschil</h4><a class="self-link" href="#vertikaal-vast-hoogteverschil" aria-label="Permalink for Section 3.3.2"></a></div>
-<p>Voor de relatie tussen vertikale referentievlakken is het uitgangspunt in de huidige standaarden dat de relatie is vast te leggen via een vast hoogteverschil. </p>
-<p>Door de horizontale 2D-gelijkvormigheidstransformatie te combineren met een vast hoogteverschil ontstaat één geïntegreerde 2D + 1D-transformatie. Deze transformatie is in onderstaand figuur schematisch weergegeven. </p>
-<table>
+</tbody></table>
+<mark>txRD en tyRD bij de assen zetten: nu lijkt tyRD de oost-westafstand weer te geven van de horizontale streepjeslijn.</mark><table>
   <tbody><tr>
     <td>
     <figure id="Horizontale-en-vertikale_transformatie" style="display: block; text-align: center; margin: 0 auto;">
       <img src="media/geonovum-geo-bim_georefereren_8.png" alt="2D Transformatie" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;">
-          <figcaption><a class="self-link" href="#Horizontale-en-vertikale_transformatie">Figuur <bdi class="figno">10</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-2D-Transformatie"></a><span class="fig-title">2D Transformatie + 1D Transformatie</span></span></figcaption>
+          <figcaption><a class="self-link" href="#Horizontale-en-vertikale_transformatie">Figuur <bdi class="figno">10</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-2D-Transformatie"></a><span class="fig-title">Relatie tussen geografisch, geocentrisch en geprojecteerd CRS en een lokaal stelsel</span></span></figcaption>
     </figure>
     </td>
   </tr>
   <tr>
   <td>
-  Relatie tussen geografisch, geocentrisch en geprojecteerd CRS en lokaalstelselsel voor horizontaal (2D) en verikaal (hoogte). Parameters voor de 2D gelijkvormighedistransformatie zijn translaties (t<sub>x</sub>, t<sub>y</sub>), schaal (s) en rotatie (alpha). Er is een eenduidige relatie tussen de parameters rotatiehoek (alpha) en de inIFC/BIM gebruikte termen XAxisAbscissa (cos(alpha)) en XAxisOrdinate (sin(alpha)). Voor de hoogte is er een vast hoogteverschil, de parameter t<sub>H.
-  </sub></td>
+De parameters voor een 2D gelijkvormighedistransformatie zijn translaties (t<sub>x</sub>, t<sub>y</sub>), schaal (s) en rotatie (alpha).
+  </td>
   </tr>
-</tbody></table></section></section><section id="geometrische-effecten-bij-bim-georeferentie-en-bim-transformatie"><div class="header-wrapper"><h3 id="x3-4-geometrische-effecten-bij-bim-georeferentie-en-bim-transformatie"><bdi class="secno">3.4 </bdi>Geometrische effecten bij BIM-georeferentie en BIM-transformatie</h3><a class="self-link" href="#geometrische-effecten-bij-bim-georeferentie-en-bim-transformatie" aria-label="Permalink for Section 3.4"></a></div>
-<p>Bij het georefereren van een BIM-model ten opzichte van een CRS zijn er twee opties. Bij de eerste benadering blijft het model volledig cartesisch. Daarbij blijven hoeken, lengtes en vormen exact behouden binnen het model. In dit geval resulteert het verschil tussen het platte vlak van het BIM-model en het gekromde aardoppervlak in dat horizontaal en verticaal/waterpas geleidelijk af gaat wijken van de fysieke werkelijkheid en van CRSen als ETRS89 en NAP. Deze effecten worden vooral merkbaar bij lange infrastructuur of zeer hoge nauwkeurigheidseisen of wanneer de combinatie met Geo-datasets gemaakt worden.</p>
+</tbody></table>
+<mark>Is deze complexe figuur nodig?</mark></section><section id="x3d-gelijkvormigheidstransformatie-voor-geografisch-crs"><div class="header-wrapper"><h5 id="x3-3-1-2-3d-gelijkvormigheidstransformatie-voor-geografisch-crs"><bdi class="secno">3.3.1.2 </bdi>3D gelijkvormigheidstransformatie voor geografisch CRS</h5><a class="self-link" href="#x3d-gelijkvormigheidstransformatie-voor-geografisch-crs" aria-label="Permalink for Section 3.3.1.2"></a></div>
+<p>De relatie tussen het lokale CRS en een geografisch CRS wordt gelegd via een <a class="respec-offending-element" title="Linking error: no matching `&lt;dfn&gt;`" id="respec-offender-linking-error-no-matching-dfn-2">3D gelijkvormigheidstransformatie</a> (ook wel <a class="respec-offending-element" title="Linking error: no matching `&lt;dfn&gt;`" id="respec-offender-linking-error-no-matching-dfn-3">3D Helmert transformatie</a> genoemd) via het bijbehorende geocentrische CRS.</p>
+<p><mark>formule en een figuur voor de vertikale transformatie toevoegen</mark></p>
+</section></section><section id="vertikaal-vast-hoogteverschil"><div class="header-wrapper"><h4 id="x3-3-2-vertikaal-vast-hoogteverschil"><bdi class="secno">3.3.2 </bdi>Vertikaal: vast hoogteverschil</h4><a class="self-link" href="#vertikaal-vast-hoogteverschil" aria-label="Permalink for Section 3.3.2"></a></div>
+<p>Voor de relatie tussen vertikale referentievlakken is het uitgangspunt in de huidige standaarden dat de relatie is vast te leggen via een vast hoogteverschil. </p>
+<p><mark>formule (H<sub>NAP = H<sub>BIM + t<sub>H) en een figuur voor de vertikale transformatie toevoegen</sub></sub></sub></mark></p>
+<p>Door de gelijkvormigheidstransformatie voor de horizontale component te combineren met een vast hoogteverschil voor de verticale component ontstaat één geïntegreerde transformatie voor 3D data. </p>
+</section></section><section id="geometrische-effecten-bij-bim-georeferentie-en-bim-transformatie"><div class="header-wrapper"><h3 id="x3-4-geometrische-effecten-bij-bim-georeferentie-en-bim-transformatie"><bdi class="secno">3.4 </bdi>Geometrische effecten bij BIM-georeferentie en BIM-transformatie</h3><a class="self-link" href="#geometrische-effecten-bij-bim-georeferentie-en-bim-transformatie" aria-label="Permalink for Section 3.4"></a></div>
+<p>Bij het georefereren van een BIM-model ten opzichte van een CRS zijn er twee opties. Bij de eerste benadering blijft het model volledig cartesisch. Daarbij blijven hoeken, lengtes en vormen exact behouden binnen het model. In dit geval resulteert het verschil tussen het platte vlak van het BIM-model en het gekromde aardoppervlak in dat horizontaal en verticaal/waterpas geleidelijk af gaat wijken van de fysieke werkelijkheid en van CRSen als ETRS89 en NAP. Deze effecten worden vooral merkbaar bij lange infrastructuur of zeer hoge nauwkeurigheidseisen of wanneer de combinatie met geodatasets gemaakt worden.</p>
 <p>In de tweede benadering transformeert men het model naar een CRS dat de aardkromming volgt. In dit geval ontstaan verschillende geometrische vervormingen die samenhangen met de overgang tussen een lokaal cartesisch model en een CRS voor de aarde. Een BIM-model is in de basis cartesisch en lokaal vlak, terwijl CRSen rekening houden met projectie en aardkromming. Door de transformatie zullen de hoeken, en/of de lijnvorm en -lengte, en/of de oppervlaktes afwijken van het orginele model. </p>
 <figure id="Geometrische_effecten_bij_transformatie" style="display: block; text-align: center; margin: 0 auto;">
       <img src="media\Geometrische_verandering_bij_transformatie_voor_georeferentie.png" alt="Geometrische_effecten_bij_transformatie" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;">
           <figcaption><a class="self-link" href="#Geometrische_effecten_bij_transformatie">Figuur <bdi class="figno">11</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Geometrische_effecten_bij_transformatie"></a><span class="fig-title">Enkele geometrische effecten die op kunnen treden bij transformaties tussen cartesische modellen en een CRS voor de aarde.</span></span></figcaption>
   </figure></section><section id="afwijkingen"><div class="header-wrapper"><h3 id="x3-5-afwijkingen"><bdi class="secno">3.5 </bdi>Afwijkingen</h3><a class="self-link" href="#afwijkingen" aria-label="Permalink for Section 3.5"></a></div>
 <p>Veel BIM-modellen zijn gebaseerd op cartesische geometrie, waarbij wordt aangenomen dat de ruimte vlak is en kan worden beschreven met een orthogonaal coördinatenstelsel. Deze benadering introduceert afwijkingen wanneer zij wordt toegepast op het aardoppervlak. De aarde is immers geen vlak maar een gekromd lichaam dat benaderd wordt door een ellipsoïde.</p>
-<p>Wanneer geografische coördinaten zonder passende conversies of projecties rechtstreeks worden verwerkt binnen een cartesisch model, ontstaan systematische verschillen tussen de gemodelleerde en de werkelijke afstanden, richtingen en oppervlakken. Deze afwijkingen nemen toe naarmate de beschouwde afstanden groter worden en de invloed van de aardkromming sterker doorwerkt. Ook veroorzaakt het gebruik van een cartesisch model zonder passende conversies op een gekromd aardoppervlak afwijkingen</p>
-<p>Het verschil tussen een vlak cartesisch referentiekader en de werkelijke geometrie van het aardoppervlak vormt een fundamentele bron van meet- en modelafwijkingen. Een goed begrip van deze afwijkingen is essentieel om de nauwkeurigheid van ruimtelijke analyses te kunnen beoordelen en om te bepalen wanneer correcties voor aardkromming noodzakelijk zijn.</p>
-<section id="afwijking-door-projectie"><div class="header-wrapper"><h4 id="x3-5-1-afwijking-door-projectie"><bdi class="secno">3.5.1 </bdi>Afwijking door projectie</h4><a class="self-link" href="#afwijking-door-projectie" aria-label="Permalink for Section 3.5.1"></a></div>
-<p>Een afwijking waarmee men rekening moet houden bij het gebruik van een geprojecteerde CRS (RD) is de afwijking door lijnvergroting of -verkleining door projectie. Deze afwijking komt door het effect beschreven in <a href="#geprojecteerd-crs">Geprojecteerd CRS</a>. Deze lijnvergroting of -verkleining is het geval bij XY naar RD-coordinaten, maar niet bij Z naar NAP-coordinaten. </p>
-<p>Problemen met deze afwijking kunnen gaan spelen als men BIM zonder conversie wil combineren met RD, of als men GEO in RD zonder conversie als onderlegger voor BIM gebruikt, en daar in werkelijke meters binnen gaat tekenen.   </p>
-<p>De afwijkingen die hierbij kunnen ontstaan zijn +/- 10 mm bij 100 meter en 10 cm bij 1 km op land. En tot 1 m/km op zee.</p>
-<p>Daarnaast is er een correctiegrid voor RD. Deze afwijking is minder dan 2 cm per km. </p>
+<p>Wanneer geografische coördinaten zonder passende transformatie of projectie rechtstreeks worden verwerkt binnen een cartesisch model, ontstaan systematische verschillen tussen de gemodelleerde en de werkelijke afstanden, richtingen en oppervlakken. Deze afwijkingen nemen toe naarmate de beschouwde afstanden groter worden en de invloed van de aardkromming sterker doorwerkt. Ook veroorzaakt het gebruik van een cartesisch model op een gekromd aardoppervlak zonder passende maatregelen afwijkingen in de hoogte.</p>
+<p>Het verschil tussen een vlak cartesisch stelsel en de werkelijke geometrie van het aardoppervlak vormt een fundamentele bron van meet- en modelafwijkingen. Een goed begrip van deze afwijkingen is essentieel om de nauwkeurigheid van ruimtelijke analyses te kunnen beoordelen en om te bepalen wanneer correcties voor aardkromming noodzakelijk zijn.</p>
+<section id="schaalfout-door-projectie"><div class="header-wrapper"><h4 id="x3-5-1-schaalfout-door-projectie"><bdi class="secno">3.5.1 </bdi>Schaalfout door projectie</h4><a class="self-link" href="#schaalfout-door-projectie" aria-label="Permalink for Section 3.5.1"></a></div>
+<p>Een afwijking waarmee men rekening moet houden bij het gebruik van een geprojecteerd CRS met een hoekgetrouwe projectie (zoals RD) is de afwijking door lijnvergroting of -verkleining door de projectie. Deze afwijking komt door de schaalfout beschreven in <a href="#geprojecteerd-crs">Geprojecteerd CRS</a>. Dit schaalverschhil treedt op tussen bij XY-coördinaten van een BIM-model en RD-coordinaten, maar niet bij de Z-coördinaat van een BIM-model nen NAP-hoogte. </p>
+<p>Problemen met deze afwijking kunnen gaan spelen als men een BIM-model zonder transformatie wil combineren met geodata in RD, of als men geodata in RD zonder transformatie als ondergrond voor een BIM-model gebruikt, en daar in werkelijke meters in gaat tekenen.   </p>
+<p>De afwijkingen die hierbij kunnen ontstaan zijn maximaal 1 cm per 100 meter (10 cm per 1 km) op land. En tot 10 cm per 100 meter (1 meter per km) op zee.</p>
+<p>Daarnaast is er een correctiegrid voor RD dat een vervorming geeft. Deze afwijking is maximaal 1 cm per 500 meter (10 cm per 5 km). </p>
 </section><section id="afwijking-door-aardkromming"><div class="header-wrapper"><h4 id="x3-5-2-afwijking-door-aardkromming"><bdi class="secno">3.5.2 </bdi>Afwijking door aardkromming</h4><a class="self-link" href="#afwijking-door-aardkromming" aria-label="Permalink for Section 3.5.2"></a></div>
-<p>Een tweede soort afwijking waarmee men rekening kan houden is de afwijking door aardkromming. De kromming van de aarde die afwijkingen veroorzaken bij cartesisch gemodelleerde modellen. Hier zijn twee effecten. De <strong>hoogteafwijking</strong> en de <strong>vervorming</strong>. Wanneer men iets horizontaal "recht", waterpas, wil maken in de werklijkheid, is dit eigenlijk krom.</p>
-<p>Dit punt speelt als we euclidisch cartesisch BIM willen combineren met geodetisch ETRS-89 </p>
-<p>De afwijkingen die hierbij kunnen ontstaan zijn:
-1 cm op 360 m
-10 cm op 1,1 km
-1 m op 3,6 km
-10 m op 11,3 km 
-Dit effect is kwadratisch.</p>
-<p>Er bestaat ook <strong>vervorming door aardkromming</strong>.
-Doordat in de gekromde wereld de verticaal aan de ene kant van een model niet helemaal evenwijdig is aan de verticaal aan de andere kant van het model, wordt de afstand tussen de verticalen hoger boven het aardoppervlak steeds groter. De grootte van het effect is afhankelijk van de modelgrootte: de lengte (L) van het model en het hoogteverschil (∆H) binnen het model. Voor een nauwkeurigheid van 1 cm mag L×∆H niet meer dan 64 km×m zijn en voor een nauwkeurigheid van 10 cm niet meer 640 km×m zijn. Alleen bij grote modellen met grote hoogteverschillen zou dit relevant kunnen worden.</p>
-<p>Nauwkeurigheid Maximale modelgrootte</p>
-<p>1 cm 2 km voor ∆H tot 32 m, 200 m voor ∆H tot 320 m</p>
-<p>10 cm 2 km voor ∆H tot 320 m</p>
+<p>Een andere soort afwijking waarmee men rekening kan houden is de afwijking door aardkromming. De kromming van de aarde die afwijkingen veroorzaken bij cartesisch gemodelleerde modellen. Hier zijn twee effecten. De <strong>hoogteafwijking</strong> en de <strong>vervorming door aardkromming</strong>. Wanneer men iets horizontaal vlak, waterpas, wil maken in de werklijkheid, is dit feitelijk licht krom.</p>
+<p>Dit geeft een <strong>hoogtefout</strong> als we een cartesisch BIM-model willen combineren met geodetisch ETRS89. De afwijking die hierdoor ontstaat is 1 cm op 360 m afstand (10 cm op 1,1 km) van het punt waar de horizontaal en vertikaal van het BIM-model overeenkomen met die van de aarde, maar loopt kwadratisch op met de afstand. Als dat punt in het midden van het BIM-model gekozen wordt geeft dit een fout van 1 cm per 720 meter (10 cm op 2,2 km). Deze fout kan meestal voorkomen worden door een afzonderlijker</p>
+<p>De <strong>vervorming door aardkromming</strong> treedt op doordat in de gekromde wereld de verticaal aan de ene kant van een model niet helemaal evenwijdig is aan de verticaal aan de andere kant van het model, en dus de afstand tussen de verticalen hoger boven het aardoppervlak steeds groter wordt. De grootte van het effect is afhankelijk van de modelgrootte: de lengte (L) van het model en het hoogteverschil (∆H) binnen het model. Voor een nauwkeurigheid van 1 cm mag L×∆H niet meer dan 64 km×m zijn en voor een nauwkeurigheid van 10 cm niet meer 640 km×m zijn. Dit probleem is niet oplosbaar, maar zal alleen bij grote modellen met grote hoogteverschillen relevant kunnen worden. </p>
+<p>Voor een nauwkeurigheid van 1 cm kan een model tot L = 2 km voor ∆H tot 32 m gebruikt worden, of L = 200 m voor ∆H tot 320 m. Voor een nauwkeurigheid van 10 cm kan een model tot 20 km voor ∆H tot 32 m gebruikt worden, of L = 20 km voor ∆H tot 320 m. </p>
 </section><section id="afwijking-door-lijnuitbuiging"><div class="header-wrapper"><h4 id="x3-5-3-afwijking-door-lijnuitbuiging"><bdi class="secno">3.5.3 </bdi>Afwijking door lijnuitbuiging</h4><a class="self-link" href="#afwijking-door-lijnuitbuiging" aria-label="Permalink for Section 3.5.3"></a></div>
-<p>Een volgende afwijking is lijnuitbuiging. Dit is het effect dat een rechte lijn in het ene stelsel geen rechte lijn is in het andere stelsel. </p>
-<p>Deze afwijking bedraagt
-+/- 1,3 mm bij 1km en  +/- 3 cm bij 5 km 
-Horizontale uitbuiging van rechte lijnen in coördinatenstelsels</p>
+<p>Een volgende afwijking is horizontale uitbuiging van lijnen. Dit komt doordat een rechte lijn in het een geprojecteerd coördinatenstelsel geen rechte lijn is in een ander coördinatenstelsel of in de werkelijkheid. Voor RD valt deze afwijking mee (ca. 1,3 mm bij 1 km, ca. 3 cm bij 5 km en ca. 8 cm bij 10 km), maar voor andere kaartprojecties (met name webmercator) kan deze afwijking problemen geven. </p>
+<p>In Nederland (tot 56° noorderbreedte):</p>
 <ul>
-<li>&lt; 1 cm bij afstanden tot 587 m (voor 56°NB)</li>
-<li>&lt; 10 cm bij afstanden tot 1857 m (voor 56°NB)</li>
+<li>Afwijkingen tot 1 cm bij een afstand van 587 m <mark>(ca. 900 m in RD)</mark></li>
+<li>Afwijkingen tot 10 cm bij een afstand van 1857 m <mark>(ca. 11 km in RD)</mark></li>
 </ul>
-<p>zie <a href="https://docs.geostandaarden.nl/crs/crs/#vormvastheid">handreiking gebruik coordinaatreferentiesystemen</a> en het <a href="https://gnss-data.kadaster.nl/misc/docs/langelijnenadvies.pdf">langelijnenadvies</a>. </p>
-<p>Voor een nauwkeurigheid van 1 mm zijn dus punten met 200 m tussenafstand nodig voor de in Nederland gangbare projecties. Voor het genereren van synthetische tussenpunten kan afhankelijk van wat bedoeld is, gekozen worden tussen punten op een rechte lijn in de kaart of een rechte lijn in werkelijkheid (geodetische lijn in ETRS89).</p>
-</section><section id="afwijking-van-kaart-noorden"><div class="header-wrapper"><h4 id="x3-5-4-afwijking-van-kaart-noorden"><bdi class="secno">3.5.4 </bdi>Afwijking van kaart Noorden</h4><a class="self-link" href="#afwijking-van-kaart-noorden" aria-label="Permalink for Section 3.5.4"></a></div>
-<p>Tenslotte adresseert deze praktijkrichtlijn de afwijking van kaartnoorden, ware noorden (meridiaanrichting of zonne noorden) en tijdsafhankelijk magnetisch noorden.
-Afhankelijk van de positie in Nederland kan dit een afwijking van maximaal 3 graden opleveren (in Duitsland en in Zee, de grenzen van het correctiegrid). In Bessel is de afwijking 0.
-Voor zonnestudies kan dit belangrijk zijn.</p>
+<p>Als oplossing kan er voor gezorgd worden dat er in geodate en BIM-modellen geen lijnsegmenten gebruikt worden die te lang zijn voor de gewenste nauwkeurigheid. Voor een nauwkeurigheid van 1 mm zijn punten met een maximale tussenafstand van 200 meter nodig voor de in Nederland gangbare projecties. Voor het genereren van synthetische tussenpunten kan afhankelijk van wat bedoeld is, gekozen worden tussen punten op een rechte lijn in de kaart of een rechte lijn in werkelijkheid (geodetische lijn in ETRS89), zie <a href="https://docs.geostandaarden.nl/crs/crs/#vormvastheid">handreiking gebruik coordinaatreferentiesystemen</a> en het <a href="https://gnss-data.kadaster.nl/misc/docs/langelijnenadvies.pdf">langelijnenadvies</a>. </p>
+</section><section id="afwijking-van-het-noorden"><div class="header-wrapper"><h4 id="x3-5-4-afwijking-van-het-noorden"><bdi class="secno">3.5.4 </bdi>Afwijking van het noorden</h4><a class="self-link" href="#afwijking-van-het-noorden" aria-label="Permalink for Section 3.5.4"></a></div>
+<p><mark>te veel overlap met eerdere paragraaf over noorden</mark></p>
 </section><section id="conclusie"><div class="header-wrapper"><h4 id="x3-5-5-conclusie"><bdi class="secno">3.5.5 </bdi>Conclusie</h4><a class="self-link" href="#conclusie" aria-label="Permalink for Section 3.5.5"></a></div>
-<p>Voor modellen van minder dan 100 m kunnen lokaal cartesische XYZ-coördinaten in BIM rechtstreeks in het terrein uitgezet worden met een nauwkeurigheid van 1 cm, en modellen tot 1 km met een nauwkeurigheid van 10 cm. Voor grotere modellen of hogere nauwkeurigheidseisen is correctie nodig of moet via het RDNAP-coördinaten getransformeerd worden.</p>
-<p>Zodra nauwkeurige aansluiting op geo-informatie, zoals BAG-, BGT- of kadastrale gegevens, vereist is, volstaat een lokaal cartesisch stelsel niet meer. In dat geval moeten coördinaten worden gekoppeld aan het officiële referentiestelsel als RDNAP en dient men bijbehorende projectie- en schaalcorrecties toe te passen. Hiermee wordt het mogelijk om nauwkeurige ruimtelijke bevragingen te doen. </p>
+<p>Voor modellen van minder dan 360 m kunnen cartesische XYZ-coördinaten in BIM rechtstreeks in het terrein uitgezet worden met een nauwkeurigheid van 1 cm, en modellen tot 1,1 km met een nauwkeurigheid van 10 cm. Voor grotere modellen of hogere nauwkeurigheidseisen is correctie nodig of moet via het RDNAP-coördinaten getransformeerd worden.</p>
+<p>Voor modellen van minder dan 100 m kunnen RDNAP-coördinaten lokaal als cartesische XYZ-coördinaten in BIM gebruikt worden met een nauwkeurigheid van 1 cm, en modellen tot 1 km met een nauwkeurigheid van 10 cm. Voor grotere modellen of hogere nauwkeurigheidseisen is correctie nodig of moet getransformeerd worden voor nauwkeurige aansluiting op geo-informatie, zoals BAG-, BGT- of kadastrale gegevens. Hiermee wordt het mogelijk om nauwkeurige ruimtelijke bevragingen te doen. </p>
 <div class="note" role="note" id="issue-container-generatedID-2"><div role="heading" class="note-title marker" id="h-note-2" aria-level="5"><span>Noot</span><span class="issue-label">: Bepaal georeferentiemethode en route op basis van projectomvang en nauwkeurigheidsbehoefte</span></div><aside class="">
-  <p><strong>AANBEVELING:</strong> Bepaal voor elk project de omvang (lengte, breedte, hoogte) en de gewenste nauwkeurigheid. Kies op basis hiervan de route, methode en informatievoorziening van georeferentie.  </p>
+  <p><strong>AANBEVELING:</strong> Bepaal voor elk project de omvang (lengte, breedte, hoogte) en de gewenste nauwkeurigheid. Kies op basis hiervan de benodigde correcties of transformatiemethode voor de benodigde route voor georefereren en de metadata over de georeferentie.</p>
 </aside></div></section></section></section>
   <section id="methodes-voor-georeferentie"><div class="header-wrapper"><h2 id="x4-methodes-voor-georeferentie"><bdi class="secno">4. </bdi>Methodes voor Georeferentie</h2><a class="self-link" href="#methodes-voor-georeferentie" aria-label="Permalink for Section 4."></a></div>
 <section id="routes-voor-georeferentie"><div class="header-wrapper"><h3 id="x4-1-routes-voor-georeferentie"><bdi class="secno">4.1 </bdi>Routes voor georeferentie</h3><a class="self-link" href="#routes-voor-georeferentie" aria-label="Permalink for Section 4.1"></a></div>
-<p>Wanneer men een BIM-model daadwerkelijk gaat realiseren op de bouwplaats, wordt het model uitgezet in de werkelijkheid. Dit betekent dat het digitale coördinatensysteem van het BIM-model wordt gekoppeld aan vaste referentiepunten op de bouwplaats. Vanuit deze koppeling worden assen, stramienen, hoogtes en punten vanuit het BIM-model uitgezet met meetapparatuur zoals een total station. Op die manier worden posities van constructieve elementen, overgenomen vanuit het model. Deze posities markeert men fysiek in het veld, bijvoorbeeld met piketten of andere markeringen. Voor omvangrijke projecten kan dit proces ook worden ondersteund door machinebesturing. Een BIM-model vormt zo de basis voor de maatvoering in constructie in de werkelijkheid. Met bijvoorbeeld een rolmaat, of laser doet men snelle metingen en detailcontrole op de bowplaats. </p>
-<p>Om de gecreëerde fysieke werkelijkheid vast te leggen in een coördinatensysteem meet men objecten in, met meetapparatuur zoals een total station en RTK-GNSS. Hiervoor meet men o.a. de hoekenpunten en dakranden van gebouwen in. Alle gemeten punten worden omgerekend naar RD (x,y) met de hoogte in NAP. Vervolgens worden de punten in GIS/CAD-software verbonden tot polygonen, classificeert men de objecten en voegt men attributen toe.  </p>
+<p>Wanneer men een BIM-model daadwerkelijk gaat realiseren op de bouwplaats, worden de coördinaten uit het model uitgezet in de werkelijkheid. Dit betekent dat het digitale coördinatensysteem van het BIM-model wordt gekoppeld aan vaste referentiepunten op de bouwplaats. Vanuit deze koppeling worden assen, stramienen (hulplijnen), hoogtes en punten vanuit het BIM-model uitgezet met meetapparatuur zoals een total station. De posities daarvan markeert men fysiek in het veld, bijvoorbeeld met piketten of andere markeringen. Voor omvangrijke projecten kan dit proces ook worden ondersteund door machinebesturing. Een BIM-model vormt zo de basis voor de maatvoering in constructie in de werkelijkheid. Met bijvoorbeeld een rolmaat, of laser doet men snelle metingen en detailcontrole op de bowplaats. </p>
+<p>Om de gecreëerde fysieke werkelijkheid vast te leggen in een coördinatensysteem meet men objecten weer in, met meetapparatuur zoals een total station en RTK-GNSS. Hiervoor meet men o.a. de hoekenpunten en dakranden van gebouwen in. Alle gemeten punten worden omgerekend naar RD (x,y) met de hoogte in NAP. Vervolgens worden de punten in GIS/CAD-software verbonden tot polygonen, classificeert men de objecten en voegt men attributen toe.  </p>
 <figure id="Routes voor georefereren" style="display: block; text-align: center; margin: 0 auto;">
   <img src="media/Routes_voor_Georefereren.png" alt="Routes voor georefereren" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
   <figcaption><a class="self-link" href="#Routes voor georefereren">Figuur <bdi class="figno">12</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Afwijking-door-aardkromming"></a><span class="fig-title">Routes voor georefereren</span></span></figcaption>
-</figure><p>Wanneer men een BIM-model, dat gemodelleerd is in een lokaal cartesisch CRS (engineering CRS), in een <a href="#dfn-geo-omgeving" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-geo-omgeving-1">GEO-omgeving</a> wil importeren, zonder de route uitzetten en inmeten, moet men een transformatie doen. Afhankelijk van de situatie zijn er verschillende methodes beschikbaar om  BIM- en GEO-modellen samen te voegen op de kaart. Een in RD ingemeten (as-built) GEO-gebouwgeometrie kan men bijvoorbeeld vergelijken met een XYZ(as-designed) BIM-gebouwgeometrie na een 2D gelijkvormigheidstransformatie en hoogtecorrectie, waarin de schaal, translaties en rotatie aangegeven dienen te worden. </p>
+</figure>
+<mark>verkeerde self-link in de code?</mark><p>Wanneer men een BIM-model, dat gemodelleerd is in een lokaal cartesisch CRS (engineering CRS), in <a class="respec-offending-element" title="Linking error: no matching `&lt;dfn&gt;`" id="respec-offender-linking-error-no-matching-dfn-4">geo-software</a> wil importeren, zonder de route uitzetten en inmeten, moet men een transformatie doen. Afhankelijk van de situatie zijn er verschillende methodes beschikbaar om  BIM-modellen en geodata samen te voegen op de kaart. Een in RD ingemeten (as-built) gebouwgeometrie kan men bijvoorbeeld vergelijken met een XYZ (as-designed) BIM-gebouwgeometrie, na een 2D gelijkvormigheidstransformatie en hoogtecorrectie, waarin translaties, rotatie en schaal aangegeven dienen te worden. </p>
 </section><section id="x1d-2d-en-3d-geo-en-bim-modellen"><div class="header-wrapper"><h3 id="x4-2-1d-2d-en-3d-geo-en-bim-modellen"><bdi class="secno">4.2 </bdi>1D, 2D en 3D GEO- en BIM-modellen</h3><a class="self-link" href="#x1d-2d-en-3d-geo-en-bim-modellen" aria-label="Permalink for Section 4.2"></a></div>
-<p>Zowel BIM- als GEO-modellen kunnen een 1D, 2D als 3D coordinatenstelsel gebruiken. Om een juiste transformatie van coordinaten van 2D en 3D modellen te verkrijgen kunnen verschillende methoden worden toegepast.  </p>
-<p>Een GEO coordinatenstelsel kan 3D samengesteld (EPSG:7415), 2D (EPSG:28992) of 1D (EPSG:5709) zijn. </p>
+<p>Zowel BIM-modellen als geoodata kunnen een 2D, 3D of samengesteld coördinatenstelsel gebruiken. Om een juiste transformatie te verkrijgen kunnen verschillende transformatiemethoden worden toegepast.  </p>
+<p><mark>tabel past in breedte niet op bladzijde</mark>  </p>
 <table>
-<caption>Transformatie van 2D en 3D GEO en/of BIM</caption>
+<caption>Transformatie tussen 2D, 3D en samengestelde coördinatenstelsel van BIM-modellen en/of geodata</caption>
   <thead>
     <tr>
-      <th>Source/Target</th>
+      <th>Source/Target <mark>vertalen naar Bron/Doel?</mark></th>
       <th>2D RD</th>
-      <th>2D XY</th>
+      <th>2D lokaal</th>
       <th>2D ETRS89</th>
-      <th>3D RDNAP</th>
-      <th>3D XYZ</th>
+      <th>2D+1D RDNAP</th>
+      <th>3D lokaal</th>
       <th>3D ETRS89</th>
       </tr>
   </thead>
   <tbody>
     <tr>
       <td><strong>2D RD</strong></td>
-      <td>0-transformatie</td>
-      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmert</a> Horizontaal transformatie</td>
-      <td>RDNAPTRANS zonder gebruik hoogte </td>
-      <td>0-transformatie en Interpolatie van z waarde naar target  </td>
-      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmert</a> Horizontaal transformatie en interpolatie van z waarde naar target  </td>
-      <td>RDNAPTRANS </td>
+      <td>Nultransformatie</td>
+      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmerttransformatie</a></td>
+      <td>RDNAPTRANS zonder hoogte</td>
+      <td>Nultransformatie en interpolatie naar NAP-hoogte van target</td>
+      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmerttransfomatie</a> en interpolatie naar Z-waarde van target</td>
+      <td>RDNAPTRANS</td>
     </tr>
     <tr>
-      <td><strong>2D XY</strong></td>
-      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmert</a> Horizontaal transformatie</td>
-      <td>0-transformatie</td>
-      <td>3D gelijkvormigheidstransformatie met NAP = 0 zonder gebruik elipsoidische h</td>
-      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmert</a> Horizontaal transformatie en interpolatie van z waarde naar target</td>
-      <td>0-transformatie + Interpolatie van z waarde naar target</td>
-      <td>3D gelijkvormigheidstransformatie + Interpolatie van z waarde naar target </td>
+      <td><strong>2D lokaal</strong></td>
+      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmerttransformatie</a></td>
+      <td>Nultransformatie</td>
+      <td><a href="#3D-gelijkvormigheidstransformatie">3D Helmerttransformatie</a> met Z=0 (zonder gebruik elipsoïdische hoogte)</td>
+      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmerttransfomatie</a> en interpolatie naar NAP-hoogte van target</td>
+      <td>Nultransformatie en interpolatie naar Z-waarde van target</td>
+      <td><a href="#3D-gelijkvormigheidstransformatie">3D Helmerttransformatie</a> met Z=0 en interpolatie naar ellipsoïdische hoogte van target</td>
     </tr>
     <tr>
       <td><strong>2D ETRS89</strong></td>
-      <td>RDNAPTRANS met alleen RD gebruik</td>
-      <td>3D gelijkvormigheidstransformatie zonder gebruik elipsoidische h</td>
-      <td>0-transformatie</td>
-      <td>RDNAPTRANS met interpolatie van ellipsoidische hoogte naar target NAP</td>
-      <td>3D gelijkvormigheidstransformatie met interpolatie van ellipsoidische hoogte naar target z</td>
-      <td>0-transformatie met interpolatie elipsoidische hoogte</td>
+      <td>RDNAPTRANS zonder hoogte</td>
+      <td><a href="#3D-gelijkvormigheidstransformatie">3D Helmerttransformatie</a> met h=43 m (zonder gebruik Z-waarde)</td>
+      <td>Nultransformatie</td>
+      <td>RDNAPTRANS zonder hoogte en interpolatie naar NAP-hoogte van target</td>
+      <td><a href="#3D-gelijkvormigheidstransformatie">3D Helmerttransformatie</a> met h=43 m en interpolatie naar Z-waarde van target</td>
+      <td>Nultransformatie en interpolatie naar elipsoidische hoogte van target</td>
     </tr>
     <tr>
-      <td><strong>3D RDNAP</strong></td>
-      <td>0-transformatie en Interpolatie van z waarde naar target</td>
-      <td>Projectie en 2D Helmert Horizontaal transformatie</td>
-      <td>RDNAPTRANS zonder gebruik van ellipsoidische h</td>
-      <td>0-transformatie</td>
-      <td>2D Helmert Horizontaal transformatie en 1D Helmert Verticaal transormatie</td>
+      <td><strong>2D+1D RDNAP</strong></td>
+      <td>Nultransformatie (zonder gebruik NAP-hoogte)</td>
+      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmerttransformatie</a> (zonder gebruik NAP-hoogte)</td>
+      <td>RDNAPTRANS zonder hoogte</td>
+      <td>Nultransformatie</td>
+      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmerttransformatie</a> en 1D Helmerttransformatie van hoogte</td>
       <td>RDNAPTRANS</td>
     </tr>
     <tr>
-      <td><strong>3D XYZ</strong></td>
-      <td>Projectie en 2D Helmert Horizontaal transformatie</td>
-      <td>Projectie en 0-transfomatie</td>
-      <td> Projectie, 3D gelijkvormigheidstransformatie NAP = projectieniveau zonder gebruik elipsoidische h</td>
-      <td>2D Helmert Horizontaal transformatie en 1D Helmert Verticaal transormatie</td>
-      <td>0-transformatie</td>
-      <td>3D gelijkvormigheidstransformatie</td>
+      <td><strong>3D lokaal</strong></td>
+      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmerttransformatie</a></td>
+      <td>Nultransfomatie (zonder gebruik Z-waarde)</td>
+      <td><a href="#3D-gelijkvormigheidstransformatie">3D Helmerttransformatie</a> (zonder gebruik elipsoïdische hoogte)</td>
+      <td><a href="#2D-gelijkvormigheidstransformatie">2D Helmerttransformatie</a> en 1D Helmerttransformatie van hoogte</td>
+      <td>Nultransformatie</td>
+      <td><a href="#3D-gelijkvormigheidstransformatie">3D Helmerttransformatie</a></td>
     </tr>
     <tr>
       <td><strong>3D ETRS89</strong></td>
-      <td>RDNAPTRANS met alleen RD gebruik</td>
-      <td>3D gelijkvormigheidstransformatie en projectie (z-weghalen)</td>
-      <td>0-transformatie zonder elipsoidische h</td>
+      <td>RDNAPTRANS zonder hoogte</td>
+      <td><a href="#3D-gelijkvormigheidstransformatie">3D Helmerttransformatie</a> (zonder gebruik Z-waarde)</td>
+      <td>Nultransformatie (zonder gebruik elipsoïdische hoogte)</td>
       <td>RDNAPTRANS</td>
       <td>3D gelijkvormigheidstransformatie</td>
-      <td>0-transformatie</td>
+      <td>Nultransformatie</td>
     </tr>
 </tbody></table><figure id="2D-en-3D-Geo-of-BIM-combineren">
       <img src="./media/2d_en_3d_GeoBIM.png" alt="2D en 3D Geo of BIM combineren" width="700">
-    <figcaption><a class="self-link" href="#2D-en-3D-Geo-of-BIM-combineren">Figuur <bdi class="figno">13</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-2D-en-3D-Geo-of-BIM-combineren"></a><span class="fig-title">2D en 3D Geo of BIM combineren</span></span></figcaption>
-</figure></section><section id="methodes-van-georeferentie"><div class="header-wrapper"><h3 id="x4-3-methodes-van-georeferentie"><bdi class="secno">4.3 </bdi>Methodes van Georeferentie</h3><a class="self-link" href="#methodes-van-georeferentie" aria-label="Permalink for Section 4.3"></a></div>
+    <figcaption><a class="self-link" href="#2D-en-3D-Geo-of-BIM-combineren">Figuur <bdi class="figno">13</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-2D-en-3D-Geo-of-BIM-combineren"></a><span class="fig-title">2D en 3D BIM-model en geodata combineren</span></span></figcaption>
+</figure></section><section id="methodes-voor-georeferentie-0"><div class="header-wrapper"><h3 id="x4-3-methodes-voor-georeferentie"><bdi class="secno">4.3 </bdi>Methodes voor georeferentie</h3><a class="self-link" href="#methodes-voor-georeferentie-0" aria-label="Permalink for Section 4.3"></a></div>
+<p><mark>overlap met paragraaf "Coördinatentransformatie tussel lokaal CRS en geodetisch CRS?</mark></p>
 <section id="rd-gemodelleerd-bim-naar-rdnap"><div class="header-wrapper"><h4 id="x4-3-1-rd-gemodelleerd-bim-naar-rdnap"><bdi class="secno">4.3.1 </bdi>RD-gemodelleerd BIM naar RDNAP</h4><a class="self-link" href="#rd-gemodelleerd-bim-naar-rdnap" aria-label="Permalink for Section 4.3.1"></a></div>
-<p>Het is mogelijk om "RD bewust" te modelleren in BIM. Wanneer men dit doet moet men rekening houden met de schaalcorrectie voor RD. Een project in de stad Amersfoort zal vanwege projectie, in RD +/-  9 mm per 100 meter kleiner getekend worden dan hoe het in werkelijkheid moet worden. Een lijn van 400 meter zal dan als een lijn van +/- 396,4 meter gemodelleerd moeten worden. De vergroting of reductie geldt niet voor verticale lijnen en NAP-hoogtes in het model. Dit vereist grote zorgvuldigheid van de modelleur. Of men moet de afwijking accepteren. 
+<p>Het is mogelijk om "RD bewust" te modelleren in BIM. Wanneer men dit doet moet men rekening houden met de schaalcorrectie voor RD. Een project in de stad Amersfoort zal vanwege projectie, in RD ca. 9 mm per 100 meter kleiner getekend worden dan hoe het in werkelijkheid moet worden. Een lijn van 400 meter zal dan als een lijn van +/- 396,4 meter gemodelleerd moeten worden. De vergroting of reductie geldt niet voor verticale lijnen en NAP-hoogtes in het model. Dit vereist grote zorgvuldigheid van de modelleur. Of men moet de afwijking accepteren. 
 De transformatie van XYZ-BIM als RDNAP in BIM naar RDNAP is een "nultransformatie". </p>
 </section><section id="xyz-gemodeleerd-bim-als-rd-naar-rdnap"><div class="header-wrapper"><h4 id="x4-3-2-xyz-gemodeleerd-bim-als-rd-naar-rdnap"><bdi class="secno">4.3.2 </bdi>XYZ gemodeleerd BIM als RD naar RDNAP</h4><a class="self-link" href="#xyz-gemodeleerd-bim-als-rd-naar-rdnap" aria-label="Permalink for Section 4.3.2"></a></div>
 <p>Het is mogelijk dat de transformatie van XYZ in BIM naar RDNAP-coördinaten door BIM-software wordt ondersteund. In dit geval zal de software bij een commando om een lijn van 400 meter te maken in BIM in Amersfoort eigenlijk een lijn van 396,4 meter in RD maken die overeen komt met een lijn van 400 m in werkelijkheid. Deze methode komt overeen met de methode hierboven beschreven. Het verschil in de methode zit in het feit dat niet de modelleur, maar de software de schaalcorrectie doet om het model in RD te tekenen. 
 De transformatie van RDNAP in BIM naar RDNAP is een "nultransformatie". </p>
 </section><section id="xyz-gemodelleerd-bim-via-een-2d-gelijkvormigheidstransformatie-naar-rdnap"><div class="header-wrapper"><h4 id="x4-3-3-xyz-gemodelleerd-bim-via-een-2d-gelijkvormigheidstransformatie-naar-rdnap"><bdi class="secno">4.3.3 </bdi>XYZ gemodelleerd BIM via een 2D gelijkvormigheidstransformatie naar RDNAP</h4><a class="self-link" href="#xyz-gemodelleerd-bim-via-een-2d-gelijkvormigheidstransformatie-naar-rdnap" aria-label="Permalink for Section 4.3.3"></a></div>
-<p>Een andere methode is om een in lokaal cartesisch XYZ gemodelleerd BIM-model met een 2D gelijkvormigheidstransformatie naar RD met NAP-hoogte te transformeren. Een translatie en rotatie zijn afhankelijk van het gebruikte grid in BIM nodig. Een schaal-transformatie is, afhankelijk van de locatie in Nederland, vaak nodig. Belangrijk hierbij is dat de hoogte-waarde geen schaalcorrectie dient te krijgen. </p>
-<p>Zonder correctie ontstaat een afwijking van 1 cm bij 100 meter wanneer source en target gecombineerd wordt. Bij toepassing van correctie van het totaalmodel met 1 schaal voor xyz, dan is de afwijking 10 mm bij een model van 500 meter en maximaal 100 meter hoogteverschil. Bij toepassing van correctie van het totaalmodel met 2 schalen, 1 xy en 1 voor z, dan is de afwijking 10 mm bij 500 meter en maximaal 128 meter hoogteverschil. Voordeel van deze laatste methode is dat deze ook op zee te gebruiken is.</p>
+<p>Een andere methode is om een in lokaal cartesisch XYZ gemodelleerd BIM-model met een 2D gelijkvormigheidstransformatie naar RD met NAP-hoogte te transformeren. Een schaalparameter is, afhankelijk van de locatie in Nederland, vaak nodig. Belangrijk hierbij is dat de hoogte-waarde geen schaalcorrectie dient te krijgen. </p>
+<p>Zonder schaalcorrectie kan op land een afwijking tot 1 cm op 100 meter optreden (10 cm op 1 km). Bij toepassing van een RD-schaalcorrectie voor XY en dezelfde schaalcorrectie voor Z, dan is de afwijking 1 cm bij een model van 500 meter en maximaal 100 meter hoogteverschil (ΔH), of 10 cm bij een model van 5 km. Bij toepassing van de RD-schaalcorrectie op XY en niet voor Z, dan is de afwijking vergelijkbaar door vervorming door het RD-correctiegrid en de aardkromming. Voordeel van deze laatste methode is dat deze ook voor modellen met een kleinere lengte (L) en een groter hoogteverschil (ΔH) en op zee te gebruiken is, bijvoorbeeld L=200 m en ΔH=320 m.</p>
 </section><section id="xyz-gemodelleerd-bim-via-een-3d-gelijkvormigheidstransformatie-naar-etrs89"><div class="header-wrapper"><h4 id="x4-3-4-xyz-gemodelleerd-bim-via-een-3d-gelijkvormigheidstransformatie-naar-etrs89"><bdi class="secno">4.3.4 </bdi>XYZ gemodelleerd BIM via een 3D gelijkvormigheidstransformatie naar ETRS89</h4><a class="self-link" href="#xyz-gemodelleerd-bim-via-een-3d-gelijkvormigheidstransformatie-naar-etrs89" aria-label="Permalink for Section 4.3.4"></a></div>
-<p>Een volgende methode is om een in lokaal cartesisch XYZ gemodelleerd BIM-model met een 3D gelijkvormigheidstransformatie te transformeren naar cartesisch XYZ in het geocetrische ETRS89-coördinatenstelsel. Dit getransformeerde model kan men vervolgens converteren naar ETRS89 breedte, lengte en hoogte en transformeren naar RDNAP. </p>
-<p>Bij deze methode ontstaat er na 360 meter een 10 mm hoogtefout. Na 1,1 km 10 cm. Deze afwijk neemt quadratisch toe. Er treedt geen vervorming op van het model. Dit geeft verwaarloosbare problemen met dat objecten uit het model niet loodrecht op het gekromd aardoppervlak staan.</p>
+<p>Een volgende methode is om een in lokaal cartesisch XYZ gemodelleerd BIM-model met een 3D gelijkvormigheidstransformatie te transformeren naar cartesisch XYZ in het geocentrische ETRS89-coördinatenstelsel. Dit getransformeerde model kan men vervolgens converteren naar breedte, lengte en hoogte in geografisch 3D ETRS89 en transformeren naar RDNAP. </p>
+<p>Doordat het model niet met de aardkromming meebuigt onstaat er een hoogtefout bij deze methode. De hoogtefout is na 360 meter 1 cm en na 1,1 km 10 cm. Deze afwijking neemt quadratisch toe met de afstand.  </p>
 </section><section id="xyz-gemodeleerd-bim-via-3d-een-3d-gelijkvormigheidstransformatie-naar-etrs89-en-hoogte-naar-nap"><div class="header-wrapper"><h4 id="x4-3-5-xyz-gemodeleerd-bim-via-3d-een-3d-gelijkvormigheidstransformatie-naar-etrs89-en-hoogte-naar-nap"><bdi class="secno">4.3.5 </bdi>XYZ gemodeleerd BIM via 3D een 3D gelijkvormigheidstransformatie naar ETRS89 en hoogte naar NAP</h4><a class="self-link" href="#xyz-gemodeleerd-bim-via-3d-een-3d-gelijkvormigheidstransformatie-naar-etrs89-en-hoogte-naar-nap" aria-label="Permalink for Section 4.3.5"></a></div>
 <p>Deze methode waarbij men BIM via een 3D gelijkvormigheidstransformatie naar ETRS89 brengt en de hoogte naar NAP lijkt op de hiervoor beschreven methode. Het verschil zit erin dat in deze methode XYZ met een 3D gelijkvormigheidstransformatie naar ETRS89 getransformeerd wordt. De hoogte transformeert men daarna apart als 1D-transformatie naar NAP. De breedte en lengte in ETRS89 kan men vervolgens transformeren naar RD en er de NAP-hoogte aan toevoegen voor RDNAP-coördinaten.</p>
 <p>Deze optie geeft een oplossing voor de hoogteafwijking zoals in de hiervoor beschreven methode optreedt. Wel genereert deze methode vervorming van het orgineel model. Deze afwijking is 1 cm bij een model dat zich maximaal 2 km strekt en een maximale hoogte heeft van 32m. De afwijking is ook 1cm bij een model dat zich 200m uitstrekt met een hoogte van maximaal 320 meter.</p>
 </section><section id="xyz-met-lokale-projectie-naar-etrs89"><div class="header-wrapper"><h4 id="x4-3-6-xyz-met-lokale-projectie-naar-etrs89"><bdi class="secno">4.3.6 </bdi>XYZ met lokale projectie naar ETRS89</h4><a class="self-link" href="#xyz-met-lokale-projectie-naar-etrs89" aria-label="Permalink for Section 4.3.6"></a></div>
-<p>De laatste methode is om een BIM-model in lokaal cartesisch XYZ te modelleren en met een lokale projectie naar ETRS89 breedte en lengte te transformeren. De lokale projectie is zo opgestelde dat afwijkingingen minimaal zijn. Het is mogelijk om voor de hoogte daarnaast een 1D transformatie te doen naar NAP. </p>
-<p>Om bovenstaande methodes uit te voeren is een bepaald level aan georeferentie-informatie nodig. Met het hieronder beschreven level 50 Level of Georeferentie-informatie zijn de nultransformaties, en 2D + 1D Helmert transformaties te voorzien van informatie. Een 3D Helmertransformatie en de 3D + 1D Helmerttransformatie kan alleen bij impliciete aannames of bij uitbreiding van Level 50 omdat er 7 parameters nodig zijn. Ook bij gebruik van level 60 is uitbreiding nodig.</p>
+<p><mark>Deze methode voegt niet zo veel toe voor de nauwkeurigheid en is niet eenvoudig toepasbaar: beter weglaten?</mark></p>
+<p>De laatste methode is om een BIM-model in lokaal cartesisch XYZ te modelleren en met een lokale projectie naar ETRS89 breedte en lengte te transformeren. De lokale projectie is zo opgestelde dat afwijkingingen minimaal zijn. Het is mogelijk om voor de hoogte daarnaast een 1D transformatie te doen naar NAP.</p>
+</section><section id="conclusie-0"><div class="header-wrapper"><h4 id="x4-3-7-conclusie"><bdi class="secno">4.3.7 </bdi>Conclusie</h4><a class="self-link" href="#conclusie-0" aria-label="Permalink for Section 4.3.7"></a></div>
+<p>Om bovenstaande methodes uit te voeren is een bepaald level aan georeferentie-informatie nodig. Met het hieronder beschreven level 50 Level of Georeferentie-informatie zijn de nultransformaties, en 2D + 1D Helmert transformaties te voorzien van informatie. Een 3D Helmertransformatie en de 3D + 1D Helmerttransformatie kan bij uitbreiding van Level 50 impliciete aannames omdat er 7 transformatieparameters nodig zijn. Bij gebruik van level 60 is geen uitbreiding nodig, mits de software de 7 parameters zelf kan berekenen uit de referentiepunten.</p>
 </section></section><section id="levels-van-georeferentie-informatie"><div class="header-wrapper"><h3 id="x4-4-levels-van-georeferentie-informatie"><bdi class="secno">4.4 </bdi>Levels van georeferentie-informatie</h3><a class="self-link" href="#levels-van-georeferentie-informatie" aria-label="Permalink for Section 4.4"></a></div>
-<p>Voor gegeorefereerde data zijn verschillende referentiegegevens of transformatieparameters nodig die de het ruimtelijk positioneren van de data ondersteunen. Deze metgegevens beschrijven bijvoorbeeld het gebruikte coördinatenstelsel, de projectie, schaal, rotatie, referentiepunten of transformatieparameters - informatie die nodig is om de brondata correct te koppelen aan een geografische locatie.</p>
-<p>Deze gegevens kunnen op verschillende manieren beschikbaar zijn. Soms zijn deze aanwezig in de brondata waarin informatie voor georeferentie reeds opgenomen is, of in metadata of gekoppelde projectiebestanden. Hierdoor kan de positionering grotendeels automatisch plaatsvinden. Wanneer parameters voor een bepaalde methode (gedeeltelijk) ontbreken kan men dit aanvullen. Gegevens kan men verzamelen via externe bronnen, handmatige interpretatie, referentiekaarten of bekende controlepunten. Dit proces vraagt extra validatie om de nauwkeurigheid en consistentie van de georeferentie te waarborgen.</p>
-<p>De beschikbaarheid en nauwkeurigheid van deze parameters hebben directe invloed op de kwaliteit van het georefereringsproces en de uiteindelijke bruikbaarheid van de ruimtelijke data. In een onderzoek van Clemen Christian [<cite><a class="bibref" data-link-type="biblio" href="#bib-christian2019" title="Level of Georeferencing (LoGeoRef) using IFC for BIM">Christian2019</a></cite>] worden verschillende levels van georeferentie-informatie beschreven. De verschillende levels faciliteren verschillende methode van georeferentie en verschillen in de te behalen nauwkeurigheid en mogelijkheid voor het samenvoegen van modellen. Dit wordt door  beschreven als <a href="#dfn-logeoref" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-logeoref-1">LoGeoRef</a> oftwel Levels of Georeferencing (niveaus van georeferentie-informatie) .</p>
-<p>Het is mogelijk om een BIM-model te voorzien van georeferentie-informatie door alleen het adres, van waar het BIM-model dient te komen, te velmelden. Deze informatie geeft hiermee een grove indicatie van waar het model moet komen. De informatie is niet toereikend om het model exact te plaatsen (transleren, roteren en schalen). Een andere level van informatie zoals het model relateren aan een officieel coördinatenstelsel is hiervoor wel geschikt. Afhankelijk van de behoefte zijn verschillende levels van georeferentie-informatie geschikt.</p>
+<p>Voor gegeorefereerde data zijn verschillende referentiegegevens of transformatieparameters nodig. Deze gegevens beschrijven bijvoorbeeld het gebruikte coördinatenstelsel, transformatieparameters of referentiepunten - informatie die nodig is om de brondata correct te koppelen aan een geografische locatie.</p>
+<p>Deze gegevens kunnen op verschillende manieren beschikbaar zijn. Soms zijn deze aanwezig in de brondata waarin informatie voor georeferentie reeds opgenomen is, of in metadata of in gekoppelde bestanden zoals een prj-bestand. Hierdoor kan de positionering grotendeels automatisch plaatsvinden. Wanneer parameters voor een bepaalde methode (gedeeltelijk) ontbreken kan men dit aanvullen. De gegevens daarvoor kan men verzamelen uit externe bronnen of door handmatige interpretatie van referentiekaarten of bekende referentiepunten. Dit proces vergt extra validatie om de nauwkeurigheid en betrouwbaarheid van de georeferentie te waarborgen.</p>
+<p>De kwaliteit van deze parameters heeft directe invloed op het georefereringsproces en de uiteindelijke bruikbaarheid van de ruimtelijke data. In een onderzoek van Clemen Christian [<cite><a class="bibref" data-link-type="biblio" href="#bib-christian2019" title="Level of Georeferencing (LoGeoRef) using IFC for BIM">Christian2019</a></cite>] worden verschillende levels van georeferentie-informatie beschreven. De verschillende levels faciliteren verschillende methodes van georeferentie en verschillen in de te behalen nauwkeurigheid en mogelijkheid voor het samenvoegen van modellen. Dit wordt door  beschreven als <mark><a href="#dfn-logeoref" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-logeoref-1">LoGeoRef</a></mark> oftwel Levels of Georeferencing (niveaus van georeferentie-informatie) .</p>
+<p>Het is mogelijk om een BIM-model te voorzien van georeferentie-informatie door alleen het adres, van waar het BIM-model dient te komen, te velmelden. Deze informatie geeft hiermee een grove indicatie van waar het model moet komen. De informatie is niet toereikend om het model exact te plaatsen (transleren, roteren en schalen). Een ander level van informatie dat het BIM-model relateert aan een officieel coördinatenstelsel is hiervoor wel geschikt. Afhankelijk van de behoefte zijn verschillende levels van georeferentie-informatie geschikt.</p>
 <p>De beschikbaarheid van informatie voor het berekenen van georeferentie-parameters voor de verschillende methoden is onderzocht door de TU Delft [<cite><a class="bibref" data-link-type="biblio" href="#bib-hakim2024" title="Enhancing Georeferencing of IFC Models through Surveyed Points Integration">Hakim2024</a></cite>]. </p>
 <hr><hr><hr><hr><table>
   <caption> Levels van georeferentie </caption>
   <tbody><tr>
     <th> Methode  </th>
     <th> Level </th>
-    <th> Translatie xy </th>
-    <th> Translatie z </th>
+    <th> Translatie XY </th>
+    <th> Translatie Z </th>
     <th> Rotatie </th>
-    <th> Schaal  xy </th>
-    <th> Schaal z </th>
+    <th> Schaal  XY </th>
+    <th> Schaal Z </th>
   </tr>
       <tr>
           <td colspan="7">  Een locatienaam opgeven:</td>
@@ -1312,7 +1321,7 @@ De transformatie van RDNAP in BIM naar RDNAP is een "nultransformatie". </p>
   </tr>
   <tr>
   </tr><tr>
-        <td colspan="7">  Eén coordinaat opgeven: </td>
+        <td colspan="7">  Voor één punt coördinaten opgeven: </td>
   </tr>
     <tr><td>
       <img src="./media/georefereren_Level_20.png" alt="Georeferentie level 20" title="Georeferentie Level 20" width="300">
@@ -1325,21 +1334,21 @@ De transformatie van RDNAP in BIM naar RDNAP is een "nultransformatie". </p>
     <td> Niet mogelijk </td> 
     </tr> 
       <tr>
-        <td colspan="7"> Met dit informatielevel duidt men één enkel (lat-lon) punt waar het model geplaatst moet worden. Bijvoorbeeld met het coordinaat "52.152494076977185, 5.3720554951931385". Plaatsing van het model op de juiste plek, zowel in 2D als 3D wordt hiermee mogelijk. Rotatie en schalen van het model blijft niet mogelijk.</td>
+        <td colspan="7"> Met dit informatielevel duidt men één enkel punt (breedte- en lengtegraad) waar het model geplaatst moet worden. Bijvoorbeeld met het coordinaat "52.15249407, 5.37205549". Plaatsing van het model op de juiste plek, zowel in 2D als 3D wordt hiermee mogelijk. Rotatie en schalen van het model blijft niet mogelijk.</td>
   </tr>
   <tr>
-    <td colspan="7"> De positie en richting van het grondvlak duiden: </td>
+    <td colspan="7"> De positie en richting van het grondvlak specificeren: </td>
     
   
   </tr>
   <tr>
     <td>
-      <img src="./media/georefereren_Level_30.png" alt="Georeferentie level 30" title="Georeferentie Level 30" width="300&quot;">
-    </td>
+      <img src="./media/georefereren_Level_30.png" alt="Georeferentie level 30" title="Georeferentie Level 30" width="300&quot;"><mark>rotatie ontbreekt in de afbeelding
+    </mark></td>
     <td> 30</td>
     <td> Mogelijk </td> 
     <td> Mogelijk </td>
-    <td> Eventueel mogelijk </td> 
+    <td> Optioneel </td> 
     <td> Niet mogelijk </td> 
     <td> Niet mogelijk </td> 
   </tr>
@@ -1348,22 +1357,22 @@ De transformatie van RDNAP in BIM naar RDNAP is een "nultransformatie". </p>
         <td colspan="7"> Met dit informatielevel wordt aan het grondvlak van een model een verplaatsing ten opzichte van het model 0-punt toegekend die overeenkomt met het beoogd coordinaatrefentiesysteem. Objectplaatsing wordt gebruikt als georeferentie. Doordat elementen een ruimtelijke relatie hebben met het grondvlak worden deze elementen ook juist geplaatst en kunnen coordinaten van deze elementen klein gehouden worden. Ook is het mogelijk om de rotatie ten opzichte van het Noorden te duiden. Het schalen van het model is niet mogelijk. Ook is het niet mogelijk om het CRS waarvoor het coordinaat geldt te duiden.</td>
   </tr>
   <tr>
-    <td colspan="7">De positie en richting van het totaal model duiden: </td>
+    <td colspan="7">De positie en richting van het model duiden: </td>
     
   
   </tr><tr>
     <td>
-      <img src="./media/georefereren_Level_40.png" alt="Georeferentie level 40" title="Georeferentie Level 40" width="300">
-    </td>
+      <img src="./media/georefereren_Level_40.png" alt="Georeferentie level 40" title="Georeferentie Level 40" width="300"><mark>translatie ontbreekt in de afbeelding
+    </mark></td>
     <td> 40</td>
     <td> Mogelijk </td> 
     <td> Mogelijk </td>
-    <td> Eventueel mogelijk </td> 
+    <td> Optioneel </td> 
     <td> Niet mogelijk </td> 
     <td> Niet mogelijk </td> 
   </tr>
           <tr>
-        <td colspan="7"> Met dit informatielevel wordt aan het <strong>totaal model</strong> een coordinaat toegekend, en ook de rotatie ten opzichte van Noorden kan men duiden. De georeferentie is een aparte entiteit, en is daarmee expliciet geduid. De methode komt overeen met LevelOfGeoreferencing Het schalen van het model is niet mogelijk. Ook is het niet mogelijk om het CRS waarvoor het coordinaat geldt te duiden.</td>
+        <td colspan="7"> Met dit informatielevel wordt aan het <strong>totaalmodel</strong> een coordinaat toegekend, en ook de rotatie ten opzichte van Noorden kan men duiden. De georeferentie is een aparte entiteit, en is daarmee expliciet geduid. De methode komt overeen met LevelOfGeoreferencing Het schalen van het model is niet mogelijk. Ook is het niet mogelijk om het CRS waarvoor het coordinaat geldt te duiden.</td>
   </tr>
   <tr>
     <td colspan="7"> De positie en richting van het grondvlak duiden: </td>
@@ -1372,20 +1381,20 @@ De transformatie van RDNAP in BIM naar RDNAP is een "nultransformatie". </p>
   </tr><tr>
   </tr><tr>
     <td>
-      <img src="./media/georefereren_Level_50.png" alt="Georeferentie level 50" title="Georeferentie Level 50" width="1000">
-    </td>
+      <img src="./media/georefereren_Level_50.png" alt="Georeferentie level 50" title="Georeferentie Level 50" width="1000"><mark>N en E zijn geen Nederlandse afkortingen voor RD gebruiken we x en y; Waarom staan er 2 rotaties rond X- en Y-as in plaats van 1 rotatie rond de Z-as?
+    </mark></td>
     <td> 50 </td>
     <td> Mogelijk </td> 
     <td> Mogelijk </td>
     <td> Mogelijk </td> 
     <td> Mogelijk </td> 
-    <td> Eventueel mogelijk </td> 
+    <td> Optioneel </td> 
   </tr>
            <tr>
-        <td colspan="6"> Met dit informatielevel geeft men aan wat het oorspronkelijk coordinatenstelsel is waarin het model is gemodelleerd. Daarnaast geeft men in het model aan naar welk coordinatenstelsel een coversie gedaan  wordt. Heeft men bijvoorbeeld gemodelleerd vanuit een lokaal assenstelsel (0,0,0) dan kan men beschrijven welke translatie, rotatie en verschaling men moet toepassen om te kunnen combineren met data in RijksDriehoeksstelsel (RD).</td>
+        <td colspan="6"> Met dit informatielevel geeft men aan wat het oorspronkelijk coordinatenstelsel is waarin het model is gemodelleerd. Daarnaast geeft men in het model aan naar welk coordinatenstelsel een coversie gedaan  wordt. Heeft men bijvoorbeeld gemodelleerd vanuit een lokaal assenstelsel (0,0,0) dan kan men beschrijven welke translatie, rotatie en verschaling men moet toepassen om te kunnen combineren met data in RD-coördinaten.</td>
   </tr>
   <tr>
-    <td colspan="7"> Surveypoints uit BIM de werkelijkheid en GEO: </td>
+    <td colspan="7"> Coörinaten van referentiepunten in het BIM-model en een CRS: </td>
     
   
   </tr><tr>
@@ -1401,19 +1410,19 @@ De transformatie van RDNAP in BIM naar RDNAP is een "nultransformatie". </p>
     <td> Mogelijk </td>
   </tr>
              <tr>
-        <td colspan="6"> Met dit informatielevel koppelt men punten in model aan ingemeten punten tijdens constructie aan coordinaten in een specifiek coordinatenstelsel..</td>
+        <td colspan="6"> Met dit informatielevel koppelt men punten in model aan ingemeten punten tijdens constructie aan coördinaten in een specifiek coordinatenstelsel.</td>
   </tr>
-</tbody></table><p>Een hoger LoGeoRef-niveau geeft een model expliciteitere, completere en betere gestructureerde georeferentie informatie. Dit geeft meer mogelijkheden in gebruik. Een hoger level van georeferentie stelt ook hogere eisen aan datakwaliteit en expertise. Men kan in sommige situaties besluiten een lager level van georeferentie aan te houden. De hierboven beschreven methodes van Georeferentie kunnen worden toegepast onderstaande situaties. Bij een hoger level georefentiemodel blijven de toepassingsvoorbeelden van lager niveaus ook werken. </p>
+</tbody></table><p>Een hoger LoGeoRef-niveau geeft een model expliciteitere, completere en betere gestructureerde georeferentie-informatie. Dit geeft meer mogelijkheden in gebruik. Een hoger level van georeferentie stelt ook hogere eisen aan datakwaliteit en expertise. Men kan in sommige situaties besluiten een lager level van georeferentie aan te houden. De hierboven beschreven methodes van georeferentie kunnen worden toegepast onderstaande situaties. Bij een hoger level georefentiemodel blijven de toepassingsvoorbeelden van lager niveaus ook werken. </p>
 <table>
   <tbody><tr>
     <th width="50"> Level </th>
-    <th> Georeferentie informatie </th>
+    <th> Georeferentie-informatie </th>
     <th> Toepassingsvoorbeeld </th>
   </tr>
   <tr>
     <td> 10 </td>
-    <td> Benoemen Adres </td>
-    <td> Voor administratieve analyses of navigatie </td>
+    <td> Benoemen adres </td>
+    <td> Voor administratieve analyses of voor navigatie naar de locatie van het BIM-model</td>
   </tr>
   <tr>
     <td> 20 </td>
@@ -1423,40 +1432,39 @@ De transformatie van RDNAP in BIM naar RDNAP is een "nultransformatie". </p>
   <tr>
     <td> 30 </td>
     <td> Het specificeren van punt en verdraaiing van het grondvlak </td>
-    <td> Voor niet geometrische analyses, navigatie of controle van rotatie </td>
+    <td> Voor niet-geometrische analyses <mark>of controle van rotatie </mark></td>
   </tr>
   <tr>
     <td> 40 </td>
-    <td> Het specificeren van punt en verdraaiing van het model </td>
-    <td> Voor niet geometrische analyses, navigatie of controle van rotatie </td>
+    <td> Het specificeren van punt en verdraaiing van het totaalmodel </td>
+    <td> Voor niet geometrische analyses, <mark>controle van rotatie </mark></td>
   </tr>
   <tr>
     <td> 50 </td>
-    <td> Aangeven van Source-CRS en trasformatie naar target-CRS </td>
-    <td> Voor het combineren van Geo en BIM in applicaties t.b.v. visualisatie, analyse, coördinatie of integratie </td>
+    <td> Aangeven van Source-CRS en 2D+1D-Helmerttransformatie naar target-CRS </td>
+    <td> Voor het combineren van geodata en BIM-modellen in applicaties t.b.v. visualisatie en analyse<mark>, coördinatie of integratie </mark></td>
   </tr>
   <tr>
     <td> 60 </td>
     <td> Koppeling van punten in BIM, Geo en op het fysiek terrein </td>
-    <td> Als het BIM-model gebruikt moet worden voor constructie/landmeetkundige integratie, waar de positie van het model in het terrein meetkundig verifieerbaar moet zijn. </td>
+    <td> Als het BIM-model gebruikt moet worden voor constructie of andere toepassingen waarbij de positie van het model in het terrein landmeetkundig aanwijsbaar moet zijn. </td>
   </tr>
 </tbody></table><div class="note" role="note" id="issue-container-generatedID-3"><div role="heading" class="note-title marker" id="h-note-3" aria-level="4"><span>Noot</span><span class="issue-label">: Gebruik van level van Georefereren</span></div><aside class="">
-  <p><strong>AANBEVELING:</strong> Gebruik voor GeoBIM-integratie level 50 en voor GeoBIM-inzet voor constructiedoeleinde level 60 van georefereren.  </p>
+  <p><strong>AANBEVELING:</strong> Gebruik voor integratie van BIM-modellen en geodata level 50 en voor constructiedoeleinden level 60 van georefereren.  </p>
 </aside></div>
 <div class="note" role="note" id="issue-container-generatedID-4"><div role="heading" class="note-title marker" id="h-note-4" aria-level="4"><span>Noot</span><span class="issue-label">: Gebruik tooling om modellen te verrijken</span></div><aside class="">
-<p><strong>AANBEVELING:</strong> Gebruik tooling om modellen die nog niet voldoen aan georeferentie 50, wanneer nodig, te verrijken met georeferentie informatie conform level 50. </p>
+<p><strong>AANBEVELING:</strong> Gebruik tooling om modellen die nog niet voldoen aan georeferentie 50, wanneer nodig, te verrijken met georeferentie-informatie conform level 50. </p>
 </aside></div></section><section id="schaal-en-correctie-op-basis-van-gebruikte-eeenheden"><div class="header-wrapper"><h3 id="x4-5-schaal-en-correctie-op-basis-van-gebruikte-eeenheden"><bdi class="secno">4.5 </bdi>Schaal en correctie op basis van gebruikte eeenheden</h3><a class="self-link" href="#schaal-en-correctie-op-basis-van-gebruikte-eeenheden" aria-label="Permalink for Section 4.5"></a></div>
-<p>Een GEO- of BIM-bronmodel kan in een andere eenheid zijn opgesteld dan het doelsysteem waarin het model wordt geplaatst. Het is daarom essentieel om de gebruikte eenheden expliciet te specificeren in het model. Wanneer een bronmodel bijvoorbeeld in millimeters is gemodelleerd en de doelomgeving meters gebruikt, moet er een eenheidsconversie worden toegepast om consistente interpretatie van de geometrie te garanderen. </p>
+<p>Geodata of een BIM-model kan in een andere eenheid zijn opgesteld dan het coördinatenstelsel waarnaar het moet worden worden getransformeert. Het is daarom essentieel om de gebruikte eenheden expliciet te specificeren in het model. Wanneer een source bijvoorbeeld in millimeters is gemodelleerd en de target meters gebruikt, moet er een eenheidsconversie worden toegepast. </p>
 <p>Een mogelijke workaround, wanneer software geen correcte eenheidsconversie uitvoert, is het toepassen van een schaalfactor binnen de georeferentie-informatie, bijvoorbeeld 0.001 voor millimeter naar meter of 0.0254 voor inch naar meter. Het risico van deze aanpak is dat software die de eenheden wél correct interpreteert, deze schaalcorrectie opnieuw toepast, wat leidt tot een dubbele conversie en dus foutieve geometrie.</p>
-<p>Wanneer een bron in milimeters is getekend en de target omgeving in meters, dan zal men de units moeten verschalen. Een workaround, wanneer dit niet werkt in software, is dat men in georeferentie een schaal, bijvoorbeeld waarde 0.001, aan kan geven. Of wanneer men van inches naar meter gaat met een schaal, waarde 0.0254. Het risico hiervan is dat software die de units wel goed interpreteert de verschaling dubbel gaat doen. </p>
-<div class="note" role="note" id="issue-container-generatedID-5"><div role="heading" class="note-title marker" id="h-note-5" aria-level="4"><span>Noot</span><span class="issue-label">: Gebruik van LoGeoRef en schaal</span></div><aside class=""> <p><strong>AANBEVELING:</strong> Gebruik de schaalparameter binnen georeferentie uitsluitend voor geometrische transformaties binnen het coördinatensysteem (bijvoorbeeld CRS-conversies), en niet voor eenheidsconversies. Definieer eenheden altijd expliciet via de daarvoor bestemde attributen, zoals <a href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a>.</p> </aside></div></section></section>
-  <section id="gebruik-van-geo-voor-georeferentie"><div class="header-wrapper"><h2 id="x5-gebruik-van-geo-voor-georeferentie"><bdi class="secno">5. </bdi>Gebruik van geo voor georeferentie</h2><a class="self-link" href="#gebruik-van-geo-voor-georeferentie" aria-label="Permalink for Section 5."></a></div>
-<section id="georeferentie-level-60-voor-bim-naar-geo"><div class="header-wrapper"><h3 id="x5-1-georeferentie-level-60-voor-bim-naar-geo"><bdi class="secno">5.1 </bdi>Georeferentie Level 60 voor BIM naar Geo</h3><a class="self-link" href="#georeferentie-level-60-voor-bim-naar-geo" aria-label="Permalink for Section 5.1"></a></div>
-<p>De aanbevolen methode voor georeferentie kan worden toegepast voor infrastructuurprojecten, maar is daarvoor vaak niet toereikend en vereist in de praktijk een hogere nauwkeurigheid (level 60). Om een model op level 60 te georefereren, zijn er o.a. drie mogelijkheden om dit toe te passen: (1) Gebruik van <a href="#dfn-survey-point" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-survey-point-1">survey point</a>s, (2) <a href="#dfn-geografische-uitlijning" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-geografische-uitlijning-1">Geografische uitlijning</a> en (3) <a href="#dfn-scan-to-bim" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-scan-to-bim-1">scan-to-BIM</a> gebaseerd op technieken <a href="https://www.buildingsmart.org/wp-content/uploads/2025/04/The-buildingSMART-Awards-Yearbook-2020.pdf">BuildingSMART et al. (2020)</a>. Voor iedere methode van georeferentie wordt in de theorie nader toegelicht hoe deze kan worden toegepast. Let wel, bij de derde mogelijkheid is het model reeds geogerefereerd, en is er in de meeste gevallen een conversiebestand beschikbaar dat het model vertaalt van een BIM-softwareomgeving naar het coördinatensysteem waarin de puntenwolk is ingewonnen.</p>
+<div class="note" role="note" id="issue-container-generatedID-5"><div role="heading" class="note-title marker" id="h-note-5" aria-level="4"><span>Noot</span><span class="issue-label">: Gebruik van LoGeoRef en schaal</span></div><aside class=""> <p><strong>AANBEVELING:</strong> Gebruik de schaalparameter binnen georeferentie uitsluitend voor geometrische transformaties binnen het coördinatensysteem (bijvoorbeeld CRS-transformaties), en niet voor eenheidsconversies. Definieer eenheden altijd expliciet via de daarvoor bestemde attributen, zoals <a href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a>.</p> </aside></div></section></section>
+  <section id="gebruik-van-geodata-voor-georeferentie"><div class="header-wrapper"><h2 id="x5-gebruik-van-geodata-voor-georeferentie"><bdi class="secno">5. </bdi>Gebruik van geodata voor georeferentie</h2><a class="self-link" href="#gebruik-van-geodata-voor-georeferentie" aria-label="Permalink for Section 5."></a></div>
+<section id="georeferentie-level-60-voor-bim-modellen"><div class="header-wrapper"><h3 id="x5-1-georeferentie-level-60-voor-bim-modellen"><bdi class="secno">5.1 </bdi>Georeferentie Level 60 voor BIM-modellen</h3><a class="self-link" href="#georeferentie-level-60-voor-bim-modellen" aria-label="Permalink for Section 5.1"></a></div>
+<p>De aanbevolen methode voor georeferentie (level 50) kan worden toegepast voor infrastructuurprojecten, maar is daarvoor vaak niet toereikend en vereist in de praktijk een hogere nauwkeurigheid (level 60). Om een model met level 60 te georefereren, zijn er o.a. drie mogelijkheden om dit toe te passen: (1) Gebruik van teferentiepunten (<a href="#dfn-survey-point" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-survey-point-1">survey point</a>s), (2) <a href="#dfn-geografische-uitlijning" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-geografische-uitlijning-1">Geografische uitlijning</a> en (3) <a href="#dfn-scan-to-bim" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-scan-to-bim-1">scan-to-BIM</a> gebaseerd op technieken <a href="https://www.buildingsmart.org/wp-content/uploads/2025/04/The-buildingSMART-Awards-Yearbook-2020.pdf">BuildingSMART et al. (2020)</a>. Voor iedere methode van georeferentie wordt in de theorie nader toegelicht hoe deze kan worden toegepast. Bij de derde mogelijkheid is het model vaak reeds geogerefereerd, en zijn er in de meeste gevallen een transformatieparameters beschikbaar die het model vertaalt van een BIM-softwareomgeving naar het coördinatenstelsel waarin de puntenwolk is ingewonnen.</p>
 <p>Daarom wordt geadviseerd om uitsluitend bij optie 1 en 2 een beoordelingstoets uit te voeren, om te verifiëren of het model zich daadwerkelijk op de correcte locatie bevindt.</p>
-<section id="het-gebruik-van-survey-points"><div class="header-wrapper"><h4 id="x5-1-1-het-gebruik-van-survey-points"><bdi class="secno">5.1.1 </bdi>Het gebruik van survey points</h4><a class="self-link" href="#het-gebruik-van-survey-points" aria-label="Permalink for Section 5.1.1"></a></div>
-<p>Voor kleine netwerken worden vaste meetpunten op plekken waarvan met een bepaalde zekerheid gezegd kan worden dat deze niet verstoord of weg kunnen gaan. De meetpunten worden in XYZ bepaald, en kunnen beschouwd worden als stabiel in het terrein. De bepaling in XY wordt door middel van <a href="#dfn-gnss" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-gnss-1">GNSS</a> uitgevoerd met een nauwkeurigheid van 2-3cm. Er kan gekozen worden om de meetpunten direct via GNSS te bepalen indien dit mogelijk is. Wanneer dit niet mogelijk is, bv als de meetpunten in de muur/wand zitten, worden er tijdelijke punten gemaakt en via tachymetrie de XY bekend gemaakt. Doormiddel van waterpassing wordt de hoogte (Z) in mm nauwkeurigheid bepaald.</p>
-<p>Bij het verwerken van lange netwerken kan er gekozen worden voor referentievelden, deze wordt op dezelfde manier bepaald, maar alleen via GNSS aan elkaar gekoppeld in XY. Voor de hoogte kan een waterpassing uitgevoerd worden per veld. Het geodetisch netwerk wordt gebruikt om een puntenwolk te geo-refereren, hiervan wordt een BIM model gemaakt. Er kan een controle uitgevoerd worden door de coördinaten en het BIM model te vergelijken.</p>
+<section id="het-gebruik-van-referentiepunten"><div class="header-wrapper"><h4 id="x5-1-1-het-gebruik-van-referentiepunten"><bdi class="secno">5.1.1 </bdi>Het gebruik van referentiepunten</h4><a class="self-link" href="#het-gebruik-van-referentiepunten" aria-label="Permalink for Section 5.1.1"></a></div>
+<p>Voor kleine netwerken worden vaste meetpunten op plekken waarvan met een bepaalde zekerheid gezegd kan worden dat deze niet verstoord worden of verdwijnen. De meetpunten worden in RDNAP bepaald, en kunnen beschouwd worden als stabiel in het terrein. De bepaling in RD wordt door middel van RTK-<a href="#dfn-gnss" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-gnss-1">GNSS</a> uitgevoerd met een nauwkeurigheid van 2-3 cm. Wanneer het niet mogelijk is meetpunten direct via RTK-GNSS te bepalen, bijvoorbeeld als de meetpunten in een muur/wand zitten, worden er tijdelijke punten gemaakt en via tachymetrie de RD-coördinaten ingemeten. Doormiddel van waterpassing wordt de hoogte (H) met mm-nauwkeurigheid bepaald.</p>
+<p>Bij het verwerken van langgerekte netwerken kan er gekozen worden voor referentievelden, deze wordt op dezelfde manier bepaald, maar alleen via GNSS gekoppeld aan RD-coördinaten. Voor de NAP-hoogte kan een waterpassing uitgevoerd worden per veld. Het geodetisch netwerk wordt gebruikt om een puntenwolk te georefereren, hiervan wordt een BIM-model gemaakt. Er kan een controle uitgevoerd worden door de coördinaten en het BIM-model te vergelijken.</p>
 </section><section id="geografische-uitlijning"><div class="header-wrapper"><h4 id="x5-1-2-geografische-uitlijning"><bdi class="secno">5.1.2 </bdi>Geografische uitlijning</h4><a class="self-link" href="#geografische-uitlijning" aria-label="Permalink for Section 5.1.2"></a></div>
 <p>Geografische uitlijning (in de Engelstalige literatuur aangeduid als footprint alignment) vereist dat zowel het planimetrische (XY) als het altimetrische (Z) component expliciet worden meegenomen. Om een ongerefereerd model te transformeren naar een gerefereerde ruimtelijke omgeving, is het noodzakelijk gebruik te maken van bestaande, stabiele objecten waarvan de verplaatsing in de tijd verwaarloosbaar is. Hierbij wordt een iteratief uitlijningsproces toegepast. Dit proces vangt aan met een initiële, grove schatting van het planimetrische component, waarna het altimetrische component verder wordt verfijnd op basis van patroonherkenning. Voor toepassing binnen infrastructuur- en B&amp;U-projecten kunnen twee typen objecten als referentie worden ingezet: (1) noklijnen en (2) straatmeubilair.</p>
 <p><em>Noklijnen</em>
@@ -1464,7 +1472,7 @@ Als de planimetrische componenten van de dataset op juiste plek liggen, is het n
 Deze methode, vrij beschikbaar via de dataroom van het AHN, maakt het mogelijk om de beschikbare noklijnen binnen het projectgebied te gebruiken als referentie voor het positioneren van het model ten opzichte van de GIS-laag. Een aandachtspunt is echter dat deze datasets beschikbaar zijn in GPKG-formaat, waardoor de gebruiker de data handmatig moet converteren naar een DWG-bestand om deze binnen gangbare BIM-software te kunnen gebruiken.</p>
 <p><em>Straatmeubilair</em>
 Bij infrastructuurprojecten zijn in veel gevallen geen gebouwen aanwezig, waardoor het gebruik van noklijnen beperkt is voor de hoogteregistratie binnen infrastructurele BIM-modellen buiten stedelijke gebieden. In dergelijke situaties kan gebruik worden gemaakt van straatmeubilair en andere infrastructuurobjecten met een duidelijke geometrische of semantische herkenbaarheid, zoals wegmarkeringen, kantverharding en overige vaste objecten.</p>
-<p>Voor deze toepassing zijn verschillende landelijke datasets van belang die, naast het Actueel Hoogtebestand Nederland (AHN), kunnen worden ingezet. Voorbeelden hiervan zijn het Digitaal Topografisch Bestand (DTB/1GiS) en het Nationaal Wegenbestand (NWB). Het is hierbij van belang te onderkennen dat deze datasets niet volledig driedimensionaal zijn. Zo is het DTB/1GiS een 2.5D-dataset, waarbij per XY-coördinaat slechts één hoogtewaarde beschikbaar is, terwijl het huidige NWB uitsluitend tweedimensionale geometrie bevat.</p>
+<p>Voor deze toepassing zijn verschillende landelijke datasets van belang die, naast het Actueel Hoogtebestand Nederland (AHN), kunnen worden ingezet. Voorbeelden hiervan zijn het Digitaal Topografisch Bestand (DTB/1GiS) en het Nationaal Wegenbestand (NWB). Het is hierbij van belang te onderkennen dat deze datasets niet volledig driedimensionaal zijn. Zo is het DTB/1GiS een 2.5D-dataset, waarbij per xy-coördinaat slechts één hoogtewaarde beschikbaar is, terwijl het huidige NWB uitsluitend tweedimensionale geometrie bevat.</p>
 <p>Door wisselende prioriteiten binnen grootschalige infrastructuurprojecten kunnen er verschillen optreden in betrouwbaarheid en in de toegepaste inwin- en meetmethoden per objecttype. Daarom is het raadzaam om vooraf het DTB-handboek te raadplegen, voordat een object wordt geselecteerd voor toepassing binnen de geografische uitlijningsmethode. Afhankelijk van de objectcategorie kan dit resulteren in planimetrische afwijkingen van circa 5 tot 15,5 cm en altimetrische afwijkingen van ongeveer 10 tot 15 cm.</p>
 <p>De onderstaande figuur toont de combinatie van een BIM-model met het DTB/1GiS van de Drechtentunnel. Het volledige overzicht boven (links) en onder (rechts) maaiveld illustreert hoe een geo-gereferereerd BIM-model is gepositioneerd binnen zijn geografische context.</p>
 <figure id="Geo_overzicht_BIM_DTB">  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
@@ -1476,11 +1484,11 @@ Bij infrastructuurprojecten zijn in veel gevallen geen gebouwen aanwezig, waardo
       Dit overzicht is gemaakt vanuit de RWS Digital Twin Basisvoorziening.
     </em>
   </span></figcaption></figure><p>Naast vectoriële datasets zoals het DTB/1GiS en het NWB kan ook het AHN, of een andere beschikbare puntenwolk in de omgeving, worden ingezet. Wegmarkeringen en andere infrastructurele objecten zijn hierin vaak goed herkenbaar doordat de intensiteitswaarden van de punten op het wegdek doorgaans significant lager zijn dan die van het omliggende straatmeubilair. Hierdoor kunnen deze objecten relatief eenvoudig worden geïdentificeerd en geëxtraheerd uit de puntenwolk, wat ze geschikt maakt als referentie voor hoogteregistratie.</p>
-</section></section><section id="geo-datasets-voor-het-refereren-van-modellen"><div class="header-wrapper"><h3 id="x5-2-geo-datasets-voor-het-refereren-van-modellen"><bdi class="secno">5.2 </bdi>Geo datasets voor het refereren van modellen</h3><a class="self-link" href="#geo-datasets-voor-het-refereren-van-modellen" aria-label="Permalink for Section 5.2"></a></div>
-<p>Voor het refereren van datasets naar een geo domein, zijn een aantal datasets beschikbaar om op aan te sluiten. Deze zijn (niet limitatief) weergegeven in onderstaande <a href="#tabel-overzicht-nationale-datasets">tabel</a> (<a href="https://cuatro.sim-cdn.nl/ahn/uploads/1_inventarisatie_van_puntenwolken_in_nederland_1.pdf?cb=mm0aYtMc"><em>WP1: Inventarisatie van puntenwolken in
-Nederland</em></a>). In de tabel zijn de volgende informatie weergegeven: de bestandsnaam, eigenaar, nauwkeurigheid, dimensie en locatie. </p>
+</section></section><section id="geodatasets-voor-het-georefereren-van-bim-modellen"><div class="header-wrapper"><h3 id="x5-2-geodatasets-voor-het-georefereren-van-bim-modellen"><bdi class="secno">5.2 </bdi>Geodatasets voor het georefereren van BIM-modellen</h3><a class="self-link" href="#geodatasets-voor-het-georefereren-van-bim-modellen" aria-label="Permalink for Section 5.2"></a></div>
+<p>Voor georefereren zijn een aantal datasets en RD- en NAP-referentiepunten beschikbaar om op aan te sluiten. Deze zijn (niet limitatief) weergegeven in onderstaande <a href="#tabel-overzicht-nationale-datasets">tabel</a> (<a href="https://cuatro.sim-cdn.nl/ahn/uploads/1_inventarisatie_van_puntenwolken_in_nederland_1.pdf?cb=mm0aYtMc"><em>WP1: Inventarisatie van puntenwolken in
+Nederland</em></a>). In de tabel zijn de volgende informatie weergegeven: de naam, eigenaar, nauwkeurigheid, dimensie en locatie. </p>
 <table id="tabel-overzicht-nationale-datasets">
-   <caption>Overzicht van nationale datasets beschikbaar voor geo-referentie van project data of modelen</caption>
+   <caption>Overzicht van nationale datasets en refrentiepunten beschikbaar voor georeferentie</caption>
   <thead>
     <tr>
       <th>Naam</th>
@@ -1494,7 +1502,7 @@ Nederland</em></a>). In de tabel zijn de volgende informatie weergegeven: de bes
       <td><a href="https://www.pdok.nl/introductie/-/article/digitaal-topografisch-bestand-dtb-"><strong>DTB / 1GiS</strong></a></td>
       <td>cm-nauwkeurig op objectniveau</td>
       <td>2.5D</td>
-      <td>Landelijk, beheerde water/wegen-infrastructuur</td>
+      <td>Landelijkbeheerde water/wegen-infrastructuur</td>
     </tr>
     <tr>
       <td><a href="https://www.pdok.nl/introductie/-/article/basisregistratie-grootschalige-topografie-bgt-"><strong>BGT</strong></a></td>
@@ -1518,13 +1526,13 @@ Nederland</em></a>). In de tabel zijn de volgende informatie weergegeven: de bes
       <td><a href="https://www.nationaalwegenbestand.nl/nwb-downloaden"><strong>NWB</strong></a></td>
       <td>± 1 m (topologisch)</td>
       <td>2D</td>
-      <td>Landelijk, wegennet (NL)</td>
+      <td>Landelijk, wegennet</td>
     </tr>
     <tr>
       <td><a href="https://spoorinbeeld.nl/"><strong>SpoorInBeeld - Helicopter vluchten</strong></a></td>
-      <td>± 12 cm (XYZ)</td>
+      <td>± 12 cm (xyH)</td>
       <td>3D</td>
-      <td>Spoortracés Nederland</td>
+      <td>Spoortracés</td>
     </tr>
     <tr>
       <td><a href="https://www.beeldmateriaal.nl/dataroom"><strong>Beeldmateriaal</strong></a></td>
@@ -1533,32 +1541,38 @@ Nederland</em></a>). In de tabel zijn de volgende informatie weergegeven: de bes
       <td>Landelijk / stedelijk</td>
     </tr>
     <tr>
-      <td><a href="https://maps.rijkswaterstaat.nl/geoweb55/index.html?viewer=NAPinfo"><strong>NAP-netwerk</strong></a></td>
+      <td><a href="https://maps.rijkswaterstaat.nl/geoweb55/index.html?viewer=NAPinfo"><strong>RD-referentiepunten</strong></a></td>
+      <td>&lt; 1 cm (horizontaal en verticaal)</td>
+      <td>3D</td>
+      <td>Landelijk netwerk (GNSS-kernnetpunten)</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.nsgi.nl/referentiepunten-en-gnss-data/informatie-referentiepunten/rdinfo"><strong>RD-netwerk</strong></a></td>
       <td>&lt; 1 cm (verticaal)</td>
-      <td>1D (Z)</td>
-      <td>Landelijk meetnet (peilmerken)</td>
+      <td>1D</td>
+      <td>Landelijk netwwerk (peilmerken)</td>
     </tr>
     <tr>
       <td><a href="https://www.pdok.nl/introductie/-/article/basisregistratie-adressen-en-gebouwen-ba-1"><strong>BAG</strong></a></td>
       <td>± 10 cm (objectpositie)</td>
       <td>2D/2.5D</td>
-      <td>Landelijk (NL)</td>
+      <td>Landelijk</td>
     </tr>
   </tbody>
-</table><p>Naast primaire geo datasets, kunnen gemeentes, provicies en centrale overheden andere datasets beschikbaar hebben, die kleiner van scope zijn. Ook zijn er datasets die zijn geextraheerd uit de bovenbenoemde datasets. Een voorbeeld is de 3DBAG, waar het <a href="#dfn-ahn" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-ahn-1">AHN</a> de basis is voor het maken van deze dataset, maar het <a href="#dfn-dtb" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-dtb-1"> DTB </a> is ook opgebouwd uit verschillende meet technieken met verschillende standaarden. Vanuit het onderzoek van Rijkswaterstaat, Tu Delft, Het Waterschapshuis en de EuroSDR is er een analyse uitgevoerd voor alle LiDAR datasets in europa, deze zijn weergegeven via <a href="https://3d.bk.tudelft.nl/eupc/"> <strong>European Pointclouds (EUPC)</strong></a></p>
-<section id="kwaliteits-kenmerken-voor-geobestanden-naar-bim"><div class="header-wrapper"><h4 id="x5-2-1-kwaliteits-kenmerken-voor-geobestanden-naar-bim"><bdi class="secno">5.2.1 </bdi>Kwaliteits kenmerken voor geobestanden naar BIM</h4><a class="self-link" href="#kwaliteits-kenmerken-voor-geobestanden-naar-bim" aria-label="Permalink for Section 5.2.1"></a></div>
-<p>De verschillende datasets die voor dit doel kunnen worden gebruikt, zijn duidelijk van elkaar te onderscheiden. Zoals in de vorige paragraaf is benadrukt, vormen zowel het planimetrische (XY) als het altimetrische (Z) component een fundamenteel onderdeel van een geo-databestand. Afwijkingen in deze componenten, of verschillen die ontstaan door uiteenlopende momenten van inwinning of ontwerp, kunnen een aanzienlijke impact hebben op de onderlinge uitlijning van datasets. Het correct refereren van een bestand ten opzichte van deze assen is daarom essentieel om betrouwbare vervolgstappen in het uitlijnings- en integratieproces te kunnen uitvoeren.</p>
-<p>Het doel van het refereren van een model binnen het geo-domein is het positioneren ervan in de echte wereld. Deze echte wereld bestaat uit een lokaal en een globaal coördinatensysteem. Zoals eerder beschreven, wordt een BIM-model in de toegepaste softwarepakketten vaak in een 0,0,0-referentiesysteem geplaatst. Daarentegen bevatten globale coördinaten aanzienlijk grotere waarden, wat ertoe kan leiden dat een dataset vastloopt binnen een applicatie. De documentatie van het gebruikte coördinatensysteem is eveneens van cruciaal belang. Wanneer dit systeem niet correct is vastgelegd, kunnen er problemen ontstaan tijdens de conversie van de hoogtecomponent.</p>
-</section><section id="primaire-kwaliteits-kenmerken-voor-geobestanden-naar-bim"><div class="header-wrapper"><h4 id="x5-2-2-primaire-kwaliteits-kenmerken-voor-geobestanden-naar-bim"><bdi class="secno">5.2.2 </bdi>Primaire kwaliteits kenmerken voor geobestanden naar bim</h4><a class="self-link" href="#primaire-kwaliteits-kenmerken-voor-geobestanden-naar-bim" aria-label="Permalink for Section 5.2.2"></a></div>
-<p>Voor het gebruik van een dataset uit het <strong>GIS-domein</strong> zijn verschillende kenmerken van belang voor de toepassing binnen een <strong>BIM-systeem</strong>. Niet alle data is even geschikt om gebruikt te worden, naast het gerbuik van het juiste coordinaten systeem, spelen er kwaliteits kenmerken mee die van invloed zijn op zowel de ingewonnen als de gerbruikte referentie data. Op basis van o.a. de onderzoeken en initiatieven van het <a href="https://www.ahn.nl/integrale-hoogtevoorziening-nederland"> <em>Intergaal Hoogtevoorziening Nederland</em></a> (Het Waterschapshuis, Rijkswaterstaat, TU Delft &amp; het Kadaster), de  <a href="https://www.digigo.nu/ilsen-en-richtlijnen/basis-ils-puntenwolk/"> <em>Basis ILS puntenwolken</em></a> (DigiGo) en <a href="https://www.digigo.nu/ilsen-en-richtlijnen/basis-ils-puntenwolk/"> <em>Handreiking 3D Tiling</em></a> (Geonovumn) kunnen de volgende componenten worden meegenomen. Let wel er zijn meer componenten die van invloed zijn op de kwaliteit en bruikbarheid van de data. </p>
-<p><em><strong>1. Geografische distributie van de meet punten</strong></em></p>
-<p>Afhankelijk van de inwin methode, is de geografische distributie van de meetpunten van belang. Dit heeft namelijk een direct effect van het onderscheiden van objecten in het terrein, maar ondersteunt ook in correct vinden van de refrenetie punten. De distributie wordt omschreven door de hoeveelheid punten per vierkante meter of door de minimale afstand tussen de punten. De leert praktijk is een hoge puntdichtheid gekoppeld aan een hoger detailniveau van het 3D-model.</p>
-<p><em><strong>2. De absolute en relatieve nauwkeurigheid van een geo-dataset</strong></em></p>
-<p>In de literatuur en uitvraag­specificaties wordt een onderscheid gemaakt tussen de <strong>absolute</strong> en <strong>relatieve</strong> nauwkeurigheid van een geo-dataset. De <strong>absolute nauwkeurigheid</strong> beschrijft de afwijking tussen de inwinning of het model en de werkelijkheid, terwijl de <strong>relatieve nauwkeurigheid</strong> vaak wordt gebruikt om de afwijking tussen meetpunten binnen overlappende inwinningen te omschrijven. Een voorbeeld hiervan is een dwarsprofiel over een ingewonnen stuk snelweg. Beide typen nauwkeurigheden worden uitgedrukt in een planimetrische (XY) en een altimetrische (Z) component. De verschillende uitvraag­specificaties laten zien dat de relatieve nauwkeurigheid altijd kleiner is dan de absolute nauwkeurigheid.</p>
-<p><em><strong>3. De classificatieparameters in een geo-dataset</strong></em></p>
-<p>De wijze waarop objecten binnen een geo-dataset worden geclassificeerd, is essentieel voor de bruikbaarheid binnen een BIM-context. De toegepaste classificatiemethode vormt een belangrijke kwaliteitsparameter, bijvoorbeeld wanneer classificatie wordt uitgevoerd door kunstmatige intelligentie (AI) of door menselijke experts. Daarnaast zijn de gebruikte definities een cruciaal startpunt binnen dit proces. Zo kan de classificatie van vegetatie in de referentiedataset niet automatisch dezelfde definitie hebben als in de ingewonnen dataset, wat kan leiden tot interpretatieverschillen of inconsistenties in het uiteindelijke model.</p>
-<p><em><strong>4. De inwindatum van de geo-dataset</strong></em></p>
-<p>Het moment van inwinning bepaalt de bruikbaarheid van de dataset, aangezien iedere geo-dataset die wordt weergegeven in een GIS-omgeving een momentopname is. Een geo-dataset vertegenwoordigt nooit de volledige werkelijkheid, maar vormt slechts een benadering van de omgeving. Hierdoor kan de omgeving, afhankelijk van de mate van verandering, in de loop van de tijd sterk of minder sterk afwijken van de oorspronkelijke weergave. Dit wordt geïllustreerd in de onderstaande figuren aan de hand van de stationsregio van Delft, zoals weergegeven in het Actueel Hoogtebestand Nederland en de 3D Basisvoorziening, waarbij de bouw van de stationsregio een ingrijpende verandering in het terrein laat zien.</p>
+</table><p>Naast primaire geodatasets, kunnen gemeentes, provicies en centrale overheden andere datasets beschikbaar hebben, die een kleiner gebied beslaan. Ook zijn er datasets die zijn afgeleid uit de bovenbenoemde datasets. Een voorbeeld is de 3DBAG, waar de BAG en het <a href="#dfn-ahn" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-ahn-1">AHN</a> de basis zijn voor het maken van deze dataset. Het <a href="#dfn-dtb" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-dtb-1">DTB</a> is opgebouwd met verschillende meettechnieken en verschillende standaarden. Vanuit het onderzoek van Rijkswaterstaat, TU Delft, Het Waterschapshuis en EuroSDR is er een analyse uitgevoerd voor alle LiDAR-datasets in Europa, deze zijn weergegeven via <a href="https://3d.bk.tudelft.nl/eupc/"> <strong>European Pointclouds (EUPC)</strong></a></p>
+<section id="kwaliteitskenmerken-voor-geodata-in-bim-modellen"><div class="header-wrapper"><h4 id="x5-2-1-kwaliteitskenmerken-voor-geodata-in-bim-modellen"><bdi class="secno">5.2.1 </bdi>Kwaliteitskenmerken voor geodata in BIM-modellen</h4><a class="self-link" href="#kwaliteitskenmerken-voor-geodata-in-bim-modellen" aria-label="Permalink for Section 5.2.1"></a></div>
+<p>De verschillende datasets die voor dit doel kunnen worden gebruikt, zijn duidelijk van elkaar te onderscheiden. Zoals in de vorige paragraaf is benadrukt, vormen zowel het planimetrische (xy) als het altimetrische (H) component een fundamenteel onderdeel van geodata. Afwijkingen in deze componenten, of verschillen die ontstaan door uiteenlopende momenten van inwinning of ontwerp, kunnen een aanzienlijke impact hebben op de onderlinge uitlijning van datasets. Het correct georefereren van een bestand ten opzichte een CRS is daarom essentieel om betrouwbare vervolgstappen in het uitlijnings- en integratieproces te kunnen uitvoeren.</p>
+<p>Het doel van het georefereren van een BIM-model in het geo-software is het positioneren ervan in de echte wereld. Deze echte wereld bestaat uit nationale, regionale en internationale coördinatenstelsels. Zoals eerder beschreven, worden voor BIM-modellen in de gebruikte softwarepakketten vaak een lokaal coördinatenstelsel gebruikt. Coördinaten in geodetische coördinatenstelsels vaak aanzienlijk grotere waarden, wat ertoe kan leiden dat een dataset vastloopt in een applicatie. De documentatie van het gebruikte coördinatenstelsel is eveneens van cruciaal belang. Wanneer dit niet correct is vastgelegd, kunnen er problemen ontstaan tijdens transformatie.</p>
+</section><section id="primaire-kwaliteitskenmerken-voor-geodata-in-bim-modellen"><div class="header-wrapper"><h4 id="x5-2-2-primaire-kwaliteitskenmerken-voor-geodata-in-bim-modellen"><bdi class="secno">5.2.2 </bdi>Primaire kwaliteitskenmerken voor geodata in BIM-modellen</h4><a class="self-link" href="#primaire-kwaliteitskenmerken-voor-geodata-in-bim-modellen" aria-label="Permalink for Section 5.2.2"></a></div>
+<p>Voor het gebruik van een dataset uit het <strong>GIS-domein</strong> zijn verschillende kenmerken van belang voor de toepassing binnen een <strong>BIM-systeem</strong>. Niet alle data is even geschikt om gebruikt te worden, naast het gerbuik van het juiste coördinatenstelsel, spelen er kwaliteitskenmerken mee die van invloed zijn op zowel de ingewonnen als de gerbruikte referentiedata. Op basis van o.a. de onderzoeken en initiatieven van het <a href="https://www.ahn.nl/integrale-hoogtevoorziening-nederland"> <em>Intergaal Hoogtevoorziening Nederland</em></a> (Het Waterschapshuis, Rijkswaterstaat, TU Delft &amp; het Kadaster), de  <a href="https://www.digigo.nu/ilsen-en-richtlijnen/basis-ils-puntenwolk/"> <em>Basis ILS puntenwolken</em></a> (DigiGo) en <a href="https://www.digigo.nu/ilsen-en-richtlijnen/basis-ils-puntenwolk/"> <em>Handreiking 3D Tiling</em></a> (Geonovumn) kunnen de volgende componenten worden meegenomen. Let wel, er zijn meer componenten die van invloed zijn op de kwaliteit en bruikbarheid van de data. </p>
+<p><em><strong>1. Geografische distributie van de meetpunten</strong></em></p>
+<p>Afhankelijk van de inwinmethode, is de geografische distributie van de meetpunten van belang. Dit heeft namelijk een direct effect van het onderscheiden van objecten in het terrein, maar ondersteunt ook in correct vinden van georeferentiepunten. De distributie wordt omschreven door de hoeveelheid punten per vierkante meter of door de minimale afstand tussen de punten. De leert praktijk is een hoge puntdichtheid gekoppeld aan een hoger detailniveau van het 3D-model.</p>
+<p><em><strong>2. De absolute en relatieve nauwkeurigheid van geodata</strong></em></p>
+<p>In de literatuur en uitvraag­specificaties wordt een onderscheid gemaakt tussen de <strong>absolute</strong> en <strong>relatieve</strong> nauwkeurigheid van een geodata. De <strong>absolute nauwkeurigheid</strong> beschrijft de afwijking tussen de inwinning of het model en de werkelijkheid, terwijl de <strong>relatieve nauwkeurigheid</strong> vaak wordt gebruikt om de afwijking tussen meetpunten binnen de dataset te omschrijven. Een voorbeeld hiervan is een dwarsprofiel over een ingewonnen stuk snelweg. Beide typen nauwkeurigheden worden uitgedrukt in een planimetrische (xy) en een altimetrische (H) component. De verschillende uitvraag­specificaties laten zien dat de relatieve nauwkeurigheid altijd beter is dan de absolute nauwkeurigheid.</p>
+<p><em><strong>3. De classificatieparameters in een geodataset</strong></em></p>
+<p>De wijze waarop objecten binnen een geodataset worden geclassificeerd, is essentieel voor de bruikbaarheid binnen de context van BIM-modellen. De toegepaste classificatiemethode vormt een belangrijke kwaliteitsparameter, bijvoorbeeld wanneer classificatie wordt uitgevoerd door kunstmatige intelligentie (AI) of door menselijke experts. Daarnaast zijn de gebruikte definities cruciaal. Zo kan de classificatie van vegetatie in een referentiedataset een andere definitie hebben als in de ingewonnen dataset, wat kan leiden tot interpretatieverschillen of inconsistenties in het uiteindelijke model.</p>
+<p><em><strong>4. De inwindatum van de geodataset</strong></em></p>
+<p>Het moment van inwinning bepaalt de bruikbaarheid van de dataset, aangezien iedere geodataset die wordt weergegeven in een GIS-omgeving een momentopname is. Een geodataset vertegenwoordigt nooit de volledige werkelijkheid, maar vormt slechts een benadering van de omgeving. Hierdoor kan de omgeving, afhankelijk van de mate van verandering, in de loop van de tijd sterk of minder sterk afwijken van de oorspronkelijke weergave. Dit wordt geïllustreerd in de onderstaande figuren aan de hand van de stationsregio van Delft, zoals weergegeven in het Actueel Hoogtebestand Nederland en de 3D Basisvoorziening, waarbij de bouw van de stationsregio een ingrijpende verandering in het terrein laat zien.</p>
 <figure id="Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft">
       <img src="./media/Regio_delft_verandering.png" alt="Leefttijd van verschillende puntenwolken van de stationsregio in Delft" height="500">
     <figcaption><a class="self-link" href="#Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft">Figuur <bdi class="figno">15</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft"></a><span class="fig-title">Leefttijd van verschillende puntenwolken van de stationsregio in Delft (figuur is uit wp1 van het <a href="https://www.ahn.nl/integrale-hoogtevoorziening-nederland"> <em>Intergaal Hoogtevoorziening Nederland</em></a> overgenomen.) </span></span></figcaption>
@@ -3117,31 +3131,31 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
   
   <section id="tof"><div class="header-wrapper"><h2 id="h-lijst-met-figuren"><bdi class="secno">H. </bdi>Lijst met figuren</h2><a class="self-link" href="#tof" aria-label="Permalink for Section H."></a></div><ul class="tof">
         <li class="tofline">
-    <a class="tocxref" href="#3D_CRS"><span class="self-link">Figuur <bdi class="figno">1</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">3D CRS</span></span></a>
+    <a class="tocxref" href="#3D_CRS"><span class="self-link">Figuur <bdi class="figno">1</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Geografisch en geocentrisch CRS</span></span></a>
   </li><li class="tofline">
     <a class="tocxref" href="#Projecties"><span class="self-link">Figuur <bdi class="figno">2</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Projecties</span></span></a>
   </li><li class="tofline">
     <a class="tocxref" href="#RD_Projectie"><span class="self-link">Figuur <bdi class="figno">3</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Een punt op het aardoppervlak (zwart) wordt op het RD-projectievlak geprojecteerd (groen) vanaf het punt diametraal tegenover Amersfoort. </span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#RD_Correctie"><span class="self-link">Figuur <bdi class="figno">4</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Correcties aan gemeten afstanden voor de RD-projectie inmm per 100m.</span></span></a>
+    <a class="tocxref" href="#RD_Correctie"><span class="self-link">Figuur <bdi class="figno">4</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Correcties aan gemeten afstanden voor de RD-projectie in mm per 100 m.</span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Ellips,_Geoide,_aardoppervlak"><span class="self-link">Figuur <bdi class="figno">5</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Ellips, Geoide, aardoppervlak</span></span></a>
+    <a class="tocxref" href="#Ellips,_Geoide,_aardoppervlak"><span class="self-link">Figuur <bdi class="figno">5</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Ellipsoïde, quasi-geoïdemodel en aardoppervlak</span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Afwijking_van_aardkromming"><span class="self-link">Figuur <bdi class="figno">6</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Afwijking door aardkromming</span></span></a>
+    <a class="tocxref" href="#Afwijking_van_aardkromming"><span class="self-link">Figuur <bdi class="figno">6</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Afwijking in de hoogte door aardkromming</span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#True_North_en_Grid_North"><span class="self-link">Figuur <bdi class="figno">7</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">True North en Grid North</span></span></a>
+    <a class="tocxref" href="#True_North_en_Grid_North"><span class="self-link">Figuur <bdi class="figno">7</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Ware noorden (True North) en kaartnoorden (Grid North)</span></span></a>
   </li><li class="tofline">
     <a class="tocxref" href="#Project_North"><span class="self-link">Figuur <bdi class="figno">8</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Project North</span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#2D-gelijkvormigheidstransformatie"><span class="self-link">Figuur <bdi class="figno">9</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Relatie GeoBIM</span></span></a>
+    <a class="tocxref" href="#2D-gelijkvormigheidstransformatie"><span class="self-link">Figuur <bdi class="figno">9</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Transformatie naar RD voor een lokaal stelsel van een BIM-model</span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Horizontale-en-vertikale_transformatie"><span class="self-link">Figuur <bdi class="figno">10</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">2D Transformatie + 1D Transformatie</span></span></a>
+    <a class="tocxref" href="#Horizontale-en-vertikale_transformatie"><span class="self-link">Figuur <bdi class="figno">10</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Relatie tussen geografisch, geocentrisch en geprojecteerd CRS en een lokaal stelsel</span></span></a>
   </li><li class="tofline">
     <a class="tocxref" href="#Geometrische_effecten_bij_transformatie"><span class="self-link">Figuur <bdi class="figno">11</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Enkele geometrische effecten die op kunnen treden bij transformaties tussen cartesische modellen en een CRS voor de aarde.</span></span></a>
   </li><li class="tofline">
     <a class="tocxref" href="#Routes voor georefereren"><span class="self-link">Figuur <bdi class="figno">12</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">Routes voor georefereren</span></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#2D-en-3D-Geo-of-BIM-combineren"><span class="self-link">Figuur <bdi class="figno">13</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">2D en 3D Geo of BIM combineren</span></span></a>
+    <a class="tocxref" href="#2D-en-3D-Geo-of-BIM-combineren"><span class="self-link">Figuur <bdi class="figno">13</bdi></span> <span class="fig-title"><span class="self-link"></span><span class="fig-title">2D en 3D BIM-model en geodata combineren</span></span></a>
   </li><li class="tofline">
     <a class="tocxref" href="#Geo_overzicht_BIM_DTB"><span class="self-link">Figuur <bdi class="figno">14</bdi></span> <span class="fig-title">
     <em>
@@ -3320,7 +3334,7 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-epsg-code-1" title="§ 3. Coördinaatreferentiesystemen en Coördinatentransformatie">§ 3. Coördinaatreferentiesystemen en Coördinatentransformatie</a> 
+      <a href="#ref-for-dfn-epsg-code-1" title="§ 3. Coördinatenstelsels en coördinatentransformatie">§ 3. Coördinatenstelsels en coördinatentransformatie</a> 
     </li><li>
       <a href="#ref-for-dfn-epsg-code-2" title="§ A.1 Definities en afkortingen">§ A.1 Definities en afkortingen</a> 
     </li>
@@ -3334,8 +3348,10 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
-      <li>Not referenced in this document.</li>
-    </ul>
+    <li>
+      <a href="#ref-for-dfn-crs-1" title="§ 3. Coördinatenstelsels en coördinatentransformatie">§ 3. Coördinatenstelsels en coördinatentransformatie</a> 
+    </li>
+  </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-srs" aria-label="Links in this document to definition: SRS">
       <span class="caret"></span>
       <div>
@@ -3356,10 +3372,8 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
-    <li>
-      <a href="#ref-for-dfn-geodetische-crs-1" title="§ 3. Coördinaatreferentiesystemen en Coördinatentransformatie">§ 3. Coördinaatreferentiesystemen en Coördinatentransformatie</a> 
-    </li>
-  </ul>
+      <li>Not referenced in this document.</li>
+    </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-geprojecteerd-crs" aria-label="Links in this document to definition: Geprojecteerd CRS">
       <span class="caret"></span>
       <div>
@@ -3370,7 +3384,7 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-geprojecteerd-crs-1" title="§ 3. Coördinaatreferentiesystemen en Coördinatentransformatie">§ 3. Coördinaatreferentiesystemen en Coördinatentransformatie</a> 
+      <a href="#ref-for-dfn-geprojecteerd-crs-1" title="§ 3. Coördinatenstelsels en coördinatentransformatie">§ 3. Coördinatenstelsels en coördinatentransformatie</a> 
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-vertikaal-crs" aria-label="Links in this document to definition: Vertikaal CRS">
@@ -3407,7 +3421,7 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-lokaal-crs-1" title="§ 3. Coördinaatreferentiesystemen en Coördinatentransformatie">§ 3. Coördinaatreferentiesystemen en Coördinatentransformatie</a> 
+      <a href="#ref-for-dfn-lokaal-crs-1" title="§ 3. Coördinatenstelsels en coördinatentransformatie">§ 3. Coördinatenstelsels en coördinatentransformatie</a> 
     </li><li>
       <a href="#ref-for-dfn-lokaal-crs-2" title="§ 3.2 Lokaal CRS">§ 3.2 Lokaal CRS</a> 
     </li><li>
@@ -3435,7 +3449,7 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-scan-to-bim-1" title="§ 5.1 Georeferentie Level 60 voor BIM naar Geo">§ 5.1 Georeferentie Level 60 voor BIM naar Geo</a> 
+      <a href="#ref-for-dfn-scan-to-bim-1" title="§ 5.1 Georeferentie Level 60 voor BIM-modellen">§ 5.1 Georeferentie Level 60 voor BIM-modellen</a> 
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-ellipsoidische-coordinaten" aria-label="Links in this document to definition: Ellipsoïdische coördinaten">
@@ -3448,7 +3462,7 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-ellipsoidische-coordinaten-1" title="§ 3.1.1 Geografische en geocentrisch CRS">§ 3.1.1 Geografische en geocentrisch CRS</a> 
+      <a href="#ref-for-dfn-ellipsoidische-coordinaten-1" title="§ 3.1.1 Geografisch en geocentrisch CRS">§ 3.1.1 Geografisch en geocentrisch CRS</a> 
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-geocentrische-coordinaten" aria-label="Links in this document to definition: Geocentrische coördinaten">
@@ -3461,7 +3475,7 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-geocentrische-coordinaten-1" title="§ 3.1.1 Geografische en geocentrisch CRS">§ 3.1.1 Geografische en geocentrisch CRS</a> 
+      <a href="#ref-for-dfn-geocentrische-coordinaten-1" title="§ 3.1.1 Geografisch en geocentrisch CRS">§ 3.1.1 Geografisch en geocentrisch CRS</a> 
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-kaartprojectie" aria-label="Links in this document to definition: Kaartprojectie">
@@ -3499,10 +3513,8 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
-    <li>
-      <a href="#ref-for-dfn-orthometrische-hoogte-1" title="§ 3.1.3 Vertikaal CRS">§ 3.1.3 Vertikaal CRS</a> 
-    </li>
-  </ul>
+      <li>Not referenced in this document.</li>
+    </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-quasi-geoidemodel" aria-label="Links in this document to definition: Quasi-geoïdemodel">
       <span class="caret"></span>
       <div>
@@ -3526,7 +3538,7 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-coordinatentransformatie-1" title="§ 3. Coördinaatreferentiesystemen en Coördinatentransformatie">§ 3. Coördinaatreferentiesystemen en Coördinatentransformatie</a> 
+      <a href="#ref-for-dfn-coordinatentransformatie-1" title="§ 3. Coördinatenstelsels en coördinatentransformatie">§ 3. Coördinatenstelsels en coördinatentransformatie</a> 
     </li><li>
       <a href="#ref-for-dfn-coordinatentransformatie-2" title="§ 3.1.4 Samengesteld CRS">§ 3.1.4 Samengesteld CRS</a> 
     </li>
@@ -3552,7 +3564,7 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-2d-gelijkvormigheidstransformatie-1" title="§ 3.3.1 Horizontaal - 2D gelijkvormigheidstransformatie">§ 3.3.1 Horizontaal - 2D gelijkvormigheidstransformatie</a> 
+      <a href="#ref-for-dfn-2d-gelijkvormigheidstransformatie-1" title="§ 3.3.1.1 2D gelijkvormigheidstransformatie voor geprojecteerd CRS">§ 3.3.1.1 2D gelijkvormigheidstransformatie voor geprojecteerd CRS</a> 
     </li><li>
       <a href="#ref-for-dfn-2d-gelijkvormigheidstransformatie-2" title="§ A.1 Definities en afkortingen">§ A.1 Definities en afkortingen</a> 
     </li>
@@ -3567,7 +3579,7 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-2d-helmert-transformatie-1" title="§ 3.3.1 Horizontaal - 2D gelijkvormigheidstransformatie">§ 3.3.1 Horizontaal - 2D gelijkvormigheidstransformatie</a> 
+      <a href="#ref-for-dfn-2d-helmert-transformatie-1" title="§ 3.3.1.1 2D gelijkvormigheidstransformatie voor geprojecteerd CRS">§ 3.3.1.1 2D gelijkvormigheidstransformatie voor geprojecteerd CRS</a> 
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-kleinste-kwadratenschatting" aria-label="Links in this document to definition: Kleinste kwadratenschatting">
@@ -3579,10 +3591,8 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
-    <li>
-      <a href="#ref-for-dfn-kleinste-kwadratenschatting-1" title="§ 3.3.1 Horizontaal - 2D gelijkvormigheidstransformatie">§ 3.3.1 Horizontaal - 2D gelijkvormigheidstransformatie</a> 
-    </li>
-  </ul>
+      <li>Not referenced in this document.</li>
+    </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-overbepaaldheid" aria-label="Links in this document to definition: Overbepaaldheid">
       <span class="caret"></span>
       <div>
@@ -3593,7 +3603,7 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-overbepaaldheid-1" title="§ 3.3.1 Horizontaal - 2D gelijkvormigheidstransformatie">§ 3.3.1 Horizontaal - 2D gelijkvormigheidstransformatie</a> 
+      <a href="#ref-for-dfn-overbepaaldheid-1" title="§ 3.3.1 Horizontaal: gelijkvormigheidstransformatie">§ 3.3.1 Horizontaal: gelijkvormigheidstransformatie</a> 
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-gnss" aria-label="Links in this document to definition: GNSS">
@@ -3606,7 +3616,7 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-gnss-1" title="§ 5.1.1 Het gebruik van survey points">§ 5.1.1 Het gebruik van survey points</a> 
+      <a href="#ref-for-dfn-gnss-1" title="§ 5.1.1 Het gebruik van referentiepunten">§ 5.1.1 Het gebruik van referentiepunten</a> 
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-nsgi" aria-label="Links in this document to definition: NSGI">
@@ -3693,7 +3703,7 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-ahn-1" title="§ 5.2 Geo datasets voor het refereren van modellen">§ 5.2 Geo datasets voor het refereren van modellen</a> 
+      <a href="#ref-for-dfn-ahn-1" title="§ 5.2 Geodatasets voor het georefereren van BIM-modellen">§ 5.2 Geodatasets voor het georefereren van BIM-modellen</a> 
     </li><li>
       <a href="#ref-for-dfn-ahn-2" title="§ A.1 Definities en afkortingen">§ A.1 Definities en afkortingen</a> 
     </li>
@@ -3708,7 +3718,7 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-survey-point-1" title="§ 5.1 Georeferentie Level 60 voor BIM naar Geo">§ 5.1 Georeferentie Level 60 voor BIM naar Geo</a> 
+      <a href="#ref-for-dfn-survey-point-1" title="§ 5.1 Georeferentie Level 60 voor BIM-modellen">§ 5.1 Georeferentie Level 60 voor BIM-modellen</a> 
     </li><li>
       <a href="#ref-for-dfn-survey-point-2" title="§ 8.2 Revit">§ 8.2 Revit</a> 
     </li>
@@ -3723,7 +3733,7 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-geografische-uitlijning-1" title="§ 5.1 Georeferentie Level 60 voor BIM naar Geo">§ 5.1 Georeferentie Level 60 voor BIM naar Geo</a> 
+      <a href="#ref-for-dfn-geografische-uitlijning-1" title="§ 5.1 Georeferentie Level 60 voor BIM-modellen">§ 5.1 Georeferentie Level 60 voor BIM-modellen</a> 
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-rd" aria-label="Links in this document to definition: RD">
@@ -3749,7 +3759,7 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-true-north-1" title="§ 3.2.2 True North, Grid North, Project North">§ 3.2.2 True North, Grid North, Project North</a> 
+      <a href="#ref-for-dfn-true-north-1" title="§ 3.2.2 Ware noorden, kaartnoorden, magnetisch noorden en projectnoorden">§ 3.2.2 Ware noorden, kaartnoorden, magnetisch noorden en projectnoorden</a> 
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-grid-north" aria-label="Links in this document to definition: Grid North">
@@ -3762,7 +3772,7 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-grid-north-1" title="§ 3.2.2 True North, Grid North, Project North">§ 3.2.2 True North, Grid North, Project North</a> 
+      <a href="#ref-for-dfn-grid-north-1" title="§ 3.2.2 Ware noorden, kaartnoorden, magnetisch noorden en projectnoorden">§ 3.2.2 Ware noorden, kaartnoorden, magnetisch noorden en projectnoorden</a> 
     </li><li>
       <a href="#ref-for-dfn-grid-north-2" title="§ A.1 Definities en afkortingen">§ A.1 Definities en afkortingen</a> <a href="#ref-for-dfn-grid-north-3" title="Reference 2">(2)</a> <a href="#ref-for-dfn-grid-north-4" title="Reference 3">(3)</a> <a href="#ref-for-dfn-grid-north-5" title="Reference 4">(4)</a> 
     </li>
@@ -3777,7 +3787,7 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-project-north-1" title="§ 3.2.2 True North, Grid North, Project North">§ 3.2.2 True North, Grid North, Project North</a> 
+      <a href="#ref-for-dfn-project-north-1" title="§ 3.2.2 Ware noorden, kaartnoorden, magnetisch noorden en projectnoorden">§ 3.2.2 Ware noorden, kaartnoorden, magnetisch noorden en projectnoorden</a> 
     </li><li>
       <a href="#ref-for-dfn-project-north-2" title="§ A.1 Definities en afkortingen">§ A.1 Definities en afkortingen</a> 
     </li>
@@ -3792,7 +3802,7 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-dtb-1" title="§ 5.2 Geo datasets voor het refereren van modellen">§ 5.2 Geo datasets voor het refereren van modellen</a> 
+      <a href="#ref-for-dfn-dtb-1" title="§ 5.2 Geodatasets voor het georefereren van BIM-modellen">§ 5.2 Geodatasets voor het georefereren van BIM-modellen</a> 
     </li><li>
       <a href="#ref-for-dfn-dtb-2" title="§ A.1 Definities en afkortingen">§ A.1 Definities en afkortingen</a> 
     </li>
@@ -3864,10 +3874,8 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
-    <li>
-      <a href="#ref-for-dfn-geo-systeem-1" title="§ 3. Coördinaatreferentiesystemen en Coördinatentransformatie">§ 3. Coördinaatreferentiesystemen en Coördinatentransformatie</a> 
-    </li>
-  </ul>
+      <li>Not referenced in this document.</li>
+    </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-geo-omgeving" aria-label="Links in this document to definition: GEO-omgeving">
       <span class="caret"></span>
       <div>
@@ -3877,10 +3885,8 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
-    <li>
-      <a href="#ref-for-dfn-geo-omgeving-1" title="§ 4.1 Routes voor georeferentie">§ 4.1 Routes voor georeferentie</a> 
-    </li>
-  </ul>
+      <li>Not referenced in this document.</li>
+    </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-gis-systeem" aria-label="Links in this document to definition: GIS-systeem">
       <span class="caret"></span>
       <div>
@@ -3891,7 +3897,7 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-gis-systeem-1" title="§ 3. Coördinaatreferentiesystemen en Coördinatentransformatie">§ 3. Coördinaatreferentiesystemen en Coördinatentransformatie</a> 
+      <a href="#ref-for-dfn-gis-systeem-1" title="§ 3. Coördinatenstelsels en coördinatentransformatie">§ 3. Coördinatenstelsels en coördinatentransformatie</a> 
     </li>
   </ul>
     </div><script id="respec-dfn-panel">(() => {
