@@ -18,8 +18,8 @@ Ook is het mogelijk [IfcMapConversionScaled](https://ifc43-docs.standards.buildi
 
 IFC MapConversion kan zowel gebruikt worden voor het transformeren van BIM naar Geo als van Geo naar BIM. Vanuit een digitaal 3D-stadsmodel in CityGML of CityJSON kan een deel van dit model naar IFC worden geëxporteerd. Dit deel kan dan op een 0-punt worden gepositioneerd. In de IfcMapconversion-attributen kunnen de transformatiewaarden worden ingevuld. 
 
-**IFC 5 (JSON)**
-IFC 5 is  momenteel in ontwikkeling. Het is een herstructurering van de huidige IFC schemas. De functionaliteit van de huidige schema's wil men behouden, maar de technische basis en serialisatie veranderen. Waar de huidige IFC-schema's op STEP zijn gebaseerd, is het IFC 5 schema op JSON gebaseerd. 
+**IFC 5/ IFC X**
+IFC 5 of IFC X is momenteel in ontwikkeling. Het is een herstructurering van de huidige IFC schemas. De functionaliteit van de huidige schema's wil men behouden, maar de technische basis en serialisatie veranderen. Waar de huidige IFC-schema's op STEP zijn gebaseerd, is het IFC 5 schema op JSON gebaseerd. 
 
 Voor geometrie maakt IFC 5 gebruik van USD-formaat (Universal Scene Description), voor geometrie, bijvoorbeeld usdgeom::mesh – veelhoekig oppervlaktemodel. Er zijn nog geen vastgestelde afspraken over georeferentie. Wel zijn in de eerste verkenningen de elementen van IfcMapConversion terug te zien, maar dan als json attributen. 
 
@@ -30,16 +30,14 @@ Wanneer men in 2D vectorsoftware werkt die geen .ifc bestand kan exporteren zijn
   <p><strong>AANBEVELING:</strong> Teken wanneer mogelijk in RD coordinaten in 2D vectorsoftware (CAD)</p>
 </aside>
 
-Dit is niet in alle software mogelijk. Bij software die alleen werkt met lokale coordinaten is het lastig om op coordinaat 110000 - 450000 te werken, omdat dit heel ver uit het centrale punt van deze software, punt 0,0 ligt. 
+Dit is niet in alle software mogelijk. Bij software die alleen werkt met lokale coordinaten is het lastig om op coordinaat 110000 - 450000 te werken, omdat dit heel ver uit het centrale punt van deze software (punt 0,0) ligt. 
 
-Een DXF-bestand zelf bevat geen informatie waarmee aangeduid wordt dat de waardes van de geometrie bedoeld is als RD-coördinaten. Het is mogelijk om de attributen vanuit IfcMapconversion als extra bestand mee te geven naast de .dxf als een .WKT, .PROJ of .JSON file. 
+Een DXF-bestand zelf bevat geen informatie waarmee aangeduid wordt dat de waardes van de geometrie bedoeld is als RD-coördinaten. Het is mogelijk om de attributen voor georeferentie als extra bestand mee te geven naast de .dxf als een .WKT, .PROJ of .JSON file. 
 
 <aside class="note" title="Voorzie in een extra bestand voor Georeferentie">
-  <p><strong>AANBEVELING:</strong> Voorzie in een extra bestand in <code>.WKT</code> volgens
-    <a href="https://www.ogc.org/standards/wkt-crs/" rel="noopener noreferrer" target="_blank"> WKT-CRS</a> 
-    of een <code>.PROJ</code> volgens 
-    <a href="https://proj.org/en/stable/specifications/" rel="noopener noreferrer" target="_blank">PROJ</a>
-    wanneer de georeferentie en het gebruikt crs niet in het bronbestand is gedefinieerd.</p>
+  <p><strong>AANBEVELING:</strong> Voorzie in een extra bestand in <code>.PROJ</code> volgens 
+    <a href="https://proj.org/en/stable/specifications/" rel="noopener noreferrer" target="_blank">PROJ</a> of een <code>.WKT</code> volgens
+    <a href="https://www.ogc.org/standards/wkt-crs/" rel="noopener noreferrer" target="_blank"> WKT-CRS</a> wanneer de georeferentie en het gebruikt crs niet in het bronbestand is gedefinieerd.</p>
 </aside>
 
 ## (City)GML 
@@ -101,8 +99,6 @@ Zo levert:
 
 De OGC-API features geeft geen beperking op het definiëren van CRS-en. Het is daarmee ook mogelijk om met de OGC-API features te leveren in een lokaal gedefinieerd eigen coordinatenstelsel. 
 
-Om een dataset met een OGC API-features aan te bieden dient men met een URI de CRS te identificeren. Die URI moet verwijzen naar een beschrijving van het CRS zodat een client het kan begrijpen of ophalen.
-
-Wanneer men als client een server bevraagt met een CRS (gedefinieerd door EPSG of lokaal) dat niet geïmplementeerd is door de server zal deze een foutmelding geven. 
+Om een dataset met een OGC API-features aan te bieden dient men met een URI de CRS te identificeren. Die URI moet verwijzen naar een beschrijving van het CRS zodat een client het kan begrijpen of ophalen. Wanneer men als client een server bevraagt met een CRS (gedefinieerd door EPSG of lokaal) dat niet geïmplementeerd is door de server zal deze een foutmelding geven. 
 
 Wanneer men met een lokaal CRS bevragingen zou willen doen aan een server die niet voorziet in dit CRS kan het mogelijk zijn om met OGC API Processes een transformCRS te duiden met input de sourceCRS, targetCRS en de coördinaten. De uitput is de getransformeerde coordinaten in het door de server geaccepteerde stelsel. Dit lijkt op deze service https://epsg.io/transform in API-vorm. 

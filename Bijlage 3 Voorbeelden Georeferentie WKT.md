@@ -1,16 +1,16 @@
 ## WKT
 
-<aside class="example" title="Voorbeeld van een engineered CRS in WKT">
-```wkt (Geen idee of dit werkt)
-PROJCRS["unknown",
-    BASEGEODCRS["unknown",
-        DATUM["World Geodetic System 1984",
-            ELLIPSOID["WGS 84",6378137,298.257223563,
-                LENGTHUNIT["metre",1]],
-            ID["EPSG",6326]],
-        PRIMEM["Greenwich",0,
-            ANGLEUNIT["degree",0.0174532925199433],
-            ID["EPSG",8901]]],
+<aside class="example" title="Voorbeeld 1 van een engineered CRS in WKT">
+```wkt 
+PROJCRS["unknown",  
+    BASEGEODCRS["unknown",  
+        DATUM["World Geodetic System 1984",  
+            ELLIPSOID["WGS 84",6378137,298.257223563,  
+                LENGTHUNIT["metre",1]],  
+            ID["EPSG",6326]],  
+        PRIMEM["Greenwich",0,  
+            ANGLEUNIT["degree",0.0174532925199433],  
+            ID["EPSG",8901]]],  
     CONVERSION["unknown",
         METHOD["Geocentric/topocentric conversions",
             ID["EPSG",9836]],
@@ -36,38 +36,37 @@ PROJCRS["unknown",
             ORDER[3],
             LENGTHUNIT["metre",1,
                 ID["EPSG",9001]]]]
-
-
 ```
+</aside>
 
-<aside class="example" title="Voorbeeld van een engineered CRS van  in WKT">
+<aside class="example" title="Voorbeeld 2 van een engineered CRS in WKT">
 ```wkt 
 ENGCRS["Lokaal 3D Stelsel Project ABC",
  EDATUM["Referentiepunt van het gebouw",ANCHOR["Hoek van het kavel"]],
- CS[Cartesian,3],
- AXIS["(x)",Deze as staat haaks op de kopgevel en de voordeur. Een positieve rotatie van deze as brengt de rechterkant van het gebouw, gezien van voren, naar beneden.],
- AXIS["(y)",Deze as staat evenwijdig aan de kopgevel en de voordeur. Een positieve rotatie van de as brengt de achterkant van het gebouw naar beneden.],
- AXIS["(z)",Deze as wijst omhoog. Een positieve rotatie van de as draait tegen de klok in.],
- LENGTHUNIT["metre",1.0]
+    CS[Cartesian,3], 
+    AXIS["ahead (x)",forward,ORDER[1]], 
+    AXIS["right (y)",starboard,ORDER[2]], 
+    AXIS["up (z)",up,ORDER[3]], 
+    LENGTHUNIT["metre",1.0] 
 ]
 ```
 </aside>
 
 
-<aside class="example" title="Voorbeeld van een engineered CRS naar RDNAP in WKT">
+<aside class="example" title="Voorbeeld van een engineered CRS gekoppeld aan RDNAP in WKT">
 ```wkt
-COORDINATEOPERATION["EngineeredCRS naar RDNAP",
+BOUNDCRS["EngineeredCRS naar RDNAP",
  SOURCECRS[
-  ENGCRS["Lokaal 3D Stelsel Project ABC",
-    EDATUM["Referentiepunt van het gebouw",
-    ANCHOR["Hoek van het kavel"]],
-    CS[Cartesian,3],
-    AXIS["(x)",Deze as staat haaks op de kopgevel en de voordeur. Een positieve rotatie van deze as brengt de rechterkant van het gebouw, gezien van voren, naar beneden.],
-    AXIS["(y)",Deze as staat evenwijdig aan de kopgevel en de voordeur. Een positieve rotatie van de as brengt de achterkant van het gebouw naar beneden.],
-    AXIS["(z)",Deze as wijst omhoog. Een positieve rotatie van de as draait tegen de klok in.],
-    LENGTHUNIT["metre",1.0]
+    ENGCRS["Lokaal 3D Stelsel Project ABC",
+    EDATUM["Referentiepunt van het gebouw",ANCHOR["Hoek van het kavel"]],
+        CS[Cartesian,3], 
+        AXIS["ahead (x)",forward,ORDER[1]], 
+        AXIS["right (y)",starboard,ORDER[2]], 
+        AXIS["up (z)",up,ORDER[3]], 
+        LENGTHUNIT["metre",1.0] 
+        ]
     ]
-  ],
+ ],
  TARGETCRS[COMPD_CS["Amersfoort / RD New + NAP height",
     PROJCS["Amersfoort / RD New",
         GEOGCS["Amersfoort",
@@ -101,14 +100,17 @@ COORDINATEOPERATION["EngineeredCRS naar RDNAP",
     AUTHORITY["EPSG","7415"]
     ]
   ],
- METHOD["Coordinate Frame"],
- PARAMETER["X-axis translation",565.2369,LENGTHUNIT["metre",1.0]],
- PARAMETER["Y-axis translation",50.0087,LENGTHUNIT["metre",1.0]],
- PARAMETER["Z-axis translation",465.658,LENGTHUNIT["metre",1.0]],
- PARAMETER["X-axis rotation",1.9725,ANGLEUNIT["microradian",1E-06]],
- PARAMETER["Y-axis rotation",-1.7004,ANGLEUNIT["microradian",1E-06]],
- PARAMETER["Z-axis rotation",9.0677,ANGLEUNIT["microradian",1E-06]],
- PARAMETER["Scale difference",4.0812,SCALEUNIT["parts per million",1E-06]]
- ]
+    ABRIDGEDTRANSFORMATION[
+            "Project ABC naar RD/NAP",
+            METHOD["Affine transformation"],
+            PARAMETER["X-axis translation",155000,
+                LENGTHUNIT["metre",1]],
+            PARAMETER["Y-axis translation",463000,
+                LENGTHUNIT["metre",1]],
+            PARAMETER["Z-axis translation",3.55,
+                LENGTHUNIT["metre",1]],
+            PARAMETER["Scale difference",0,
+                SCALEUNIT["parts per million",1E-6]]
+        ]
 ```
 </aside>

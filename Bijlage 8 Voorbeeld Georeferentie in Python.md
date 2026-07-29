@@ -1,4 +1,4 @@
-Python libs: 
+# Voorbeeld van georeferentie in Python: 
 
 Het is ook mogelijk om georeferentie te doen met python scripts. 
 

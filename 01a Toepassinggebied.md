@@ -8,5 +8,5 @@ De praktijkrichtlijn kan men gebruiken wanneer men een geschikte methodiek voor 
 
 Tenslotte kan men de richtlijn gebruiken als handleiding om georeferentie in veelgebruikte softwarepakketten op een standaardwijze toe te passen.
 
-De richtlijn focust zich op het coordinatenstelsel en de werkwijzen die in Nederland op nationaal niveau worden gebruikt.
+De richtlijn focust op het coordinatenstelsel en de werkwijzen die in Nederland op nationaal niveau worden gebruikt.
 

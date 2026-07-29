@@ -1,9 +1,9 @@
-# Coördinaatreferentiesystemen en Coördinatentransformatie
+# Coördinatenstelsels en coördinatentransformatie
 
-Om informatie te koppelen aan een locatie op aarde worden geodetische coördinaatreferentiesystemen (CRS-en) gebruikt. In nederland worden meerdere CRS-en gebruikt, de <a>Geodetische CRS</a>-en die relevant zijn voor het georefereren van BIM in Nederland zijn opgenomen in onderstaande tabel:
+Om informatie te koppelen aan een locatie op aarde worden coördinatenstelsels gebruikt, die in de geo-informatie coördinaatreferentiesystemen (CRS'en) genoemd worden. In nederland worden meerdere CRS'en gebruikt, de <a>CRS</a>-en die relevant zijn voor het georefereren van BIM in Nederland zijn opgenomen in onderstaande tabel:
 
 <table>
-  <caption>Relevante coördinatiesystemen voor het georefereren Geo en BIM in Nederland</caption>
+  <caption>Relevante coördinatenstelsels voor het georefereren van geo- en BIM-data in Nederland</caption>
   <thead>
     <tr>
       <th>Naam</th>
@@ -29,66 +29,66 @@ Om informatie te koppelen aan een locatie op aarde worden geodetische coördinaa
     </tr>
     <tr>
       <td>ETRS89</td>
-      <td><a href="#geografische-en-geocentrisch-crs">Geografisch CRS</a> voor Europa en precieze (centimeter niveau) plaatsbepaling in Nederland</td>
+      <td><a href="#geografische-en-geocentrisch-crs">Geografisch CRS</a> voor Europa en precieze (centimeterniveau) plaatsbepaling in Nederland</td>
       <td>EPSG:4258 (2D-code)</td>
     </tr>
     <tr>
       <td>WGS 84</td>
-      <td>Geografisch CRS voor de aarde en niet precieze (meter niveau) plaatsbepaling in Nederland, niet geschikt voor uitwisseling van data, alleen voor visualisaties</td>
+      <td>Geografisch CRS voor de aarde en niet-precieze (meterniveau) plaatsbepaling in Nederland, niet geschikt voor uitwisseling van data</td>
       <td>EPSG:4326 (2D-code)</td>
     </tr>
   </tbody>  
 </table>
 
-De <a>EPSG-code</a> is een unieke identificatie van het CRS binnen de zogenaamde EPSG-database, een wereldwijde verzameling van coördinaatsystemen en -transformaties.
+De <a>EPSG-code</a> is een unieke identificatie van het CRS binnen de zogenaamde EPSG-database, een wereldwijde verzameling van coördinatenstelsel en -transformaties.
 
-Voor BIM-toepassingen wordt vaak gebruik gemaakt van een <a>Lokaal CRS</a>. Door een link te leggen tussen het lokale assenstelsel in BIM en een <a>geprojecteerd CRS</a> kan een BIM-model gebruikt worden in een <a>GEO-systeem</a> of <a>GIS-systeem</a>. Daarna kan GIS- of GEO-software gebruik maken van projecties en andere GIS-tools om het BIM model te projecteren in de wereld en hier aanvullende analyse op te doen. Het omzetten van het ene CRS naar het andere CRS wordt een <a>Coördinatentransformatie</a> genoemd.
+Voor BIM-toepassingen wordt vaak gebruik gemaakt van een <a>Lokaal CRS</a>. Door een link te leggen tussen het lokale assenstelsel in BIM en bijvoorbeeld een <a>geprojecteerd CRS</a> kan een BIM-model gebruikt worden in een <a>GIS-systeem</a> of andere geo-software. Daarna kan deze software gebruik maken van andere projecties en GIS-tools om het BIM-model te visualiseren in de wereld en hier aanvullende analyse op te doen. Het omrekenen van het ene CRS naar het andere CRS wordt een <a>Coördinatentransformatie</a> genoemd.
 
-Zoals hierboven aangegeven worden in Nederland meerdere CRS-en gebruikt. Bij het gebruik van meerdere CRS-en bestaat risico op introductie van fouten door onjuiste implementatie van de transformaties tussen CRS-en. Binnen Nederland worden aanbieders van data daarom geadviseerd om data aan te bieden in de verschillende CRS-en gericht op de eindgebruikers. Eindgebruikers worden juist geadviseerd data waar mogelijk op te vragen in hetzelfde CRS. Dit is ook een nadrukkelijke aanbeveling voor gebruikers van BIM-software. 
+Zoals hierboven aangegeven worden in Nederland meerdere CRS-en gebruikt. Bij het gebruik van meerdere CRS'en bestaat risico op introductie van fouten door onjuiste implementatie van de transformaties tussen CRS'en. Binnen Nederland worden aanbieders van data daarom geadviseerd om data aan te bieden in de verschillende CRS'en gericht op de eindgebruikers. Eindgebruikers worden juist geadviseerd data waar mogelijk op te vragen in hetzelfde CRS. Dit is ook een nadrukkelijke aanbeveling voor gebruikers van BIM-software. 
 
 <aside class="note" title="Gebruik hetzelfde CRS">
   <p><strong>AANBEVELING:</strong> Vraag als eindgebruiker geo- en bim-data waar mogelijk op in hetzelfde CRS</p>
 </aside>
 
-De meeste BIM-software is namelijk niet in staat om transformaties uit te voeren tussen verschillende geprojecteerde CRS'en. Wanneer GIS-data naar BIM moet worden uitgewisseld is het belangrijk dat dit al geprojecteerd is in het coördinatensysteem dat de BIM Software verwacht. Afhankelijk van de BIM Software kan het zelfs nodig zijn te transformeren naar het lokale stelsel dat gebruikt wordt door de BIM software. Hier dienen binnen projecten duidelijke afspraken over gemaakt te worden.
+De meeste BIM-software is namelijk niet in staat om transformaties uit te voeren tussen verschillende CRS'en. Wanneer GIS-data naar BIM moet worden uitgewisseld is het belangrijk dat dit al geprojecteerd is in het coördinatensysteem dat de BIM-software verwacht. Afhankelijk van de BIM-software kan het zelfs nodig zijn te transformeren naar het lokale stelsel dat gebruikt wordt door de BIM-software. Hier dienen binnen projecten duidelijke afspraken over gemaakt te worden.
 
-<aside class="note" title="Maak vooraf afspraken over de te gebruiken CRS-en en transformatie">
-  <p><strong>AANBEVELING:</strong> Maak afspraken met projectpartners over de te gebruiken CRS-en</p>
+<aside class="note" title="Maak vooraf afspraken over de te gebruiken CRS'en">
+  <p><strong>AANBEVELING:</strong> Maak afspraken met projectpartners over de te gebruiken CRS'en en coördinatentransformatie</p>
 </aside>
 
-De volgende pargrafen gaan dieper in op de verschillende CRS-typen, de relaties tussen CRS-en die direct relevant zijn voor deze praktijkrichtlijn en introduceert de gangbare terminologie voor CRS-en. Voor nog gedetailleerdere informatie en adviezen wordt verwezen naar de [Handreiking Gebruik coördinaatreferentiesystemen bij uitwisseling en visualisatie van geo-informatie](https://docs.geostandaarden.nl/crs/crs/).
+De volgende paragrafen gaan dieper in op de verschillende CRS-typen, de relaties tussen CRS-en die direct relevant zijn voor deze praktijkrichtlijn en introduceert de gangbare terminologie voor CRS-en. Voor nog gedetailleerdere informatie en adviezen wordt verwezen naar de [Handreiking Gebruik coördinaatreferentiesystemen bij uitwisseling en visualisatie van geo-informatie](https://docs.geostandaarden.nl/crs/crs/).
 
-## Geodetische CRS-en
+## Geodetische CRS'en
 
-### Geografische en geocentrisch CRS
+### Geografisch en geocentrisch CRS
 
-Geodetische CRS-en gebruiken een vereenvoudigd 3D-model van de aarde om locaties vast te leggen ten opzichte van het aardoppervlak. Het vereenvoudigd model is een omwentelingsellipsoïde (een afgeplatte bol). 
-Coördinaten worden uitgedrukt in ellipsoïdsche breedte (<span style="font-family: 'Times New Roman';">&#981;</span>), lengte (<span style="font-family: 'Times New Roman';">&lambda;</span>) en hoogte (<span style="font-family: 'Times New Roman';"><i>h</i></span>) of rechthoekige coördinaten <span style="font-family: 'Times New Roman';"><i>X</i></span>, <span style="font-family: 'Times New Roman';"><i>Y</i></span> en <span style="font-family: 'Times New Roman';"><i>Z</i></span> ten opzichte van het middelpunt van de ellpisoïde. In onderstaande figuur zijn de hoeken en assen van de ellipsoïdische en rechthoekige coördinaten weergegeven.
+Geodetische CRS'en gebruiken een wiskundig 3D model van de aarde om locaties vast te leggen ten opzichte van het aardoppervlak. Het wiskundig model is een omwentelingsellipsoïde (een afgeplatte bol). 
+Coördinaten worden uitgedrukt in ellipsoïdsche breedte (<span style="font-family: 'Times New Roman';">&#966;</span>), lengte (<span style="font-family: 'Times New Roman';">&lambda;</span>) en hoogte (<span style="font-family: 'Times New Roman';"><i>h</i></span>) of rechthoekige coördinaten <span style="font-family: 'Times New Roman';"><i>X</i></span>, <span style="font-family: 'Times New Roman';"><i>Y</i></span> en <span style="font-family: 'Times New Roman';"><i>Z</i></span> ten opzichte van het middelpunt van de ellipsoïde. In onderstaande figuur zijn de hoeken en assen van de ellipsoïdische en rechthoekige coördinaten weergegeven.
 
 <table style="width: 100%; table-layout: fixed;">
-  <caption>Componenten waarmee men coördinaten uit kan drukken</caption>
+  <caption>Hoeken en assen waarmee men geografische en geocentrische coördinaten uit kan drukken</caption>
   <tr>
     <td style="width: 50%; vertical-align: top; padding-right: 1em;">
       <p><span style="font-family: 'Times New Roman';"><strong><i>Z</i><sub>ecef</sub></strong></span>: de rotatieas van de ellipsoïde vanaf de oorsprong</p>
       <p><span style="font-family: 'Times New Roman';"><strong><i>X</i><sub>ecef</sub></strong></span>: de as vanaf de oorsprong richting de nulmeridiaan in het equatorvlak loodrecht op de rotatieas</p>
       <p><span style="font-family: 'Times New Roman';"><strong><i>Y</i><sub>ecef</sub></strong></span>: de as vanaf de oorsprong loodrecht op de nulmeridiaan en de rotatieas</p>
-      <p><span style="font-family: 'Times New Roman';"><strong><i>&#981;</i></strong></span>: de hoek die de loodlijn vanaf het oppervlak van de ellipsoïde maakt met het <span style="font-family: 'Times New Roman';"><strong><i>XY</i></strong></span>-vlak (= equatorvlak) 
+      <p><span style="font-family: 'Times New Roman';"><strong><i>&#966;</i></strong></span>: de hoek die de loodlijn vanaf het oppervlak van de ellipsoïde maakt met het <span style="font-family: 'Times New Roman';"><strong><i>XY</i></strong></span>-vlak (= equatorvlak) 
       </p>
       <p><span style="font-family: 'Times New Roman';"><strong><i>&lambda;</i></strong></span>: de hoek met de nulmeridiaan</p>
       <p><span style="font-family: 'Times New Roman';"><strong><i>h</i></strong></span>: de hoogte boven de ellipsoïde</p>
     </td>
     <td style="width: 50%; vertical-align: top; padding-left: 1em;">
       <figure id="3D_CRS" style="margin: 0;">
-                <img src="media/geonovum-geo-bim_georefereren_2.png" alt="3D CRS" style="width: 100%; max-width: 600px; height: auto;"/>
-                <figcaption><a class="self-link" href="#fig-3D-CRS"></bdi></a><span class="fig-title">3D CRS</span></figcaption>
+                <img src="media/projectie/2_geografische_en_geocentrisch_crs.png" alt="3D CRS" style="width: 100%; max-width: 600px; height: auto;"/>
+                <figcaption><a class="self-link" href="#fig-3D-CRS"></bdi></a><span class="fig-title">Geografisch en geocentrisch CRS</span></figcaption>
       </figure>
     </td>
   </tr>
 </table>
 
-<mark>Figuur aanpassen. De x-as moet door de greenwich meridiaan. Snijpunt van de evenaar en de greenwich meridiaan. De evenaar ligt niet op de goede plek. Voor locaties in Nederland gaat de loodlijn niet exact door het 0-punt.</mark>
 
-<a>Ellipsoïdische coördinaten</a> worden ook wel geografische coördinaten genoemd, rechthoekige coördinaten worden ook wel <a>geocentrische coördinaten</a> genoemd.
+
+<a>Ellipsoïdische coördinaten</a> worden ook wel geografische coördinaten genoemd, rechthoekige coördinaten vanuit het middelpunt van de aarde worden ook wel <a>geocentrische coördinaten</a> genoemd.
 
 ### Geprojecteerd CRS
 
@@ -96,28 +96,25 @@ Om geo-informatie vanaf het gekromde aardoppervlak op een plat vlak weer te geve
 
 
 <figure id="Projecties" style="display: block; text-align: center; margin: 0 auto;">
-   <img src="media/geonovum-geo-bim_georefereren_3.png" alt="Projecties" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;"/></a>
+   <img src="media/projectie/3_Projecties.png" alt="Projecties" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;"/></a>
     <figcaption><a class="self-link" href="#fig-Projecties"></bdi></a><span class="fig-title">Projecties</span></figcaption>
 </figure>
 
+Elke <a>kaartprojectie</a> introduceert vervormingen in hoeken, afstanden en/of oppervlakten, omdat het onmogelijk is om het gekromde aardoppervlak af te beelden in een plat vlak en daarbij alle drie eigenschappen tegelijk exact te behouden. De keuze van een geschikte projectie hangt af van het doel van de kaart en welke eigenschappen het belangrijkst zijn voor de toepassing. In Nederland wordt het geprojecteerde RD-stelsel gebruikt. Het RD-stelsel heeft als eigenschap dat hoeken onvervormd worden weergegeven en afwijkingen in afstanden en oppervlakte beperkt zijn binnen Nederland. De formule om werkelijke afstanden te schalen naar afstanden in het RD-stelsel is: 
 
- 
-
-Elke <a>kaartprojectie</a> introduceert vervormingen in hoeken, afstanden en/of oppervlakten, omdat het onmogelijk is om het gekromde aardoppervlak af te beelden in een plat vlak en daarbij alle drie eigenschappen tegelijk exact te behouden. De keuze van een geschikte projectie hangt af van het doel van de kaart en welke eigenschappen het belangrijkst zijn voor de toepassing.
-
-In Nederland wordt het geprojecteerde RD-stelsel gebruikt. Het RD-stelsel heeft als eigenschap dat hoeken onvervormd worden weergegeven en afwijkingen in afstanden en oppervlakte beperkt zijn binnen Nederland. Voor nauwkeurige toepassingen kan de variabele schaal van het RD-stelsel leiden tot lijnvergroting. Wanneer voor georeferentie een precisie van milimeters belangrijk is dient men een correctie Δℓ van horizontale afstanden voor lijnvergroting mee te nemen. De formule om de toe te passen correctie  op werkelijke afstanden naar afstanden in het RD-stelsel te berekenen is: 
-
-<math display="block"><mi>Δℓ</mi><mo>=</mo><mo>-</mo><mn>9,2</mn><mo>+</mo><mfrac><mrow><msup><mrow><mo>(</mo><msub><mi>x</mi><mi>RD</mi></msub><mo>-</mo><mn>155000</mn><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><msub><mi>y</mi><mi>RD</mi></msub><mo>-</mo><mn>436000</mn> <mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mn>1629</mn><mo>·</mo><msup><mn>10</mn><mo>-9</mo></msup></mrow></mfrac><mtext> mm per 100 m</mtext>
+<math display="block"><mi>Δℓ</mi><mo>=</mo><mo>-</mo><mn>9,2</mn><mo>+</mo><mfrac><mrow><msup><mrow><mo>(</mo><msub><mi>x</mi><mi>RD</mi></msub><mo>-</mo><mn>155000</mn><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><msub><mi>y</mi><mi>RD</mi></msub><mo>-</mo><mn>436000</mn> <mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mn>1629</mn><mo>·</mo><msup><mn>10</mn><mo>6</mo></msup></mrow></mfrac><mtext> mm per 100 m</mtext>
 </math>
 
 waarbij:  <math><msub><mi>x</mi><mi>RD</mi></math> en <math><msub><mi>y</mi><mi>RD</mi></math> de gemiddelde RD-coördinaten in meter zijn van locatie van het BIM-project.
+
+Voor een precisie beter dan 1 cm per 500 meter (10 centimeter per 5 km) moet ook rekening gehouden worden met het onregelmatige RD-correctiegrid en volstaat bovenstaande formule niet.
 
 <table style="width: 100%; table-layout: fixed;">
   <tr>
     <td style="width: 50%; vertical-align: top;">
       <figure id="RD_Projectie" style="margin: 0; display: flex; flex-direction: column; align-items: center;">
          <div style="width: 100%; max-width: 400px; height: 300px;">
-         <img src="media/geonovum-geo-bim_georefereren_6-a.png" alt="RD Projectie"style="width: 100%; height: 100%; object-fit: contain;"/></a>
+         <img src="./media/projectie/5_Projectie_van_het_aardoppervlak_in_RD.png" alt="RD Projectie"style="width: 100%; height: 100%; object-fit: contain;"/></a>
          </div>
         <figcaption><a class="self-link" href="#fig-RD-Projectie"></bdi></a><span class="fig-title">Een punt op het aardoppervlak (zwart) wordt op het RD-projectievlak geprojecteerd (groen) vanaf het punt diametraal tegenover Amersfoort. </span></figcaption>
       </figure> 
@@ -125,9 +122,9 @@ waarbij:  <math><msub><mi>x</mi><mi>RD</mi></math> en <math><msub><mi>y</mi><mi>
     <td style="width: 50%; vertical-align: top;">
       <figure id="RD_Correctie" style="margin: 0; display: flex; flex-direction: column; align-items: center;">
          <div style="width: 100%; max-width: 400px; height: 300px;">
-         <img src="./media/Correcties_aan_gemeten_afstanden.png" alt="2D en 3D Geo of BIM combineren" style="width: 100%; height: 100%; object-fit: contain;" />
+         <img src="./media/projectie/6_Correcties_aan_gemeten_afstanden.png" alt="2D en 3D Geo of BIM combineren" style="width: 100%; height: 100%; object-fit: contain;" />
          </div>
-        <figcaption><a class="self-link" href="#fig-RD-Correctie"></bdi></a><span class="fig-title">Correcties aan gemeten afstanden voor de RD-projectie inmm per 100m.</span></figcaption>
+        <figcaption><a class="self-link" href="#fig-RD-Correctie"></bdi></a><span class="fig-title">Correcties aan gemeten afstanden voor de RD-projectie in mm per 100 m.</span></figcaption>
       </figure> 
     </td>
   </tr>
@@ -137,116 +134,129 @@ Waar het projectievlak binnen de ellipsoïde valt worden afstanden korter weerge
 
 ### Vertikaal CRS 
 
-<a>Ellipsoïdische hoogte</a> heeft geen fysieke betekenis, het geeft de hoogte van een punt of object aan boven een vereenvoudigd model van de aarde. Orthometrische hoogtesystemen die een relatie hebben met zwaartekracht hebben wel een fysieke betekenis. Tussen punten met exact dezelfde <a>orthometrische hoogte</a> zal in theorie geen water stromen. De relatie tussen de orthometrische hoogte en ellipoidische hoogte wordt gevormd door een <a>quasi-geoïdemodel</a>. Een quasi-geoïdemodel geeft de hoogte van het referentievlak voor de orthometrische hoogte boven de ellipsoïde. Het orthometrische hoogte systeem voor Nederlands is het Normaal Amsterdams Peil (NAP).
+<a>Ellipsoïdische hoogte</a> heeft geen fysieke betekenis, het geeft de hoogte van een punt of object aan boven een vereenvoudigd model van de aarde. Hoogtesystemen die een relatie hebben met de zwaartekracht hebben wel een fysieke betekenis. Tussen punten met exact dezelfde <a>fysische hoogte</a> zal in theorie geen water stromen. De relatie tussen de fysische hoogte en ellipoidische hoogte wordt gevormd door een <a>quasi-geoïdemodel</a>. Een quasi-geoïdemodel geeft de hoogte van het referentievlak voor de fysische hoogte boven de ellipsoïde. Het fysische hoogtesysteem voor Nederland is het Normaal Amsterdams Peil (NAP).
 
 <figure id="Ellips,_Geoide,_aardoppervlak" style="display: block; text-align: center; margin: 0 auto;">
-  <img src="media/geonovum-geo-bim_georefereren_1.png" alt="Ellips, Geoide, aardoppervlak" 
+  <img src="media/projectie/1_Ellipsoïde, quasi-geoïdemodel en aardoppervlak.png" alt="Ellips, Geoide, aardoppervlak" 
   style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;">
-  <figcaption style="margin-top: 0.5em;"><a class="self-link" href="#fig-Ellips,-Geoide,-aardoppervlak"></bdi></a><span class="fig-title">Ellips, Geoide, aardoppervlak</span></figcaption>
+  <figcaption style="margin-top: 0.5em;"><a class="self-link" href="#fig-Ellips,-Geoide,-aardoppervlak"></bdi></a><span class="fig-title">Ellipsoïde, quasi-geoïdemodel en aardoppervlak</span></figcaption>
 </figure> 
 
-Het referentievlak voor de orthometrische hoogte volgt het zwaartekrachtveld en daarmee globaal de kromming van de aarde. Voor kleine projecten, tot 1 km, kan de horizontale component voor de kromming van het aardoppervlak vaak genegeerd worden. Dit geldt niet voor de vertikale component. Onderstaande figuur illustreert afwijkingen bij het verwaarlozen van de aardkromming voor de afstand en het hoogteverschil tussen punten P en Q. Bij het verwaarlozen van de aardkromming snijden de lijn RQ en de raaklijn aan de ellips vanuit P elkaar in het punt Q. <mark>De werkelijke afstand PQ over het aardoppervlak is korter dan de afstand PQ', op een afstand van 10 kilometer is het verschil echter slecht 1 centimeter.</mark> Punt P en Q hebben beide dezelfde hoogte ten opzichte van het aardoppervlak, punt Q'ligt echter x meter boven het aardoppervlak. Het hoogteverschil is 8 meter bij 10 km of 1 cm bij 400 meter.
-<figure id="Afwijking_van_aardkromming" style="display: block; text-align: center; margin: 0 auto;">
-  <img src="media/geonovum-geo-bim_georefereren_4-b.png" alt="Afwijking door aardkromming" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;">
-  <figcaption><a class="self-link" href="#fig-Afwijking-door-aardkromming"></bdi></a><span class="fig-title">Afwijking door aardkromming</span></figcaption>
-</figure> 
 
 ### Samengesteld CRS
 
-Een CRS dat bestaat uit de combinatie van CRS-en, bijvoorbeeld een geprojecteerd CRS en een verticaal CRS, noemen we een <a>Samengesteld CRS</a>. Een <a>Coördinatentransformatie</a> van of naar een samengesteld CRS wordt afzonderlijk uitgevoerd. Bijvoorbeeld voor de transformatie van 3D geografische ETRS89 naar het samengestelde RDNAP, wordt apart van ETRS89 naar RD en apart van ETRS89 naar NAP getransformeerd. Samengestelde CRS-en in Nederland die relevant zijn voor BIM-modellen zijn:
-* RDNAP (EPSG:7415), de samenstelling van geprojecteerd RD (EPSG:28992) en het verticale CRS NAP (ESPG:5709).
-* ETRS89 + NAP height (EPSG:9286), de samenstelling van geografisch 2D ETRS89 *EPSG:4258 en het verticale CRS NAP (ESPG:5709).
+Een CRS dat bestaat uit de combinatie van een 2D CRS en een vertikaal CRS, bijvoorbeeld een geprojecteerd CRS en een verticaal CRS, noemen we een <a>Samengesteld CRS</a>. Een <a>Coördinatentransformatie</a> van of naar een samengesteld CRS wordt afzonderlijk uitgevoerd voor de CRS'en van het samengestelde CRS, bijvoorbeeld: voor de transformatie van 3D geografisch ETRS89 naar het samengestelde RDNAP, wordt apart van ETRS89 naar RD en apart van ETRS89 naar NAP getransformeerd. Samengestelde CRS'en in Nederland die relevant zijn voor BIM-modellen zijn:
+* RDNAP (EPSG:7415), de samenstelling van geprojecteerd CRS RD (EPSG:28992) en verticaal CRS NAP (ESPG:5709).
+* ETRS89 met NAP-hoogte (EPSG:9286), de samenstelling van 2D geografisch CRS ETRS89 (EPSG:4258) en verticaal CRS NAP (ESPG:5709).
 
 ## Lokaal CRS
 
-Een <a>lokaal CRS</a> is een arbitrair gekozen assenstelsel. De oorsprong, de oriëntatie en het vertikale referentievlak van het stelsel worden gekozen op basis van praktische overwegingen en kan voordelen hebben bij bepaalde 2D- of  3D- modeleersoftware (BIM).  Sommige applicaties voorzien ook alleen in een lokaal assenstelsel om in te modelleren. De oorsprong van het assenstelsel kan projectafhankelijk zijn, bijvoorbeeld een hoekpunt, voorgevel en begane grond van een gebouw, of een aantal meter hiervandaan. De eenheden zijn vaak in meters of millimeters. Er is geen directe relatie met de echte wereld tenzij er een coördinatentransformatie wordt toegepast.
+Een <a>lokaal CRS</a> is een arbitrair gekozen assenstelsel. De oorsprong, de oriëntatie en het vertikale referentievlak van het stelsel worden gekozen op basis van praktische overwegingen en kan voordelen hebben bij bepaalde 2D- of  3D- modeleersoftware (BIM). Sommige applicaties voorzien ook alleen in een lokaal assenstelsel om in te modelleren. De oorsprong van het assenstelsel kan projectafhankelijk zijn, bijvoorbeeld een hoekpunt, voorgevel en begane grond van een gebouw, of een aantal meter hiervandaan. De eenheden zijn vaak in meters of millimeters. Er is geen directe relatie met de echte wereld tenzij er een coördinatentransformatie wordt toegepast.
 
 ### Benadering van RD in lokaal CRS
 
 In sommige softwarepakketen, zoals AutoCAD, is het gebruikelijk om met het lokale stelsel het RD-stelsel en het NAP-niveau te benaderen, bijvoorbeeld door het gebruik van bekende punten of door de oorsprong te verschuiven. AutoCAD gaat er alleen niet bewust mee om dat dit RD-coördinaten en NAP-hoogten zijn. Wat de software betreft is dit een lokaal stelsel zonder verdere betekenis en worden de aardkromming, zwaartekracht en eigenschappen van de kaartprojectie, zoals de locatieafhankelijke schaalfactor en gridcorrecties, niet toegepast. De link tussen de lokale coördinaten en het geprojecteerd CRS is in dit geval dat coördinaten bij benadering overeen komen (X<sub>bim</sub> &cong; x<sub>RD</sub>, Y<sub>bim</sub> &cong; y<sub>RD</sub>, Z<sub>bim</sub> &cong; H<sub>NAP</sub>).
 
-### True North, Grid North, Project North
+### Ware noorden, kaartnoorden, magnetisch noorden en projectnoorden
 
-Soms wordt de relatie van het lokale CRS ten opzicht van het Noorden gegeven. In de BIM-sector worden de termen <a>True North</a>, <a>Grid North</a> en <a> Project North </a> gebruikt om de relatie met de oriëntatie van een geodetisch CRS aan te geven. Deze hebben afhankelijk van het type CRS de volgende betekenis.
+Soms wordt de relatie van het lokale CRS ten opzicht van het noorden gegeven. In de BIM-sector worden de termen ware noorden, kaartnoorden en projectnoorden gebruikt om de relatie met de oriëntatie van een geodetisch CRS aan te geven. Daarnaast is er ook nog magnetisch noorden.
 
-* CRS obv ellipsoïde: true north is in de richting van de rotatie as van de ellipsoïde (<span style="font-family: 'Times New Roman';"><i>Z</i><sub>ecef</sub></span> in eerdere figuur)
-* CRS obv projectie: true north is in de richting noorden van geprojecteerde stelsel vaak de Y-as of Northing-as, ook wel grid north genoemd.
+* Ware noorden (<a>True North</a>): de richting langs de plaatselijke meridiaan naar de noordpool (het snijpunt van de Z-as met de ellipsoïde in de eerdere figuur Geografisch en geocentrisch CRS) in een modern geografisch CRS zoals ETRS89.
 
+* Kaartnoorden (<a>Grid North</a>): de plaatselijke richting evenwijdig aan de y-as (Northing) van een geprojecteerd CRS. Door de vervorming van een kaartprojectie is dit over het algemeen niet gelijk aan het ware noorden. Voor de RD-projectie vallen het ware noorden en kaartnoorden alleen samen op de meridiaan door Amersfoort. Daarbuiten loopt deze in Nederland op land op tot maximaal 2&deg; naar het oosten of westen en tot ca. 3&deg; in op zee. 
+
+Om dit te corrigeren geldt de formule: <math display="block"><mi>γ</mi><mo>=</mo><mo>(</mo><mi>λ</mi><mo>-</mo><msub><mi>λ</mi><mn>0</mn></msub><mo>)</mo><mo>⁢</mo><mi>sin</mi><mo>⁡</mo><mi>φ</mi></math>
+<p>met:</p>
+<ul>
+  <li><math><mi>γ</mi></math> = azimut van het kaartnoorden ten opzichte van het ware noorden</li>
+  <li><math><mi>φ</mi></math> = noorderbreedte</li>
+  <li><math><mi>λ</mi></math> = oosterlengte</li>
+  <li><math><msub><mi>λ</mi><mn>0</mn></msub></math> = 5,387638889°</li>
+</ul>
 
 <figure id="True_North_en_Grid_North" style="display: block; text-align: center; margin: 0 auto;">
-  <img src="./media/True_North_and_Grid_North.png" alt="True_North_en_Grid_North" title="True North en Grid North" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;"> 
-  <figcaption><a class="self-link" href="#fig-True-North-en-Grid-North"></bdi></a><span class="fig-title">True North en Grid North</span></figcaption>
+  <img src="./media/projectie/True_North_and_Grid_North.png" alt="True_North_en_Grid_North" title="True North en Grid North" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;"> 
+  <figcaption><a class="self-link" href="#fig-True-North-en-Grid-North"></bdi></a><span class="fig-title">Ware noorden (True North) en kaartnoorden (Grid North)</span></figcaption>
 </figure>
 
+* Magnetisch noorden (<a>Magnetic North</a>): de plaatselijke veranderlijke richting van het magneetveld van de aarde. Dit is de richting die een kompas aangeeft. In Nederland is de afwijking van het magnetisch noorden ten opzichte van het ware noorden (declinatie) nu ca. +3&deg; (naar het oosten), en deze afwijking wordt momenteel per 6 jaar ongeveer een graad groter. Er zijn modellen die de afwijking voorspellen voor een plaats en tijd op aarde.  
 
-* Het Project North is normaliter gebaseerd op de voornaamste as van het bouwwerk. Het beïnvloedt hoe je schetst in views in software en hoe views op tekenbladen worden geplaatst.Het Project North richt zich vaak richting de bovenkant van een tekengebied. Dit vereenvoudigt het modelleren. 
+* Projectnoorden (<a>Project North</a>): vaak de richting van de Y-as van een BIM-model, normaliter gebaseerd op de voornaamste as van het bouwwerk. Het beïnvloedt hoe je schetst in views in software en hoe views op tekenbladen worden geplaatst. Het Project North richt zich vaak richting de bovenkant van een tekengebied. Dit vereenvoudigt het modelleren. Het verschil tussen projectnoorden en het noorden van het voor georeferentie gebruikte CRS (afhankelijk van het CRS is dit het ware noorden of het kaartnoorden) kan groot zijn.
 
 <figure id="Project_North" style="display: block; text-align: center; margin: 0 auto;">
-  <img src="./media/Project_North.png" alt="Project_North" title="Project North" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;"> 
+  <img src="./media/projectie/Project_North.png" alt="Project_North" title="Project North" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;"> 
   <figcaption><a class="self-link" href="#fig-Project-North"></bdi></a><span class="fig-title">Project North</span></figcaption>
 </figure> 
 
-## Coördinatentransformatie tussen lokaal CRS en geodetisch
+Het verschil tussen ware noorden en kaartnoorden kan van belang zijn bij zonnestudies. Het verschil met magnetisch noorden is alleen van belang bij het gebruik van een kompas en dat is niet gebruikelijk in maatvoering of landmeetkundige projecten. 
 
-De coördinatentransformatie tussen lokaal CRS en een geodetisch CRS wordt, binnen de huidige BIM-standaarden, apart gegeven voor de horizontale en de vertikale component. Dit is dus hetzelfde als voor transformaties van samengestelde CRS-en.
+## Coördinatentransformatie tussen lokaal CRS en geodetisch CRS
+
+De coördinatentransformatie tussen lokaal CRS en een geodetisch CRS wordt, binnen de huidige BIM-standaarden, apart gegeven voor de horizontale en de vertikale component, niet alleen bij transformaties van samengestelde CRS'en.
 
 <aside class="note" title="Aparte Horizontale en Vertikale coördinaattransformatie">
-  <p><strong>AANBEVELING:</strong> Gebruik aparte transformaties voor de horizontale en vertikale componenten. Dit betekent één 2D transformatie voor het horizontale vlak en één 1D transformatie voor het verticale vlak resulteert in een 3D transformatie.</p>
+  <p><strong>AANBEVELING:</strong> Gebruik aparte transformaties voor de horizontale en vertikale component. Dit betekent één 2D (of 3D) transformatie voor het horizontale vlak en één 1D transformatie voor de verticale richting die samen resulteren in een transformatie van 3D data.</p>
 </aside>
 
-### Horizontaal - 2D gelijkvormigheidstransformatie
+### Horizontaal: gelijkvormigheidstransformatie
 
+De parameters voor de 2D of 3D gelijkvormigheidstransformatie kunnen worden berekend wanneer respectievelijk van minimaal 2 of 3 punten de coördinaten bekend zijn zowel in het lokale CRS als het geprojecteerde of geografsiche CRS. Wanneer voor meer gemeenschappelijke punten de coördinaten in beide stelsels beschikbaar zijn, kunnen de parameters worden berekend met behulp van een <a>kleinstekwadratenschatting</a>. Dit levert betere precisie op. Door de <a>overbepaaldheid</a> kan dan ook worden getoetst op eventuele fouten in de coördinaten van één van de punten in een van de stelsels. De toetsing kan bijvoorbeeld door naar de grote van de sluitvectoren/residuen van de gebruikte punten te kijken of, zoals gebruikelijk in de landmeetkunde, een statistische toetsting uit te voeren.
+
+#### 2D gelijkvormigheidstransformatie voor geprojecteerd CRS 
 De relatie tussen het lokale CRS en een geprojecteerd CRS wordt gelegd via een <a>2D gelijkvormigheidstransformatie</a> (ook wel <a>2D Helmert transformatie</a> genoemd).
 
 <table>
   <tr>
     <td>
     <figure id="2D-gelijkvormigheidstransformatie" style="display: block; text-align: center; margin: 0 auto;">
-      <img src="media/geonovum-geo-bim_georefereren_7.png" alt="Relatie GeoBIM" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;"/>
-    <figcaption><a class="self-link" href="#fig-Relatie-GeoBIM"></bdi></a><span class="fig-title">Relatie GeoBIM</span></figcaption>
+      <img src="media\projectie\7_Transformatie naar RD voor een lokaal stelsel van een BIM-model.png" alt="Relatie GeoBIM" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;"/>
+    <figcaption><a class="self-link" href="#fig-Relatie-GeoBIM"></bdi></a><span class="fig-title">Transformatie naar RD voor een lokaal stelsel van een BIM-model</span></figcaption>
     </figure> 
     </td>
   </tr>
   <tr>
-
   <td>
-  2D relatie tussen geprojecteerd CRS en lokaalstelselsel. Parameters voor de 2D gelijkvormighedistransformatie zijn translaties (t<sub>x</sub>, t<sub>y</sub>), schaal (s) en rotatie (alpha). Er is een eenduidige relatie tussen de parameters rotatiehoek (alpha) en de in IFC/BIM gebruikte termen XAxisAbscissa (cos(alpha)) en XAxisOrdinate (sin(alpha)).
+De parameters voor een 2D gelijkvormighedistransformatie zijn translaties (t<sub>x</sub>, t<sub>y</sub>), schaal (s) en rotatie (&alpha;). Er is een eenduidige relatie tussen de parameters rotatiehoek (&alpha;) en de in IFC/BIM gebruikte termen XAxisAbscissa (cos &alpha;) en XAxisOrdinate (sin &alpha;).
   </td>
   </tr>
 </table>
 
-De parameters voor de 2D gelijkvormigheidstransformatie kunnen worden berekend wanneer van minimaal 2 punten de coördinaten bekend zijn zowel in het geprojecteerde en het lokale CRS. Wanneer voor meer dan 2 gemeenschappelijke punten de coördinaten in beide stelsels beschikbaar zijn, kunnen de parameters worden berekend met behulp van een <a>kleinste kwadratenschatting</a>. Door de <a>overbepaaldheid</a> kan dan ook worden getoetst op eventuele fouten in de coördinaten van één van de punten in een van de stelsels. De toetsing kan bijvoorbeeld door naar de grote van de sluitvectoren/residuen van de gebruikte punten te kijken of, zoals gebruikelijk in de landmeetkunde, een statistische toetsting uit te voeren.
-
-### Vertikaal - vast hoogteverschil
+### Vertikaal: vast hoogteverschil
 
 Voor de relatie tussen vertikale referentievlakken is het uitgangspunt in de huidige standaarden dat de relatie is vast te leggen via een vast hoogteverschil. 
 
-Door de horizontale 2D-gelijkvormigheidstransformatie te combineren met een vast hoogteverschil ontstaat één geïntegreerde 2D + 1D-transformatie. Deze transformatie is in onderstaand figuur schematisch weergegeven. 
+Hiervoor geldt de formule: H<sub>NAP</sub> = H<sub>BIM</sub> + t<sub>H</sub>
+
+Door de gelijkvormigheidstransformatie voor de horizontale component te combineren met een vast hoogteverschil voor de verticale component ontstaat één geïntegreerde transformatie voor 3D data. Deze transformatie is in onderstaand figuur schematisch weergegeven. 
 
 <table>
   <tr>
     <td>
     <figure id="Horizontale-en-vertikale_transformatie"  style="display: block; text-align: center; margin: 0 auto;">
-      <img src="media/geonovum-geo-bim_georefereren_8.png" alt="2D Transformatie" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;"/>
-          <figcaption><a class="self-link" href="#fig-2D-Transformatie"></bdi></a><span class="fig-title">2D Transformatie + 1D Transformatie</span></figcaption>
+      <img src="media/projectie/geonovum-geo-bim_georefereren_8.png" alt="2D Transformatie" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;"/>
+          <figcaption><a class="self-link" href="#fig-2D-Transformatie"></bdi></a><span class="fig-title">Relatie tussen geografisch, geocentrisch en geprojecteerd CRS en een lokaal stelsel</span></figcaption>
     </figure>
     </td>
   </tr>
   <tr>
   <td>
-  Relatie tussen geografisch, geocentrisch en geprojecteerd CRS en lokaalstelselsel voor horizontaal (2D) en verikaal (hoogte). Parameters voor de 2D gelijkvormighedistransformatie zijn translaties (t<sub>x</sub>, t<sub>y</sub>), schaal (s) en rotatie (alpha). Er is een eenduidige relatie tussen de parameters rotatiehoek (alpha) en de inIFC/BIM gebruikte termen XAxisAbscissa (cos(alpha)) en XAxisOrdinate (sin(alpha)). Voor de hoogte is er een vast hoogteverschil, de parameter t<sub>H</a>.
+De parameters voor een 2D gelijkvormighedistransformatie zijn translaties (t<sub>x</sub>, t<sub>y</sub>), schaal (s) en rotatie (alpha).
   </td>
   </tr>
 </table>
 
 
+#### 3D gelijkvormigheidstransformatie voor geografisch CRS
+
+De relatie tussen het lokale CRS en een geografisch CRS wordt gelegd via een <a>3D gelijkvormigheidstransformatie</a> (ook wel <a>3D Helmert transformatie</a> genoemd) via het bijbehorende geocentrische CRS.
+
 ## Geometrische effecten bij BIM-georeferentie en BIM-transformatie
-Bij het georefereren van een BIM-model ten opzichte van een CRS zijn er twee opties. Bij de eerste benadering blijft het model volledig cartesisch. Daarbij blijven hoeken, lengtes en vormen exact behouden binnen het model. In dit geval resulteert het verschil tussen het platte vlak van het BIM-model en het gekromde aardoppervlak in dat horizontaal en verticaal/waterpas geleidelijk af gaat wijken van de fysieke werkelijkheid en van CRSen als ETRS89 en NAP. Deze effecten worden vooral merkbaar bij lange infrastructuur of zeer hoge nauwkeurigheidseisen of wanneer de combinatie met Geo-datasets gemaakt worden.
+Bij het georefereren van een BIM-model ten opzichte van een CRS zijn er twee opties. Bij de eerste benadering blijft het model volledig cartesisch. Daarbij blijven hoeken, lengtes en vormen exact behouden binnen het model. In dit geval resulteert het verschil tussen het platte vlak van het BIM-model en het gekromde aardoppervlak in dat horizontaal en verticaal/waterpas geleidelijk af gaat wijken van de fysieke werkelijkheid en van CRSen als ETRS89 en NAP. Deze effecten worden vooral merkbaar bij lange infrastructuur of zeer hoge nauwkeurigheidseisen of wanneer de combinatie met geodatasets gemaakt worden.
 
 In de tweede benadering transformeert men het model naar een CRS dat de aardkromming volgt. In dit geval ontstaan verschillende geometrische vervormingen die samenhangen met de overgang tussen een lokaal cartesisch model en een CRS voor de aarde. Een BIM-model is in de basis cartesisch en lokaal vlak, terwijl CRSen rekening houden met projectie en aardkromming. Door de transformatie zullen de hoeken, en/of de lijnvorm en -lengte, en/of de oppervlaktes afwijken van het orginele model. 
 
 <figure id="Geometrische_effecten_bij_transformatie"  style="display: block; text-align: center; margin: 0 auto;">
-      <img src="media\Geometrische_verandering_bij_transformatie_voor_georeferentie.png" alt="Geometrische_effecten_bij_transformatie" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;"/>
+      <img src="media/projectie/Geometrische_verandering_bij_transformatie_voor_georeferentie.png" alt="Geometrische_effecten_bij_transformatie" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;"/>
           <figcaption><a class="self-link" href="#fig-Geometrische_effecten_bij_transformatie"></bdi></a><span class="fig-title">Enkele geometrische effecten die op kunnen treden bij transformaties tussen cartesische modellen en een CRS voor de aarde.</span></figcaption>
   </figure>
 
@@ -254,67 +264,53 @@ In de tweede benadering transformeert men het model naar een CRS dat de aardkrom
 ## Afwijkingen
 Veel BIM-modellen zijn gebaseerd op cartesische geometrie, waarbij wordt aangenomen dat de ruimte vlak is en kan worden beschreven met een orthogonaal coördinatenstelsel. Deze benadering introduceert afwijkingen wanneer zij wordt toegepast op het aardoppervlak. De aarde is immers geen vlak maar een gekromd lichaam dat benaderd wordt door een ellipsoïde.
 
-Wanneer geografische coördinaten zonder passende conversies of projecties rechtstreeks worden verwerkt binnen een cartesisch model, ontstaan systematische verschillen tussen de gemodelleerde en de werkelijke afstanden, richtingen en oppervlakken. Deze afwijkingen nemen toe naarmate de beschouwde afstanden groter worden en de invloed van de aardkromming sterker doorwerkt. Ook veroorzaakt het gebruik van een cartesisch model zonder passende conversies op een gekromd aardoppervlak afwijkingen
+Wanneer geografische coördinaten zonder passende transformatie of projectie rechtstreeks worden verwerkt binnen een cartesisch model, ontstaan systematische verschillen tussen de gemodelleerde en de werkelijke afstanden, richtingen en oppervlakken. Deze afwijkingen nemen toe naarmate de beschouwde afstanden groter worden en de invloed van de aardkromming sterker doorwerkt. Ook veroorzaakt het gebruik van een cartesisch model op een gekromd aardoppervlak zonder passende maatregelen afwijkingen in de hoogte.
 
-Het verschil tussen een vlak cartesisch referentiekader en de werkelijke geometrie van het aardoppervlak vormt een fundamentele bron van meet- en modelafwijkingen. Een goed begrip van deze afwijkingen is essentieel om de nauwkeurigheid van ruimtelijke analyses te kunnen beoordelen en om te bepalen wanneer correcties voor aardkromming noodzakelijk zijn.
+Het verschil tussen een vlak cartesisch stelsel en de werkelijke geometrie van het aardoppervlak vormt een fundamentele bron van meet- en modelafwijkingen. Een goed begrip van deze afwijkingen is essentieel om de nauwkeurigheid van ruimtelijke analyses te kunnen beoordelen en om te bepalen wanneer correcties voor aardkromming noodzakelijk zijn.
 
-### Afwijking door projectie 
-Een afwijking waarmee men rekening moet houden bij het gebruik van een geprojecteerde CRS (RD) is de afwijking door lijnvergroting of -verkleining door projectie. Deze afwijking komt door het effect beschreven in [Geprojecteerd CRS](#geprojecteerd-crs). Deze lijnvergroting of -verkleining is het geval bij XY naar RD-coordinaten, maar niet bij Z naar NAP-coordinaten. 
+### Schaalfout door projectie 
+Een afwijking waarmee men rekening moet houden bij het gebruik van een geprojecteerd CRS met een hoekgetrouwe projectie (zoals RD) is de afwijking door lijnvergroting of -verkleining door de projectie. Deze afwijking komt door de schaalfout beschreven in [Geprojecteerd CRS](#geprojecteerd-crs). Dit schaalverschhil treedt op tussen bij XY-coördinaten van een BIM-model en RD-coordinaten, maar niet bij de Z-coördinaat van een BIM-model nen NAP-hoogte. 
 
-Problemen met deze afwijking kunnen gaan spelen als men BIM zonder conversie wil combineren met RD, of als men GEO in RD zonder conversie als onderlegger voor BIM gebruikt, en daar in werkelijke meters binnen gaat tekenen.   
+Problemen met deze afwijking kunnen gaan spelen als men een BIM-model zonder transformatie wil combineren met geodata in RD, of als men geodata in RD zonder transformatie als ondergrond voor een BIM-model gebruikt, en daar in werkelijke meters in gaat tekenen.   
 
-De afwijkingen die hierbij kunnen ontstaan zijn +/- 10 mm bij 100 meter en 10 cm bij 1 km op land. En tot 1 m/km op zee.
+De afwijkingen die hierbij kunnen ontstaan zijn maximaal 1 cm per 100 meter (10 cm per 1 km) op land. En tot 10 cm per 100 meter (1 meter per km) op zee.
 
-Daarnaast is er een correctiegrid voor RD. Deze afwijking is minder dan 2 cm per km. 
+Daarnaast is er een correctiegrid voor RD dat een vervorming geeft. Deze afwijking is maximaal 1 cm per 500 meter (10 cm per 5 km). 
 
 ### Afwijking door aardkromming
-Een tweede soort afwijking waarmee men rekening kan houden is de afwijking door aardkromming. De kromming van de aarde die afwijkingen veroorzaken bij cartesisch gemodelleerde modellen. Hier zijn twee effecten. De **hoogteafwijking** en de **vervorming**. Wanneer men iets horizontaal "recht", waterpas, wil maken in de werklijkheid, is dit eigenlijk krom.
+Een andere soort afwijking waarmee men rekening kan houden is de afwijking door aardkromming. De kromming van de aarde die afwijkingen veroorzaken bij cartesisch gemodelleerde modellen. Hier zijn twee effecten. De **hoogteafwijking** en de **vervorming door aardkromming**. Wanneer men iets horizontaal vlak, waterpas, wil maken in de werklijkheid, is dit feitelijk licht krom.
 
-Dit punt speelt als we euclidisch cartesisch BIM willen combineren met geodetisch ETRS-89 
+Dit geeft een **hoogtefout** als we een cartesisch BIM-model willen combineren met geodetisch ETRS89.
+Het referentievlak voor de fysische hoogte volgt het zwaartekrachtveld en daarmee ook de kromming van de aarde. Onderstaande figuur illustreert afwijkingen bij het verwaarlozen van de aardkromming voor de afstand en het hoogteverschil tussen punten P en Q. Bij het verwaarlozen van de aardkromming ontstaat in punt Q een hoogtefout x. De werkelijke afstand PQ over het aardoppervlak is korter dan de afstand PQ', maar dit effect is kleiner dan een millimeter bij afstanden tot enkele kilometers.</mark> 
+<figure id="Afwijking_van_aardkromming" style="display: block; text-align: center; margin: 0 auto;">
+  <img src="media/projectie/4_Afwijking_door_aardkromming.png" alt="Afwijking door aardkromming" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;">
+  <figcaption><a class="self-link" href="#fig-Afwijking-door-aardkromming"></bdi></a><span class="fig-title">Afwijking in de hoogte door aardkromming</span></figcaption>
+</figure> 
 
-De afwijkingen die hierbij kunnen ontstaan zijn:
-1 cm op 360 m
-10 cm op 1,1 km
-1 m op 3,6 km
-10 m op 11,3 km 
-Dit effect is kwadratisch.
+De afwijking die hierdoor ontstaat is 1 cm op 360 m afstand (10 cm op 1,1 km) van het punt waar de horizontaal en vertikaal van het BIM-model overeenkomen met die van de aarde, maar loopt kwadratisch op met de afstand. Als dat punt in het midden van het BIM-model gekozen wordt geeft dit een fout van 1 cm per 720 meter (10 cm op 2,2 km). Deze fout kan meestal voorkomen worden door een afzonderlijk CRS voor hoogte te gebruiken. 
 
-Er bestaat ook **vervorming door aardkromming**.
-Doordat in de gekromde wereld de verticaal aan de ene kant van een model niet helemaal evenwijdig is aan de verticaal aan de andere kant van het model, wordt de afstand tussen de verticalen hoger boven het aardoppervlak steeds groter. De grootte van het effect is afhankelijk van de modelgrootte: de lengte (L) van het model en het hoogteverschil (∆H) binnen het model. Voor een nauwkeurigheid van 1 cm mag L×∆H niet meer dan 64 km×m zijn en voor een nauwkeurigheid van 10 cm niet meer 640 km×m zijn. Alleen bij grote modellen met grote hoogteverschillen zou dit relevant kunnen worden.
+De **vervorming door aardkromming** treedt op doordat in de gekromde wereld de verticaal aan de ene kant van een model niet helemaal evenwijdig is aan de verticaal aan de andere kant van het model, en dus de afstand tussen de verticalen hoger boven het aardoppervlak steeds groter wordt. De grootte van het effect is afhankelijk van de modelgrootte: de lengte (L) van het model en het hoogteverschil (∆H) binnen het model. Voor een nauwkeurigheid van 1 cm mag L×∆H niet meer dan 64 km×m zijn en voor een nauwkeurigheid van 10 cm niet meer 640 km×m zijn. Dit probleem is niet oplosbaar, maar zal alleen bij grote modellen met grote hoogteverschillen relevant kunnen worden. 
 
-Nauwkeurigheid Maximale modelgrootte
-
-1 cm 2 km voor ∆H tot 32 m, 200 m voor ∆H tot 320 m
-
-10 cm 2 km voor ∆H tot 320 m
+Voor een nauwkeurigheid van 1 cm kan een model tot L = 2 km voor ∆H tot 32 m gebruikt worden, of L = 200 m voor ∆H tot 320 m. Voor een nauwkeurigheid van 10 cm kan een model tot 20 km voor ∆H tot 32 m gebruikt worden, of L = 20 km voor ∆H tot 320 m. 
 
 ### Afwijking door lijnuitbuiging
-Een volgende afwijking is lijnuitbuiging. Dit is het effect dat een rechte lijn in het ene stelsel geen rechte lijn is in het andere stelsel. 
+Een volgende afwijking is horizontale uitbuiging van lijnen. Dit komt doordat een rechte lijn in het een geprojecteerd coördinatenstelsel geen rechte lijn is in een ander coördinatenstelsel of in de werkelijkheid. Voor RD valt deze afwijking mee (ca. 1,3 mm bij 1 km, ca. 3 cm bij 5 km en ca. 8 cm bij 10 km), maar voor andere kaartprojecties (met name webmercator) kan deze afwijking problemen geven. 
 
-Deze afwijking bedraagt
-+/- 1,3 mm bij 1km en  +/- 3 cm bij 5 km 
-Horizontale uitbuiging van rechte lijnen in coördinatenstelsels
+In Nederland (tot 56° noorderbreedte):
+* Afwijkingen tot 1 cm bij een afstand van 587 m (ca. 900 m in RD)
+* Afwijkingen tot 10 cm bij een afstand van 1857 m (ca. 11 km in RD)
 
-- < 1 cm bij afstanden tot 587 m (voor 56°NB)
-- < 10 cm bij afstanden tot 1857 m (voor 56°NB)
+Als oplossing kan er voor gezorgd worden dat er in geodate en BIM-modellen geen lijnsegmenten gebruikt worden die te lang zijn voor de gewenste nauwkeurigheid. Voor een nauwkeurigheid van 1 mm zijn punten met een maximale tussenafstand van 200 meter nodig voor de in Nederland gangbare projecties. Voor het genereren van synthetische tussenpunten kan afhankelijk van wat bedoeld is, gekozen worden tussen punten op een rechte lijn in de kaart of een rechte lijn in werkelijkheid (geodetische lijn in ETRS89), zie [handreiking gebruik coordinaatreferentiesystemen](https://docs.geostandaarden.nl/crs/crs/#vormvastheid) en het [langelijnenadvies](https://gnss-data.kadaster.nl/misc/docs/langelijnenadvies.pdf). 
 
-zie [handreiking gebruik coordinaatreferentiesystemen](https://docs.geostandaarden.nl/crs/crs/#vormvastheid) en het [langelijnenadvies](https://gnss-data.kadaster.nl/misc/docs/langelijnenadvies.pdf). 
-
-Voor een nauwkeurigheid van 1 mm zijn dus punten met 200 m tussenafstand nodig voor de in Nederland gangbare projecties. Voor het genereren van synthetische tussenpunten kan afhankelijk van wat bedoeld is, gekozen worden tussen punten op een rechte lijn in de kaart of een rechte lijn in werkelijkheid (geodetische lijn in ETRS89).
-
-### Afwijking van kaart Noorden
-Tenslotte adresseert deze praktijkrichtlijn de afwijking van kaartnoorden, ware noorden (meridiaanrichting of zonne noorden) en tijdsafhankelijk magnetisch noorden.
-Afhankelijk van de positie in Nederland kan dit een afwijking van maximaal 3 graden opleveren (in Duitsland en in Zee, de grenzen van het correctiegrid). In Bessel is de afwijking 0.
-Voor zonnestudies kan dit belangrijk zijn.
+### Afwijking van het noorden
+Tenslotte adresseert deze praktijkrichtlijn de afwijking van kaartnoorden, ware noorden (meridiaanrichting of zonne noorden) en tijdsafhankelijk magnetisch noorden. Zie [Ware noorden, kaartnoorden, magnetisch noorden en projectnoorden](#ware-noorden-kaartnoorden-magnetisch-noorden-en-projectnoorden) Afhankelijk van de positie in Nederland kan dit een afwijking van maximaal 3 graden opleveren. Voor zonnestudies kan dit belangrijk zijn.
 
 ### Conclusie
+Voor modellen van minder dan 360 m kunnen cartesische XYZ-coördinaten in BIM rechtstreeks in het terrein uitgezet worden met een nauwkeurigheid van 1 cm, en modellen tot 1,1 km met een nauwkeurigheid van 10 cm. Voor grotere modellen of hogere nauwkeurigheidseisen is correctie nodig of moet via het RDNAP-coördinaten getransformeerd worden.
 
-Voor modellen van minder dan 100 m kunnen lokaal cartesische XYZ-coördinaten in BIM rechtstreeks in het terrein uitgezet worden met een nauwkeurigheid van 1 cm, en modellen tot 1 km met een nauwkeurigheid van 10 cm. Voor grotere modellen of hogere nauwkeurigheidseisen is correctie nodig of moet via het RDNAP-coördinaten getransformeerd worden.
-
-Zodra nauwkeurige aansluiting op geo-informatie, zoals BAG-, BGT- of kadastrale gegevens, vereist is, volstaat een lokaal cartesisch stelsel niet meer. In dat geval moeten coördinaten worden gekoppeld aan het officiële referentiestelsel als RDNAP en dient men bijbehorende projectie- en schaalcorrecties toe te passen. Hiermee wordt het mogelijk om nauwkeurige ruimtelijke bevragingen te doen. 
-
+Voor modellen van minder dan 100 m kunnen RDNAP-coördinaten lokaal als cartesische XYZ-coördinaten in BIM gebruikt worden met een nauwkeurigheid van 1 cm, en modellen tot 1 km met een nauwkeurigheid van 10 cm. Voor grotere modellen of hogere nauwkeurigheidseisen is correctie nodig of moet getransformeerd worden voor nauwkeurige aansluiting op geo-informatie, zoals BAG-, BGT- of kadastrale gegevens. Hiermee wordt het mogelijk om nauwkeurige ruimtelijke bevragingen te doen. 
 
 <aside class="note" title="Bepaal georeferentiemethode en route op basis van projectomvang en nauwkeurigheidsbehoefte">
-  <p><strong>AANBEVELING:</strong> Bepaal voor elk project de omvang (lengte, breedte, hoogte) en de gewenste nauwkeurigheid. Kies op basis hiervan de route, methode en informatievoorziening van georeferentie.  </p>
+  <p><strong>AANBEVELING:</strong> Bepaal voor elk project de omvang (lengte, breedte, hoogte) en de gewenste nauwkeurigheid. Kies op basis hiervan de benodigde correcties of transformatiemethode voor de benodigde route voor georefereren en de metadata over de georeferentie.</p>
 </aside>
   
