@@ -59,13 +59,6 @@
       },
       {
         "target": [
-          "#Afwijking_van_aardkromming > figcaption > .fig-title > .self-link"
-        ],
-        "html": "<a class=\"self-link\" href=\"#fig-Afwijking-door-aardkromming\"></a>",
-        "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
-      },
-      {
-        "target": [
           "a[href=\"#fig-True-North-en-Grid-North\"]"
         ],
         "html": "<a class=\"self-link\" href=\"#fig-True-North-en-Grid-North\"></a>",
@@ -101,16 +94,37 @@
       },
       {
         "target": [
-          "#Routes\\ voor\\ georefereren > figcaption > .fig-title > .self-link"
+          "#Afwijking_van_aardkromming > figcaption > .fig-title > .self-link"
         ],
         "html": "<a class=\"self-link\" href=\"#fig-Afwijking-door-aardkromming\"></a>",
         "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
       },
       {
         "target": [
-          "#\\32 D-en-3D-Geo-of-BIM-combineren > figcaption > .fig-title > .self-link"
+          "a[href=\"#fig-Routes-voor-georefereren\"]"
+        ],
+        "html": "<a class=\"self-link\" href=\"#fig-Routes-voor-georefereren\"></a>",
+        "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+      },
+      {
+        "target": [
+          "div:nth-child(4) > figure:nth-child(1) > figcaption > .fig-title > .self-link"
         ],
         "html": "<a class=\"self-link\" href=\"#fig-2D-en-3D-Geo-of-BIM-combineren\"></a>",
+        "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+      },
+      {
+        "target": [
+          "figure:nth-child(2) > figcaption > .fig-title > .self-link"
+        ],
+        "html": "<a class=\"self-link\" href=\"#fig-2D-en-3D-Geo-of-BIM-combineren\"></a>",
+        "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+      },
+      {
+        "target": [
+          "#Schaalprobleem_bij_georefereren > figcaption > .fig-title > .self-link"
+        ],
+        "html": "<a class=\"self-link\" href=\"#fig-Schaalprobleem_bij_georefereren\"></a>",
         "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
       },
       {
@@ -136,6 +150,41 @@
       },
       {
         "target": [
+          "#Onderlegger-met-coördinatenstelsel-in-Civil3D > figcaption > .fig-title > .self-link"
+        ],
+        "html": "<a class=\"self-link\" href=\"#fig-Onderlegger-met-coördinatenstelsel-in-Civil3D\"></a>",
+        "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+      },
+      {
+        "target": [
+          "#Onderlegger-zonder-coördinatenstelsel-in-Civil3D > figcaption > .fig-title > .self-link"
+        ],
+        "html": "<a class=\"self-link\" href=\"#fig-Onderlegger-zondert-coördinatenstelsel-in-Civil3D\"></a>",
+        "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+      },
+      {
+        "target": [
+          "#Onderlegger-met-coördinatenstelsel-in-Autocad > figcaption > .fig-title > .self-link"
+        ],
+        "html": "<a class=\"self-link\" href=\"#fig-Onderlegger-met-coördinatenstelsel-in-Autocad\"></a>",
+        "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+      },
+      {
+        "target": [
+          "#Coordinatenstelsel-toekennen-in-Civil-1\\. > figcaption > .fig-title > .self-link"
+        ],
+        "html": "<a class=\"self-link\" href=\"#fig-Coordinatenstelsel-toekennen-in-Civil-1\"></a>",
+        "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+      },
+      {
+        "target": [
+          "#Coordinatenstelsel-toekennen-in-Civil-2\\. > figcaption > .fig-title > .self-link"
+        ],
+        "html": "<a class=\"self-link\" href=\"#fig-Coordinatenstelsel-toekennen-in-Civil-2\"></a>",
+        "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+      },
+      {
+        "target": [
           "#Scherm-in-Revit-dat-Lokaal-Coordinatiepunt-en-CRS-Coordinatiepunt-laat-zien > figcaption > .fig-title > .self-link"
         ],
         "html": "<a class=\"self-link\" href=\"#fig-Scherm-in-Revit-dat-Lokaal-Coordinatiepunt-en-CRS-Coordinatiepunt-laat-zien\"></a>",
@@ -143,9 +192,44 @@
       },
       {
         "target": [
+          "#Onderligger-linken-in-Revit > figcaption > .fig-title > .self-link"
+        ],
+        "html": "<a class=\"self-link\" href=\"#fig-Onderligger-linken-in-Revit\"></a>",
+        "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+      },
+      {
+        "target": [
+          "#Melding-coordinaten-overgenomen-in-revit > figcaption > .fig-title > .self-link"
+        ],
+        "html": "<a class=\"self-link\" href=\"#fig-Melding-coordinaten-overgenomen-in-revit\"></a>",
+        "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+      },
+      {
+        "target": [
+          "#Melding-coordinaten-zonder-stelsel-in-revit > figcaption > .fig-title > .self-link"
+        ],
+        "html": "<a class=\"self-link\" href=\"#fig-Melding-coordinaten-zonder-stelsel-in-rev\"></a>",
+        "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+      },
+      {
+        "target": [
           "a[href$=\"#fig-Controle-in-Revit\"]"
         ],
         "html": "<a class=\"self-link\" href=\"#fig-Controle-in-Revit\"></a>",
+        "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+      },
+      {
+        "target": [
+          "#Revit-zonder-coordinatenstelsel > figcaption > .fig-title > .self-link"
+        ],
+        "html": "<a class=\"self-link\" href=\"#fig-Revit-zonder-coordinatenstelsel\"></a>",
+        "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+      },
+      {
+        "target": [
+          "#Revit_met_coordinatenstelsel > figcaption > .fig-title > .self-link"
+        ],
+        "html": "<a class=\"self-link\" href=\"#fig-Revit_met_coordinatenstelsel\"></a>",
         "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
       },
       {
@@ -197,13 +281,6 @@
           "#example-voorbeeld-van-georeferentie-met-ifcmapconversion-in-ifc-0 > pre > .ifc.hljs"
         ],
         "html": "<code class=\"ifc hljs\" aria-busy=\"false\">",
-        "failureSummary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
-      },
-      {
-        "target": [
-          "#example-voorbeeld-van-een-engineered-crs-in-wkt > pre > .javascript.hljs"
-        ],
-        "html": "<code aria-busy=\"false\" class=\"hljs javascript\">",
         "failureSummary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
       },
       {
