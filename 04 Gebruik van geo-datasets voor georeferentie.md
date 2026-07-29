@@ -28,8 +28,8 @@ De onderstaande figuur toont de combinatie van een BIM-model met het DTB/1GiS va
 <figure id="Geo_overzicht_BIM_DTB">
 
   <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-    <img src="./media/geo_overzicht.png" alt="geo_overzicht" height="250"/>
-    <img src="./media/geo_overzicht_2.png" alt="geo_overzicht_2" height="250"/>
+    <img src="./media/Geografische uitlijning/geo_overzicht.png" alt="geo_overzicht" height="250"/>
+    <img src="./media/Geografische uitlijning/geo_overzicht_2.png" alt="geo_overzicht_2" height="250"/>
   </div>
 
   <figcaption>
@@ -148,6 +148,6 @@ De wijze waarop objecten binnen een geodataset worden geclassificeerd, is essent
 Het moment van inwinning bepaalt de bruikbaarheid van de dataset, aangezien iedere geodataset die wordt weergegeven in een GIS-omgeving een momentopname is. Een geodataset vertegenwoordigt nooit de volledige werkelijkheid, maar vormt slechts een benadering van de omgeving. Hierdoor kan de omgeving, afhankelijk van de mate van verandering, in de loop van de tijd sterk of minder sterk afwijken van de oorspronkelijke weergave. Dit wordt geïllustreerd in de onderstaande figuren aan de hand van de stationsregio van Delft, zoals weergegeven in het Actueel Hoogtebestand Nederland en de 3D Basisvoorziening, waarbij de bouw van de stationsregio een ingrijpende verandering in het terrein laat zien.
 
 <figure id="Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft">
-      <img src="./media/Regio_delft_verandering.png" alt="Leefttijd van verschillende puntenwolken van de stationsregio in Delft" height="500"/>
+      <img src="./media/Geografische uitlijning/Regio_delft_verandering.png" alt="Leefttijd van verschillende puntenwolken van de stationsregio in Delft" height="500"/>
     <figcaption><a class="self-link" href="#fig-Leefttijd-van-verschillende-puntenwolken-van-de-stations-regio-in-Delft"></bdi></a><span class="fig-title">Leefttijd van verschillende puntenwolken van de stationsregio in Delft (figuur is uit wp1 van het <a href="https://www.ahn.nl/integrale-hoogtevoorziening-nederland"> <em>Intergaal Hoogtevoorziening Nederland</em></a> overgenomen.) </span></figcaption>
 </figure>

@@ -75,7 +75,7 @@ Het voorbeeld hieronder toont een definitie van een EngineeredCRS met tranformat
 ```json 
   {
     "$schema": "https://proj.org/en/latest/schemas/v0.7/projjson.schema.json",
-    "type": "Transformation",
+    "type": "BoundCRS",
     "name": "EngineeredCRS naar RDNAP",
     "source_crs": {
       "type": "EngineeringCRS",
@@ -187,18 +187,51 @@ Het voorbeeld hieronder toont een definitie van een EngineeredCRS met tranformat
           }
       ]
     },
+    "transformation": {
+    "name": "Lokale BIM affine transformatie",
+
     "method": {
-      "name": "coordinateframe"
+      "name": "Affine transformation"
     },
+
     "parameters": [
-          {"name": "X-axis translation", "value": 181127.0, "unit": "metre"},
-          {"name": "Y-axis translation", "value": 457026.0, "unit": "metre"},
-          {"name": "Z-axis translation", "value": 5.2, "unit": "metre"},
-          {"name": "X-axis rotation", "value": 0, "unit": "degree"},
-          {"name": "Y-axis rotation", "value": 0, "unit": "degree"},
-          {"name": "Z-axis rotation", "value": 0, "unit": "degree"},
-          {"name": "Scale difference", "value": 1.000, "unit": "unity"}
-      ]
+      {
+        "name": "X translation",
+        "value": 181127.0,
+        "unit": "metre"
+      },
+      {
+        "name": "Y translation",
+        "value": 457026.0,
+        "unit": "metre"
+      },
+      {
+        "name": "Z translation",
+        "value": 5.2,
+        "unit": "metre"
+      },
+      {
+        "name": "Rotation around Z",
+        "value": 12.5,
+        "unit": "degree"
+      },
+      {
+        "name": "Scale X",
+        "value": 1.0,
+        "unit": "unity"
+      },
+      {
+        "name": "Scale Y",
+        "value": 1.0,
+        "unit": "unity"
+      },
+      {
+        "name": "Scale Z",
+        "value": 1.0,
+        "unit": "unity"
+      }
+    ]
   }
+}
 ```
 </aside>

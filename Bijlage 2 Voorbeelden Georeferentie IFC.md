@@ -32,10 +32,10 @@ Voorbeeld van IfcMapConversionScaled in IFC:
   3.55,                        -- Hoogte verplaatsing
   1.0,                         -- Richting van de X-as
   0.0,                         -- Richting van de Y-as
-  1.0                          -- Schaal
-                              -- FactorX
-                              -- FactorY
-                              -- FactorZ 
+  1.0,                          -- Algemene Schaal
+  0.99987654,                  -- FactorX 
+  0.99987654,                  -- FactorY
+  1.0                          -- FactorZ 
 );
 ```
 </aside>
