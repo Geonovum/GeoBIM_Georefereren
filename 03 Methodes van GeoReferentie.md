@@ -145,7 +145,7 @@ Een locatienaam opgeven:
 
 <div style="display: flex; align-items: flex-start; gap: 20px;">
   <div>
-<img src="./media/Georeferentie Informatie Levels/georefereren_Level_10.png" alt="Georeferentie level 10" title="Georeferentie Level 10" width="300">
+<img src="./media/Georeferentie Informatie Levels/georefereren_Level_10.png" alt="Georeferentie level 10" title="Georeferentie Level 10" style="float: left; width: min(300px, 35vw); height: auto; margin: 0 20px 10px 0;">
   </div>
   <div>
     <p>

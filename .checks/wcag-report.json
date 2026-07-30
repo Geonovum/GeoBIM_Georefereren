@@ -94,6 +94,13 @@
       },
       {
         "target": [
+          "#Afwijkingen-en-vervormingen > figcaption > .fig-title > .self-link"
+        ],
+        "html": "<a class=\"self-link\" href=\"#fig-Afwijkingen-en-vervormingen\"></a>",
+        "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+      },
+      {
+        "target": [
           "#Afwijking_van_aardkromming > figcaption > .fig-title > .self-link"
         ],
         "html": "<a class=\"self-link\" href=\"#fig-Afwijking-door-aardkromming\"></a>",
