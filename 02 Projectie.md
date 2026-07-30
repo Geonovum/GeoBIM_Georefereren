@@ -268,6 +268,11 @@ Wanneer geografische coördinaten zonder passende transformatie of projectie rec
 
 Het verschil tussen een vlak cartesisch stelsel en de werkelijke geometrie van het aardoppervlak vormt een fundamentele bron van meet- en modelafwijkingen. Een goed begrip van deze afwijkingen is essentieel om de nauwkeurigheid van ruimtelijke analyses te kunnen beoordelen en om te bepalen wanneer correcties voor aardkromming noodzakelijk zijn.
 
+<figure id="Afwijkingen-en-vervormingen"  style="display: block; text-align: center; margin: 0 auto;">
+      <img src="./media/projectie/8_afwijkingen_en_vervorming.png" alt="Afwijkingen en vervormingen die op kunnen treden schematisch weergegeven." style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;"/>
+          <figcaption><a class="self-link" href="#fig-Afwijkingen-en-vervormingen"></bdi></a><span class="fig-title">Afwijkingen en vervormingen die op kunnen treden schematisch weergegeven.</span></figcaption>
+  </figure>
+
 ### Schaalfout door projectie 
 Een afwijking waarmee men rekening moet houden bij het gebruik van een geprojecteerd CRS met een hoekgetrouwe projectie (zoals RD) is de afwijking door lijnvergroting of -verkleining door de projectie. Deze afwijking komt door de schaalfout beschreven in [Geprojecteerd CRS](#geprojecteerd-crs). Dit schaalverschhil treedt op tussen bij XY-coördinaten van een BIM-model en RD-coordinaten, maar niet bij de Z-coördinaat van een BIM-model nen NAP-hoogte. 
 

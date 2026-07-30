@@ -56,8 +56,14 @@ Een 2D gelijkvormigheidstransformatie (ook wel Helmert-transformatie genoemd) is
 **<dfn>2D Helmert transformatie</dfn>** <br>
 Zie <a>2D gelijkvormigheidstransformatie</a><br>
 <br>
-**<dfn>Kleinste kwadratenschatting</dfn>** <br>
-Kleinste kwadratenschatting (Least Squares Estimation, LSE) is een wiskundige methode om parameters in een model te schatten door de som van de kwadraten van de afwijkingen (residuen) tussen waargenomen waarden en modelvoorspellingen zo klein mogelijk te maken. Het is een fundamenteel principe in statistiek, geodesie, econometrie en data-analyse.<br>
+**<dfn>3D gelijkvormigheidstransformatie</dfn>** <br>
+Een 3D gelijkvormigheidstransformatie (ook wel Helmert-transformatie genoemd) is een wiskundige transformatie die een orthogonale coördinatenruimte (3D) omzet naar een andere, waarbij de vorm en verhoudingen behouden blijven. Het wordt veel gebruikt in de geodesie en GIS om coördinaten van het ene stelsel naar het andere te transformeren.<br>
+<br>
+**<dfn>3D Helmert transformatie</dfn>** <br>
+Zie <a>3D gelijkvormigheidstransformatie</a><br>
+<br>
+**<dfn>kleinstekwadratenschatting</dfn>** <br>
+kleinstekwadratenschatting (Least Squares Estimation, LSE) is een wiskundige methode om parameters in een model te schatten door de som van de kwadraten van de afwijkingen (residuen) tussen waargenomen waarden en modelvoorspellingen zo klein mogelijk te maken. Het is een fundamenteel principe in statistiek, geodesie, econometrie en data-analyse.<br>
 <br>
 **<dfn>Overbepaaldheid</dfn>** <br>
 Overbepaaldheid betekent dat er in een wiskundig of geodetisch probleem meer vergelijkingen of waarnemingen beschikbaar zijn dan strikt noodzakelijk om de onbekenden te bepalen. Het systeem van vergelijkingen is dus “overbepaald”.<br>
@@ -110,6 +116,9 @@ True verwijst naar de richting naar de Noordpool. Dit is weer een andere dan het
 **<dfn>Project North</dfn>** <br>
 <a>Project North</a> is een term uit bouwkunde en ontwerpsoftware die verwijst naar de geometrische oriëntatie van een gebouw binnen een projecttekening. Het is dus niet het kaart noorden (Grid North), maar een praktische richting die gebruikt wordt om het ontwerp overzichtelijk en werkbaar te maken. De hoek tussen Project North en Grid North is belangrijk. Deze dient 3 graden precies bekend te zijn.<br> 
 <br>
+**<dfn>Magnetic North</dfn>** <br>
+Het <a>magnetisch noorden</a> is het punt op aarde waar het aardmagnetisch veld het sterkst is en waar de noordpool van een kompasnaald naartoe wijst. In tegenstelling tot het geografische noorden, dat een vast punt is op de Noordpool, is het magnetisch noorden dynamisch en beweegt het door veranderingen in de vloeibare kern van de aarde.<br> 
+<br>
 **<dfn>DTB</dfn>**<br>
 <a>DTB</a> staat voor Digitaal Topografisch Bestand. Het is een standaard geo-informatiebestand voor Rijkswaterstaat. Het DTB dient als basisbestand voor diverse werkprocessen, van beheer en onderhoud tot onderzoek en begrotingen. et Digitaal Topografisch Bestand bevat zeer gedetailleerde geo-informatie (schaal 1:1.000) van zo'n 450 soorten objecten bij wegen en waterwegen. Denk hierbij voor wegen aan verlichtingsobjecten, hectometerbordjes, verfstrepen en verkeersborden, maar ook aan portalen, wegkanten en geleiderailconstructies.Voor waterwegen staan er in het DTB bijvoorbeeld dijken, kades, sluizen, oevers, kribben, duikers, afrasteringen en vaarwegsignaleringen. Het bestand bevat tevens hoogte-informatie van het maaiveld en bepaalde objecten zoals de hoogte van geluidsschermen. Ook breuklijnen, zoals kanten van een talud, worden ingemeten en in het bestand opgenomen.
 
@@ -139,6 +148,15 @@ Een geo-systeem is een gestandaardiseerd coördinaten- en referentiekader (CRS +
 **<dfn>GEO-omgeving</dfn>**
 Een geo-omgeving is het geheel van data, standaarden, services en infrastructuur waarmee geografische informatie wordt uitgewisseld en beschikbaar gemaakt.
 
+**<dfn>GEO-software</dfn>**
+Geo-software is programmatuur, een softwaretoepassing die functies biedt voor het werken met geografische informatie, zoals het vastleggen, verwerken, analyseren, visualiseren of uitwisselen van geo-data.
+
 **<dfn>GIS-systeem</dfn>**
 Een complete omgeving om geografische data te beheren, analyseren en visualiseren. Dit is software met tooling/operations. Het is hierin mogelijk om GEO-data te bewerken of analyses te doen.
+
+**<dfn>fysische hoogte</dfn>**
+Hoogte zoals uit waterpassing verkregen wordt, wat een geoïde als referentievlak heeft. Hoogteverschillen zijn afhankelijk van de massaverdeling van de aarde. Fysische hoogten is meestal nauw gerelateerd aan het zeeniveau, in Nederland ook met het Normaal Amsterdams Peil (NAP).Tussen punten met exact dezelfde fysische hoogte zal in theorie geen water stromen.
+
+
+
 
