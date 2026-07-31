@@ -110,7 +110,7 @@ let respecConfig = {
         companyURL: "https://www.on-track.nl/",
       },
       {
-        name: "Etiene Gerard Top",
+        name: "Etienne Top",
         company: "Friso Bouwgroep B.V.",
         companyURL: "https://frisobouwgroep.nl/",
       },

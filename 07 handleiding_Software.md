@@ -115,12 +115,13 @@ De onderlegger kan getekend zijn op RD-coördinaten. Dat betekent vaak dat de ge
 1.	Verplaats en roteer de onderlegger naar een referentie-punt waarvan je de positie zeker weet of naar het model, zodat de onderlegger op de juiste positie staat. Verplaats daarbij niet het getekend model naar de juiste locatie op de onderlegger, maar verplaats de onderlegger naar het model.
 2.	Vergrendel de link met Pin, zodat hij niet ongemerkt kan verschuiven.
 3.	Ga naar Manage > Coordinates > Acquire Coordinates en selecteer de onderlegger om de coördinaten over te nemen. Gebruik daarbij niet “Save Position” van de DXF of DWG. Revit maakt anders een Shared Coordinates bestand aan en wijzigt de locatie van de DXF of DWG waardoor die niet meer correct is.
-4.	Selecteer de gelinkte onderlegger.
-5.	Lees de melding die Revit daarna toont. 
-6. Selecteer het Survey Point, unclip het en verplaatst het naar de gekozen X- en Y-waarden van het CRS-Coördinatiepunt (hele X- en Y-waarden in het RD-stelsel) en geef als Z-waarde de hoogte ten opzichte van NAP op. Clip vervolgens het Survey Point en verplaats het Survey Point in de Z-richting terug naar 0.
-7. Plaats een coördinatie-object op het Survey Point.
-8. Plaats een coördinatie-object op het <a>Project Basepoint</a>.
-9. Als het ontwerp zover is dat de stramienen vaststaan dan kan het Project Basepoint verplaatst worden zodat die op 5 of 10m van de eerste stramienen staat zoals gebruikelijk. Vóór het verplaatsten moet het Project Basepoint ge-unclipt worden. Verplaats vervolgens ook een coördinatie-object naar de nieuwe positie van het Project Basepoint.
+4.  Na "Acquire Coordinates kan Revit bij het opslaan of synchroniseren vragen of de gewijzigde positie van de gelinkte onderlegger moet worden opgeslagen. Of die vraag komt verschilt per bronbestand.  De optie "Disable Shared Positioning" dient te worden gekozen, anders schrijven de nieuwe coordinaten terug naar de onderleger.
+5.	Selecteer de gelinkte onderlegger.
+6.	Lees de melding die Revit daarna toont. 
+7. Selecteer het Survey Point, unclip het en verplaatst het naar de gekozen X- en Y-waarden van het CRS-Coördinatiepunt (hele X- en Y-waarden in het RD-stelsel) en geef als Z-waarde de hoogte ten opzichte van NAP op. Clip vervolgens het Survey Point en verplaats het Survey Point in de Z-richting terug naar 0.
+8. Plaats een coördinatie-object op het Survey Point.
+9. Plaats een coördinatie-object op het <a>Project Basepoint</a>.
+10. Als het ontwerp zover is dat de stramienen vaststaan dan kan het Project Basepoint verplaatst worden zodat die op 5 of 10m van de eerste stramienen staat zoals gebruikelijk. Vóór het verplaatsten moet het Project Basepoint ge-unclipt worden (vanaf Revit 2020.2 is de clip van Project Basepoint verwijderd). Verplaats vervolgens ook een coördinatie-object naar de nieuwe positie van het Project Basepoint.
 
 Staat er achter GIS Coordinate System een omschrijving van het stelsel, dan is het stelsel herkend en overgenomen.
 
@@ -162,7 +163,7 @@ Door een omissie in de IFC-exporter van Revit moet voorafgaand aan het exportere
 
 ### Controle van georeferentie
 
-Wanneer men late wil controleren of er een coördinatenstelsel gebruikt wordt in het model, ga dan naar Manage > Project Location > Location, tabblad Location.
+Wanneer men later wil controleren of er een coördinatenstelsel gebruikt wordt in het model, ga dan naar Manage > Project Location > Location, tabblad Location.
 
 Wanneer er geen coördinatenstelsel gedefinieerd is dan staat *Define Location by* op Internet Mapping Service en de kaart toont de standaardlocatie uit de Revit-template. Het model staat dan feitelijk in de Verenigde Staten, in de omgeving van Boston, zoals op de kaart te zien is.
 
