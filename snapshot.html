@@ -831,7 +831,7 @@ body:has(input[name=color-scheme][value=dark]:checked) .hljs{
       "companyURL": "https://www.on-track.nl/"
     },
     {
-      "name": "Etiene Gerard Top",
+      "name": "Etienne Top",
       "company": "Friso Bouwgroep B.V.",
       "companyURL": "https://frisobouwgroep.nl/"
     },
@@ -858,7 +858,7 @@ body:has(input[name=color-scheme][value=dark]:checked) .hljs{
     <h2>
       Geonovum Praktijkrichtlijn<br>
       Werkversie
-      <time class="dt-published" datetime="2026-07-30">30 juli 2026</time>
+      <time class="dt-published" datetime="2026-07-31">31 juli 2026</time>
     </h2>
     <dl>
       
@@ -897,7 +897,7 @@ body:has(input[name=color-scheme][value=dark]:checked) .hljs{
   </dd><dd class="editor p-author h-card vcard">
     <span class="p-name fn">Jan Brouwer</span> (<a class="p-org org h-org" href="https://www.on-track.nl/">on-track</a>)
   </dd><dd class="editor p-author h-card vcard">
-    <span class="p-name fn">Etiene Gerard Top</span> (<a class="p-org org h-org" href="https://frisobouwgroep.nl/">Friso Bouwgroep B.V.</a>)
+    <span class="p-name fn">Etienne Top</span> (<a class="p-org org h-org" href="https://frisobouwgroep.nl/">Friso Bouwgroep B.V.</a>)
   </dd><dd class="editor p-author h-card vcard">
     <span class="p-name fn">Jantien Stoter</span> (<a class="p-org org h-org" href="https://3d.bk.tudelft.nl/">TU Delft</a>)
   </dd>
@@ -1801,12 +1801,13 @@ Revit kent <a href="#dfn-project-units" class="internalDFN" data-link-type="dfn"
 <li>Verplaats en roteer de onderlegger naar een referentie-punt waarvan je de positie zeker weet of naar het model, zodat de onderlegger op de juiste positie staat. Verplaats daarbij niet het getekend model naar de juiste locatie op de onderlegger, maar verplaats de onderlegger naar het model.</li>
 <li>Vergrendel de link met Pin, zodat hij niet ongemerkt kan verschuiven.</li>
 <li>Ga naar Manage &gt; Coordinates &gt; Acquire Coordinates en selecteer de onderlegger om de coördinaten over te nemen. Gebruik daarbij niet “Save Position” van de DXF of DWG. Revit maakt anders een Shared Coordinates bestand aan en wijzigt de locatie van de DXF of DWG waardoor die niet meer correct is.</li>
+<li>Na "Acquire Coordinates kan Revit bij het opslaan of synchroniseren vragen of de gewijzigde positie van de gelinkte onderlegger moet worden opgeslagen. Of die vraag komt verschilt per bronbestand.  De optie "Disable Shared Positioning" dient te worden gekozen, anders schrijven de nieuwe coordinaten terug naar de onderleger.</li>
 <li>Selecteer de gelinkte onderlegger.</li>
 <li>Lees de melding die Revit daarna toont. </li>
 <li>Selecteer het Survey Point, unclip het en verplaatst het naar de gekozen X- en Y-waarden van het CRS-Coördinatiepunt (hele X- en Y-waarden in het RD-stelsel) en geef als Z-waarde de hoogte ten opzichte van NAP op. Clip vervolgens het Survey Point en verplaats het Survey Point in de Z-richting terug naar 0.</li>
 <li>Plaats een coördinatie-object op het Survey Point.</li>
 <li>Plaats een coördinatie-object op het <a href="#dfn-project-basepoint" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-project-basepoint-2">Project Basepoint</a>.</li>
-<li>Als het ontwerp zover is dat de stramienen vaststaan dan kan het Project Basepoint verplaatst worden zodat die op 5 of 10m van de eerste stramienen staat zoals gebruikelijk. Vóór het verplaatsten moet het Project Basepoint ge-unclipt worden. Verplaats vervolgens ook een coördinatie-object naar de nieuwe positie van het Project Basepoint.</li>
+<li>Als het ontwerp zover is dat de stramienen vaststaan dan kan het Project Basepoint verplaatst worden zodat die op 5 of 10m van de eerste stramienen staat zoals gebruikelijk. Vóór het verplaatsten moet het Project Basepoint ge-unclipt worden (vanaf Revit 2020.2 is de clip van Project Basepoint verwijderd). Verplaats vervolgens ook een coördinatie-object naar de nieuwe positie van het Project Basepoint.</li>
 </ol>
 <p>Staat er achter GIS Coordinate System een omschrijving van het stelsel, dan is het stelsel herkend en overgenomen.</p>
 <figure id="Melding-coordinaten-overgenomen-in-revit" style="display: block; text-align: center; margin: 0 auto;">
@@ -1835,7 +1836,7 @@ Revit kent <a href="#dfn-project-units" class="internalDFN" data-link-type="dfn"
 </figure><p><strong>Units</strong>
 Door een omissie in de IFC-exporter van Revit moet voorafgaand aan het exporteren naar IFC de Project Units Length op meter ingesteld worden.</p>
 </section><section id="controle-van-georeferentie"><div class="header-wrapper"><h4 id="x8-2-3-controle-van-georeferentie"><bdi class="secno">8.2.3 </bdi>Controle van georeferentie</h4><a class="self-link" href="#controle-van-georeferentie" aria-label="Permalink for Section 8.2.3"></a></div>
-<p>Wanneer men late wil controleren of er een coördinatenstelsel gebruikt wordt in het model, ga dan naar Manage &gt; Project Location &gt; Location, tabblad Location.</p>
+<p>Wanneer men later wil controleren of er een coördinatenstelsel gebruikt wordt in het model, ga dan naar Manage &gt; Project Location &gt; Location, tabblad Location.</p>
 <p>Wanneer er geen coördinatenstelsel gedefinieerd is dan staat <em>Define Location by</em> op Internet Mapping Service en de kaart toont de standaardlocatie uit de Revit-template. Het model staat dan feitelijk in de Verenigde Staten, in de omgeving van Boston, zoals op de kaart te zien is.</p>
 <figure id="Revit-zonder-coordinatenstelsel" style="display: block; text-align: center; margin: 0 auto;">
       <img src="./media/Handleiding/Revit/NLRS/Revit_zonder_coordinatenstelsel.jpg" alt="Setup-in-Revit" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
