@@ -140,7 +140,7 @@ let respecConfig = {
         "Stoter2020": {
             href: "https://3d.bk.tudelft.nl/ken/files/20_geoinfo.pdf",
             title: "Gebruik van BIM in Geo in de praktijk: voorbij de hype",
-            authors: ["Jantien Stoter, Francesca Noarda, Teng Wu, Ken Arroyo Ohori, Thomas Krijnen"],
+            authors: ["Jantien Stoter, Francesca Noardo, Teng Wu, Ken Arroyo Ohori, Thomas Krijnen"],
             date: "2020"
         },
         "Mallela2024": {
@@ -149,10 +149,10 @@ let respecConfig = {
             authors: ["Jagannath Mallela, Abhishek Bhargav"],
             date: "2024"
       },
-      "Christian2019": {
+      "Clemen2019": {
             href: "https://jgcc.geoprevi.ro/docs/2019/10/jgcc_2019_no10_3.pdf",
             title: "Level of Georeferencing (LoGeoRef) using IFC for BIM",
-            authors: ["Christian Clemens, Görne Hendrik"],
+            authors: ["Christian Clemen, Hendrik Görne"],
             date: "2019"
         },
       "Hakim2024": {
@@ -160,6 +160,12 @@ let respecConfig = {
             title: "Enhancing Georeferencing of IFC Models through Surveyed Points Integration",
             authors: ["Amir Hakim, Ken Arroyo Ohori, Jasper van der Vaart, Siham El Yamani, Jantien Stoter"],
             date: "2024"
+        },
+      "VanBerlo2026": {
+            href: "https://www.researchgate.net/publication/408634536_PROPOSAL_FOR_A_MODERN_FOUNDATION_FOR_A_DATA-DRIVEN_BUILT_ENVIRONMENT",
+            title: "Proposal for a modern foundation for a data-driven built environment",
+            authors: ["Léon van Berlo, Thomas Krijnen, Tom van Diggelen, Artur Tomczak, Evandro Alfieri, David de Koning, Greg Schleusner, Helga Tauscher, Dennis Shelden"],
+            date: "2026"
         }
-    }   
+    }
 };

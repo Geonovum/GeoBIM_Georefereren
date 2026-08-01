@@ -92,7 +92,7 @@ Coördinaten worden uitgedrukt in ellipsoïdsche breedte (<span style="font-fami
 
 ### Geprojecteerd CRS
 
-Om geo-informatie vanaf het gekromde aardoppervlak op een plat vlak weer te geven, worden kaartprojecties gebruikt. Veel gebruikte projectievlakken zijn een cilinderopperlvlak, kegeloppervlak en een plat vlak.
+Om geo-informatie vanaf het gekromde aardoppervlak op een plat vlak weer te geven, worden kaartprojecties gebruikt. Veel gebruikte projectievlakken zijn een cilinderoppervlak, kegeloppervlak en een plat vlak.
 
 
 <figure id="Projecties" style="display: block; text-align: center; margin: 0 auto;">
@@ -100,12 +100,12 @@ Om geo-informatie vanaf het gekromde aardoppervlak op een plat vlak weer te geve
     <figcaption><a class="self-link" href="#fig-Projecties"></bdi></a><span class="fig-title">Projecties</span></figcaption>
 </figure>
 
-Elke <a>kaartprojectie</a> introduceert vervormingen in hoeken, afstanden en/of oppervlakten, omdat het onmogelijk is om het gekromde aardoppervlak af te beelden in een plat vlak en daarbij alle drie eigenschappen tegelijk exact te behouden. De keuze van een geschikte projectie hangt af van het doel van de kaart en welke eigenschappen het belangrijkst zijn voor de toepassing. In Nederland wordt het geprojecteerde RD-stelsel gebruikt. Het RD-stelsel heeft als eigenschap dat hoeken onvervormd worden weergegeven en afwijkingen in afstanden en oppervlakte beperkt zijn binnen Nederland. De formule om werkelijke afstanden te schalen naar afstanden in het RD-stelsel is: 
+Elke <a>kaartprojectie</a> introduceert vervormingen in hoeken, afstanden en/of oppervlakten, omdat het onmogelijk is om het gekromde aardoppervlak af te beelden in een plat vlak en daarbij alle drie eigenschappen tegelijk exact te behouden. De keuze van een geschikte projectie hangt af van het doel van de kaart en welke eigenschappen het belangrijkst zijn voor de toepassing. In Nederland wordt het geprojecteerde RD-stelsel gebruikt, met een plat vlak als projectievlak (rechts in <a href="#Projecties"></a>). Het RD-stelsel heeft als eigenschap dat hoeken onvervormd worden weergegeven en afwijkingen in afstanden en oppervlakte beperkt zijn binnen Nederland. De formule om werkelijke afstanden te schalen naar afstanden in het RD-stelsel is: 
 
-<math display="block"><mi>Δℓ</mi><mo>=</mo><mo>-</mo><mn>9,2</mn><mo>+</mo><mfrac><mrow><msup><mrow><mo>(</mo><msub><mi>x</mi><mi>RD</mi></msub><mo>-</mo><mn>155000</mn><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><msub><mi>y</mi><mi>RD</mi></msub><mo>-</mo><mn>436000</mn> <mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mn>1629</mn><mo>·</mo><msup><mn>10</mn><mo>6</mo></msup></mrow></mfrac><mtext> mm per 100 m</mtext>
+<math display="block"><mi>Δℓ</mi><mo>=</mo><mo>-</mo><mn>9,2</mn><mo>+</mo><mfrac><mrow><msup><mrow><mo>(</mo><msub><mi>x</mi><mi>RD</mi></msub><mo>-</mo><mn>155000</mn><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><msub><mi>y</mi><mi>RD</mi></msub><mo>-</mo><mn>436000</mn> <mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mn>1629</mn><mo>·</mo><msup><mn>10</mn><mn>6</mn></msup></mrow></mfrac><mtext> mm per 100 m</mtext>
 </math>
 
-waarbij:  <math><msub><mi>x</mi><mi>RD</mi></math> en <math><msub><mi>y</mi><mi>RD</mi></math> de gemiddelde RD-coördinaten in meter zijn van locatie van het BIM-project.
+waarbij:  <math><msub><mi>x</mi><mi>RD</mi></msub></math> en <math><msub><mi>y</mi><mi>RD</mi></msub></math> de gemiddelde RD-coördinaten in meter zijn van de locatie van het BIM-project.
 
 Voor een precisie beter dan 1 cm per 500 meter (10 centimeter per 5 km) moet ook rekening gehouden worden met het onregelmatige RD-correctiegrid en volstaat bovenstaande formule niet.
 
@@ -146,8 +146,8 @@ Waar het projectievlak binnen de ellipsoïde valt worden afstanden korter weerge
 ### Samengesteld CRS
 
 Een CRS dat bestaat uit de combinatie van een 2D CRS en een vertikaal CRS, bijvoorbeeld een geprojecteerd CRS en een verticaal CRS, noemen we een <a>Samengesteld CRS</a>. Een <a>Coördinatentransformatie</a> van of naar een samengesteld CRS wordt afzonderlijk uitgevoerd voor de CRS'en van het samengestelde CRS, bijvoorbeeld: voor de transformatie van 3D geografisch ETRS89 naar het samengestelde RDNAP, wordt apart van ETRS89 naar RD en apart van ETRS89 naar NAP getransformeerd. Samengestelde CRS'en in Nederland die relevant zijn voor BIM-modellen zijn:
-* RDNAP (EPSG:7415), de samenstelling van geprojecteerd CRS RD (EPSG:28992) en verticaal CRS NAP (ESPG:5709).
-* ETRS89 met NAP-hoogte (EPSG:9286), de samenstelling van 2D geografisch CRS ETRS89 (EPSG:4258) en verticaal CRS NAP (ESPG:5709).
+* RDNAP (EPSG:7415), de samenstelling van geprojecteerd CRS RD (EPSG:28992) en verticaal CRS NAP (EPSG:5709).
+* ETRS89 met NAP-hoogte (EPSG:9286), de samenstelling van 2D geografisch CRS ETRS89 (EPSG:4258) en verticaal CRS NAP (EPSG:5709).
 
 ## Lokaal CRS
 
@@ -274,7 +274,7 @@ Het verschil tussen een vlak cartesisch stelsel en de werkelijke geometrie van h
   </figure>
 
 ### Schaalfout door projectie 
-Een afwijking waarmee men rekening moet houden bij het gebruik van een geprojecteerd CRS met een hoekgetrouwe projectie (zoals RD) is de afwijking door lijnvergroting of -verkleining door de projectie. Deze afwijking komt door de schaalfout beschreven in [Geprojecteerd CRS](#geprojecteerd-crs). Dit schaalverschhil treedt op tussen bij XY-coördinaten van een BIM-model en RD-coordinaten, maar niet bij de Z-coördinaat van een BIM-model nen NAP-hoogte. 
+Een afwijking waarmee men rekening moet houden bij het gebruik van een geprojecteerd CRS met een hoekgetrouwe projectie (zoals RD) is de afwijking door lijnvergroting of -verkleining door de projectie. Deze afwijking komt door de schaalfout beschreven in [Geprojecteerd CRS](#geprojecteerd-crs). Dit schaalverschil treedt op tussen de XY-coördinaten van een BIM-model en RD-coördinaten, maar niet tussen de Z-coördinaat van een BIM-model en de NAP-hoogte. 
 
 Problemen met deze afwijking kunnen gaan spelen als men een BIM-model zonder transformatie wil combineren met geodata in RD, of als men geodata in RD zonder transformatie als ondergrond voor een BIM-model gebruikt, en daar in werkelijke meters in gaat tekenen.   
 

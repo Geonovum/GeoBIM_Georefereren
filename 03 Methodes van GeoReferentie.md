@@ -137,7 +137,7 @@ Voor gegeorefereerde data zijn verschillende referentiegegevens of transformatie
 
 Deze gegevens kunnen op verschillende manieren beschikbaar zijn. Soms zijn deze aanwezig in de brondata waarin informatie voor georeferentie reeds opgenomen is, in metadata of in gekoppelde bestanden zoals een prj-bestand (proj). Hierdoor kan de positionering grotendeels automatisch plaatsvinden. Wanneer parameters voor een bepaalde methode ontbreken kan men dit aanvullen. De gegevens daarvoor kan men verzamelen uit externe bronnen of door handmatige interpretatie van referentiekaarten of bekende referentiepunten. Dit proces vergt extra validatie om de nauwkeurigheid en betrouwbaarheid van de georeferentie te waarborgen.
 
-De kwaliteit van deze parameters heeft directe invloed op het georefereringsproces en de uiteindelijke bruikbaarheid van de ruimtelijke data. In een onderzoek van Clemen Christian [[Christian2019]] worden verschillende levels van georeferentie-informatie beschreven. De verschillende levels faciliteren verschillende methodes van georeferentie en verschillen in de te behalen nauwkeurigheid en mogelijkheid voor het samenvoegen van modellen. 
+De kwaliteit van deze parameters heeft directe invloed op het georefereringsproces en de uiteindelijke bruikbaarheid van de ruimtelijke data. In een onderzoek van Clemen en Görne [[Clemen2019]] worden verschillende levels van georeferentie-informatie beschreven. De verschillende levels faciliteren verschillende methodes van georeferentie en verschillen in de te behalen nauwkeurigheid en mogelijkheid voor het samenvoegen van modellen. 
 
 ### Level 10 
 
