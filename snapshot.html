@@ -728,7 +728,7 @@ body:has(input[name=color-scheme][value=dark]:checked) .hljs{
       "href": "https://3d.bk.tudelft.nl/ken/files/20_geoinfo.pdf",
       "title": "Gebruik van BIM in Geo in de praktijk: voorbij de hype",
       "authors": [
-        "Jantien Stoter, Francesca Noarda, Teng Wu, Ken Arroyo Ohori, Thomas Krijnen"
+        "Jantien Stoter, Francesca Noardo, Teng Wu, Ken Arroyo Ohori, Thomas Krijnen"
       ],
       "date": "2020",
       "id": "stoter2020"
@@ -742,14 +742,14 @@ body:has(input[name=color-scheme][value=dark]:checked) .hljs{
       "date": "2024",
       "id": "mallela2024"
     },
-    "Christian2019": {
+    "Clemen2019": {
       "href": "https://jgcc.geoprevi.ro/docs/2019/10/jgcc_2019_no10_3.pdf",
       "title": "Level of Georeferencing (LoGeoRef) using IFC for BIM",
       "authors": [
-        "Christian Clemens, Görne Hendrik"
+        "Christian Clemen, Hendrik Görne"
       ],
       "date": "2019",
-      "id": "christian2019"
+      "id": "clemen2019"
     },
     "Hakim2024": {
       "href": "https://isprs-archives.copernicus.org/articles/XLVIII-4-W11-2024/41/2024/isprs-archives-XLVIII-4-W11-2024-41-2024.pdf",
@@ -759,6 +759,15 @@ body:has(input[name=color-scheme][value=dark]:checked) .hljs{
       ],
       "date": "2024",
       "id": "hakim2024"
+    },
+    "VanBerlo2026": {
+      "href": "https://www.researchgate.net/publication/408634536_PROPOSAL_FOR_A_MODERN_FOUNDATION_FOR_A_DATA-DRIVEN_BUILT_ENVIRONMENT",
+      "title": "Proposal for a modern foundation for a data-driven built environment",
+      "authors": [
+        "Léon van Berlo, Thomas Krijnen, Tom van Diggelen, Artur Tomczak, Evandro Alfieri, David de Koning, Greg Schleusner, Helga Tauscher, Dennis Shelden"
+      ],
+      "date": "2026",
+      "id": "vanberlo2026"
     }
   },
   "title": "Georefereren GeoBIM",
@@ -858,7 +867,7 @@ body:has(input[name=color-scheme][value=dark]:checked) .hljs{
     <h2>
       Geonovum Praktijkrichtlijn<br>
       Werkversie
-      <time class="dt-published" datetime="2026-07-31">31 juli 2026</time>
+      <time class="dt-published" datetime="2026-08-01">01 augustus 2026</time>
     </h2>
     <dl>
       
@@ -1031,14 +1040,14 @@ Coördinaten worden uitgedrukt in ellipsoïdsche breedte (<span style="font-fami
   </tr>
 </tbody></table><p><a href="#dfn-ellipsoidische-coordinaten" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-ellipsoidische-coordinaten-1">Ellipsoïdische coördinaten</a> worden ook wel geografische coördinaten genoemd, rechthoekige coördinaten vanuit het middelpunt van de aarde worden ook wel <a href="#dfn-geocentrische-coordinaten" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-geocentrische-coordinaten-1">geocentrische coördinaten</a> genoemd.</p>
 </section><section id="geprojecteerd-crs"><div class="header-wrapper"><h4 id="x3-1-2-geprojecteerd-crs"><bdi class="secno">3.1.2 </bdi>Geprojecteerd CRS</h4><a class="self-link" href="#geprojecteerd-crs" aria-label="Permalink for Section 3.1.2"></a></div>
-<p>Om geo-informatie vanaf het gekromde aardoppervlak op een plat vlak weer te geven, worden kaartprojecties gebruikt. Veel gebruikte projectievlakken zijn een cilinderopperlvlak, kegeloppervlak en een plat vlak.</p>
+<p>Om geo-informatie vanaf het gekromde aardoppervlak op een plat vlak weer te geven, worden kaartprojecties gebruikt. Veel gebruikte projectievlakken zijn een cilinderoppervlak, kegeloppervlak en een plat vlak.</p>
 <figure id="Projecties" style="display: block; text-align: center; margin: 0 auto;">
    <img src="media/projectie/3_Projecties.png" alt="Projecties" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;">
     <figcaption><a class="self-link" href="#Projecties">Figuur <bdi class="figno">2</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Projecties"></a><span class="fig-title">Projecties</span></span></figcaption>
-</figure><p>Elke <a href="#dfn-kaartprojectie" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-kaartprojectie-1">kaartprojectie</a> introduceert vervormingen in hoeken, afstanden en/of oppervlakten, omdat het onmogelijk is om het gekromde aardoppervlak af te beelden in een plat vlak en daarbij alle drie eigenschappen tegelijk exact te behouden. De keuze van een geschikte projectie hangt af van het doel van de kaart en welke eigenschappen het belangrijkst zijn voor de toepassing. In Nederland wordt het geprojecteerde RD-stelsel gebruikt. Het RD-stelsel heeft als eigenschap dat hoeken onvervormd worden weergegeven en afwijkingen in afstanden en oppervlakte beperkt zijn binnen Nederland. De formule om werkelijke afstanden te schalen naar afstanden in het RD-stelsel is: </p>
-<p><math display="block"><mi>Δℓ</mi><mo>=</mo><mo>-</mo><mn>9,2</mn><mo>+</mo><mfrac><mrow><msup><mrow><mo>(</mo><msub><mi>x</mi><mi>RD</mi></msub><mo>-</mo><mn>155000</mn><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><msub><mi>y</mi><mi>RD</mi></msub><mo>-</mo><mn>436000</mn> <mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mn>1629</mn><mo>·</mo><msup><mn>10</mn><mo>6</mo></msup></mrow></mfrac><mtext> mm per 100 m</mtext>
+</figure><p>Elke <a href="#dfn-kaartprojectie" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-kaartprojectie-1">kaartprojectie</a> introduceert vervormingen in hoeken, afstanden en/of oppervlakten, omdat het onmogelijk is om het gekromde aardoppervlak af te beelden in een plat vlak en daarbij alle drie eigenschappen tegelijk exact te behouden. De keuze van een geschikte projectie hangt af van het doel van de kaart en welke eigenschappen het belangrijkst zijn voor de toepassing. In Nederland wordt het geprojecteerde RD-stelsel gebruikt, met een plat vlak als projectievlak (rechts in <a href="#Projecties" class="fig-ref" title="Projecties">Figuur <bdi class="">2</bdi></a>). Het RD-stelsel heeft als eigenschap dat hoeken onvervormd worden weergegeven en afwijkingen in afstanden en oppervlakte beperkt zijn binnen Nederland. De formule om werkelijke afstanden te schalen naar afstanden in het RD-stelsel is: </p>
+<p><math display="block"><mi>Δℓ</mi><mo>=</mo><mo>-</mo><mn>9,2</mn><mo>+</mo><mfrac><mrow><msup><mrow><mo>(</mo><msub><mi>x</mi><mi>RD</mi></msub><mo>-</mo><mn>155000</mn><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><msub><mi>y</mi><mi>RD</mi></msub><mo>-</mo><mn>436000</mn> <mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mn>1629</mn><mo>·</mo><msup><mn>10</mn><mn>6</mn></msup></mrow></mfrac><mtext> mm per 100 m</mtext>
 </math></p>
-<p>waarbij:  <math><msub><mi>x</mi><mi>RD</mi></msub></math> en <math><msub><mi>y</mi><mi>RD</mi></msub></math> de gemiddelde RD-coördinaten in meter zijn van locatie van het BIM-project.</p>
+<p>waarbij:  <math><msub><mi>x</mi><mi>RD</mi></msub></math> en <math><msub><mi>y</mi><mi>RD</mi></msub></math> de gemiddelde RD-coördinaten in meter zijn van de locatie van het BIM-project.</p>
 <p>Voor een precisie beter dan 1 cm per 500 meter (10 centimeter per 5 km) moet ook rekening gehouden worden met het onregelmatige RD-correctiegrid en volstaat bovenstaande formule niet.</p>
 <table style="width: 100%; table-layout: fixed;">
   <tbody><tr>
@@ -1068,8 +1077,8 @@ Coördinaten worden uitgedrukt in ellipsoïdsche breedte (<span style="font-fami
 </figure> </section><section id="samengesteld-crs"><div class="header-wrapper"><h4 id="x3-1-4-samengesteld-crs"><bdi class="secno">3.1.4 </bdi>Samengesteld CRS</h4><a class="self-link" href="#samengesteld-crs" aria-label="Permalink for Section 3.1.4"></a></div>
 <p>Een CRS dat bestaat uit de combinatie van een 2D CRS en een vertikaal CRS, bijvoorbeeld een geprojecteerd CRS en een verticaal CRS, noemen we een <a href="#dfn-samengesteld-crs" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-samengesteld-crs-1">Samengesteld CRS</a>. Een <a href="#dfn-coordinatentransformatie" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-coordinatentransformatie-2">Coördinatentransformatie</a> van of naar een samengesteld CRS wordt afzonderlijk uitgevoerd voor de CRS'en van het samengestelde CRS, bijvoorbeeld: voor de transformatie van 3D geografisch ETRS89 naar het samengestelde RDNAP, wordt apart van ETRS89 naar RD en apart van ETRS89 naar NAP getransformeerd. Samengestelde CRS'en in Nederland die relevant zijn voor BIM-modellen zijn:</p>
 <ul>
-<li>RDNAP (EPSG:7415), de samenstelling van geprojecteerd CRS RD (EPSG:28992) en verticaal CRS NAP (ESPG:5709).</li>
-<li>ETRS89 met NAP-hoogte (EPSG:9286), de samenstelling van 2D geografisch CRS ETRS89 (EPSG:4258) en verticaal CRS NAP (ESPG:5709).</li>
+<li>RDNAP (EPSG:7415), de samenstelling van geprojecteerd CRS RD (EPSG:28992) en verticaal CRS NAP (EPSG:5709).</li>
+<li>ETRS89 met NAP-hoogte (EPSG:9286), de samenstelling van 2D geografisch CRS ETRS89 (EPSG:4258) en verticaal CRS NAP (EPSG:5709).</li>
 </ul>
 </section></section><section id="lokaal-crs"><div class="header-wrapper"><h3 id="x3-2-lokaal-crs"><bdi class="secno">3.2 </bdi>Lokaal CRS</h3><a class="self-link" href="#lokaal-crs" aria-label="Permalink for Section 3.2"></a></div>
 <p>Een <a href="#dfn-lokaal-crs" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-lokaal-crs-2">lokaal CRS</a> is een arbitrair gekozen assenstelsel. De oorsprong, de oriëntatie en het vertikale referentievlak van het stelsel worden gekozen op basis van praktische overwegingen en kan voordelen hebben bij bepaalde 2D- of  3D- modeleersoftware (BIM). Sommige applicaties voorzien ook alleen in een lokaal assenstelsel om in te modelleren. De oorsprong van het assenstelsel kan projectafhankelijk zijn, bijvoorbeeld een hoekpunt, voorgevel en begane grond van een gebouw, of een aantal meter hiervandaan. De eenheden zijn vaak in meters of millimeters. Er is geen directe relatie met de echte wereld tenzij er een coördinatentransformatie wordt toegepast.</p>
@@ -1159,7 +1168,7 @@ De parameters voor een 2D gelijkvormighedistransformatie zijn translaties (t<sub
       <img src="./media/projectie/8_afwijkingen_en_vervorming.png" alt="Afwijkingen en vervormingen die op kunnen treden schematisch weergegeven." style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;">
           <figcaption><a class="self-link" href="#Afwijkingen-en-vervormingen">Figuur <bdi class="figno">11</bdi></a> <span class="fig-title"><a class="self-link" href="#fig-Afwijkingen-en-vervormingen"></a><span class="fig-title">Afwijkingen en vervormingen die op kunnen treden schematisch weergegeven.</span></span></figcaption>
   </figure><section id="schaalfout-door-projectie"><div class="header-wrapper"><h4 id="x3-5-1-schaalfout-door-projectie"><bdi class="secno">3.5.1 </bdi>Schaalfout door projectie</h4><a class="self-link" href="#schaalfout-door-projectie" aria-label="Permalink for Section 3.5.1"></a></div>
-<p>Een afwijking waarmee men rekening moet houden bij het gebruik van een geprojecteerd CRS met een hoekgetrouwe projectie (zoals RD) is de afwijking door lijnvergroting of -verkleining door de projectie. Deze afwijking komt door de schaalfout beschreven in <a href="#geprojecteerd-crs">Geprojecteerd CRS</a>. Dit schaalverschhil treedt op tussen bij XY-coördinaten van een BIM-model en RD-coordinaten, maar niet bij de Z-coördinaat van een BIM-model nen NAP-hoogte. </p>
+<p>Een afwijking waarmee men rekening moet houden bij het gebruik van een geprojecteerd CRS met een hoekgetrouwe projectie (zoals RD) is de afwijking door lijnvergroting of -verkleining door de projectie. Deze afwijking komt door de schaalfout beschreven in <a href="#geprojecteerd-crs">Geprojecteerd CRS</a>. Dit schaalverschil treedt op tussen de XY-coördinaten van een BIM-model en RD-coördinaten, maar niet tussen de Z-coördinaat van een BIM-model en de NAP-hoogte. </p>
 <p>Problemen met deze afwijking kunnen gaan spelen als men een BIM-model zonder transformatie wil combineren met geodata in RD, of als men geodata in RD zonder transformatie als ondergrond voor een BIM-model gebruikt, en daar in werkelijke meters in gaat tekenen.   </p>
 <p>De afwijkingen die hierbij kunnen ontstaan zijn maximaal 1 cm per 100 meter (10 cm per 1 km) op land. En tot 10 cm per 100 meter (1 meter per km) op zee.</p>
 <p>Daarnaast is er een correctiegrid voor RD dat een vervorming geeft. Deze afwijking is maximaal 1 cm per 500 meter (10 cm per 5 km). </p>
@@ -1300,7 +1309,7 @@ De transformatie van RDNAP in BIM naar RDNAP is een "nultransformatie". </p>
 </section></section><section id="levels-van-georeferentie-informatie"><div class="header-wrapper"><h3 id="x4-4-levels-van-georeferentie-informatie"><bdi class="secno">4.4 </bdi>Levels van georeferentie-informatie</h3><a class="self-link" href="#levels-van-georeferentie-informatie" aria-label="Permalink for Section 4.4"></a></div>
 <p>Voor gegeorefereerde data zijn verschillende referentiegegevens of transformatieparameters nodig. Deze gegevens beschrijven bijvoorbeeld het gebruikte coördinatenstelsel, transformatieparameters of referentiepunten. Deze informatie is nodig om de brondata (source) correct te koppelen aan een geografische locatie (target).</p>
 <p>Deze gegevens kunnen op verschillende manieren beschikbaar zijn. Soms zijn deze aanwezig in de brondata waarin informatie voor georeferentie reeds opgenomen is, in metadata of in gekoppelde bestanden zoals een prj-bestand (proj). Hierdoor kan de positionering grotendeels automatisch plaatsvinden. Wanneer parameters voor een bepaalde methode ontbreken kan men dit aanvullen. De gegevens daarvoor kan men verzamelen uit externe bronnen of door handmatige interpretatie van referentiekaarten of bekende referentiepunten. Dit proces vergt extra validatie om de nauwkeurigheid en betrouwbaarheid van de georeferentie te waarborgen.</p>
-<p>De kwaliteit van deze parameters heeft directe invloed op het georefereringsproces en de uiteindelijke bruikbaarheid van de ruimtelijke data. In een onderzoek van Clemen Christian [<cite><a class="bibref" data-link-type="biblio" href="#bib-christian2019" title="Level of Georeferencing (LoGeoRef) using IFC for BIM">Christian2019</a></cite>] worden verschillende levels van georeferentie-informatie beschreven. De verschillende levels faciliteren verschillende methodes van georeferentie en verschillen in de te behalen nauwkeurigheid en mogelijkheid voor het samenvoegen van modellen. </p>
+<p>De kwaliteit van deze parameters heeft directe invloed op het georefereringsproces en de uiteindelijke bruikbaarheid van de ruimtelijke data. In een onderzoek van Clemen en Görne [<cite><a class="bibref" data-link-type="biblio" href="#bib-clemen2019" title="Level of Georeferencing (LoGeoRef) using IFC for BIM">Clemen2019</a></cite>] worden verschillende levels van georeferentie-informatie beschreven. De verschillende levels faciliteren verschillende methodes van georeferentie en verschillen in de te behalen nauwkeurigheid en mogelijkheid voor het samenvoegen van modellen. </p>
 <section id="level-10"><div class="header-wrapper"><h4 id="x4-4-1-level-10"><bdi class="secno">4.4.1 </bdi>Level 10</h4><a class="self-link" href="#level-10" aria-label="Permalink for Section 4.4.1"></a></div>
 <p>Een locatienaam opgeven:</p>
 <div style="display: flex; align-items: flex-start; gap: 20px;">
@@ -1585,14 +1594,17 @@ Nederland</em></a>). In de tabel zijn de volgende informatie weergegeven: de naa
 <li>Voor Georeferentie level 40 kan men <a href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a> gebruiken. </li>
 <li><a href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a> gebruikt men binnen IFC (4X3) voor het beschrijven van georeferentie op level 50. Er is een attribuut SourceCRS, TargetCRS, attributen voor verplaatsing, verdraaiing en schaling. 
 Ook is het mogelijk <a href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a> te gebruiken om een aparte X,Y en Z schaal te gebruiken dat benodigd is voor RDNAP.</li>
-<li>Er is geen klasse binnen IFC (4X3) die ondersteunt in georeferentie 60. Een work-around is de mogelijkheid om gebruik te maken van generic property sets (<a href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm">IfcPropertySet</a>) voor het opslaan van informatie over de controlepunten voor deze methodiek. Dit wordt momenteel niet ondersteund.</li>
+<li>Er is geen klasse binnen IFC (4X3) die ondersteunt in georeferentie 60. Een work-around is de mogelijkheid om gebruik te maken van generic property sets (<a href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm">IfcPropertySet</a>) voor het opslaan van informatie over de controlepunten voor deze methodiek [<cite><a class="bibref" data-link-type="biblio" href="#bib-clemen2019" title="Level of Georeferencing (LoGeoRef) using IFC for BIM">Clemen2019</a></cite>]. Dit wordt momenteel niet ondersteund.</li>
 </ul>
 <div class="note" role="note" id="issue-container-generatedID-6"><div role="heading" class="note-title marker" id="h-note-6" aria-level="4"><span>Noot</span><span class="issue-label">: Gebruik IfcMapConversion</span></div><aside class="">
   <p><strong>AANBEVELING:</strong> Gebruik IfcMapConversion of meer nauwkeurig IfcMapConversionScaled voor georeferentie van BIM in IFC t.b.v combinatie Geo en BIM.</p>
 </aside></div><p>IFC MapConversion kan zowel gebruikt worden voor het transformeren van BIM naar Geo als van Geo naar BIM. Vanuit een digitaal 3D-stadsmodel in CityGML of CityJSON kan een deel van dit model naar IFC worden geëxporteerd. Dit deel kan dan op een 0-punt worden gepositioneerd. In de IfcMapconversion-attributen kunnen de transformatiewaarden worden ingevuld. </p>
 <p><strong>IFC 5/ IFC X</strong>
-IFC 5 of IFC X is momenteel in ontwikkeling. Het is een herstructurering van de huidige IFC schemas. De functionaliteit van de huidige schema's wil men behouden, maar de technische basis en serialisatie veranderen. Waar de huidige IFC-schema's op STEP zijn gebaseerd, is het IFC 5 schema op JSON gebaseerd. </p>
+IFC 5 ofwel IFC X is momenteel in ontwikkeling. Het is een herstructurering van de huidige IFC schemas. De functionaliteit van de huidige schema's wil men behouden, maar de technische basis en serialisatie veranderen. Waar de huidige IFC-schema's op STEP zijn gebaseerd, is het IFC 5 schema op JSON gebaseerd. </p>
 <p>Voor geometrie maakt IFC 5 gebruik van USD-formaat (Universal Scene Description), voor geometrie, bijvoorbeeld usdgeom::mesh – veelhoekig oppervlaktemodel. Er zijn nog geen vastgestelde afspraken over georeferentie. Wel zijn in de eerste verkenningen de elementen van IfcMapConversion terug te zien, maar dan als json attributen. </p>
+<p>De herstructurering gaat verder dan de serialisatie. IFC 5 stelt een model samen uit lagen die over elkaar heen worden gelegd, elk met een eigen herkomst en een eigen versie. Daarmee worden incrementele wijzigingen, samenwerking tussen meerdere auteurs en herleidbaar eigenaarschap mogelijk zonder dat het hele model opnieuw hoeft worden uitgewisseld [<cite><a class="bibref" data-link-type="biblio" href="#bib-vanberlo2026" title="Proposal for a modern foundation for a data-driven built environment">VanBerlo2026</a></cite>].</p>
+<p>Diezelfde opzet maakt het mogelijk om definities uit andere standaarden op te nemen in plaats van ze opnieuw te formuleren. Voor georeferentie is dat direct toepasbaar. <a href="#d-2-projjson">Bijlage 4</a> legt een lokaal CRS en de binding daarvan aan RDNAP al vast in PROJJSON, inclusief translatie, rotatie en schaal per as. Dat is dezelfde informatie die IfcMapConversionScaled met IFC-eigen attributen vastlegt. Wat in IFC zelf is gedefinieerd is dus niet de CRS-definitie maar de transformatie. Omdat IFC 5 op JSON is gebaseerd, kan een PROJJSON-definitie er rechtstreeks in worden opgenomen. Voor bestaande modellen blijven de IfcMapConversion-attributen bruikbaar.</p>
+<p>Dezelfde uitbreidbaarheid brengt georeferentie <a href="#level-60">Level 60</a> binnen bereik. Clemen en Görne stelden bij het definiëren van de levels al vast dat IFC de drietrapstransformatie tussen het BIM-stelsel, het lokale CRS van de bouwplaats en een geodetisch CRS niet kan opslaan [<cite><a class="bibref" data-link-type="biblio" href="#bib-clemen2019" title="Level of Georeferencing (LoGeoRef) using IFC for BIM">Clemen2019</a></cite>]. Een aparte laag met ingemeten punten, met coördinaten in elk van die stelsels, past wel in een gecomponeerd model. </p>
 </section><section id="dxf"><div class="header-wrapper"><h3 id="x6-2-dxf"><bdi class="secno">6.2 </bdi>DXF</h3><a class="self-link" href="#dxf" aria-label="Permalink for Section 6.2"></a></div>
 <p>Wanneer men in 2D vectorsoftware werkt die geen .ifc bestand kan exporteren zijn er ook mogelijkheden voor georeferentie. De objecten in de DXF worden bij voorkeur getekend in een coördinatenruimte die matcht met een geprojecteerd CRS (zoals EPSG:28992 of EPSG:3857). De coördinaten zijn dan in meters, zoals in het coordinatenstelsel. Voorbeeld: een lijn van punt(110000, 450000) naar punt (110500, 450500) is dan correct gepositioneerd in RD-coördinaten.</p>
 <div class="note" role="note" id="issue-container-generatedID-7"><div role="heading" class="note-title marker" id="h-note-7" aria-level="4"><span>Noot</span><span class="issue-label">: Teken wanneer mogelijk op RD in 2D-Vectorsoftware</span></div><aside class="">
@@ -3468,14 +3480,16 @@ ifcopenshell.api.georeference.edit_georeferencing(model,
 
 <section id="references" class="appendix"><div class="header-wrapper"><h2 id="j-referenties"><bdi class="secno">J. </bdi>Referenties</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix J."></a></div><section id="informatieve-referenties">
     <div class="header-wrapper"><h3 id="j-1-informatieve-referenties"><bdi class="secno">J.1 </bdi>Informatieve referenties</h3><a class="self-link" href="#informatieve-referenties" aria-label="Permalink for Appendix J.1"></a></div>
-    <dl class="bibliography"><dt id="bib-christian2019">[Christian2019]</dt><dd>
-      <a href="https://jgcc.geoprevi.ro/docs/2019/10/jgcc_2019_no10_3.pdf"><cite>Level of Georeferencing (LoGeoRef) using IFC for BIM</cite></a>. Christian Clemens, Görne Hendrik. 2019. URL: <a href="https://jgcc.geoprevi.ro/docs/2019/10/jgcc_2019_no10_3.pdf">https://jgcc.geoprevi.ro/docs/2019/10/jgcc_2019_no10_3.pdf</a>
+    <dl class="bibliography"><dt id="bib-clemen2019">[Clemen2019]</dt><dd>
+      <a href="https://jgcc.geoprevi.ro/docs/2019/10/jgcc_2019_no10_3.pdf"><cite>Level of Georeferencing (LoGeoRef) using IFC for BIM</cite></a>. Christian Clemen, Hendrik Görne. 2019. URL: <a href="https://jgcc.geoprevi.ro/docs/2019/10/jgcc_2019_no10_3.pdf">https://jgcc.geoprevi.ro/docs/2019/10/jgcc_2019_no10_3.pdf</a>
     </dd><dt id="bib-hakim2024">[Hakim2024]</dt><dd>
       <a href="https://isprs-archives.copernicus.org/articles/XLVIII-4-W11-2024/41/2024/isprs-archives-XLVIII-4-W11-2024-41-2024.pdf"><cite>Enhancing Georeferencing of IFC Models through Surveyed Points Integration</cite></a>. Amir Hakim, Ken Arroyo Ohori, Jasper van der Vaart, Siham El Yamani, Jantien Stoter. 2024. URL: <a href="https://isprs-archives.copernicus.org/articles/XLVIII-4-W11-2024/41/2024/isprs-archives-XLVIII-4-W11-2024-41-2024.pdf">https://isprs-archives.copernicus.org/articles/XLVIII-4-W11-2024/41/2024/isprs-archives-XLVIII-4-W11-2024-41-2024.pdf</a>
     </dd><dt id="bib-mallela2024">[Mallela2024]</dt><dd>
       <a href="https://www.buildingsmart.org/wp-content/uploads/2024/05/bSI-OGC-BIM-GIS-Strategic-Roadmap_Industry_Insight_bSI_v2.pdf"><cite>Enabling information continuity across BIM-GIS domains:A bSI and OGC strategic roadmap</cite></a>. Jagannath Mallela, Abhishek Bhargav. 2024. URL: <a href="https://www.buildingsmart.org/wp-content/uploads/2024/05/bSI-OGC-BIM-GIS-Strategic-Roadmap_Industry_Insight_bSI_v2.pdf">https://www.buildingsmart.org/wp-content/uploads/2024/05/bSI-OGC-BIM-GIS-Strategic-Roadmap_Industry_Insight_bSI_v2.pdf</a>
     </dd><dt id="bib-stoter2020">[Stoter2020]</dt><dd>
-      <a href="https://3d.bk.tudelft.nl/ken/files/20_geoinfo.pdf"><cite>Gebruik van BIM in Geo in de praktijk: voorbij de hype</cite></a>. Jantien Stoter, Francesca Noarda, Teng Wu, Ken Arroyo Ohori, Thomas Krijnen. 2020. URL: <a href="https://3d.bk.tudelft.nl/ken/files/20_geoinfo.pdf">https://3d.bk.tudelft.nl/ken/files/20_geoinfo.pdf</a>
+      <a href="https://3d.bk.tudelft.nl/ken/files/20_geoinfo.pdf"><cite>Gebruik van BIM in Geo in de praktijk: voorbij de hype</cite></a>. Jantien Stoter, Francesca Noardo, Teng Wu, Ken Arroyo Ohori, Thomas Krijnen. 2020. URL: <a href="https://3d.bk.tudelft.nl/ken/files/20_geoinfo.pdf">https://3d.bk.tudelft.nl/ken/files/20_geoinfo.pdf</a>
+    </dd><dt id="bib-vanberlo2026">[VanBerlo2026]</dt><dd>
+      <a href="https://www.researchgate.net/publication/408634536_PROPOSAL_FOR_A_MODERN_FOUNDATION_FOR_A_DATA-DRIVEN_BUILT_ENVIRONMENT"><cite>Proposal for a modern foundation for a data-driven built environment</cite></a>. Léon van Berlo, Thomas Krijnen, Tom van Diggelen, Artur Tomczak, Evandro Alfieri, David de Koning, Greg Schleusner, Helga Tauscher, Dennis Shelden. 2026. URL: <a href="https://www.researchgate.net/publication/408634536_PROPOSAL_FOR_A_MODERN_FOUNDATION_FOR_A_DATA-DRIVEN_BUILT_ENVIRONMENT">https://www.researchgate.net/publication/408634536_PROPOSAL_FOR_A_MODERN_FOUNDATION_FOR_A_DATA-DRIVEN_BUILT_ENVIRONMENT</a>
     </dd></dl>
   </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Terug naar boven">↑</abbr></a>
