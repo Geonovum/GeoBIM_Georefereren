@@ -114,6 +114,11 @@ let respecConfig = {
         company: "Friso Bouwgroep B.V.",
         companyURL: "https://frisobouwgroep.nl/",
       },
+	  {
+        name: "Joost Geveart",
+        company: "Bedrock Engineering",
+        companyURL: "https://bedrock.engineer/",
+      },
       {
         name: "Jantien Stoter",
         company: "TU Delft",
