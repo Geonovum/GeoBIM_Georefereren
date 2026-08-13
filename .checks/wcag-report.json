@@ -4,7 +4,7 @@
     "id": "color-contrast",
     "impact": "serious",
     "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-    "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=webdriverjs",
+    "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=webdriverjs",
     "nodes": [
       {
         "target": [
@@ -20,7 +20,7 @@
     "id": "link-name",
     "impact": "serious",
     "description": "Ensure links have discernible text",
-    "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/link-name?application=webdriverjs",
+    "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=webdriverjs",
     "nodes": [
       {
         "target": [
@@ -267,7 +267,7 @@
     "id": "scrollable-region-focusable",
     "impact": "serious",
     "description": "Ensure elements that have scrollable content are accessible by keyboard in Safari",
-    "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/scrollable-region-focusable?application=webdriverjs",
+    "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/scrollable-region-focusable?application=webdriverjs",
     "nodes": [
       {
         "target": [
