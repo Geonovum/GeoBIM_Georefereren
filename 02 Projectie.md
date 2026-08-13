@@ -288,7 +288,7 @@ Een andere soort afwijking waarmee men rekening kan houden is de afwijking door 
 Dit geeft een **hoogtefout** als we een cartesisch BIM-model willen combineren met geodetisch ETRS89.
 Het referentievlak voor de fysische hoogte volgt het zwaartekrachtveld en daarmee ook de kromming van de aarde. Onderstaande figuur illustreert afwijkingen bij het verwaarlozen van de aardkromming voor de afstand en het hoogteverschil tussen punten P en Q. Bij het verwaarlozen van de aardkromming ontstaat in punt Q een hoogtefout x. De werkelijke afstand PQ over het aardoppervlak is korter dan de afstand PQ', maar dit effect is kleiner dan een millimeter bij afstanden tot enkele kilometers.</mark> 
 <figure id="Afwijking_van_aardkromming" style="display: block; text-align: center; margin: 0 auto;">
-  <img src="media/projectie/4_Afwijking_door_aardkromming.png" alt="Afwijking door aardkromming" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;">
+  <img src="media/projectie/4_Afwijking_door_aardkromming.png" alt="Afwijking door aardkromming" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
   <figcaption><a class="self-link" href="#fig-Afwijking-door-aardkromming"></bdi></a><span class="fig-title">Afwijking in de hoogte door aardkromming</span></figcaption>
 </figure> 
 

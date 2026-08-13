@@ -37,12 +37,12 @@ Een DWG of DXF kan getekend zijn op RD-coördinaten en toch geen coördinatenste
 4.	Manneer men zeker wil weten dat het toegekende stelsel ook klopt, dan kan men onder de tab Geolocation de online kaart aan en kijk of de tekening op de juiste plek op de luchtfoto valt.
 
 <figure id="Onderlegger-met-coördinatenstelsel-in-Civil3D" style="display: block; text-align: center; margin: 0 auto;">
-      <img src="./media/Handleiding/Revit/NLRS/Onderleggercheck_Civil3D.jpg" alt="Onderlegger mét coördinatenstelsel: de statusbalk toont Amersfoort-RDNew en in het lint staat de tab Geolocation." style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
+      <img src="./media/Handleiding/Revit/NLRS/Onderleggercheck_Civil3D.png" alt="Onderlegger mét coördinatenstelsel: de statusbalk toont Amersfoort-RDNew en in het lint staat de tab Geolocation." style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption><a class="self-link" href="#fig-Onderlegger-met-coördinatenstelsel-in-Civil3D"></bdi></a><span class="fig-title">Onderlegger mét coördinatenstelsel: de statusbalk toont Amersfoort-RDNew en in het lint staat de tab Geolocation.</span></figcaption>
 </figure>
 
 <figure id="Onderlegger-zonder-coördinatenstelsel-in-Civil3D" style="display: block; text-align: center; margin: 0 auto;">
-      <img src="./media/Handleiding/Revit/NLRS/Onderleggercheck_Civil3D_zonder-coordinatenstelsel.jpg" alt="Onderlegger zonder coördinatenstelsel: de statusbalk toont <none> en de tab Geolocation ontbreekt." style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
+      <img src="./media/Handleiding/Revit/NLRS/Onderleggercheck_Civil3D_zonder-coordinatenstelsel.png" alt="Onderlegger zonder coördinatenstelsel: de statusbalk toont <none> en de tab Geolocation ontbreekt." style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption><a class="self-link" href="#fig-Onderlegger-zondert-coördinatenstelsel-in-Civil3D"></bdi></a><span class="fig-title">Onderlegger zonder coördinatenstelsel: de statusbalk toont 'none' en de tab Geolocation ontbreekt.</span></figcaption>
 </figure>
 
@@ -50,7 +50,7 @@ Een DWG of DXF kan getekend zijn op RD-coördinaten en toch geen coördinatenste
 In AutoCAD controleert men op dezelfde manier: de statusbalk toont het stelsel en de tab Geolocation is aanwezig.
 
 <figure id="Onderlegger-met-coördinatenstelsel-in-Autocad" style="display: block; text-align: center; margin: 0 auto;">
-      <img src="./media/Handleiding/Revit/NLRS/Onderleggercheck_AutocadMAP_met-coordinatenstelsel.jpg" alt="Onderlegger mét coördinatenstelsel in Autocad: de statusbalk toont Amersfoort-RDNew en in het lint staat de tab Geolocation." style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
+      <img src="./media/Handleiding/Revit/NLRS/Onderleggercheck_AutocadMAP_met-coordinatenstelsel.png" alt="Onderlegger mét coördinatenstelsel in Autocad: de statusbalk toont Amersfoort-RDNew en in het lint staat de tab Geolocation." style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption><a class="self-link" href="#fig-Onderlegger-met-coördinatenstelsel-in-Autocad"></bdi></a><span class="fig-title">Onderlegger mét coördinatenstelsel in Autocad: de statusbalk toont Amersfoort-RDNew en in het lint staat de tab Geolocation.</span></figcaption>
 </figure>
 
@@ -69,13 +69,13 @@ In AutoCAD kan men een coördinatenstelsel wel zien, maar niet toekennen. Daarvo
 10.	Zet onder de tab Geolocation de online kaart aan en controleer of de tekening op de luchtfoto op de juiste plek valt.
 
 <figure id="Coordinatenstelsel-toekennen-in-Civil-1." style="display: block; text-align: center; margin: 0 auto;">
-      <img src="./media/Handleiding/Revit/NLRS/Coordinatenstelsel toekennen in civil3D_1.jpg" alt="Rechtsklikken op de tekeningnaam in het tabblad Settings en kiezen voor Edit Drawing Settings." style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
+      <img src="./media/Handleiding/Revit/NLRS/Coordinatenstelsel toekennen in civil3D_1.png" alt="Rechtsklikken op de tekeningnaam in het tabblad Settings en kiezen voor Edit Drawing Settings." style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption><a class="self-link" href="#fig-Coordinatenstelsel-toekennen-in-Civil-1"></bdi></a><span class="fig-title">Rechtsklikken op de tekeningnaam in het tabblad Settings en kiezen voor Edit Drawing Settings.</span></figcaption>
 </figure>
 
 
 <figure id="Coordinatenstelsel-toekennen-in-Civil-2." style="display: block; text-align: center; margin: 0 auto;">
-      <img src="./media/Handleiding/Revit/NLRS/Coordinatenstelsel toekennen in civil3D_2.jpg" alt="Tabblad Units and Zone: categorie Netherlands en het stelsel Netherlands, Amersfoort datum, New System, met code Amersfoort-RDNew." style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
+      <img src="./media/Handleiding/Revit/NLRS/Coordinatenstelsel toekennen in civil3D_2.png" alt="Tabblad Units and Zone: categorie Netherlands en het stelsel Netherlands, Amersfoort datum, New System, met code Amersfoort-RDNew." style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption><a class="self-link" href="#fig-Coordinatenstelsel-toekennen-in-Civil-2"></bdi></a><span class="fig-title">Tabblad Units and Zone: categorie Netherlands en het stelsel Netherlands, Amersfoort datum, New System, met code Amersfoort-RDNew.</span></figcaption>
 </figure>
 
@@ -105,7 +105,7 @@ Revit kent <a>Project Units</a>. De project units bevat de instelling van de sta
 8.	Klik op Open.
 
 <figure id="Onderligger-linken-in-Revit" style="display: block; text-align: center; margin: 0 auto;">
-      <img src="./media/Handleiding/Revit/NLRS/Onderligger linken in Revit.jpg" alt="Instellingen bij Link CAD: importeenheid meter, positionering Auto - Center to Center, en Correct lines that are slightly off axis en Orient to View beide uit." style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
+      <img src="./media/Handleiding/Revit/NLRS/Onderligger linken in Revit.png" alt="Instellingen bij Link CAD: importeenheid meter, positionering Auto - Center to Center, en Correct lines that are slightly off axis en Orient to View beide uit." style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption><a class="self-link" href="#fig-Onderligger-linken-in-Revit"></bdi></a><span class="fig-title">Instellingen bij Link CAD: importeenheid meter, positionering Auto - Center to Center, en Correct lines that are slightly off axis en Orient to View beide uit.</span></figcaption>
 </figure>
 
@@ -126,14 +126,14 @@ De onderlegger kan getekend zijn op RD-coördinaten. Dat betekent vaak dat de ge
 Staat er achter GIS Coordinate System een omschrijving van het stelsel, dan is het stelsel herkend en overgenomen.
 
 <figure id="Melding-coordinaten-overgenomen-in-revit" style="display: block; text-align: center; margin: 0 auto;">
-      <img src="./media/Handleiding/Revit/NLRS/coördinaten overgenomen inclusief stelsel.jpg" alt="Coördinaten overgenomen inclusief stelsel: Netherlands, Amersfoort datum, New System." style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
+      <img src="./media/Handleiding/Revit/NLRS/coördinaten overgenomen inclusief stelsel.png" alt="Coördinaten overgenomen inclusief stelsel: Netherlands, Amersfoort datum, New System." style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption><a class="self-link" href="#fig-Melding-coordinaten-overgenomen-in-revit"></bdi></a><span class="fig-title">Coördinaten overgenomen inclusief stelsel: Netherlands, Amersfoort datum, New System.</span></figcaption>
 </figure>
 
 Staat er Unknown, dan bevatte het bronbestand geen coördinatenstelsel. Revit neemt dan alleen de getallen over, niet het stelsel.
 
 <figure id="Melding-coordinaten-zonder-stelsel-in-revit" style="display: block; text-align: center; margin: 0 auto;">
-      <img src="media/Handleiding/Revit/NLRS/coördinaten overgenomen zonder stelsel.jpg" alt="Coördinaten overgenomen zonder stelsel: GIS Coordinate System is Unknown." style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
+      <img src="media/Handleiding/Revit/NLRS/coördinaten overgenomen zonder stelsel.png" alt="Coördinaten overgenomen zonder stelsel: GIS Coordinate System is Unknown." style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption><a class="self-link" href="#fig-Melding-coordinaten-zonder-stelsel-in-rev"></bdi></a><span class="fig-title">Coördinaten overgenomen zonder stelsel: GIS Coordinate System is Unknown.</span></figcaption>
 </figure>
 
@@ -168,7 +168,7 @@ Wanneer men later wil controleren of er een coördinatenstelsel gebruikt wordt i
 Wanneer er geen coördinatenstelsel gedefinieerd is dan staat *Define Location by* op Internet Mapping Service en de kaart toont de standaardlocatie uit de Revit-template. Het model staat dan feitelijk in de Verenigde Staten, in de omgeving van Boston, zoals op de kaart te zien is.
 
 <figure id="Revit-zonder-coordinatenstelsel" style="display: block; text-align: center; margin: 0 auto;">
-      <img src="./media/Handleiding/Revit/NLRS/Revit_zonder_coordinatenstelsel.jpg" alt=Setup-in-Revit style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
+      <img src="./media/Handleiding/Revit/NLRS/Revit_zonder_coordinatenstelsel.png" alt=Setup-in-Revit style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption><a class="self-link" href="#fig-Revit-zonder-coordinatenstelsel"></bdi></a><span class="fig-title">Zonder coördinatenstelsel blijft de projectlocatie op de standaardlocatie uit de template staan, in de omgeving van Boston.</span></figcaption>
 </figure>
 
@@ -176,7 +176,7 @@ Wanneer er wel een coördinatenstelsel gedefinieerd is dan staat *Define Locatio
 
 
 <figure id="Revit_met_coordinatenstelsel" style="display: block; text-align: center; margin: 0 auto;">
-      <img src="./media/Handleiding/Revit/NLRS/Revit_met_coordinatenstelsel.jpg" alt=Setup-in-Revit style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
+      <img src="./media/Handleiding/Revit/NLRS/Revit_met_coordinatenstelsel.png" alt=Setup-in-Revit style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption><a class="self-link" href="#fig-Revit_met_coordinatenstelsel"></bdi></a><span class="fig-title">Model met coördinatenstelsel: GIS Coordinate System Code Amersfoort-RDNew.</span></figcaption>
 </figure>
 
